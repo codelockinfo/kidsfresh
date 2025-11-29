@@ -1,0 +1,237 @@
+{% stylesheet %}
+.footer-wrapper {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+}
+
+/* ---------- GRID DESKTOP ----------- */
+.footer-three-blocks {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  padding: 0;
+}
+
+.footer-block {
+  padding: 40px 20px;
+}
+
+/* Buttons */
+.footer-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+/* Input */
+.footer-input {
+  width: 90%;
+  max-width: 350px;
+  padding: 12px 18px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+/* Social Icons */
+.footer-social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+.footer-social-icons a img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Images */
+.footer-block-image {
+  width: 80px;
+  margin: 18px auto;
+}
+
+/* Sub text */
+.footer-subtext {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* -------- MOBILE --------- */
+@media (max-width: 768px) {
+  .footer-three-blocks {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-block {
+    padding: 25px 20px;
+  }
+}
+{% endstylesheet %}
+
+
+<div class="footer-wrapper">
+
+  <div class="footer-three-blocks" style="background: {{ section.settings.background_color }}">
+
+    <!-- BLOCK 1 -->
+    <div class="footer-block" style="background: {{ section.settings.block1_bg }}">
+
+      <img src="{{ section.settings.block1_image | image_url }}" class="footer-block-image" alt="">
+
+      <button 
+        class="footer-btn"
+        style="background: {{ section.settings.block1_btn_bg }};
+               color: {{ section.settings.block1_btn_color }};
+               font-size: {{ section.settings.block1_btn_size }}px;">
+        {{ section.settings.block1_btn_text }}
+      </button>
+
+      <p class="footer-subtext"
+         style="color: {{ section.settings.block1_sub_color }};
+                font-size: {{ section.settings.block1_sub_size }}px;">
+        {{ section.settings.block1_subtext }}
+      </p>
+
+    </div>
+
+    <!-- BLOCK 2 -->
+    <div class="footer-block" style="background: {{ section.settings.block2_bg }}">
+
+      <img src="{{ section.settings.block2_image | image_url }}" class="footer-block-image" alt="">
+
+      <input 
+        class="footer-input"
+        type="email"
+        placeholder="{{ section.settings.news_placeholder }}"
+        style="font-size: {{ section.settings.news_input_size }}px;"
+      >
+
+      <br><br>
+
+      <button 
+        class="footer-btn"
+        style="background: {{ section.settings.news_btn_bg }};
+               color: {{ section.settings.news_btn_color }};
+               font-size: {{ section.settings.news_btn_size }}px;">
+        {{ section.settings.news_btn_text }}
+      </button>
+
+      <p class="footer-subtext"
+         style="color: {{ section.settings.news_sub_color }};
+                font-size: {{ section.settings.news_sub_size }}px;">
+        {{ section.settings.news_subtext }}
+      </p>
+
+    </div>
+
+    <!-- BLOCK 3 -->
+    <div class="footer-block" style="background: {{ section.settings.block3_bg }}">
+
+      <img src="{{ section.settings.block3_image | image_url }}" class="footer-block-image" alt="">
+
+      <div class="footer-social-icons">
+        {% if section.settings.social_facebook != blank %}
+          <a href="{{ section.settings.social_facebook }}"><img src="{{ section.settings.icon_facebook | image_url }}"></a>
+        {% endif %}
+        {% if section.settings.social_instagram != blank %}
+          <a href="{{ section.settings.social_instagram }}"><img src="{{ section.settings.icon_instagram | image_url }}"></a>
+        {% endif %}
+        {% if section.settings.social_tiktok != blank %}
+          <a href="{{ section.settings.social_tiktok }}"><img src="{{ section.settings.icon_tiktok | image_url }}"></a>
+        {% endif %}
+      </div>
+
+      <p class="footer-subtext"
+         style="color: {{ section.settings.block3_sub_color }};
+                font-size: {{ section.settings.block3_sub_size }}px;">
+        {{ section.settings.block3_subtext }}
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+
+{% schema %}
+{
+  "name": "Custom 3-Block Footer",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Full footer background",
+      "default": "#1b4c3b"
+    },
+
+    /* ---------------- BLOCK 1 ---------------- */
+    {
+      "type": "header",
+      "content": "Block 1 Settings"
+    },
+    { "type": "image_picker", "id": "block1_image", "label": "Block 1 Image" },
+
+    { "type": "text", "id": "block1_btn_text", "label": "Button text", "default": "message us" },
+    { "type": "color", "id": "block1_btn_bg", "label": "Button background", "default": "#ffb044" },
+    { "type": "color", "id": "block1_btn_color", "label": "Button text color", "default": "#000" },
+    { "type": "range", "id": "block1_btn_size", "label": "Button font size", "min": 12, "max": 30, "default": 18 },
+
+    { "type": "textarea", "id": "block1_subtext", "label": "Sub text", "default": "we’re here to help you win more meals" },
+    { "type": "color", "id": "block1_sub_color", "label": "Sub text color", "default": "#000" },
+    { "type": "range", "id": "block1_sub_size", "label": "Sub text size", "min": 12, "max": 22, "default": 14 },
+
+    { "type": "color", "id": "block1_bg", "label": "Block 1 background", "default": "#a0d468" },
+
+    /* ---------------- BLOCK 2 ---------------- */
+    {
+      "type": "header",
+      "content": "Block 2 (Newsletter)"
+    },
+    { "type": "image_picker", "id": "block2_image", "label": "Block 2 Image" },
+
+    { "type": "text", "id": "news_placeholder", "label": "Input placeholder", "default": "Join our email list..." },
+    { "type": "range", "id": "news_input_size", "label": "Input font size", "min": 12, "max": 22, "default": 16 },
+
+    { "type": "text", "id": "news_btn_text", "label": "Subscribe button text", "default": "subscribe" },
+    { "type": "color", "id": "news_btn_bg", "label": "Button background", "default": "#7cc259" },
+    { "type": "color", "id": "news_btn_color", "label": "Button text color", "default": "#000" },
+    { "type": "range", "id": "news_btn_size", "label": "Button font size", "min": 12, "max": 30, "default": 18 },
+
+    { "type": "textarea", "id": "news_subtext", "label": "Sub text", "default": "by clicking subscribe, you agree to receive marketing emails" },
+    { "type": "color", "id": "news_sub_color", "label": "Sub text color", "default": "#000" },
+    { "type": "range", "id": "news_sub_size", "label": "Sub text size", "min": 12, "max": 22, "default": 14 },
+
+    { "type": "color", "id": "block2_bg", "label": "Block 2 background", "default": "#ffa542" },
+
+    /* ---------------- BLOCK 3 ---------------- */
+    {
+      "type": "header",
+      "content": "Block 3 (Social Media)"
+    },
+    { "type": "image_picker", "id": "block3_image", "label": "Block 3 Image" },
+
+    { "type": "url", "id": "social_facebook", "label": "Facebook URL" },
+    { "type": "url", "id": "social_instagram", "label": "Instagram URL" },
+    { "type": "url", "id": "social_tiktok", "label": "TikTok URL" },
+
+    { "type": "image_picker", "id": "icon_facebook", "label": "Facebook Icon" },
+    { "type": "image_picker", "id": "icon_instagram", "label": "Instagram Icon" },
+    { "type": "image_picker", "id": "icon_tiktok", "label": "TikTok Icon" },
+
+    { "type": "textarea", "id": "block3_subtext", "label": "Sub text", "default": "follow us to win more meals" },
+    { "type": "color", "id": "block3_sub_color", "label": "Sub text color", "default": "#000" },
+    { "type": "range", "id": "block3_sub_size", "label": "Sub text size", "min": 12, "max": 22, "default": 14 },
+
+    { "type": "color", "id": "block3_bg", "label": "Block 3 background", "default": "#8fd46a" }
+
+  ],
+  "presets": [
+    { "name": "Custom Footer 3 Blocks" }
+  ]
+}
+{% endschema %}
