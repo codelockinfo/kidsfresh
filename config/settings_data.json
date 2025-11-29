@@ -205,7 +205,7 @@
           "text": "#ffffff",
           "button": "#121212",
           "button_label": "#ffffff",
-          "secondary_button_label": "#ffffff",
+          "secondary_button_label": "#f3f3f3",
           "shadow": "#ffffff"
         }
       },
