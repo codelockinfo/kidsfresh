@@ -104,14 +104,14 @@
 
       <img src="{{ section.settings.block2_image | image_url }}" class="footer-block-image" alt="">
 
-      <input 
+      <div><input 
         class="footer-input"
         type="email"
         placeholder="{{ section.settings.news_placeholder }}"
         style="font-size: {{ section.settings.news_input_size }}px;"
       >
 
-      <br><br>
+
 
       <button 
         class="footer-btn"
@@ -119,7 +119,7 @@
                color: {{ section.settings.news_btn_color }};
                font-size: {{ section.settings.news_btn_size }}px;">
         {{ section.settings.news_btn_text }}
-      </button>
+      </button></div>
 
       <p class="footer-subtext"
          style="color: {{ section.settings.news_sub_color }};
