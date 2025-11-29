@@ -17,3 +17,6 @@ ul.list-menu.list-menu--inline span:after {
     transition: width .4s 
 ease;
 }
+.header__active-menu-item{
+    text-decoration: none !important;
+}
