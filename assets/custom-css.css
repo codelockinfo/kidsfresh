@@ -26,3 +26,6 @@ ease;
 .header__icon .icon{
     color : #F8971D !important;
 }
+.svg-wrapper{
+ display :none;
+}
