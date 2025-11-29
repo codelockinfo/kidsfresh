@@ -1,872 +1,237 @@
+{% stylesheet %}
+.footer-wrapper {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+}
+
+/* ---------- GRID DESKTOP ----------- */
+.footer-three-blocks {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  padding: 0;
+}
+
+.footer-block {
+  padding: 40px 20px;
+}
+
+/* Buttons */
+.footer-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+/* Input */
+.footer-input {
+  width: 90%;
+  max-width: 350px;
+  padding: 12px 18px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+/* Social Icons */
+.footer-social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+.footer-social-icons a img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Images */
+.footer-block-image {
+  width: 80px;
+  margin: 18px auto;
+}
+
+/* Sub text */
+.footer-subtext {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* -------- MOBILE --------- */
+@media (max-width: 768px) {
+  .footer-three-blocks {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-block {
+    padding: 25px 20px;
+  }
+}
+{% endstylesheet %}
 
 
-{{ 'custom-footer.css' | asset_url | stylesheet_tag }}
+<div class="footer-wrapper">
 
-<footer class="custom-footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
-  <div class="custom-footer__wrapper page-width">
-    <div class="custom-footer__blocks grid grid--1-col grid--3-col-desktop">
-      
-      <!-- Block 1: Button Block -->
-      {%- assign block1 = section.blocks | where: 'type', 'block_1' | first -%}
-      <div class="custom-footer__block custom-footer__block-1 grid__item"{% if block1 %} {{ block1.shopify_attributes }}{% endif %}>
-        {%- if section.settings.block1_image != blank -%}
-          <div class="custom-footer__block-image">
-            {{ section.settings.block1_image | image_url: width: 500 | image_tag: loading: 'lazy', alt: section.settings.block1_image.alt }}
-          </div>
-        {%- endif -%}
-        
-        <div class="custom-footer__block-content">
-          {%- if section.settings.block1_button_text != blank -%}
-            <a href="{{ section.settings.block1_button_link }}" class="custom-footer__block-1-button button">
-              {{ section.settings.block1_button_text }}
-            </a>
-          {%- endif -%}
-          
-          {%- if section.settings.block1_subtext != blank -%}
-            <div class="custom-footer__block-1-subtext">
-              {{ section.settings.block1_subtext }}
-            </div>
-          {%- endif -%}
-        </div>
-      </div>
+  <div class="footer-three-blocks" style="background: {{ section.settings.background_color }}">
 
-      <!-- Block 2: Newsletter Block -->
-      {%- assign block2 = section.blocks | where: 'type', 'block_2' | first -%}
-      <div class="custom-footer__block custom-footer__block-2 grid__item"{% if block2 %} {{ block2.shopify_attributes }}{% endif %}>
-        {%- if section.settings.block2_image != blank -%}
-          <div class="custom-footer__block-image">
-            {{ section.settings.block2_image | image_url: width: 500 | image_tag: loading: 'lazy', alt: section.settings.block2_image.alt }}
-          </div>
-        {%- endif -%}
-        
-        <div class="custom-footer__block-content">
-          {%- form 'customer', id: 'ContactFooterCustom', class: 'custom-footer__newsletter-form' -%}
-            <input type="hidden" name="contact[tags]" value="newsletter">
-            <div class="custom-footer__newsletter-wrapper">
-              <input
-                type="email"
-                name="contact[email]"
-                class="custom-footer__block-2-input field__input"
-                value="{{ form.email }}"
-                placeholder="{{ section.settings.block2_input_placeholder }}"
-                required
-                aria-required="true"
-                autocorrect="off"
-                autocapitalize="off"
-                autocomplete="email"
-                {% if form.errors %}
-                  autofocus
-                  aria-invalid="true"
-                {% elsif form.posted_successfully? %}
-                  aria-describedby="ContactFooterCustom-success"
-                {% endif %}
-              >
-              <button
-                type="submit"
-                class="custom-footer__block-2-button button"
-                name="commit"
-                aria-label="{{ section.settings.block2_button_text }}"
-              >
-                {{ section.settings.block2_button_text }}
-              </button>
-            </div>
-            
-            {%- if form.errors -%}
-              <small class="form__message" id="ContactFooterCustom-error">
-                {{ form.errors.translated_fields.email | capitalize }} {{ form.errors.messages.email }}
-              </small>
-            {%- endif -%}
-            
-            {%- if form.posted_successfully? -%}
-              <h3 class="form__message form__message--success" id="ContactFooterCustom-success" tabindex="-1" autofocus>
-                {{ 'newsletter.success' | t }}
-              </h3>
-            {%- endif -%}
-          {%- endform -%}
-          
-          {%- if section.settings.block2_subtext != blank -%}
-            <div class="custom-footer__block-2-subtext">
-              {{ section.settings.block2_subtext }}
-            </div>
-          {%- endif -%}
-        </div>
-      </div>
+    <!-- BLOCK 1 -->
+    <div class="footer-block" style="background: {{ section.settings.block1_bg }}">
 
-      <!-- Block 3: Social Media Block -->
-      {%- assign block3 = section.blocks | where: 'type', 'block_3' | first -%}
-      <div class="custom-footer__block custom-footer__block-3 grid__item"{% if block3 %} {{ block3.shopify_attributes }}{% endif %}>
-        {%- if section.settings.block3_image != blank -%}
-          <div class="custom-footer__block-image">
-            {{ section.settings.block3_image | image_url: width: 500 | image_tag: loading: 'lazy', alt: section.settings.block3_image.alt }}
-          </div>
-        {%- endif -%}
-        
-        <div class="custom-footer__block-content">
-          <ul class="custom-footer__social-list list-unstyled" role="list">
-            {%- if section.settings.block3_show_facebook and settings.social_facebook_link != blank -%}
-              <li class="custom-footer__social-item">
-                <a href="{{ settings.social_facebook_link }}" class="custom-footer__block-3-social-icon link" aria-label="Facebook">
-                  <span class="svg-wrapper">
-                    {{- 'icon-facebook.svg' | inline_asset_content -}}
-                  </span>
-                </a>
-              </li>
-            {%- endif -%}
-            
-            {%- if section.settings.block3_show_instagram and settings.social_instagram_link != blank -%}
-              <li class="custom-footer__social-item">
-                <a href="{{ settings.social_instagram_link }}" class="custom-footer__block-3-social-icon link" aria-label="Instagram">
-                  <span class="svg-wrapper">
-                    {{- 'icon-instagram.svg' | inline_asset_content -}}
-                  </span>
-                </a>
-              </li>
-            {%- endif -%}
-            
-            {%- if section.settings.block3_show_tiktok and settings.social_tiktok_link != blank -%}
-              <li class="custom-footer__social-item">
-                <a href="{{ settings.social_tiktok_link }}" class="custom-footer__block-3-social-icon link" aria-label="TikTok">
-                  <span class="svg-wrapper">
-                    {{- 'icon-tiktok.svg' | inline_asset_content -}}
-                  </span>
-                </a>
-              </li>
-            {%- endif -%}
-            
-            {%- if section.settings.block3_show_twitter and settings.social_twitter_link != blank -%}
-              <li class="custom-footer__social-item">
-                <a href="{{ settings.social_twitter_link }}" class="custom-footer__block-3-social-icon link" aria-label="Twitter">
-                  <span class="svg-wrapper">
-                    {{- 'icon-twitter.svg' | inline_asset_content -}}
-                  </span>
-                </a>
-              </li>
-            {%- endif -%}
-            
-            {%- if section.settings.block3_show_youtube and settings.social_youtube_link != blank -%}
-              <li class="custom-footer__social-item">
-                <a href="{{ settings.social_youtube_link }}" class="custom-footer__block-3-social-icon link" aria-label="YouTube">
-                  <span class="svg-wrapper">
-                    {{- 'icon-youtube.svg' | inline_asset_content -}}
-                  </span>
-                </a>
-              </li>
-            {%- endif -%}
-            
-            {%- if section.settings.block3_show_pinterest and settings.social_pinterest_link != blank -%}
-              <li class="custom-footer__social-item">
-                <a href="{{ settings.social_pinterest_link }}" class="custom-footer__block-3-social-icon link" aria-label="Pinterest">
-                  <span class="svg-wrapper">
-                    {{- 'icon-pinterest.svg' | inline_asset_content -}}
-                  </span>
-                </a>
-              </li>
-            {%- endif -%}
-          </ul>
-          
-          {%- if section.settings.block3_subtext != blank -%}
-            <div class="custom-footer__block-3-subtext">
-              {{ section.settings.block3_subtext }}
-            </div>
-          {%- endif -%}
-        </div>
-      </div>
+      <img src="{{ section.settings.block1_image | image_url }}" class="footer-block-image" alt="">
+
+      <button 
+        class="footer-btn"
+        style="background: {{ section.settings.block1_btn_bg }};
+               color: {{ section.settings.block1_btn_color }};
+               font-size: {{ section.settings.block1_btn_size }}px;">
+        {{ section.settings.block1_btn_text }}
+      </button>
+
+      <p class="footer-subtext"
+         style="color: {{ section.settings.block1_sub_color }};
+                font-size: {{ section.settings.block1_sub_size }}px;">
+        {{ section.settings.block1_subtext }}
+      </p>
 
     </div>
+
+    <!-- BLOCK 2 -->
+    <div class="footer-block" style="background: {{ section.settings.block2_bg }}">
+
+      <img src="{{ section.settings.block2_image | image_url }}" class="footer-block-image" alt="">
+
+      <input 
+        class="footer-input"
+        type="email"
+        placeholder="{{ section.settings.news_placeholder }}"
+        style="font-size: {{ section.settings.news_input_size }}px;"
+      >
+
+      <br><br>
+
+      <button 
+        class="footer-btn"
+        style="background: {{ section.settings.news_btn_bg }};
+               color: {{ section.settings.news_btn_color }};
+               font-size: {{ section.settings.news_btn_size }}px;">
+        {{ section.settings.news_btn_text }}
+      </button>
+
+      <p class="footer-subtext"
+         style="color: {{ section.settings.news_sub_color }};
+                font-size: {{ section.settings.news_sub_size }}px;">
+        {{ section.settings.news_subtext }}
+      </p>
+
+    </div>
+
+    <!-- BLOCK 3 -->
+    <div class="footer-block" style="background: {{ section.settings.block3_bg }}">
+
+      <img src="{{ section.settings.block3_image | image_url }}" class="footer-block-image" alt="">
+
+      <div class="footer-social-icons">
+        {% if section.settings.social_facebook != blank %}
+          <a href="{{ section.settings.social_facebook }}"><img src="{{ section.settings.icon_facebook | image_url }}"></a>
+        {% endif %}
+        {% if section.settings.social_instagram != blank %}
+          <a href="{{ section.settings.social_instagram }}"><img src="{{ section.settings.icon_instagram | image_url }}"></a>
+        {% endif %}
+        {% if section.settings.social_tiktok != blank %}
+          <a href="{{ section.settings.social_tiktok }}"><img src="{{ section.settings.icon_tiktok | image_url }}"></a>
+        {% endif %}
+      </div>
+
+      <p class="footer-subtext"
+         style="color: {{ section.settings.block3_sub_color }};
+                font-size: {{ section.settings.block3_sub_size }}px;">
+        {{ section.settings.block3_subtext }}
+      </p>
+
+    </div>
+
   </div>
-</footer>
+
+</div>
 
 {% schema %}
 {
-  "name": "Custom Footer",
-  "tag": "footer",
-  "class": "section",
-  "blocks": [
-    {
-      "type": "block_1",
-      "name": "Block 1 - Button",
-      "limit": 1
-    },
-    {
-      "type": "block_2",
-      "name": "Block 2 - Newsletter",
-      "limit": 1
-    },
-    {
-      "type": "block_3",
-      "name": "Block 3 - Social",
-      "limit": 1
-    }
-  ],
+  "name": "Custom 3-Block Footer",
   "settings": [
     {
-      "type": "color_scheme",
-      "id": "color_scheme",
-      "label": "t:sections.all.colors.label",
-      "default": "scheme-1"
+      "type": "color",
+      "id": "background_color",
+      "label": "Full footer background",
+      "default": "#1b4c3b"
     },
+
+    /* ---------------- BLOCK 1 ---------------- */
     {
       "type": "header",
-      "content": "Block 1 - Button Block"
+      "content": "Block 1 Settings"
     },
-    {
-      "type": "image_picker",
-      "id": "block1_image",
-      "label": "Block 1 Image"
-    },
-    {
-      "type": "text",
-      "id": "block1_button_text",
-      "label": "Button Text",
-      "default": "message us"
-    },
-    {
-      "type": "url",
-      "id": "block1_button_link",
-      "label": "Button Link"
-    },
-    {
-      "type": "color",
-      "id": "block1_button_color",
-      "label": "Button Background Color",
-      "default": "#FF6B35"
-    },
-    {
-      "type": "color",
-      "id": "block1_button_text_color",
-      "label": "Button Text Color",
-      "default": "#FFFFFF"
-    },
-    {
-      "type": "range",
-      "id": "block1_button_font_size_mobile",
-      "min": 10,
-      "max": 30,
-      "step": 1,
-      "unit": "px",
-      "label": "Button Font Size (Mobile)",
-      "default": 16
-    },
-    {
-      "type": "range",
-      "id": "block1_button_font_size_desktop",
-      "min": 10,
-      "max": 40,
-      "step": 1,
-      "unit": "px",
-      "label": "Button Font Size (Desktop)",
-      "default": 18
-    },
-    {
-      "type": "range",
-      "id": "block1_button_radius",
-      "min": 0,
-      "max": 50,
-      "step": 1,
-      "unit": "px",
-      "label": "Button Border Radius",
-      "default": 8
-    },
-    {
-      "type": "range",
-      "id": "block1_button_padding_vertical",
-      "min": 5,
-      "max": 30,
-      "step": 1,
-      "unit": "px",
-      "label": "Button Padding (Vertical)",
-      "default": 12
-    },
-    {
-      "type": "range",
-      "id": "block1_button_padding_horizontal",
-      "min": 10,
-      "max": 50,
-      "step": 1,
-      "unit": "px",
-      "label": "Button Padding (Horizontal)",
-      "default": 24
-    },
-    {
-      "type": "range",
-      "id": "block1_button_shadow_horizontal",
-      "min": 0,
-      "max": 20,
-      "step": 1,
-      "unit": "px",
-      "label": "Button Shadow (Horizontal)",
-      "default": 0
-    },
-    {
-      "type": "range",
-      "id": "block1_button_shadow_vertical",
-      "min": 0,
-      "max": 20,
-      "step": 1,
-      "unit": "px",
-      "label": "Button Shadow (Vertical)",
-      "default": 4
-    },
-    {
-      "type": "range",
-      "id": "block1_button_shadow_blur",
-      "min": 0,
-      "max": 30,
-      "step": 1,
-      "unit": "px",
-      "label": "Button Shadow (Blur)",
-      "default": 5
-    },
-    {
-      "type": "range",
-      "id": "block1_button_shadow_opacity",
-      "min": 0,
-      "max": 100,
-      "step": 5,
-      "unit": "%",
-      "label": "Button Shadow Opacity",
-      "default": 20
-    },
-    {
-      "type": "richtext",
-      "id": "block1_subtext",
-      "label": "Subtext",
-      "default": "<p>we're here to help you<br>win more meals.</p>"
-    },
-    {
-      "type": "color",
-      "id": "block1_subtext_color",
-      "label": "Subtext Color",
-      "default": "#FFFFFF"
-    },
-    {
-      "type": "range",
-      "id": "block1_subtext_font_size_mobile",
-      "min": 10,
-      "max": 30,
-      "step": 1,
-      "unit": "px",
-      "label": "Subtext Font Size (Mobile)",
-      "default": 14
-    },
-    {
-      "type": "range",
-      "id": "block1_subtext_font_size_desktop",
-      "min": 10,
-      "max": 40,
-      "step": 1,
-      "unit": "px",
-      "label": "Subtext Font Size (Desktop)",
-      "default": 16
-    },
-    {
-      "type": "range",
-      "id": "block1_subtext_spacing",
-      "min": 0,
-      "max": 50,
-      "step": 1,
-      "unit": "px",
-      "label": "Subtext Spacing (Top)",
-      "default": 12
-    },
-    {
-      "type": "color",
-      "id": "block1_bg_color",
-      "label": "Block 1 Background Color",
-      "default": "#B8E986"
-    },
-    {
-      "type": "range",
-      "id": "block1_padding_mobile",
-      "min": 10,
-      "max": 100,
-      "step": 5,
-      "unit": "px",
-      "label": "Block 1 Padding (Mobile)",
-      "default": 30
-    },
-    {
-      "type": "range",
-      "id": "block1_padding_desktop",
-      "min": 10,
-      "max": 150,
-      "step": 5,
-      "unit": "px",
-      "label": "Block 1 Padding (Desktop)",
-      "default": 50
-    },
+    { "type": "image_picker", "id": "block1_image", "label": "Block 1 Image" },
+
+    { "type": "text", "id": "block1_btn_text", "label": "Button text", "default": "message us" },
+    { "type": "color", "id": "block1_btn_bg", "label": "Button background", "default": "#ffb044" },
+    { "type": "color", "id": "block1_btn_color", "label": "Button text color", "default": "#000" },
+    { "type": "range", "id": "block1_btn_size", "label": "Button font size", "min": 12, "max": 30, "default": 18 },
+
+    { "type": "textarea", "id": "block1_subtext", "label": "Sub text", "default": "we’re here to help you win more meals" },
+    { "type": "color", "id": "block1_sub_color", "label": "Sub text color", "default": "#000" },
+    { "type": "range", "id": "block1_sub_size", "label": "Sub text size", "min": 12, "max": 22, "default": 14 },
+
+    { "type": "color", "id": "block1_bg", "label": "Block 1 background", "default": "#a0d468" },
+
+    /* ---------------- BLOCK 2 ---------------- */
     {
       "type": "header",
-      "content": "Block 2 - Newsletter Block"
+      "content": "Block 2 (Newsletter)"
     },
-    {
-      "type": "image_picker",
-      "id": "block2_image",
-      "label": "Block 2 Image"
-    },
-    {
-      "type": "text",
-      "id": "block2_input_placeholder",
-      "label": "Input Placeholder",
-      "default": "Join our email list...."
-    },
-    {
-      "type": "color",
-      "id": "block2_input_bg_color",
-      "label": "Input Background Color",
-      "default": "#F5F5DC"
-    },
-    {
-      "type": "color",
-      "id": "block2_input_text_color",
-      "label": "Input Text Color",
-      "default": "#000000"
-    },
-    {
-      "type": "range",
-      "id": "block2_input_font_size_mobile",
-      "min": 10,
-      "max": 30,
-      "step": 1,
-      "unit": "px",
-      "label": "Input Font Size (Mobile)",
-      "default": 14
-    },
-    {
-      "type": "range",
-      "id": "block2_input_font_size_desktop",
-      "min": 10,
-      "max": 40,
-      "step": 1,
-      "unit": "px",
-      "label": "Input Font Size (Desktop)",
-      "default": 16
-    },
-    {
-      "type": "range",
-      "id": "block2_input_border_width",
-      "min": 0,
-      "max": 5,
-      "step": 1,
-      "unit": "px",
-      "label": "Input Border Width",
-      "default": 1
-    },
-    {
-      "type": "color",
-      "id": "block2_input_border_color",
-      "label": "Input Border Color",
-      "default": "#000000"
-    },
-    {
-      "type": "range",
-      "id": "block2_input_radius",
-      "min": 0,
-      "max": 50,
-      "step": 1,
-      "unit": "px",
-      "label": "Input Border Radius",
-      "default": 8
-    },
-    {
-      "type": "range",
-      "id": "block2_input_padding_vertical",
-      "min": 5,
-      "max": 30,
-      "step": 1,
-      "unit": "px",
-      "label": "Input Padding (Vertical)",
-      "default": 12
-    },
-    {
-      "type": "range",
-      "id": "block2_input_padding_horizontal",
-      "min": 10,
-      "max": 50,
-      "step": 1,
-      "unit": "px",
-      "label": "Input Padding (Horizontal)",
-      "default": 16
-    },
-    {
-      "type": "text",
-      "id": "block2_button_text",
-      "label": "Subscribe Button Text",
-      "default": "subscribe"
-    },
-    {
-      "type": "color",
-      "id": "block2_button_color",
-      "label": "Subscribe Button Background Color",
-      "default": "#B8E986"
-    },
-    {
-      "type": "color",
-      "id": "block2_button_text_color",
-      "label": "Subscribe Button Text Color",
-      "default": "#FFFFFF"
-    },
-    {
-      "type": "range",
-      "id": "block2_button_font_size_mobile",
-      "min": 10,
-      "max": 30,
-      "step": 1,
-      "unit": "px",
-      "label": "Subscribe Button Font Size (Mobile)",
-      "default": 16
-    },
-    {
-      "type": "range",
-      "id": "block2_button_font_size_desktop",
-      "min": 10,
-      "max": 40,
-      "step": 1,
-      "unit": "px",
-      "label": "Subscribe Button Font Size (Desktop)",
-      "default": 18
-    },
-    {
-      "type": "range",
-      "id": "block2_button_radius",
-      "min": 0,
-      "max": 50,
-      "step": 1,
-      "unit": "px",
-      "label": "Subscribe Button Border Radius",
-      "default": 8
-    },
-    {
-      "type": "range",
-      "id": "block2_button_padding_vertical",
-      "min": 5,
-      "max": 30,
-      "step": 1,
-      "unit": "px",
-      "label": "Subscribe Button Padding (Vertical)",
-      "default": 12
-    },
-    {
-      "type": "range",
-      "id": "block2_button_padding_horizontal",
-      "min": 10,
-      "max": 50,
-      "step": 1,
-      "unit": "px",
-      "label": "Subscribe Button Padding (Horizontal)",
-      "default": 24
-    },
-    {
-      "type": "range",
-      "id": "block2_button_shadow_horizontal",
-      "min": 0,
-      "max": 20,
-      "step": 1,
-      "unit": "px",
-      "label": "Subscribe Button Shadow (Horizontal)",
-      "default": 0
-    },
-    {
-      "type": "range",
-      "id": "block2_button_shadow_vertical",
-      "min": 0,
-      "max": 20,
-      "step": 1,
-      "unit": "px",
-      "label": "Subscribe Button Shadow (Vertical)",
-      "default": 4
-    },
-    {
-      "type": "range",
-      "id": "block2_button_shadow_blur",
-      "min": 0,
-      "max": 30,
-      "step": 1,
-      "unit": "px",
-      "label": "Subscribe Button Shadow (Blur)",
-      "default": 5
-    },
-    {
-      "type": "range",
-      "id": "block2_button_shadow_opacity",
-      "min": 0,
-      "max": 100,
-      "step": 5,
-      "unit": "%",
-      "label": "Subscribe Button Shadow Opacity",
-      "default": 20
-    },
-    {
-      "type": "richtext",
-      "id": "block2_subtext",
-      "label": "Subtext",
-      "default": "<p>by clicking subscribe, you agree to receive marketing<br>emails from Kidfresh.</p>"
-    },
-    {
-      "type": "color",
-      "id": "block2_subtext_color",
-      "label": "Subtext Color",
-      "default": "#FFFFFF"
-    },
-    {
-      "type": "range",
-      "id": "block2_subtext_font_size_mobile",
-      "min": 10,
-      "max": 30,
-      "step": 1,
-      "unit": "px",
-      "label": "Subtext Font Size (Mobile)",
-      "default": 12
-    },
-    {
-      "type": "range",
-      "id": "block2_subtext_font_size_desktop",
-      "min": 10,
-      "max": 40,
-      "step": 1,
-      "unit": "px",
-      "label": "Subtext Font Size (Desktop)",
-      "default": 14
-    },
-    {
-      "type": "range",
-      "id": "block2_subtext_spacing",
-      "min": 0,
-      "max": 50,
-      "step": 1,
-      "unit": "px",
-      "label": "Subtext Spacing (Top)",
-      "default": 12
-    },
-    {
-      "type": "color",
-      "id": "block2_bg_color",
-      "label": "Block 2 Background Color",
-      "default": "#FF6B35"
-    },
-    {
-      "type": "range",
-      "id": "block2_padding_mobile",
-      "min": 10,
-      "max": 100,
-      "step": 5,
-      "unit": "px",
-      "label": "Block 2 Padding (Mobile)",
-      "default": 30
-    },
-    {
-      "type": "range",
-      "id": "block2_padding_desktop",
-      "min": 10,
-      "max": 150,
-      "step": 5,
-      "unit": "px",
-      "label": "Block 2 Padding (Desktop)",
-      "default": 50
-    },
+    { "type": "image_picker", "id": "block2_image", "label": "Block 2 Image" },
+
+    { "type": "text", "id": "news_placeholder", "label": "Input placeholder", "default": "Join our email list..." },
+    { "type": "range", "id": "news_input_size", "label": "Input font size", "min": 12, "max": 22, "default": 16 },
+
+    { "type": "text", "id": "news_btn_text", "label": "Subscribe button text", "default": "subscribe" },
+    { "type": "color", "id": "news_btn_bg", "label": "Button background", "default": "#7cc259" },
+    { "type": "color", "id": "news_btn_color", "label": "Button text color", "default": "#000" },
+    { "type": "range", "id": "news_btn_size", "label": "Button font size", "min": 12, "max": 30, "default": 18 },
+
+    { "type": "textarea", "id": "news_subtext", "label": "Sub text", "default": "by clicking subscribe, you agree to receive marketing emails" },
+    { "type": "color", "id": "news_sub_color", "label": "Sub text color", "default": "#000" },
+    { "type": "range", "id": "news_sub_size", "label": "Sub text size", "min": 12, "max": 22, "default": 14 },
+
+    { "type": "color", "id": "block2_bg", "label": "Block 2 background", "default": "#ffa542" },
+
+    /* ---------------- BLOCK 3 ---------------- */
     {
       "type": "header",
-      "content": "Block 3 - Social Media Block"
+      "content": "Block 3 (Social Media)"
     },
-    {
-      "type": "image_picker",
-      "id": "block3_image",
-      "label": "Block 3 Image"
-    },
-    {
-      "type": "checkbox",
-      "id": "block3_show_facebook",
-      "label": "Show Facebook",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "block3_show_instagram",
-      "label": "Show Instagram",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "block3_show_tiktok",
-      "label": "Show TikTok",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "block3_show_twitter",
-      "label": "Show Twitter",
-      "default": false
-    },
-    {
-      "type": "checkbox",
-      "id": "block3_show_youtube",
-      "label": "Show YouTube",
-      "default": false
-    },
-    {
-      "type": "checkbox",
-      "id": "block3_show_pinterest",
-      "label": "Show Pinterest",
-      "default": false
-    },
-    {
-      "type": "color",
-      "id": "block3_icon_bg_color",
-      "label": "Icon Background Color",
-      "default": "#FF6B35"
-    },
-    {
-      "type": "color",
-      "id": "block3_icon_color",
-      "label": "Icon Color",
-      "default": "#FFFFFF"
-    },
-    {
-      "type": "range",
-      "id": "block3_icon_border_width",
-      "min": 0,
-      "max": 5,
-      "step": 1,
-      "unit": "px",
-      "label": "Icon Border Width",
-      "default": 2
-    },
-    {
-      "type": "color",
-      "id": "block3_icon_border_color",
-      "label": "Icon Border Color",
-      "default": "#000000"
-    },
-    {
-      "type": "range",
-      "id": "block3_icon_size_mobile",
-      "min": 30,
-      "max": 100,
-      "step": 5,
-      "unit": "px",
-      "label": "Icon Size (Mobile)",
-      "default": 50
-    },
-    {
-      "type": "range",
-      "id": "block3_icon_size_desktop",
-      "min": 30,
-      "max": 120,
-      "step": 5,
-      "unit": "px",
-      "label": "Icon Size (Desktop)",
-      "default": 60
-    },
-    {
-      "type": "richtext",
-      "id": "block3_subtext",
-      "label": "Subtext",
-      "default": "<p>follow us to win<br>more meals.</p>"
-    },
-    {
-      "type": "color",
-      "id": "block3_subtext_color",
-      "label": "Subtext Color",
-      "default": "#FFFFFF"
-    },
-    {
-      "type": "range",
-      "id": "block3_subtext_font_size_mobile",
-      "min": 10,
-      "max": 30,
-      "step": 1,
-      "unit": "px",
-      "label": "Subtext Font Size (Mobile)",
-      "default": 14
-    },
-    {
-      "type": "range",
-      "id": "block3_subtext_font_size_desktop",
-      "min": 10,
-      "max": 40,
-      "step": 1,
-      "unit": "px",
-      "label": "Subtext Font Size (Desktop)",
-      "default": 16
-    },
-    {
-      "type": "range",
-      "id": "block3_subtext_spacing",
-      "min": 0,
-      "max": 50,
-      "step": 1,
-      "unit": "px",
-      "label": "Subtext Spacing (Top)",
-      "default": 12
-    },
-    {
-      "type": "color",
-      "id": "block3_bg_color",
-      "label": "Block 3 Background Color",
-      "default": "#B8E986"
-    },
-    {
-      "type": "range",
-      "id": "block3_padding_mobile",
-      "min": 10,
-      "max": 100,
-      "step": 5,
-      "unit": "px",
-      "label": "Block 3 Padding (Mobile)",
-      "default": 30
-    },
-    {
-      "type": "range",
-      "id": "block3_padding_desktop",
-      "min": 10,
-      "max": 150,
-      "step": 5,
-      "unit": "px",
-      "label": "Block 3 Padding (Desktop)",
-      "default": 50
-    },
-    {
-      "type": "header",
-      "content": "t:sections.all.spacing"
-    },
-    {
-      "type": "range",
-      "id": "margin_top",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.footer.settings.margin_top.label",
-      "default": 0
-    },
-    {
-      "type": "header",
-      "content": "t:sections.all.padding.section_padding_heading"
-    },
-    {
-      "type": "range",
-      "id": "padding_top",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_top",
-      "default": 36
-    },
-    {
-      "type": "range",
-      "id": "padding_bottom",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_bottom",
-      "default": 36
-    }
+    { "type": "image_picker", "id": "block3_image", "label": "Block 3 Image" },
+
+    { "type": "url", "id": "social_facebook", "label": "Facebook URL" },
+    { "type": "url", "id": "social_instagram", "label": "Instagram URL" },
+    { "type": "url", "id": "social_tiktok", "label": "TikTok URL" },
+
+    { "type": "image_picker", "id": "icon_facebook", "label": "Facebook Icon" },
+    { "type": "image_picker", "id": "icon_instagram", "label": "Instagram Icon" },
+    { "type": "image_picker", "id": "icon_tiktok", "label": "TikTok Icon" },
+
+    { "type": "textarea", "id": "block3_subtext", "label": "Sub text", "default": "follow us to win more meals" },
+    { "type": "color", "id": "block3_sub_color", "label": "Sub text color", "default": "#000" },
+    { "type": "range", "id": "block3_sub_size", "label": "Sub text size", "min": 12, "max": 22, "default": 14 },
+
+    { "type": "color", "id": "block3_bg", "label": "Block 3 background", "default": "#8fd46a" }
+
   ],
   "presets": [
     { "name": "Custom Footer 3 Blocks" }
   ]
 }
 {% endschema %}
-
