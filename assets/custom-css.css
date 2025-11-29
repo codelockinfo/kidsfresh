@@ -20,6 +20,9 @@ ease;
 .header__active-menu-item{
     text-decoration: none !important;
 }
+.header__icons{
+      align-items: center !important;
+}
 .header__icon .icon{
     color : #F8971D !important;
 }
