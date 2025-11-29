@@ -39,9 +39,9 @@
       "type": "header",
       "settings": {
         "logo_position": "top-center",
-        "mobile_logo_position": "left",
+        "mobile_logo_position": "center",
         "menu": "main-menu",
-        "menu_type_desktop": "dropdown",
+        "menu_type_desktop": "mega",
         "sticky_header_type": "none",
         "show_line_separator": false,
         "color_scheme": "scheme-823e3615-eabd-44b1-ae7d-823b2a1ed72a",
