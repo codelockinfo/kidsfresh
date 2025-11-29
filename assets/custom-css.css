@@ -1,6 +1,9 @@
 .header__menu-item{
     font-size:23px !important;
 }
+.announcement-bar__message{
+   font-size: 19px !important; 
+}
 ul.list-menu.list-menu--inline span:hover:after {
     width: 100% !important;
 }
