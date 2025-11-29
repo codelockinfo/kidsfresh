@@ -27,5 +27,5 @@ ease;
     color : #F8971D !important;
 }
 .svg-wrapper{
- display :none;
+ display :none !important
 }
