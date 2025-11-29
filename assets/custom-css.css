@@ -1,7 +1,7 @@
 .header__menu-item{
     font-size:20px !important;
 }
-.header__menu-item span:hover:after {
+ul.list-menu.list-menu--inline span:hover:after {
     width: 100% !important;
 }
 ul.list-menu.list-menu--inline span:after {
