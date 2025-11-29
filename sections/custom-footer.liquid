@@ -20,38 +20,13 @@
 
 /* Buttons */
 .footer-btn {
-  position: relative;
   display: inline-block;
-  padding: 18px 50px;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: bold;
   border: none;
-  border-radius: 50px;
-  font-weight: 600;
   cursor: pointer;
-  font-size: 20px;
-
-  /* Exact orange top color */
-  background: #ffa133;
-  color: #47371d;
-  text-align: center;
-  z-index: 2;
 }
-
-/* Brown bottom shadow EXACT STYLE */
-.footer-btn::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-
-  /* Shadow very tight like screenshot */
-  bottom: -6px;
-  height: 22px;
-
-  background: #b86f0d; /* exact brown color */
-  border-radius: 50px;
-  z-index: -1;
-}
-
 
 /* Input */
 .footer-input {
@@ -108,10 +83,13 @@
 
       <img src="{{ section.settings.block1_image | image_url }}" class="footer-block-image" alt="">
 
-      <button class="footer-btn">
-  {{ section.settings.block1_btn_text }}
-</button>
-
+      <button 
+        class="footer-btn"
+        style="background: {{ section.settings.block1_btn_bg }};
+               color: {{ section.settings.block1_btn_color }};
+               font-size: {{ section.settings.block1_btn_size }}px;">
+        {{ section.settings.block1_btn_text }}
+      </button>
 
       <p class="footer-subtext"
          style="color: {{ section.settings.block1_sub_color }};
