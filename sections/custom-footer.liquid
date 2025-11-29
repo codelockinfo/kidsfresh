@@ -20,35 +20,13 @@
 
 /* Buttons */
 .footer-btn {
-  position: relative;
   display: inline-block;
-  padding: 14px 36px;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: bold;
   border: none;
-  border-radius: 40px;
-  font-weight: 600;
   cursor: pointer;
-  z-index: 2;
-
-  /* Customizer-controlled colors */
-  background: var(--btn-top);
-  color: var(--btn-text);
-  font-size: var(--btn-size);
 }
-
-/* Tight brown bottom shadow */
-.footer-btn::after {
-  content: "";
-  position: absolute;
-  bottom: -4px;        /* tighter height */
-  left: 0;
-  right: 0;
-  height: 16px;        /* reduced size to match your screenshot */
-  background: var(--btn-shadow);
-  border-radius: 40px;
-  z-index: -1;
-}
-
-
 
 /* Input */
 .footer-input {
@@ -106,14 +84,12 @@
       <img src="{{ section.settings.block1_image | image_url }}" class="footer-block-image" alt="">
 
       <button 
-  class="footer-btn"
-  style="--btn-top: {{ section.settings.block1_btn_bg }};
-         --btn-text: {{ section.settings.block1_btn_color }};
-         --btn-size: {{ section.settings.block1_btn_size }}px;
-         --btn-shadow: {{ section.settings.block1_btn_shadow }};">
-  {{ section.settings.block1_btn_text }}
-</button>
-
+        class="footer-btn"
+        style="background: {{ section.settings.block1_btn_bg }};
+               color: {{ section.settings.block1_btn_color }};
+               font-size: {{ section.settings.block1_btn_size }}px;">
+        {{ section.settings.block1_btn_text }}
+      </button>
 
       <p class="footer-subtext"
          style="color: {{ section.settings.block1_sub_color }};
@@ -203,12 +179,6 @@
     { "type": "text", "id": "block1_btn_text", "label": "Button text", "default": "message us" },
     { "type": "color", "id": "block1_btn_bg", "label": "Button background", "default": "#ffb044" },
     { "type": "color", "id": "block1_btn_color", "label": "Button text color", "default": "#000" },
-    {
-  "type": "color",
-  "id": "block1_btn_shadow",
-  "label": "Button shadow color (bottom)",
-  "default": "#b56a0a"
-},
     { "type": "range", "id": "block1_btn_size", "label": "Button font size", "min": 12, "max": 30, "default": 18 },
 
     { "type": "textarea", "id": "block1_subtext", "label": "Sub text", "default": "we’re here to help you win more meals" },
