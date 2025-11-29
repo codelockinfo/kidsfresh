@@ -5,13 +5,13 @@ ul.list-menu.list-menu--inline span:hover:after {
     width: 100%;
 }
 ul.list-menu.list-menu--inline span:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -1.5pc;
-    width: 0;
-    height: 50px;
-    background-image: url(/cdn/shop/files/Untitled_design_-_2025-11-21T010727.765.png?v=1763667456);
+    content: "" !important;
+    position: absolute !important;
+    left: 0 !important;
+    bottom: -1.5pc !important;
+    width: 0 !important;
+    height: 50px !important;
+    background-image: url(/cdn/shop/files/Untitled_design_-_2025-11-21T010727.765.png?v=1763667456) !important;
     background-size: 100% 100%;
     background-repeat: no-repeat;
     transition: width .4s 
