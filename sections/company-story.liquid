@@ -1,0 +1,209 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .company-story-section-{{ section.id }} {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    overflow: visible;
+    background-color: transparent;
+  }
+
+  .company-story-container-{{ section.id }} {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 80px 40px;
+    z-index: 1;
+    overflow: visible;
+  }
+
+  {%- if section.settings.background_image != blank -%}
+    .company-story-container-{{ section.id }} {
+      background-image: url('{{ section.settings.background_image | image_url: width: 1920 }}');
+      background-size: cover;
+      background-position: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+    }
+  {%- endif -%}
+
+    {%- if section.settings.mobile_background_image != blank -%}
+    @media screen and (max-width: 749px) {
+      .company-story-container-{{ section.id }} {
+        background-image: url('{{ section.settings.mobile_background_image | image_url: width: 750 }}');
+        background-size: cover;
+        background-position: cover;
+        background-repeat: no-repeat;
+      }
+    }
+  {%- endif -%}
+
+  .company-story-content-wrapper-{{ section.id }} {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    z-index: 2;
+  }
+
+  .company-story-content-{{ section.id }} {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .company-story-heading-{{ section.id }} {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #ffffff;
+    letter-spacing: 2px;
+  }
+
+  .company-story-text-{{ section.id }} {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #ffffff;
+  }
+
+  @media screen and (max-width: 749px) {
+    .company-story-section-{{ section.id }} {
+      padding: 0;
+    }
+
+    .company-story-container-{{ section.id }} {
+      padding: 60px 25px;
+    }
+
+    .company-story-heading-{{ section.id }} {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .company-story-text-{{ section.id }} {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+  }
+
+  @media screen and (min-width: 750px) and (max-width: 989px) {
+    .company-story-container-{{ section.id }} {
+      padding: 70px 35px;
+    }
+
+    .company-story-heading-{{ section.id }} {
+      font-size: 40px;
+    }
+
+    .company-story-text-{{ section.id }} {
+      font-size: 17px;
+    }
+  }
+
+  /* Small Mobile Devices (up to 480px) */
+  @media screen and (max-width: 480px) {
+    .company-story-container-{{ section.id }} {
+      padding: 50px 20px;
+    }
+
+    .company-story-heading-{{ section.id }} {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .company-story-text-{{ section.id }} {
+      font-size: 15px;
+      line-height: 1.5;
+    }
+  }
+{%- endstyle -%}
+
+<div class="company-story-section-{{ section.id }} section-{{ section.id }}-padding">
+  <div class="company-story-container-{{ section.id }}">
+    <div class="company-story-content-wrapper-{{ section.id }}">
+      <div class="company-story-content-{{ section.id }}">
+        <h2 class="company-story-heading-{{ section.id }}">
+          {{ section.settings.heading | default: "est'd 2007" }}
+        </h2>
+        <div class="company-story-text-{{ section.id }}">
+          {{ section.settings.text | default: "We began as a couple parents in New York City who wanted healthier meals for their own kids, but quickly ended up on dinner tables and in lunch boxes all over town. Before long, our better-for-them frozen kid favorites found their way into grocery aisles all over the country. Maybe it was the hidden veggies, maybe it was the meatballs—either way, we've been helping parents win more meals ever since." }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Company Story",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background Image (Desktop)",
+      "info": "Upload the background image for desktop devices"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_background_image",
+      "label": "Background Image (Mobile)",
+      "info": "Upload the background image for mobile devices (optional - will use desktop image if not provided)"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "est'd 2007"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Story Text",
+      "default": "<p>We began as a couple parents in New York City who wanted healthier meals for their own kids, but quickly ended up on dinner tables and in lunch boxes all over town. Before long, our better-for-them frozen kid favorites found their way into grocery aisles all over the country. Maybe it was the hidden veggies, maybe it was the meatballs—either way, we've been helping parents win more meals ever since.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 40
+    }
+  ],
+  "presets": [
+    {
+      "name": "Company Story"
+    }
+  ]
+}
+{% endschema %}
+
