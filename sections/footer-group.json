@@ -11,6 +11,38 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "custom_footer_WECqUR": {
+      "type": "custom-footer",
+      "name": "Custom Footer 3 Blocks",
+      "settings": {
+        "background_color": "#1b4c3b",
+        "block1_btn_text": "message us",
+        "block1_btn_bg": "#ffb044",
+        "block1_btn_color": "#000",
+        "block1_btn_size": 18,
+        "block1_subtext": "we’re here to help you win more meals",
+        "block1_sub_color": "#000",
+        "block1_sub_size": 14,
+        "block1_bg": "#95c940",
+        "news_placeholder": "Join our email list...",
+        "news_input_size": 16,
+        "news_btn_text": "subscribe",
+        "news_btn_bg": "#7cc259",
+        "news_btn_color": "#000",
+        "news_btn_size": 18,
+        "news_subtext": "by clicking subscribe, you agree to receive marketing emails",
+        "news_sub_color": "#000",
+        "news_sub_size": 14,
+        "block2_bg": "#f89821",
+        "social_facebook": "",
+        "social_instagram": "",
+        "social_tiktok": "",
+        "block3_subtext": "follow us to win more meals",
+        "block3_sub_color": "#000",
+        "block3_sub_size": 14,
+        "block3_bg": "#6dbe4a"
+      }
+    },
     "footer": {
       "type": "footer",
       "disabled": true,
@@ -31,6 +63,7 @@
     }
   },
   "order": [
+    "custom_footer_WECqUR",
     "footer"
   ]
 }
