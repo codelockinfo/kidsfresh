@@ -105,12 +105,14 @@
       <img src="{{ section.settings.block1_image | image_url }}" class="footer-block-image" alt="">
 
       <button 
-        class="footer-btn"
-        style="background: {{ section.settings.block1_btn_bg }};
-               color: {{ section.settings.block1_btn_color }};
-               font-size: {{ section.settings.block1_btn_size }}px;">
-        {{ section.settings.block1_btn_text }}
-      </button>
+  class="footer-btn"
+  style="--btn-top: {{ section.settings.block1_btn_bg }};
+         --btn-text: {{ section.settings.block1_btn_color }};
+         --btn-size: {{ section.settings.block1_btn_size }}px;
+         --btn-shadow: {{ section.settings.block1_btn_shadow }};">
+  {{ section.settings.block1_btn_text }}
+</button>
+
 
       <p class="footer-subtext"
          style="color: {{ section.settings.block1_sub_color }};
