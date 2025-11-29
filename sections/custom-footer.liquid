@@ -20,13 +20,34 @@
 
 /* Buttons */
 .footer-btn {
+  position: relative;
   display: inline-block;
-  padding: 12px 28px;
-  border-radius: 30px;
-  font-weight: bold;
+  padding: 14px 36px;
   border: none;
+  border-radius: 40px;
+  font-weight: 600;
   cursor: pointer;
+  z-index: 2;
+  
+  /* Top button color controlled by customizer */
+  background: var(--btn-top);
+  color: var(--btn-text);
+  font-size: var(--btn-size);
 }
+
+/* Brown bottom curved shadow */
+.footer-btn::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  right: 0;
+  height: 26px;
+  background: var(--btn-shadow);
+  border-radius: 40px;
+  z-index: -1;
+}
+
 
 /* Input */
 .footer-input {
