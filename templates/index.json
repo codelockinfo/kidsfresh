@@ -148,9 +148,9 @@
       "name": "Insta Reels Feed",
       "settings": {
         "heading": "Wins of the Week",
-        "heading_size": 70,
-        "heading_size_mobile": 50,
-        "heading_color": "#0F4735",
+        "heading_size": 84,
+        "heading_size_mobile": 42,
+        "heading_color": "#0f4735",
         "image_border_radius": 0,
         "enable_links": false,
         "enable_lightbox": true,
