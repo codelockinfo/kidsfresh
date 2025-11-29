@@ -61,6 +61,11 @@
   font-size: 14px;
 }
 
+.email-with-btn{
+  display: flex;
+    gap: 14px;
+}
+
 /* -------- MOBILE --------- */
 @media (max-width: 768px) {
   .footer-three-blocks {
@@ -104,7 +109,7 @@
 
       <img src="{{ section.settings.block2_image | image_url }}" class="footer-block-image" alt="">
 
-      <div><input 
+      <div class="email-with-btn"><input 
         class="footer-input"
         type="email"
         placeholder="{{ section.settings.news_placeholder }}"
