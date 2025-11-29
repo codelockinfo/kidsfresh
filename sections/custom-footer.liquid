@@ -84,23 +84,12 @@
       <img src="{{ section.settings.block1_image | image_url }}" class="footer-block-image" alt="">
 
       <button 
-  class="footer-btn"
-  style="
-    {% if section.settings.block1_btn_bg_img != blank %}
-        background-image: url({{ section.settings.block1_btn_bg_img | image_url }});
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    {% else %}
-        --btn-top: {{ section.settings.block1_btn_bg }};
-    {% endif %}
-    --btn-text: {{ section.settings.block1_btn_color }};
-    --btn-size: {{ section.settings.block1_btn_size }}px;
-    --btn-shadow: {{ section.settings.block1_btn_shadow }};
-  ">
-  {{ section.settings.block1_btn_text }}
-</button>
-
+        class="footer-btn"
+        style="background: {{ section.settings.block1_btn_bg }};
+               color: {{ section.settings.block1_btn_color }};
+               font-size: {{ section.settings.block1_btn_size }}px;">
+        {{ section.settings.block1_btn_text }}
+      </button>
 
       <p class="footer-subtext"
          style="color: {{ section.settings.block1_sub_color }};
@@ -186,17 +175,11 @@
       "content": "Block 1 Settings"
     },
     { "type": "image_picker", "id": "block1_image", "label": "Block 1 Image" },
-      {
-  "type": "image_picker",
-  "id": "block1_btn_bg_img",
-  "label": "Button Background Image"
-}
-,
+
     { "type": "text", "id": "block1_btn_text", "label": "Button text", "default": "message us" },
     { "type": "color", "id": "block1_btn_bg", "label": "Button background", "default": "#ffb044" },
     { "type": "color", "id": "block1_btn_color", "label": "Button text color", "default": "#000" },
     { "type": "range", "id": "block1_btn_size", "label": "Button font size", "min": 12, "max": 30, "default": 18 },
-
 
     { "type": "textarea", "id": "block1_subtext", "label": "Sub text", "default": "we’re here to help you win more meals" },
     { "type": "color", "id": "block1_sub_color", "label": "Sub text color", "default": "#000" },
