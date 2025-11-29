@@ -28,25 +28,26 @@
   font-weight: 600;
   cursor: pointer;
   z-index: 2;
-  
-  /* Top button color controlled by customizer */
+
+  /* Customizer-controlled colors */
   background: var(--btn-top);
   color: var(--btn-text);
   font-size: var(--btn-size);
 }
 
-/* Brown bottom curved shadow */
+/* Tight brown bottom shadow */
 .footer-btn::after {
   content: "";
   position: absolute;
-  bottom: -8px;
+  bottom: -4px;        /* tighter height */
   left: 0;
   right: 0;
-  height: 26px;
+  height: 16px;        /* reduced size to match your screenshot */
   background: var(--btn-shadow);
   border-radius: 40px;
   z-index: -1;
 }
+
 
 
 /* Input */
