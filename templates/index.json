@@ -139,11 +139,17 @@
         "plate_image": "shopify://shop_images/image_222.png",
         "plate_alt_text": "Plate with food"
       }
+    },
+    "news_latter_8HNRqQ": {
+      "type": "news-latter",
+      "name": "footer",
+      "settings": {}
     }
   },
   "order": [
     "featured_collection",
     "instra_reel_J97KgH",
-    "custom_pdp_image_GCmkPX"
+    "custom_pdp_image_GCmkPX",
+    "news_latter_8HNRqQ"
   ]
 }
