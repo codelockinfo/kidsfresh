@@ -127,7 +127,6 @@
     },
     "custom_pdp_image_GCmkPX": {
       "type": "custom-pdp-image",
-      "disabled": true,
       "name": "Custom Background Section",
       "settings": {
         "background_image": "shopify://shop_images/Group_172_1.png",
