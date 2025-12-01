@@ -54,6 +54,17 @@
         "padding_bottom": 16
       }
     },
+    "custom_liquid_JAKDcj": {
+      "type": "custom-liquid",
+      "custom_css": [],
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"custom-top__wrapper\">\n    <!-- Desktop Image -->\n    <img src=\"https://cdn.shopify.com/s/files/1/0790/5017/8785/files/Group_346.svg?v=1762709615\" alt=\"Desktop Banner\" class=\"custom-top__image custom-top__image--desktop\" loading=\"lazy\" width=\"100%\" height=\"auto\">",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "custom_banner_slider_rVdrGW": {
       "type": "custom-banner-slider",
       "blocks": {
@@ -94,22 +105,12 @@
         "show_text_below": true,
         "accessibility_info": "Slideshow about our brand"
       }
-    },
-    "custom_liquid_JAKDcj": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<div class=\"custom-top__wrapper\">\n    <!-- Desktop Image -->\n    <img src=\"https://cdn.shopify.com/s/files/1/0790/5017/8785/files/Group_346.svg?v=1762709615\" alt=\"Desktop Banner\" class=\"custom-top__image custom-top__image--desktop\" loading=\"lazy\" width=\"100%\" height=\"auto\">",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
     }
   },
   "order": [
     "announcement-bar",
     "header",
-    "custom_banner_slider_rVdrGW",
-    "custom_liquid_JAKDcj"
+    "custom_liquid_JAKDcj",
+    "custom_banner_slider_rVdrGW"
   ]
 }
