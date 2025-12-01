@@ -68,6 +68,7 @@
     },
     "custom_banner_slider_rwwzV6": {
       "type": "custom-banner-slider",
+      "disabled": true,
       "name": "Celebrate Plate Section",
       "settings": {
         "bg_desktop": "shopify://shop_images/Untitled_1920_x_1415_px_4_Custom_e655c0e4-be81-48c9-9a18-abb45847f0a1.webp",
