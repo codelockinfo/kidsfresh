@@ -112,7 +112,7 @@
         "heading": "Wins of the Week",
         "heading_size": 84,
         "heading_size_mobile": 42,
-        "heading_color": "#0F4735",
+        "heading_color": "#0f4735",
         "image_border_radius": 0,
         "enable_links": false,
         "enable_lightbox": true,
@@ -124,10 +124,26 @@
         "padding_bottom_mobile": 16,
         "color_scheme": "background-1"
       }
+    },
+    "custom_pdp_image_GCmkPX": {
+      "type": "custom-pdp-image",
+      "name": "Custom Background Section",
+      "settings": {
+        "background_image": "shopify://shop_images/Group_172_1.png",
+        "background_color": "#2c5f2d",
+        "heading": "the best ingredients only matter if they eat them.",
+        "heading_color": "#f58220",
+        "text_paragraph_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.",
+        "text_paragraph_2": "Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet.",
+        "text_color": "#ffffff",
+        "plate_image": "shopify://shop_images/image_222.png",
+        "plate_alt_text": "Plate with food"
+      }
     }
   },
   "order": [
     "featured_collection",
-    "instra_reel_J97KgH"
+    "instra_reel_J97KgH",
+    "custom_pdp_image_GCmkPX"
   ]
 }
