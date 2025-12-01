@@ -9,16 +9,6 @@
             <a href="#">message us</a>
         </nav>
     </div>
-
-    <div class="footer-bottom">
-        <p>© Copyright 2025 Kidfresh. All Rights Reserved.
-            Website by <a href="#">Echo Boomer Design</a>.
-        </p>
-        <p>
-            <a href="#">Privacy Policy</a> |
-            <a href="#">Terms of Service</a>
-        </p>
-    </div>
 </footer>
 {% schema %}
 {
@@ -36,11 +26,47 @@
 }
 {% endschema %}
 <style>
-.main_flower{
-    background-color: green;
-    padding : 0px 100px;
+.kidfresh-footer {
+    font-family: Arial, sans-serif;
 }
-.main_box{
-    display: flex;
+
+/* Top section (green/orange waves look) */
+.footer-top {
+    background: #084C3A; /* dark green */
+    padding: 30px 20px;
+    text-align: center;
+    color: white;
+}
+
+.footer-top .logo {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.footer-top nav a {
+    margin: 0 15px;
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.footer-top nav a:hover {
+    text-decoration: underline;
+}
+
+/* Bottom bar (orange) */
+.footer-bottom {
+    background: #F58220; /* bright orange */
+    padding: 12px 20px;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+}
+
+.footer-bottom a {
+    color: white;
+    text-decoration: underline;
 }
 </style>
