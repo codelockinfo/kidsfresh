@@ -76,29 +76,10 @@
             "color_scheme": "background-1",
             "text_alignment_mobile": "center"
           }
-        },
-        "slide_EUMBfX": {
-          "type": "slide",
-          "settings": {
-            "subtext": "",
-            "heading": "Image slide",
-            "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "button_label": "Button label",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": true,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "background-1",
-            "text_alignment_mobile": "center"
-          }
         }
       },
       "block_order": [
-        "slide_6CRKfj",
-        "slide_EUMBfX"
+        "slide_6CRKfj"
       ],
       "name": "Animated Veggie Slideshow",
       "settings": {
@@ -113,11 +94,22 @@
         "show_text_below": true,
         "accessibility_info": "Slideshow about our brand"
       }
+    },
+    "custom_liquid_JAKDcj": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"custom-top__wrapper\">\n    <!-- Desktop Image -->\n    <img src=\"https://cdn.shopify.com/s/files/1/0790/5017/8785/files/Group_346.svg?v=1762709615\" alt=\"Desktop Banner\" class=\"custom-top__image custom-top__image--desktop\" loading=\"lazy\" width=\"100%\" height=\"auto\">",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
     "announcement-bar",
     "header",
-    "custom_banner_slider_rVdrGW"
+    "custom_banner_slider_rVdrGW",
+    "custom_liquid_JAKDcj"
   ]
 }
