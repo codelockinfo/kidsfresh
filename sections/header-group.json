@@ -53,10 +53,16 @@
         "padding_top": 16,
         "padding_bottom": 16
       }
+    },
+    "news_latter_TdKEAQ": {
+      "type": "news-latter",
+      "name": "footer",
+      "settings": {}
     }
   },
   "order": [
     "announcement-bar",
-    "header"
+    "header",
+    "news_latter_TdKEAQ"
   ]
 }
