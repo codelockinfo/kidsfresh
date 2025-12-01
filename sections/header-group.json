@@ -70,13 +70,13 @@
       "type": "custom-banner-slider",
       "name": "Celebrate Plate Section",
       "settings": {
-        "background_image_desktop": "shopify://shop_images/Untitled_1920_x_1415_px_4_Custom_e655c0e4-be81-48c9-9a18-abb45847f0a1.webp",
-        "background_image_mobile": "shopify://shop_images/Untitled_design_-_2025-11-19T022403.761.webp",
-        "bottom_decor_image": "shopify://shop_images/Group_346.svg",
+        "bg_desktop": "shopify://shop_images/Untitled_1920_x_1415_px_4_Custom_e655c0e4-be81-48c9-9a18-abb45847f0a1.webp",
+        "bg_mobile": "shopify://shop_images/Untitled_design_-_2025-11-19T022403.761.webp",
+        "bottom_decor": "shopify://shop_images/Group_346.svg",
         "heading": "celebrate the little victories",
-        "text": "Add your paragraph text here…",
-        "button_label": "meet Kidfresh",
-        "button_link": "shopify://collections/all"
+        "desc": "Add your text here...",
+        "btn_text": "meet Kidfresh",
+        "btn_link": ""
       }
     }
   },
