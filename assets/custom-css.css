@@ -1,5 +1,8 @@
 .header__menu-item{
-    font-size:20px !important;
+    font-size:23px !important;
+}
+.announcement-bar__message{
+   font-size: 19px !important; 
 }
 ul.list-menu.list-menu--inline span:hover:after {
     width: 100% !important;
@@ -19,4 +22,10 @@ ease;
 }
 .header__active-menu-item{
     text-decoration: none !important;
+}
+.header__icons{
+      align-items: center !important;
+}
+.header__icon .icon{
+    color : #F8971D !important;
 }

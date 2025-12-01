@@ -10,7 +10,7 @@
 {
   "current": {
     "logo": "shopify://shop_images/LOGO.png",
-    "logo_width": 180,
+    "logo_width": 190,
     "type_header_font": "assistant_n4",
     "heading_scale": 100,
     "type_body_font": "assistant_n4",
@@ -42,7 +42,7 @@
     "inputs_shadow_horizontal_offset": 0,
     "inputs_shadow_vertical_offset": 4,
     "inputs_shadow_blur": 5,
-    "card_style": "standard",
+    "card_style": "card",
     "card_image_padding": 0,
     "card_text_alignment": "left",
     "card_color_scheme": "scheme-2",
@@ -118,7 +118,7 @@
     "social_pinterest_link": "",
     "social_tumblr_link": "",
     "social_vimeo_link": "",
-    "predictive_search_enabled": true,
+    "predictive_search_enabled": false,
     "predictive_search_show_vendor": false,
     "predictive_search_show_price": false,
     "currency_code_enabled": true,
@@ -204,8 +204,8 @@
           "background_gradient": "",
           "text": "#ffffff",
           "button": "#121212",
-          "button_label": "#ffffff",
-          "secondary_button_label": "#ffffff",
+          "button_label": "#f3f3f3",
+          "secondary_button_label": "#f3f3f3",
           "shadow": "#ffffff"
         }
       },
