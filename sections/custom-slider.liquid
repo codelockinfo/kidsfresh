@@ -1,0 +1,653 @@
+{{ 'section-multicolumn.css' | asset_url | stylesheet_tag }}
+{{ 'component-slider.css' | asset_url | stylesheet_tag }}
+{{ 'component-button.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .winning-ingredients-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+    background-color: {{ section.settings.background_color }};
+    position: relative;
+    overflow: hidden;
+  }
+ 
+  .winning-ingredients-{{ section.id }} .background-image-left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 300px;
+    height: 300px;
+    z-index: 1;
+    pointer-events: none;
+  }
+ 
+  .winning-ingredients-{{ section.id }} .background-image-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+ 
+  .winning-ingredients-{{ section.id }} .background-image-right {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 300px;
+    height: 300px;
+    z-index: 1;
+    pointer-events: none;
+  }
+ 
+  .winning-ingredients-{{ section.id }} .background-image-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+ 
+  .winning-ingredients-{{ section.id }} .page-width {
+    position: relative;
+    z-index: 2;
+  }
+ 
+  .winning-ingredients-{{ section.id }} .section-heading {
+    text-align: {{ section.settings.heading_alignment }};
+    font-size: 84px;
+    font-weight: 700;
+    line-height: 86px;
+    color: {{ section.settings.title_color }};
+    margin-bottom: 56px;
+    text-transform: lowercase;
+  }
+ 
+  .winning-ingredients-{{ section.id }} .columns-wrapper {
+    display: flex;
+    gap: 26px;
+    margin-bottom: 67px;
+    justify-content: center;
+  }
+
+    .winning-ingredients-{{ section.id }} .column-item-wrapper {
+        width: 319px;
+        height: 480px;
+    }
+ 
+  .winning-ingredients-{{ section.id }} .column-item {
+    border: {{ section.settings.border_thickness }}px solid {{ section.settings.border_color }};
+    border-radius: {{ section.settings.border_radius }}px;
+    padding: 2.5rem 2rem;
+    height: 100%;
+    background-color: transparent;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+ 
+  .winning-ingredients-{{ section.id }} .column-item:hover {
+    transform: scale(1.05);
+  }
+ 
+  .winning-ingredients-{{ section.id }} .column-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 2rem;
+    display: block;
+  }
+ 
+  .winning-ingredients-{{ section.id }} .column-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+ 
+  .winning-ingredients-{{ section.id }} .column-heading {
+    font-size: {{ section.settings.heading_size }}px;
+    font-weight: 700;
+    color: {{ section.settings.heading_color }};
+    margin: 50px 0 35px;
+    line-height: 86px;
+  }
+ 
+  .winning-ingredients-{{ section.id }} .column-preheading {
+    font-size: {{ section.settings.preheading_size }}px;
+    font-weight: 500;
+    color: {{ section.settings.preheading_color }};
+    margin-bottom: 35px;
+    line-height: 100%;
+  }
+ 
+  .winning-ingredients-{{ section.id }} .column-description {
+    font-size: {{ section.settings.description_size }}px;
+    color: {{ section.settings.description_color }};
+    line-height: 33px;
+    font-weight: 400;
+    margin-bottom: 40px;
+  }
+ 
+  .winning-ingredients-{{ section.id }} .button-wrapper {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+  }
+ 
+  .winning-ingredients-{{ section.id }} .button {
+    min-width: 200px;
+  }
+
+    @media screen and (max-width: 768px) {
+    .winning-ingredients-{{ section.id }} .section-heading {
+      font-size: 42px;
+      line-height: 46px;
+    }
+    .winning-ingredients-{{ section.id }} .column-item-wrapper {
+        width: 262px !important;
+        height: 395px !important;
+    }
+
+    .winning-ingredients-{{ section.id }} .column-icon img {
+      width: 27px !important;
+      height: 27px !important;
+    }
+      .winning-ingredients-{{ section.id }} .column-heading {
+        font-size: 90px;
+        margin: 20px 0 20px !important;
+        line-height: 70px !important;
+      }
+
+      .winning-ingredients-{{ section.id }} .column-preheading {
+        font-size: 24px !important;
+        line-height: 100%;
+      }
+      .winning-ingredients-{{ section.id }} .column-description {
+        font-size: 18px !important;
+        line-height: 27px;
+      }
+  }
+ 
+  @media screen and (max-width: 749px) {
+    {% if section.settings.enable_mobile_slider %}
+      .winning-ingredients-{{ section.id }} .columns-wrapper {
+        display: block;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 1rem;
+        margin-bottom: 3rem;
+        scrollbar-width: none;
+      }
+     
+      .winning-ingredients-{{ section.id }} .columns-wrapper::-webkit-scrollbar {
+        height: 6px;
+      }
+     
+      .winning-ingredients-{{ section.id }} .columns-wrapper::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+      }
+     
+      .winning-ingredients-{{ section.id }} .columns-wrapper::-webkit-scrollbar-thumb {
+        background: {{ section.settings.border_color }};
+        border-radius: 10px;
+      }
+     
+      .winning-ingredients-{{ section.id }} .column-item-wrapper {
+        display: inline-block;
+        width: 85%;
+        max-width: 320px;
+        margin-right: 1rem;
+        white-space: normal;
+        vertical-align: top;
+        scroll-snap-align: center;
+      }
+      
+      .winning-ingredients-{{ section.id }} .column-item-wrapper:first-child {
+        margin-left: 7.5%;
+      }
+      
+      .winning-ingredients-{{ section.id }} .column-item-wrapper:last-child {
+        margin-right: 7.5%;
+      }
+    {% else %}
+      .winning-ingredients-{{ section.id }} .columns-wrapper {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+        gap: 1rem;
+        padding-bottom: 1rem;
+        grid-template-columns: none;
+      }
+     
+      .winning-ingredients-{{ section.id }} .columns-wrapper::-webkit-scrollbar {
+        height: 4px;
+      }
+     
+      .winning-ingredients-{{ section.id }} .columns-wrapper::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+      }
+     
+      .winning-ingredients-{{ section.id }} .columns-wrapper::-webkit-scrollbar-thumb {
+        background: {{ section.settings.border_color }};
+        border-radius: 10px;
+      }
+     
+      .winning-ingredients-{{ section.id }} .column-item-wrapper {
+        flex: 0 0 85%;
+        scroll-snap-align: start;
+      }
+    {% endif %}
+   
+    .winning-ingredients-{{ section.id }} .background-image-left,
+    .winning-ingredients-{{ section.id }} .background-image-right {
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+/* 768px → 2.5 slides */
+@media (min-width: 768px) and (max-width: 990px) {
+  .winning-ingredients-{{ section.id }} .columns-wrapper {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 26px;
+    justify-content: flex-start;  /* important */
+  }
+  .winning-ingredients-{{ section.id }} .column-item-wrapper {
+    flex: 0 0 calc(100% / 2.5);
+    scroll-snap-align: center;
+  }
+}
+
+/* 991px → 3.5 slides */
+@media (min-width: 991px) and (max-width: 1200px) {
+  .winning-ingredients-{{ section.id }} .columns-wrapper {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 26px;
+    justify-content: flex-start;
+  }
+  .winning-ingredients-{{ section.id }} .column-item-wrapper {
+    flex: 0 0 calc(100% / 3.5);
+    scroll-snap-align: center;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1400px) {
+  .winning-ingredients-{{ section.id }} .columns-wrapper {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 26px;
+    justify-content: flex-start;
+  }
+  .winning-ingredients-{{ section.id }} .column-item-wrapper {
+    flex: 0 0 calc(100% / 4);
+    scroll-snap-align: center;
+  }
+}
+
+
+/* 1200px → 5.5 slides */
+@media (min-width: 1401px) {
+  .winning-ingredients-{{ section.id }} .columns-wrapper {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 26px;
+    justify-content: flex-start;
+  }
+  .winning-ingredients-{{ section.id }} .column-item-wrapper {
+    flex: 0 0 calc(100% / 5.5);
+    scroll-snap-align: center;
+  }
+}
+
+
+{%- endstyle -%}
+
+<div class="winning-ingredients-{{ section.id }}">
+  {%- if section.settings.background_image_left != blank -%}
+    <div class="background-image-left">
+      <img src="{{ section.settings.background_image_left | img_url: '600x600' }}"
+           alt="Background decoration"
+           loading="lazy">
+    </div>
+  {%- endif -%}
+ 
+  {%- if section.settings.background_image_right != blank -%}
+    <div class="background-image-right">
+      <img src="{{ section.settings.background_image_right | img_url: '600x600' }}"
+           alt="Background decoration"
+           loading="lazy">
+    </div>
+  {%- endif -%}
+ 
+  <div class="container">
+    {%- if section.settings.title != blank -%}
+      <h2 class="section-heading">
+        {{ section.settings.title }}
+      </h2>
+    {%- endif -%}
+   
+    <div class="columns-wrapper">
+      {%- for block in section.blocks -%}
+        <div class="column-item-wrapper" {{ block.shopify_attributes }}>
+          <div class="column-item">
+            {%- if block.settings.icon != blank -%}
+              <div class="column-icon">
+                <img src="{{ block.settings.icon | img_url: '96x96' }}"
+                     alt="{{ block.settings.heading }}"
+                     loading="lazy"
+                     width="48"
+                     height="48">
+              </div>
+            {%- endif -%}
+           
+            {%- if block.settings.heading != blank -%}
+              <h3 class="column-heading">{{ block.settings.heading }}</h3>
+            {%- endif -%}
+           
+            {%- if block.settings.preheading != blank -%}
+              <div class="column-preheading">{{ block.settings.preheading }}</div>
+            {%- endif -%}
+           
+            {%- if block.settings.description != blank -%}
+              <div class="column-description">{{ block.settings.description }}</div>
+            {%- endif -%}
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+   
+    {%- if section.settings.button_label != blank -%}
+      <div class="button-wrapper">
+        <a href="{{ section.settings.button_link }}"
+           class="button button--{{ section.settings.button_style }}">
+          <span>{{ section.settings.button_label }}</span>
+        </a>
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Winning Ingredients",
+  "class": "section",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Heading",
+      "default": "winning ingredients"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "Heading Alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Section Heading Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#1a4d3a"
+    },
+    {
+      "type": "header",
+      "content": "Background Images"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image_left",
+      "label": "Background Image (Left)"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image_right",
+      "label": "Background Image (Right)"
+    },
+    {
+      "type": "header",
+      "content": "Mobile Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_mobile_slider",
+      "label": "Enable Swipe Slider on Mobile",
+      "default": true,
+      "info": "When enabled, columns will be swipeable left-to-right on mobile devices"
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label",
+      "default": "ingredients"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "label": "Button Style",
+      "options": [
+        {
+          "value": "primary",
+          "label": "Primary"
+        },
+        {
+          "value": "secondary",
+          "label": "Secondary"
+        }
+      ],
+      "default": "primary"
+    },
+    {
+      "type": "header",
+      "content": "Column Styling"
+    },
+    {
+      "type": "range",
+      "id": "border_thickness",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "unit": "px",
+      "label": "Border Thickness",
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "label": "Border Radius",
+      "default": 15
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border Color",
+      "default": "#7ab55c"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "min": 30,
+      "max": 120,
+      "step": 2,
+      "unit": "px",
+      "label": "Column Heading Size",
+      "default": 80
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Column Heading Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "preheading_size",
+      "min": 12,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "label": "Preheading Size",
+      "default": 18
+    },
+    {
+      "type": "color",
+      "id": "preheading_color",
+      "label": "Preheading Color",
+      "default": "#ff8c42"
+    },
+    {
+      "type": "range",
+      "id": "description_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Description Size",
+      "default": 15
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Section Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 60
+    }
+  ],
+  "blocks": [
+    {
+      "type": "column",
+      "name": "Column",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon Image"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Column Heading",
+          "default": "Wh"
+        },
+        {
+          "type": "text",
+          "id": "preheading",
+          "label": "Preheading Text",
+          "default": "Wholesome ingredients"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "We use the kind of real ingredients you'd use in your own kitchen."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Winning Ingredients",
+      "blocks": [
+        {
+          "type": "column",
+          "settings": {
+            "heading": "Wh",
+            "preheading": "Wholesome ingredients",
+            "description": "We use the kind of real ingredients you'd use in your own kitchen."
+          }
+        },
+        {
+          "type": "column",
+          "settings": {
+            "heading": "Pro",
+            "preheading": "Protein power",
+            "description": "Protein helps growing bodies and brains stay strong and energized."
+          }
+        },
+        {
+          "type": "column",
+          "settings": {
+            "heading": "Vi",
+            "preheading": "Vitamin boost",
+            "description": "Our ingredients naturally provide the vitamins kids need in every bite."
+          }
+        },
+        {
+          "type": "column",
+          "settings": {
+            "heading": "Cr",
+            "preheading": "Calcium rich",
+            "description": "Calcium supports strong bones and teeth—and happy smiling kids."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
