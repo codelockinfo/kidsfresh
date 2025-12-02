@@ -12,8 +12,7 @@ ul.list-menu.list-menu--inline span {
     font-size: 26px; 
     color: #fff; 
     text-decoration: none;
-    font-weight: 400 !important;
-    font-family: 'GT Walsheim';
+    font-weight: 400;
 }
 
 ul.list-menu.list-menu--inline span::after {
