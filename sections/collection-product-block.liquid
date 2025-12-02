@@ -221,97 +221,74 @@
     display: block;
   }
 
-  /* Position elements outside the box edges */
+  /* Position elements - 6 vegetable positions */
   .promo-element.top-left {
-    top: -10%;
-    left: -11%;
-    width: 180px;
-    height: 180px;
+    top: -5%;
+    left: -5%;
+    width: 150px;
+    height: 150px;
   }
 
-  .promo-element.top-center {
-    top: -12%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 160px;
-    height: 160px;
+  .promo-element.top-right {
+    top: -5%;
+    right: -5%;
+    width: 150px;
+    height: 150px;
   }
 
-.promo-element.top-right {
-    top: -10%;
-    right: -10%;
+  .promo-element.middle-left {
+    top: 50%;
+    left: -8%;
+    transform: translateY(-50%);
     width: 140px;
     height: 140px;
-}
-  .promo-element.bottom-left {
-    bottom: -10%;
-    left: -5%;
-    width: 190px;
-    height: 190px;
   }
 
-  .promo-element.bottom-center {
-    bottom: -12%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 170px;
-    height: 170px;
+  .promo-element.middle-right {
+    top: 50%;
+    right: -8%;
+    transform: translateY(-50%);
+    width: 140px;
+    height: 140px;
+  }
+
+  .promo-element.bottom-left {
+    bottom: -5%;
+    left: -5%;
+    width: 150px;
+    height: 150px;
   }
 
   .promo-element.bottom-right {
-    bottom: -10%;
+    bottom: -5%;
     right: -5%;
-    width: 210px;
-    height: 210px;
-  }
-
-.promo-element.middle-left {
-    top: 68%;
-    left: 66%;
-    transform: translateY(-50%);
     width: 150px;
     height: 150px;
-}
-
-.promo-element.middle-right {
-    top: 95%;
-    right: 17%;
-    transform: translateY(-50%);
-    width: 190px;
-    height: 190px;
-}
-
-  /* Hover animations - outer tilt effect */
-  .promo-block:hover .promo-element.top-left {
-    transform: translate(-30px, -30px) rotate(-15deg) scale(1.1);
   }
 
-  .promo-block:hover .promo-element.top-center {
-    transform: translateX(-50%) translateY(-40px) rotate(-8deg) scale(1.1);
+  /* Hover animations - left/right movement */
+  .promo-block:hover .promo-element.top-left {
+    transform: translateX(-20px) scale(1.1);
   }
 
   .promo-block:hover .promo-element.top-right {
-    transform: translate(30px, -30px) rotate(15deg) scale(1.1);
+    transform: translateX(20px) scale(1.1);
   }
 
   .promo-block:hover .promo-element.middle-left {
-    transform: translate(-40px, -50%) rotate(-20deg) scale(1.1);
+    transform: translateY(-50%) translateX(-25px) scale(1.1);
   }
 
   .promo-block:hover .promo-element.middle-right {
-    transform: translate(40px, -50%) rotate(20deg) scale(1.1);
+    transform: translateY(-50%) translateX(25px) scale(1.1);
   }
 
   .promo-block:hover .promo-element.bottom-left {
-    transform: translate(-30px, 30px) rotate(-15deg) scale(1.1);
-  }
-
-  .promo-block:hover .promo-element.bottom-center {
-    transform: translateX(-50%) translateY(40px) rotate(8deg) scale(1.1);
+    transform: translateX(-20px) scale(1.1);
   }
 
   .promo-block:hover .promo-element.bottom-right {
-    transform: translate(30px, 30px) rotate(15deg) scale(1.1);
+    transform: translateX(20px) scale(1.1);
   }
 
   @media (max-width: 968px) {
@@ -427,51 +404,39 @@
           <div class="promo-block">
             <div class="promo-block-inner" style="background: {{ block.settings.background_color }};">
               
-              {% if block.settings.element_top_left %}
+              {% if block.settings.vegetable_top_left %}
                 <div class="promo-element top-left">
-                  <img src="{{ block.settings.element_top_left | img_url: 'master' }}" alt="">
+                  <img src="{{ block.settings.vegetable_top_left | img_url: 'master' }}" alt="">
                 </div>
               {% endif %}
               
-              {% if block.settings.element_top_center %}
-                <div class="promo-element top-center">
-                  <img src="{{ block.settings.element_top_center | img_url: 'master' }}" alt="">
-                </div>
-              {% endif %}
-              
-              {% if block.settings.element_top_right %}
+              {% if block.settings.vegetable_top_right %}
                 <div class="promo-element top-right">
-                  <img src="{{ block.settings.element_top_right | img_url: 'master' }}" alt="">
+                  <img src="{{ block.settings.vegetable_top_right | img_url: 'master' }}" alt="">
                 </div>
               {% endif %}
               
-              {% if block.settings.element_middle_left %}
+              {% if block.settings.vegetable_middle_left %}
                 <div class="promo-element middle-left">
-                  <img src="{{ block.settings.element_middle_left | img_url: 'master' }}" alt="">
+                  <img src="{{ block.settings.vegetable_middle_left | img_url: 'master' }}" alt="">
                 </div>
               {% endif %}
               
-              {% if block.settings.element_middle_right %}
+              {% if block.settings.vegetable_middle_right %}
                 <div class="promo-element middle-right">
-                  <img src="{{ block.settings.element_middle_right | img_url: 'master' }}" alt="">
+                  <img src="{{ block.settings.vegetable_middle_right | img_url: 'master' }}" alt="">
                 </div>
               {% endif %}
               
-              {% if block.settings.element_bottom_left %}
+              {% if block.settings.vegetable_bottom_left %}
                 <div class="promo-element bottom-left">
-                  <img src="{{ block.settings.element_bottom_left | img_url: 'master' }}" alt="">
+                  <img src="{{ block.settings.vegetable_bottom_left | img_url: 'master' }}" alt="">
                 </div>
               {% endif %}
               
-              {% if block.settings.element_bottom_center %}
-                <div class="promo-element bottom-center">
-                  <img src="{{ block.settings.element_bottom_center | img_url: 'master' }}" alt="">
-                </div>
-              {% endif %}
-              
-              {% if block.settings.element_bottom_right %}
+              {% if block.settings.vegetable_bottom_right %}
                 <div class="promo-element bottom-right">
-                  <img src="{{ block.settings.element_bottom_right | img_url: 'master' }}" alt="">
+                  <img src="{{ block.settings.vegetable_bottom_right | img_url: 'master' }}" alt="">
                 </div>
               {% endif %}
               
@@ -599,7 +564,7 @@
         {
           "type": "text",
           "id": "button_text",
-          "label": "Button Text",
+          "label": "Button Label",
           "default": "learn more"
         },
         {
@@ -609,47 +574,37 @@
         },
         {
           "type": "header",
-          "content": "Decorative Elements"
+          "content": "Vegetable Images (6 positions)"
         },
         {
           "type": "image_picker",
-          "id": "element_top_left",
-          "label": "Top Left Element"
+          "id": "vegetable_top_left",
+          "label": "Vegetable - Top Left"
         },
         {
           "type": "image_picker",
-          "id": "element_top_center",
-          "label": "Top Center Element"
+          "id": "vegetable_top_right",
+          "label": "Vegetable - Top Right"
         },
         {
           "type": "image_picker",
-          "id": "element_top_right",
-          "label": "Top Right Element"
+          "id": "vegetable_middle_left",
+          "label": "Vegetable - Middle Left"
         },
         {
           "type": "image_picker",
-          "id": "element_middle_left",
-          "label": "Middle Left Element"
+          "id": "vegetable_middle_right",
+          "label": "Vegetable - Middle Right"
         },
         {
           "type": "image_picker",
-          "id": "element_middle_right",
-          "label": "Middle Right Element"
+          "id": "vegetable_bottom_left",
+          "label": "Vegetable - Bottom Left"
         },
         {
           "type": "image_picker",
-          "id": "element_bottom_left",
-          "label": "Bottom Left Element"
-        },
-        {
-          "type": "image_picker",
-          "id": "element_bottom_center",
-          "label": "Bottom Center Element"
-        },
-        {
-          "type": "image_picker",
-          "id": "element_bottom_right",
-          "label": "Bottom Right Element"
+          "id": "vegetable_bottom_right",
+          "label": "Vegetable - Bottom Right"
         }
       ]
     }
