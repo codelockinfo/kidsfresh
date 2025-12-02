@@ -194,19 +194,19 @@
       "settings": {
         "background_image": "shopify://shop_images/ungredients-bg.webp",
         "mobile_background_image": "shopify://shop_images/iPhone_14_15_Pro_Max_-_1_1_223d44e0-29b8-4299-975c-40feed83673b.png",
-        "background_color": "#1a4d3a",
+        "background_color": "#0f4735",
         "title": "ungredients",
         "subtitle": "<p>What doesn't go into our meals is just as important as what does.</p>",
         "footer_text": "Built with what matters most: real ingredients, balanced nutrition, and vegetables in disguise. Every meal is designed to support strong bodies, growing minds, and stress-free mealtimes.",
         "button_text": "our mission",
         "button_url": "",
-        "accent_color": "rgba(15, 71, 53, 1)",
-        "title_color": "rgba(15, 71, 53, 1)",
-        "subtitle_color": "rgba(15, 71, 53, 1)",
-        "card_bg_color": "rgba(241, 234, 217, 1)",
-        "button_bg_color": "rgba(241, 234, 217, 1)",
-        "button_text_color": "rgba(15, 71, 53, 1)",
-        "button_border_color": "rgba(15, 71, 53, 1)"
+        "accent_color": "#0f4735",
+        "title_color": "#0f4735",
+        "subtitle_color": "#0f4735",
+        "card_bg_color": "#f1ead9",
+        "button_bg_color": "#f1ead9",
+        "button_text_color": "#0f4735",
+        "button_border_color": "#0f4735"
       }
     },
     "instra_reel_J97KgH": {
