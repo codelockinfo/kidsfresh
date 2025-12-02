@@ -1,0 +1,553 @@
+{%- style -%}
+
+.page-width{
+    max-width:1990px;
+    margin:0 auto;
+    padding:0;
+}
+.insta-reels-feed-{{ section.id }} {
+  --gap: 12px;
+  --card-w: 258px;
+  --card-h: 259px;
+  padding-top: {{ section.settings.padding_top }}px;
+  padding-bottom: {{ section.settings.padding_bottom }}px;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  position: relative;
+  overflow: visible;
+}
+
+.insta-reels-feed-{{ section.id }}::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url({{ section.settings.bg_desktop | image_url: width: 2000 }});
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  z-index: 0;
+}
+
+.insta-reels-feed-{{ section.id }} .page-width {
+  position: relative;
+  z-index: 1;
+  
+}
+
+/* Heading */
+.insta-reels-feed-{{ section.id }} .insta-reels-heading {
+  font-size: {{ section.settings.heading_size }}px;
+  font-weight: 700;
+  color: {{ section.settings.heading_color }};
+  margin-bottom: 3rem;
+  text-transform: lowercase;
+  letter-spacing: 0.08px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* Slider */
+.insta-reels-feed-{{ section.id }} .reels-wrapper {
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 9px;
+
+}
+
+.insta-reels-feed-{{ section.id }} .reels-slider {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  touch-action: pan-x;
+  user-select: none;
+  -webkit-user-drag: none;
+  padding-bottom: 4px;
+}
+
+.insta-reels-feed-{{ section.id }} .reels-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.insta-reels-feed-{{ section.id }} .reels-slider.dragging {
+  scroll-behavior: auto;
+}
+
+.insta-reels-feed-{{ section.id }} .reel-item {
+  flex: 0 0 var(--card-w);
+  width: var(--card-w);
+  height: var(--card-h);
+  overflow: hidden;
+  cursor: grab;
+  border-radius: {{ section.settings.image_border_radius }}px;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.insta-reels-feed-{{ section.id }} .reel-item:hover {
+  transform: scale(1.05);
+}
+
+.insta-reels-feed-{{ section.id }} .reel-item:active {
+  cursor: grabbing;
+}
+
+.insta-reels-feed-{{ section.id }} .reel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  -webkit-user-drag: none;
+  display: block;
+}
+
+/* Tablet Styles */
+@media screen and (min-width: 750px) and (max-width: 989px) {
+  .insta-reels-feed-{{ section.id }} {
+    --card-w: 220px;
+    --card-h: 221px;
+    --gap: 10px;
+  }
+
+
+
+  .insta-reels-feed-{{ section.id }} .insta-reels-heading {
+    font-size: {{ section.settings.heading_size | times: 0.85 | round }}px;
+    margin-bottom: 2.5rem;
+  }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 749px) {
+  .insta-reels-feed-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top_mobile }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    --gap: 8px;
+  }
+
+  .insta-reels-feed-{{ section.id }}::before {
+    background-image: url({{ section.settings.bg_mobile | image_url: width: 1000 }});
+  }
+
+ 
+
+  .insta-reels-feed-{{ section.id }} .insta-reels-heading {
+    font-size: {{ section.settings.heading_size_mobile }}px;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+  }
+
+  .insta-reels-feed-{{ section.id }} .reels-slider {
+    gap: 8px;
+  }
+
+  .insta-reels-feed-{{ section.id }} .reel-item {
+      flex: 0 0 calc((100vw - 18px - 16px) / 3);
+    width: calc((100vw - 32px - 16px) / 3);
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+}
+
+/* Small Mobile Styles */
+@media screen and (max-width: 480px) {
+  .insta-reels-feed-{{ section.id }} {
+    --gap: 6px;
+  }
+
+  .insta-reels-feed-{{ section.id }} .reels-slider {
+    gap: 6px;
+  }
+
+  .insta-reels-feed-{{ section.id }} .reel-item {
+    flex: 0 0 calc((100vw - 18px - 12px) / 3);
+    width: calc((100vw - 32px - 12px) / 3);
+  }
+}
+
+/* Large Desktop Styles */
+@media screen and (min-width: 990px) {
+  .insta-reels-feed-{{ section.id }} .page-width {
+
+
+  }
+}
+
+/* Extra Large Desktop Styles */
+@media screen and (min-width: 1400px) {
+  .insta-reels-feed-{{ section.id }} {
+    --card-w: 280px;
+    --card-h: 281px;
+    --gap: 14px;
+  }
+
+  
+  
+}
+
+/* Lightbox */
+.insta-reels-feed-{{ section.id }} .lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.98);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.insta-reels-feed-{{ section.id }} .lightbox.active {
+  display: flex;
+}
+
+.insta-reels-feed-{{ section.id }} .lightbox img {
+  max-width: 90vw;
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.insta-reels-feed-{{ section.id }} .lightbox-caption {
+  color: #fff;
+  font-size: 18px;
+  max-width: 90vw;
+  text-align: center;
+  font-weight: 500;
+}
+
+.insta-reels-feed-{{ section.id }} .lightbox-close,
+.insta-reels-feed-{{ section.id }} .lightbox-nav {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.insta-reels-feed-{{ section.id }} .lightbox-close:hover,
+.insta-reels-feed-{{ section.id }} .lightbox-nav:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.insta-reels-feed-{{ section.id }} .lightbox-close {
+  top: 20px;
+  right: 20px;
+}
+
+.insta-reels-feed-{{ section.id }} .lightbox-prev {
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.insta-reels-feed-{{ section.id }} .lightbox-next {
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media screen and (max-width: 768px) {
+  .insta-reels-feed-{{ section.id }} .lightbox-close,
+  .insta-reels-feed-{{ section.id }} .lightbox-nav {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+  }
+
+  .insta-reels-feed-{{ section.id }} .reels-wrapper {
+    padding: 0 10px;
+  }
+
+  .insta-reels-feed-{{ section.id }} .lightbox-close {
+    top: 10px;
+    right: 10px;
+  }
+
+  .insta-reels-feed-{{ section.id }} .lightbox-prev {
+    left: 10px;
+  }
+
+  .insta-reels-feed-{{ section.id }} .lightbox-next {
+    right: 10px;
+  }
+}
+{%- endstyle -%}
+
+<div class="insta-reels-feed-{{ section.id }} color-{{ section.settings.color_scheme }}">
+  <div class="page-width">
+
+    {%- if section.settings.heading != blank -%}
+      <h2 class="insta-reels-heading">{{ section.settings.heading }}</h2>
+    {%- endif -%}
+
+    <div class="reels-wrapper">
+      <div class="reels-slider" id="reelsSlider-{{ section.id }}">
+        {%- for block in section.blocks -%}
+          {%- assign img = block.settings.image -%}
+          {%- if img -%}
+            <div class="reel-item"
+              {{ block.shopify_attributes }}
+              data-index="{{ forloop.index0 }}"
+              data-caption="{{ block.settings.caption | escape }}"
+              {%- if section.settings.enable_links and block.settings.link -%}
+                data-href="{{ block.settings.link }}"
+              {%- endif -%}>
+              {{ img
+                | image_url: width: 800
+                | image_tag:
+                  loading: 'lazy',
+                  widths: '200, 258, 280, 400, 516, 560, 800',
+                  sizes: '(max-width: 480px) calc((100vw - 32px - 12px) / 3), (max-width: 749px) calc((100vw - 32px - 16px) / 3), (min-width: 1400px) 280px, 258px',
+                  alt: img.alt | escape
+              }}
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+
+    {%- if section.settings.enable_lightbox -%}
+    <div class="lightbox" id="lightbox-{{ section.id }}">
+      <div class="lightbox-close">×</div>
+      <div class="lightbox-nav lightbox-prev">‹</div>
+      <div class="lightbox-nav lightbox-next">›</div>
+      <img id="lightboxImg-{{ section.id }}" src="" alt="">
+      <div class="lightbox-caption" id="lightboxCaption-{{ section.id }}"></div>
+    </div>
+    {%- endif -%}
+
+  </div>
+</div>
+
+<script>
+(function() {
+  const sectionId = '{{ section.id }}';
+  const slider = document.getElementById('reelsSlider-' + sectionId);
+  const items = slider.querySelectorAll('.reel-item');
+  const lightbox = document.getElementById('lightbox-' + sectionId);
+  const lightboxImg = document.getElementById('lightboxImg-' + sectionId);
+  const lightboxCaption = document.getElementById('lightboxCaption-' + sectionId);
+
+  let isDown = false;
+  let startX, scrollLeft, lastX;
+  let current = 0;
+  let autoplayInterval;
+  const CLICK_THRESHOLD = 8;
+
+  const startDrag = e => {
+    isDown = true;
+    slider.classList.add('dragging');
+    startX = (e.pageX || e.touches[0].pageX) - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+    lastX = startX;
+  };
+
+  const moveDrag = e => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = (e.pageX || e.touches[0].pageX) - slider.offsetLeft;
+    const walk = (x - startX) * 1.2;
+    slider.scrollLeft = scrollLeft - walk;
+    lastX = x;
+  };
+
+  const endDrag = e => {
+    if (!isDown) return;
+    isDown = false;
+    slider.classList.remove('dragging');
+    if (Math.abs(lastX - startX) < CLICK_THRESHOLD) {
+      const x = lastX + slider.offsetLeft;
+      const y = e.clientY || (e.changedTouches ? e.changedTouches[0].clientY : 0);
+      const el = document.elementFromPoint(x, y);
+      const item = el?.closest('.reel-item');
+      if (item) handleItemClick(item);
+    }
+  };
+
+  slider.addEventListener('mousedown', startDrag);
+  slider.addEventListener('mousemove', moveDrag);
+  slider.addEventListener('mouseup', endDrag);
+  slider.addEventListener('mouseleave', endDrag);
+  slider.addEventListener('touchstart', startDrag, { passive: true });
+  slider.addEventListener('touchmove', moveDrag, { passive: false });
+  slider.addEventListener('touchend', endDrag);
+
+  function handleItemClick(item) {
+    const i = parseInt(item.dataset.index);
+    {% if section.settings.enable_links %}
+      if (item.dataset.href) window.open(item.dataset.href, '_blank');
+    {% elsif section.settings.enable_lightbox %}
+      current = i;
+      openLightbox();
+    {% endif %}
+  }
+
+  function openLightbox() {
+    const img = items[current].querySelector('img');
+    const srcset = img.srcset;
+    const largestSrc = srcset ? srcset.split(',').pop().trim().split(' ')[0] : img.src;
+    lightboxImg.src = largestSrc;
+    lightboxImg.alt = img.alt;
+    lightboxCaption.textContent = items[current].dataset.caption;
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+
+    if ({{ section.settings.enable_autoplay | json }}) startAutoplay();
+  }
+
+  function startAutoplay() {
+    clearInterval(autoplayInterval);
+    autoplayInterval = setInterval(() => {
+      current = (current + 1) % items.length;
+      const img = items[current].querySelector('img');
+      const srcset = img.srcset;
+      const largestSrc = srcset ? srcset.split(',').pop().trim().split(' ')[0] : img.src;
+      lightboxImg.src = largestSrc;
+      lightboxCaption.textContent = items[current].dataset.caption;
+    }, {{ section.settings.autoplay_speed | times: 1000 }});
+  }
+
+  const prevBtn = lightbox?.querySelector('.lightbox-prev');
+  const nextBtn = lightbox?.querySelector('.lightbox-next');
+  const closeBtn = lightbox?.querySelector('.lightbox-close');
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      current = (current - 1 + items.length) % items.length;
+      openLightbox();
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      current = (current + 1) % items.length;
+      openLightbox();
+    });
+  }
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+      clearInterval(autoplayInterval);
+    });
+  }
+
+  if (lightbox) {
+    lightbox.addEventListener('click', e => {
+      if (e.target === lightbox) {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+        clearInterval(autoplayInterval);
+      }
+    });
+  }
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Insta Reels Feed",
+  "class": "section",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Section Heading", "default": "Wins of the Week" },
+
+    { "type": "range", "id": "heading_size", "min": 30, "max": 100, "step": 2, "unit": "px", "label": "Heading Size (Desktop)", "default": 70 },
+
+    { "type": "range", "id": "heading_size_mobile", "min": 24, "max": 60, "step": 2, "unit": "px", "label": "Heading Size (Mobile)", "default": 50 },
+
+    { "type": "color", "id": "heading_color", "label": "Heading Color", "default": "#0F4735" },
+
+    { "type": "header", "content": "Background Images" },
+
+    { "type": "image_picker", "id": "bg_desktop", "label": "Background – Desktop" },
+    { "type": "image_picker", "id": "bg_mobile", "label": "Background – Mobile" },
+
+    { "type": "header", "content": "Image Styling" },
+
+    { "type": "range", "id": "image_border_radius", "min": 0, "max": 50, "step": 2, "unit": "px", "label": "Image Border Radius", "default": 0 },
+
+    { "type": "header", "content": "Functionality" },
+
+    { "type": "checkbox", "id": "enable_links", "label": "Enable external links (disables lightbox)", "default": false },
+
+    { "type": "checkbox", "id": "enable_lightbox", "label": "Enable lightbox slideshow (disables links)", "default": true },
+
+    { "type": "checkbox", "id": "enable_autoplay", "label": "Enable Lightbox Autoplay", "default": true },
+
+    { "type": "range", "id": "autoplay_speed", "label": "Autoplay Speed (seconds)", "min": 2, "max": 10, "step": 1, "default": 4 },
+
+    { "type": "header", "content": "Section Spacing" },
+
+    { "type": "range", "id": "padding_top", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Padding Top (Desktop)", "default": 128 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Padding Bottom (Desktop)", "default": 16 },
+
+    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Padding Top (Mobile)", "default": 112 },
+    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Padding Bottom (Mobile)", "default": 16 },
+
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "Color Scheme",
+      "options": [
+        { "value": "accent-1", "label": "Accent 1" },
+        { "value": "accent-2", "label": "Accent 2" },
+        { "value": "background-1", "label": "Background 1" },
+        { "value": "background-2", "label": "Background 2" },
+        { "value": "inverse", "label": "Inverse" }
+      ],
+      "default": "background-1"
+    }
+  ],
+
+  "blocks": [
+    {
+      "type": "reel",
+      "name": "Reel / Image",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Image / Video thumbnail" },
+        { "type": "url", "id": "link", "label": "External link (only works if links enabled)" },
+        { "type": "text", "id": "caption", "label": "Caption (shown in lightbox only)", "default": "View reel" }
+      ]
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "Insta Reels Feed",
+      "settings": { "heading": "Wins of the Week" },
+      "blocks": [
+        { "type": "reel" },
+        { "type": "reel" },
+        { "type": "reel" },
+        { "type": "reel" },
+        { "type": "reel" },
+        { "type": "reel" },
+        { "type": "reel" }
+      ] 
+    }
+  ]
+}
+{% endschema %}

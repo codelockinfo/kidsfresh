@@ -1,0 +1,75 @@
+<footer class="kidfresh-footer">
+    <div class="footer-top">
+        <div class="logo"><img src="https://cdn.shopify.com/s/files/1/0577/3957/5488/files/LOGO_1.png?v=1764589138"></div>
+        <nav>
+            <a href="#">our meals</a>
+            <a href="#">markets near me</a>
+            <a href="#">meet us</a>
+            <a href="#">more to know</a>
+            <a href="#">message us</a>
+        </nav>
+    </div>
+</footer>
+{% schema %}
+{
+  "name": "footer",
+  "settings": [
+   
+
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "footer",
+    }
+  ]
+}
+{% endschema %}
+<style>
+.kidfresh-footer {
+    font-family: Arial, sans-serif;
+}
+
+/* Top section (green/orange waves look) */
+.footer-top {
+    background: #084C3A; /* dark green */
+    padding: 30px 20px;
+    display:flex;
+    justify-content:space-around;
+    text-align: center;
+        align-items: center;
+    color: white;
+}
+
+.footer-top .logo {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.footer-top nav a {
+    margin: 0 15px;
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.footer-top nav a:hover {
+    text-decoration: underline;
+}
+
+/* Bottom bar (orange) */
+.footer-bottom {
+    background: #F58220; /* bright orange */
+    padding: 12px 20px;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+}
+
+.footer-bottom a {
+    color: white;
+    text-decoration: underline;
+}
+</style>
