@@ -104,13 +104,16 @@ ul.list-menu.list-menu--inline span:hover::after {
   @media screen and (max-width: 768px) {
     .header {
       padding: 20px 30px !important;
-      {% comment %} display: grid;
+      display: grid;
     grid-template-areas: "heading icons left-icons";
     grid-template-columns: 2fr 1fr;
-    align-items: center; {% endcomment %}
+    align-items: center;
     }
     .header__search {
       display: none;
+    }
+    .header__icon--menu .icon {
+    display:none;
     }
   }
 
