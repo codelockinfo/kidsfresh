@@ -1,0 +1,695 @@
+{% comment %}
+  Custom Collection Grid Section - Enhanced Version
+  Features:
+  - Custom search icon upload
+  - Flexible width control per block
+  - Full visibility decorative elements
+  - Advanced outer tilt animation
+{% endcomment %}
+
+<style>
+
+  @media (max-width: 749px) {
+    .product-title {
+    font-size: 18px !important;
+  }
+  .product-description {
+  font-size: 16px !important;
+  }
+  }
+  .page-width {
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .custom-collection-grid {
+    padding: 40px 0;
+    background: {{ section.settings.section_background }};
+  }
+
+  .grid-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+
+  .grid-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .product-card {
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    height: 100%;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+
+
+  .product-card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .product-image-wrapper {
+    position: relative;
+    padding-top: 100%;
+    overflow: hidden;
+    background: #f5f5f5;
+  }
+
+  .product-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+  }
+
+  .product-image.secondary {
+    opacity: 0;
+  }
+
+  .product-card:hover .product-image.secondary {
+    opacity: 1;
+  }
+
+  .product-card:hover .product-image.primary {
+    opacity: 0;
+  }
+
+  .new-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #f58220;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 0 20px 20px 0;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: lowercase;
+    z-index: 2;
+  }
+
+  .new-badge::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 20px solid #f58220;
+    border-top: 10px solid transparent;
+  }
+
+  .product-info {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .product-title {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    color: #39302D;
+  }
+
+  .product-description {
+    font-size: 21px;
+    color: #5D3328;
+    line-height: 1.4;
+  }
+
+  .search-icon {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    z-index: 2;
+    text-decoration: none;
+  }
+
+  .search-icon:hover {
+    transform: scale(1.1);
+  }
+
+  .search-icon img {
+    width: 65px;
+    height: 61px;
+    object-fit: contain;
+  }
+
+  .promo-block {
+    position: relative;
+    border-radius: 12px;
+    overflow: visible;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 400px;
+    transition: all 0.3s ease;
+    height: 100%;
+  }
+
+  .promo-block-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .promo-content {
+    position: relative;
+    z-index: 3;
+  }
+
+  .promo-heading {
+    font-size: 48px;
+    font-weight: 900;
+    color: #2c5f2d;
+    margin-bottom: 30px;
+    line-height: 1.2;
+    text-transform: lowercase;
+  }
+
+  .promo-button {
+    display: inline-block;
+    background: #97d700;
+    color: #2c5f2d;
+    padding: 15px 50px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 18px;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .promo-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(151, 215, 0, 0.4);
+  }
+
+  .promo-element {
+    position: absolute;
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .promo-element img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+  /* Position elements outside the box edges */
+  .promo-element.top-left {
+    top: -10%;
+    left: -11%;
+    width: 180px;
+    height: 180px;
+  }
+
+  .promo-element.top-center {
+    top: -12%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 160px;
+    height: 160px;
+  }
+
+.promo-element.top-right {
+    top: -10%;
+    right: -10%;
+    width: 140px;
+    height: 140px;
+}
+  .promo-element.bottom-left {
+    bottom: -10%;
+    left: -5%;
+    width: 190px;
+    height: 190px;
+  }
+
+  .promo-element.bottom-center {
+    bottom: -12%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 170px;
+    height: 170px;
+  }
+
+  .promo-element.bottom-right {
+    bottom: -10%;
+    right: -5%;
+    width: 210px;
+    height: 210px;
+  }
+
+.promo-element.middle-left {
+    top: 68%;
+    left: 66%;
+    transform: translateY(-50%);
+    width: 150px;
+    height: 150px;
+}
+
+.promo-element.middle-right {
+    top: 95%;
+    right: 17%;
+    transform: translateY(-50%);
+    width: 190px;
+    height: 190px;
+}
+
+  /* Hover animations - outer tilt effect */
+  .promo-block:hover .promo-element.top-left {
+    transform: translate(-30px, -30px) rotate(-15deg) scale(1.1);
+  }
+
+  .promo-block:hover .promo-element.top-center {
+    transform: translateX(-50%) translateY(-40px) rotate(-8deg) scale(1.1);
+  }
+
+  .promo-block:hover .promo-element.top-right {
+    transform: translate(30px, -30px) rotate(15deg) scale(1.1);
+  }
+
+  .promo-block:hover .promo-element.middle-left {
+    transform: translate(-40px, -50%) rotate(-20deg) scale(1.1);
+  }
+
+  .promo-block:hover .promo-element.middle-right {
+    transform: translate(40px, -50%) rotate(20deg) scale(1.1);
+  }
+
+  .promo-block:hover .promo-element.bottom-left {
+    transform: translate(-30px, 30px) rotate(-15deg) scale(1.1);
+  }
+
+  .promo-block:hover .promo-element.bottom-center {
+    transform: translateX(-50%) translateY(40px) rotate(8deg) scale(1.1);
+  }
+
+  .promo-block:hover .promo-element.bottom-right {
+    transform: translate(30px, 30px) rotate(15deg) scale(1.1);
+  }
+
+  @media (max-width: 968px) {
+    .grid-item {
+      width: calc(50% - 15px) !important;
+      min-width: calc(50% - 15px) !important;
+    }
+    
+    .promo-heading {
+      font-size: 36px;
+    }
+
+    .promo-element {
+      width: 100px !important;
+      height: 100px !important;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .grid-item {
+      width: 100% !important;
+      min-width: 100% !important;
+    }
+    
+    .promo-heading {
+      font-size: 28px;
+    }
+    
+    .promo-block {
+      padding: 40px 20px;
+      min-height: 300px;
+    }
+
+    .promo-element {
+      width: 80px !important;
+      height: 80px !important;
+    }
+  }
+</style>
+
+<div class="page-width">
+  <div class="custom-collection-grid">
+    <div class="grid-row">
+    {% for block in section.blocks %}
+      <div class="grid-item" 
+           style="width: calc({{ block.settings.block_width }}% - 20px); min-width: calc({{ block.settings.block_width }}% - 20px);"
+           {{ block.shopify_attributes }}>
+        
+        {% if block.type == 'product' %}
+          {% assign product = block.settings.product %}
+          {% assign product_url = product.url | default: '#' %}
+          
+          <a href="{{ product_url }}" class="product-card-link">
+            <div class="product-card">
+              <div class="product-image-wrapper">
+                {% if product.featured_image %}
+                  <img class="product-image primary" 
+                       src="{{ product.featured_image | img_url: '600x' }}" 
+                       alt="{{ product.title }}"
+                       loading="lazy">
+                  
+                  {% if block.settings.show_second_image and product.images[1] %}
+                    <img class="product-image secondary" 
+                         src="{{ product.images[1] | img_url: '600x' }}" 
+                         alt="{{ product.title }}"
+                         loading="lazy">
+                  {% endif %}
+                {% else %}
+                  <div class="product-image primary" style="background: #e0e0e0;"></div>
+                {% endif %}
+                
+                {% if block.settings.show_new_badge %}
+                  <div class="new-badge">new!</div>
+                {% endif %}
+                
+                {% if block.settings.icon_link != blank %}
+                  <a href="{{ block.settings.icon_link }}" 
+                     class="search-icon"
+                     {% if block.settings.icon_open_new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}
+                     onclick="event.stopPropagation();">
+                    {% if block.settings.search_icon %}
+                      <img src="{{ block.settings.search_icon | img_url: '100x' }}" alt="Quick view">
+                    {% else %}
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                      </svg>
+                    {% endif %}
+                  </a>
+                {% else %}
+                  <div class="search-icon">
+                    {% if block.settings.search_icon %}
+                      <img src="{{ block.settings.search_icon | img_url: '100x' }}" alt="Search">
+                    {% else %}
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                      </svg>
+                    {% endif %}
+                  </div>
+                {% endif %}
+              </div>
+              
+              <div class="product-info">
+                <h3 class="product-title">{{ product.title }}</h3>
+                <p class="product-description">{{ block.settings.custom_description }}</p>
+              </div>
+            </div>
+          </a>
+        {% endif %}
+        
+        {% if block.type == 'promo_block' %}
+          <div class="promo-block">
+            <div class="promo-block-inner" style="background: {{ block.settings.background_color }};">
+              
+              {% if block.settings.element_top_left %}
+                <div class="promo-element top-left">
+                  <img src="{{ block.settings.element_top_left | img_url: 'master' }}" alt="">
+                </div>
+              {% endif %}
+              
+              {% if block.settings.element_top_center %}
+                <div class="promo-element top-center">
+                  <img src="{{ block.settings.element_top_center | img_url: 'master' }}" alt="">
+                </div>
+              {% endif %}
+              
+              {% if block.settings.element_top_right %}
+                <div class="promo-element top-right">
+                  <img src="{{ block.settings.element_top_right | img_url: 'master' }}" alt="">
+                </div>
+              {% endif %}
+              
+              {% if block.settings.element_middle_left %}
+                <div class="promo-element middle-left">
+                  <img src="{{ block.settings.element_middle_left | img_url: 'master' }}" alt="">
+                </div>
+              {% endif %}
+              
+              {% if block.settings.element_middle_right %}
+                <div class="promo-element middle-right">
+                  <img src="{{ block.settings.element_middle_right | img_url: 'master' }}" alt="">
+                </div>
+              {% endif %}
+              
+              {% if block.settings.element_bottom_left %}
+                <div class="promo-element bottom-left">
+                  <img src="{{ block.settings.element_bottom_left | img_url: 'master' }}" alt="">
+                </div>
+              {% endif %}
+              
+              {% if block.settings.element_bottom_center %}
+                <div class="promo-element bottom-center">
+                  <img src="{{ block.settings.element_bottom_center | img_url: 'master' }}" alt="">
+                </div>
+              {% endif %}
+              
+              {% if block.settings.element_bottom_right %}
+                <div class="promo-element bottom-right">
+                  <img src="{{ block.settings.element_bottom_right | img_url: 'master' }}" alt="">
+                </div>
+              {% endif %}
+              
+              <div class="promo-content">
+                {% if block.settings.heading != blank %}
+                  <h2 class="promo-heading">{{ block.settings.heading }}</h2>
+                {% endif %}
+                
+                {% if block.settings.button_text != blank and block.settings.button_link != blank %}
+                  <a href="{{ block.settings.button_link }}" class="promo-button">
+                    {{ block.settings.button_text }}
+                  </a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        {% endif %}
+        
+      </div>
+    {% endfor %}
+  </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Collection Grid",
+  "settings": [
+    {
+      "type": "color",
+      "id": "section_background",
+      "label": "Section Background Color",
+      "default": "#f5f5dc"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "range",
+          "id": "block_width",
+          "min": 10,
+          "max": 100,
+          "step": 5,
+          "unit": "%",
+          "label": "Block Width",
+          "default": 30
+        },
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Select Product"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_new_badge",
+          "label": "Show 'new!' Badge",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "show_second_image",
+          "label": "Show Second Image on Hover",
+          "default": true,
+          "info": "Display the second product image when hovering over the card"
+        },
+        {
+          "type": "text",
+          "id": "custom_description",
+          "label": "Custom Description",
+          "default": "Product description"
+        },
+        {
+          "type": "header",
+          "content": "Search Icon Settings"
+        },
+        {
+          "type": "image_picker",
+          "id": "search_icon",
+          "label": "Custom Search Icon (Optional)",
+          "info": "Upload a custom search icon. If not provided, default SVG icon will be used."
+        },
+        {
+          "type": "url",
+          "id": "icon_link",
+          "label": "Icon Button Link (Optional)",
+          "info": "Add a link to the search icon button. Leave empty to disable clicking."
+        },
+        {
+          "type": "checkbox",
+          "id": "icon_open_new_tab",
+          "label": "Open Icon Link in New Tab",
+          "default": false
+        }
+      ]
+    },
+    {
+      "type": "promo_block",
+      "name": "Promotional Block",
+      "settings": [
+        {
+          "type": "range",
+          "id": "block_width",
+          "min": 10,
+          "max": 100,
+          "step": 5,
+          "unit": "%",
+          "label": "Block Width",
+          "default": 40
+        },
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Background Color",
+          "default": "#f58220"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "ingredients + nutrition"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text",
+          "default": "learn more"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        },
+        {
+          "type": "header",
+          "content": "Decorative Elements"
+        },
+        {
+          "type": "image_picker",
+          "id": "element_top_left",
+          "label": "Top Left Element"
+        },
+        {
+          "type": "image_picker",
+          "id": "element_top_center",
+          "label": "Top Center Element"
+        },
+        {
+          "type": "image_picker",
+          "id": "element_top_right",
+          "label": "Top Right Element"
+        },
+        {
+          "type": "image_picker",
+          "id": "element_middle_left",
+          "label": "Middle Left Element"
+        },
+        {
+          "type": "image_picker",
+          "id": "element_middle_right",
+          "label": "Middle Right Element"
+        },
+        {
+          "type": "image_picker",
+          "id": "element_bottom_left",
+          "label": "Bottom Left Element"
+        },
+        {
+          "type": "image_picker",
+          "id": "element_bottom_center",
+          "label": "Bottom Center Element"
+        },
+        {
+          "type": "image_picker",
+          "id": "element_bottom_right",
+          "label": "Bottom Right Element"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Collection Grid",
+      "blocks": [
+        {
+          "type": "product",
+          "settings": {
+            "block_width": 30
+          }
+        },
+        {
+          "type": "product",
+          "settings": {
+            "block_width": 30
+          }
+        },
+        {
+          "type": "product",
+          "settings": {
+            "block_width": 30
+          }
+        },
+        {
+          "type": "product",
+          "settings": {
+            "block_width": 30
+          }
+        },
+        {
+          "type": "promo_block",
+          "settings": {
+            "block_width": 60
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
