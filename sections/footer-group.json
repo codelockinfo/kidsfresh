@@ -11,6 +11,24 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "custom_newsletter_LpVVG4": {
+      "type": "custom-newsletter",
+      "name": "Custom Newsletter",
+      "settings": {
+        "col1_bg": "#95C940",
+        "col2_bg": "#F89821",
+        "col3_bg": "#6dbe4a",
+        "btn_text": "Shop Now",
+        "btn_url": "shopify://collections/all",
+        "rich_text_1": "<p>Free shipping on orders over $50</p>",
+        "newsletter_btn_text": "Join",
+        "rich_text_2": "<p>Get exclusive offers & updates</p>",
+        "social_facebook": "",
+        "social_instagram": "",
+        "social_tiktok": "",
+        "rich_text_3": "<p>Follow us for updates</p>"
+      }
+    },
     "footer": {
       "type": "footer",
       "blocks": {
@@ -55,6 +73,7 @@
     }
   },
   "order": [
+    "custom_newsletter_LpVVG4",
     "footer"
   ]
 }
