@@ -1,0 +1,406 @@
+<style>
+ .auto-video-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auto-video-sub-section {
+    position: absolute;
+    top: auto !important;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    z-index: 2;
+    padding: 20px;
+    width: 100%;
+    {% if section.settings.leaf_bg != blank %}
+      background-image: url('{{ section.settings.leaf_bg | img_url: '300x300' }}');
+      background-size: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+    {% endif %}
+}
+
+.auto-video-sub-section h2.banner__heading.inline-richtext.h0 {
+    color: #F89821;
+    font-size: 80px;
+    line-height: 1.2em;
+    font-weight: 700;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.rotating-subheading-container {
+    position: relative;
+    overflow: hidden;
+    min-height: 102px;
+}
+
+.banner__text.rte.body p {
+    color: white;
+    font-size: 80px;
+    line-height: 1.2em;
+    margin-bottom: 20px;
+    position: absolute;
+    margin-top: 0;
+    font-weight: 700;
+    width: 100%;
+    left: 0;
+    top: 0;
+    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+}
+
+.banner__text.rte.body p::after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 15px;
+    background-image: url(https://cdn.shopify.com/s/files/1/0790/5017/8785/files/title-shape.svg?v=1764176587);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    transition: width 0.4s ease, opacity 0.8s ease-in-out;
+    z-index: -1;
+}
+
+.rotating-subheading {
+    transition: opacity 0.8s ease-in-out;
+}
+
+.rotating-subheading.swipe-out-right {
+    transform: translateX(120%);
+    opacity: 0;
+}
+
+.rotating-subheading.swipe-in-left {
+    transform: translateX(-120%);
+    opacity: 0;
+}
+
+.rotating-subheading.visible {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.rotating-subheading.hidden {
+    opacity: 0;
+    transform: translateX(-120%);
+}
+
+.banner__buttons .button{
+  background: transparent!important;
+  color: #0F4735;
+  font-family: "GT Walsheim";
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 44px;
+  text-decoration: none;
+  box-shadow: none;
+  cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease;
+  text-align: center;
+  border-radius: 35px;
+  padding: 8px 34px;
+  border: none;
+  text-transform: lowercase;
+    transform: none !important;
+}
+
+.banner__buttons .button:before {
+   background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_23_2.png?v=1764592651);
+  background-size: 100% 100%;
+  z-index: 2;
+}
+
+.banner__buttons .button span{
+  z-index: 3;
+}
+
+.banner__buttons .button:after {
+  content: '';
+   background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_25.png?v=1764592665);
+  background-size: 100% 100%;
+  padding: 8px 34px;
+  bottom: -5px;
+  z-index: 1;
+  box-shadow: none;
+}
+
+
+.banner__buttons .button:hover:before {
+  background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_23_3.png?v=1764592664) !important;
+  background-size: 100% 100% !important;
+}
+
+.banner__buttons .button:hover:after{
+  bottom: -5px;
+  box-shadow: none;
+}
+
+@media (min-width: 1600px) {
+.auto-video-sub-section {
+    position: absolute;
+    top: auto !important;
+    left: 48%;
+    transform: translate(-50%);
+    text-align: center;
+    z-index: 2;
+    padding: 20px;
+    width: 130rem;
+}
+}
+@media(max-width:768px){
+  .auto-video-sub-section {
+    top: auto !important;
+    left: 0 !important;
+    padding: 15px;
+    max-width: 340px;
+    margin: 0 auto;
+    right: 0 !important;
+    transform: none !important;
+    margin-top: -50px;
+  }
+  
+  .auto-video-sub-section h2.banner__heading.inline-richtext.h0 {
+    font-size: 52px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+  }
+  
+  .rotating-subheading-container {
+    height: 130px;
+  }
+  
+  .banner__text.rte.body p {
+    font-size: 52px;
+  }
+
+  {% comment %} .banner__buttons .button {
+    padding: 12px 24px;
+    font-size: 20px;
+    color: #0F4735;
+  } {% endcomment %}
+}
+
+ .banner__buttons {
+    margin-top: 20px;
+  }
+  
+
+.desktop-video {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+
+.mobile-video {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+
+.large-screen-video {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 769px) {
+  .mobile-video {
+    display: block;
+  }
+  .banner__buttons .button {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1599px) {
+  .desktop-video {
+    display: block;
+  }
+}
+
+@media (min-width: 1600px) {
+  .large-screen-video {
+    display: block;
+  }
+}
+</style>
+
+<div class="auto-video-section">
+  <video class="mobile-video" width="100%" autoplay loop playsinline muted>
+    <source src="{{ section.settings.mobile_video_url }}">
+  </video>
+  <video class="desktop-video" width="100%" autoplay loop playsinline muted>
+    <source src="{{ section.settings.video_url }}">
+  </video>
+  <video class="large-screen-video" width="100%" autoplay loop playsinline muted>
+    <source src="{{ section.settings.large_screen_video_url }}">
+  </video>
+  
+  <div class="auto-video-sub-section">
+    <h2 class="banner__heading inline-richtext h0">{{ section.settings.heading }}</h2>
+    
+    <div class="banner__text rte body">
+      <div id="rotating-subheadings" class="rotating-subheading-container">
+        {% assign subheadings = section.settings.subheading_1 | append: '|' | append: section.settings.subheading_2 | append: '|' | append: section.settings.subheading_3 | append: '|' | append: section.settings.subheading_4 | append: '|' | append: section.settings.subheading_5 | split: '|' %}
+        {% for sub in subheadings %}
+          {% if sub != blank %}
+            <p class="rotating-subheading {% if forloop.first %}visible{% else %}hidden{% endif %}">{{ sub }}</p>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    
+    <div class="banner__buttons">
+      <a href="{{ section.settings.button_link }}" class="button button--secondary">
+        <span>{{ section.settings.button_label }}</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const enableRotation = {{ section.settings.enable_rotation | json }};
+  const rotationSpeed = {{ section.settings.rotation_speed | times: 1000 | json }}; // Convert to ms
+  
+  if (!enableRotation) return;
+  
+  const subheadingsContainer = document.getElementById('rotating-subheadings');
+  if (!subheadingsContainer) return;
+  
+  const subheadings = subheadingsContainer.querySelectorAll('.rotating-subheading');
+  if (subheadings.length <= 1) return;
+  
+  let currentIndex = 0;
+  
+  function rotateSubheadings() {
+    const currentSubheading = subheadings[currentIndex];
+    const nextIndex = (currentIndex + 1) % subheadings.length;
+    const nextSubheading = subheadings[nextIndex];
+    
+    // Swipe out current text to the right
+    currentSubheading.classList.remove('visible');
+    currentSubheading.classList.add('swipe-out-right');
+    
+    // Prepare next text (position it to the left, ready to swipe in)
+    nextSubheading.classList.remove('hidden');
+    nextSubheading.classList.add('swipe-in-left');
+    
+    // Small delay before swiping in the new text
+    setTimeout(() => {
+      nextSubheading.classList.remove('swipe-in-left');
+      nextSubheading.classList.add('visible');
+      
+      // Reset the previous text after animation completes
+      setTimeout(() => {
+        currentSubheading.classList.remove('swipe-out-right');
+        currentSubheading.classList.add('hidden');
+      }, 600);
+    }, 50);
+    
+    currentIndex = nextIndex;
+  }
+  
+  // Set interval
+  setInterval(rotateSubheadings, rotationSpeed);
+});
+</script>
+
+{% schema %}
+{
+  "name": "Auto Video",
+  "settings": [
+    {
+      "type": "url",
+      "id": "mobile_video_url",
+      "label": "Mobile Video URL (up to 768px)"
+    },
+    {
+      "type": "url",
+      "id": "video_url",
+      "label": "Desktop Video URL (769px - 1599px)"
+    },
+    {
+      "type": "url",
+      "id": "large_screen_video_url",
+      "label": "Large Screen Video URL (1600px+)"
+    },
+    {
+      "type": "image_picker",
+      "id": "leaf_bg",
+      "label": "Leaf Background Image"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_rotation",
+      "label": "Enable Rotating Subheading",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "rotation_speed",
+      "min": 3,
+      "max": 10,
+      "step": 1,
+      "unit": "s",
+      "label": "Rotation Speed",
+      "default": 5
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "default": "Image with text",
+      "label": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "subheading_1",
+      "label": "Subheading 1",
+      "default": "win more meals with protein + nutrients"
+    },
+    {
+      "type": "text",
+      "id": "subheading_2",
+      "label": "Subheading 2",
+      "default": "frozen kid meals"
+    },
+    {
+      "type": "text",
+      "id": "subheading_3",
+      "label": "Subheading 3"
+    },
+    {
+      "type": "text",
+      "id": "subheading_4",
+      "label": "Subheading 4"
+    },
+    {
+      "type": "text",
+      "id": "subheading_5",
+      "label": "Subheading 5"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "default": "our meals",
+      "label": "Button Label"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Auto Video"
+    }
+  ]
+}
+{% endschema %}
