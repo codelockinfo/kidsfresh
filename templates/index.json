@@ -38,6 +38,25 @@
         "padding_bottom": 36
       }
     },
+    "video_slideshow_E3wNyd": {
+      "type": "video-slideshow",
+      "name": "Auto Video",
+      "settings": {
+        "mobile_video_url": "https://cdn.shopify.com/videos/c/o/v/23b5c3bd320c46babc7d9ef77a6f5485.mp4",
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/8ee5d5a733634d5bb0cf5b70534095bf.mp4",
+        "large_screen_video_url": "https://cdn.shopify.com/videos/c/o/v/5ad507ac70524ac787e3d7cbd2fd5f92.mp4",
+        "enable_rotation": true,
+        "rotation_speed": 5,
+        "heading": "win more meals with",
+        "subheading_1": "wholesome ingredients",
+        "subheading_2": "time to spare",
+        "subheading_3": "hidden veggies",
+        "subheading_4": "protein + nutrients",
+        "subheading_5": "frozen kid favorites",
+        "button_label": "our meals",
+        "button_link": ""
+      }
+    },
     "custom_banner_slider_tB6fwN": {
       "type": "custom-banner-slider",
       "name": "Celebrate Plate Section ",
@@ -299,6 +318,7 @@
   },
   "order": [
     "featured_collection",
+    "video_slideshow_E3wNyd",
     "custom_banner_slider_tB6fwN",
     "custom_slider_ejweJT",
     "ungredients_new_xNg3Kg",
