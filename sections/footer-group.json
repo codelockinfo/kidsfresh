@@ -34,13 +34,17 @@
         "link_list_Lt3fxT",
         "image_UYxhe4"
       ],
+      "custom_css": [
+        "all.copyright__content,a,p,span {color: white !important;}",
+        "a {text-decoration: none;}"
+      ],
       "settings": {
         "color_scheme": "scheme-823e3615-eabd-44b1-ae7d-823b2a1ed72a",
-        "newsletter_enable": true,
+        "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
-        "enable_follow_on_shop": true,
-        "show_social": true,
-        "enable_country_selector": true,
+        "enable_follow_on_shop": false,
+        "show_social": false,
+        "enable_country_selector": false,
         "enable_language_selector": true,
         "payment_enable": true,
         "show_policy": true,
