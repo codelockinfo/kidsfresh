@@ -28,7 +28,7 @@
 
     {% if section.settings.btn_text != blank %}
       <a href="{{ section.settings.btn_link }}" class="cta-btn">
-        <spna>{{ section.settings.btn_text }}</span>
+        {{ section.settings.btn_text }}
       </a>
     {% endif %}
   </div>
@@ -121,55 +121,15 @@
     font-family: GT Walsheim Trial;
   }
 
-  celebrate-plate-{{ section.id }} .cta-btn{
-  background: transparent!important;
-  color: #0F4735;
-  font-family: "GT Walsheim";
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 44px;
-  text-decoration: none;
-  box-shadow: none;
-  cursor: pointer;
-  transition: transform .2s ease, box-shadow .2s ease;
-  text-align: center;
-  border-radius: 35px;
-  padding: 8px 34px;
-  border: none;
-  text-transform: lowercase;
-    transform: none !important;
-}
-
-celebrate-plate-{{ section.id }} .cta-btn:before {
-   background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_23_2.png?v=1764592651);
-  background-size: 100% 100%;
-  z-index: 2;
-}
-
-celebrate-plate-{{ section.id }} .cta-btn span{
-  z-index: 3;
-}
-
-celebrate-plate-{{ section.id }} .cta-btn:after {
-  content: '';
-   background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_25.png?v=1764592665);
-  background-size: 100% 100%;
-  padding: 8px 34px;
-  bottom: -5px;
-  z-index: 1;
-  box-shadow: none;
-}
-
-
-celebrate-plate-{{ section.id }} .cta-btn:hover:before {
-  background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_23_3.png?v=1764592664) !important;
-  background-size: 100% 100% !important;
-}
-
-celebrate-plate-{{ section.id }} .cta-btn:hover:after{
-  bottom: -5px;
-  box-shadow: none;
-}
+  .cta-btn {
+    display: inline-block;
+    background: #7ccf32;
+    padding: 12px 28px;
+    border-radius: 40px;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+  }
 
 @media (max-width: 551px) {
 
