@@ -1,9 +1,10 @@
 <style>
   /* Text with Image Background Section Styles */
   .text-image-section {
+    --wave-height: 100px;
     position: relative;
     overflow: hidden;
-    padding-bottom: 100px;
+    padding-bottom: var(--wave-height);
   }
 
   .text-image-section .desktop-bg {
@@ -15,9 +16,6 @@
   }
 
   @media (max-width: 768px) {
-    .text-image-section {
-      padding: 40px 0 60px;
-    }
     .text-image-section .desktop-bg {
       display: none;
     }
@@ -28,10 +26,12 @@
 
   .text-image-container {
     position: absolute;
-    top: 50%;
+    top: 0;
     left: 0;
     right: 0;
-    transform: translateY(-50%);
+    height: calc(100% - var(--wave-height));
+    display: flex;
+    align-items: center;
     z-index: 2;
     max-width: 1200px;
     margin: 0 auto;
@@ -114,7 +114,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 100px;
+    height: var(--wave-height);
     overflow: hidden;
     z-index: 1;
   }
@@ -131,7 +131,7 @@
   /* Responsive Styles */
   @media (max-width: 968px) {
     .text-image-section {
-      padding-bottom: 80px;
+      --wave-height: 80px;
     }
 
     .text-image-container {
@@ -149,15 +149,11 @@
     .text-image-content {
       max-width: 100%;
     }
-
-    .wave-divider {
-      height: 80px;
-    }
   }
 
   @media (max-width: 640px) {
     .text-image-section {
-      padding-bottom: 60px;
+      --wave-height: 60px;
     }
 
     .section-heading {
@@ -166,10 +162,6 @@
 
     .section-tagline {
       font-size: 18px;
-    }
-
-    .wave-divider {
-      height: 60px;
     }
   }
 </style>
