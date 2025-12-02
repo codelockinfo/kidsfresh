@@ -20,13 +20,13 @@
         "col3_bg": "#6dbe4a",
         "btn_text": "Shop Now",
         "btn_url": "shopify://collections/all",
-        "rich_text_1": "<p>Free shipping on orders over $50</p>",
+        "rich_text_1": "<p>we’re here to help you win more meals</p>",
         "newsletter_btn_text": "Join",
-        "rich_text_2": "<p>Get exclusive offers & updates</p>",
+        "rich_text_2": "<p>by clicking subscribe, you agree to receive marketing emails from Kidfresh</p>",
         "social_facebook": "",
         "social_instagram": "",
         "social_tiktok": "",
-        "rich_text_3": "<p>Follow us for updates</p>"
+        "rich_text_3": "<p>follow us to win<br/>more meals</p>"
       }
     },
     "footer": {
