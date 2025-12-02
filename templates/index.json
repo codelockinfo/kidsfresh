@@ -215,7 +215,7 @@
       "settings": {
         "background_image": "shopify://shop_images/Group_281.png",
         "mobile_background_image": "shopify://shop_images/iPhone_14_15_Pro_Max_-_1_1_223d44e0-29b8-4299-975c-40feed83673b.png",
-        "background_color": "rgba(0,0,0,0)",
+        "background_color": "#0f4735",
         "title": "ungredients",
         "icon_svg": "shopify://shop_images/Group_97_9706f09d-9e6f-444b-ad57-08c399617048.png",
         "subtitle": "<p>What doesn't go into our meals is just as important as what does.</p>",
