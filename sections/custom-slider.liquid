@@ -1,7 +1,3 @@
-{{ 'section-multicolumn.css' | asset_url | stylesheet_tag }}
-{{ 'component-slider.css' | asset_url | stylesheet_tag }}
-{{ 'component-button.css' | asset_url | stylesheet_tag }}
-
 {%- style -%}
   .winning-ingredients-{{ section.id }} {
     padding-top: {{ section.settings.padding_top }}px;
@@ -10,11 +6,15 @@
     position: relative;
     overflow: hidden;
   }
+
+  .winning-ingredients-{{ section.id }} .container {
+    padding: 0 80px;
+  }
  
   .winning-ingredients-{{ section.id }} .background-image-left {
     position: absolute;
-    left: 0;
-    top: 0;
+    left: -120px;
+    top: -25px;
     width: 300px;
     height: 300px;
     z-index: 1;
@@ -29,8 +29,8 @@
  
   .winning-ingredients-{{ section.id }} .background-image-right {
     position: absolute;
-    right: 0;
-    bottom: 0;
+    right: -138px;
+    bottom: -27px;
     width: 300px;
     height: 300px;
     z-index: 1;
@@ -63,6 +63,9 @@
     gap: 26px;
     margin-bottom: 67px;
     justify-content: center;
+    scrollbar-width: none;
+    padding: 10px 0;
+    overflow: visible;
   }
 
     .winning-ingredients-{{ section.id }} .column-item-wrapper {
@@ -78,10 +81,12 @@
     background-color: transparent;
     position: relative;
     transition: transform 0.3s ease;
+    transform-origin: center;
   }
- 
+
   .winning-ingredients-{{ section.id }} .column-item:hover {
-    transform: scale(1.05);
+    transform: scale(1.04);
+    z-index: 10;
   }
  
   .winning-ingredients-{{ section.id }} .column-icon {
@@ -126,10 +131,49 @@
     margin-top: 2rem;
     margin-bottom: 4rem;
   }
- 
-  .winning-ingredients-{{ section.id }} .button {
-    min-width: 200px;
-  }
+  .winning-ingredients-{{ section.id }} .button-wrapper .button {
+  background: transparent!important;
+  color: #63441D;
+  font-family: "GT Walsheim";
+  font-size: 30px;
+  line-height: 44px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: none;
+  cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease;
+  text-align: center;
+  border-radius: 35px;
+  padding: 8px 34px;
+  border: none;
+  text-transform: lowercase;
+    transform: none !important;
+}
+
+.winning-ingredients-{{ section.id }} .button-wrapper .button:before {
+  background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_23_4.png?v=1764654764);
+  background-size: 100% 100%;
+  z-index: 2;
+}
+
+.winning-ingredients-{{ section.id }} .button-wrapper .button span {
+  z-index: 3;
+}
+
+.winning-ingredients-{{ section.id }} .button-wrapper .button:after {
+  content: '';
+   background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_25_1.png?v=1764654764);
+  background-size: 100% 100%;
+  padding: 8px 34px;
+  bottom: -6px;
+  z-index: 1;
+  box-shadow: none;
+}
+
+.winning-ingredients-{{ section.id }} .button-wrapper .button:hover:before {
+  background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_23_5.png?v=1764654764) !important;
+  background-size: 100% 100% !important;
+}
 
     @media screen and (max-width: 768px) {
     .winning-ingredients-{{ section.id }} .section-heading {
@@ -161,18 +205,23 @@
       }
   }
  
-  @media screen and (max-width: 749px) {
+  @media screen and (max-width: 768px) {
+    .winning-ingredients-{{ section.id }} .container {
+      padding: 0 20px;
+    }
     {% if section.settings.enable_mobile_slider %}
       .winning-ingredients-{{ section.id }} .columns-wrapper {
         display: block;
         overflow-x: auto;
-        overflow-y: hidden;
+        overflow-y: visible;
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
         scroll-snap-type: x mandatory;
-        padding-bottom: 1rem;
+        padding: 10px 80px 1rem;
         margin-bottom: 3rem;
         scrollbar-width: none;
+        margin-left: -20px;
+        margin-right: -20px;
       }
      
       .winning-ingredients-{{ section.id }} .columns-wrapper::-webkit-scrollbar {
@@ -197,25 +246,22 @@
         white-space: normal;
         vertical-align: top;
         scroll-snap-align: center;
+        padding: 10px 0;
       }
       
-      .winning-ingredients-{{ section.id }} .column-item-wrapper:first-child {
-        margin-left: 7.5%;
-      }
-      
-      .winning-ingredients-{{ section.id }} .column-item-wrapper:last-child {
-        margin-right: 7.5%;
-      }
     {% else %}
       .winning-ingredients-{{ section.id }} .columns-wrapper {
         display: flex;
         overflow-x: auto;
+        overflow-y: visible;
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
         scroll-behavior: smooth;
         gap: 1rem;
-        padding-bottom: 1rem;
+        padding: 10px 80px 1rem;
         grid-template-columns: none;
+        margin-left: -20px;
+        margin-right: -20px;
       }
      
       .winning-ingredients-{{ section.id }} .columns-wrapper::-webkit-scrollbar {
@@ -235,56 +281,88 @@
       .winning-ingredients-{{ section.id }} .column-item-wrapper {
         flex: 0 0 85%;
         scroll-snap-align: start;
+        padding: 10px 0;
       }
     {% endif %}
    
-    .winning-ingredients-{{ section.id }} .background-image-left,
+    .winning-ingredients-{{ section.id }} .background-image-left {
+      left: -70px;
+      top: 10px;
+      width: 180px;
+      height: 180px;
+    }
     .winning-ingredients-{{ section.id }} .background-image-right {
-      width: 150px;
-      height: 150px;
+      right: -91px;
+      bottom: 0;
+      width: 200px;
+      height: 200px;
     }
   }
 
 /* 768px → 2.5 slides */
 @media (min-width: 768px) and (max-width: 990px) {
+  .winning-ingredients-{{ section.id }} .container {
+    padding: 0 20px;
+  }
   .winning-ingredients-{{ section.id }} .columns-wrapper {
     display: flex;
     overflow-x: auto;
+    overflow-y: visible;
     scroll-snap-type: x mandatory;
     gap: 26px;
-    justify-content: flex-start;  /* important */
+    justify-content: flex-start;
+    margin-left: -20px;
+    margin-right: -20px;
+    padding: 10px 80px;
   }
   .winning-ingredients-{{ section.id }} .column-item-wrapper {
     flex: 0 0 calc(100% / 2.5);
     scroll-snap-align: center;
+    padding: 10px 0;
   }
 }
 
 /* 991px → 3.5 slides */
 @media (min-width: 991px) and (max-width: 1200px) {
+  .winning-ingredients-{{ section.id }} .container {
+    padding: 0 20px;
+  }
   .winning-ingredients-{{ section.id }} .columns-wrapper {
     display: flex;
     overflow-x: auto;
+    overflow-y: visible;
     scroll-snap-type: x mandatory;
     gap: 26px;
     justify-content: flex-start;
+    margin-left: -20px;
+    margin-right: -20px;
+    padding: 10px 80px;
   }
   .winning-ingredients-{{ section.id }} .column-item-wrapper {
     flex: 0 0 calc(100% / 3.5);
     scroll-snap-align: center;
+    padding: 10px 0;
   }
 }
 @media (min-width: 1201px) and (max-width: 1400px) {
+  .winning-ingredients-{{ section.id }} .container {
+    padding: 0 20px;
+  }
   .winning-ingredients-{{ section.id }} .columns-wrapper {
     display: flex;
     overflow-x: auto;
+    overflow-y: visible;
     scroll-snap-type: x mandatory;
     gap: 26px;
     justify-content: flex-start;
+    margin-left: -20px;
+    margin-right: -20px;
+    padding: 10px 80px;
   }
   .winning-ingredients-{{ section.id }} .column-item-wrapper {
     flex: 0 0 calc(100% / 4);
     scroll-snap-align: center;
+    padding: 10px 0;
   }
 }
 
@@ -296,7 +374,7 @@
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     gap: 26px;
-    justify-content: flex-start;
+    justify-content: center;
   }
   .winning-ingredients-{{ section.id }} .column-item-wrapper {
     flex: 0 0 calc(100% / 5.5);

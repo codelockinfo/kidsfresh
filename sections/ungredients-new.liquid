@@ -1,0 +1,885 @@
+
+<style>
+body {
+    font-family: 'GT Walsheim Trial', sans-serif;
+}
+  .ungredients-new-section {
+    position: relative;
+    background-color: #f58220;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 100px 40px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 800px;
+  }
+
+  .ungredients-new-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 50px;
+    padding-top: 50px;
+  }
+
+  .ungredients-new-content {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .ungredients-new-box {
+    background: {{ section.settings.card_bg_color | default: 'rgba(241, 234, 217, 1)' }};
+    border-radius: 10px;
+    border: 3px solid {{ section.settings.accent_color | default: 'rgba(15, 71, 53, 1)' }};
+    padding: 20px;
+    position: relative;
+    z-index: 3;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  .ungredients-new-title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-bottom: 15px;
+  }
+
+  .ungredients-new-title {
+    font-size: 75px;
+    line-height: 86px;
+    font-weight: 700;
+    color: {{ section.settings.title_color | default: 'rgba(15, 71, 53, 1)' }};
+    text-transform: lowercase;
+    margin: 0;
+    font-family: 'GT Walsheim Trial', sans-serif;
+  }
+
+  .ungredients-new-icon {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+  }
+
+  .ungredients-new-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .ungredients-new-subtitle {
+    font-size: 23px;
+    color: {{ section.settings.subtitle_color | default: 'rgba(15, 71, 53, 1)' }};
+    line-height: 29px;
+    font-weight: 400;
+    margin: 0 0 1rem;
+  }
+
+  .ungredients-new-subtitle p {
+    margin: 0;
+  }
+
+  .ungredients-new-divider {
+    display: flex !important;
+    border-bottom: 8px solid {{ section.settings.accent_color | default: 'rgba(15, 71, 53, 1)' }};
+    margin: 1.6rem 0;
+  }
+
+  .ungredients-new-table-wrapper {
+    overflow-x: auto;
+    margin-bottom: 1rem;
+  }
+
+  .ungredients-new-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-bottom: 3px solid {{ section.settings.accent_color | default: 'rgba(15, 71, 53, 1)' }};
+    table-layout: fixed;
+  }
+
+  .ungredients-new-table td {
+    padding: 0.5rem 1rem;
+    font-size: 1.05rem;
+    vertical-align: middle;
+    word-wrap: break-word;
+    border-top: 3px solid {{ section.settings.accent_color | default: 'rgba(15, 71, 53, 1)' }};
+    border-left: 3px solid {{ section.settings.accent_color | default: 'rgba(15, 71, 53, 1)' }};
+  }
+
+  .ungredients-new-table td:nth-child(1) {
+    width: 37%;
+    font-weight: 500;
+    color: rgba(237, 119, 35, 1);
+    font-size: 27px;
+    line-height: 60px;
+  }
+
+  .ungredients-new-table td:nth-child(2) {
+    width: 53%;
+    color: {{ section.settings.accent_color | default: 'rgba(15, 71, 53, 1)' }};
+    font-size: 27px;
+    font-weight: 500;
+    line-height: 60px;
+  }
+
+  .ungredients-new-table td:nth-child(3) {
+    width: 10%;
+    border-right: 3px solid {{ section.settings.accent_color | default: 'rgba(15, 71, 53, 1)' }};
+    text-align: right;
+    font-weight: 700;
+    color: {{ section.settings.accent_color | default: 'rgba(15, 71, 53, 1)' }};
+    font-size: 34px;
+    line-height: 100%;
+  }
+
+  .ungredients-new-table td:nth-child(3) p {
+    font-family: "GT Walsheim", sans-serif;
+    font-size: 34px;
+    margin: 0;
+    font-weight: 700;
+    line-height: 100%;
+  }
+
+  .ungredients-new-footer {
+    font-size: 21px;
+    color: {{ section.settings.accent_color | default: 'rgba(15, 71, 53, 1)' }};
+    line-height: 29px;
+    margin: 0;
+    font-weight: 400;
+  }
+
+.ungredients-new-button.button{
+  background: transparent!important;
+  color: #0F4735;
+  font-family: "GT Walsheim";
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 44px;
+  text-decoration: none;
+  box-shadow: none;
+  cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease;
+  text-align: center;
+  border-radius: 35px;
+  padding: 8px 34px;
+  border: none;
+  text-transform: lowercase;
+    transform: none !important;
+}
+
+.ungredients-new-button.button:before {
+   background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_23_2.png?v=1764592651);
+  background-size: 100% 100%;
+  z-index: 2;
+}
+
+.ungredients-new-button.button span{
+  z-index: 3;
+}
+
+.ungredients-new-button.button:after {
+  content: '';
+   background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_25.png?v=1764592665);
+  background-size: 100% 100%;
+  padding: 8px 34px;
+  bottom: -5px;
+  z-index: 1;
+  box-shadow: none;
+}
+
+
+.ungredients-new-button.button:hover:before {
+  background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_23_3.png?v=1764592664) !important;
+  background-size: 100% 100% !important;
+}
+
+.ungredients-new-button.button:hover:after{
+  bottom: -5px;
+  box-shadow: none;
+}
+
+  {% comment %}.ungredients-new-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: {{ section.settings.button_bg_color | default: 'rgba(241, 234, 217, 1)' }};
+    color: {{ section.settings.button_text_color | default: 'rgba(15, 71, 53, 1)' }};
+    border: 2px solid {{ section.settings.button_border_color | default: 'rgba(15, 71, 53, 1)' }};
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 500;
+    font-size: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    text-transform: lowercase;
+  }
+
+  .ungredients-new-button:hover {
+    background-color: {{ section.settings.button_border_color | default: 'rgba(15, 71, 53, 1)' }};
+    color: {{ section.settings.button_bg_color | default: 'rgba(241, 234, 217, 1)' }};
+  }{% endcomment %}
+
+  .ungredients-new-button-wrapper {
+    text-align: center;
+    margin-top: 1.5rem;
+    width: 100%;
+  }
+
+  /* Mobile Food Images - Hidden on Desktop */
+  .ungredients-new-mobile-images {
+    display: none;
+  }
+
+  @media screen and (max-width: 1650px) and (min-width: 1440px) {
+    .ungredients-new-container {
+        padding-right: 0;
+    }
+    .ungredients-new-title {
+        font-size: 64px;
+        line-height: 68px;
+    }
+    .ungredients-new-content {
+        max-width: 850px;
+    }
+    .ungredients-new-table td:nth-child(1),
+    .ungredients-new-table td:nth-child(2) {
+        font-size: 24px;
+        line-height: 46px;
+    }
+    .ungredients-new-table td:nth-child(3) p {
+        font-size: 30px;
+    }
+  }
+
+    @media screen and (max-width: 1439px) and (min-width: 1200px) {
+    .ungredients-new-container {
+        padding-right: 0;
+        padding-top: 65px;
+    }
+    .ungredients-new-title {
+        font-size: 48px;
+        line-height: 42px;
+    }
+    .ungredients-new-content {
+        max-width: 750px;
+    }
+    .ungredients-new-icon {
+        width: 40px;
+        height: 40px;
+    }
+    .ungredients-new-subtitle {
+        font-size: 21px;
+        line-height: 23px;
+    }
+    .ungredients-new-table td:nth-child(1),
+    .ungredients-new-table td:nth-child(2) {
+        font-size: 20px;
+        line-height: 40px;
+    }
+    .ungredients-new-table td:nth-child(3) p {
+        font-size: 28px;
+    }
+    .ungredients-new-footer {
+        font-size: 19px;
+        line-height: 24px;
+    }
+    .ungredients-new-content {
+        gap: 0;
+    }
+    .ungredients-new-button.button {
+        font-size: 20px;
+    }
+  }
+
+      @media screen and (max-width: 1199px) and (min-width: 991px) {
+    .ungredients-new-container {
+        padding-right: 0;
+        padding-top: 50px;
+    }
+    .ungredients-new-content {
+        max-width: 900px;
+    }
+    .ungredients-new-title {
+        font-size: 42px;
+        line-height: 27px;
+    }
+    
+    .ungredients-new-icon {
+        width: 30px;
+        height: 30px;
+    }
+    .ungredients-new-subtitle {
+        font-size: 18px;
+        line-height: 23px;
+    }
+    .ungredients-new-table td:nth-child(1),
+    .ungredients-new-table td:nth-child(2) {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .ungredients-new-table td:nth-child(3) p {
+        font-size: 24px;
+    }
+    .ungredients-new-footer {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .ungredients-new-content {
+        gap: 0;
+    }
+    .ungredients-new-button-wrapper {
+      margin-top: 0;
+    }
+    .ungredients-new-button.button {
+        font-size: 18px;
+        padding: 5px 20px;
+    }
+  }
+
+  @media screen and (max-width: 990px) {
+
+      .ungredients-new-section {
+        background-size: 100% 100%;
+      }
+    .ungredients-new-section {
+      padding: 30px 20px 20px;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .ungredients-new-container {
+      justify-content: center;
+      padding-right: 0;
+      padding-top: 40px;
+      width: 100%;
+    }
+
+    .ungredients-new-content {
+      margin-left: 0;
+      max-width: 100%;
+      width: 100%;
+    }
+
+    .ungredients-new-box {
+      padding: 20px;
+      border-radius: 10px;
+      width: 100%;
+    }
+
+    .ungredients-new-title-wrapper {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      margin-bottom: 12px;
+    }
+
+    .ungredients-new-title {
+      font-size: 42px;
+      line-height: 100%;
+      flex: 1;
+    }
+
+    .ungredients-new-icon {
+      width: 36px;
+      height: 36px;
+      flex-shrink: 0;
+    }
+
+    .ungredients-new-subtitle {
+      font-size: 16px;
+      line-height: 20px;
+      margin-bottom: 0.75rem;
+    }
+
+    .ungredients-new-subtitle p {
+      margin: 0;
+    }
+
+    .ungredients-new-divider {
+      margin: 1rem 0;
+      border-bottom-width: 4px;
+    }
+
+    .ungredients-new-table-wrapper {
+      margin-bottom: 0.75rem;
+    }
+
+    .ungredients-new-table td {
+      padding: 0.5rem 0.6rem;
+      font-size: 13px;
+    }
+
+    .ungredients-new-table td:nth-child(1) {
+      font-size: 18px;
+      line-height: 20px;
+      width: 32%;
+      font-weight: 500;
+    }
+
+    .ungredients-new-table td:nth-child(2) {
+      font-size: 18px;
+      line-height: 20px;
+      width: 53%;
+    }
+
+    .ungredients-new-table td:nth-child(3) {
+      font-size: 26px;
+      width: 15%;
+      padding-right: 0.4rem;
+    }
+
+    .ungredients-new-table td:nth-child(3) p {
+      font-size: 26px;
+      line-height: 1;
+    }
+
+    .ungredients-new-footer {
+      font-size: 14px;
+      line-height: 18px;
+      margin-top: 0.75rem;
+    }
+
+    .ungredients-new-button-wrapper {
+      margin-top: 1.25rem;
+    }
+
+    .ungredients-new-button.button {
+      padding: 10px 20px;
+      font-size: 20px;
+      width: 100%;
+      max-width: 200px;
+    }
+
+    /* Hide desktop food items on mobile */
+    .ungredients-new-food-items {
+      display: none;
+    }
+
+    /* Show mobile food images at bottom */
+    .ungredients-new-mobile-images {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-top: 30px;
+      width: 100%;
+      padding: 0;
+    }
+
+    .mobile-food-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    .mobile-food-item img {
+      width: 100%;
+      max-width: 100px;
+      height: auto;
+      display: block;
+      object-fit: contain;
+    }
+
+    .ungredients-new-leaf {
+      width: 60px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .ungredients-new-section {
+      padding: 30px 15px;
+    }
+
+    .ungredients-new-box {
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .ungredients-new-title {
+      font-size: 32px;
+    }
+
+    .ungredients-new-icon {
+      width: 32px;
+      height: 32px;
+    }
+
+    .ungredients-new-subtitle {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    .ungredients-new-table td {
+      padding: 0.4rem 0.5rem;
+      font-size: 12px;
+    }
+
+    .ungredients-new-table td:nth-child(1) {
+      font-size: 18px;
+      line-height: 20px;
+      width: 30%;
+    }
+
+    .ungredients-new-table td:nth-child(2) {
+      font-size: 18px;
+      line-height: 20px;
+      width: 55%;
+    }
+
+    .ungredients-new-table td:nth-child(3) {
+      font-size: 26px;
+      line-height: 100%;
+      width: 15%;
+    }
+
+    .ungredients-new-table td:nth-child(3) p {
+      font-size: 26px;
+      line-height: 100%;
+    }
+
+    .ungredients-new-footer {
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    .ungredients-new-button.button {
+      padding: 10px 18px;
+      font-size: 20px;
+    }
+  }
+</style>
+
+<section class="ungredients-new-section" 
+         {% if section.settings.background_image %}
+           style="background-image: url('{{ section.settings.background_image | img_url: '1920x' }}'); background-color: {{ section.settings.background_color | default: '#f58220' }};"
+           data-desktop-bg="{{ section.settings.background_image | img_url: '1920x' }}"
+         {% else %}
+           style="background-color: {{ section.settings.background_color | default: '#f58220' }};"
+         {% endif %}
+         {% if section.settings.mobile_background_image %}
+           data-mobile-bg="{{ section.settings.mobile_background_image | img_url: '990x' }}"
+         {% endif %}>
+
+  {% comment %} Main Content {% endcomment %}
+  <div class="ungredients-new-container">
+    <div class="ungredients-new-content">
+      <div class="ungredients-new-box">
+        
+        {% comment %} Title with Icon {% endcomment %}
+        <div class="ungredients-new-title-wrapper">
+          <h2 class="ungredients-new-title">
+            {{ section.settings.title | default: 'ungredients' | escape }}
+          </h2>
+          {% if section.settings.icon_svg %}
+            <div class="ungredients-new-icon">
+              <img src="{{ section.settings.icon_svg | img_url: 'master' }}" 
+                   alt="Icon" 
+                   loading="lazy" 
+                   aria-hidden="true">
+            </div>
+          {% endif %}
+        </div>
+
+        {% comment %} Subtitle {% endcomment %}
+        {% if section.settings.subtitle != blank %}
+          <div class="ungredients-new-subtitle">
+            {{ section.settings.subtitle }}
+          </div>
+        {% endif %}
+
+        {% comment %} Divider {% endcomment %}
+        <div class="ungredients-new-divider"></div>
+
+        {% comment %} Table {% endcomment %}
+        <div class="ungredients-new-table-wrapper">
+          <table class="ungredients-new-table">
+            {%- for block in section.blocks -%}
+              {%- if block.type == 'ungredient' -%}
+                <tr {{ block.shopify_attributes }}>
+                  <td>{{ block.settings.title | escape }}</td>
+                  <td>{{ block.settings.description | escape }}</td>
+                  <td><p>{{ block.settings.percentage | default: '0%' | escape }}</p></td>
+                </tr>
+              {%- endif -%}
+            {%- endfor -%}
+          </table>
+        </div>
+
+        {% comment %} Footer Text {% endcomment %}
+        {% if section.settings.footer_text != blank %}
+          <p class="ungredients-new-footer">{{ section.settings.footer_text | escape }}</p>
+        {% endif %}
+
+      </div>
+
+      {% comment %} Button - Outside the box {% endcomment %}
+      {% if section.settings.button_text != blank %}
+        <div class="ungredients-new-button-wrapper">
+          {% if section.settings.button_url != blank %}
+            <a href="{{ section.settings.button_url }}" class="ungredients-new-button">
+              <span>{{ section.settings.button_text | escape }}</span>
+            </a>
+          {% else %}
+            <p class="ungredients-new-button button">
+              <span>{{ section.settings.button_text | escape }}</span>
+            </p>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+</section>
+
+<script>
+  (function() {
+    const sections = document.querySelectorAll('.ungredients-new-section[data-mobile-bg]');
+    if (!sections.length) return;
+    
+    function updateBackground(section) {
+      const mobileBg = section.getAttribute('data-mobile-bg');
+      if (!mobileBg) return;
+      
+      if (window.innerWidth <= 990) {
+        section.style.backgroundImage = `url('${mobileBg}')`;
+      } else {
+        const desktopBg = section.getAttribute('data-desktop-bg');
+        if (desktopBg) {
+          section.style.backgroundImage = `url('${desktopBg}')`;
+        }
+      }
+    }
+    
+    sections.forEach(function(section) {
+      updateBackground(section);
+    });
+    
+    let resizeTimer;
+    window.addEventListener('resize', function() {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function() {
+        sections.forEach(function(section) {
+          updateBackground(section);
+        });
+      }, 100);
+    });
+  })();
+</script>
+  
+{% schema %}
+{
+  "name": "Ungredients",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Background Settings"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background Image (Desktop)",
+      "info": "Background image for desktop screens. Recommended size: 1920x800px."
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_background_image",
+      "label": "Background Image (Mobile)",
+      "info": "Background image for mobile devices (990px and below). Recommended size: 990x1000px. If not set, desktop image will be used."
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Content Settings"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "ungredients"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_svg",
+      "label": "Title Icon",
+      "info": "Icon displayed next to the title (recommended: 60x60px)"
+    },
+    {
+      "type": "richtext",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "<p>What doesn't go into our meals is just as important as what does.</p>"
+    },
+    {
+      "type": "textarea",
+      "id": "footer_text",
+      "label": "Footer Text",
+      "default": "Built with what matters most: real ingredients, balanced nutrition, and vegetables in disguise. Every meal is designed to support strong bodies, growing minds, and stress-free mealtimes."
+    },
+    {
+      "type": "header",
+      "content": "Button Settings"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "our mission"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button Link"
+    },
+    {
+      "type": "header",
+      "content": "Color Settings"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent Color",
+      "default": "rgba(15, 71, 53, 1)",
+      "info": "Used for borders, text, and accents"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title Color",
+      "default": "rgba(15, 71, 53, 1)"
+    },
+    {
+      "type": "color",
+      "id": "subtitle_color",
+      "label": "Subtitle Color",
+      "default": "rgba(15, 71, 53, 1)"
+    },
+    {
+      "type": "color",
+      "id": "card_bg_color",
+      "label": "Card Background Color",
+      "default": "rgba(241, 234, 217, 1)"
+    },
+    {
+      "type": "color",
+      "id": "button_bg_color",
+      "label": "Button Background Color",
+      "default": "rgba(241, 234, 217, 1)"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button Text Color",
+      "default": "rgba(15, 71, 53, 1)"
+    },
+    {
+      "type": "color",
+      "id": "button_border_color",
+      "label": "Button Border Color",
+      "default": "rgba(15, 71, 53, 1)"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "ungredient",
+      "name": "Ungredient Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Nothing artificial"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description",
+          "default": "No fake outs, just the real deal"
+        },
+        {
+          "type": "text",
+          "id": "percentage",
+          "label": "Percentage",
+          "default": "0%"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Ungredients",
+      "blocks": [
+        {
+          "type": "ungredient",
+          "settings": {
+            "title": "Nothing artificial",
+            "description": "No fake outs, just the real deal",
+            "percentage": "0%"
+          }
+        },
+        {
+          "type": "ungredient",
+          "settings": {
+            "title": "No antibiotics",
+            "description": "We're pro real healthy ingredients",
+            "percentage": "0%"
+          }
+        },
+        {
+          "type": "ungredient",
+          "settings": {
+            "title": "No preservatives",
+            "description": "Our meals are frozen fresh",
+            "percentage": "0%"
+          }
+        },
+        {
+          "type": "ungredient",
+          "settings": {
+            "title": "No GMOs",
+            "description": "We're sticking with Mother Nature",
+            "percentage": "0%"
+          }
+        },
+        {
+          "type": "ungredient",
+          "settings": {
+            "title": "No synthetic food dyes",
+            "description": "Keeping it real and colorful",
+            "percentage": "0%"
+          }
+        },
+        {
+          "type": "ungredient",
+          "settings": {
+            "title": "No BPA in packaging",
+            "description": "We're helping grow big brains",
+            "percentage": "0%"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
