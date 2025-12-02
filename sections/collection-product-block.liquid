@@ -442,7 +442,7 @@
               
               <div class="promo-content">
                 {% if block.settings.heading != blank %}
-                  <h2 class="promo-heading">{{ block.settings.heading }}</h2>
+                  <h2 class="promo-heading" style="color: {{ block.settings.heading_color | default: '#2c5f2d' }};">{{ block.settings.heading }}</h2>
                 {% endif %}
                 
                 {% if block.settings.button_text != blank and block.settings.button_link != blank %}
@@ -560,6 +560,12 @@
           "id": "heading",
           "label": "Heading",
           "default": "ingredients + nutrition"
+        },
+        {
+          "type": "color",
+          "id": "heading_color",
+          "label": "Heading Color",
+          "default": "#2c5f2d"
         },
         {
           "type": "text",
