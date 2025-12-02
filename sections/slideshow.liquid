@@ -1,44 +1,66 @@
 <style>
-  /* Text with Image Section Styles */
+  /* Text with Image Background Section Styles */
   .text-image-section {
     position: relative;
-    padding: 80px 0 0;
-    background: {{ section.settings.section_background | default: '#f58220' }};
+    min-height: 600px;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 80px 0 100px;
+  }
+
+  .text-image-section .desktop-bg {
+    display: block;
+  }
+
+  .text-image-section .mobile-bg {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .text-image-section .desktop-bg {
+      display: none;
+    }
+    .text-image-section .mobile-bg {
+      display: block;
+    }
   }
 
   .text-image-container {
+    position: relative;
+    z-index: 2;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    align-items: center;
-    gap: 60px;
-    min-height: 500px;
+    padding: 0 40px;
+    width: 100%;
   }
 
   .text-image-content {
-    flex: 1;
-    z-index: 2;
+    max-width: 600px;
   }
 
-  .text-image-image {
-    flex: 1;
-    position: relative;
-    z-index: 2;
+  .text-image-content.text-left {
+    margin-left: 0;
+    margin-right: auto;
+    text-align: left;
   }
 
-  .text-image-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 12px;
+  .text-image-content.text-center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .text-image-content.text-right {
+    margin-left: auto;
+    margin-right: 0;
+    text-align: right;
   }
 
   .section-heading {
     font-size: 64px;
     font-weight: 900;
-    color: {{ section.settings.heading_color | default: '#2c2c2c' }};
+    color: #2c2c2c;
     margin-bottom: 20px;
     line-height: 1.1;
     text-transform: lowercase;
@@ -46,15 +68,15 @@
 
   .section-tagline {
     font-size: 24px;
-    color: {{ section.settings.tagline_color | default: '#5a5a5a' }};
+    color: #5a5a5a;
     line-height: 1.5;
     margin-bottom: 30px;
   }
 
   .section-button {
     display: inline-block;
-    background: {{ section.settings.button_background | default: '#97d700' }};
-    color: {{ section.settings.button_text_color | default: '#2c5f2d' }};
+    background: #97d700;
+    color: #2c5f2d;
     padding: 15px 40px;
     border-radius: 50px;
     font-weight: 700;
@@ -66,6 +88,17 @@
   .section-button:hover {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(151, 215, 0, 0.4);
+  }
+
+  /* Background Image Overlay */
+  .background-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    object-fit: cover;
   }
 
   /* Wave Divider */
@@ -85,53 +118,30 @@
     left: 0;
     width: 100%;
     height: 100%;
-    fill: {{ section.settings.wave_color | default: '#f5f5dc' }};
-  }
-
-  /* Decorative Food Elements */
-  .decorative-elements {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1;
-    overflow: hidden;
-  }
-
-  .decorative-element {
-    position: absolute;
-    opacity: 0.6;
-    transition: transform 0.3s ease;
-  }
-
-  .decorative-element img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+    fill: #ffffff;
   }
 
   /* Responsive Styles */
   @media (max-width: 968px) {
+    .text-image-section {
+      min-height: 500px;
+      padding: 60px 0 80px;
+    }
+
     .text-image-container {
-      flex-direction: column;
-      gap: 40px;
-      padding: 40px 20px 0;
+      padding: 0 20px;
     }
 
     .section-heading {
       font-size: 48px;
-      text-align: center;
     }
 
     .section-tagline {
       font-size: 20px;
-      text-align: center;
     }
 
     .text-image-content {
-      text-align: center;
+      max-width: 100%;
     }
 
     .wave-divider {
@@ -141,7 +151,8 @@
 
   @media (max-width: 640px) {
     .text-image-section {
-      padding: 60px 0 0;
+      min-height: 400px;
+      padding: 40px 0 60px;
     }
 
     .section-heading {
@@ -152,94 +163,49 @@
       font-size: 18px;
     }
 
-    .text-image-container {
-      min-height: 400px;
-    }
-
     .wave-divider {
       height: 60px;
-    }
-  }
-
-  /* Hidden classes for mobile/desktop */
-  .hidden_desktop {
-    display: block !important;
-  }
-
-  .hidden_mobile {
-    display: none !important;
-  }
-
-  @media (min-width: 992px) {
-    .hidden_desktop {
-      display: none !important;
-    }
-    .hidden_mobile {
-      display: block !important;
     }
   }
 </style>
 
 <section class="text-image-section" id="text-image-{{ section.id }}">
   {%- for block in section.blocks -%}
-    <div class="text-image-container" {{ block.shopify_attributes }}>
-      <!-- Decorative Elements -->
-      {%- if block.settings.show_decorative_elements -%}
-        <div class="decorative-elements">
-          {%- if block.settings.decorative_element_1 -%}
-            <div class="decorative-element" style="top: 10%; left: 5%; width: 80px; height: 80px;">
-              <img src="{{ block.settings.decorative_element_1 | img_url: '100x' }}" alt="">
-            </div>
-          {%- endif -%}
-          {%- if block.settings.decorative_element_2 -%}
-            <div class="decorative-element" style="top: 20%; right: 10%; width: 100px; height: 100px;">
-              <img src="{{ block.settings.decorative_element_2 | img_url: '100x' }}" alt="">
-            </div>
-          {%- endif -%}
-          {%- if block.settings.decorative_element_3 -%}
-            <div class="decorative-element" style="bottom: 30%; left: 8%; width: 90px; height: 90px;">
-              <img src="{{ block.settings.decorative_element_3 | img_url: '100x' }}" alt="">
-            </div>
-          {%- endif -%}
-        </div>
-      {%- endif -%}
+    <!-- Background Images -->
+    {%- if block.settings.desktop_image != blank -%}
+      <img src="{{ block.settings.desktop_image | img_url: '1920x' }}" 
+           alt="{{ block.settings.heading | escape }}"
+           class="background-image-overlay desktop-bg"
+           loading="lazy">
+    {%- endif -%}
+    
+    {%- if block.settings.mobile_image != blank -%}
+      <img src="{{ block.settings.mobile_image | img_url: '800x' }}" 
+           alt="{{ block.settings.heading | escape }}"
+           class="background-image-overlay mobile-bg"
+           loading="lazy">
+    {%- elsif block.settings.desktop_image != blank -%}
+      <img src="{{ block.settings.desktop_image | img_url: '800x' }}" 
+           alt="{{ block.settings.heading | escape }}"
+           class="background-image-overlay mobile-bg"
+           loading="lazy">
+    {%- endif -%}
 
-      <!-- Text Content -->
-      <div class="text-image-content" style="order: {{ block.settings.text_position | default: 1 }};">
+    <!-- Text Content -->
+    <div class="text-image-container" {{ block.shopify_attributes }}>
+      <div class="text-image-content text-{{ block.settings.content_alignment | default: 'left' }}">
         {%- if block.settings.heading != blank -%}
           <h2 class="section-heading">{{ block.settings.heading }}</h2>
         {%- endif -%}
         
-        {%- if block.settings.tagline != blank -%}
-          <p class="section-tagline">{{ block.settings.tagline }}</p>
+        {%- if block.settings.subheading != blank -%}
+          <p class="section-tagline">{{ block.settings.subheading }}</p>
         {%- endif -%}
         
         {%- if block.settings.button_label != blank and block.settings.button_link != blank -%}
           <a href="{{ block.settings.button_link }}" class="section-button">
             {{ block.settings.button_label }}
           </a>
-        {%- endif -%}
-      </div>
-
-      <!-- Image Content -->
-      <div class="text-image-image" style="order: {{ block.settings.image_position | default: 2 }};">
-        {%- if block.settings.image != blank -%}
-          <img class="hidden_mobile" 
-               src="{{ block.settings.image | img_url: '800x' }}" 
-               alt="{{ block.settings.heading | escape }}"
-               loading="lazy">
-        {%- endif -%}
-        
-        {%- if block.settings.mobile_image != blank -%}
-          <img class="hidden_desktop" 
-               src="{{ block.settings.mobile_image | img_url: '600x' }}" 
-               alt="{{ block.settings.heading | escape }}"
-               loading="lazy">
-        {%- elsif block.settings.image != blank -%}
-          <img class="hidden_desktop" 
-               src="{{ block.settings.image | img_url: '600x' }}" 
-               alt="{{ block.settings.heading | escape }}"
-               loading="lazy">
         {%- endif -%}
       </div>
     </div>
@@ -262,50 +228,28 @@
   "name": "Text with Image Section",
   "tag": "section",
   "class": "section",
-  "settings": [
-    {
-      "type": "color",
-      "id": "section_background",
-      "label": "Section Background Color",
-      "default": "#f58220"
-    },
-    {
-      "type": "color",
-      "id": "heading_color",
-      "label": "Heading Color",
-      "default": "#2c2c2c"
-    },
-    {
-      "type": "color",
-      "id": "tagline_color",
-      "label": "Tagline Color",
-      "default": "#5a5a5a"
-    },
-    {
-      "type": "color",
-      "id": "button_background",
-      "label": "Button Background Color",
-      "default": "#97d700"
-    },
-    {
-      "type": "color",
-      "id": "button_text_color",
-      "label": "Button Text Color",
-      "default": "#2c5f2d"
-    },
-    {
-      "type": "color",
-      "id": "wave_color",
-      "label": "Wave Color",
-      "default": "#f5f5dc"
-    }
-  ],
+  "settings": [],
   "blocks": [
     {
       "type": "text_image_block",
       "name": "Text with Image Block",
-      "limit": 3,
+      "limit": 1,
       "settings": [
+        {
+          "type": "header",
+          "content": "Images"
+        },
+        {
+          "type": "image_picker",
+          "id": "desktop_image",
+          "label": "Desktop Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile_image",
+          "label": "Mobile Image",
+          "info": "If not provided, desktop image will be used"
+        },
         {
           "type": "header",
           "content": "Content"
@@ -318,8 +262,8 @@
         },
         {
           "type": "text",
-          "id": "tagline",
-          "label": "Tagline",
+          "id": "subheading",
+          "label": "Subheading",
           "default": "helping you win meals, one bite at a time."
         },
         {
@@ -334,80 +278,24 @@
           "label": "Button Link"
         },
         {
-          "type": "header",
-          "content": "Images"
-        },
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Desktop Image"
-        },
-        {
-          "type": "image_picker",
-          "id": "mobile_image",
-          "label": "Mobile Image (Optional)",
-          "info": "If not provided, desktop image will be used"
-        },
-        {
-          "type": "header",
-          "content": "Layout"
-        },
-        {
           "type": "select",
-          "id": "text_position",
+          "id": "content_alignment",
+          "label": "Content Alignment",
           "options": [
             {
-              "value": "1",
+              "value": "left",
               "label": "Left"
             },
             {
-              "value": "2",
-              "label": "Right"
-            }
-          ],
-          "default": "1",
-          "label": "Text Position"
-        },
-        {
-          "type": "select",
-          "id": "image_position",
-          "options": [
-            {
-              "value": "1",
-              "label": "Left"
+              "value": "center",
+              "label": "Center"
             },
             {
-              "value": "2",
+              "value": "right",
               "label": "Right"
             }
           ],
-          "default": "2",
-          "label": "Image Position"
-        },
-        {
-          "type": "header",
-          "content": "Decorative Elements"
-        },
-        {
-          "type": "checkbox",
-          "id": "show_decorative_elements",
-          "label": "Show Decorative Elements",
-          "default": false
-        },
-        {
-          "type": "image_picker",
-          "id": "decorative_element_1",
-          "label": "Decorative Element 1"
-        },
-        {
-          "type": "image_picker",
-          "id": "decorative_element_2",
-          "label": "Decorative Element 2"
-        },
-        {
-          "type": "image_picker",
-          "id": "decorative_element_3",
-          "label": "Decorative Element 3"
+          "default": "left"
         }
       ]
     }
