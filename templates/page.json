@@ -38,10 +38,85 @@
       ],
       "name": "slideshow",
       "settings": {}
+    },
+    "collection_product_block_Tbp4xd": {
+      "type": "collection-product-block",
+      "blocks": {
+        "product_GwpFP9": {
+          "type": "product",
+          "settings": {
+            "block_width": 30,
+            "product": "",
+            "show_new_badge": false,
+            "show_second_image": true,
+            "custom_description": "Product description",
+            "icon_link": "",
+            "icon_open_new_tab": false
+          }
+        },
+        "product_MG9KAP": {
+          "type": "product",
+          "settings": {
+            "block_width": 30,
+            "product": "",
+            "show_new_badge": false,
+            "show_second_image": true,
+            "custom_description": "Product description",
+            "icon_link": "",
+            "icon_open_new_tab": false
+          }
+        },
+        "product_TyCKJQ": {
+          "type": "product",
+          "settings": {
+            "block_width": 30,
+            "product": "",
+            "show_new_badge": false,
+            "show_second_image": true,
+            "custom_description": "Product description",
+            "icon_link": "",
+            "icon_open_new_tab": false
+          }
+        },
+        "product_9pYp9d": {
+          "type": "product",
+          "settings": {
+            "block_width": 30,
+            "product": "",
+            "show_new_badge": false,
+            "show_second_image": true,
+            "custom_description": "Product description",
+            "icon_link": "",
+            "icon_open_new_tab": false
+          }
+        },
+        "promo_block_bPMrgJ": {
+          "type": "promo_block",
+          "settings": {
+            "block_width": 60,
+            "background_color": "#f58220",
+            "heading": "ingredients + nutrition",
+            "button_text": "learn more",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_GwpFP9",
+        "product_MG9KAP",
+        "product_TyCKJQ",
+        "product_9pYp9d",
+        "promo_block_bPMrgJ"
+      ],
+      "name": "Custom Collection Grid",
+      "settings": {
+        "section_background": "#f5f5dc"
+      }
     }
   },
   "order": [
     "main",
-    "slideshow_tnRXKg"
+    "slideshow_tnRXKg",
+    "collection_product_block_Tbp4xd"
   ]
 }
