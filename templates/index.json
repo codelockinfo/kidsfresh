@@ -130,6 +130,85 @@
         "padding_bottom": 60
       }
     },
+    "ungredients_new_xNg3Kg": {
+      "type": "ungredients-new",
+      "blocks": {
+        "ungredient_LEkHGP": {
+          "type": "ungredient",
+          "settings": {
+            "title": "Nothing artificial",
+            "description": "No fake outs, just the real deal",
+            "percentage": "0%"
+          }
+        },
+        "ungredient_dWdUim": {
+          "type": "ungredient",
+          "settings": {
+            "title": "No antibiotics",
+            "description": "We're pro real healthy ingredients",
+            "percentage": "0%"
+          }
+        },
+        "ungredient_n8ABMX": {
+          "type": "ungredient",
+          "settings": {
+            "title": "No preservatives",
+            "description": "Our meals are frozen fresh",
+            "percentage": "0%"
+          }
+        },
+        "ungredient_PG9UKX": {
+          "type": "ungredient",
+          "settings": {
+            "title": "No GMOs",
+            "description": "We're sticking with Mother Nature",
+            "percentage": "0%"
+          }
+        },
+        "ungredient_MaDGLP": {
+          "type": "ungredient",
+          "settings": {
+            "title": "No synthetic food dyes",
+            "description": "Keeping it real and colorful",
+            "percentage": "0%"
+          }
+        },
+        "ungredient_UqBxrQ": {
+          "type": "ungredient",
+          "settings": {
+            "title": "No BPA in packaging",
+            "description": "We're helping grow big brains",
+            "percentage": "0%"
+          }
+        }
+      },
+      "block_order": [
+        "ungredient_LEkHGP",
+        "ungredient_dWdUim",
+        "ungredient_n8ABMX",
+        "ungredient_PG9UKX",
+        "ungredient_MaDGLP",
+        "ungredient_UqBxrQ"
+      ],
+      "name": "Ungredients",
+      "settings": {
+        "background_image": "shopify://shop_images/ungredients-bg.webp",
+        "mobile_background_image": "shopify://shop_images/iPhone_14_15_Pro_Max_-_1_1_223d44e0-29b8-4299-975c-40feed83673b.png",
+        "background_color": "#ffffff",
+        "title": "ungredients",
+        "subtitle": "<p>What doesn't go into our meals is just as important as what does.</p>",
+        "footer_text": "Built with what matters most: real ingredients, balanced nutrition, and vegetables in disguise. Every meal is designed to support strong bodies, growing minds, and stress-free mealtimes.",
+        "button_text": "our mission",
+        "button_url": "",
+        "accent_color": "rgba(15, 71, 53, 1)",
+        "title_color": "rgba(15, 71, 53, 1)",
+        "subtitle_color": "rgba(15, 71, 53, 1)",
+        "card_bg_color": "rgba(241, 234, 217, 1)",
+        "button_bg_color": "rgba(241, 234, 217, 1)",
+        "button_text_color": "rgba(15, 71, 53, 1)",
+        "button_border_color": "rgba(15, 71, 53, 1)"
+      }
+    },
     "instra_reel_J97KgH": {
       "type": "instra-reel",
       "blocks": {
@@ -216,92 +295,13 @@
         "padding_bottom_mobile": 16,
         "color_scheme": "background-1"
       }
-    },
-    "ungredients_new_xNg3Kg": {
-      "type": "ungredients-new",
-      "blocks": {
-        "ungredient_LEkHGP": {
-          "type": "ungredient",
-          "settings": {
-            "title": "Nothing artificial",
-            "description": "No fake outs, just the real deal",
-            "percentage": "0%"
-          }
-        },
-        "ungredient_dWdUim": {
-          "type": "ungredient",
-          "settings": {
-            "title": "No antibiotics",
-            "description": "We're pro real healthy ingredients",
-            "percentage": "0%"
-          }
-        },
-        "ungredient_n8ABMX": {
-          "type": "ungredient",
-          "settings": {
-            "title": "No preservatives",
-            "description": "Our meals are frozen fresh",
-            "percentage": "0%"
-          }
-        },
-        "ungredient_PG9UKX": {
-          "type": "ungredient",
-          "settings": {
-            "title": "No GMOs",
-            "description": "We're sticking with Mother Nature",
-            "percentage": "0%"
-          }
-        },
-        "ungredient_MaDGLP": {
-          "type": "ungredient",
-          "settings": {
-            "title": "No synthetic food dyes",
-            "description": "Keeping it real and colorful",
-            "percentage": "0%"
-          }
-        },
-        "ungredient_UqBxrQ": {
-          "type": "ungredient",
-          "settings": {
-            "title": "No BPA in packaging",
-            "description": "We're helping grow big brains",
-            "percentage": "0%"
-          }
-        }
-      },
-      "block_order": [
-        "ungredient_LEkHGP",
-        "ungredient_dWdUim",
-        "ungredient_n8ABMX",
-        "ungredient_PG9UKX",
-        "ungredient_MaDGLP",
-        "ungredient_UqBxrQ"
-      ],
-      "name": "Ungredients",
-      "settings": {
-        "background_image": "shopify://shop_images/ungredients-bg.webp",
-        "mobile_background_image": "shopify://shop_images/iPhone_14_15_Pro_Max_-_1_1_223d44e0-29b8-4299-975c-40feed83673b.png",
-        "background_color": "#ffffff",
-        "title": "ungredients",
-        "subtitle": "<p>What doesn't go into our meals is just as important as what does.</p>",
-        "footer_text": "Built with what matters most: real ingredients, balanced nutrition, and vegetables in disguise. Every meal is designed to support strong bodies, growing minds, and stress-free mealtimes.",
-        "button_text": "our mission",
-        "button_url": "",
-        "accent_color": "rgba(15, 71, 53, 1)",
-        "title_color": "rgba(15, 71, 53, 1)",
-        "subtitle_color": "rgba(15, 71, 53, 1)",
-        "card_bg_color": "rgba(241, 234, 217, 1)",
-        "button_bg_color": "rgba(241, 234, 217, 1)",
-        "button_text_color": "rgba(15, 71, 53, 1)",
-        "button_border_color": "rgba(15, 71, 53, 1)"
-      }
     }
   },
   "order": [
     "featured_collection",
     "custom_banner_slider_tB6fwN",
     "custom_slider_ejweJT",
-    "instra_reel_J97KgH",
-    "ungredients_new_xNg3Kg"
+    "ungredients_new_xNg3Kg",
+    "instra_reel_J97KgH"
   ]
 }
