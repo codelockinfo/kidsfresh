@@ -14,6 +14,9 @@
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
+  ul.footer-block__details-content.list-unstyled a {
+    font-size: 25px;
+  }
 
   @media screen and (min-width: 750px) {
     .footer {
@@ -300,9 +303,9 @@
     <div class="footer__content-bottom-wrapper page-width{% if section.settings.enable_country_selector == false and section.settings.enable_language_selector == false %} footer__content-bottom-wrapper--center{% endif %}">
       <div class="footer__copyright caption">
         <small class="copyright__content"
-          >&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url -}}
+          >&copy; Copyright 2025 Kidfresh. All Rights Reserved. Website by <u>Echo Boomer Design.</u>
         </small>
-        <small class="copyright__content">{{ powered_by_link }}</small>
+        <small class="copyright__content"></small>
         {%- if section.settings.show_policy -%}
           <ul class="policies list-unstyled">
             {%- for policy in shop.policies -%}
@@ -543,3 +546,20 @@
   }
 }
 {% endschema %}
+
+
+
+<style>
+  .custom-top__wrapper{
+    margin-bottom: -6%;
+  }
+  .custom-top__image--desktop{
+    margin-top: -5%;
+  }
+  .footer__content-bottom{
+    background-color: #ED7723;
+  }
+  .footer__content-bottom{
+    height: 67px;
+  }
+</style>
