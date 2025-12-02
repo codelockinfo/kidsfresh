@@ -57,6 +57,7 @@
         "column_TxtiFx": {
           "type": "column",
           "settings": {
+            "icon": "shopify://shop_images/wh.svg",
             "heading": "Wh",
             "preheading": "Wholesome ingredients",
             "description": "We use the kind of real ingredients you'd use in your own kitchen."
@@ -65,6 +66,7 @@
         "column_wkVPig": {
           "type": "column",
           "settings": {
+            "icon": "shopify://shop_images/pro.svg",
             "heading": "Pro",
             "preheading": "Protein power",
             "description": "Protein helps growing bodies and brains stay strong and energized."
@@ -73,6 +75,7 @@
         "column_43633K": {
           "type": "column",
           "settings": {
+            "icon": "shopify://shop_images/Vector_5.png",
             "heading": "Vi",
             "preheading": "Vitamin boost",
             "description": "Our ingredients naturally provide the vitamins kids need in every bite."
@@ -81,6 +84,7 @@
         "column_3yQAEp": {
           "type": "column",
           "settings": {
+            "icon": "shopify://shop_images/cr.svg",
             "heading": "Cr",
             "preheading": "Calcium rich",
             "description": "Calcium supports strong bones and teeth—and happy smiling kids."
@@ -89,6 +93,7 @@
         "column_Fd7Nkt": {
           "type": "column",
           "settings": {
+            "icon": "shopify://shop_images/Vector.png",
             "heading": "In",
             "preheading": "Ingredientinfo",
             "description": "Learn more about our ingredients and how they make our meals winners."
