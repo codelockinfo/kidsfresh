@@ -27,7 +27,7 @@
     <p>{{ section.settings.desc }}</p>
 
     {% if section.settings.btn_text != blank %}
-      <a href="{{ section.settings.btn_link }}" class="cta-btn">
+      <a href="{{ section.settings.btn_link }}" class="cta-btn button">
         <spna>{{ section.settings.btn_text }}</span>
       </a>
     {% endif %}
@@ -121,7 +121,7 @@
     font-family: GT Walsheim Trial;
   }
 
-  celebrate-plate-{{ section.id }} .cta-btn{
+  #celebrate-plate-{{ section.id }} .button{
   background: transparent!important;
   color: #0F4735;
   font-family: "GT Walsheim";
@@ -140,17 +140,17 @@
     transform: none !important;
 }
 
-celebrate-plate-{{ section.id }} .cta-btn:before {
+#celebrate-plate-{{ section.id }} .button:before {
    background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_23_2.png?v=1764592651);
   background-size: 100% 100%;
   z-index: 2;
 }
 
-celebrate-plate-{{ section.id }} .cta-btn span{
+#celebrate-plate-{{ section.id }} .button span{
   z-index: 3;
 }
 
-celebrate-plate-{{ section.id }} .cta-btn:after {
+#celebrate-plate-{{ section.id }} .button:after {
   content: '';
    background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_25.png?v=1764592665);
   background-size: 100% 100%;
@@ -160,25 +160,16 @@ celebrate-plate-{{ section.id }} .cta-btn:after {
   box-shadow: none;
 }
 
-celebrate-plate-{{ section.id }} .cta-btn:hover:before {
+
+#celebrate-plate-{{ section.id }} .button:hover:before {
   background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_23_3.png?v=1764592664) !important;
   background-size: 100% 100% !important;
 }
 
-celebrate-plate-{{ section.id }} .cta-btn:hover:after{
+#celebrate-plate-{{ section.id }} .button:hover:after{
   bottom: -5px;
   box-shadow: none;
 }
-
-  .cta-btn {
-    display: inline-block;
-    background: #7ccf32;
-    padding: 12px 28px;
-    border-radius: 40px;
-    color: #fff;
-    font-weight: 700;
-    text-decoration: none;
-  }
 
 @media (max-width: 551px) {
 
