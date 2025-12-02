@@ -1,0 +1,292 @@
+<section id="celebrate-plate-{{ section.id }}" class="celebrate-plate-section">
+
+  <!-- DESKTOP BACKGROUND IMAGE (AUTO HEIGHT) -->
+  {% if section.settings.bg_desktop %}
+    <img 
+      class="bg-img desktop-bg" 
+      src="{{ section.settings.bg_desktop | img_url: 'master' }}"
+      alt="background">
+  {% endif %}
+
+  <!-- MOBILE BACKGROUND IMAGE (AUTO HEIGHT) -->
+  {% if section.settings.bg_mobile %}
+    <img 
+      class="bg-img mobile-bg" 
+      src="{{ section.settings.bg_mobile | img_url: 'master' }}"
+      alt="background">
+  {% endif %}
+
+  <!-- TOP DECOR -->
+  {% if section.settings.top_decor != blank %}
+    <img class="top-decor" src="{{ section.settings.top_decor | img_url: 'master' }}">
+  {% endif %}
+
+  <!-- CONTENT -->
+  <div class="content">
+    <h2>{{ section.settings.heading }}</h2>
+    <p>{{ section.settings.desc }}</p>
+
+    {% if section.settings.btn_text != blank %}
+      <a href="{{ section.settings.btn_link }}" class="cta-btn">
+        {{ section.settings.btn_text }}
+      </a>
+    {% endif %}
+  </div>
+
+  <!-- BOTTOM DECOR -->
+  {% if section.settings.bottom_decor != blank %}
+    <img class="bottom-decor" src="{{ section.settings.bottom_decor | img_url: 'master' }}">
+  {% endif %}
+
+</section>
+
+
+<style>
+  /* SECTION WRAPPER */
+  #celebrate-plate-{{ section.id }} {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+
+  /* BACKGROUND IMAGE WITH AUTO HEIGHT */
+  .bg-img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Desktop image visible on desktop */
+  .desktop-bg {
+    display: block;
+  }
+
+  /* Mobile image hidden on desktop */
+  .mobile-bg {
+    display: none;
+  }
+
+  @media(max-width: 768px) {
+    .desktop-bg {
+      display: none;
+    }
+    .mobile-bg {
+      display: block;
+    }
+  }
+
+  /* TOP DECOR */
+  #celebrate-plate-{{ section.id }} .top-decor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+  }
+
+  /* BOTTOM DECOR */
+  #celebrate-plate-{{ section.id }} .bottom-decor {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+  }
+
+  /* CENTER CONTENT */
+  #celebrate-plate-{{ section.id }} .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 36%;
+    width: 90%;
+    padding: 20px;
+    z-index: 5;
+  }
+
+  #celebrate-plate-{{ section.id }} h2 {
+    font-size: 84px;
+    font-weight: 700;
+    color: #003a17;
+    margin-bottom: 12px;
+    font-family: GT Walsheim Trial;
+  }
+
+  #celebrate-plate-{{ section.id }} p {
+    color: #333;
+    line-height: 1.5;
+    font-size: 28px;
+    font-family: GT Walsheim Trial;
+  }
+
+  .cta-btn {
+    display: inline-block;
+    background: #7ccf32;
+    padding: 12px 28px;
+    border-radius: 40px;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+@media (max-width: 551px) {
+
+  #celebrate-plate-{{ section.id }} .content {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 10px !important;
+  }
+
+  #celebrate-plate-{{ section.id }} h2 {
+    font-size: 38px !important;
+    line-height: 1.1;
+  }
+
+  #celebrate-plate-{{ section.id }} p {
+    font-size: 20px !important;
+    line-height: 1.3;
+  }
+
+  .cta-btn {
+    font-size: 18px !important;
+    padding: 12px 24px !important;
+  }
+}
+@media (min-width: 552px) and (max-width: 768px) {
+
+  #celebrate-plate-{{ section.id }} .content {
+    max-width: 70% !important;
+    width: 70% !important;
+    padding: 15px !important;
+  }
+
+  #celebrate-plate-{{ section.id }} h2 {
+    font-size: 58px !important;
+  }
+
+  #celebrate-plate-{{ section.id }} p {
+    font-size: 24px !important;
+  }
+
+  .cta-btn {
+    font-size: 20px !important;
+    padding: 14px 28px !important;
+  }
+}
+@media (min-width: 769px) and (max-width: 991px) {
+
+  #celebrate-plate-{{ section.id }} .content {
+    max-width: 50% !important;
+    width: 70% !important;
+    padding: 15px !important;
+  }
+
+  #celebrate-plate-{{ section.id }} h2 {
+    font-size: 35px !important;
+  }
+
+  #celebrate-plate-{{ section.id }} p {
+    font-size: 16px !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+
+  #celebrate-plate-{{ section.id }} .content {
+    max-width: 47% !important;
+    width: 70% !important;
+    padding: 15px !important;
+  }
+
+  #celebrate-plate-{{ section.id }} h2 {
+    font-size: 64px !important;
+  }
+
+  #celebrate-plate-{{ section.id }} p {
+    font-size: 18px !important;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1400px) {
+
+  #celebrate-plate-{{ section.id }} .content {
+    max-width: 47% !important;
+    width: 70% !important;
+    padding: 15px !important;
+  }
+
+  #celebrate-plate-{{ section.id }} h2 {
+    font-size: 70px !important;
+  }
+
+  #celebrate-plate-{{ section.id }} p {
+    font-size: 20px !important;
+  }
+}
+@media (min-width: 1401px) and (max-width: 1500px) {
+  #celebrate-plate-{{ section.id }} h2 {
+    font-size: 75px !important;
+  }
+
+  #celebrate-plate-{{ section.id }} p {
+    font-size: 25px !important;
+  }
+}
+</style>
+
+
+{% schema %}
+{
+  "name": "Celebrate Plate Section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "bg_desktop",
+      "label": "Desktop Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_mobile",
+      "label": "Mobile Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "top_decor",
+      "label": "Top Decorative Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "bottom_decor",
+      "label": "Bottom Decorative Image"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "celebrate the little victories"
+    },
+    {
+      "type": "textarea",
+      "id": "desc",
+      "label": "Description",
+      "default": "Add your text here..."
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "Button Text",
+      "default": "meet Kidfresh"
+    },
+    {
+      "type": "url",
+      "id": "btn_link",
+      "label": "Button Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Celebrate Plate Section "
+    }
+  ]
+}
+{% endschema %}
