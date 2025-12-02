@@ -38,6 +38,93 @@
         "padding_bottom": 36
       }
     },
+    "custom_banner_slider_tB6fwN": {
+      "type": "custom-banner-slider",
+      "name": "Celebrate Plate Section ",
+      "settings": {
+        "bg_desktop": "shopify://shop_images/Untitled_1920_x_1415_px_4_Custom_e655c0e4-be81-48c9-9a18-abb45847f0a1.webp",
+        "bg_mobile": "shopify://shop_images/Untitled_design_-_2025-11-19T022403.761.webp",
+        "bottom_decor": "shopify://shop_images/Group_74_1.png",
+        "heading": "celebrate the little victories",
+        "desc": "At Kidfresh, we’re on a mission to help you win more meals. To us, winning is about more than kid-friendly cuisine. It’s about cooking with the wholesome ingredients you’d use. It’s about hiding veggies in every bite. It’s about making family mealtimes easier, faster, healthier—and more joyful. It’s about helping you win parenthood... one clean plate at a time.",
+        "btn_text": "meet Kidfresh",
+        "btn_link": ""
+      }
+    },
+    "custom_slider_ejweJT": {
+      "type": "custom-slider",
+      "blocks": {
+        "column_TxtiFx": {
+          "type": "column",
+          "settings": {
+            "heading": "Wh",
+            "preheading": "Wholesome ingredients",
+            "description": "We use the kind of real ingredients you'd use in your own kitchen."
+          }
+        },
+        "column_wkVPig": {
+          "type": "column",
+          "settings": {
+            "heading": "Pro",
+            "preheading": "Protein power",
+            "description": "Protein helps growing bodies and brains stay strong and energized."
+          }
+        },
+        "column_43633K": {
+          "type": "column",
+          "settings": {
+            "heading": "Vi",
+            "preheading": "Vitamin boost",
+            "description": "Our ingredients naturally provide the vitamins kids need in every bite."
+          }
+        },
+        "column_3yQAEp": {
+          "type": "column",
+          "settings": {
+            "heading": "Cr",
+            "preheading": "Calcium rich",
+            "description": "Calcium supports strong bones and teeth—and happy smiling kids."
+          }
+        },
+        "column_Fd7Nkt": {
+          "type": "column",
+          "settings": {
+            "heading": "In",
+            "preheading": "Ingredientinfo",
+            "description": "Learn more about our ingredients and how they make our meals winners."
+          }
+        }
+      },
+      "block_order": [
+        "column_TxtiFx",
+        "column_wkVPig",
+        "column_43633K",
+        "column_3yQAEp",
+        "column_Fd7Nkt"
+      ],
+      "name": "Winning Ingredients",
+      "settings": {
+        "title": "winning ingredients",
+        "heading_alignment": "center",
+        "title_color": "#ffffff",
+        "background_color": "#1a4d3a",
+        "enable_mobile_slider": true,
+        "button_label": "ingredients",
+        "button_link": "",
+        "button_style": "primary",
+        "border_thickness": 2,
+        "border_radius": 15,
+        "border_color": "#7ab55c",
+        "heading_size": 80,
+        "heading_color": "#ffffff",
+        "preheading_size": 18,
+        "preheading_color": "#ff8c42",
+        "description_size": 15,
+        "description_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "instra_reel_J97KgH": {
       "type": "instra-reel",
       "blocks": {
@@ -124,24 +211,12 @@
         "padding_bottom_mobile": 16,
         "color_scheme": "background-1"
       }
-    },
-    "custom_banner_slider_tB6fwN": {
-      "type": "custom-banner-slider",
-      "name": "Celebrate Plate Section ",
-      "settings": {
-        "bg_desktop": "shopify://shop_images/Untitled_1920_x_1415_px_4_Custom_e655c0e4-be81-48c9-9a18-abb45847f0a1.webp",
-        "bg_mobile": "shopify://shop_images/Untitled_design_-_2025-11-19T022403.761.webp",
-        "bottom_decor": "shopify://shop_images/Group_74_1.png",
-        "heading": "celebrate the little victories",
-        "desc": "At Kidfresh, we’re on a mission to help you win more meals. To us, winning is about more than kid-friendly cuisine. It’s about cooking with the wholesome ingredients you’d use. It’s about hiding veggies in every bite. It’s about making family mealtimes easier, faster, healthier—and more joyful. It’s about helping you win parenthood... one clean plate at a time.",
-        "btn_text": "meet Kidfresh",
-        "btn_link": ""
-      }
     }
   },
   "order": [
     "featured_collection",
-    "instra_reel_J97KgH",
-    "custom_banner_slider_tB6fwN"
+    "custom_banner_slider_tB6fwN",
+    "custom_slider_ejweJT",
+    "instra_reel_J97KgH"
   ]
 }
