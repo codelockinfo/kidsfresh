@@ -11,6 +11,16 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "custom_liquid_zBNK7h": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"custom-top__wrapper\">\n    <!-- Desktop Image -->\n    <img src=\"https://cdn.shopify.com/s/files/1/0790/5017/8785/files/svg-image-1_3b396e93-213c-42f1-809b-573ccf615442.png?v=1763409842\" alt=\"Desktop Banner\" class=\"custom-top__image custom-top__image--desktop\" loading=\"lazy\" width=\"100%\" height=\"auto\">\n\n    <!-- Mobile Image -->\n   \n    </div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "custom_newsletter_LpVVG4": {
       "type": "custom-newsletter",
       "name": "Custom Newsletter",
@@ -74,6 +84,7 @@
   },
   "order": [
     "custom_newsletter_LpVVG4",
+    "custom_liquid_zBNK7h",
     "footer"
   ]
 }
