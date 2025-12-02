@@ -68,6 +68,33 @@
     line-height: calc(1 + 0.8 / var(--font-body-scale));
   }
 
+  ul.list-menu.list-menu--inline span {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px; 
+    font-size: 26px; 
+    color: #fff; 
+    text-decoration: none;
+    font-weight: 400;
+}
+
+ul.list-menu.list-menu--inline span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1.5pc;
+    width: 0;
+    height: 50px;
+    background-image: url(https://cdn.shopify.com/s/files/1/0790/5017/8785/files/Untitled_design_-_2025-11-21T010727.765.png?v=1763667456);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    transition: width 0.4s ease;
+}
+
+ul.list-menu.list-menu--inline span:hover::after {
+    width: 100%;
+}
+
   @media screen and (min-width: 750px) {
     .list-menu__item--link {
       padding-bottom: 0.5rem;
