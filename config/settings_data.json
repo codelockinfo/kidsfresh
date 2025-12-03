@@ -211,7 +211,7 @@
       },
       "scheme-35c2a12b-0e57-45b9-bfea-ab0d503a00b8": {
         "settings": {
-          "background": "#95c940",
+          "background": "rgba(0,0,0,0)",
           "background_gradient": "",
           "text": "#0f4735",
           "button": "#121212",
@@ -233,7 +233,7 @@
       },
       "scheme-ee90bfb6-96f8-4280-9ebb-3dc4344220cd": {
         "settings": {
-          "background": "#ffffff",
+          "background": "#7ab55c",
           "background_gradient": "",
           "text": "#121212",
           "button": "#121212",
