@@ -17,7 +17,7 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "A whole new way to win more meals: Cheeseburger Mac & Cheese is out now! Find it here >",
+            "text": "<p>A whole new way to win more meals: Cheeseburger Mac & Cheese is out now! <span style=\"text-decoration:underline\">Find it here</span> &gt;</p>",
             "link": ""
           }
         }
