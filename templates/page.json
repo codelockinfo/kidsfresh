@@ -42,6 +42,15 @@
     "collection_product_block_Tbp4xd": {
       "type": "collection-product-block",
       "blocks": {
+        "promo_block_questions_T483Ww": {
+          "type": "promo_block_questions",
+          "settings": {
+            "block_width": 30,
+            "heading": "got questions?",
+            "button_text": "learn more",
+            "button_link": "#"
+          }
+        },
         "product_GwpFP9": {
           "type": "product",
           "settings": {
@@ -78,15 +87,6 @@
             "icon_open_new_tab": false
           }
         },
-        "promo_block_questions_T483Ww": {
-          "type": "promo_block_questions",
-          "settings": {
-            "block_width": 30,
-            "heading": "got questions?",
-            "button_text": "learn more",
-            "button_link": "#"
-          }
-        },
         "promo_block_bPMrgJ": {
           "type": "promo_block",
           "settings": {
@@ -106,10 +106,10 @@
         }
       },
       "block_order": [
+        "promo_block_questions_T483Ww",
         "product_GwpFP9",
         "product_MG9KAP",
         "product_TyCKJQ",
-        "promo_block_questions_T483Ww",
         "promo_block_bPMrgJ"
       ],
       "name": "Custom Collection Grid",
