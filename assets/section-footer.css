@@ -60,7 +60,7 @@
 }
 
 .footer-block.grid__item.footer-block--menu.scroll-trigger.animate--slide-in {
-  max-width: 85%;
+  max-width: 85   %;
 }
 .footer-block__details-content.list-unstyled {
   display: flex;
