@@ -73,6 +73,12 @@
 }
 }
 
+@media (max-width: 768px) {
+  .footer-block__details-content {
+    margin-top: 0;
+  }
+}
+
 @media screen and (max-width: 749px) {
   .footer .grid {
     display: flex;
