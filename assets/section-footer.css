@@ -443,7 +443,13 @@
 }
 
 .copyright__content {
-  font-size: 1.1rem;
+  font-size: 21px;
+    line-height: 33px;
+    font-weight: 400;
+}
+
+.policies .copyright__content {
+  text-decoration: underline;
 }
 
 .copyright__content a {
@@ -459,10 +465,11 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  padding: 0 10px;
 }
 
 .policies li::before {
-  content: '\00B7';
+  /* content: '\00B7'; */
   padding: 0 0.8rem;
 }
 
