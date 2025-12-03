@@ -73,8 +73,10 @@
           "type": "product",
           "settings": {
             "block_width": 30,
-            "product": "",
-            "show_new_badge": false,
+            "product": "buttered-pasta",
+            "show_new_badge": true,
+            "new_badge_image": "shopify://shop_images/store_locator_QB.png",
+            "new_badge_default_image": "shopify://shop_images/ChatGPT_Image_Dec_2_2025_06_51_07_PM_dc3c5109-df73-409a-bdd7-72fd465d2d1b.png",
             "show_second_image": true,
             "custom_description": "Product description",
             "icon_link": "",
