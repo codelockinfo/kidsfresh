@@ -78,7 +78,7 @@
 
   .footer-block.grid__item {
     margin: 0;
-    width: auto;
+    width: min-content;
   }
 }
 
