@@ -7,7 +7,9 @@
    line-height:43px;
    font-weight: 400;
 }
-
+.announcement-bar, .announcement-bar__announcement{
+    flex-wrap: nowrap !important; 
+}
 .header__active-menu-item{
     text-decoration: none !important;
 }
