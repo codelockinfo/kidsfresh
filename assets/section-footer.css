@@ -16,7 +16,7 @@
 .list-menu__item--link {
   padding: 5px 0 !important;
 }
-@media (min-width: 1416px) {
+@media (min-width: 1440px) {
 .footer-block.grid__item.scroll-trigger.animate--slide-in {
   max-width: 30%;
 }
@@ -31,7 +31,7 @@
 }
 }
 
-@media (min-width: 1174px) and (max-width: 1415px){
+@media (min-width: 1220px) and (max-width: 1439px){
   .footer__content-top {
     padding: 0 8rem;
 }
@@ -50,7 +50,7 @@
 }
 }
 
-@media (min-width: 1040px) and (max-width: 1175px){
+@media (min-width: 1040px) and (max-width: 1219px){
   .footer__content-top {
     padding: 0 5rem;
 }
