@@ -13,7 +13,6 @@
   "sections": {
     "custom_newsletter_LpVVG4": {
       "type": "custom-newsletter",
-      "disabled": true,
       "name": "Custom Newsletter",
       "settings": {
         "col1_bg": "#95c940",
