@@ -177,7 +177,7 @@
     "custom_liquid_gaTi4K": {
       "type": "custom-liquid",
       "custom_css": [
-        "svg {background-color: #F1EAD9;}"
+        "svg {background-color: #f1ead9; margin-top: -1px;}"
       ],
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
