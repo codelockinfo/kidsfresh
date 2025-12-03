@@ -1206,6 +1206,333 @@ gap:12px;
     min-width: 100% !important;
   }
 
+  /* Promo single block styles - unique classes */
+  .promo-block-single {
+    position: relative;
+    border-radius: 12px;
+    overflow: visible;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 400px;
+    transition: all 0.3s ease;
+    height: 100%;
+  }
+
+  .promo-block-single-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .promo-content-single {
+    position: relative;
+    z-index: 3;
+  }
+
+  .promo-heading-single {
+    font-size: 84px;
+    font-weight: 900;
+    color: #2c5f2d;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    line-height: 1.2;
+    text-transform: lowercase;
+    padding: 0px 40px;
+  }
+
+  .promo-button-single {
+    display: inline-block;
+    background: #97d700;
+    color: #2c5f2d;
+    padding:7px 50px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 30px;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .promo-button-single:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(151, 215, 0, 0.4);
+  }
+
+  .promo-element-single {
+    position: absolute;
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .promo-element-single img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+  /* Position elements for single block - 6 vegetable positions */
+  .promo-element-single.single-top-left {
+    top: -73%;
+    left: 30%;
+    width: 480px;
+    height: 480px;
+  }
+  .promo-element-single.single-top-right {
+    top: -10%;
+    right: 21%;
+    width: 100px;
+    height: 100px;
+  }
+  .promo-element-single.single-middle-left {
+    top: 64%;
+    left: -17%;
+    transform: translateY(-50%);
+    width: 1000px;
+    height: 1000px;
+    rotate: -30deg;
+  }
+  .promo-element-single.single-middle-right {
+    top: 73%;
+    right: -14%;
+    transform: translateY(-50%);
+    width: 700px;
+    height: 700px;
+    rotate: 30deg;
+  }
+  .promo-element-single.single-bottom-left {
+    bottom: -13%;
+    left: 38%;
+    width: 100px;
+    height: 100px;
+  }
+  .promo-element-single.single-bottom-right {
+    bottom: -60%;
+    right: 23%;
+    width: 400px;
+    height: 400px;
+  }
+
+  /* Hover animations for single block */
+  .promo-block-single:hover .promo-element-single.single-top-left {
+    transform: translateX(-20px) scale(1.1);
+  }
+  .promo-block-single:hover .promo-element-single.single-top-right {
+    transform: translateX(20px) scale(1.1);
+  }
+  .promo-block-single:hover .promo-element-single.single-middle-left {
+    transform: translateY(-50%) translateX(-25px) scale(1.1);
+  }
+  .promo-block-single:hover .promo-element-single.single-middle-right {
+    transform: translateY(-50%) translateX(25px) scale(1.1);
+  }
+  .promo-block-single:hover .promo-element-single.single-bottom-left {
+    transform: translateX(-20px) scale(1.1);
+  }
+  .promo-block-single:hover .promo-element-single.single-bottom-right {
+    transform: translateX(20px) scale(1.1);
+  }
+
+  /* Responsive styles for single block */
+  @media (max-width: 768px) {
+    .promo-block-single {
+      padding: 40px 0px;
+      min-height: 200px;
+    }
+    .promo-heading-single {
+      font-size: 48px;
+      padding: 0px 20px;
+    }
+    .promo-button-single {
+      font-size: 24px;
+      padding: 6px 40px;
+    }
+    .promo-element-single {
+      width: 80px !important;
+      height: 80px !important;
+    }
+  }
+
+  /* Questions promo block styles - lime green with orange button */
+  .promo-block-questions {
+    position: relative;
+    border-radius: 12px;
+    overflow: visible;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 400px;
+    transition: all 0.3s ease;
+    height: 100%;
+  }
+
+  .promo-block-questions-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #97d700;
+  }
+
+  .promo-content-questions {
+    position: relative;
+    z-index: 3;
+  }
+
+  .promo-heading-questions {
+    font-size: 84px;
+    font-weight: 900;
+    color: #fef9e7;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    line-height: 1.2;
+    text-transform: lowercase;
+    padding: 0px 40px;
+  }
+
+  .promo-button-questions {
+    display: inline-block;
+    background: #F58220;
+    color: #5D3328;
+    padding: 15px 50px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: lowercase;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    border: none;
+    cursor: pointer;
+  }
+
+  .promo-button-questions:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .promo-element-questions {
+    position: absolute;
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .promo-element-questions img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+  /* Vegetable positions for questions block */
+  .promo-element-questions.veg-top-left {
+    top: -5%;
+    left: -5%;
+    width: 150px;
+    height: 150px;
+  }
+
+  .promo-element-questions.veg-top-right {
+    top: -5%;
+    right: -5%;
+    width: 120px;
+    height: 120px;
+  }
+
+  .promo-element-questions.veg-middle-right {
+    top: 30%;
+    right: -5%;
+    width: 120px;
+    height: 120px;
+    transform: translateY(-50%);
+  }
+
+  .promo-element-questions.veg-bottom-left {
+    bottom: -5%;
+    left: -5%;
+    width: 140px;
+    height: 140px;
+  }
+
+  .promo-element-questions.veg-bottom-right {
+    bottom: -5%;
+    right: 5%;
+    width: 100px;
+    height: 100px;
+  }
+
+  .promo-element-questions.veg-middle-bottom {
+    bottom: 20%;
+    left: 8%;
+    width: 100px;
+    height: 100px;
+    transform: translateY(50%);
+  }
+
+  /* Hover animations for questions block */
+  .promo-block-questions:hover .promo-element-questions.veg-top-left {
+    transform: translateX(-10px) scale(1.05);
+  }
+
+  .promo-block-questions:hover .promo-element-questions.veg-top-right {
+    transform: translateX(10px) scale(1.05);
+  }
+
+  .promo-block-questions:hover .promo-element-questions.veg-middle-right {
+    transform: translateY(-50%) translateX(10px) scale(1.05);
+  }
+
+  .promo-block-questions:hover .promo-element-questions.veg-bottom-left {
+    transform: translateX(-10px) scale(1.05);
+  }
+
+  .promo-block-questions:hover .promo-element-questions.veg-bottom-right {
+    transform: translateX(10px) scale(1.05);
+  }
+
+  .promo-block-questions:hover .promo-element-questions.veg-middle-bottom {
+    transform: translateY(50%) translateX(-10px) scale(1.05);
+  }
+
+  /* Responsive styles for questions block */
+  @media (max-width: 768px) {
+    .promo-heading-questions {
+      font-size: 48px;
+      padding: 0px 20px;
+    }
+    .promo-button-questions {
+      font-size: 16px;
+      padding: 12px 40px;
+    }
+    .promo-element-questions {
+      width: 80px !important;
+      height: 80px !important;
+    }
+    .promo-block-questions {
+      padding: 40px 20px;
+      min-height: 300px;
+    }
+  }
+
   @media (max-width: 968px) {
     .grid-row {
       padding: 29px 60px;
@@ -1254,6 +1581,10 @@ gap:12px;
       padding: 40px 0px;
       min-height: 200px;
     }
+    .promo-block-single {
+      padding: 40px 0px;
+      min-height: 200px;
+    }
       
     .product-title {
     font-size: 18px !important;
@@ -1285,6 +1616,9 @@ gap:12px;
 .promo-block{
   padding:0 !important;
 }
+.promo-block-single{
+  padding:0 !important;
+}
   }
 </style>
 
@@ -1292,7 +1626,7 @@ gap:12px;
   <div class="custom-collection-grid">
     <div class="grid-row">
     {% for block in section.blocks %}
-      <div class="grid-item {% if block.type == 'promo_block' %}promo-item{% elsif block.type == 'promo_block_single' %}promo-item-single{% else %}product-item{% endif %}"
+      <div class="grid-item {% if block.type == 'promo_block' %}promo-item{% elsif block.type == 'promo_block_single' %}promo-item-single{% elsif block.type == 'promo_block_questions' %}promo-item{% else %}product-item{% endif %}"
            {% unless block.type == 'promo_block_single' %}style="width: calc({{ block.settings.block_width }}% - 20px); min-width: calc({{ block.settings.block_width }}% - 20px);"{% endunless %}
            {{ block.shopify_attributes }}>
         
@@ -1440,44 +1774,91 @@ gap:12px;
         {% endif %}
 
         {% if block.type == 'promo_block_single' %}
-          <div class="promo-block">
-            <div class="promo-block-inner" style="background: {{ block.settings.background_color }};">
+          <div class="promo-block-single">
+            <div class="promo-block-single-inner" style="background: {{ block.settings.background_color }};">
               {% if block.settings.vegetable_top_left %}
-                <div class="promo-element top-left">
+                <div class="promo-element-single single-top-left">
                   <img src="{{ block.settings.vegetable_top_left | img_url: 'master' }}" alt="">
                 </div>
               {% endif %}
               {% if block.settings.vegetable_top_right %}
-                <div class="promo-element top-right">
+                <div class="promo-element-single single-top-right">
                   <img src="{{ block.settings.vegetable_top_right | img_url: 'master' }}" alt="">
                 </div>
               {% endif %}
               {% if block.settings.vegetable_middle_left %}
-                <div class="promo-element middle-left">
+                <div class="promo-element-single single-middle-left">
                   <img src="{{ block.settings.vegetable_middle_left | img_url: 'master' }}" alt="">
                 </div>
               {% endif %}
               {% if block.settings.vegetable_middle_right %}
-                <div class="promo-element middle-right">
+                <div class="promo-element-single single-middle-right">
                   <img src="{{ block.settings.vegetable_middle_right | img_url: 'master' }}" alt="">
                 </div>
               {% endif %}
               {% if block.settings.vegetable_bottom_left %}
-                <div class="promo-element bottom-left">
+                <div class="promo-element-single single-bottom-left">
                   <img src="{{ block.settings.vegetable_bottom_left | img_url: 'master' }}" alt="">
                 </div>
               {% endif %}
               {% if block.settings.vegetable_bottom_right %}
-                <div class="promo-element bottom-right">
+                <div class="promo-element-single single-bottom-right">
                   <img src="{{ block.settings.vegetable_bottom_right | img_url: 'master' }}" alt="">
                 </div>
               {% endif %}
-              <div class="promo-content">
+              <div class="promo-content-single">
                 {% if block.settings.heading != blank %}
-                  <h2 class="promo-heading" style="color: {{ block.settings.heading_color | default: '#2C5F2D' }};">{{ block.settings.heading }}</h2>
+                  <h2 class="promo-heading-single" style="color: {{ block.settings.heading_color | default: '#2C5F2D' }};">{{ block.settings.heading }}</h2>
                 {% endif %}
                 {% if block.settings.button_text != blank and block.settings.button_link != blank %}
-                  <a href="{{ block.settings.button_link }}" class="promo-button">
+                  <a href="{{ block.settings.button_link }}" class="promo-button-single">
+                    {{ block.settings.button_text }}
+                  </a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        {% endif %}
+
+        {% if block.type == 'promo_block_questions' %}
+          <div class="promo-block-questions">
+            <div class="promo-block-questions-inner">
+              {% if block.settings.vegetable_top_left %}
+                <div class="promo-element-questions veg-top-left">
+                  <img src="{{ block.settings.vegetable_top_left | img_url: 'master' }}" alt="">
+                </div>
+              {% endif %}
+              {% if block.settings.vegetable_top_right %}
+                <div class="promo-element-questions veg-top-right">
+                  <img src="{{ block.settings.vegetable_top_right | img_url: 'master' }}" alt="">
+                </div>
+              {% endif %}
+              {% if block.settings.vegetable_middle_right %}
+                <div class="promo-element-questions veg-middle-right">
+                  <img src="{{ block.settings.vegetable_middle_right | img_url: 'master' }}" alt="">
+                </div>
+              {% endif %}
+              {% if block.settings.vegetable_bottom_left %}
+                <div class="promo-element-questions veg-bottom-left">
+                  <img src="{{ block.settings.vegetable_bottom_left | img_url: 'master' }}" alt="">
+                </div>
+              {% endif %}
+              {% if block.settings.vegetable_bottom_right %}
+                <div class="promo-element-questions veg-bottom-right">
+                  <img src="{{ block.settings.vegetable_bottom_right | img_url: 'master' }}" alt="">
+                </div>
+              {% endif %}
+              {% if block.settings.vegetable_middle_bottom %}
+                <div class="promo-element-questions veg-middle-bottom">
+                  <img src="{{ block.settings.vegetable_middle_bottom | img_url: 'master' }}" alt="">
+                </div>
+              {% endif %}
+              <div class="promo-content-questions">
+                {% if block.settings.heading != blank %}
+                  <h2 class="promo-heading-questions">{{ block.settings.heading }}</h2>
+                {% endif %}
+                {% if block.settings.button_text != blank and block.settings.button_link != blank %}
+                  <a href="{{ block.settings.button_link }}" class="promo-button-questions">
                     {{ block.settings.button_text }}
                   </a>
                 {% endif %}
@@ -1729,6 +2110,73 @@ gap:12px;
           "type": "image_picker",
           "id": "vegetable_bottom_right",
           "label": "Vegetable - Bottom Right"
+        }
+      ]
+    },
+    {
+      "type": "promo_block_questions",
+      "name": "Promo Q&A Block",
+      "settings": [
+        {
+          "type": "range",
+          "id": "block_width",
+          "min": 10,
+          "max": 100,
+          "step": 5,
+          "unit": "%",
+          "label": "Block Width",
+          "default": 30
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "got questions?"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Label",
+          "default": "learn more"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        },
+        {
+          "type": "header",
+          "content": "Vegetable Images (6 positions)"
+        },
+        {
+          "type": "image_picker",
+          "id": "vegetable_top_left",
+          "label": "Vegetable - Top Left"
+        },
+        {
+          "type": "image_picker",
+          "id": "vegetable_top_right",
+          "label": "Vegetable - Top Right"
+        },
+        {
+          "type": "image_picker",
+          "id": "vegetable_middle_right",
+          "label": "Vegetable - Middle Right"
+        },
+        {
+          "type": "image_picker",
+          "id": "vegetable_bottom_left",
+          "label": "Vegetable - Bottom Left"
+        },
+        {
+          "type": "image_picker",
+          "id": "vegetable_bottom_right",
+          "label": "Vegetable - Bottom Right"
+        },
+        {
+          "type": "image_picker",
+          "id": "vegetable_middle_bottom",
+          "label": "Vegetable - Middle Bottom"
         }
       ]
     }
