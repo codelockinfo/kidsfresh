@@ -65,7 +65,7 @@
 .footer-block__details-content.list-unstyled {
   display: flex;
   justify-content: end;
-  gap: 10px;
+  gap: 5px;
 }
 }
 
