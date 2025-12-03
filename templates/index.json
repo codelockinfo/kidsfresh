@@ -63,28 +63,28 @@
         "product_7DENTr": {
           "type": "product",
           "settings": {
-            "image": "shopify://shop_images/image_86_7610bf0f-d935-46e9-a908-58786fd0dc4f.png",
+            "image": "shopify://shop_images/222.png",
             "title": "",
             "description": "",
-            "veggie_group_image": "shopify://shop_images/Group_276_9_4c9436c8-9b07-4b4f-ae0f-f813c599dbff.png"
+            "veggie_group_image": "shopify://shop_images/vegitable_1.png"
           }
         },
         "product_8q9VQB": {
           "type": "product",
           "settings": {
-            "image": "shopify://shop_images/image_193_c38f7e82-caf7-4b10-8151-253f2c74f38e.png",
+            "image": "shopify://shop_images/image_193_1_1eba0cc1-1993-457a-a89a-36b2d14896ea.png",
             "title": "",
             "description": "",
-            "veggie_group_image": "shopify://shop_images/Group_294_9_139be6a4-71b7-4872-ab41-2db63ee17c30.png"
+            "veggie_group_image": "shopify://shop_images/vegitable-2.png"
           }
         },
         "product_TK7wH9": {
           "type": "product",
           "settings": {
-            "image": "shopify://shop_images/image_86_41d7b583-46d7-4ca3-9d27-e554f75c670c.png",
+            "image": "shopify://shop_images/image_190_1_9de59543-9520-4866-915d-00b53f3af609.png",
             "title": "",
             "description": "",
-            "veggie_group_image": "shopify://shop_images/Group_286_bc5c7924-f6e8-43f9-b23d-8cbf2eb5c903.png"
+            "veggie_group_image": "shopify://shop_images/vegitable_3.png"
           }
         }
       },
