@@ -30,7 +30,7 @@
 }
 }
 
-@media (min-width: 1214px) {
+@media (min-width: 1214px) and (max-width: 1415px){
   .footer__content-top {
     padding: 0 8rem;
 }
