@@ -7,6 +7,7 @@
    line-height:43px;
    font-weight: 400;
 }
+
 .announcement-bar, .announcement-bar__announcement{
     flex-wrap: nowrap !important; 
 }
@@ -24,5 +25,8 @@
     .announcement-bar__message {
    font-size: 14px; 
    line-height: 21px;
+}
+.footer__content-top.page-width{
+    padding:0px 15px !important;
 }
 }

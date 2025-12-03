@@ -90,7 +90,7 @@
 
 <!-- OPTIONAL BASIC CSS -->
 <style>
-{% comment %} .veggie-hover-section { padding: 60px 0; } {% endcomment %}
+.veggie-hover-section { padding: 60px 0; }
 .veggie-products-grid { display:grid; gap:40px; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); }
 .veggie-product-card { text-align:center; position:relative; padding-top:40px; }
 .veggie-vegetables { position:absolute; inset:0; pointer-events:none; }
@@ -591,20 +591,26 @@
     margin: auto;
 } {% endcomment %}
 
-.card-1  .veggie-group-image{
+.card-1 .veggie-group-image{
     position: absolute;
     top: -146px;
-    left: -16px;
+    left: -33px;
+}
+.card-1 .veggie-group-image img {
+        max-width: 100%;
 }
 .card-2 .veggie-group-image{
         position: absolute;
-       top: -202px;
-    left: -27px;
+       top: -153px;
+    left: -23px;
+}
+.card-2 .veggie-group-image img {
+        max-width: 109%;
 }
 .card-3 .veggie-group-image{
         position: absolute;
-    top: -146px;
-    left: -16px;
+    top: -124px;
+    left: -45px;
 }
 
 {% comment %} @media (min-width:1500px) and (max-width:1550px) {
@@ -1753,22 +1759,22 @@
     } 
     .card-2 .veggie-group-image{
       position: absolute;
-             top: -186px;
-    left: -17px;
+             top: -142px;
+    left: -22px;
 
     }
     .card-2 .veggie-group-image img {
-        max-width: 126%;
+        max-width: 109%;
         max-height: 100%;
     }
     .card-3 .veggie-group-image {
       position: absolute;
-         top: -120px;
-    left: -15px;
+         top: -115px;
+    left: -39px;
 
     }
      .card-3 .veggie-group-image img {
-    max-width: 128%;
+    max-width: 107%;
     }
  }
   @media (min-width: 1631px) and (max-width: 1740px) {
@@ -1782,22 +1788,22 @@
     } 
     .card-2 .veggie-group-image{
       position: absolute;
-             top: -159px;
-    left: -17px;
+             top: -133px;
+    left: -21px;
 
     }
     .card-2 .veggie-group-image img {
-        max-width: 126%;
+        max-width: 109%;
         max-height: 100%;
     }
     .card-3 .veggie-group-image {
       position: absolute;
-         top: -115px;
-    left: -15px;
+         top: -107px;
+    left: -34px;
 
     }
      .card-3 .veggie-group-image img {
-    max-width: 128%;
+    max-width: 104%;
     }
  }
    @media (min-width: 1521px) and (max-width: 1630px) {
@@ -1811,22 +1817,22 @@
     } 
     .card-2 .veggie-group-image{
       position: absolute;
-             top: -159px;
+             top: -123px;
     left: -17px;
 
     }
     .card-2 .veggie-group-image img {
-        max-width: 127%;
+        max-width: 107%;
         max-height: 100%;
     }
     .card-3 .veggie-group-image {
       position: absolute;
-         top: -106px;
-    left: -5px;
+         top: -100px;
+    left: -30px;
 
     }
      .card-3 .veggie-group-image img {
-    max-width: 133%;
+    max-width: 105%;
     }
  }
    @media (min-width: 1391px) and (max-width: 1520px) {
@@ -1840,20 +1846,20 @@
     }
     .card-3 .veggie-group-image {
       position: absolute;
-      top: -94px;
-      left: -10px;
+      top: -85px;
+      left: -24px;
     }
     .card-2 .veggie-group-image{
       position: absolute;
-          top: -138px;
-    left: -15px;
+          top: -111px;
+    left: -16px;
     }
     .card-2 .veggie-group-image img {
-        max-width: 122%;
+        max-width: 109%;
         max-height: 100%;
     }
      .card-3 .veggie-group-image img {
-    max-width: 135%;
+    max-width: 107%;
     }  
  }
   @media (min-width: 1281px) and (max-width: 1390px) {
@@ -1867,31 +1873,32 @@
     }
     .card-2 .veggie-group-image{
       position: absolute;
-            top: -125px;
+            top: -94px;
         left: -15px;
     }
     .card-2 .veggie-group-image img {
-        max-width: 126%;
+        max-width: 109%;
         max-height: 100%;
     }
       .card-3 .veggie-group-image {
     position: absolute;
-  top: -80px;
-    left: -10px;
+  top: -77px;
+    left: -25px;
     }
      .card-3 .veggie-group-image img {
-    max-width: 135%;
+    max-width: 107%;
     }
  }
+ 
   @media (min-width: 1101px) and (max-width: 1200px){
      .card-2 .veggie-group-image{
       position: absolute;
-        top: -94px !important;
-        left: -11px;
+        top: -85px !important;
+        left: -14px;
 
     }
     .card-2 .veggie-group-image img {
-        max-width: 130%;
+        max-width: 111%;
         max-height: 100%;
     }
   }
@@ -1906,42 +1913,42 @@
     }
      .card-2 .veggie-group-image{
       position: absolute;
-            top: -112px;
-        left: -15px;
+            top: -85px;
+        left: -14px;
     }
     .card-2 .veggie-group-image img {
-        max-width: 130%;
+        max-width: 111%;
         max-height: 100%;
     }
     
      .card-3 .veggie-group-image {
     position: absolute;
-    top: -69px;
-    left: -8-x;
+    top: -63px;
+    left: -21px;
     }
      .card-3 .veggie-group-image img {
-    max-width: 124%;
+    max-width: 108%;
     }
  }
   @media (min-width: 1000px) and (max-width: 1100px){
      .card-2 .veggie-group-image{
       position: absolute;
-        top: -120px;
+        top: -89px;
     left: -13px;
     }
     .card-2 .veggie-group-image img {
-        max-width: 125%;
+        max-width: 110%;
         max-height: 100%;
     }
   }
   @media (min-width: 901px) and (max-width: 1000px){
     .card-2 .veggie-group-image{
       position: absolute;
-      top: -108px;
-        left: -8px;
+      top: -82px;
+        left: -12px;
     }
     .card-2 .veggie-group-image img {
-        max-width: 125%;
+        max-width: 111%;
         max-height: 100%;
     }
   }
@@ -1959,11 +1966,11 @@
     }
     .card-3 .veggie-group-image {
       position: absolute;
-      top: -80px;
-      left: -8px;
+      top: -73px;
+      left: -25px;
     }
     .card-3 .veggie-group-image img {
-      max-width: 132%;
+      max-width: 108%;
     }
  }
  @media (min-width: 749px) and (max-width: 900px) {
@@ -1980,20 +1987,20 @@
     } 
      .card-2 .veggie-group-image{
       position: absolute;
-      top: -82px;
-      left: -6px;
+      top: -71px;
+      left: -11px;
        }
        .card-2 .veggie-group-image img {
-        max-width: 126%;
+        max-width: 111%;
         max-height: 100%;
     }
     .card-3 .veggie-group-image {
     position: absolute;
-    top: -64px;
-    left: -7px;
+    top: -54px;
+    left: -20px;
     }
      .card-3 .veggie-group-image img {
-    max-width: 132%;
+    max-width: 108%;
     }
  }
  @media (min-width: 750px) and (max-width: 768px) {
@@ -2007,8 +2014,8 @@
     }
     .card-2 .veggie-group-image{
       position: absolute;
-      top: -82px;
-      left: -6px;
+      top: -62px;
+      left: -9px;
        }
      .veggie-hover-section  .container {
      padding: 11px !important;
@@ -2022,16 +2029,19 @@
     }
     .card-2 .veggie-group-image {
     position: absolute;
-    top: -117px;
-    left: -10px;
+    top: -93px;
+    left: -12px;
    }
+   .card-2 .veggie-group-image img {
+        max-width: 107%;
+    }
     .card-3 .veggie-group-image {
     position: absolute;
-    top: -84px;
-    left: -15px;
+    top: -75px;
+    left: -22px;
     }
       .card-3  .veggie-group-image img {
-        max-width: 120%;
+        max-width: 108%;
         max-height: 100%;
     }
 }
