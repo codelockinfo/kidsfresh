@@ -63,22 +63,28 @@
         "product_7DENTr": {
           "type": "product",
           "settings": {
+            "image": "shopify://shop_images/FINAL_CMPM.png",
             "title": "",
-            "description": ""
+            "description": "",
+            "veggie_group_image": "shopify://shop_images/Group_276_9_4c9436c8-9b07-4b4f-ae0f-f813c599dbff.png"
           }
         },
         "product_8q9VQB": {
           "type": "product",
           "settings": {
+            "image": "shopify://shop_images/FINAL_WWMC.png",
             "title": "",
-            "description": ""
+            "description": "",
+            "veggie_group_image": "shopify://shop_images/Group_294_9_139be6a4-71b7-4872-ab41-2db63ee17c30.png"
           }
         },
         "product_TK7wH9": {
           "type": "product",
           "settings": {
+            "image": "shopify://shop_images/FINAL_CNBP.png",
             "title": "",
-            "description": ""
+            "description": "",
+            "veggie_group_image": "shopify://shop_images/Group_286_bc5c7924-f6e8-43f9-b23d-8cbf2eb5c903.png"
           }
         }
       },
