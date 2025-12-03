@@ -88,7 +88,7 @@
           "type": "product",
           "settings": {
             "block_width": 30,
-            "product": "",
+            "product": "cheese-pizza-wagon-wheels",
             "show_new_badge": false,
             "show_second_image": true,
             "custom_description": "Product description",
@@ -100,7 +100,7 @@
           "type": "product",
           "settings": {
             "block_width": 30,
-            "product": "",
+            "product": "cheeseburger-mac-cheese",
             "show_new_badge": false,
             "show_second_image": true,
             "custom_description": "Product description",
