@@ -16,6 +16,15 @@
 .list-menu__item--link {
   padding: 5px 0 !important;
 }
+.custom-top__wrapper{
+    margin-bottom: -6%;
+  }
+  .custom-top__image--desktop{
+    margin-top: -5%;
+  }
+  .footer__content-bottom{
+    background-color: #ED7723;
+  }
 @media (min-width: 1440px) {
 .footer-block.grid__item.scroll-trigger.animate--slide-in {
   max-width: 30%;
