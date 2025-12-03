@@ -2,7 +2,9 @@
     font-size:23px;
 }
 .announcement-bar__message{
-   font-size: 19px; 
+font-family: GT Walsheim Trial;
+   font-size: 21px; 
+   line-height:43px;
 }
 
 .header__active-menu-item{
