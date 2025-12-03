@@ -551,6 +551,7 @@ ul.footer-block__details-content.list-unstyled li a:hover::after {
 }
 
 .copyright__content {
+  font-family: var(--font-family);
   font-size: 21px;
     line-height: 33px;
     font-weight: 400;
