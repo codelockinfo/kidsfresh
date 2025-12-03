@@ -79,6 +79,8 @@
         "heading_alignment": "center",
         "title_color": "#ffffff",
         "background_color": "#1a4d3a",
+        "background_image_left": "shopify://shop_images/image_124.png",
+        "background_image_right": "shopify://shop_images/image_66.png",
         "enable_mobile_slider": true,
         "button_label": "ingredients",
         "button_link": "",
