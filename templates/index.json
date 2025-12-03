@@ -40,7 +40,6 @@
     },
     "video_slideshow_E3wNyd": {
       "type": "video-slideshow",
-      "disabled": true,
       "name": "Auto Video",
       "settings": {
         "mobile_video_url": "https://cdn.shopify.com/videos/c/o/v/23b5c3bd320c46babc7d9ef77a6f5485.mp4",
@@ -60,7 +59,6 @@
     },
     "custom_banner_slider_tB6fwN": {
       "type": "custom-banner-slider",
-      "disabled": true,
       "name": "Celebrate Plate Section ",
       "settings": {
         "bg_desktop": "shopify://shop_images/Untitled_1920_x_1415_px_4_Custom_e655c0e4-be81-48c9-9a18-abb45847f0a1.webp",
