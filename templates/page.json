@@ -78,16 +78,14 @@
             "icon_open_new_tab": false
           }
         },
-        "product_9pYp9d": {
-          "type": "product",
+        "promo_block_single_AjTNeh": {
+          "type": "promo_block_single",
           "settings": {
-            "block_width": 33,
-            "product": "",
-            "show_new_badge": false,
-            "show_second_image": true,
-            "custom_description": "Product description",
-            "icon_link": "",
-            "icon_open_new_tab": false
+            "background_color": "#f58220",
+            "heading": "ingredients + nutrition",
+            "heading_color": "#2c5f2d",
+            "button_text": "learn more",
+            "button_link": "#"
           }
         },
         "promo_block_bPMrgJ": {
@@ -112,7 +110,7 @@
         "product_GwpFP9",
         "product_MG9KAP",
         "product_TyCKJQ",
-        "product_9pYp9d",
+        "promo_block_single_AjTNeh",
         "promo_block_bPMrgJ"
       ],
       "name": "Custom Collection Grid",
