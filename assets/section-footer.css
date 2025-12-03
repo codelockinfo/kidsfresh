@@ -52,15 +52,15 @@
 
 @media (min-width: 1020px) and (max-width: 1175px){
   .footer__content-top {
-    padding: 0 8rem;
+    padding: 0 5rem;
 }
 
 .footer-block.grid__item.scroll-trigger.animate--slide-in {
-  max-width: 20%;
+  max-width: 15%;
 }
 
 .footer-block.grid__item.footer-block--menu.scroll-trigger.animate--slide-in {
-  max-width: 80%;
+  max-width: 85%;
 }
 .footer-block__details-content.list-unstyled {
   display: flex;
