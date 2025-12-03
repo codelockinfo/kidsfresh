@@ -30,7 +30,25 @@
 }
 
 
-@media () and (max-width: 1415px) {}
+@media (min-width: 1214px) and (max-width: 1415px) {
+  .footer__content-top {
+    padding: 0 8rem;
+}
+
+.footer-block.grid__item.scroll-trigger.animate--slide-in {
+  max-width: 20%;
+}
+
+.footer-block.grid__item.footer-block--menu.scroll-trigger.animate--slide-in {
+  max-width: 80%;
+}
+.footer-block__details-content.list-unstyled {
+  display: flex;
+  gap: 10px;
+}
+.footer__blocks-wrapper.grid {
+  gap: 40px;
+}
 
 @media screen and (max-width: 749px) {
   .footer .grid {
