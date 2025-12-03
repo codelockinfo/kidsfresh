@@ -1,8 +1,8 @@
 .header__menu-item{
-    font-size:23px !important;
+    font-size:23px;
 }
 .announcement-bar__message{
-   font-size: 19px !important; 
+   font-size: 19px; 
 }
 
 .header__active-menu-item{
