@@ -1200,6 +1200,12 @@ gap:12px;
     rotate: 5deg;
   }
   }
+  /* Single column promo block - always full width */
+  .grid-item.promo-item-single {
+    width: 100% !important;
+    min-width: 100% !important;
+  }
+
   @media (max-width: 968px) {
     .grid-row {
       padding: 29px 60px;
@@ -1209,6 +1215,10 @@ gap:12px;
       min-width: calc(50% - 15px) !important;
     }
     .grid-item.promo-item {
+    width: 100% !important;
+    min-width: 100% !important;
+  }
+  .grid-item.promo-item-single {
     width: 100% !important;
     min-width: 100% !important;
   }
@@ -1230,6 +1240,12 @@ gap:12px;
 
   /* Promo block FULL width */
   .grid-item.promo-item {
+    width: 100% !important;
+    min-width: 100% !important;
+  }
+  
+  /* Single column promo block always full width */
+  .grid-item.promo-item-single {
     width: 100% !important;
     min-width: 100% !important;
   }
@@ -1276,8 +1292,8 @@ gap:12px;
   <div class="custom-collection-grid">
     <div class="grid-row">
     {% for block in section.blocks %}
-      <div class="grid-item {% if block.type == 'promo_block' %}promo-item{% else %}product-item{% endif %}"
-           style="width: calc({{ block.settings.block_width }}% - 20px); min-width: calc({{ block.settings.block_width }}% - 20px);"
+      <div class="grid-item {% if block.type == 'promo_block' %}promo-item{% elsif block.type == 'promo_block_single' %}promo-item-single{% else %}product-item{% endif %}"
+           {% unless block.type == 'promo_block_single' %}style="width: calc({{ block.settings.block_width }}% - 20px); min-width: calc({{ block.settings.block_width }}% - 20px);"{% endunless %}
            {{ block.shopify_attributes }}>
         
         {% if block.type == 'product' %}
@@ -1377,6 +1393,53 @@ gap:12px;
         {% endif %}
         
         {% if block.type == 'promo_block' %}
+          <div class="promo-block">
+            <div class="promo-block-inner" style="background: {{ block.settings.background_color }};">
+              {% if block.settings.vegetable_top_left %}
+                <div class="promo-element top-left">
+                  <img src="{{ block.settings.vegetable_top_left | img_url: 'master' }}" alt="">
+                </div>
+              {% endif %}
+              {% if block.settings.vegetable_top_right %}
+                <div class="promo-element top-right">
+                  <img src="{{ block.settings.vegetable_top_right | img_url: 'master' }}" alt="">
+                </div>
+              {% endif %}
+              {% if block.settings.vegetable_middle_left %}
+                <div class="promo-element middle-left">
+                  <img src="{{ block.settings.vegetable_middle_left | img_url: 'master' }}" alt="">
+                </div>
+              {% endif %}
+              {% if block.settings.vegetable_middle_right %}
+                <div class="promo-element middle-right">
+                  <img src="{{ block.settings.vegetable_middle_right | img_url: 'master' }}" alt="">
+                </div>
+              {% endif %}
+              {% if block.settings.vegetable_bottom_left %}
+                <div class="promo-element bottom-left">
+                  <img src="{{ block.settings.vegetable_bottom_left | img_url: 'master' }}" alt="">
+                </div>
+              {% endif %}
+              {% if block.settings.vegetable_bottom_right %}
+                <div class="promo-element bottom-right">
+                  <img src="{{ block.settings.vegetable_bottom_right | img_url: 'master' }}" alt="">
+                </div>
+              {% endif %}
+              <div class="promo-content">
+                {% if block.settings.heading != blank %}
+                  <h2 class="promo-heading" style="color: {{ block.settings.heading_color | default: '#2C5F2D' }};">{{ block.settings.heading }}</h2>
+                {% endif %}
+                {% if block.settings.button_text != blank and block.settings.button_link != blank %}
+                  <a href="{{ block.settings.button_link }}" class="promo-button">
+                    {{ block.settings.button_text }}
+                  </a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        {% endif %}
+
+        {% if block.type == 'promo_block_single' %}
           <div class="promo-block">
             <div class="promo-block-inner" style="background: {{ block.settings.background_color }};">
               {% if block.settings.vegetable_top_left %}
@@ -1535,6 +1598,75 @@ gap:12px;
           "label": "Block Width",
           "default": 40
         },
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Background Color",
+          "default": "#F58220"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "ingredients + nutrition"
+        },
+        {
+          "type": "color",
+          "id": "heading_color",
+          "label": "Heading Color",
+          "default": "#2C5F2D"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Label",
+          "default": "learn more"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        },
+        {
+          "type": "header",
+          "content": "Vegetable Images (6 positions)"
+        },
+        {
+          "type": "image_picker",
+          "id": "vegetable_top_left",
+          "label": "Vegetable - Top Left"
+        },
+        {
+          "type": "image_picker",
+          "id": "vegetable_top_right",
+          "label": "Vegetable - Top Right"
+        },
+        {
+          "type": "image_picker",
+          "id": "vegetable_middle_left",
+          "label": "Vegetable - Middle Left"
+        },
+        {
+          "type": "image_picker",
+          "id": "vegetable_middle_right",
+          "label": "Vegetable - Middle Right"
+        },
+        {
+          "type": "image_picker",
+          "id": "vegetable_bottom_left",
+          "label": "Vegetable - Bottom Left"
+        },
+        {
+          "type": "image_picker",
+          "id": "vegetable_bottom_right",
+          "label": "Vegetable - Bottom Right"
+        }
+      ]
+    },
+    {
+      "type": "promo_block_single",
+      "name": "Promo Block Single",
+      "settings": [
         {
           "type": "color",
           "id": "background_color",
