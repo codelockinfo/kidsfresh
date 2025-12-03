@@ -9,14 +9,15 @@
  */
 {
   "sections": {
-    "custom_banner_slider_bG9yTJ": {
+    "custom_banner_slider_tB6fwN": {
       "type": "custom-banner-slider",
       "name": "Celebrate Plate Section ",
       "settings": {
         "bg_desktop": "shopify://shop_images/Untitled_1920_x_1415_px_4_Custom_e655c0e4-be81-48c9-9a18-abb45847f0a1.webp",
         "bg_mobile": "shopify://shop_images/Untitled_design_-_2025-11-19T022403.761.webp",
+        "bottom_decor": "shopify://shop_images/Group_74_1.png",
         "heading": "celebrate the little victories",
-        "desc": "Add your text here...",
+        "desc": "At Kidfresh, we’re on a mission to help you win more meals. To us, winning is about more than kid-friendly cuisine. It’s about cooking with the wholesome ingredients you’d use. It’s about hiding veggies in every bite. It’s about making family mealtimes easier, faster, healthier—and more joyful. It’s about helping you win parenthood... one clean plate at a time.",
         "btn_text": "meet Kidfresh",
         "btn_link": ""
       }
@@ -210,26 +211,12 @@
         "padding_bottom_mobile": 16,
         "color_scheme": "background-1"
       }
-    },
-    "custom_banner_slider_tB6fwN": {
-      "type": "custom-banner-slider",
-      "name": "Celebrate Plate Section ",
-      "settings": {
-        "bg_desktop": "shopify://shop_images/Untitled_1920_x_1415_px_4_Custom_e655c0e4-be81-48c9-9a18-abb45847f0a1.webp",
-        "bg_mobile": "shopify://shop_images/Untitled_design_-_2025-11-19T022403.761.webp",
-        "bottom_decor": "shopify://shop_images/Group_74_1.png",
-        "heading": "celebrate the little victories",
-        "desc": "At Kidfresh, we’re on a mission to help you win more meals. To us, winning is about more than kid-friendly cuisine. It’s about cooking with the wholesome ingredients you’d use. It’s about hiding veggies in every bite. It’s about making family mealtimes easier, faster, healthier—and more joyful. It’s about helping you win parenthood... one clean plate at a time.",
-        "btn_text": "meet Kidfresh",
-        "btn_link": ""
-      }
     }
   },
   "order": [
-    "custom_banner_slider_bG9yTJ",
+    "custom_banner_slider_tB6fwN",
     "custom_slider_Bgan3G",
     "featured_collection",
-    "instra_reel_J97KgH",
-    "custom_banner_slider_tB6fwN"
+    "instra_reel_J97KgH"
   ]
 }
