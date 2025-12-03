@@ -78,16 +78,6 @@
             "icon_open_new_tab": false
           }
         },
-        "promo_block_single_AjTNeh": {
-          "type": "promo_block_single",
-          "settings": {
-            "background_color": "#f58220",
-            "heading": "ingredients + nutrition",
-            "heading_color": "#2c5f2d",
-            "button_text": "learn more",
-            "button_link": "#"
-          }
-        },
         "promo_block_bPMrgJ": {
           "type": "promo_block",
           "settings": {
@@ -110,7 +100,6 @@
         "product_GwpFP9",
         "product_MG9KAP",
         "product_TyCKJQ",
-        "promo_block_single_AjTNeh",
         "promo_block_bPMrgJ"
       ],
       "name": "Custom Collection Grid",
