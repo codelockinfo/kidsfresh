@@ -45,7 +45,7 @@
         "promo_block_questions_T483Ww": {
           "type": "promo_block_questions",
           "settings": {
-            "block_width": 30,
+            "block_width": 33,
             "heading": "got questions?",
             "button_text": "learn more",
             "button_link": "#"
