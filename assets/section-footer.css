@@ -105,6 +105,10 @@ ul.footer-block__details-content.list-unstyled li a:hover::after {
   .footer-block__details-content {
     margin-top: 0;
   }
+  .copyright__content {
+    font-size: 14px;
+    line-height: 21px;
+  }
 }
 
 @media screen and (max-width: 749px) {
