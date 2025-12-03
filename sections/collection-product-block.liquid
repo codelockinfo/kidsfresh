@@ -787,10 +787,25 @@ gap:12px;
     }
   }
   @media (max-width: 768px) {
-    .grid-item {
-      width: calc(50% - 15px) !important;
-      min-width: calc(50% - 15px) !important;
+     .new-badge{
+      display:none;
     }
+    .grid-row{
+    padding:30px !important;
+    gap:12px;
+    }
+
+  /* Product blocks stay 50% */
+  .grid-item.product-item {
+    width: calc(50% - 12px) !important;
+    min-width: calc(50% - 12px) !important;
+  }
+
+  /* Promo block FULL width */
+  .grid-item.promo-item {
+    width: 100% !important;
+    min-width: 100% !important;
+  }
     .promo-heading {
       font-size: 39px;
     }
@@ -844,6 +859,37 @@ gap:12px;
     height: 250px;
     rotate: 21deg;
   }
+  
+    .product-title {
+    font-size: 18px !important;
+  }
+
+  .product-description {
+  font-size: 16px !important;
+  }
+
+.default-img{
+    width:32px;
+    height:30px;
+  }
+
+  .hover-img{
+    width:32px !important;
+    height:30px !important;
+  }
+
+  .new-badge{
+     top:10px;
+     left:-2px;
+  }
+
+  .new-badge img {
+    max-width:35% !important;
+  }
+
+.promo-block{
+  padding:0 !important;
+}
   }
 </style>
 
@@ -851,7 +897,7 @@ gap:12px;
   <div class="custom-collection-grid">
     <div class="grid-row">
     {% for block in section.blocks %}
-      <div class="grid-item" 
+      <div class="grid-item {% if block.type == 'promo_block' %}promo-item{% else %}product-item{% endif %}"
            style="width: calc({{ block.settings.block_width }}% - 20px); min-width: calc({{ block.settings.block_width }}% - 20px);"
            {{ block.shopify_attributes }}>
         
