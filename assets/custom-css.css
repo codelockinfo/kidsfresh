@@ -3,7 +3,7 @@
 }
 .announcement-bar__message {
     font-family: var(--font-family);
-   font-size: 21px; 
+   font-size: 20px; 
    line-height:43px;
    font-weight: 400;
 }
