@@ -2,7 +2,7 @@
     font-size:23px;
 }
 .announcement-bar__message {
-    font-family: "GT Walsheim";
+    font-family: var(--font-family);
    font-size: 21px; 
    line-height:43px;
    font-weight: 400;
