@@ -53,6 +53,7 @@
 @media screen and (max-width: 749px) {
   .footer .grid {
     display: flex;
+    flex-wrap: no-wrap;
   }
 
   .footer-block.grid__item {
