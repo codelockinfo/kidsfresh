@@ -17,3 +17,10 @@
 .header__icon .icon{
     color : #F8971D !important;
 }
+
+@media (max-width: 768px) {
+    .announcement-bar__message {
+   font-size: 14px !important; 
+   line-height: 21px;
+}
+}
