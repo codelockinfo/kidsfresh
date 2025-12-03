@@ -16,15 +16,7 @@
 .list-menu__item--link {
   padding: 5px 0 !important;
 }
-.custom-top__wrapper{
-    margin-bottom: -6%;
-  }
-  .custom-top__image--desktop{
-    margin-top: -5%;
-  }
-  .footer__content-bottom{
-    background-color: #ED7723;
-  }
+
 @media (min-width: 1440px) {
 .footer-block.grid__item.scroll-trigger.animate--slide-in {
   max-width: 30%;
@@ -120,7 +112,8 @@
 
 .footer__content-bottom {
   border-top: solid 0.1rem rgba(var(--color-foreground), 0.08);
-  padding-top: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .footer__content-bottom:only-child {
