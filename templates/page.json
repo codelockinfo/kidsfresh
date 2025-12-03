@@ -93,7 +93,7 @@
         "promo_block_bPMrgJ": {
           "type": "promo_block",
           "settings": {
-            "block_width": 60,
+            "block_width": 65,
             "background_color": "#f58220",
             "heading": "ingredients + nutrition",
             "heading_color": "#0f4735",
