@@ -46,6 +46,7 @@
           "type": "promo_block_questions",
           "settings": {
             "block_width": 33,
+            "background_color": "#95c940",
             "heading": "got questions?",
             "button_text": "learn more",
             "button_link": "#"
