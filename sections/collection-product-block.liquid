@@ -1289,66 +1289,66 @@ gap:12px;
     height: 150px;
   }
 
+  .promo-element-questions.veg-top-center {
+    top: -5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+  }
+
   .promo-element-questions.veg-top-right {
     top: -5%;
     right: -5%;
-    width: 120px;
-    height: 120px;
-  }
-
-  .promo-element-questions.veg-middle-right {
-    top: 30%;
-    right: -5%;
-    width: 120px;
-    height: 120px;
-    transform: translateY(-50%);
+    width: 150px;
+    height: 150px;
   }
 
   .promo-element-questions.veg-bottom-left {
     bottom: -5%;
     left: -5%;
-    width: 140px;
-    height: 140px;
+    width: 150px;
+    height: 150px;
+  }
+
+  .promo-element-questions.veg-bottom-center {
+    bottom: -5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
   }
 
   .promo-element-questions.veg-bottom-right {
     bottom: -5%;
-    right: 5%;
-    width: 100px;
-    height: 100px;
-  }
-
-  .promo-element-questions.veg-middle-bottom {
-    bottom: 20%;
-    left: 8%;
-    width: 100px;
-    height: 100px;
-    transform: translateY(50%);
+    right: -5%;
+    width: 150px;
+    height: 150px;
   }
 
   /* Hover animations for questions block */
   .promo-block-questions:hover .promo-element-questions.veg-top-left {
-    transform: translateX(-10px) scale(1.05);
+    transform: translateX(-10px) translateY(-10px) scale(1.05);
+  }
+
+  .promo-block-questions:hover .promo-element-questions.veg-top-center {
+    transform: translateX(-50%) translateY(-10px) scale(1.05);
   }
 
   .promo-block-questions:hover .promo-element-questions.veg-top-right {
-    transform: translateX(10px) scale(1.05);
-  }
-
-  .promo-block-questions:hover .promo-element-questions.veg-middle-right {
-    transform: translateY(-50%) translateX(10px) scale(1.05);
+    transform: translateX(10px) translateY(-10px) scale(1.05);
   }
 
   .promo-block-questions:hover .promo-element-questions.veg-bottom-left {
-    transform: translateX(-10px) scale(1.05);
+    transform: translateX(-10px) translateY(10px) scale(1.05);
+  }
+
+  .promo-block-questions:hover .promo-element-questions.veg-bottom-center {
+    transform: translateX(-50%) translateY(10px) scale(1.05);
   }
 
   .promo-block-questions:hover .promo-element-questions.veg-bottom-right {
-    transform: translateX(10px) scale(1.05);
-  }
-
-  .promo-block-questions:hover .promo-element-questions.veg-middle-bottom {
-    transform: translateY(50%) translateX(-10px) scale(1.05);
+    transform: translateX(10px) translateY(10px) scale(1.05);
   }
 
   /* Responsive styles for questions block */
@@ -1607,14 +1607,14 @@ gap:12px;
                   <img src="{{ block.settings.vegetable_top_left | img_url: 'master' }}" alt="">
                 </div>
               {% endif %}
+              {% if block.settings.vegetable_top_center %}
+                <div class="promo-element-questions veg-top-center">
+                  <img src="{{ block.settings.vegetable_top_center | img_url: 'master' }}" alt="">
+                </div>
+              {% endif %}
               {% if block.settings.vegetable_top_right %}
                 <div class="promo-element-questions veg-top-right">
                   <img src="{{ block.settings.vegetable_top_right | img_url: 'master' }}" alt="">
-                </div>
-              {% endif %}
-              {% if block.settings.vegetable_middle_right %}
-                <div class="promo-element-questions veg-middle-right">
-                  <img src="{{ block.settings.vegetable_middle_right | img_url: 'master' }}" alt="">
                 </div>
               {% endif %}
               {% if block.settings.vegetable_bottom_left %}
@@ -1622,14 +1622,14 @@ gap:12px;
                   <img src="{{ block.settings.vegetable_bottom_left | img_url: 'master' }}" alt="">
                 </div>
               {% endif %}
+              {% if block.settings.vegetable_bottom_center %}
+                <div class="promo-element-questions veg-bottom-center">
+                  <img src="{{ block.settings.vegetable_bottom_center | img_url: 'master' }}" alt="">
+                </div>
+              {% endif %}
               {% if block.settings.vegetable_bottom_right %}
                 <div class="promo-element-questions veg-bottom-right">
                   <img src="{{ block.settings.vegetable_bottom_right | img_url: 'master' }}" alt="">
-                </div>
-              {% endif %}
-              {% if block.settings.vegetable_middle_bottom %}
-                <div class="promo-element-questions veg-middle-bottom">
-                  <img src="{{ block.settings.vegetable_middle_bottom | img_url: 'master' }}" alt="">
                 </div>
               {% endif %}
               <div class="promo-content-questions">
@@ -1861,32 +1861,32 @@ gap:12px;
         {
           "type": "image_picker",
           "id": "vegetable_top_left",
-          "label": "Vegetable - Top Left"
+          "label": "Vegetable - Top Left Corner"
+        },
+        {
+          "type": "image_picker",
+          "id": "vegetable_top_center",
+          "label": "Vegetable - Top Center"
         },
         {
           "type": "image_picker",
           "id": "vegetable_top_right",
-          "label": "Vegetable - Top Right"
-        },
-        {
-          "type": "image_picker",
-          "id": "vegetable_middle_right",
-          "label": "Vegetable - Middle Right"
+          "label": "Vegetable - Top Right Corner"
         },
         {
           "type": "image_picker",
           "id": "vegetable_bottom_left",
-          "label": "Vegetable - Bottom Left"
+          "label": "Vegetable - Bottom Left Corner"
+        },
+        {
+          "type": "image_picker",
+          "id": "vegetable_bottom_center",
+          "label": "Vegetable - Bottom Center"
         },
         {
           "type": "image_picker",
           "id": "vegetable_bottom_right",
-          "label": "Vegetable - Bottom Right"
-        },
-        {
-          "type": "image_picker",
-          "id": "vegetable_middle_bottom",
-          "label": "Vegetable - Middle Bottom"
+          "label": "Vegetable - Bottom Right Corner"
         }
       ]
     }
