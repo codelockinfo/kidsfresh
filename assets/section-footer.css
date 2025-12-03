@@ -21,6 +21,9 @@
 .footer-block.grid__item.footer-block--menu.scroll-trigger.animate--slide-in {
   max-width: 70%;
 }
+.footer-block__details-content.list-unstyled {
+  display: flex;
+}
 
 @media screen and (max-width: 749px) {
   .footer .grid {
