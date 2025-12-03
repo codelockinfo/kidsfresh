@@ -9,6 +9,71 @@
  */
 {
   "sections": {
+    "custom_slider_6rFfKa": {
+      "type": "custom-slider",
+      "blocks": {
+        "column_zeHmm7": {
+          "type": "column",
+          "settings": {
+            "heading": "Wh",
+            "preheading": "Wholesome ingredients",
+            "description": "We use the kind of real ingredients you'd use in your own kitchen."
+          }
+        },
+        "column_eApJKm": {
+          "type": "column",
+          "settings": {
+            "heading": "Pro",
+            "preheading": "Protein power",
+            "description": "Protein helps growing bodies and brains stay strong and energized."
+          }
+        },
+        "column_6EwbL9": {
+          "type": "column",
+          "settings": {
+            "heading": "Vi",
+            "preheading": "Vitamin boost",
+            "description": "Our ingredients naturally provide the vitamins kids need in every bite."
+          }
+        },
+        "column_7GFYyr": {
+          "type": "column",
+          "settings": {
+            "heading": "Cr",
+            "preheading": "Calcium rich",
+            "description": "Calcium supports strong bones and teeth—and happy smiling kids."
+          }
+        }
+      },
+      "block_order": [
+        "column_zeHmm7",
+        "column_eApJKm",
+        "column_6EwbL9",
+        "column_7GFYyr"
+      ],
+      "name": "Winning Ingredients",
+      "settings": {
+        "title": "winning ingredients",
+        "heading_alignment": "center",
+        "title_color": "#ffffff",
+        "background_color": "#1a4d3a",
+        "enable_mobile_slider": true,
+        "button_label": "ingredients",
+        "button_link": "",
+        "button_style": "primary",
+        "border_thickness": 2,
+        "border_radius": 15,
+        "border_color": "#7ab55c",
+        "heading_size": 80,
+        "heading_color": "#ffffff",
+        "preheading_size": 18,
+        "preheading_color": "#ff8c42",
+        "description_size": 15,
+        "description_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "disabled": true,
@@ -140,6 +205,7 @@
     }
   },
   "order": [
+    "custom_slider_6rFfKa",
     "featured_collection",
     "instra_reel_J97KgH",
     "custom_banner_slider_tB6fwN"
