@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -6,9 +15,91 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "collection_product_block_ypR9fk": {
+      "type": "collection-product-block",
+      "blocks": {
+        "product_77ywnL": {
+          "type": "product",
+          "settings": {
+            "block_width": 30,
+            "product": "buttered-pasta",
+            "show_new_badge": true,
+            "new_badge_image": "shopify://shop_images/Group_243.png",
+            "show_second_image": true,
+            "custom_description": "Product description",
+            "search_icon": "shopify://shop_images/store_locator_QB.png",
+            "search_icon_hover": "shopify://shop_images/ChatGPT_Image_Dec_2_2025_06_51_07_PM_dc3c5109-df73-409a-bdd7-72fd465d2d1b.png",
+            "icon_link": "",
+            "icon_open_new_tab": false
+          }
+        },
+        "product_F3Gc3N": {
+          "type": "product",
+          "settings": {
+            "block_width": 30,
+            "product": "cheese-pizza-wagon-wheels",
+            "show_new_badge": false,
+            "new_badge_image": "shopify://shop_images/Group_243.png",
+            "show_second_image": true,
+            "custom_description": "Product description",
+            "search_icon": "shopify://shop_images/store_locator_QB.png",
+            "search_icon_hover": "shopify://shop_images/ChatGPT_Image_Dec_2_2025_06_51_07_PM_dc3c5109-df73-409a-bdd7-72fd465d2d1b.png",
+            "icon_link": "",
+            "icon_open_new_tab": false
+          }
+        },
+        "product_4gWHFR": {
+          "type": "product",
+          "settings": {
+            "block_width": 30,
+            "product": "cheeseburger-mac-cheese",
+            "show_new_badge": false,
+            "show_second_image": true,
+            "custom_description": "Product description",
+            "icon_link": "",
+            "icon_open_new_tab": false
+          }
+        },
+        "product_bDeQCt": {
+          "type": "product",
+          "settings": {
+            "block_width": 30,
+            "product": "chicken-meatballs-pasta-marinara",
+            "show_new_badge": false,
+            "show_second_image": true,
+            "custom_description": "Product description",
+            "icon_link": "",
+            "icon_open_new_tab": false
+          }
+        },
+        "promo_block_McYAhH": {
+          "type": "promo_block",
+          "settings": {
+            "block_width": 60,
+            "background_color": "#F58220",
+            "heading": "ingredients + nutrition",
+            "heading_color": "#2C5F2D",
+            "button_text": "learn more",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_77ywnL",
+        "product_F3Gc3N",
+        "product_4gWHFR",
+        "product_bDeQCt",
+        "promo_block_McYAhH"
+      ],
+      "name": "Custom Collection Grid",
+      "settings": {
+        "section_background": "#f5f5dc"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "collection_product_block_ypR9fk"
   ]
 }
