@@ -9,6 +9,18 @@
  */
 {
   "sections": {
+    "custom_banner_slider_bG9yTJ": {
+      "type": "custom-banner-slider",
+      "name": "Celebrate Plate Section ",
+      "settings": {
+        "bg_desktop": "shopify://shop_images/Untitled_1920_x_1415_px_4_Custom_e655c0e4-be81-48c9-9a18-abb45847f0a1.webp",
+        "bg_mobile": "shopify://shop_images/Untitled_design_-_2025-11-19T022403.761.webp",
+        "heading": "celebrate the little victories",
+        "desc": "Add your text here...",
+        "btn_text": "meet Kidfresh",
+        "btn_link": ""
+      }
+    },
     "custom_slider_Bgan3G": {
       "type": "custom-slider",
       "blocks": {
@@ -214,6 +226,7 @@
     }
   },
   "order": [
+    "custom_banner_slider_bG9yTJ",
     "custom_slider_Bgan3G",
     "featured_collection",
     "instra_reel_J97KgH",
