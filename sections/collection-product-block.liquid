@@ -8,31 +8,63 @@
 {% endcomment %}
 
 <style>
+.page-width-container{
+max-width:1990px;
+margin:0 auto;
 
-  @media (max-width: 749px) {
+}
+
+ .grid-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 30px;
+    padding:30px 180px;
+  }
+  @media (max-width: 768px) {
+    
     .product-title {
     font-size: 18px !important;
   }
   .product-description {
   font-size: 16px !important;
   }
+
+.default-img{
+    width:32px;
+    height:30px;
   }
-  .page-width {
-    margin: 0 auto;
-    padding: 0 20px;
+
+  .hover-img{
+    width:32px !important;
+    height:30px !important;
   }
+
+  .new-badge{
+     top:10px;
+     left:-2px;
+  }
+
+  .new-badge img {
+    max-width:35% !important;
+}
+
+.promo-block{
+  padding:0 !important;
+  width:207%;
+}
+  }
+  
 
   .custom-collection-grid {
     padding: 40px 0;
     background: {{ section.settings.section_background }};
   }
 
-  .grid-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin-bottom: 30px;
-  }
+ .grid-row{
+{% comment %} padding:30px; {% endcomment %}
+gap:12px;
+}
 
   .grid-item {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -70,25 +102,57 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease, transform 0.5s ease;
   }
 
   .product-image.secondary {
     opacity: 0;
   }
 
+  /* Show secondary image on hover only if it exists */
   .product-card:hover .product-image.secondary {
     opacity: 1;
   }
 
-  .product-card:hover .product-image.primary {
+  /* Hide primary image on hover only if secondary image exists */
+  .product-card:hover .product-image-wrapper:not(.no-second-image) .product-image.primary {
     opacity: 0;
+  }
+
+  /* Zoom effect when no second image exists - keep primary visible and zoom */
+  .product-image-wrapper.no-second-image .product-image.primary {
+    transition: transform 0.5s ease;
+    opacity: 1 !important;
+  }
+
+  .product-image-wrapper.no-second-image:hover .product-image.primary {
+    transform: scale(1.1);
+    opacity: 1 !important;
   }
 
   .new-badge {
     position: absolute;
     top: 15px;
-    left: 15px;
+    left: -4px;
+    z-index: 2;
+    display: block;
+    transition: opacity 0.3s ease;
+  }
+
+  /* Hide badge when hovering and secondary image is shown */
+  .product-card:hover .product-image-wrapper:not(.no-second-image) .new-badge {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .new-badge img {
+    display: block;
+    max-width: 75%;
+    width:100%;
+    height: auto;
+  }
+
+  .new-badge-text {
     background: #f58220;
     color: white;
     padding: 8px 20px;
@@ -96,10 +160,9 @@
     font-weight: bold;
     font-size: 14px;
     text-transform: lowercase;
-    z-index: 2;
   }
 
-  .new-badge::before {
+  .new-badge-text::before {
     content: '';
     position: absolute;
     top: -10px;
@@ -111,7 +174,6 @@
   }
 
   .product-info {
-    padding: 20px;
     text-align: center;
   }
 
@@ -132,13 +194,10 @@
     position: absolute;
     bottom: 15px;
     right: 15px;
-    width: 50px;
-    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: transform 0.3s ease;
     z-index: 2;
     text-decoration: none;
   }
@@ -147,10 +206,54 @@
     transform: scale(1.1);
   }
 
-  .search-icon img {
-    width: 65px;
-    height: 61px;
+  .search-icon-wrapper {
+    position: relative;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .search-icon-img {
     object-fit: contain;
+    display: block;
+  }
+
+  .search-icon-img.default-img {
+    position: relative;
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .search-icon-img.hover-img {
+    position: absolute;
+    width:65px;
+    height:61px;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    object-fit: contain;
+  }
+
+  .search-icon:hover .search-icon-img.default-img {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  .search-icon:hover .search-icon-img.hover-img {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .search-icon svg {
+    transition: stroke 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .search-icon:hover svg {
+    stroke: #97d700;
+    transform: scale(1.1);
   }
 
   .promo-block {
@@ -199,7 +302,7 @@
     display: inline-block;
     background: #97d700;
     color: #2c5f2d;
-    padding: 7px 50px;
+    padding:7px 50px;
     border-radius: 50px;
     font-weight: 700;
     font-size: 30px;
@@ -226,21 +329,19 @@
     display: block;
   }
 
-  /* Position elements - 6 vegetable positions */
+ /* Position elements - 6 vegetable positions */
   .promo-element.top-left {
     top: -38%;
     left: 30%;
     width: 220px;
     height: 201px;
   }
-
   .promo-element.top-right {
     top: -10%;
     right: 21%;
     width: 100px;
     height: 100px;
   }
-
   .promo-element.middle-left {
     top: 64%;
     left: -17%;
@@ -249,7 +350,6 @@
     height: 1000px;
     rotate: -30deg;
   }
-
   .promo-element.middle-right {
     top: 73%;
     right: -14%;
@@ -258,68 +358,54 @@
     height: 700px;
     rotate: 30deg;
   }
-
   .promo-element.bottom-left {
     bottom: -17%;
     left: 38%;
     width: 100px;
     height: 100px;
   }
-
   .promo-element.bottom-right {
     bottom: -76.1%;
     right: 25%;
     width: 400px;
     height: 400px;
-
   }
-
   /* Hover animations - left/right movement */
   .promo-block:hover .promo-element.top-left {
     transform: translateX(-20px) scale(1.1);
   }
-
   .promo-block:hover .promo-element.top-right {
     transform: translateX(20px) scale(1.1);
   }
-
   .promo-block:hover .promo-element.middle-left {
     transform: translateY(-50%) translateX(-25px) scale(1.1);
   }
-
   .promo-block:hover .promo-element.middle-right {
     transform: translateY(-50%) translateX(25px) scale(1.1);
   }
-
   .promo-block:hover .promo-element.bottom-left {
     transform: translateX(-20px) scale(1.1);
   }
-
   .promo-block:hover .promo-element.bottom-right {
     transform: translateX(20px) scale(1.1);
   }
-
   @media (max-width: 968px) {
     .grid-item {
       width: calc(50% - 15px) !important;
       min-width: calc(50% - 15px) !important;
     }
-    
     .promo-heading {
       font-size: 36px;
     }
   }
-
   @media (max-width: 768px) {
     .grid-item {
-      width: 100% !important;
-      min-width: 100% !important;
+      width: calc(50% - 15px) !important;
+      min-width: calc(50% - 15px) !important;
     }
-    
     .promo-heading {
       font-size: 39px;
     }
-    
     .promo-block {
       padding: 40px 0px;
       min-height: 300px;
@@ -328,7 +414,6 @@
       padding: 2px 25px;
       font-size: 20px;
     }
-
     .promo-element.top-left {
       top: -30%;
       left: 30%;
@@ -336,14 +421,12 @@
       height: 107px;
       rotate: 20deg;
   }
-
   .promo-element.top-right {
     top: -8%;
     right: 21%;
     width: 39px;
     height: 42px;
   }
-
   .promo-element.middle-left {
     top: 88%;
     left: -18%;
@@ -352,7 +435,6 @@
     height: 482px;
     rotate: -10deg;
   }
-
   .promo-element.middle-right {
     top: 60%;
     right: -3%;
@@ -361,26 +443,23 @@
     height: 316px;
     rotate: 12deg;
   }
-
   .promo-element.bottom-left {
     bottom: -9%;
     left: 23%;
     width: 44px;
     height: 44px;
   }
-
   .promo-element.bottom-right {
     bottom: -66%;
     right: 19%;
     width: 182px;
     height: 250px;
     rotate: 21deg;
-
   }
   }
 </style>
 
-<div class="page-width">
+<div class="page-width-container">
   <div class="custom-collection-grid">
     <div class="grid-row">
     {% for block in section.blocks %}
@@ -394,7 +473,7 @@
           
           <a href="{{ product_url }}" class="product-card-link">
             <div class="product-card">
-              <div class="product-image-wrapper">
+              <div class="product-image-wrapper {% unless block.settings.show_second_image and product.images[1] %}no-second-image{% endunless %}">
                 {% if product.featured_image %}
                   <img class="product-image primary" 
                        src="{{ product.featured_image | img_url: '600x' }}" 
@@ -412,7 +491,15 @@
                 {% endif %}
                 
                 {% if block.settings.show_new_badge %}
-                  <div class="new-badge">new!</div>
+                  <div class="new-badge">
+                    {% if block.settings.new_badge_image %}
+                      <img src="{{ block.settings.new_badge_image | img_url: '300x' }}" alt="New!" loading="lazy">
+                    {% elsif block.settings.new_badge_default_image %}
+                      <img src="{{ block.settings.new_badge_default_image | img_url: '300x' }}" alt="New!" loading="lazy">
+                    {% else %}
+                      <div class="new-badge-text">new!</div>
+                    {% endif %}
+                  </div>
                 {% endif %}
                 
                 {% if block.settings.icon_link != blank %}
@@ -421,23 +508,48 @@
                      {% if block.settings.icon_open_new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}
                      onclick="event.stopPropagation();">
                     {% if block.settings.search_icon %}
-                      <img src="{{ block.settings.search_icon | img_url: '100x' }}" alt="Quick view">
+                      <div class="search-icon-wrapper">
+                        <img class="search-icon-img default-img" 
+                             src="{{ block.settings.search_icon | img_url: '100x' }}" 
+                             alt="Quick view">
+                        {% if block.settings.search_icon_hover %}
+                          <img class="search-icon-img hover-img" 
+                               src="{{ block.settings.search_icon_hover | img_url: '100x' }}" 
+                               alt="Quick view">
+                        {% else %}
+                          <img class="search-icon-img hover-img" 
+                               src="https://cdn.shopify.com/s/files/1/0577/3957/5488/files/ChatGPT_Image_Dec_2_2025_06_51_07_PM.png?v=1764681680" 
+                               alt="Quick view">
+                        {% endif %}
+                      </div>
                     {% else %}
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <path d="m21 21-4.35-4.35"></path>
-                      </svg>
+                      <img class="product-image secondary" 
+                         src="https://cdn.shopify.com/s/files/1/0577/3957/5488/files/store_locator_QB.png?v=1764680849" 
+                         alt="{{ product.title }}"
+                         loading="lazy">
                     {% endif %}
                   </a>
                 {% else %}
                   <div class="search-icon">
                     {% if block.settings.search_icon %}
-                      <img src="{{ block.settings.search_icon | img_url: '100x' }}" alt="Search">
+                      <div class="search-icon-wrapper">
+                        <img class="search-icon-img default-img" 
+                             src="{{ block.settings.search_icon | img_url: '100x' }}" 
+                             alt="Search">
+                        {% if block.settings.search_icon_hover %}
+                          <img class="search-icon-img hover-img" 
+                               src="{{ block.settings.search_icon_hover | img_url: '100x' }}" 
+                               alt="Search">
+                        {% else %}
+                          <img class="search-icon-img hover-img" 
+                               src="https://cdn.shopify.com/s/files/1/0577/3957/5488/files/ChatGPT_Image_Dec_2_2025_06_51_07_PM.png?v=1764681680" 
+                               alt="Search">
+                        {% endif %}
+                      </div>
                     {% else %}
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <path d="m21 21-4.35-4.35"></path>
-                      </svg>
+                    <img class="search-icon-img hover-img" 
+                               src="https://cdn.shopify.com/s/files/1/0577/3957/5488/files/ChatGPT_Image_Dec_2_2025_06_51_07_PM.png?v=1764681680" 
+                               alt="Search">
                     {% endif %}
                   </div>
                 {% endif %}
@@ -454,48 +566,40 @@
         {% if block.type == 'promo_block' %}
           <div class="promo-block">
             <div class="promo-block-inner" style="background: {{ block.settings.background_color }};">
-              
               {% if block.settings.vegetable_top_left %}
                 <div class="promo-element top-left">
                   <img src="{{ block.settings.vegetable_top_left | img_url: 'master' }}" alt="">
                 </div>
               {% endif %}
-              
               {% if block.settings.vegetable_top_right %}
                 <div class="promo-element top-right">
                   <img src="{{ block.settings.vegetable_top_right | img_url: 'master' }}" alt="">
                 </div>
               {% endif %}
-              
               {% if block.settings.vegetable_middle_left %}
                 <div class="promo-element middle-left">
                   <img src="{{ block.settings.vegetable_middle_left | img_url: 'master' }}" alt="">
                 </div>
               {% endif %}
-              
               {% if block.settings.vegetable_middle_right %}
                 <div class="promo-element middle-right">
                   <img src="{{ block.settings.vegetable_middle_right | img_url: 'master' }}" alt="">
                 </div>
               {% endif %}
-              
               {% if block.settings.vegetable_bottom_left %}
                 <div class="promo-element bottom-left">
                   <img src="{{ block.settings.vegetable_bottom_left | img_url: 'master' }}" alt="">
                 </div>
               {% endif %}
-              
               {% if block.settings.vegetable_bottom_right %}
                 <div class="promo-element bottom-right">
                   <img src="{{ block.settings.vegetable_bottom_right | img_url: 'master' }}" alt="">
                 </div>
               {% endif %}
-              
               <div class="promo-content">
                 {% if block.settings.heading != blank %}
-                  <h2 class="promo-heading" style="color: {{ block.settings.heading_color | default: '#2c5f2d' }};">{{ block.settings.heading }}</h2>
+                  <h2 class="promo-heading" style="color: {{ block.settings.heading_color | default: '#2C5F2D' }};">{{ block.settings.heading }}</h2>
                 {% endif %}
-                
                 {% if block.settings.button_text != blank and block.settings.button_link != blank %}
                   <a href="{{ block.settings.button_link }}" class="promo-button">
                     {{ block.settings.button_text }}
@@ -550,6 +654,18 @@
           "default": false
         },
         {
+          "type": "image_picker",
+          "id": "new_badge_image",
+          "label": "Badge Image",
+          "info": "Upload a custom image for the 'new!' badge. If not provided, default image or text will be used."
+        },
+        {
+          "type": "image_picker",
+          "id": "new_badge_default_image",
+          "label": "Default Badge Image",
+          "info": "Upload a default image to use when no custom badge image is provided. If neither is provided, text badge will be shown."
+        },
+        {
           "type": "checkbox",
           "id": "show_second_image",
           "label": "Show Second Image on Hover",
@@ -573,6 +689,12 @@
           "info": "Upload a custom search icon. If not provided, default SVG icon will be used."
         },
         {
+          "type": "image_picker",
+          "id": "search_icon_hover",
+          "label": "Search Icon Hover Image (Optional)",
+          "info": "Upload an image to show when hovering over the search icon. If not provided, default hover effect will be used."
+        },
+        {
           "type": "url",
           "id": "icon_link",
           "label": "Icon Button Link (Optional)",
@@ -586,7 +708,7 @@
         }
       ]
     },
-    {
+   {
       "type": "promo_block",
       "name": "Promotional Block",
       "settings": [
@@ -604,7 +726,7 @@
           "type": "color",
           "id": "background_color",
           "label": "Background Color",
-          "default": "#f58220"
+          "default": "#F58220"
         },
         {
           "type": "text",
@@ -616,7 +738,7 @@
           "type": "color",
           "id": "heading_color",
           "label": "Heading Color",
-          "default": "#2c5f2d"
+          "default": "#2C5F2D"
         },
         {
           "type": "text",
