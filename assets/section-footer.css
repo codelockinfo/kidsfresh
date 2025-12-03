@@ -14,6 +14,14 @@
     padding: 0 10rem;
 }
 
+.footer-block.scroll-trigger.animate--slide-in {
+  max-width: 30%;
+}
+
+.footer-block.footer-block--menu.scroll-trigger.animate--slide-in {
+  max-width: 70%;
+}
+
 @media screen and (max-width: 749px) {
   .footer .grid {
     display: block;
