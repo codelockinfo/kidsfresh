@@ -115,7 +115,7 @@
           "type": "product",
           "settings": {
             "block_width": 30,
-            "product": "",
+            "product": "chicken-meatballs-pasta-marinara",
             "show_new_badge": false,
             "show_second_image": true,
             "custom_description": "Product description",
@@ -142,6 +142,7 @@
         "product_XxKQTp",
         "promo_block_BUXA4B"
       ],
+      "disabled": true,
       "name": "Custom Collection Grid",
       "settings": {
         "section_background": "#f5f5dc"
