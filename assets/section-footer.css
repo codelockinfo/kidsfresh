@@ -31,7 +31,7 @@
 }
 }
 
-@media  (max-width: 1415px){
+@media (min-width: 1174px) and (max-width: 1415px){
   .footer__content-top {
     padding: 0 8rem;
 }
