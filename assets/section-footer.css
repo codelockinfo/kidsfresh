@@ -50,6 +50,25 @@
 }
 }
 
+@media (min-width: 990px) and (max-width: 1175px){
+  .footer__content-top {
+    padding: 0 8rem;
+}
+
+.footer-block.grid__item.scroll-trigger.animate--slide-in {
+  max-width: 20%;
+}
+
+.footer-block.grid__item.footer-block--menu.scroll-trigger.animate--slide-in {
+  max-width: 80%;
+}
+.footer-block__details-content.list-unstyled {
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+}
+}
+
 @media screen and (max-width: 749px) {
   .footer .grid {
     display: flex;
