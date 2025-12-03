@@ -30,7 +30,7 @@
 }
 
 
-@media (min-width: 1214px) and (max-width: 1415px) {
+/* @media (min-width: 1214px) and (max-width: 1415px) {
   .footer__content-top {
     padding: 0 8rem;
 }
@@ -49,6 +49,7 @@
 .footer__blocks-wrapper.grid {
   gap: 40px;
 }
+} */
 
 @media screen and (max-width: 749px) {
   .footer .grid {
