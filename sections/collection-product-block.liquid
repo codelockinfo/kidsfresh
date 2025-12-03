@@ -1,0 +1,2046 @@
+{% comment %}
+  Custom Collection Grid Section - Enhanced Version
+  Features:
+  - Custom search icon upload
+  - Flexible width control per block
+  - Full visibility decorative elements
+  - Advanced outer tilt animation
+{% endcomment %}
+
+<style>
+.page-width-container{
+max-width:1990px;
+margin:0 auto;
+
+}
+
+ .grid-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 30px;
+    padding:30px 180px;
+    justify-content: center;
+  }
+  @media (max-width: 768px) {
+    
+    .product-title {
+    font-size: 18px !important;
+  }
+  .product-description {
+  font-size: 16px !important;
+  }
+
+.default-img{
+    width:32px;
+    height:30px;
+  }
+
+  .hover-img{
+    width:32px !important;
+    height:30px !important;
+  }
+
+  .new-badge{
+     top:10px;
+     left:-2px;
+  }
+
+  .new-badge img {
+    max-width:35% !important;
+}
+
+.promo-block{
+  padding:0 !important;
+}
+  }
+  
+
+  .custom-collection-grid {
+    padding: 40px 0;
+    background: {{ section.settings.section_background }};
+  }
+
+ .grid-row{
+{% comment %} padding:30px; {% endcomment %}
+gap:12px;
+}
+
+  .grid-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .product-card {
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    height: 100%;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+
+
+  .product-card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .product-image-wrapper {
+    position: relative;
+    padding-top: 100%;
+    overflow: hidden;
+    background: #f5f5f5;
+  }
+
+  .product-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease, transform 0.5s ease;
+  }
+
+  .product-image.secondary {
+    opacity: 0;
+  }
+
+  /* Show secondary image on hover only if it exists */
+  .product-card:hover .product-image.secondary {
+    opacity: 1;
+  }
+
+  /* Hide primary image on hover only if secondary image exists */
+  .product-card:hover .product-image-wrapper:not(.no-second-image) .product-image.primary {
+    opacity: 0;
+  }
+
+  /* Zoom effect when no second image exists - keep primary visible and zoom */
+  .product-image-wrapper.no-second-image .product-image.primary {
+    transition: transform 0.5s ease;
+    opacity: 1 !important;
+  }
+
+  .product-image-wrapper.no-second-image:hover .product-image.primary {
+    transform: scale(1.1);
+    opacity: 1 !important;
+  }
+
+  .new-badge {
+    position: absolute;
+    top: 15px;
+    left: -4px;
+    z-index: 2;
+    display: block;
+    transition: opacity 0.3s ease;
+  }
+
+  /* Hide badge when hovering and secondary image is shown */
+  .product-card:hover .product-image-wrapper:not(.no-second-image) .new-badge {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .new-badge img {
+    display: block;
+    max-width: 75%;
+    width:100%;
+    height: auto;
+  }
+
+  .new-badge-text {
+    background: #f58220;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 0 20px 20px 0;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: lowercase;
+  }
+
+  .new-badge-text::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 20px solid #f58220;
+    border-top: 10px solid transparent;
+  }
+
+  .product-info {
+    text-align: center;
+  }
+
+  .product-title {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    color: #39302D;
+  }
+
+  .product-description {
+    font-size: 21px;
+    color: #5D3328;
+    line-height: 1.4;
+  }
+
+  .search-icon {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+    text-decoration: none;
+  }
+
+  .search-icon:hover {
+    transform: scale(1.1);
+  }
+
+  .search-icon-wrapper {
+    position: relative;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .search-icon-img {
+    object-fit: contain;
+    display: block;
+  }
+
+  .search-icon-img.default-img {
+    position: relative;
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .search-icon-img.hover-img {
+    position: absolute;
+    width:65px;
+    height:61px;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    object-fit: contain;
+  }
+
+  .search-icon:hover .search-icon-img.default-img {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  .search-icon:hover .search-icon-img.hover-img {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .search-icon svg {
+    transition: stroke 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .search-icon:hover svg {
+    stroke: #97d700;
+    transform: scale(1.1);
+  }
+
+  .promo-block {
+    position: relative;
+    border-radius: 12px;
+    overflow: visible;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 400px;
+    transition: all 0.3s ease;
+    height: 100%;
+  }
+
+  .promo-block-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .promo-content {
+    position: relative;
+    z-index: 3;
+  }
+
+  .promo-heading {
+    font-size: 84px;
+    font-weight: 900;
+    color: #2c5f2d;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    line-height: 1.2;
+    text-transform: lowercase;
+    padding: 0px 40px;
+  }
+
+  .promo-button {
+    display: inline-block;
+    background: #97d700;
+    color: #2c5f2d;
+    padding:7px 50px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 30px;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .promo-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(151, 215, 0, 0.4);
+  }
+
+  .promo-element {
+    position: absolute;
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .promo-element img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+ /* Position elements - 6 vegetable positions */
+  .promo-element.top-left {
+    top: -73%;
+    left: 30%;
+    width: 480px;
+    height: 480px;
+  }
+  .promo-element.top-right {
+    top: -10%;
+    right: 21%;
+    width: 100px;
+    height: 100px;
+  }
+  .promo-element.middle-left {
+    top: 64%;
+    left: -17%;
+    transform: translateY(-50%);
+    width: 1000px;
+    height: 1000px;
+    rotate: -30deg;
+  }
+  .promo-element.middle-right {
+    top: 73%;
+    right: -14%;
+    transform: translateY(-50%);
+    width: 700px;
+    height: 700px;
+    rotate: 30deg;
+  }
+  .promo-element.bottom-left {
+    bottom: -13%;
+    left: 38%;
+    width: 100px;
+    height: 100px;
+  }
+  .promo-element.bottom-right {
+    bottom: -60%;
+    right: 23%;
+    width: 400px;
+    height: 400px;
+  }
+  /* Hover animations - left/right movement */
+  .promo-block:hover .promo-element.top-left {
+    transform: translateX(-20px) scale(1.1);
+  }
+  .promo-block:hover .promo-element.top-right {
+    transform: translateX(20px) scale(1.1);
+  }
+  .promo-block:hover .promo-element.middle-left {
+    transform: translateY(-50%) translateX(-25px) scale(1.1);
+  }
+  .promo-block:hover .promo-element.middle-right {
+    transform: translateY(-50%) translateX(25px) scale(1.1);
+  }
+  .promo-block:hover .promo-element.bottom-left {
+    transform: translateX(-20px) scale(1.1);
+  }
+  .promo-block:hover .promo-element.bottom-right {
+    transform: translateX(20px) scale(1.1);
+  }
+  @media (min-width: 1520px) and (max-width: 1620px){
+    .promo-element.top-left {
+    top: -86%;
+    left: 30%;
+    width: 480px;
+    height: 480px;
+  }
+  .promo-element.top-right {
+    top: -10%;
+    right: 21%;
+    width: 100px;
+    height: 100px;
+  }
+  .promo-element.middle-left {
+    top: 64%;
+    left: -17%;
+    transform: translateY(-50%);
+    width: 1000px;
+    height: 1000px;
+    rotate: -30deg;
+  }
+  .promo-element.middle-right {
+    top: 73%;
+    right: -14%;
+    transform: translateY(-50%);
+    width: 700px;
+    height: 700px;
+    rotate: 30deg;
+  }
+  .promo-element.bottom-left {
+    bottom: -13%;
+    left: 38%;
+    width: 100px;
+    height: 100px;
+  }
+  .promo-element.bottom-right {
+    bottom: -65%;
+    right: 23%;
+    width: 400px;
+    height: 400px;
+  }
+
+  .promo-heading-questions{
+    font-size: 59px;
+  }
+  .promo-element-questions.veg-top-left {
+    top: 0%;
+    left: -14%;
+    width: 150px;
+    height: 150px;
+    rotate: -58deg;
+    }
+  }
+
+  .promo-element-questions.veg-top-center {
+    top: -7%;
+    left: 47%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    rotate: 24deg;
+  }
+
+  .promo-element-questions.veg-top-right {
+    top: -7%;
+    right: -16%;
+    width: 150px;
+    height: 150px;
+  }
+
+  .promo-element-questions.veg-bottom-left {
+    bottom: -59%!important;
+    left: -52%!important;
+    width: 400PX;
+    height: 400PX;
+    rotate: -36deg;
+  }
+
+  .promo-element-questions.veg-bottom-center {
+    bottom: -23%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+  }
+
+  .promo-element-questions.veg-bottom-right {
+    bottom: -5%;
+    right: -5%;
+    width: 150px;
+    height: 150px;
+  }
+  }
+
+  @media (min-width: 1620px) and (max-width: 1900px){
+    .promo-element.top-left {
+    top: -98%;
+    left: 30%;
+    width: 480px;
+    height: 480px;
+  }
+  .promo-element.top-right {
+    top: -10%;
+    right: 21%;
+    width: 100px;
+    height: 100px;
+  }
+  .promo-element.middle-left {
+    top: 63%;
+    left: -24%;
+    transform: translateY(-50%);
+    width: 1000px;
+    height: 1000px;
+    rotate: -30deg;
+  }
+  .promo-element.middle-right {
+    top: 73%;
+    right: -28%;
+    transform: translateY(-50%);
+    width: 700px;
+    height: 700px;
+    rotate: 20deg;
+  }
+  .promo-element.bottom-left {
+    bottom: -13%;
+    left: 30%;
+    width: 100px;
+    height: 100px;
+  }
+  .promo-element.bottom-right {
+    bottom: -75%;
+    right: 23%;
+    width: 400px;
+    height: 400px;
+  }
+  
+  .promo-heading-questions{
+    font-size: 66px;
+  }
+  .promo-element-questions.veg-top-left {
+    top: 0%;
+    left: -14%;
+    width: 150px;
+    height: 150px;
+    rotate: -58deg;
+  }
+
+  .promo-element-questions.veg-top-center {
+    top: -7%;
+    left: 47%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    rotate: 24deg;
+  }
+
+  .promo-element-questions.veg-top-right {
+    top: -7%;
+    right: -16%;
+    width: 150px;
+    height: 150px;
+  }
+
+  .promo-element-questions.veg-bottom-left {
+    bottom: -41%;
+    left: -41%;
+    width: 400PX;
+    height: 400PX;
+    rotate: -36deg;
+  }
+
+  .promo-element-questions.veg-bottom-center {
+    bottom: -23%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+  }
+
+  .promo-element-questions.veg-bottom-right {
+    bottom: -5%;
+    right: -5%;
+    width: 150px;
+    height: 150px;
+  }
+  }
+  @media (min-width: 1420px) and (max-width: 1520px){
+    .promo-heading{
+      font-size: 64px;
+    }
+    .promo-element.top-left {
+    top: -98%;
+    left: 30%;
+    width: 480px;
+    height: 480px;
+  }
+  .promo-element.top-right {
+    top: -10%;
+    right: 21%;
+    width: 100px;
+    height: 100px;
+  }
+  .promo-element.middle-left {
+    top: 78%;
+    left: -39%;
+    transform: translateY(-50%);
+    width: 1000px;
+    height: 1000px;
+    rotate: -22deg;
+  }
+  .promo-element.middle-right {
+    top: 73%;
+    right: -28%;
+    transform: translateY(-50%);
+    width: 700px;
+    height: 700px;
+    rotate: 20deg;
+  }
+  .promo-element.bottom-left {
+    bottom: -13%;
+    left: 30%;
+    width: 100px;
+    height: 100px;
+  }
+  .promo-element.bottom-right {
+    bottom: -70%;
+    right: 27%;
+    width: 400px;
+    height: 400px;
+    rotate: 14deg;
+  }
+  .promo-heading-questions{
+    font-size: 51px;
+  }
+  .promo-element-questions.veg-top-left {
+    top: 0%;
+    left: -14%;
+    width: 150px;
+    height: 150px;
+    rotate: -58deg;
+    }
+  }
+
+  .promo-element-questions.veg-top-center {
+    top: -7%;
+    left: 47%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    rotate: 24deg;
+  }
+
+  .promo-element-questions.veg-top-right {
+    top: -7%;
+    right: -16%;
+    width: 150px;
+    height: 150px;
+  }
+
+  .promo-element-questions.veg-bottom-left {
+    bottom: -41%;
+    left: -41%;
+    width: 400PX;
+    height: 400PX;
+    rotate: -36deg;
+  }
+
+  .promo-element-questions.veg-bottom-center {
+    bottom: -23%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+  }
+
+  .promo-element-questions.veg-bottom-right {
+    bottom: -5%;
+    right: -5%;
+    width: 150px;
+    height: 150px;
+  }
+  }
+  @media (min-width: 1320px) and (max-width: 1420px){
+    .promo-heading{
+      font-size: 64px;
+    }
+    .promo-button{
+      font-size: 26px;
+      padding: 1px 30px;
+    }
+    .promo-element.top-left {
+      top: -84%;
+      left: 30%;
+      width: 380px;
+      height: 380px;
+  }
+  .promo-element.top-right {
+    top: -10%;
+    right: 21%;
+    width: 80px;
+    height: 80px;
+  }
+  .promo-element.middle-left {
+    top: 71%;
+    left: -34%;
+    width: 700px;
+    height: 700px;
+    rotate: -19deg;
+  }
+  .promo-element.middle-right {
+    top: 73%;
+    right: -19%;
+    width: 500px;
+    height: 700px;
+    rotate: 20deg;
+  }
+  .promo-element.bottom-left {
+    bottom: -13%;
+    left: 30%;
+    width: 100px;
+    height: 100px;
+  }
+  .promo-element.bottom-right {
+    bottom: -64%;
+    right: 23%;
+    width: 300px;
+    height: 300px;
+    rotate: 5deg;
+  }
+  }
+  @media (min-width: 1220px) and (max-width: 1320px){
+    .grid-row {
+      padding: 29px 120px;
+    }
+
+    .promo-heading{
+      font-size: 64px;
+    }
+    .promo-button{
+      font-size: 26px;
+      padding: 1px 30px;
+    }
+    .promo-element.top-left {
+      top: -84%;
+      left: 30%;
+      width: 380px;
+      height: 380px;
+  }
+  .promo-element.top-right {
+    top: -10%;
+    right: 21%;
+    width: 80px;
+    height: 80px;
+  }
+  .promo-element.middle-left {
+    top: 71%;
+    left: -34%;
+    width: 700px;
+    height: 700px;
+    rotate: -19deg;
+  }
+  .promo-element.middle-right {
+    top: 73%;
+    right: -19%;
+    width: 500px;
+    height: 700px;
+    rotate: 20deg;
+  }
+  .promo-element.bottom-left {
+    bottom: -13%;
+    left: 30%;
+    width: 100px;
+    height: 100px;
+  }
+  .promo-element.bottom-right {
+    bottom: -64%;
+    right: 23%;
+    width: 300px;
+    height: 300px;
+    rotate: 5deg;
+  }
+  }
+  @media (min-width: 1120px) and (max-width: 1220px){
+    .grid-row {
+      padding: 29px 120px;
+    }
+
+    .promo-heading{
+      font-size: 64px;
+    }
+    .promo-button{
+      font-size: 26px;
+      padding: 1px 30px;
+    }
+    .promo-element.top-left {
+      top: -64%;
+        left: 30%;
+        width: 280px;
+        height: 280px;
+  }
+  .promo-element.top-right {
+    top: -10%;
+    right: 21%;
+    width: 80px;
+    height: 80px;
+  }
+  .promo-element.middle-left {
+    top: 71%;
+        left: -31%;
+        width: 500px;
+        height: 500px;
+        rotate: -19deg;
+  }
+  .promo-element.middle-right {
+    top: 73%;
+    right: -26%;
+    width: 500px;
+    height: 500px;
+    rotate: 20deg;
+  }
+  .promo-element.bottom-left {
+    bottom: -13%;
+        left: 30%;
+        width: 80px;
+        height: 80px;
+  }
+  .promo-element.bottom-right {
+    bottom: -64%;
+    right: 23%;
+    width: 300px;
+    height: 300px;
+    rotate: 5deg;
+  }
+  }
+  @media (min-width: 1020px) and (max-width: 1120px){
+    .grid-row {
+      padding: 29px 100px;
+    }
+
+    .promo-heading{
+      font-size: 54px;
+    }
+    .promo-button{
+      font-size: 26px;
+      padding: 1px 30px;
+    }
+    .promo-element.top-left {
+      top: -64%;
+      left: 30%;
+      width: 280px;
+      height: 280px;
+  }
+  .promo-element.top-right {
+    top: -10%;
+    right: 21%;
+    width: 80px;
+    height: 80px;
+  }
+  .promo-element.middle-left {
+    top: 71%;
+    left: -31%;
+    width: 500px;
+    height: 500px;
+    rotate: -19deg;
+  }
+  .promo-element.middle-right {
+    top: 73%;
+    right: -16%;
+    width: 300px;
+    height: 400px;
+    rotate: 20deg;
+  }
+  .promo-element.bottom-left {
+    bottom: -13%;
+    left: 30%;
+    width: 80px;
+    height: 80px;
+  }
+  .promo-element.bottom-right {
+    bottom: -42%;
+    right: 23%;
+    width: 200px;
+    height: 200px;
+    rotate: 5deg;
+  }
+  }
+  @media (min-width: 968px) and (max-width: 1020px){
+    .grid-row {
+      padding: 29px 80px;
+    }
+
+    .promo-heading{
+      font-size: 54px;
+    }
+    .promo-button{
+      font-size: 26px;
+      padding: 1px 30px;
+    }
+    .promo-element.top-left {
+      top: -64%;
+      left: 30%;
+      width: 280px;
+      height: 280px;
+  }
+  .promo-element.top-right {
+    top: -10%;
+    right: 21%;
+    width: 80px;
+    height: 80px;
+  }
+  .promo-element.middle-left {
+    top: 71%;
+    left: -31%;
+    width: 500px;
+    height: 500px;
+    rotate: -19deg;
+  }
+  .promo-element.middle-right {
+    top: 73%;
+    right: -16%;
+    width: 300px;
+    height: 400px;
+    rotate: 20deg;
+  }
+  .promo-element.bottom-left {
+    bottom: -13%;
+    left: 30%;
+    width: 80px;
+    height: 80px;
+  }
+  .promo-element.bottom-right {
+    bottom: -42%;
+    right: 23%;
+    width: 200px;
+    height: 200px;
+    rotate: 5deg;
+  }
+  }
+  @media (min-width: 868px) and (max-width: 968px){
+    .grid-row {
+      padding: 29px 80px;
+    }
+
+    .promo-heading{
+      font-size: 54px;
+      padding: 0px 90px;
+    }
+    .promo-button{
+      font-size: 26px;
+      padding: 1px 30px;
+    }
+    .promo-element.top-left {
+      top: -60%;
+      left: 30%;
+      width: 280px;
+      height: 280px;
+  }
+  .promo-element.top-right {
+    top: -10%;
+    right: 21%;
+    width: 80px;
+    height: 80px;
+  }
+  .promo-element.middle-left {
+    top: 71%;
+    left: -16%;
+    width: 500px;
+    height: 500px;
+    rotate: -19deg;
+  }
+  .promo-element.middle-right {
+    top: 73%;
+    right: -4%;
+    width: 300px;
+    height: 400px;
+    rotate: 20deg;
+  }
+  .promo-element.bottom-left {
+    bottom: -13%;
+    left: 30%;
+    width: 80px;
+    height: 80px;
+  }
+  .promo-element.bottom-right {
+    bottom: -42%;
+    right: 23%;
+    width: 200px;
+    height: 200px;
+    rotate: 5deg;
+  }
+  }
+  @media (min-width: 768px) and (max-width: 868px){
+    .grid-row {
+      padding: 29px 60px;
+    }
+
+    .promo-heading{
+      font-size: 54px;
+      padding: 0px 90px;
+    }
+    .promo-button{
+      font-size: 26px;
+      padding: 1px 30px;
+    }
+    .promo-element.top-left {
+      top: -60%;
+      left: 30%;
+      width: 280px;
+      height: 280px;
+  }
+  .promo-element.top-right {
+    top: -10%;
+    right: 21%;
+    width: 80px;
+    height: 80px;
+  }
+  .promo-element.middle-left {
+    top: 71%;
+    left: -16%;
+    width: 500px;
+    height: 500px;
+    rotate: -19deg;
+  }
+  .promo-element.middle-right {
+    top: 73%;
+    right: -4%;
+    width: 300px;
+    height: 400px;
+    rotate: 20deg;
+  }
+  .promo-element.bottom-left {
+    bottom: -13%;
+    left: 30%;
+    width: 80px;
+    height: 80px;
+  }
+  .promo-element.bottom-right {
+    bottom: -42%;
+    right: 23%;
+    width: 200px;
+    height: 200px;
+    rotate: 5deg;
+  }
+  }
+  @media (min-width: 668px) and (max-width: 768px){
+    .grid-row {
+      padding: 29px 60px;
+    }
+
+    .promo-heading{
+      font-size: 46px;
+      padding: 0px 110px;
+    }
+    .promo-button{
+      font-size: 26px;
+      padding: 1px 30px;
+    }
+    .promo-element.top-left {
+      top: -70%;
+      left: 30%;
+      width: 280px;
+      height: 280px;
+  }
+  .promo-element.top-right {
+    top: -10%;
+    right: 21%;
+    width: 80px;
+    height: 80px;
+  }
+  .promo-element.middle-left {
+    top: 71%;
+    left: -16%;
+    width: 500px;
+    height: 500px;
+    rotate: -19deg;
+  }
+  .promo-element.middle-right {
+    top: 73%;
+    right: -4%;
+    width: 300px;
+    height: 400px;
+    rotate: 20deg;
+  }
+  .promo-element.bottom-left {
+    bottom: -13%;
+    left: 30%;
+    width: 80px;
+    height: 80px;
+  }
+  .promo-element.bottom-right {
+    bottom: -42%;
+    right: 23%;
+    width: 200px;
+    height: 200px;
+    rotate: 5deg;
+  }
+  }
+  @media (min-width: 568px) and (max-width: 668px){
+    .grid-row {
+      padding: 29px 60px;
+    }
+
+    .promo-heading{
+      font-size: 40px;
+      padding: 0px 110px;
+    }
+    .promo-button{
+      font-size: 26px;
+      padding: 1px 30px;
+    }
+    .promo-element.top-left {
+      top: -110%;
+      left: 30%;
+      width: 280px;
+      height: 280px;
+  }
+  .promo-element.top-right {
+    top: -22%;
+    right: 21%;
+    width: 80px;
+    height: 80px;
+  }
+  .promo-element.middle-left {
+    top: 71%;
+    left: -30%;
+    width: 500px;
+    height: 500px;
+    rotate: -19deg;
+  }
+  .promo-element.middle-right {
+    top: 73%;
+    right: -12%;
+    width: 300px;
+    height: 400px;
+    rotate: 20deg;
+  }
+  .promo-element.bottom-left {
+    bottom: -19%;
+    left: 24%;
+    width: 80px;
+    height: 80px;
+  }
+  .promo-element.bottom-right {
+    bottom: -75%;
+    right: 21%;
+    width: 200px;
+    height: 200px;
+    rotate: 5deg;
+  }
+  }
+  @media (min-width: 468px) and (max-width: 568px){
+    .grid-row {
+      padding: 29px 60px;
+    }
+
+    .promo-heading{
+      font-size: 36px;
+      padding: 0px 90px;
+    }
+    .promo-button{
+      font-size: 20px;
+      padding: 1px 25px;
+    }
+    .promo-element.top-left {
+      top: -110%;
+      left: 30%;
+      width: 280px;
+      height: 280px;
+  }
+  .promo-element.top-right {
+    top: -22%;
+    right: 21%;
+    width: 80px;
+    height: 80px;
+  }
+  .promo-element.middle-left {
+    top: 71%;
+    left: -30%;
+    width: 500px;
+    height: 500px;
+    rotate: -19deg;
+  }
+  .promo-element.middle-right {
+    top: 73%;
+    right: -12%;
+    width: 300px;
+    height: 400px;
+    rotate: 20deg;
+  }
+  .promo-element.bottom-left {
+    bottom: -19%;
+    left: 24%;
+    width: 80px;
+    height: 80px;
+  }
+  .promo-element.bottom-right {
+    bottom: -75%;
+    right: 21%;
+    width: 200px;
+    height: 200px;
+    rotate: 5deg;
+  }
+  }
+  @media (min-width: 368px) and (max-width: 468px){
+    .grid-row {
+      padding: 29px 60px;
+    }
+
+    .promo-heading{
+      font-size: 32px;
+      padding: 0px 50px;
+    }
+    .promo-button{
+      font-size: 15px;
+      padding: 1px 25px;
+    }
+    .promo-element.top-left {
+      top: -33%;
+      left: 30%;
+      width: 100px;
+      height: 100px;
+  }
+  .promo-element.top-right {
+    top: -5%;
+    right: 27%;
+    width: 44px;
+    height: 44px;
+  }
+  .promo-element.middle-left {
+    top: 90%;
+    left: -9%;
+    width: 281px;
+    height: 481px;
+    rotate: -19deg;
+  }
+  .promo-element.middle-right {
+    top: 73%;
+    right: 7%;
+    width: 117px;
+    height: 317px;
+    rotate: 20deg;
+  }
+  .promo-element.bottom-left {
+    bottom: -9%;
+    left: 25%;
+    width: 44px;
+    height: 44px;
+  }
+  .promo-element.bottom-right {
+    bottom: -35%;
+    right: 18%;
+    width: 185px;
+    height: 100px;
+    rotate: 5deg;
+  }
+  }
+  @media (min-width: 268px) and (max-width: 368px){
+    .grid-row {
+      padding: 29px 60px;
+    }
+
+    .promo-heading{
+      font-size: 28px;
+      padding: 0px 40px;
+    }
+    .promo-button{
+      font-size: 15px;
+      padding: 1px 25px;
+    }
+    .promo-element.top-left {
+      top: -33%;
+      left: 30%;
+      width: 100px;
+      height: 100px;
+  }
+  .promo-element.top-right {
+    top: -5%;
+    right: 27%;
+    width: 44px;
+    height: 44px;
+  }
+  .promo-element.middle-left {
+    top: 77%;
+    left: -16%;
+    width: 281px;
+    height: 481px;
+    rotate: -19deg;
+  }
+  .promo-element.middle-right {
+    top: 74%;
+    right: 4%;
+    width: 117px;
+    height: 317px;
+    rotate: 20deg;
+  }
+  .promo-element.bottom-left {
+    bottom: -9%;
+    left: 29%;
+    width: 44px;
+    height: 44px;
+  }
+  .promo-element.bottom-right {
+    bottom: -35%;
+    right: 12%;
+    width: 185px;
+    height: 100px;
+    rotate: 5deg;
+  }
+  }
+  @media (max-width: 268px){
+    .grid-row {
+      padding: 29px 60px;
+    }
+
+    .promo-heading{
+      font-size: 28px;
+      padding: 0px 40px;
+    }
+    .promo-button{
+      font-size: 15px;
+      padding: 1px 25px;
+    }
+    .promo-element.top-left {
+      top: -33%;
+      left: 30%;
+      width: 100px;
+      height: 100px;
+  }
+  .promo-element.top-right {
+    top: -5%;
+    right: 27%;
+    width: 44px;
+    height: 44px;
+  }
+  .promo-element.middle-left {
+    top: 77%;
+    left: -16%;
+    width: 281px;
+    height: 481px;
+    rotate: -19deg;
+  }
+  .promo-element.middle-right {
+    top: 74%;
+    right: 4%;
+    width: 117px;
+    height: 317px;
+    rotate: 20deg;
+  }
+  .promo-element.bottom-left {
+    bottom: -9%;
+    left: 29%;
+    width: 44px;
+    height: 44px;
+  }
+  .promo-element.bottom-right {
+    bottom: -35%;
+    right: 12%;
+    width: 185px;
+    height: 100px;
+    rotate: 5deg;
+  }
+  }
+  /* Questions promo block styles - lime green with orange button */
+  /* Match product-image-wrapper structure exactly */
+  .promo-block-questions {
+    position: relative;
+    padding-top: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #95C940;
+    transition: all 0.3s ease;
+  }
+
+  .promo-block-questions-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+  }
+
+  .promo-content-questions {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    width: 100%;
+  }
+
+  .promo-heading-questions {
+    font-weight: 900;
+    color: #fef9e7;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    line-height: 1.2;
+    text-transform: lowercase;
+    padding: 0px;
+    text-align: center;
+  }
+
+  .promo-button-questions {
+    display: inline-block;
+    background: #F58220;
+    color: #5D3328;
+    padding: 15px 50px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: lowercase;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    border: none;
+    cursor: pointer;
+    margin: 0 auto;
+  }
+
+  .promo-button-questions:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .promo-element-questions {
+    position: absolute;
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .promo-element-questions img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+  /* Vegetable positions for questions block */
+  
+  
+  /* Hover animations for questions block */
+  .promo-block-questions:hover .promo-element-questions.veg-top-left {
+    transform: translateX(-10px) translateY(-10px) scale(1.05);
+  }
+
+  .promo-block-questions:hover .promo-element-questions.veg-top-center {
+    transform: translateX(-50%) translateY(-10px) scale(1.05);
+  }
+
+  .promo-block-questions:hover .promo-element-questions.veg-top-right {
+    transform: translateX(10px) translateY(-10px) scale(1.05);
+  }
+
+  .promo-block-questions:hover .promo-element-questions.veg-bottom-left {
+    transform: translateX(-10px) translateY(10px) scale(1.05);
+  }
+
+  .promo-block-questions:hover .promo-element-questions.veg-bottom-center {
+    transform: translateX(-50%) translateY(10px) scale(1.05);
+  }
+
+  .promo-block-questions:hover .promo-element-questions.veg-bottom-right {
+    transform: translateX(10px) translateY(10px) scale(1.05);
+  }
+  
+
+  /* Responsive styles for questions block */
+  @media (max-width: 768px) {
+    .promo-block-questions {
+      padding-top: 0;
+      height: 200px;
+    }
+    .promo-heading-questions {
+      font-size: 48px;
+      padding: 0px 20px;
+    }
+    .promo-button-questions {
+      font-size: 16px;
+      padding: 12px 40px;
+    }
+    .promo-element-questions {
+      width: 80px !important;
+      height: 80px !important;
+    }
+    .promo-block-questions-inner {
+      padding: 20px;
+    }
+  }
+
+  @media (max-width: 968px) {
+    .grid-row {
+      padding: 29px 60px;
+    }
+    .grid-item {
+      width: calc(50% - 15px) !important;
+      min-width: calc(50% - 15px) !important;
+    }
+    .grid-item.promo-item {
+    width: 100% !important;
+    min-width: 100% !important;
+  }
+  }
+  @media (max-width: 768px) {
+     .new-badge{
+      display:none;
+    }
+    .grid-row{
+    padding:30px !important;
+    gap:12px;
+    }
+
+  /* Product blocks stay 50% */
+  .grid-item.product-item {
+    width: calc(50% - 12px) !important;
+    min-width: calc(50% - 12px) !important;
+  }
+
+  /* Promo block FULL width */
+  .grid-item.promo-item {
+    width: 100% !important;
+    min-width: 100% !important;
+  }
+  
+  /* Promo block FULL width */
+  .grid-item.promo-item {
+    width: 100% !important;
+    min-width: 100% !important;
+  }
+    
+    .promo-block {
+      padding: 40px 0px;
+      min-height: 200px;
+    }
+      
+    .product-title {
+    font-size: 18px !important;
+  }
+
+  .product-description {
+  font-size: 16px !important;
+  }
+
+.default-img{
+    width:32px;
+    height:30px;
+  }
+
+  .hover-img{
+    width:32px !important;
+    height:30px !important;
+  }
+
+  .new-badge{
+     top:10px;
+     left:-2px;
+  }
+
+  .new-badge img {
+    max-width:35% !important;
+  }
+
+.promo-block{
+  padding:0 !important;
+}
+  }
+</style>
+
+<div class="page-width-container">
+  <div class="custom-collection-grid">
+    <div class="grid-row">
+    {% for block in section.blocks %}
+      <div class="grid-item {% if block.type == 'promo_block' %}promo-item{% elsif block.type == 'promo_block_questions' %}promo-item{% else %}product-item{% endif %}"
+           style="width: calc({{ block.settings.block_width }}% - 20px); min-width: calc({{ block.settings.block_width }}% - 20px);"
+           {{ block.shopify_attributes }}>
+        
+        {% if block.type == 'product' %}
+          {% assign product = block.settings.product %}
+          {% assign product_url = product.url | default: '#' %}
+          
+          <a href="{{ product_url }}" class="product-card-link">
+            <div class="product-card">
+              <div class="product-image-wrapper {% unless block.settings.show_second_image and product.images[1] %}no-second-image{% endunless %}">
+                {% if product.featured_image %}
+                  <img class="product-image primary" 
+                       src="{{ product.featured_image | img_url: '600x' }}" 
+                       alt="{{ product.title }}"
+                       loading="lazy">
+                  
+                  {% if block.settings.show_second_image and product.images[1] %}
+                    <img class="product-image secondary" 
+                         src="{{ product.images[1] | img_url: '600x' }}" 
+                         alt="{{ product.title }}"
+                         loading="lazy">
+                  {% endif %}
+                {% else %}
+                  <div class="product-image primary" style="background: #e0e0e0;"></div>
+                {% endif %}
+                
+                {% if block.settings.show_new_badge %}
+                  <div class="new-badge">
+                    {% if block.settings.new_badge_image %}
+                      <img src="{{ block.settings.new_badge_image | img_url: '300x' }}" alt="New!" loading="lazy">
+                    {% elsif block.settings.new_badge_default_image %}
+                      <img src="{{ block.settings.new_badge_default_image | img_url: '300x' }}" alt="New!" loading="lazy">
+                    {% else %}
+                      <div class="new-badge-text">new!</div>
+                    {% endif %}
+                  </div>
+                {% endif %}
+                
+                {% if block.settings.icon_link != blank %}
+                  <a href="{{ block.settings.icon_link }}" 
+                     class="search-icon"
+                     {% if block.settings.icon_open_new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}
+                     onclick="event.stopPropagation();">
+                    {% if block.settings.search_icon %}
+                      <div class="search-icon-wrapper">
+                        <img class="search-icon-img default-img" 
+                             src="{{ block.settings.search_icon | img_url: '100x' }}" 
+                             alt="Quick view">
+                        {% if block.settings.search_icon_hover %}
+                          <img class="search-icon-img hover-img" 
+                               src="{{ block.settings.search_icon_hover | img_url: '100x' }}" 
+                               alt="Quick view">
+                        {% else %}
+                          <img class="search-icon-img hover-img" 
+                               src="https://cdn.shopify.com/s/files/1/0577/3957/5488/files/ChatGPT_Image_Dec_2_2025_06_51_07_PM.png?v=1764681680" 
+                               alt="Quick view">
+                        {% endif %}
+                      </div>
+                    {% else %}
+                      <img class="product-image secondary" 
+                         src="https://cdn.shopify.com/s/files/1/0577/3957/5488/files/store_locator_QB.png?v=1764680849" 
+                         alt="{{ product.title }}"
+                         loading="lazy">
+                    {% endif %}
+                  </a>
+                {% else %}
+                  <div class="search-icon">
+                    {% if block.settings.search_icon %}
+                      <div class="search-icon-wrapper">
+                        <img class="search-icon-img default-img" 
+                             src="{{ block.settings.search_icon | img_url: '100x' }}" 
+                             alt="Search">
+                        {% if block.settings.search_icon_hover %}
+                          <img class="search-icon-img hover-img" 
+                               src="{{ block.settings.search_icon_hover | img_url: '100x' }}" 
+                               alt="Search">
+                        {% else %}
+                          <img class="search-icon-img hover-img" 
+                               src="https://cdn.shopify.com/s/files/1/0577/3957/5488/files/ChatGPT_Image_Dec_2_2025_06_51_07_PM.png?v=1764681680" 
+                               alt="Search">
+                        {% endif %}
+                      </div>
+                    {% else %}
+                    <img class="search-icon-img hover-img" 
+                               src="https://cdn.shopify.com/s/files/1/0577/3957/5488/files/ChatGPT_Image_Dec_2_2025_06_51_07_PM.png?v=1764681680" 
+                               alt="Search">
+                    {% endif %}
+                  </div>
+                {% endif %}
+              </div>
+              
+              <div class="product-info">
+                <h3 class="product-title">{{ product.title }}</h3>
+                <p class="product-description">{{ block.settings.custom_description }}</p>
+              </div>
+            </div>
+          </a>
+        {% endif %}
+        
+        {% if block.type == 'promo_block' %}
+          <div class="promo-block">
+            <div class="promo-block-inner" style="background: {{ block.settings.background_color }};">
+              {% if block.settings.vegetable_top_left %}
+                <div class="promo-element top-left">
+                  <img src="{{ block.settings.vegetable_top_left | img_url: 'master' }}" alt="">
+                </div>
+              {% endif %}
+              {% if block.settings.vegetable_top_right %}
+                <div class="promo-element top-right">
+                  <img src="{{ block.settings.vegetable_top_right | img_url: 'master' }}" alt="">
+                </div>
+              {% endif %}
+              {% if block.settings.vegetable_middle_left %}
+                <div class="promo-element middle-left">
+                  <img src="{{ block.settings.vegetable_middle_left | img_url: 'master' }}" alt="">
+                </div>
+              {% endif %}
+              {% if block.settings.vegetable_middle_right %}
+                <div class="promo-element middle-right">
+                  <img src="{{ block.settings.vegetable_middle_right | img_url: 'master' }}" alt="">
+                </div>
+              {% endif %}
+              {% if block.settings.vegetable_bottom_left %}
+                <div class="promo-element bottom-left">
+                  <img src="{{ block.settings.vegetable_bottom_left | img_url: 'master' }}" alt="">
+                </div>
+              {% endif %}
+              {% if block.settings.vegetable_bottom_right %}
+                <div class="promo-element bottom-right">
+                  <img src="{{ block.settings.vegetable_bottom_right | img_url: 'master' }}" alt="">
+                </div>
+              {% endif %}
+              <div class="promo-content">
+                {% if block.settings.heading != blank %}
+                  <h2 class="promo-heading" style="color: {{ block.settings.heading_color | default: '#2C5F2D' }};">{{ block.settings.heading }}</h2>
+                {% endif %}
+                {% if block.settings.button_text != blank and block.settings.button_link != blank %}
+                  <a href="{{ block.settings.button_link }}" class="promo-button">
+                    {{ block.settings.button_text }}
+                  </a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        {% endif %}
+
+        {% if block.type == 'promo_block_questions' %}
+          <div class="promo-block-questions">
+            <div class="promo-block-questions-inner">
+              {% if block.settings.vegetable_top_left %}
+                <div class="promo-element-questions veg-top-left">
+                  <img src="{{ block.settings.vegetable_top_left | img_url: 'master' }}" alt="">
+                </div>
+              {% endif %}
+              {% if block.settings.vegetable_top_center %}
+                <div class="promo-element-questions veg-top-center">
+                  <img src="{{ block.settings.vegetable_top_center | img_url: 'master' }}" alt="">
+                </div>
+              {% endif %}
+              {% if block.settings.vegetable_top_right %}
+                <div class="promo-element-questions veg-top-right">
+                  <img src="{{ block.settings.vegetable_top_right | img_url: 'master' }}" alt="">
+                </div>
+              {% endif %}
+              {% if block.settings.vegetable_bottom_left %}
+                <div class="promo-element-questions veg-bottom-left">
+                  <img src="{{ block.settings.vegetable_bottom_left | img_url: 'master' }}" alt="">
+                </div>
+              {% endif %}
+              {% if block.settings.vegetable_bottom_center %}
+                <div class="promo-element-questions veg-bottom-center">
+                  <img src="{{ block.settings.vegetable_bottom_center | img_url: 'master' }}" alt="">
+                </div>
+              {% endif %}
+              {% if block.settings.vegetable_bottom_right %}
+                <div class="promo-element-questions veg-bottom-right">
+                  <img src="{{ block.settings.vegetable_bottom_right | img_url: 'master' }}" alt="">
+                </div>
+              {% endif %}
+              <div class="promo-content-questions">
+                {% if block.settings.heading != blank %}
+                  <h2 class="promo-heading-questions">{{ block.settings.heading }}</h2>
+                {% endif %}
+                {% if block.settings.button_text != blank and block.settings.button_link != blank %}
+                  <a href="{{ block.settings.button_link }}" class="promo-button-questions">
+                    {{ block.settings.button_text }}
+                  </a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        {% endif %}
+        
+      </div>
+    {% endfor %}
+  </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Collection Grid",
+  "settings": [
+    {
+      "type": "color",
+      "id": "section_background",
+      "label": "Section Background Color",
+      "default": "#f5f5dc"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "range",
+          "id": "block_width",
+          "min": 10,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "Block Width",
+          "default": 30
+        },
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Select Product"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_new_badge",
+          "label": "Show 'new!' Badge",
+          "default": false
+        },
+        {
+          "type": "image_picker",
+          "id": "new_badge_image",
+          "label": "Badge Image",
+          "info": "Upload a custom image for the 'new!' badge. If not provided, default image or text will be used."
+        },
+        {
+          "type": "image_picker",
+          "id": "new_badge_default_image",
+          "label": "Default Badge Image",
+          "info": "Upload a default image to use when no custom badge image is provided. If neither is provided, text badge will be shown."
+        },
+        {
+          "type": "checkbox",
+          "id": "show_second_image",
+          "label": "Show Second Image on Hover",
+          "default": true,
+          "info": "Display the second product image when hovering over the card"
+        },
+        {
+          "type": "text",
+          "id": "custom_description",
+          "label": "Custom Description",
+          "default": "Product description"
+        },
+        {
+          "type": "header",
+          "content": "Search Icon Settings"
+        },
+        {
+          "type": "image_picker",
+          "id": "search_icon",
+          "label": "Custom Search Icon (Optional)",
+          "info": "Upload a custom search icon. If not provided, default SVG icon will be used."
+        },
+        {
+          "type": "image_picker",
+          "id": "search_icon_hover",
+          "label": "Search Icon Hover Image (Optional)",
+          "info": "Upload an image to show when hovering over the search icon. If not provided, default hover effect will be used."
+        },
+        {
+          "type": "url",
+          "id": "icon_link",
+          "label": "Icon Button Link (Optional)",
+          "info": "Add a link to the search icon button. Leave empty to disable clicking."
+        },
+        {
+          "type": "checkbox",
+          "id": "icon_open_new_tab",
+          "label": "Open Icon Link in New Tab",
+          "default": false
+        }
+      ]
+    },
+   {
+      "type": "promo_block",
+      "name": "Promotional Block",
+      "settings": [
+        {
+          "type": "range",
+          "id": "block_width",
+          "min": 10,
+          "max": 100,
+          "step": 5,
+          "unit": "%",
+          "label": "Block Width",
+          "default": 40
+        },
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Background Color",
+          "default": "#F58220"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "ingredients + nutrition"
+        },
+        {
+          "type": "color",
+          "id": "heading_color",
+          "label": "Heading Color",
+          "default": "#2C5F2D"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Label",
+          "default": "learn more"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        },
+        {
+          "type": "header",
+          "content": "Vegetable Images (6 positions)"
+        },
+        {
+          "type": "image_picker",
+          "id": "vegetable_top_left",
+          "label": "Vegetable - Top Left"
+        },
+        {
+          "type": "image_picker",
+          "id": "vegetable_top_right",
+          "label": "Vegetable - Top Right"
+        },
+        {
+          "type": "image_picker",
+          "id": "vegetable_middle_left",
+          "label": "Vegetable - Middle Left"
+        },
+        {
+          "type": "image_picker",
+          "id": "vegetable_middle_right",
+          "label": "Vegetable - Middle Right"
+        },
+        {
+          "type": "image_picker",
+          "id": "vegetable_bottom_left",
+          "label": "Vegetable - Bottom Left"
+        },
+        {
+          "type": "image_picker",
+          "id": "vegetable_bottom_right",
+          "label": "Vegetable - Bottom Right"
+        }
+      ]
+    },
+    {
+      "type": "promo_block_questions",
+      "name": "Promo Q&A Block",
+      "settings": [
+        {
+          "type": "range",
+          "id": "block_width",
+          "min": 10,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "Block Width",
+          "default": 30
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "got questions?"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Label",
+          "default": "learn more"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        },
+        {
+          "type": "header",
+          "content": "Vegetable Images (6 positions)"
+        },
+        {
+          "type": "image_picker",
+          "id": "vegetable_top_left",
+          "label": "Vegetable - Top Left Corner"
+        },
+        {
+          "type": "image_picker",
+          "id": "vegetable_top_center",
+          "label": "Vegetable - Top Center"
+        },
+        {
+          "type": "image_picker",
+          "id": "vegetable_top_right",
+          "label": "Vegetable - Top Right Corner"
+        },
+        {
+          "type": "image_picker",
+          "id": "vegetable_bottom_left",
+          "label": "Vegetable - Bottom Left Corner"
+        },
+        {
+          "type": "image_picker",
+          "id": "vegetable_bottom_center",
+          "label": "Vegetable - Bottom Center"
+        },
+        {
+          "type": "image_picker",
+          "id": "vegetable_bottom_right",
+          "label": "Vegetable - Bottom Right Corner"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Collection Grid",
+      "blocks": [
+        {
+          "type": "product",
+          "settings": {
+            "block_width": 30
+          }
+        },
+        {
+          "type": "product",
+          "settings": {
+            "block_width": 30
+          }
+        },
+        {
+          "type": "product",
+          "settings": {
+            "block_width": 30
+          }
+        },
+        {
+          "type": "product",
+          "settings": {
+            "block_width": 30
+          }
+        },
+        {
+          "type": "promo_block",
+          "settings": {
+            "block_width": 60
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
