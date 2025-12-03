@@ -284,6 +284,56 @@
     margin-top: 40px;
   }
 
+  .veggie-buttons .button--primary{
+  background: transparent!important;
+  color: #0F4735;
+  font-family: "GT Walsheim";
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 44px;
+  text-decoration: none;
+  box-shadow: none;
+  cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease;
+  text-align: center;
+  border-radius: 35px;
+  padding: 8px 34px;
+  border: none;
+  text-transform: lowercase;
+    transform: none !important;
+}
+
+.veggie-buttons .button--primary:before {
+   background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_23_2.png?v=1764592651);
+  background-size: 100% 100%;
+  z-index: 2;
+}
+
+.veggie-buttons .button--primary span{
+  z-index: 3;
+}
+
+.veggie-buttons .button--primary:after {
+  content: '';
+   background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_25.png?v=1764592665);
+  background-size: 100% 100%;
+  padding: 8px 34px;
+  bottom: -5px;
+  z-index: 1;
+  box-shadow: none;
+}
+
+
+.veggie-buttons .button--primary:hover:before {
+  background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_23_3.png?v=1764592664) !important;
+  background-size: 100% 100% !important;
+}
+
+.veggie-buttons .button--primary:hover:after{
+  bottom: -5px;
+  box-shadow: none;
+}
+
 
   /* Animation styles for group image */
   [data-animation="grow"] .veggie-product-card:hover .veggie-group-image {
