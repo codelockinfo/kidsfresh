@@ -46,9 +46,9 @@
   display: flex;
   gap: 10px;
 }
-/* .footer__blocks-wrapper.grid {
+.footer__blocks-wrapper.grid.scroll-trigger.animate--slide-in {
   gap: 40px;
-} */
+}
 }
 
 @media screen and (max-width: 749px) {
