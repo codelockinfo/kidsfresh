@@ -98,33 +98,83 @@
         "padding_bottom": 60
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
-      "disabled": true,
+    "ungredients_new_TD3qHQ": {
+      "type": "ungredients-new",
+      "blocks": {
+        "ungredient_RYL8mM": {
+          "type": "ungredient",
+          "settings": {
+            "title": "Nothing artificial",
+            "description": "No fake outs, just the real deal",
+            "percentage": "0%"
+          }
+        },
+        "ungredient_xVpryg": {
+          "type": "ungredient",
+          "settings": {
+            "title": "No antibiotics",
+            "description": "We're pro real healthy ingredients",
+            "percentage": "0%"
+          }
+        },
+        "ungredient_zXaXyn": {
+          "type": "ungredient",
+          "settings": {
+            "title": "No preservatives",
+            "description": "Our meals are frozen fresh",
+            "percentage": "0%"
+          }
+        },
+        "ungredient_BeNn7F": {
+          "type": "ungredient",
+          "settings": {
+            "title": "No GMOs",
+            "description": "We're sticking with Mother Nature",
+            "percentage": "0%"
+          }
+        },
+        "ungredient_PFW76w": {
+          "type": "ungredient",
+          "settings": {
+            "title": "No synthetic food dyes",
+            "description": "Keeping it real and colorful",
+            "percentage": "0%"
+          }
+        },
+        "ungredient_crEVnX": {
+          "type": "ungredient",
+          "settings": {
+            "title": "No BPA in packaging",
+            "description": "We're helping grow big brains",
+            "percentage": "0%"
+          }
+        }
+      },
+      "block_order": [
+        "ungredient_RYL8mM",
+        "ungredient_xVpryg",
+        "ungredient_zXaXyn",
+        "ungredient_BeNn7F",
+        "ungredient_PFW76w",
+        "ungredient_crEVnX"
+      ],
+      "name": "Ungredients",
       "settings": {
-        "collection": "all",
-        "products_to_show": 8,
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "columns_desktop": 4,
-        "enable_desktop_slider": false,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "color_scheme": "scheme-1",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 44,
-        "padding_bottom": 36
+        "background_image": "shopify://shop_images/Group_281.png",
+        "mobile_background_image": "shopify://shop_images/iPhone_14_15_Pro_Max_-_1_1_223d44e0-29b8-4299-975c-40feed83673b.png",
+        "background_color": "#ffffff",
+        "title": "ungredients",
+        "subtitle": "<p>What doesn't go into our meals is just as important as what does.</p>",
+        "footer_text": "Built with what matters most: real ingredients, balanced nutrition, and vegetables in disguise. Every meal is designed to support strong bodies, growing minds, and stress-free mealtimes.",
+        "button_text": "our mission",
+        "button_url": "",
+        "accent_color": "rgba(15, 71, 53, 1)",
+        "title_color": "rgba(15, 71, 53, 1)",
+        "subtitle_color": "rgba(15, 71, 53, 1)",
+        "card_bg_color": "rgba(241, 234, 217, 1)",
+        "button_bg_color": "rgba(241, 234, 217, 1)",
+        "button_text_color": "rgba(15, 71, 53, 1)",
+        "button_border_color": "rgba(15, 71, 53, 1)"
       }
     },
     "instra_reel_J97KgH": {
@@ -218,7 +268,7 @@
   "order": [
     "custom_banner_slider_tB6fwN",
     "custom_slider_Bgan3G",
-    "featured_collection",
+    "ungredients_new_TD3qHQ",
     "instra_reel_J97KgH"
   ]
 }
