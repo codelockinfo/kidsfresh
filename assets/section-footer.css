@@ -26,6 +26,7 @@
 }
 .footer-block__details-content.list-unstyled {
   display: flex;
+  justify-content: end;
   gap: 20px;
 }
 }
@@ -44,11 +45,12 @@
 }
 .footer-block__details-content.list-unstyled {
   display: flex;
+  justify-content: end;
   gap: 10px;
 }
-.footer__blocks-wrapper.grid.scroll-trigger.animate--slide-in {
+/* .footer__blocks-wrapper.grid.scroll-trigger.animate--slide-in {
   gap: 40px;
-}
+} */
 }
 
 @media screen and (max-width: 749px) {
