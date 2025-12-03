@@ -70,70 +70,63 @@
         "btn_link": ""
       }
     },
-    "custom_slider_ejweJT": {
+    "custom_slider_wDxc4w": {
       "type": "custom-slider",
       "blocks": {
-        "column_TxtiFx": {
+        "column_LtCLAW": {
           "type": "column",
           "settings": {
-            "icon": "shopify://shop_images/wh.svg",
             "heading": "Wh",
             "preheading": "Wholesome ingredients",
             "description": "We use the kind of real ingredients you'd use in your own kitchen."
           }
         },
-        "column_wkVPig": {
+        "column_qnEB66": {
           "type": "column",
           "settings": {
-            "icon": "shopify://shop_images/pro.svg",
             "heading": "Pro",
             "preheading": "Protein power",
             "description": "Protein helps growing bodies and brains stay strong and energized."
           }
         },
-        "column_43633K": {
+        "column_qwcrPF": {
           "type": "column",
           "settings": {
-            "icon": "shopify://shop_images/Vector_5.png",
             "heading": "Vi",
             "preheading": "Vitamin boost",
             "description": "Our ingredients naturally provide the vitamins kids need in every bite."
           }
         },
-        "column_3yQAEp": {
+        "column_rNkdn8": {
           "type": "column",
           "settings": {
-            "icon": "shopify://shop_images/cr.svg",
             "heading": "Cr",
             "preheading": "Calcium rich",
             "description": "Calcium supports strong bones and teeth—and happy smiling kids."
           }
         },
-        "column_Fd7Nkt": {
+        "column_73b7Ex": {
           "type": "column",
           "settings": {
-            "icon": "shopify://shop_images/Vector.png",
             "heading": "In",
-            "preheading": "Ingredientinfo",
+            "preheading": "Ingredient info",
             "description": "Learn more about our ingredients and how they make our meals winners."
           }
         }
       },
       "block_order": [
-        "column_TxtiFx",
-        "column_wkVPig",
-        "column_43633K",
-        "column_3yQAEp",
-        "column_Fd7Nkt"
+        "column_LtCLAW",
+        "column_qnEB66",
+        "column_qwcrPF",
+        "column_rNkdn8",
+        "column_73b7Ex"
       ],
       "name": "Winning Ingredients",
       "settings": {
         "title": "winning ingredients",
         "heading_alignment": "center",
         "title_color": "#ffffff",
-        "background_color": "#0f4735",
-        "background_image_left": "shopify://shop_images/image_124.png",
-        "background_image_right": "shopify://shop_images/image_66.png",
+        "background_color": "#1a4d3a",
         "enable_mobile_slider": true,
         "button_label": "ingredients",
         "button_link": "",
@@ -334,7 +327,7 @@
     "featured_collection",
     "video_slideshow_E3wNyd",
     "custom_banner_slider_tB6fwN",
-    "custom_slider_ejweJT",
+    "custom_slider_wDxc4w",
     "ungredients_new_xNg3Kg",
     "custom_liquid_R9NxxV",
     "instra_reel_J97KgH"
