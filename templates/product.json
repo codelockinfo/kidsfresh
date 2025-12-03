@@ -114,11 +114,60 @@
         "plate_image": "shopify://shop_images/image_222.png",
         "plate_alt_text": "Plate with food"
       }
+    },
+    "veggitable_animation_PHUgVh": {
+      "type": "veggitable-animation",
+      "blocks": {
+        "product_L8dKih": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/222.png",
+            "title": "",
+            "description": "",
+            "veggie_group_image": "shopify://shop_images/vegitable_1.png"
+          }
+        },
+        "product_GXaVb4": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/image_193_1_1eba0cc1-1993-457a-a89a-36b2d14896ea.png",
+            "title": "",
+            "description": "",
+            "veggie_group_image": "shopify://shop_images/vegitable-2.png"
+          }
+        },
+        "product_aRTgyN": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/image_190_1_9de59543-9520-4866-915d-00b53f3af609.png",
+            "title": "",
+            "description": "",
+            "veggie_group_image": "shopify://shop_images/vegitable_3.png"
+          }
+        }
+      },
+      "block_order": [
+        "product_L8dKih",
+        "product_GXaVb4",
+        "product_aRTgyN"
+      ],
+      "name": "Veggie Hover Products",
+      "settings": {
+        "title": "we hide veggies in every bite",
+        "subtitle": "(so you don't have to)",
+        "animation_style": "grow",
+        "color_scheme": "scheme-b4ff7ee0-6e3d-4182-801f-e84315f1beae",
+        "button_label_1": "our meals",
+        "button_url_1": "",
+        "button_label_2": "markets near me",
+        "button_url_2": ""
+      }
     }
   },
   "order": [
     "main",
     "related-products",
-    "custom_pdp_image_CH6Pci"
+    "custom_pdp_image_CH6Pci",
+    "veggitable_animation_PHUgVh"
   ]
 }
