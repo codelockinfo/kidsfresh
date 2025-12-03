@@ -82,8 +82,8 @@
           "type": "product",
           "settings": {
             "image": "shopify://shop_images/image_190_1_9de59543-9520-4866-915d-00b53f3af609.png",
-            "title": "",
-            "description": "",
+            "title": "Chicken Nuggets & Buttered Pasta",
+            "description": "even buttered pasta can be better",
             "veggie_group_image": "shopify://shop_images/vegitable_3.png"
           }
         }
