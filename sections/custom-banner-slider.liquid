@@ -16,6 +16,15 @@
       alt="background">
   {% endif %}
 
+    {%- if section.settings.broccoli_image != blank -%}
+    <div class="broccoli-image">
+      <img src="{{ section.settings.broccoli_image | img_url: 'master' }}" alt="Animated Broccoli" loading="lazy" style="width: 100%; height: auto;">
+      {%- if section.settings.hover_text != blank -%}
+        <div class="broccoli-hover-text">{{ section.settings.hover_text }}</div>
+      {%- endif -%}
+    </div>
+  {%- endif -%}
+
   <!-- TOP DECOR -->
   {% if section.settings.top_decor != blank %}
     <img class="top-decor" src="{{ section.settings.top_decor | img_url: 'master' }}">
@@ -173,10 +182,179 @@
   bottom: -5px;
   box-shadow: none;
 }
+
+#celebrate-plate-{{ section.id }} .broccoli-image {
+    position: absolute;
+    bottom: 52%;
+    left: -2%;
+    width: 16pc;
+    height: auto;
+    cursor: pointer;
+    z-index: 20;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    pointer-events: auto;
+  }
+
+  #celebrate-plate-{{ section.id }} .broccoli-image {
+    opacity: 1;
+    {% comment %} transform: translateX(0); {% endcomment %}
+  }
+
+  #celebrate-plate-{{ section.id }} .broccoli-image:hover {
+    transform: translateX(20px) scale(1.1);
+    left: -7%;
+  }
+
+#celebrate-plate-{{ section.id }} .broccoli-hover-text {
+    position: absolute;
+    bottom: 7pc;
+    left: 26pc;
+    transform: translateX(-50%);
+    background: url(https://cdn.shopify.com/s/files/1/0790/5017/8785/files/Untitled_700_x_500_px_1.png?v=1763753734);
+    background-size: cover;
+    height: 22pc;
+    background-repeat: no-repeat;
+    width: 31pc;
+    background-position: center;
+    padding: 90px 100px;
+    white-space: wrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 21;
+    font-family: var(--font-family);
+    font-size: 26px;
+    line-height: 27px;
+    font-weight: 400;
+    color: #39302D;
+}
+
+  #celebrate-plate-{{ section.id }} .broccoli-image:hover .broccoli-hover-text {
+    opacity: 1;
+    visibility: visible;
+  }
+
+@media (min-width: 1400px) and (max-width: 1650px) {
+    #celebrate-plate-{{ section.id }} .broccoli-image {
+    bottom: 52%;
+    left: -2%;
+    width: 15pc;
+  }
+
+  #celebrate-plate-{{ section.id }} .broccoli-image:hover {
+    transform: translateX(20px) scale(1.1);
+    left: -8%;
+  }
+
+#celebrate-plate-{{ section.id }} .broccoli-hover-text {
+    bottom: 6pc;
+    left: 24pc;
+    height: 19pc;
+    width: 27pc;
+    padding: 70px 100px;
+    white-space: wrap;
+    font-size: 26px;
+    line-height: 27px;
+    font-weight: 400;
+    color: #39302D;
+}
+#celebrate-plate-{{ section.id }} h2 {
+    font-size: 73px;
+    line-height: 73px;
+}
+#celebrate-plate-{{ section.id }} p {
+    font-size: 24px;
+    line-height: 36px;
+}
+}
+
+@media (min-width: 1100px) and (max-width: 1399px) {
+    #celebrate-plate-{{ section.id }} .broccoli-image {
+    bottom: 52%;
+    left: -1%;
+    width: 14pc;
+  }
+
+  #celebrate-plate-{{ section.id }} .broccoli-image:hover {
+    transform: translateX(20px) scale(1.1);
+    left: -9%;
+  }
+
+#celebrate-plate-{{ section.id }} .broccoli-hover-text {
+    bottom: 5pc;
+    left: 21pc;
+    height: 15pc;
+    width: 21pc;
+    padding: 60px 75px;
+    white-space: wrap;
+    font-size: 24px;
+    line-height: 25px;
+    font-weight: 400;
+    color: #39302D;
+}
+}
+
+@media (min-width: 990px) and (max-width: 1099px) {
+    #celebrate-plate-{{ section.id }} .broccoli-image {
+    bottom: 52%;
+    left: 1%;
+    width: 10pc;
+  }
+
+  #celebrate-plate-{{ section.id }} .broccoli-image:hover {
+    transform: translateX(20px) scale(1.1);
+    left: -9%;
+  }
+
+#celebrate-plate-{{ section.id }} .broccoli-hover-text {
+    bottom: 4pc;
+    left: 16pc;
+    height: 13pc;
+    width: 18pc;
+    padding: 47px 54px;
+    white-space: wrap;
+    font-size: 20px;
+    line-height: 23px;
+    font-weight: 400;
+    color: #39302D;
+}
+}
+
+@media (min-width: 769px) and (max-width: 989px) {
+    #celebrate-plate-{{ section.id }} .broccoli-image {
+    bottom: 52%;
+    left: 4%;
+    width: 8pc;
+  }
+
+  #celebrate-plate-{{ section.id }} .broccoli-image:hover {
+    transform: translateX(20px) scale(1.1);
+    left: -9%;
+  }
+
+#celebrate-plate-{{ section.id }} .broccoli-hover-text {
+    bottom: 3pc;
+    left: 13pc;
+    height: 11pc;
+    width: 13pc;
+    padding: 40px 36px;
+    white-space: wrap;
+    font-size: 17px;
+    line-height: 21px;
+    font-weight: 400;
+    color: #39302D;
+}
+}
+
 @media (max-width: 768px) {
   #celebrate-plate-{{ section.id }} .button {
     font-size: 20px;
     line-height: 33px;
+  }
+  #celebrate-plate-{{ section.id }} .broccoli-image {
+    display: none;
   }
 }
 
@@ -203,7 +381,19 @@
   }
 }
 
-@media  (max-width: 320px) {
+@media  (min-width: 381px) and (max-width: 520px) {
+    #celebrate-plate-{{ section.id }} h2 {
+    font-size: 50px !important;
+    line-height: 54px !important;
+  }
+
+  #celebrate-plate-{{ section.id }} p {
+    font-size: 21px !important;
+    line-height: 32px !important;
+  }
+}
+
+@media  (max-width: 380px) {
     #celebrate-plate-{{ section.id }} h2 {
     font-size: 33px !important;
     line-height: 40px !important;
@@ -248,11 +438,14 @@
   }
 
   #celebrate-plate-{{ section.id }} h2 {
-    font-size: 58px !important;
+            font-size: 53px !important;
+        line-height: 61px;
+    }
   }
 
   #celebrate-plate-{{ section.id }} p {
     font-size: 24px;
+    line-height: 34px;
   }
 
   .cta-btn {
@@ -288,10 +481,12 @@
 
   #celebrate-plate-{{ section.id }} h2 {
     font-size: 64px !important;
+        line-height: 67px;
   }
 
   #celebrate-plate-{{ section.id }} p {
     font-size: 18px;
+        line-height: 32px;
   }
 }
 @media (min-width: 1201px) and (max-width: 1400px) {
@@ -303,16 +498,18 @@
   }
 
   #celebrate-plate-{{ section.id }} h2 {
-    font-size: 70px !important;
+    font-size: 63px !important;
+        line-height: 64px;
   }
 
   #celebrate-plate-{{ section.id }} p {
     font-size: 25px;
+        line-height: 30px;
   }
 }
 @media (min-width: 1401px) and (max-width: 1500px) {
   #celebrate-plate-{{ section.id }} h2 {
-    font-size: 72px;
+    font-size: 69px;
   }
 
   #celebrate-plate-{{ section.id }} p {
@@ -335,6 +532,21 @@
       "type": "image_picker",
       "id": "bg_mobile",
       "label": "Mobile Background Image"
+    },
+        {
+      "type": "header",
+      "content": "Animated Broccoli Feature"
+    },
+    {
+      "type": "image_picker",
+      "id": "broccoli_image",
+      "label": "Broccoli Image"
+    },
+    {
+      "type": "text",
+      "id": "hover_text",
+      "label": "Hover Text",
+      "default": "Vegetables in disguise"
     },
     {
       "type": "image_picker",
