@@ -219,8 +219,8 @@
       ],
       "name": "Veggie Hover Products",
       "settings": {
-        "title": "we hide veggies in every bite",
-        "subtitle": "(so you don't have to)",
+        "title": "our most popular meals",
+        "subtitle": "",
         "animation_style": "grow",
         "color_scheme": "scheme-b4ff7ee0-6e3d-4182-801f-e84315f1beae",
         "button_label_1": "our meals",
