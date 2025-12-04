@@ -19,12 +19,12 @@
         "leaf_bg": "shopify://shop_images/KF-Green_Blob.png",
         "enable_rotation": true,
         "rotation_speed": 5,
-        "heading": "Image with text",
-        "subheading_1": "win more meals with protein + nutrients",
-        "subheading_2": "frozen kid meals",
-        "subheading_3": "",
-        "subheading_4": "",
-        "subheading_5": "",
+        "heading": "win more meals with",
+        "subheading_1": "wholesome ingredients",
+        "subheading_2": "time to spare",
+        "subheading_3": "hidden veggies",
+        "subheading_4": "protein + nutrients",
+        "subheading_5": "frozen kid favorites",
         "button_label": "our meals",
         "button_link": ""
       }
