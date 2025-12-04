@@ -166,16 +166,16 @@
 }
 @media(max-width:768px){
   .auto-video-sub-section {
-    position: absolute;
     top: auto !important;
-    left: 50%;
-    transform: translate(-50%);
-    text-align: center;
-    z-index: 2;
-    padding: 20px;
-    width: 100%;
+    left: 0 !important;
+    padding: 15px;
+    max-width: 340px;
+    margin: 0 auto;
+    right: 0 !important;
+    transform: none !important;
+    margin-top: -50px;
     {% if section.settings.leaf_mobile_bg != blank %}
-      background-image: url('{{ section.settings.leaf_mobile_bg | img_url: '300x300' }}');
+      background-image: url('{{ section.settings.leaf_mobile_bg }}');
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
