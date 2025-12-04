@@ -1,6 +1,5 @@
 {% stylesheet %}
   .food-love-section {
-    background: {{ section.settings.bg_color | default: '#f5f5dc' }};
     padding: 80px 40px;
     position: relative;
     overflow: hidden;
@@ -85,7 +84,7 @@
     flex: 1;
     min-width: 280px;
     max-width: 350px;
-    background: {{ section.settings.feature_bg_color | default: '#f5f5dc' }};
+    background: {{ section.settings.feature_bg_color }};
     padding: 40px 30px;
     border-radius: 12px;
     text-align: center;
@@ -177,7 +176,7 @@
   }
 {% endstylesheet %}
 
-<section class="food-love-section" id="food-love-{{ section.id }}">
+<section class="food-love-section" id="food-love-{{ section.id }}" style="background: {{ section.settings.bg_color }}">
   <!-- Decorative Elements -->
   {% if section.settings.decorative_image_1 %}
     <img src="{{ section.settings.decorative_image_1 | image_url }}" 
