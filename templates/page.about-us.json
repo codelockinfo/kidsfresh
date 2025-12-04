@@ -105,12 +105,12 @@
       "settings": {
         "heading": "food is love",
         "description": "<p>Everything we do—from how we prepare our meals, to the ingredients we use, to our hidden veggies—is about giving kids what they need to be healthy and happy, and giving parents one more way to show their love.</p>",
-        "bg_color": "#f5f5dc",
-        "heading_color": "#5D3328",
-        "text_color": "#5D3328",
+        "bg_color": "#f8f4eb",
+        "heading_color": "#5d3328",
+        "text_color": "#5d3328",
         "feature_bg_color": "#f5f5dc",
-        "feature_title_color": "#F58220",
-        "feature_text_color": "#5D3328"
+        "feature_title_color": "#f58220",
+        "feature_text_color": "#5d3328"
       }
     }
   },
