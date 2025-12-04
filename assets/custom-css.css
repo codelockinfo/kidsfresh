@@ -1,7 +1,7 @@
 .header__menu-item{
     font-size:23px;
 }
-.announcement-bar__message p {
+.announcement-bar__message {
     font-family: var(--font-family);
    font-size: 20px; 
    line-height:43px;
@@ -22,7 +22,7 @@
 }
 
 @media (max-width: 768px) {
-    .announcement-bar__message p {
+    .announcement-bar__message {
    font-size: 14px; 
    line-height: 21px;
 }
