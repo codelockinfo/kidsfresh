@@ -39,6 +39,28 @@
         "padding_bottom": 36
       }
     },
+    "slideshow_FHmD67": {
+      "type": "slideshow",
+      "blocks": {
+        "text_image_block_krUw8J": {
+          "type": "text_image_block",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Group_278_74cb09bb-0408-46eb-a66f-afa0194eda93.png",
+            "mobile_image": "shopify://shop_images/Group_279_828ae318-0a7c-4989-ba0f-d891cd704934.png",
+            "heading": "a better kid's menu",
+            "subheading": "helping you win meals, one bite at a time.",
+            "button_label": "learn more",
+            "button_link": "",
+            "content_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "text_image_block_krUw8J"
+      ],
+      "name": "Text with Image Section",
+      "settings": {}
+    },
     "collection_product_block_nhVB7J": {
       "type": "collection-product-block",
       "blocks": {
@@ -101,9 +123,9 @@
           "type": "promo_block",
           "settings": {
             "block_width": 65,
-            "background_color": "#F58220",
+            "background_color": "#f58220",
             "heading": "ingredients + nutrition",
-            "heading_color": "#2C5F2D",
+            "heading_color": "#2c5f2d",
             "button_text": "learn more",
             "button_link": "",
             "vegetable_top_left": "shopify://shop_images/74ab46f0615cade291a70bd67ab2d406c8d6ad75_7a73b820-99c0-4770-98f1-eadb9f1bff4d.png",
@@ -247,6 +269,7 @@
   "order": [
     "banner",
     "product-grid",
+    "slideshow_FHmD67",
     "collection_product_block_nhVB7J"
   ]
 }
