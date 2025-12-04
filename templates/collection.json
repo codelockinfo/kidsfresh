@@ -96,7 +96,7 @@
         "product_cb4QtJ": {
           "type": "product",
           "settings": {
-            "block_width": 30,
+            "block_width": 33,
             "product": "chicken-nuggets-buttered-pasta",
             "show_new_badge": false,
             "show_second_image": true,
@@ -181,7 +181,7 @@
         "promo_block_questions_tmVhNW": {
           "type": "promo_block_questions",
           "settings": {
-            "block_width": 30,
+            "block_width": 33,
             "heading": "got questions?",
             "button_text": "learn more",
             "button_link": "",
