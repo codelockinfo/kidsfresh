@@ -72,8 +72,26 @@
     min-height: 500px;
   }
 
+  .hero-image-wrapper .hero-image-desktop {
+    display: block;
+  }
+
+  .hero-image-wrapper .hero-image-mobile {
+    display: none;
+  }
+
   .hero-layout-reverse .hero-image-wrapper img {
     border-radius: 0 12px 0 0;
+  }
+
+  @media (max-width: 968px) {
+    .hero-image-wrapper .hero-image-desktop {
+      display: none;
+    }
+
+    .hero-image-wrapper .hero-image-mobile {
+      display: block;
+    }
   }
 
   .hero-heading {
@@ -263,6 +281,19 @@
       {%- if section.settings.image != blank -%}
         <img src="{{ section.settings.image | img_url: '1200x' }}" 
              alt="{{ section.settings.heading | escape }}"
+             class="hero-image-desktop"
+             loading="lazy">
+      {%- endif -%}
+      
+      {%- if section.settings.mobile_image != blank -%}
+        <img src="{{ section.settings.mobile_image | img_url: '800x' }}" 
+             alt="{{ section.settings.heading | escape }}"
+             class="hero-image-mobile"
+             loading="lazy">
+      {%- elsif section.settings.image != blank -%}
+        <img src="{{ section.settings.image | img_url: '800x' }}" 
+             alt="{{ section.settings.heading | escape }}"
+             class="hero-image-mobile"
              loading="lazy">
       {%- else -%}
         <div style="background: #e0e0e0; padding-top: 100%; border-radius: 12px;"></div>
@@ -318,7 +349,13 @@
     {
       "type": "image_picker",
       "id": "image",
-      "label": "Image"
+      "label": "Desktop Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile Image",
+      "info": "If not provided, desktop image will be used on mobile"
     },
     {
       "type": "header",
