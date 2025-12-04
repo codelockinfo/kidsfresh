@@ -309,8 +309,6 @@
       height: 200px;
     }
   }
-
-/* 768px → 2.5 slides */
 @media (min-width: 768px) and (max-width: 990px) {
   .winning-ingredients-{{ section.id }} .container {
     padding: 0 20px;
@@ -327,13 +325,12 @@
     padding: 10px 80px;
   }
   .winning-ingredients-{{ section.id }} .column-item-wrapper {
-    flex: 0 0 calc(100% / 2.5);
+    flex: 0 0 calc(100% / 2.4);
     scroll-snap-align: center;
     padding: 10px 0;
   }
 }
 
-/* 991px → 3.5 slides */
 @media (min-width: 991px) and (max-width: 1200px) {
   .winning-ingredients-{{ section.id }} .container {
     padding: 0 20px;
