@@ -422,6 +422,104 @@ gap:12px;
     width: 150px;
     height: 150px;
   }
+
+  .veggie-buttons .button--primary{
+  background: transparent!important;
+  color: #0F4735;
+  font-family: var(--font-family);
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 44px;
+  text-decoration: none;
+  box-shadow: none;
+  cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease;
+  text-align: center;
+  border-radius: 35px;
+  padding: 8px 34px;
+  border: none;
+  text-transform: lowercase;
+    transform: none !important;
+}
+
+.veggie-buttons .button--primary:before {
+   background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_23_2.png?v=1764592651);
+  background-size: 100% 100%;
+  z-index: 2;
+}
+
+.veggie-buttons .button--primary span{
+  z-index: 3;
+}
+
+.veggie-buttons .button--primary:after {
+  content: '';
+   background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_25.png?v=1764592665);
+  background-size: 100% 100%;
+  padding: 8px 34px;
+  bottom: -5px;
+  z-index: 1;
+  box-shadow: none;
+}
+
+
+.veggie-buttons .button--primary:hover:before {
+  background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_23_3.png?v=1764592664) !important;
+  background-size: 100% 100% !important;
+}
+
+.veggie-buttons .button--primary:hover:after{
+  bottom: -5px;
+  box-shadow: none;
+}
+
+.veggie-buttons .button--secondary {
+  background: transparent!important;
+  color: #63441D;
+  font-family: var(--font-family);
+  font-size: 30px;
+  line-height: 44px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: none;
+  cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease;
+  text-align: center;
+  border-radius: 35px;
+  padding: 8px 34px;
+  border: none;
+  text-transform: lowercase;
+    transform: none !important;
+}
+
+.veggie-buttons .button--secondary:before {
+  background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_23_4.png?v=1764654764);
+  background-size: 100% 100%;
+  z-index: 2;
+}
+
+.veggie-buttons .button--secondary span {
+  z-index: 3;
+}
+
+.veggie-buttons .button--secondary:after {
+  content: '';
+   background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_25_1.png?v=1764654764);
+  background-size: 100% 100%;
+  padding: 8px 34px;
+  bottom: -6px;
+  z-index: 1;
+  box-shadow: none;
+}
+
+.veggie-buttons .button--secondary:hover:before {
+  background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_23_5.png?v=1764654764) !important;
+  background-size: 100% 100% !important;
+}
+.veggie-buttons .button--secondary:hover:after{
+  bottom: -5px;
+  box-shadow: none;
+}
   /* Hover animations - left/right movement */
   .promo-block:hover .promo-element.top-left {
     transform: translateX(-20px) scale(1.1);
@@ -2378,12 +2476,12 @@ gap:12px;
                   <img src="{{ block.settings.vegetable_bottom_right | img_url: 'master' }}" alt="">
                 </div>
               {% endif %}
-              <div class="promo-content">
+              <div class="promo-content veggie-buttons">
                 {% if block.settings.heading != blank %}
                   <h2 class="promo-heading" style="color: {{ block.settings.heading_color | default: '#2C5F2D' }};">{{ block.settings.heading }}</h2>
                 {% endif %}
                 {% if block.settings.button_text != blank and block.settings.button_link != blank %}
-                  <a href="{{ block.settings.button_link }}" class="promo-button">
+                  <a href="{{ block.settings.button_link }}" class="promo-button button button--primary">
                     {{ block.settings.button_text }}
                   </a>
                 {% endif %}
