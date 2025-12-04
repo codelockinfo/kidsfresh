@@ -45,7 +45,7 @@
         "product_TDDcma": {
           "type": "product",
           "settings": {
-            "block_width": 30,
+            "block_width": 33,
             "product": "",
             "show_new_badge": false,
             "show_second_image": true,
@@ -57,7 +57,7 @@
         "product_73VmXC": {
           "type": "product",
           "settings": {
-            "block_width": 30,
+            "block_width": 33,
             "product": "",
             "show_new_badge": false,
             "show_second_image": true,
@@ -69,7 +69,7 @@
         "product_rHjzp7": {
           "type": "product",
           "settings": {
-            "block_width": 30,
+            "block_width": 33,
             "product": "",
             "show_new_badge": false,
             "show_second_image": true,
@@ -81,7 +81,7 @@
         "product_kKGMEK": {
           "type": "product",
           "settings": {
-            "block_width": 30,
+            "block_width": 33,
             "product": "",
             "show_new_badge": false,
             "show_second_image": true,
@@ -93,10 +93,10 @@
         "promo_block_EQTz4q": {
           "type": "promo_block",
           "settings": {
-            "block_width": 60,
-            "background_color": "#F58220",
+            "block_width": 65,
+            "background_color": "#f58220",
             "heading": "ingredients + nutrition",
-            "heading_color": "#2C5F2D",
+            "heading_color": "#2c5f2d",
             "button_text": "learn more",
             "button_link": ""
           }
