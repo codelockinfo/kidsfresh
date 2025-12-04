@@ -22,7 +22,7 @@
     </svg>
   </div>
 </section>
- {%  stylesheet %}
+  <style>
     .estd-section {
       --wave-height: 100px;
       padding: {{ section.settings.padding_top }}px 0 calc(var(--wave-height) + {{ section.settings.padding_bottom }}px) 0;
@@ -36,7 +36,7 @@
       font-weight: 700;
       color: {{ section.settings.heading_color }};
       margin-bottom: 20px;
-      margi
+      margin-top: 0px;
     }
 
     .estd-text {
@@ -88,7 +88,7 @@
       }
       .estd-floating { width: 50px; opacity: 0.6; }
     }
- {% endstylesheet %}
+  </style>
 
 
 {% schema %}
