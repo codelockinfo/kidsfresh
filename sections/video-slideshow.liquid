@@ -175,7 +175,7 @@
     transform: none !important;
     margin-top: -50px;
     {% if section.settings.leaf_mobile_bg != blank %}
-      background-image: url('{{ section.settings.leaf_mobile_bg }}');
+      background-image: url('{{ section.settings.leaf_mobile_bg | img_url: '300x300' }}');
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
