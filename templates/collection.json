@@ -88,8 +88,8 @@
         "product_Wic6Ha": {
           "type": "product",
           "settings": {
-            "block_width": 30,
-            "product": "",
+            "block_width": 33,
+            "product": "chicken-meatballs-pasta-marinara",
             "show_new_badge": false,
             "show_second_image": true,
             "custom_description": "Product description",
@@ -100,12 +100,126 @@
         "promo_block_gBCTVn": {
           "type": "promo_block",
           "settings": {
-            "block_width": 60,
+            "block_width": 65,
             "background_color": "#F58220",
             "heading": "ingredients + nutrition",
             "heading_color": "#2C5F2D",
             "button_text": "learn more",
-            "button_link": ""
+            "button_link": "",
+            "vegetable_top_left": "shopify://shop_images/74ab46f0615cade291a70bd67ab2d406c8d6ad75_7a73b820-99c0-4770-98f1-eadb9f1bff4d.png",
+            "vegetable_top_right": "shopify://shop_images/fe83b4bd0e9e73f66d02e7ecb706081578ffb478.png"
+          }
+        },
+        "product_eeAyL7": {
+          "type": "product",
+          "settings": {
+            "block_width": 33,
+            "product": "wagon-wheels-mac-cheese",
+            "show_new_badge": false,
+            "show_second_image": true,
+            "custom_description": "Product description",
+            "search_icon": "shopify://shop_images/store_locator_QB.png",
+            "search_icon_hover": "shopify://shop_images/ChatGPT_Image_Dec_2_2025_06_51_07_PM_dc3c5109-df73-409a-bdd7-72fd465d2d1b.png",
+            "icon_link": "",
+            "icon_open_new_tab": false
+          }
+        },
+        "product_Md3qcd": {
+          "type": "product",
+          "settings": {
+            "block_width": 33,
+            "product": "chicken-meatballs",
+            "show_new_badge": false,
+            "show_second_image": true,
+            "custom_description": "Product description",
+            "search_icon": "shopify://shop_images/store_locator_QB.png",
+            "search_icon_hover": "shopify://shop_images/ChatGPT_Image_Dec_2_2025_06_51_07_PM_dc3c5109-df73-409a-bdd7-72fd465d2d1b.png",
+            "icon_link": "",
+            "icon_open_new_tab": false
+          }
+        },
+        "product_CQVqRA": {
+          "type": "product",
+          "settings": {
+            "block_width": 33,
+            "product": "chicken-nuggets",
+            "show_new_badge": false,
+            "show_second_image": true,
+            "custom_description": "Product description",
+            "search_icon": "shopify://shop_images/store_locator_QB.png",
+            "search_icon_hover": "shopify://shop_images/ChatGPT_Image_Dec_2_2025_06_51_07_PM_dc3c5109-df73-409a-bdd7-72fd465d2d1b.png",
+            "icon_link": "",
+            "icon_open_new_tab": false
+          }
+        },
+        "product_UYD6ww": {
+          "type": "product",
+          "settings": {
+            "block_width": 33,
+            "product": "chicken-sticks",
+            "show_new_badge": false,
+            "show_second_image": true,
+            "custom_description": "Product description",
+            "search_icon": "shopify://shop_images/store_locator_QB.png",
+            "search_icon_hover": "shopify://shop_images/ChatGPT_Image_Dec_2_2025_06_51_07_PM_dc3c5109-df73-409a-bdd7-72fd465d2d1b.png",
+            "icon_link": "",
+            "icon_open_new_tab": false
+          }
+        },
+        "product_xkiHJe": {
+          "type": "product",
+          "settings": {
+            "block_width": 33,
+            "product": "cheese-pizza-wagon-wheels",
+            "show_new_badge": false,
+            "show_second_image": true,
+            "custom_description": "Product description",
+            "search_icon": "shopify://shop_images/store_locator_QB.png",
+            "search_icon_hover": "shopify://shop_images/ChatGPT_Image_Dec_2_2025_06_51_07_PM_dc3c5109-df73-409a-bdd7-72fd465d2d1b.png",
+            "icon_link": "",
+            "icon_open_new_tab": false
+          }
+        },
+        "product_37z6yc": {
+          "type": "product",
+          "settings": {
+            "block_width": 33,
+            "product": "cheeseburger-mac-cheese",
+            "show_new_badge": false,
+            "show_second_image": true,
+            "custom_description": "Product description",
+            "search_icon": "shopify://shop_images/store_locator_QB.png",
+            "search_icon_hover": "shopify://shop_images/ChatGPT_Image_Dec_2_2025_06_51_07_PM_dc3c5109-df73-409a-bdd7-72fd465d2d1b.png",
+            "icon_link": "",
+            "icon_open_new_tab": false
+          }
+        },
+        "product_V6pENF": {
+          "type": "product",
+          "settings": {
+            "block_width": 33,
+            "product": "spaghetti-loops-meat-sauce",
+            "show_new_badge": false,
+            "show_second_image": true,
+            "custom_description": "Product description",
+            "search_icon": "shopify://shop_images/store_locator_QB.png",
+            "search_icon_hover": "shopify://shop_images/ChatGPT_Image_Dec_2_2025_06_51_07_PM_dc3c5109-df73-409a-bdd7-72fd465d2d1b.png",
+            "icon_link": "",
+            "icon_open_new_tab": false
+          }
+        },
+        "product_mbUngY": {
+          "type": "product",
+          "settings": {
+            "block_width": 33,
+            "product": "cheeseburger-mac-cheese",
+            "show_new_badge": false,
+            "show_second_image": true,
+            "custom_description": "Product description",
+            "search_icon": "shopify://shop_images/store_locator_QB.png",
+            "search_icon_hover": "shopify://shop_images/ChatGPT_Image_Dec_2_2025_06_51_07_PM_dc3c5109-df73-409a-bdd7-72fd465d2d1b.png",
+            "icon_link": "",
+            "icon_open_new_tab": false
           }
         }
       },
@@ -114,7 +228,15 @@
         "product_mBUmxH",
         "product_cb4QtJ",
         "product_Wic6Ha",
-        "promo_block_gBCTVn"
+        "promo_block_gBCTVn",
+        "product_eeAyL7",
+        "product_Md3qcd",
+        "product_CQVqRA",
+        "product_UYD6ww",
+        "product_xkiHJe",
+        "product_37z6yc",
+        "product_V6pENF",
+        "product_mbUngY"
       ],
       "name": "Custom Collection Grid",
       "settings": {
