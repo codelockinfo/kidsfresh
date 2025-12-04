@@ -2523,12 +2523,12 @@ gap:12px;
                   <img src="{{ block.settings.vegetable_bottom_right | img_url: 'master' }}" alt="">
                 </div>
               {% endif %}
-              <div class="promo-content-questions">
+              <div class="promo-content-questions veggie-buttons">
                 {% if block.settings.heading != blank %}
                   <h2 class="promo-heading-questions">{{ block.settings.heading }}</h2>
                 {% endif %}
                 {% if block.settings.button_text != blank and block.settings.button_link != blank %}
-                  <a href="{{ block.settings.button_link }}" class="promo-button-questions">
+                  <a href="{{ block.settings.button_link }}" class="promo-button-questions button button--secondary">
                     {{ block.settings.button_text }}
                   </a>
                 {% endif %}
