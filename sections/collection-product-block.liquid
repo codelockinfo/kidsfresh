@@ -2481,8 +2481,8 @@ gap:12px;
                   <h2 class="promo-heading" style="color: {{ block.settings.heading_color | default: '#2C5F2D' }};">{{ block.settings.heading }}</h2>
                 {% endif %}
                 {% if block.settings.button_text != blank and block.settings.button_link != blank %}
-                  <a href="{{ block.settings.button_link }}" class="promo-button button button--primary">
-                    {{ block.settings.button_text }}
+                  <a href="{{ block.settings.button_link }}" class="promo-button button button--primary"><span>
+                    {{ block.settings.button_text }}</span>
                   </a>
                 {% endif %}
               </div>
@@ -2528,8 +2528,8 @@ gap:12px;
                   <h2 class="promo-heading-questions">{{ block.settings.heading }}</h2>
                 {% endif %}
                 {% if block.settings.button_text != blank and block.settings.button_link != blank %}
-                  <a href="{{ block.settings.button_link }}" class="promo-button-questions button button--secondary">
-                    {{ block.settings.button_text }}
+                  <a href="{{ block.settings.button_link }}" class="promo-button-questions button button--secondary"><span>
+                    {{ block.settings.button_text }}</span>
                   </a>
                 {% endif %}
               </div>
