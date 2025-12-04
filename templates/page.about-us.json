@@ -51,11 +51,25 @@
         "mobile_image": "shopify://shop_images/d377d72b2701d219dba5622a7b03f97595969669.png",
         "layout": "image_right"
       }
+    },
+    "est_section_VDg6Ux": {
+      "type": "est-section",
+      "name": "ESTD Section",
+      "settings": {
+        "heading": "est’d 2007",
+        "text": "We began as a couple parents in New York City who wanted healthier meals for their own kids...",
+        "heading_color": "#ffffff",
+        "text_color": "#ffffff",
+        "bg_color": "#0f4735",
+        "padding_top": 70,
+        "padding_bottom": 70
+      }
     }
   },
   "order": [
     "main",
     "slideshow_tnRXKg",
-    "hero_text_image_QKg9RL"
+    "hero_text_image_QKg9RL",
+    "est_section_VDg6Ux"
   ]
 }
