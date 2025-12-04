@@ -60,7 +60,7 @@
     "custom_liquid_iG9dad": {
       "type": "custom-liquid",
       "custom_css": [
-        "svg {margin-top: -75px;}"
+        ".color-scheme-8fca23bf-c055-4afc-bb4c-d7702601df39.gradient {margin-top:-70px}"
       ],
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
