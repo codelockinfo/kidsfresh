@@ -397,7 +397,19 @@
   }
 }
 
-@media (min-width: 1401px) and (max-width: 1650px) {}
+@media (min-width: 1401px) and (max-width: 1650px) {
+  .winning-ingredients-{{ section.id }} .columns-wrapper {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 26px;
+    justify-content: center;
+  }
+  .winning-ingredients-{{ section.id }} .column-item-wrapper {
+    flex: 0 0 calc(100% / 5);
+    scroll-snap-align: center;
+  }
+}
 
 
 /* 1200px → 5.5 slides */
