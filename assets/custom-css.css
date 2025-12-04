@@ -24,11 +24,7 @@
 .header__icon .icon{
     color : #F8971D !important;
 }
-@media (min-width:990px) and (max-width: 1360px){
-    .header {
-    padding: 20px 50px !important;
-  }
-}
+
 @media (max-width: 768px) {
     .announcement-bar p {
    font-size: 14px; 
