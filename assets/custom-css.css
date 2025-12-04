@@ -22,7 +22,7 @@
 }
 
 @media (max-width: 768px) {
-    .announcement-bar__message {
+    .announcement-bar p {
    font-size: 14px; 
    line-height: 21px;
 }
