@@ -1,4 +1,4 @@
-<style>
+{%  stylesheet %}
   /* Hero Text with Image Section Styles */
   .hero-text-image-section {
     --wave-height: 100px;
@@ -227,6 +227,7 @@
 }
 
 .veggie-buttons .button--primary span{
+  position: relative;
   z-index: 3;
 }
 
@@ -250,7 +251,8 @@
   bottom: -5px;
   box-shadow: none;
 }
-</style>
+
+{% endstylesheet %}
 
 <section class="hero-text-image-section" id="hero-text-image-{{ section.id }}">
   <div class="hero-text-image-container {% if section.settings.layout == 'image_left' %}hero-layout-reverse{% endif %}">
