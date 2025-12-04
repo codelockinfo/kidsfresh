@@ -489,7 +489,12 @@
     width: 50% !important;
     padding: 15px !important;
   }
-
+ .content p {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;  /* <-- Limit to 5 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
   #celebrate-plate-{{ section.id }} h2 {
     font-size: 30px !important;
     line-height: 46px !important;
