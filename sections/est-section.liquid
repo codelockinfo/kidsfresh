@@ -1,14 +1,28 @@
 <section class="estd-section" style="background: {{ section.settings.bg_color }}">
   <div class="estd-container page-width">
     
-    {% if section.settings.left_image %}
-      <img src="{{ section.settings.left_image | image_url }}" 
-           class="estd-floating estd-left" alt="Left deco">
+    <!-- Left Side Peanuts/Beans -->
+    {% if section.settings.left_image_1 %}
+      <img src="{{ section.settings.left_image_1 | image_url }}" 
+           class="estd-floating estd-left estd-left-1" alt="Left deco 1">
+    {% endif %}
+    {% if section.settings.left_image_2 %}
+      <img src="{{ section.settings.left_image_2 | image_url }}" 
+           class="estd-floating estd-left estd-left-2" alt="Left deco 2">
+    {% endif %}
+    {% if section.settings.left_image_3 %}
+      <img src="{{ section.settings.left_image_3 | image_url }}" 
+           class="estd-floating estd-left estd-left-3" alt="Left deco 3">
     {% endif %}
 
-    {% if section.settings.right_image %}
-      <img src="{{ section.settings.right_image | image_url }}" 
-           class="estd-floating estd-right" alt="Right deco">
+    <!-- Right Side Peanuts/Beans -->
+    {% if section.settings.right_image_1 %}
+      <img src="{{ section.settings.right_image_1 | image_url }}" 
+           class="estd-floating estd-right estd-right-1" alt="Right deco 1">
+    {% endif %}
+    {% if section.settings.right_image_2 %}
+      <img src="{{ section.settings.right_image_2 | image_url }}" 
+           class="estd-floating estd-right estd-right-2" alt="Right deco 2">
     {% endif %}
 
     <h2 class="estd-heading">{{ section.settings.heading }}</h2>
@@ -50,16 +64,42 @@
       position: absolute;
       width: 80px;
       opacity: 0.95;
+      z-index: 2;
     }
 
+    /* Left Side Positions */
     .estd-left {
       left: 0;
-      top: 20%;
     }
 
+    .estd-left-1 {
+      top: 15%;
+      transform: rotate(-15deg);
+    }
+
+    .estd-left-2 {
+      top: 35%;
+      transform: rotate(10deg);
+    }
+
+    .estd-left-3 {
+      top: 55%;
+      transform: rotate(-10deg);
+    }
+
+    /* Right Side Positions */
     .estd-right {
       right: 0;
-      top: 40%;
+    }
+
+    .estd-right-1 {
+      top: 25%;
+      transform: rotate(15deg);
+    }
+
+    .estd-right-2 {
+      top: 50%;
+      transform: rotate(-20deg);
     }
 
     /* Wave Divider */
@@ -86,7 +126,15 @@
       .estd-section {
         --wave-height: 60px;
       }
-      .estd-floating { width: 50px; opacity: 0.6; }
+      .estd-floating { 
+        width: 50px; 
+        opacity: 0.6; 
+      }
+      .estd-left-1 { top: 10%; }
+      .estd-left-2 { top: 30%; }
+      .estd-left-3 { top: 50%; }
+      .estd-right-1 { top: 20%; }
+      .estd-right-2 { top: 45%; }
     }
   </style>
 
@@ -126,14 +174,33 @@
       "default": "#0c4434"
     },
     {
-      "type": "image_picker",
-      "id": "left_image",
-      "label": "Left floating image"
+      "type": "header",
+      "content": "Decorative Images (Peanuts/Beans)"
     },
     {
       "type": "image_picker",
-      "id": "right_image",
-      "label": "Right floating image"
+      "id": "left_image_1",
+      "label": "Left Side - Image 1 (Top)"
+    },
+    {
+      "type": "image_picker",
+      "id": "left_image_2",
+      "label": "Left Side - Image 2 (Middle)"
+    },
+    {
+      "type": "image_picker",
+      "id": "left_image_3",
+      "label": "Left Side - Image 3 (Bottom)"
+    },
+    {
+      "type": "image_picker",
+      "id": "right_image_1",
+      "label": "Right Side - Image 1 (Top)"
+    },
+    {
+      "type": "image_picker",
+      "id": "right_image_2",
+      "label": "Right Side - Image 2 (Bottom)"
     },
     {
       "type": "range",
