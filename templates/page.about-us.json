@@ -70,12 +70,55 @@
         "padding_bottom": 70,
         "wave_color": "#f5f5dc"
       }
+    },
+    "food_is_love_C4zpJe": {
+      "type": "food-is-love",
+      "blocks": {
+        "feature_fm8zcP": {
+          "type": "feature",
+          "settings": {
+            "title": "No Artificial Anything",
+            "description": "Zero preservatives, dyes, or fillers — just the good stuff."
+          }
+        },
+        "feature_RyRtKd": {
+          "type": "feature",
+          "settings": {
+            "title": "Frozen Fresh",
+            "description": "Flash-frozen to lock in nutrition and flavor. Just heat and eat."
+          }
+        },
+        "feature_eyVkzm": {
+          "type": "feature",
+          "settings": {
+            "title": "Kid Approved",
+            "description": "Crafted by chefs, tested by kids, and devoured without a fight."
+          }
+        }
+      },
+      "block_order": [
+        "feature_fm8zcP",
+        "feature_RyRtKd",
+        "feature_eyVkzm"
+      ],
+      "name": "Food is Love Section",
+      "settings": {
+        "heading": "food is love",
+        "description": "<p>Everything we do—from how we prepare our meals, to the ingredients we use, to our hidden veggies—is about giving kids what they need to be healthy and happy, and giving parents one more way to show their love.</p>",
+        "bg_color": "#F8F4EB",
+        "heading_color": "#5D3328",
+        "text_color": "#5D3328",
+        "feature_bg_color": "#F8F4EB",
+        "feature_title_color": "#F58220",
+        "feature_text_color": "#5D3328"
+      }
     }
   },
   "order": [
     "main",
     "slideshow_cAi8Jj",
     "hero_text_image_JgGcCx",
-    "est_section_yyfjFw"
+    "est_section_yyfjFw",
+    "food_is_love_C4zpJe"
   ]
 }
