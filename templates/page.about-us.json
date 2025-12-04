@@ -116,6 +116,80 @@
         "feature_text_color": "#39302d",
         "bottom_decor": "shopify://shop_images/Group_289.png"
       }
+    },
+    "custom_slider_yXKFhj": {
+      "type": "custom-slider",
+      "blocks": {
+        "column_F6rhCC": {
+          "type": "column",
+          "settings": {
+            "heading": "Wh",
+            "preheading": "Wholesome ingredients",
+            "description": "We use the kind of real ingredients you'd use in your own kitchen."
+          }
+        },
+        "column_qxjAjw": {
+          "type": "column",
+          "settings": {
+            "heading": "Pro",
+            "preheading": "Protein power",
+            "description": "Protein helps growing bodies and brains stay strong and energized."
+          }
+        },
+        "column_t9tiaM": {
+          "type": "column",
+          "settings": {
+            "heading": "Vi",
+            "preheading": "Vitamin boost",
+            "description": "Our ingredients naturally provide the vitamins kids need in every bite."
+          }
+        },
+        "column_C9MXM3": {
+          "type": "column",
+          "settings": {
+            "heading": "Cr",
+            "preheading": "Calcium rich",
+            "description": "Calcium supports strong bones and teeth—and happy smiling kids."
+          }
+        },
+        "column_4WHKkV": {
+          "type": "column",
+          "settings": {
+            "heading": "In",
+            "preheading": "Ingredient info",
+            "description": "Learn more about our ingredients and how they make our meals winners."
+          }
+        }
+      },
+      "block_order": [
+        "column_F6rhCC",
+        "column_qxjAjw",
+        "column_t9tiaM",
+        "column_C9MXM3",
+        "column_4WHKkV"
+      ],
+      "name": "Winning Ingredients",
+      "settings": {
+        "title": "winning ingredients",
+        "heading_alignment": "center",
+        "title_color": "#ffffff",
+        "background_color": "#1a4d3a",
+        "enable_mobile_slider": true,
+        "button_label": "ingredients",
+        "button_link": "",
+        "button_style": "primary",
+        "border_thickness": 2,
+        "border_radius": 15,
+        "border_color": "#7ab55c",
+        "heading_size": 80,
+        "heading_color": "#ffffff",
+        "preheading_size": 18,
+        "preheading_color": "#ff8c42",
+        "description_size": 15,
+        "description_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
     }
   },
   "order": [
@@ -123,6 +197,7 @@
     "slideshow_cAi8Jj",
     "hero_text_image_JgGcCx",
     "est_section_yyfjFw",
-    "food_is_love_C4zpJe"
+    "food_is_love_C4zpJe",
+    "custom_slider_yXKFhj"
   ]
 }
