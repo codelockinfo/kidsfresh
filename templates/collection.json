@@ -1,7 +1,17 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "banner": {
       "type": "main-collection-banner",
+      "disabled": true,
       "settings": {
         "show_collection_description": true,
         "show_collection_image": false,
@@ -10,9 +20,11 @@
     },
     "product-grid": {
       "type": "main-collection-product-grid",
+      "disabled": true,
       "settings": {
         "products_per_page": 16,
         "columns_desktop": 4,
+        "columns_mobile": "2",
         "color_scheme": "scheme-1",
         "image_ratio": "adapt",
         "image_shape": "default",
@@ -23,14 +35,125 @@
         "enable_filtering": true,
         "filter_type": "horizontal",
         "enable_sorting": true,
-        "columns_mobile": "2",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "collection_product_block_CdwptJ": {
+      "type": "collection-product-block",
+      "blocks": {
+        "product_TDDcma": {
+          "type": "product",
+          "settings": {
+            "block_width": 30,
+            "product": "",
+            "show_new_badge": false,
+            "show_second_image": true,
+            "custom_description": "Product description",
+            "icon_link": "",
+            "icon_open_new_tab": false
+          }
+        },
+        "product_73VmXC": {
+          "type": "product",
+          "settings": {
+            "block_width": 30,
+            "product": "",
+            "show_new_badge": false,
+            "show_second_image": true,
+            "custom_description": "Product description",
+            "icon_link": "",
+            "icon_open_new_tab": false
+          }
+        },
+        "product_rHjzp7": {
+          "type": "product",
+          "settings": {
+            "block_width": 30,
+            "product": "",
+            "show_new_badge": false,
+            "show_second_image": true,
+            "custom_description": "Product description",
+            "icon_link": "",
+            "icon_open_new_tab": false
+          }
+        },
+        "product_kKGMEK": {
+          "type": "product",
+          "settings": {
+            "block_width": 30,
+            "product": "",
+            "show_new_badge": false,
+            "show_second_image": true,
+            "custom_description": "Product description",
+            "icon_link": "",
+            "icon_open_new_tab": false
+          }
+        },
+        "promo_block_EQTz4q": {
+          "type": "promo_block",
+          "settings": {
+            "block_width": 60,
+            "background_color": "#F58220",
+            "heading": "ingredients + nutrition",
+            "heading_color": "#2C5F2D",
+            "button_text": "learn more",
+            "button_link": ""
+          }
+        },
+        "promo_block_questions_KzyxQR": {
+          "type": "promo_block_questions",
+          "settings": {
+            "block_width": 30,
+            "heading": "got questions?",
+            "button_text": "learn more",
+            "button_link": ""
+          }
+        },
+        "product_jkiTim": {
+          "type": "product",
+          "settings": {
+            "block_width": 30,
+            "product": "",
+            "show_new_badge": false,
+            "show_second_image": true,
+            "custom_description": "Product description",
+            "icon_link": "",
+            "icon_open_new_tab": false
+          }
+        },
+        "product_HiiHAm": {
+          "type": "product",
+          "settings": {
+            "block_width": 30,
+            "product": "",
+            "show_new_badge": false,
+            "show_second_image": true,
+            "custom_description": "Product description",
+            "icon_link": "",
+            "icon_open_new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "product_TDDcma",
+        "product_73VmXC",
+        "product_rHjzp7",
+        "product_kKGMEK",
+        "promo_block_EQTz4q",
+        "promo_block_questions_KzyxQR",
+        "product_jkiTim",
+        "product_HiiHAm"
+      ],
+      "name": "Custom Collection Grid",
+      "settings": {
+        "section_background": "#f5f5dc"
       }
     }
   },
   "order": [
     "banner",
-    "product-grid"
+    "product-grid",
+    "collection_product_block_CdwptJ"
   ]
 }
