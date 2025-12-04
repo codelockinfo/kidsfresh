@@ -77,7 +77,7 @@
   }
 
   .hero-heading {
-    font-size: 64px;
+    font-size: 84px;
     font-weight: 900;
     color: #2c2c2c;
     margin-bottom: 30px;
@@ -87,141 +87,28 @@
   }
 
   .hero-description {
-    font-size: 18px;
+    font-size: 28px;
     color: #5a5a5a;
     line-height: 1.6;
     margin-bottom: 40px;
   }
 
-  /* Veggie Buttons Styles */
-  .veggie-buttons {
+  .hero-button {
     display: inline-block;
-  }
-
-  .veggie-buttons .button--primary {
-    background: transparent !important;
-    color: #0F4735;
-    font-family: var(--font-family);
-    font-size: 30px;
-    font-weight: 600;
-    line-height: 44px;
-    text-decoration: none;
-    box-shadow: none;
-    cursor: pointer;
-    transition: transform .2s ease, box-shadow .2s ease;
-    text-align: center;
-    border-radius: 35px;
-    padding: 8px 34px;
-    border: none;
-    text-transform: lowercase;
-    transform: none !important;
-    position: relative;
-    display: inline-block;
-  }
-
-  .veggie-buttons .button--primary:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_23_2.png?v=1764592651);
-    background-size: 100% 100%;
-    z-index: 2;
-    border-radius: 35px;
-  }
-
-  .veggie-buttons .button--primary span {
-    position: relative;
-    z-index: 3;
-  }
-
-  .veggie-buttons .button--primary:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_25.png?v=1764592665);
-    background-size: 100% 100%;
-    padding: 8px 34px;
-    bottom: -5px;
-    z-index: 1;
-    box-shadow: none;
-    border-radius: 35px;
-  }
-
-  .veggie-buttons .button--primary:hover:before {
-    background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_23_3.png?v=1764592664) !important;
-    background-size: 100% 100% !important;
-  }
-
-  .veggie-buttons .button--primary:hover:after {
-    bottom: -5px;
-    box-shadow: none;
-  }
-
-  .veggie-buttons .button--secondary {
-    background: transparent !important;
-    color: #63441D;
-    font-family: var(--font-family);
-    font-size: 30px;
-    line-height: 44px;
+    background: #97d700;
+    color: #2c5f2d;
+    padding: 15px 40px;
+    border-radius: 50px;
     font-weight: 700;
+    font-size: 18px;
     text-decoration: none;
-    box-shadow: none;
-    cursor: pointer;
-    transition: transform .2s ease, box-shadow .2s ease;
-    text-align: center;
-    border-radius: 35px;
-    padding: 8px 34px;
-    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-transform: lowercase;
-    transform: none !important;
-    position: relative;
-    display: inline-block;
   }
 
-  .veggie-buttons .button--secondary:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_23_4.png?v=1764654764);
-    background-size: 100% 100%;
-    z-index: 2;
-    border-radius: 35px;
-  }
-
-  .veggie-buttons .button--secondary span {
-    position: relative;
-    z-index: 3;
-  }
-
-  .veggie-buttons .button--secondary:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_25_1.png?v=1764654764);
-    background-size: 100% 100%;
-    padding: 8px 34px;
-    bottom: -6px;
-    z-index: 1;
-    box-shadow: none;
-    border-radius: 35px;
-  }
-
-  .veggie-buttons .button--secondary:hover:before {
-    background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_23_5.png?v=1764654764) !important;
-    background-size: 100% 100% !important;
-  }
-
-  .veggie-buttons .button--secondary:hover:after {
-    bottom: -5px;
-    box-shadow: none;
+  .hero-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(151, 215, 0, 0.4);
   }
 
   /* Wave Divider */
@@ -307,11 +194,9 @@
       margin-bottom: 30px;
     }
 
-    .veggie-buttons .button--primary,
-    .veggie-buttons .button--secondary {
-      font-size: 24px;
-      line-height: 36px;
-      padding: 6px 28px;
+    .hero-button {
+      font-size: 16px;
+      padding: 12px 30px;
     }
   }
 </style>
@@ -329,11 +214,9 @@
       {%- endif -%}
       
       {%- if section.settings.button_label != blank and section.settings.button_link != blank -%}
-        <div class="veggie-buttons">
-          <a href="{{ section.settings.button_link }}" class="button--{{ section.settings.button_style | default: 'primary' }}">
-            <span>{{ section.settings.button_label }}</span>
-          </a>
-        </div>
+        <a href="{{ section.settings.button_link }}" class="hero-button">
+          {{ section.settings.button_label }}
+        </a>
       {%- endif -%}
     </div>
 
@@ -389,22 +272,6 @@
       "type": "url",
       "id": "button_link",
       "label": "Button Link"
-    },
-    {
-      "type": "select",
-      "id": "button_style",
-      "label": "Button Style",
-      "options": [
-        {
-          "value": "primary",
-          "label": "Primary (Green)"
-        },
-        {
-          "value": "secondary",
-          "label": "Secondary (Brown)"
-        }
-      ],
-      "default": "primary"
     },
     {
       "type": "header",
