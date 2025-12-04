@@ -47,13 +47,35 @@
         "description": "<p>Healthier shouldn’t be a hassle. At Kidfresh we make the kind of meals that kids cheer for, and make them with the kinds of ingredients that parents love giving them. Think kid’s menu favorites, like mac & cheese, chicken nuggets and even buttered pasta, but made better with hidden veggies in every bite. And made delicious, because a meal can only be better for them if they actually eat it. Easy preparation, empty plates, happy kids, and stress-free mealtimes…that’s what we mean when we say win more meals. We’re here to help you win parenthood, one bite at a time.</p>",
         "button_label": "shop now",
         "button_link": "",
+        "image": "shopify://shop_images/9ef93cae1d7df2023c44ebac7931cbc6d8dbfee3.png",
+        "mobile_image": "shopify://shop_images/d377d72b2701d219dba5622a7b03f97595969669.png",
         "layout": "image_right"
+      }
+    },
+    "est_section_yyfjFw": {
+      "type": "est-section",
+      "name": "ESTD Section",
+      "settings": {
+        "heading": "est’d 2007",
+        "text": "We began as a couple parents in New York City who wanted healthier meals for their own kids, but quickly ended up on dinner tables and in lunch boxes all over town. Before long, our better-for-them frozen kid favorites found their way into grocery aisles all over the country. Maybe it was the hidden veggies, maybe it was the meatballs—either way, we’ve been helping parents win more meals ever since.",
+        "heading_color": "#ffffff",
+        "text_color": "#ffffff",
+        "bg_color": "#0f4735",
+        "left_image_1": "shopify://shop_images/faca2dc850f38e2802ff11c0952969e1447f1e8f_1.png",
+        "left_image_2": "shopify://shop_images/f82843fa2b94fc2e99c8b5fb4fd0d93b1e124a76.png",
+        "left_image_3": "shopify://shop_images/faca2dc850f38e2802ff11c0952969e1447f1e8f_1.png",
+        "right_image_1": "shopify://shop_images/b53688aa45b62828ebd90fa20749bb271cf48b8e.png",
+        "right_image_2": "shopify://shop_images/faca2dc850f38e2802ff11c0952969e1447f1e8f_1.png",
+        "padding_top": 70,
+        "padding_bottom": 70,
+        "wave_color": "#f5f5dc"
       }
     }
   },
   "order": [
     "main",
     "slideshow_cAi8Jj",
-    "hero_text_image_JgGcCx"
+    "hero_text_image_JgGcCx",
+    "est_section_yyfjFw"
   ]
 }
