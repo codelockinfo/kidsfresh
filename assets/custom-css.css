@@ -1,7 +1,7 @@
 .header__menu-item{
     font-size:23px;
 }
-.announcement-bar__message {
+.announcement-bar__message p {
     font-family: var(--font-family) !important;
    font-size: 21px !important; 
    line-height:43px !important;
