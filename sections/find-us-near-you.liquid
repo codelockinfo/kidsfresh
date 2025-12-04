@@ -1,0 +1,587 @@
+<style>
+  .find-us-section {
+    background-color: #F8F4EB;
+    padding: 60px 40px 0;
+    position: relative;
+    min-height: 100vh;
+  }
+
+  .find-us-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .find-us-header h1 {
+    font-size: 48px;
+    font-weight: 900;
+    color: #2c5f2d;
+    margin-bottom: 30px;
+    text-transform: lowercase;
+  }
+
+  .main-search-bar {
+    max-width: 800px;
+    margin: 0 auto 50px;
+    position: relative;
+  }
+
+  .main-search-bar input {
+    width: 100%;
+    padding: 15px 50px 15px 20px;
+    border: 1px solid #2c5f2d;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #2c2c2c;
+  }
+
+  .main-search-bar input::placeholder {
+    color: #999;
+  }
+
+  .main-search-bar .search-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+  }
+
+  .product-selection-section {
+    max-width: 1200px;
+    margin: 0 auto 50px;
+  }
+
+  .product-selection-header {
+    background-color: #2c5f2d;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .product-selection-header h2 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    text-transform: capitalize;
+  }
+
+  .location-controls {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .location-input {
+    padding: 12px 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    min-width: 250px;
+    background-color: #fff;
+  }
+
+  .location-input::placeholder {
+    color: #999;
+  }
+
+  .action-buttons {
+    display: flex;
+    gap: 10px;
+  }
+
+  .btn-find,
+  .btn-buy-online {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .btn-find {
+    background-color: #97d700;
+    color: #2c5f2d;
+  }
+
+  .btn-find:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(151, 215, 0, 0.4);
+  }
+
+  .btn-buy-online {
+    background-color: #97d700;
+    color: #2c5f2d;
+  }
+
+  .btn-buy-online:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(151, 215, 0, 0.4);
+  }
+
+  .filter-products-bar {
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    position: relative;
+  }
+
+  .filter-products-bar input {
+    width: 100%;
+    padding: 15px 50px 15px 20px;
+    border: 1px solid #2c5f2d;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #2c2c2c;
+  }
+
+  .filter-products-bar input::placeholder {
+    color: #999;
+  }
+
+  .filter-products-bar .search-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+  }
+
+  .products-grid-container {
+    max-width: 1200px;
+    margin: 0 auto 100px;
+    padding: 0 20px;
+  }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .product-card {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+  }
+
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  .product-image-wrapper {
+    position: relative;
+    padding-top: 100%;
+    overflow: hidden;
+    background-color: #f5f5f5;
+  }
+
+  .product-image-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .product-info {
+    padding: 20px 15px;
+  }
+
+  .product-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2c2c2c;
+    margin: 0 0 10px;
+    line-height: 1.4;
+  }
+
+  .product-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .product-badge {
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 12px;
+    background-color: #f0f0f0;
+    color: #5a5a5a;
+    font-weight: 500;
+  }
+
+  /* Wave Divider */
+  .wave-divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .wave-divider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+    display: block;
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 968px) {
+    .find-us-section {
+      padding: 40px 20px 0;
+    }
+
+    .find-us-header h1 {
+      font-size: 36px;
+    }
+
+    .product-selection-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+    }
+
+    .location-controls {
+      width: 100%;
+    }
+
+    .location-input {
+      flex: 1;
+      min-width: auto;
+    }
+
+    .action-buttons {
+      width: 100%;
+    }
+
+    .btn-find,
+    .btn-buy-online {
+      flex: 1;
+    }
+
+    .products-grid {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .wave-divider {
+      height: 100px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .find-us-header h1 {
+      font-size: 28px;
+    }
+
+    .product-selection-header h2 {
+      font-size: 20px;
+    }
+
+    .products-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    .wave-divider {
+      height: 80px;
+    }
+  }
+</style>
+
+<section class="find-us-section" id="find-us-{{ section.id }}">
+  <div class="find-us-header">
+    <h1>{{ section.settings.heading | default: "find us near you:" }}</h1>
+    
+    <div class="main-search-bar">
+      <form action="{{ routes.search_url }}" method="get" role="search">
+        <input
+          type="search"
+          name="q"
+          placeholder="{{ section.settings.search_placeholder | default: 'Search' }}"
+          value="{{ search.terms | escape }}"
+        >
+        <input type="hidden" name="options[prefix]" value="last">
+        <svg class="search-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 17A8 8 0 1 0 9 1a8 8 0 0 0 0 16z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="m19 19-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </form>
+    </div>
+  </div>
+
+  <div class="product-selection-section">
+    <div class="product-selection-header">
+      <h2>{{ section.settings.selection_heading | default: "Select Specific Products" }}</h2>
+      <div class="location-controls">
+        <input
+          type="text"
+          class="location-input"
+          placeholder="{{ section.settings.location_placeholder | default: 'Denver, CO 80202' }}"
+          id="location-input-{{ section.id }}"
+        >
+        <div class="action-buttons">
+          <button type="button" class="btn-find" id="find-btn-{{ section.id }}">
+            {{ section.settings.find_button_label | default: "Find" }}
+          </button>
+          {%- if section.settings.buy_online_link != blank -%}
+            <a href="{{ section.settings.buy_online_link }}" class="btn-buy-online">
+              {{ section.settings.buy_online_label | default: "Buy Online" }}
+            </a>
+          {%- else -%}
+            <button type="button" class="btn-buy-online">
+              {{ section.settings.buy_online_label | default: "Buy Online" }}
+            </button>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+
+    <div class="filter-products-bar">
+      <input
+        type="text"
+        placeholder="{{ section.settings.filter_placeholder | default: 'Filter Products' }}"
+        id="filter-input-{{ section.id }}"
+      >
+      <svg class="search-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 17A8 8 0 1 0 9 1a8 8 0 0 0 0 16z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="m19 19-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="products-grid-container">
+    {%- if section.settings.collection != blank -%}
+      <ul class="products-grid">
+        {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
+          <li class="product-card">
+            <a href="{{ product.url }}" style="text-decoration: none; color: inherit;">
+              <div class="product-image-wrapper">
+                {%- if product.featured_media -%}
+                  <img
+                    src="{{ product.featured_media | img_url: '500x500' }}"
+                    alt="{{ product.title | escape }}"
+                    loading="lazy"
+                  >
+                {%- else -%}
+                  {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                {%- endif -%}
+              </div>
+              <div class="product-info">
+                <h3 class="product-name">{{ product.title }}</h3>
+                <div class="product-badges">
+                  <span class="product-badge">1 Easy Meal</span>
+                  <span class="product-badge">Keep Frozen</span>
+                  {%- if product.metafields.custom.protein -%}
+                    <span class="product-badge">{{ product.metafields.custom.protein }}g Protein</span>
+                  {%- endif -%}
+                  <span class="product-badge">No Artificial Flavors</span>
+                </div>
+              </div>
+            </a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    {%- else -%}
+      <ul class="products-grid">
+        {%- for i in (1..8) -%}
+          <li class="product-card">
+            <div class="product-image-wrapper">
+              {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Product {{ i }}</h3>
+              <div class="product-badges">
+                <span class="product-badge">1 Easy Meal</span>
+                <span class="product-badge">Keep Frozen</span>
+                <span class="product-badge">10g Protein</span>
+                <span class="product-badge">No Artificial Flavors</span>
+              </div>
+            </div>
+          </li>
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
+  </div>
+
+  <!-- Customizable Wave Divider -->
+  {%- if section.settings.wave_image != blank -%}
+    <div class="wave-divider">
+      <img
+        src="{{ section.settings.wave_image | img_url: '1920x' }}"
+        alt="Wave divider"
+        loading="lazy"
+      >
+    </div>
+  {%- else -%}
+    <!-- Fallback SVG wave if no image is uploaded -->
+    <div class="wave-divider">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%; fill: #2c5f2d;">
+        <path d="M0,60 C200,100 400,20 600,60 C800,100 1000,20 1200,60 L1200,120 L0,120 Z"></path>
+      </svg>
+    </div>
+  {%- endif -%}
+</section>
+
+<script>
+  (function() {
+    const sectionId = '{{ section.id }}';
+    const filterInput = document.getElementById('filter-input-' + sectionId);
+    const productCards = document.querySelectorAll('#find-us-' + sectionId + ' .product-card');
+
+    if (filterInput && productCards.length > 0) {
+      filterInput.addEventListener('input', function(e) {
+        const searchTerm = e.target.value.toLowerCase();
+        
+        productCards.forEach(function(card) {
+          const productName = card.querySelector('.product-name').textContent.toLowerCase();
+          if (productName.includes(searchTerm)) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    }
+
+    const findBtn = document.getElementById('find-btn-' + sectionId);
+    const locationInput = document.getElementById('location-input-' + sectionId);
+
+    if (findBtn && locationInput) {
+      findBtn.addEventListener('click', function() {
+        const location = locationInput.value;
+        if (location) {
+          // Add your location search logic here
+          console.log('Finding stores near:', location);
+        }
+      });
+    }
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Find Us Near You",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Header Settings"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "find us near you:"
+    },
+    {
+      "type": "text",
+      "id": "search_placeholder",
+      "label": "Search Placeholder",
+      "default": "Search"
+    },
+    {
+      "type": "header",
+      "content": "Product Selection Settings"
+    },
+    {
+      "type": "text",
+      "id": "selection_heading",
+      "label": "Selection Heading",
+      "default": "Select Specific Products"
+    },
+    {
+      "type": "text",
+      "id": "location_placeholder",
+      "label": "Location Placeholder",
+      "default": "Denver, CO 80202"
+    },
+    {
+      "type": "text",
+      "id": "find_button_label",
+      "label": "Find Button Label",
+      "default": "Find"
+    },
+    {
+      "type": "text",
+      "id": "buy_online_label",
+      "label": "Buy Online Button Label",
+      "default": "Buy Online"
+    },
+    {
+      "type": "url",
+      "id": "buy_online_link",
+      "label": "Buy Online Link"
+    },
+    {
+      "type": "text",
+      "id": "filter_placeholder",
+      "label": "Filter Products Placeholder",
+      "default": "Filter Products"
+    },
+    {
+      "type": "header",
+      "content": "Products Settings"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection",
+      "info": "Select a collection to display products"
+    },
+    {
+      "type": "range",
+      "id": "products_to_show",
+      "min": 4,
+      "max": 24,
+      "step": 4,
+      "default": 8,
+      "label": "Products to Show"
+    },
+    {
+      "type": "header",
+      "content": "Wave Divider"
+    },
+    {
+      "type": "image_picker",
+      "id": "wave_image",
+      "label": "Wave Image",
+      "info": "Upload a custom wave image for the bottom divider. If not provided, a default SVG wave will be used."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Find Us Near You"
+    }
+  ]
+}
+{% endschema %}
+
