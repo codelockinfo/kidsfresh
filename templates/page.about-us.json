@@ -61,8 +61,14 @@
         "heading_color": "#ffffff",
         "text_color": "#ffffff",
         "bg_color": "#0f4735",
+        "left_image_1": "shopify://shop_images/faca2dc850f38e2802ff11c0952969e1447f1e8f_1.png",
+        "left_image_2": "shopify://shop_images/f82843fa2b94fc2e99c8b5fb4fd0d93b1e124a76.png",
+        "left_image_3": "shopify://shop_images/faca2dc850f38e2802ff11c0952969e1447f1e8f_1.png",
+        "right_image_1": "shopify://shop_images/f82843fa2b94fc2e99c8b5fb4fd0d93b1e124a76.png",
+        "right_image_2": "shopify://shop_images/faca2dc850f38e2802ff11c0952969e1447f1e8f_1.png",
         "padding_top": 70,
-        "padding_bottom": 70
+        "padding_bottom": 70,
+        "wave_color": "#f5f5dc"
       }
     }
   },
