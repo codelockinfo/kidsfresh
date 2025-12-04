@@ -398,16 +398,24 @@
 }
 
 @media (min-width: 1401px) and (max-width: 1650px) {
+  .winning-ingredients-{{ section.id }} .container {
+    padding: 0 20px;
+  }
   .winning-ingredients-{{ section.id }} .columns-wrapper {
     display: flex;
     overflow-x: auto;
+    overflow-y: visible;
     scroll-snap-type: x mandatory;
     gap: 26px;
-    justify-content: center;
+    justify-content: flex-start;
+    margin-left: -20px;
+    margin-right: -20px;
+    padding: 10px 80px;
   }
   .winning-ingredients-{{ section.id }} .column-item-wrapper {
     flex: 0 0 calc(100% / 5);
     scroll-snap-align: center;
+    padding: 10px 0;
   }
 }
 
