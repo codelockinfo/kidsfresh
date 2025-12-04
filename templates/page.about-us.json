@@ -77,6 +77,7 @@
         "feature_fm8zcP": {
           "type": "feature",
           "settings": {
+            "icon": "shopify://shop_images/Group_305.png",
             "title": "No Artificial Anything",
             "description": "Zero preservatives, dyes, or fillers — just the good stuff."
           }
@@ -84,6 +85,7 @@
         "feature_RyRtKd": {
           "type": "feature",
           "settings": {
+            "icon": "shopify://shop_images/Vector_f40813d9-1bda-4fde-92a3-be0387011c2b.png",
             "title": "Frozen Fresh",
             "description": "Flash-frozen to lock in nutrition and flavor. Just heat and eat."
           }
@@ -91,6 +93,7 @@
         "feature_eyVkzm": {
           "type": "feature",
           "settings": {
+            "icon": "shopify://shop_images/Group_95_8955ae52-aa79-43bb-92ff-0355eeefe8f9.png",
             "title": "Kid Approved",
             "description": "Crafted by chefs, tested by kids, and devoured without a fight."
           }
