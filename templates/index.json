@@ -60,7 +60,7 @@
     "custom_liquid_iG9dad": {
       "type": "custom-liquid",
       "custom_css": [
-        ".color-scheme-8fca23bf-c055-4afc-bb4c-d7702601df39.gradient {margin-top:-70px}"
+        ".color-scheme-8fca23bf-c055-4afc-bb4c-d7702601df39.gradient {margin-top: -70px;}"
       ],
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
@@ -279,7 +279,7 @@
       "name": "Ungredients",
       "settings": {
         "background_image": "shopify://shop_images/Group_292.png",
-        "mobile_background_image": "shopify://shop_images/iPhone_14_15_Pro_Max_-_1_3.png",
+        "mobile_background_image": "shopify://shop_images/Group_306.png",
         "background_color": "#0f4735",
         "title": "ungredients",
         "icon_svg": "shopify://shop_images/Group_97_9706f09d-9e6f-444b-ad57-08c399617048.png",
