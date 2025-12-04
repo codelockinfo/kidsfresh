@@ -9,6 +9,26 @@
  */
 {
   "sections": {
+    "video_slideshow_mtqtkk": {
+      "type": "video-slideshow",
+      "name": "Auto Video",
+      "settings": {
+        "mobile_video_url": "https://cdn.shopify.com/s/files/1/0577/3957/5488/files/food_ingr_crop_-_no_flatlay.m4v?v=1764825855",
+        "video_url": "https://cdn.shopify.com/s/files/1/0577/3957/5488/files/food_ingr_crop_-_no_flatlay.m4v?v=1764825855",
+        "large_screen_video_url": "https://cdn.shopify.com/s/files/1/0577/3957/5488/files/food_ingr_crop_-_no_flatlay.m4v?v=1764825855",
+        "leaf_bg": "shopify://shop_images/KF-Green_Blob.png",
+        "enable_rotation": true,
+        "rotation_speed": 5,
+        "heading": "Image with text",
+        "subheading_1": "win more meals with protein + nutrients",
+        "subheading_2": "frozen kid meals",
+        "subheading_3": "",
+        "subheading_4": "",
+        "subheading_5": "",
+        "button_label": "our meals",
+        "button_link": ""
+      }
+    },
     "custom_banner_slider_tB6fwN": {
       "type": "custom-banner-slider",
       "name": "Celebrate Plate Section ",
@@ -266,6 +286,7 @@
     }
   },
   "order": [
+    "video_slideshow_mtqtkk",
     "custom_banner_slider_tB6fwN",
     "custom_slider_Bgan3G",
     "ungredients_new_TD3qHQ",
