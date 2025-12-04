@@ -40,12 +40,12 @@
               class="announcement-bar__link link link--text focus-inset animate-arrow"
             >
           {%- endif -%}
-          <span class="announcement-bar__message h5">
-            <span>{{ section.blocks.first.settings.text }}</span>
+          <p class="announcement-bar__message h5">
+            <p>{{ section.blocks.first.settings.text }}</p>
             {%- if section.blocks.first.settings.link != blank -%}
               {{- 'icon-arrow.svg' | inline_asset_content -}}
             {%- endif -%}
-          </span>
+          </p>
           {%- if section.blocks.first.settings.link != blank -%}
             </a>
           {%- endif -%}
