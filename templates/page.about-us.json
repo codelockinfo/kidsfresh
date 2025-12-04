@@ -48,6 +48,7 @@
         "button_label": "shop now",
         "button_link": "#",
         "image": "shopify://shop_images/9ef93cae1d7df2023c44ebac7931cbc6d8dbfee3.png",
+        "mobile_image": "shopify://shop_images/d377d72b2701d219dba5622a7b03f97595969669.png",
         "layout": "image_right"
       }
     }
