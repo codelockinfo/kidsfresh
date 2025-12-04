@@ -113,7 +113,8 @@
         "text_color": "#5d3328",
         "feature_bg_color": "#f8f4eb",
         "feature_title_color": "#ed7723",
-        "feature_text_color": "#39302d"
+        "feature_text_color": "#39302d",
+        "bottom_decor": "shopify://shop_images/Group_289.png"
       }
     }
   },
