@@ -39,97 +39,21 @@
       "name": "Text with Image Section",
       "settings": {}
     },
-    "collection_product_block_ypR9fk": {
-      "type": "collection-product-block",
-      "blocks": {
-        "product_77ywnL": {
-          "type": "product",
-          "settings": {
-            "block_width": 30,
-            "product": "buttered-pasta",
-            "show_new_badge": true,
-            "new_badge_image": "shopify://shop_images/Group_243.png",
-            "show_second_image": true,
-            "custom_description": "Product description",
-            "search_icon": "shopify://shop_images/store_locator_QB.png",
-            "search_icon_hover": "shopify://shop_images/ChatGPT_Image_Dec_2_2025_06_51_07_PM_dc3c5109-df73-409a-bdd7-72fd465d2d1b.png",
-            "icon_link": "",
-            "icon_open_new_tab": false
-          }
-        },
-        "product_F3Gc3N": {
-          "type": "product",
-          "settings": {
-            "block_width": 30,
-            "product": "cheese-pizza-wagon-wheels",
-            "show_new_badge": false,
-            "new_badge_image": "shopify://shop_images/Group_243.png",
-            "show_second_image": true,
-            "custom_description": "Product description",
-            "search_icon": "shopify://shop_images/store_locator_QB.png",
-            "search_icon_hover": "shopify://shop_images/ChatGPT_Image_Dec_2_2025_06_51_07_PM_dc3c5109-df73-409a-bdd7-72fd465d2d1b.png",
-            "icon_link": "",
-            "icon_open_new_tab": false
-          }
-        },
-        "product_4gWHFR": {
-          "type": "product",
-          "settings": {
-            "block_width": 30,
-            "product": "cheeseburger-mac-cheese",
-            "show_new_badge": false,
-            "show_second_image": true,
-            "custom_description": "Product description",
-            "icon_link": "",
-            "icon_open_new_tab": false
-          }
-        },
-        "product_bDeQCt": {
-          "type": "product",
-          "settings": {
-            "block_width": 30,
-            "product": "chicken-meatballs-pasta-marinara",
-            "show_new_badge": false,
-            "show_second_image": true,
-            "custom_description": "Product description",
-            "icon_link": "",
-            "icon_open_new_tab": false
-          }
-        },
-        "promo_block_McYAhH": {
-          "type": "promo_block",
-          "settings": {
-            "block_width": 60,
-            "background_color": "#f58220",
-            "heading": "ingredients + nutrition",
-            "heading_color": "#2c5f2d",
-            "button_text": "learn more",
-            "button_link": "",
-            "vegetable_top_left": "shopify://shop_images/74ab46f0615cade291a70bd67ab2d406c8d6ad75_7a73b820-99c0-4770-98f1-eadb9f1bff4d.png",
-            "vegetable_top_right": "shopify://shop_images/76dcaefd1b7715bffab9954fc7a6971637cb7b60_5e43aedd-e180-44d6-aa46-0d84fa617435.png",
-            "vegetable_middle_left": "shopify://shop_images/fe83b4bd0e9e73f66d02e7ecb706081578ffb478.png",
-            "vegetable_middle_right": "shopify://shop_images/365cf49517568e51bc8c3824884ba8892c326417.png",
-            "vegetable_bottom_left": "shopify://shop_images/76dcaefd1b7715bffab9954fc7a6971637cb7b60_5e43aedd-e180-44d6-aa46-0d84fa617435.png",
-            "vegetable_bottom_right": "shopify://shop_images/74ab46f0615cade291a70bd67ab2d406c8d6ad75_7a73b820-99c0-4770-98f1-eadb9f1bff4d.png"
-          }
-        }
-      },
-      "block_order": [
-        "product_77ywnL",
-        "product_F3Gc3N",
-        "product_4gWHFR",
-        "product_bDeQCt",
-        "promo_block_McYAhH"
-      ],
-      "name": "Custom Collection Grid",
+    "hero_text_image_JgGcCx": {
+      "type": "hero-text-image",
+      "name": "Hero Text with Image",
       "settings": {
-        "section_background": "#f5f5dc"
+        "heading": "it's time to win more meals",
+        "description": "<p>Healthier shouldn’t be a hassle. At Kidfresh we make the kind of meals that kids cheer for, and make them with the kinds of ingredients that parents love giving them. Think kid’s menu favorites, like mac & cheese, chicken nuggets and even buttered pasta, but made better with hidden veggies in every bite. And made delicious, because a meal can only be better for them if they actually eat it. Easy preparation, empty plates, happy kids, and stress-free mealtimes…that’s what we mean when we say win more meals. We’re here to help you win parenthood, one bite at a time.</p>",
+        "button_label": "shop now",
+        "button_link": "",
+        "layout": "image_right"
       }
     }
   },
   "order": [
     "main",
     "slideshow_cAi8Jj",
-    "collection_product_block_ypR9fk"
+    "hero_text_image_JgGcCx"
   ]
 }
