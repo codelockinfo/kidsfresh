@@ -21,15 +21,15 @@
       <path d="M0,60 C200,100 400,20 600,60 C800,100 1000,20 1200,60 L1200,120 L0,120 Z"></path>
     </svg>
   </div>
-
-{% stylesheet %}
-.estd-section {
-    --wave-height: 100px;
-    padding: {{ section.settings.padding_top }}px 0 calc(var(--wave-height) + {{ section.settings.padding_bottom }}px) 0;
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-}
+</section>
+ {%  stylesheet %}
+    .estd-section {
+      --wave-height: 100px;
+      padding: {{ section.settings.padding_top }}px 0 calc(var(--wave-height) + {{ section.settings.padding_bottom }}px) 0;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
 
     .estd-heading {
       font-size: 84px;
@@ -38,7 +38,7 @@
       margin-bottom: 20px;
       margi
     }
-    
+
     .estd-text {
       margin: 0 auto;
       font-size: 28px;
@@ -51,7 +51,7 @@
       width: 80px;
       opacity: 0.95;
     }
-    
+
     .estd-left {
       left: 0;
       top: 20%;
@@ -61,7 +61,7 @@
       right: 0;
       top: 40%;
     }
-    
+
     /* Wave Divider */
     .estd-wave-divider {
       position: absolute;
@@ -81,24 +81,23 @@
       height: 100%;
       fill: {{ section.settings.wave_color | default: '#f5f5dc' }};
     }
-    
+
     @media(max-width: 768px){
       .estd-section {
-          --wave-height: 60px;
-        }
-        .estd-floating { width: 50px; opacity: 0.6; }
+        --wave-height: 60px;
+      }
+      .estd-floating { width: 50px; opacity: 0.6; }
     }
+ {% endstylesheet %}
 
-{% endstylesheet %}
-</section>
 
 {% schema %}
 {
-    "name": "ESTD Section",
-    "settings": [
+  "name": "ESTD Section",
+  "settings": [
     {
-        "type": "text",
-        "id": "heading",
+      "type": "text",
+      "id": "heading",
       "label": "Heading",
       "default": "est’d 2007"
     },
