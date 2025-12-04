@@ -2,10 +2,10 @@
     font-size:23px;
 }
 .announcement-bar__message {
-    font-family: var(--font-family);
-   font-size: 20px; 
-   line-height:43px;
-   font-weight: 400;
+    font-family: var(--font-family) !important;
+   font-size: 20px !important; 
+   line-height:43px !important;
+   font-weight: 400 !important;
 }
 
 .announcement-bar, .announcement-bar__announcement{
