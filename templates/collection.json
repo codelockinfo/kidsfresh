@@ -69,7 +69,7 @@
           "settings": {
             "block_width": 33,
             "product": "chicken-sticks-potato-tots",
-            "show_new_badge": false,
+            "show_new_badge": true,
             "new_badge_image": "shopify://shop_images/Group_243.png",
             "show_second_image": true,
             "custom_description": "Product description",
@@ -84,7 +84,7 @@
           "settings": {
             "block_width": 33,
             "product": "buttered-pasta",
-            "show_new_badge": false,
+            "show_new_badge": true,
             "show_second_image": true,
             "custom_description": "Product description",
             "search_icon": "shopify://shop_images/store_locator_QB.png",
