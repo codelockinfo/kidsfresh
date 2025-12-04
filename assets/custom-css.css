@@ -1,6 +1,9 @@
 .header__menu-item{
     font-size:23px;
 }
+.announcement-bar{
+    padding : 11px 0px;
+}
 .announcement-bar p {
     font-family: var(--font-family);
    font-size: 21px; 
