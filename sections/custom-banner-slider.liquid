@@ -76,6 +76,15 @@
     display: none;
   }
 
+  @media(max-width: 768px) {
+    .desktop-bg {
+      display: none;
+    }
+    .mobile-bg {
+      display: block;
+    }
+  }
+
   /* TOP DECOR */
   #celebrate-plate-{{ section.id }} .top-decor {
     position: absolute;
@@ -286,11 +295,7 @@
     color: #39302D;
 }
 }
-@media (min-width: 1135px) and (max-width: 1558px) {
-    #celebrate-plate-{{ section.id }} {
-    padding: 80px 0 0;
-  }
-}
+
 @media (min-width: 990px) and (max-width: 1099px) {
     #celebrate-plate-{{ section.id }} .broccoli-image {
     bottom: 52%;
@@ -343,9 +348,21 @@
 }
 }
 
+@media (max-width: 768px) {
+  #celebrate-plate-{{ section.id }} .button {
+    font-size: 20px;
+    line-height: 33px;
+  }
+  #celebrate-plate-{{ section.id }} .broccoli-image {
+    display: none;
+  }
+}
 
-
-
+@media (min-width: 1135px) and (max-width: 1558px) {
+    #celebrate-plate-{{ section.id }} {
+    padding: 80px 0 0;
+  }
+}
 @media (min-width: 847px) and (max-width: 1134px) {
     #celebrate-plate-{{ section.id }} {
     padding: 60px 0 0;
@@ -495,21 +512,6 @@
     line-height: 38px;
     padding: 8px 14px;
   }
-}
-@media (max-width: 768px) {
-  #celebrate-plate-{{ section.id }} .button {
-    font-size: 20px;
-    line-height: 33px;
-  }
-  #celebrate-plate-{{ section.id }} .broccoli-image {
-    display: none;
-  }
-   .desktop-bg {
-      display: none;
-    }
-    .mobile-bg {
-      display: block;
-    }
 }
 </style>
 
