@@ -21,6 +21,16 @@
     <img class="top-decor" src="{{ section.settings.top_decor | img_url: 'master' }}">
   {% endif %}
 
+  <!-- BROCCOLI IMAGE -->
+  {%- if section.settings.broccoli_image != blank -%}
+    <div class="broccoli-image">
+      <img src="{{ section.settings.broccoli_image | img_url: 'master' }}" alt="Animated Broccoli" loading="lazy" style="width: 100%; height: auto;">
+      {%- if section.settings.hover_text != blank -%}
+        <div class="broccoli-hover-text">{{ section.settings.hover_text }}</div>
+      {%- endif -%}
+    </div>
+  {%- endif -%}
+
   <!-- CONTENT -->
   <div class="content">
     <h2>{{ section.settings.heading }}</h2>
