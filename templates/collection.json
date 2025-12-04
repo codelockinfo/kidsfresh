@@ -104,7 +104,7 @@
         "promo_block_questions_KzyxQR": {
           "type": "promo_block_questions",
           "settings": {
-            "block_width": 30,
+            "block_width": 33,
             "heading": "got questions?",
             "button_text": "learn more",
             "button_link": ""
@@ -113,7 +113,7 @@
         "product_jkiTim": {
           "type": "product",
           "settings": {
-            "block_width": 30,
+            "block_width": 33,
             "product": "",
             "show_new_badge": false,
             "show_second_image": true,
@@ -125,7 +125,7 @@
         "product_HiiHAm": {
           "type": "product",
           "settings": {
-            "block_width": 30,
+            "block_width": 33,
             "product": "",
             "show_new_badge": false,
             "show_second_image": true,
