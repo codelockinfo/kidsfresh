@@ -15,7 +15,6 @@
   .food-love-heading {
     font-size: 84px;
     font-weight: 900;
-    color: {{ section.settings.heading_color | default: '#5D3328' }};
     text-align: center;
     margin-bottom: 30px;
     margin-top: 0;
@@ -25,7 +24,6 @@
 
   .food-love-description {
     font-size: 28px;
-    color: {{ section.settings.text_color | default: '#5D3328' }};
     text-align: center;
     max-width: 900px;
     margin: 0 auto 60px;
@@ -109,14 +107,12 @@
   .food-love-feature-title {
     font-size: 24px;
     font-weight: 700;
-    color: {{ section.settings.feature_title_color | default: '#F58220' }};
     margin-bottom: 15px;
     text-transform: lowercase;
   }
 
   .food-love-feature-description {
     font-size: 18px;
-    color: {{ section.settings.feature_text_color | default: '#5D3328' }};
     line-height: 1.5;
   }
 
@@ -201,18 +197,18 @@
 
   <div class="food-love-container">
     {% if section.settings.heading != blank %}
-      <h2 class="food-love-heading">{{ section.settings.heading }}</h2>
+      <h2 class="food-love-heading" style="color: {{ section.settings.heading_color | default: '#5D3328' }};">{{ section.settings.heading }}</h2>
     {% endif %}
 
     {% if section.settings.description != blank %}
-      <div class="food-love-description">{{ section.settings.description }}</div>
+      <div class="food-love-description" style="color: {{ section.settings.text_color | default: '#5D3328' }};">{{ section.settings.description }}</div>
     {% endif %}
 
     <!-- Feature Blocks -->
     <div class="food-love-features">
       {% for block in section.blocks %}
         {% if block.type == 'feature' %}
-          <div class="food-love-feature" {{ block.shopify_attributes }}>
+          <div class="food-love-feature" style="background: {{ section.settings.feature_bg_color | default: '#F8F4EB' }};" {{ block.shopify_attributes }}>
             {% if block.settings.icon != blank %}
               <div class="food-love-feature-icon">
                 <img src="{{ block.settings.icon | image_url }}" 
@@ -221,11 +217,11 @@
             {% endif %}
             
             {% if block.settings.title != blank %}
-              <h3 class="food-love-feature-title">{{ block.settings.title }}</h3>
+              <h3 class="food-love-feature-title" style="color: {{ section.settings.feature_title_color | default: '#F58220' }};">{{ block.settings.title }}</h3>
             {% endif %}
             
             {% if block.settings.description != blank %}
-              <p class="food-love-feature-description">{{ block.settings.description }}</p>
+              <p class="food-love-feature-description" style="color: {{ section.settings.feature_text_color | default: '#5D3328' }};">{{ block.settings.description }}</p>
             {% endif %}
           </div>
         {% endif %}
