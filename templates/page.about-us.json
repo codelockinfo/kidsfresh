@@ -46,7 +46,7 @@
         "heading": "it's time to win more meals",
         "description": "<p>Healthier shouldn’t be a hassle. At Kidfresh we make the kind of meals that kids cheer for, and make them with the kinds of ingredients that parents love giving them. Think kid’s menu favorites, like mac & cheese, chicken nuggets and even buttered pasta, but made better with hidden veggies in every bite. And made delicious, because a meal can only be better for them if they actually eat it. Easy preparation, empty plates, happy kids, and stress-free mealtimes…that’s what we mean when we say win more meals. We’re here to help you win parenthood, one bite at a time.</p>",
         "button_label": "shop now",
-        "button_link": "",
+        "button_link": "#",
         "image": "shopify://shop_images/9ef93cae1d7df2023c44ebac7931cbc6d8dbfee3.png",
         "mobile_image": "shopify://shop_images/d377d72b2701d219dba5622a7b03f97595969669.png",
         "layout": "image_right"
@@ -105,12 +105,12 @@
       "settings": {
         "heading": "food is love",
         "description": "<p>Everything we do—from how we prepare our meals, to the ingredients we use, to our hidden veggies—is about giving kids what they need to be healthy and happy, and giving parents one more way to show their love.</p>",
-        "bg_color": "#F8F4EB",
-        "heading_color": "#5D3328",
-        "text_color": "#5D3328",
-        "feature_bg_color": "#F8F4EB",
-        "feature_title_color": "#F58220",
-        "feature_text_color": "#5D3328"
+        "bg_color": "#f8f4eb",
+        "heading_color": "#5d3328",
+        "text_color": "#5d3328",
+        "feature_bg_color": "#f8f4eb",
+        "feature_title_color": "#f58220",
+        "feature_text_color": "#5d3328"
       }
     }
   },
