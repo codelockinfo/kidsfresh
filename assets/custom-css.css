@@ -37,3 +37,9 @@ ul.footer-block__details-content.list-unstyled li a{
     font-size: 20px !important;
 }
 }
+
+@media (max-width: 480px) {
+    .footer__content-top.page-width{
+    padding:0px 20px;
+}
+}
