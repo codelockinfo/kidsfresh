@@ -116,6 +116,15 @@
     line-height: 1.5;
   }
 
+  /* Bottom Wave Decor */
+  #food-love-{{ section.id }} .bottom-decor {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+  }
+
   /* Responsive Styles */
   @media (max-width: 968px) {
     .food-love-section {
@@ -228,6 +237,11 @@
       {% endfor %}
     </div>
   </div>
+
+  <!-- Bottom Wave Decor -->
+  {% if section.settings.bottom_decor != blank %}
+    <img class="bottom-decor" src="{{ section.settings.bottom_decor | img_url: 'master' }}" alt="Wave decoration">
+  {% endif %}
 </section>
 
 {% schema %}
@@ -320,6 +334,15 @@
       "type": "image_picker",
       "id": "decorative_image_5",
       "label": "Decorative Image 5 (Bottom Right)"
+    },
+    {
+      "type": "header",
+      "content": "Bottom Wave Decoration"
+    },
+    {
+      "type": "image_picker",
+      "id": "bottom_decor",
+      "label": "Bottom Decorative Wave Image"
     }
   ],
   "blocks": [
