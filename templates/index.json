@@ -17,6 +17,7 @@
         "video_url": "https://cdn.shopify.com/s/files/1/0577/3957/5488/files/food_ingr_crop_-_no_flatlay.m4v?v=1764825855",
         "large_screen_video_url": "https://cdn.shopify.com/s/files/1/0577/3957/5488/files/food_ingr_crop_-_no_flatlay.m4v?v=1764825855",
         "leaf_bg": "shopify://shop_images/Group_301.png",
+        "leaf_mobile_bg": "shopify://shop_images/KF-GreenBlob-Mobile.png",
         "enable_rotation": true,
         "rotation_speed": 5,
         "heading": "win more meals with",
