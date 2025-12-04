@@ -449,8 +449,7 @@ gap:12px;
 }
 
 .veggie-buttons .button--primary span{
-  position: relative;
-  z-index: 3!important;
+  z-index: 3;
 }
 
 .veggie-buttons .button--primary:after {
@@ -500,7 +499,6 @@ gap:12px;
 }
 
 .veggie-buttons .button--secondary span {
-  position: relative;
   z-index: 3;
 }
 
@@ -1023,13 +1021,6 @@ gap:12px;
   }
   }
   @media (min-width: 1120px) and (max-width: 1220px){
-    .new-badge img{
-      width: 50%!important;
-    }
-    .new-badge{
-      top: -20px!important;
-      left: -22px!important;
-    }
     .grid-row {
       padding: 29px 120px;
     }
@@ -1135,13 +1126,6 @@ gap:12px;
   }
   }
   @media (min-width: 1020px) and (max-width: 1120px){
-    .new-badge img{
-      width: 50%!important;
-    }
-    .new-badge{
-      top: -20px!important;
-      left: -22px!important;
-    }
     .grid-row {
       padding: 29px 100px;
     }
@@ -1241,13 +1225,6 @@ gap:12px;
   }
   }
   @media (min-width: 968px) and (max-width: 1020px){
-    .new-badge img{
-      width: 50%!important;
-    }
-    .new-badge{
-      top: -20px!important;
-      left: -22px!important;
-    }
     .grid-row {
       padding: 29px 80px;
     }
@@ -2276,9 +2253,6 @@ gap:12px;
     min-height: 400px !important;
     height: 100% !important;
   }
-  .new-badge img{
-    max-width: 50%!important;
-  }
   }
   @media (max-width: 768px) {
     .promo-block-questions {
@@ -2302,9 +2276,7 @@ gap:12px;
     row-gap:43px !important;
   }
      .new-badge{
-      {% comment %} display:none; {% endcomment %}
-      top: 20px;
-      left: -2px;
+      display:none;
     }
     .grid-row{
     padding:30px !important;
@@ -2350,6 +2322,11 @@ gap:12px;
   .hover-img{
     width:32px !important;
     height:30px !important;
+  }
+
+  .new-badge{
+     top:10px;
+     left:-2px;
   }
 
   .new-badge img {
@@ -2505,7 +2482,7 @@ gap:12px;
                 {% endif %}
                 {% if block.settings.button_text != blank and block.settings.button_link != blank %}
                   <a href="{{ block.settings.button_link }}" class="promo-button button button--primary">
-                    <span>{{ block.settings.button_text }}</span>
+                    {{ block.settings.button_text }}
                   </a>
                 {% endif %}
               </div>
@@ -2552,7 +2529,7 @@ gap:12px;
                 {% endif %}
                 {% if block.settings.button_text != blank and block.settings.button_link != blank %}
                   <a href="{{ block.settings.button_link }}" class="promo-button-questions button button--secondary">
-                    <span>{{ block.settings.button_text }}</span>
+                    {{ block.settings.button_text }}
                   </a>
                 {% endif %}
               </div>
