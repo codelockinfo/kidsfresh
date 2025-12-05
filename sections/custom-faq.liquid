@@ -1,4 +1,4 @@
-<style>
+{% comment %} <style>
 .faq-container {
   max-width: 900px;
   margin: 0 auto;
@@ -181,6 +181,247 @@ document.addEventListener("DOMContentLoaded", () => {
 
   "presets": [
     { "name": "Dynamic FAQ Tabs" }
+  ]
+}
+{% endschema %} {% endcomment %}
+
+
+
+<style>
+
+/* MAIN TOP GREEN BG WRAPPER */
+.faq-full-wrapper {
+  background-image: url({{ section.settings.tabs_bg_desktop | image_url }});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 35px 0;
+}
+
+@media(max-width:768px){
+  .faq-full-wrapper {
+    background-image: url({{ section.settings.tabs_bg_mobile | image_url }});
+  }
+}
+
+/* INNER CONTAINER */
+.faq-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* FILTER BY TEXT */
+.filter-title {
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  margin-right: 20px;
+  text-transform: lowercase;
+}
+
+/* TABS */
+.faq-tabs {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 18px;
+}
+
+.faq-tab {
+  opacity: 0.7;
+  transition: 0.3s ease;
+}
+
+.faq-tab:hover,
+.faq-tab.active {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* FAQ SECTIONS */
+.faq-section {
+  display: none;
+}
+
+.faq-section.active {
+  display: block;
+}
+
+/* FAQ ITEM BOX */
+.faq-item {
+  background: #fff;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  padding: 18px 22px;
+  cursor: pointer;
+}
+
+.faq-item-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+}
+
+.faq-arrow {
+  font-size: 22px;
+  transition: 0.3s ease;
+}
+
+.faq-item.open .faq-arrow {
+  transform: rotate(180deg);
+}
+
+.faq-item-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .4s ease;
+}
+
+.faq-item.open .faq-item-content {
+  max-height: 500px;
+  padding-top: 10px;
+}
+</style>
+
+
+<!-- FULL BACKGROUND WRAPPER -->
+<div class="faq-full-wrapper">
+
+  <div class="faq-container">
+
+    <!-- FILTER BY + TABS -->
+    <div class="faq-tabs">
+      <span class="filter-title">filter by:</span>
+
+      {% for block in section.blocks %}
+        {% if block.type == 'tab' %}
+          <div class="faq-tab" data-tab="{{ block.settings.tab_id }}">
+            {{ block.settings.tab_title }}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+
+    <!-- FAQ SECTIONS -->
+    {% for tab in section.blocks %}
+      {% if tab.type == 'tab' %}
+
+        <div class="faq-section" id="section-{{ tab.settings.tab_id }}">
+
+          {% for faq in section.blocks %}
+            {% if faq.type == 'faq' and faq.settings.parent_tab == tab.settings.tab_id %}
+
+              <div class="faq-item">
+
+                <div class="faq-item-title">
+                  <span>{{ faq.settings.faq_question }}</span>
+                  <span class="faq-arrow">⌄</span>
+                </div>
+
+                <div class="faq-item-content">
+                  <p>{{ faq.settings.faq_answer }}</p>
+                </div>
+
+              </div>
+
+            {% endif %}
+          {% endfor %}
+
+        </div>
+
+      {% endif %}
+    {% endfor %}
+
+  </div>
+</div>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const tabs = document.querySelectorAll(".faq-tab");
+  const sections = document.querySelectorAll(".faq-section");
+
+  /* DEFAULT FIRST TAB ACTIVE */
+  if (tabs.length > 0) {
+    tabs[0].classList.add("active");
+    sections[0].classList.add("active");
+  }
+
+  /* TAB SWITCHING */
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      const id = tab.dataset.tab;
+
+      tabs.forEach(t => t.classList.remove("active"));
+      sections.forEach(s => s.classList.remove("active"));
+
+      tab.classList.add("active");
+      document.getElementById("section-" + id).classList.add("active");
+    });
+  });
+
+  /* ACCORDION */
+  document.querySelectorAll(".faq-item").forEach(item => {
+    item.addEventListener("click", () => {
+      item.classList.toggle("open");
+    });
+  });
+
+});
+</script>
+
+
+
+
+{% schema %}
+{
+  "name": "Dynamic FAQ Tabs Section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "tabs_bg_desktop",
+      "label": "Tabs Background Image (Desktop)"
+    },
+    {
+      "type": "image_picker",
+      "id": "tabs_bg_mobile",
+      "label": "Tabs Background Image (Mobile)"
+    }
+  ],
+
+  "blocks": [
+    {
+      "type": "tab",
+      "name": "Tab",
+      "settings": [
+        { "type": "text", "id": "tab_title", "label": "Tab Title" },
+        { "type": "text", "id": "tab_id", "label": "Tab Unique ID", "default": "products" }
+      ]
+    },
+
+    {
+      "type": "faq",
+      "name": "FAQ Item",
+      "settings": [
+        { "type": "text", "id": "parent_tab", "label": "Parent Tab ID" },
+        { "type": "text", "id": "faq_question", "label": "FAQ Question" },
+        { "type": "textarea", "id": "faq_answer", "label": "FAQ Answer" }
+      ]
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "Dynamic FAQ Tabs"
+    }
   ]
 }
 {% endschema %}
