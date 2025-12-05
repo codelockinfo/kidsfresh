@@ -125,7 +125,7 @@
           "settings": {
             "block_width": 65,
             "background_color": "#f58220",
-            "heading": "ingredients + nutrition",
+            "heading": "<p>ingredients +<br/> nutrition</p>",
             "heading_color": "#2c5f2d",
             "button_text": "learn more",
             "button_link": "#",
