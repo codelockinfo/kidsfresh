@@ -186,8 +186,12 @@ document.addEventListener("DOMContentLoaded", () => {
 {% endschema %} {% endcomment %}
 
 
-
 <style>
+
+/* MAIN OUTER WRAPPER */
+.main-faq-wrapper {
+  width: 100%;
+}
 
 /* Only TABS Background Wrapper */
 .faq-tabs-wrapper {
@@ -204,9 +208,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 }
 
-/* inner container */
-.faq-container {
-  max-width: 1100px;
+/* CUSTOM 1990PX CONTAINER */
+.faq-custom-container {
+  max-width: 1990px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -251,7 +255,7 @@ document.addEventListener("DOMContentLoaded", () => {
   display: block;
 }
 
-/* FAQ BOX (NO BACKGROUND IMAGE) */
+/* FAQ BOX */
 .faq-item {
   background: #fff;
   border-radius: 10px;
@@ -290,60 +294,65 @@ document.addEventListener("DOMContentLoaded", () => {
 </style>
 
 
-<!-- TABS BACKGROUND WRAPPER -->
-<div class="faq-tabs-wrapper">
+<!-- MAIN WRAPPER -->
+<div class="main-faq-wrapper">
 
-  <div class="faq-container">
+  <!-- TABS BACKGROUND SECTION -->
+  <div class="faq-tabs-wrapper">
 
-    <!-- FILTER + TABS -->
-    <div class="faq-tabs">
-      <span class="filter-title">filter by:</span>
+    <div class="faq-custom-container">
 
-      {% for block in section.blocks %}
-        {% if block.type == 'tab' %}
-          <div class="faq-tab" data-tab="{{ block.settings.tab_id }}">
-            {{ block.settings.tab_title }}
-          </div>
-        {% endif %}
-      {% endfor %}
+      <!-- FILTER BY + TABS -->
+      <div class="faq-tabs">
+        <span class="filter-title">filter by:</span>
+
+        {% for block in section.blocks %}
+          {% if block.type == 'tab' %}
+            <div class="faq-tab" data-tab="{{ block.settings.tab_id }}">
+              {{ block.settings.tab_title }}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+
     </div>
 
   </div>
 
-</div>
 
+  <!-- FAQ CONTENT SECTION BELOW -->
+  <div class="faq-custom-container">
 
-<!-- FAQ CONTENT BELOW GREEN BG -->
-<div class="faq-container">
+    {% for tab in section.blocks %}
+      {% if tab.type == 'tab' %}
 
-  {% for tab in section.blocks %}
-    {% if tab.type == 'tab' %}
+        <div class="faq-section" id="section-{{ tab.settings.tab_id }}">
 
-      <div class="faq-section" id="section-{{ tab.settings.tab_id }}">
+          {% for faq in section.blocks %}
+            {% if faq.type == 'faq' and faq.settings.parent_tab == tab.settings.tab_id %}
 
-        {% for faq in section.blocks %}
-          {% if faq.type == 'faq' and faq.settings.parent_tab == tab.settings.tab_id %}
+              <div class="faq-item">
 
-            <div class="faq-item">
+                <div class="faq-item-title">
+                  <span>{{ faq.settings.faq_question }}</span>
+                  <span class="faq-arrow">⌄</span>
+                </div>
 
-              <div class="faq-item-title">
-                <span>{{ faq.settings.faq_question }}</span>
-                <span class="faq-arrow">⌄</span>
+                <div class="faq-item-content">
+                  <p>{{ faq.settings.faq_answer }}</p>
+                </div>
+
               </div>
 
-              <div class="faq-item-content">
-                <p>{{ faq.settings.faq_answer }}</p>
-              </div>
+            {% endif %}
+          {% endfor %}
 
-            </div>
+        </div>
 
-          {% endif %}
-        {% endfor %}
+      {% endif %}
+    {% endfor %}
 
-      </div>
-
-    {% endif %}
-  {% endfor %}
+  </div>
 
 </div>
 
@@ -433,4 +442,5 @@ document.addEventListener("DOMContentLoaded", () => {
   ]
 }
 {% endschema %}
+
 
