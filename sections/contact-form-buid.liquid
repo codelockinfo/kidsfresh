@@ -5,8 +5,8 @@
 <style>
   .contact-location-section {
     position: relative;
-    background-color: #1a4d2e;
-    padding: 40px 20px 60px;
+    background-color: #0f4735;
+    padding: 40px 20px 150px;
     overflow: hidden;
   }
 
@@ -40,17 +40,18 @@
   }
 
   .contact-location-title {
-    font-size: 32px;
+    font-size: 84px;
     font-weight: 700;
     color: #ffffff;
     text-align: center;
     margin-bottom: 15px;
+        margin: 0;
     text-transform: lowercase;
     font-family: sans-serif;
   }
 
   .contact-location-subtitle {
-    font-size: 16px;
+    font-size: 28px;
     color: #ff6b35;
     text-align: center;
     margin-bottom: 30px;
@@ -59,7 +60,7 @@
   }
 
   .contact-location-form {
-    background: transparent;
+    background: #0f4735;
     border: 2px solid #90ee90;
     border-radius: 8px;
     padding: 25px 20px;
@@ -81,7 +82,7 @@
   .form-label {
     display: block;
     color: #ff6b35;
-    font-size: 14px;
+    font-size: 28px;
     margin-bottom: 8px;
     font-family: sans-serif;
     text-transform: lowercase;
@@ -91,11 +92,11 @@
   .form-select,
   .form-textarea {
     width: 100%;
-    padding: 12px 15px;
+    padding: 22px 16px;
     border: 1px solid #d3d3d3;
     border-radius: 6px;
     background-color: #ffffff;
-    font-size: 14px;
+    font-size: 20px;
     font-family: sans-serif;
     color: #333;
     box-sizing: border-box;
@@ -171,19 +172,47 @@
     fill: #ffffff;
   }
 
+  /* Wave Divider */
+  .wave-divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .wave-divider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+    display: block;
+  }
+
+  .wave-divider svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
   @media screen and (max-width: 767px) {
     .contact-location-section {
       padding: 30px 15px 50px;
     }
 
     .contact-location-title {
-      font-size: 24px;
+      font-size: 42px;
     }
 
     .contact-location-subtitle {
-      font-size: 14px;
+      font-size: 24px;
     }
 
+    .form-label {
+    font-size: 20px;
+    }
     .contact-location-form {
       padding: 20px 15px;
     }
@@ -196,7 +225,10 @@
     .contact-location-left-image,
     .contact-location-right-image {
       max-width: 150px;
-      
+    }
+
+    .wave-divider {
+      height: 100px;
     }
 
   }
@@ -221,14 +253,14 @@
     >
   {% endif %}
 
-  <div class="contact-location-wrapper">
-    {% if st.title != blank %}
-      <h2 class="contact-location-title">{{ st.title }}</h2>
-    {% endif %}
+  {% if st.title != blank %}
+    <h2 class="contact-location-title">{{ st.title }}</h2>
+  {% endif %}
 
-    {% if st.subtitle != blank %}
-      <p class="contact-location-subtitle">{{ st.subtitle }}</p>
-    {% endif %}
+  {% if st.subtitle != blank %}
+    <p class="contact-location-subtitle">{{ st.subtitle }}</p>
+  {% endif %}
+  <div class="contact-location-wrapper">
 
     <div class="contact-location-form">
       {%- form 'contact', class: 'contact-form' -%}
@@ -330,6 +362,24 @@
 
     
   </div>
+
+  <!-- Customizable Wave Divider -->
+  {%- if st.wave_image != blank -%}
+    <div class="wave-divider">
+      <img
+        src="{{ st.wave_image | img_url: '1920x' }}"
+        alt="Wave divider"
+        loading="lazy"
+      >
+    </div>
+  {%- else -%}
+    <!-- Fallback SVG wave if no image is uploaded -->
+    <div class="wave-divider">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%; fill: #0f4735;">
+        <path d="M0,60 C200,100 400,20 600,60 C800,100 1000,20 1200,60 L1200,120 L0,120 Z"></path>
+      </svg>
+    </div>
+  {%- endif -%}
 </section>
 
 {% schema %}
@@ -357,6 +407,16 @@
       "type": "image_picker",
       "id": "right_image",
       "label": "Right Background Image (Celery/Vegetables)"
+    },
+    {
+      "type": "header",
+      "content": "Wave Divider"
+    },
+    {
+      "type": "image_picker",
+      "id": "wave_image",
+      "label": "Wave Image",
+      "info": "Upload a custom wave image for the bottom divider. If not provided, a default SVG wave will be used."
     },
     {
       "type": "header",

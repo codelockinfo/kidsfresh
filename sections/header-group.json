@@ -127,9 +127,9 @@
           "type": "promo_block",
           "settings": {
             "block_width": 60,
-            "background_color": "#F58220",
+            "background_color": "#f58220",
             "heading": "ingredients + nutrition",
-            "heading_color": "#2C5F2D",
+            "heading_color": "#2c5f2d",
             "button_text": "learn more",
             "button_link": ""
           }
@@ -155,6 +155,7 @@
       "settings": {
         "bg_desktop": "shopify://shop_images/Untitled_1920_x_1415_px_4_Custom_e655c0e4-be81-48c9-9a18-abb45847f0a1.webp",
         "bg_mobile": "shopify://shop_images/Untitled_design_-_2025-11-19T022403.761.webp",
+        "hover_text": "Vegetables in disguise",
         "top_decor": "shopify://shop_images/Group_277.png",
         "bottom_decor": "shopify://shop_images/Group_346.svg",
         "heading": "celebrate the little victories",
