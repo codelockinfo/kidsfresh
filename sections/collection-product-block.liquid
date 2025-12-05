@@ -1,69 +1,243 @@
-{% comment %}
-  Custom Collection Grid Section - Enhanced Version
-  Features:
-  - Custom search icon upload
-  - Flexible width control per block
-  - Full visibility decorative elements
-  - Advanced outer tilt animation
-{% endcomment %}
-
 <style>
-.page-width-container{
-max-width:1990px;
-margin:0 auto;
+  .find-us-section {
+    background-color: #F8F4EB;
+    padding: 40px 40px 0;
+    position: relative;
+    min-height: 100vh;
+  }
 
-}
+  .find-us-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
 
- .grid-row {
-    display: flex;
-    flex-wrap: wrap;
-      column-gap: 30px !important;
-    row-gap:89px !important;
+  .find-us-header h1 {
+    font-size: 48px;
+    font-weight: 900;
+    color: #2c5f2d;
     margin-bottom: 30px;
-    padding:30px 180px;
-    justify-content: center;
-  }
-  @media (max-width: 768px) {
-    
-    .product-title {
-    font-size: 18px !important;
-  }
-  .product-description {
-  font-size: 16px !important;
+    text-transform: lowercase;
   }
 
-.default-img{
-    width:32px;
-    height:30px;
-  }
-
-  .hover-img{
-    width:32px !important;
-    height:30px !important;
-  }
-
-  .new-badge{
-     top:10px;
-     left:-2px;
-  }
-
-  .new-badge img {
-    max-width:35% !important;
-}
-
-.promo-block{
-  padding:0 !important;
-}
-  }
-  
-
-  .custom-collection-grid {
-    padding: 40px 0;
-    background: {{ section.settings.section_background }};
+  .main-search-bar {
+    margin: 0 180px;
     position: relative;
   }
 
-  {% comment %} /* Wave Divider */
+  .main-search-bar input {
+    width: 100%;
+    padding: 15px 50px 15px 20px;
+    border: 1px solid #2c5f2d;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #2c2c2c;
+  }
+
+  .main-search-bar input::placeholder {
+    color: #999;
+  }
+
+  .main-search-bar .search-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+  }
+
+  .products-wrapper {
+    background-color: #fff;
+    border-radius: 8px;
+    padding-bottom: 150px;
+    margin: 0 70px;
+  }
+
+  .product-selection-section {
+    margin-bottom: 20px;
+  }
+
+  .product-selection-header {
+    background-color: #2c5f2d;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .product-selection-header h2 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    text-transform: capitalize;
+  }
+
+  .location-controls {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .location-input {
+    padding: 12px 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    min-width: 250px;
+    background-color: #fff;
+  }
+
+  .location-input::placeholder {
+    color: #999;
+  }
+
+  .action-buttons {
+    display: flex;
+    gap: 10px;
+  }
+
+  .btn-find,
+  .btn-buy-online {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .btn-find {
+    background-color: #97d700;
+    color: #2c5f2d;
+  }
+
+  .btn-find:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(151, 215, 0, 0.4);
+  }
+
+  .btn-buy-online {
+    background-color: #97d700;
+    color: #2c5f2d;
+  }
+
+  .btn-buy-online:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(151, 215, 0, 0.4);
+  }
+
+  .filter-products-bar {
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    position: relative;
+  }
+
+  .filter-products-bar input {
+    width: 100%;
+    padding: 15px 50px 15px 20px;
+    border: 1px solid #2c5f2d;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #2c2c2c;
+  }
+
+  .filter-products-bar input::placeholder {
+    color: #999;
+  }
+
+  .filter-products-bar .search-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+  }
+
+  .products-grid-container {
+    padding: 0 20px;
+  }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .product-card {
+    background-color: #ffffff!important;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  .product-image-wrapper {
+    position: relative;
+    padding-top: 100%;
+    overflow: hidden;
+    background: #ffffff!important;
+  }
+
+  .product-image-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .product-info {
+    padding: 20px 15px;
+  }
+
+  .product-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2c2c2c;
+    margin: 0 0 10px;
+    line-height: 1.4;
+  }
+
+  .product-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .product-badge {
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 12px;
+    background-color: #f0f0f0;
+    color: #5a5a5a;
+    font-weight: 500;
+  }
+
+  /* Wave Divider */
   .wave-divider {
     position: absolute;
     bottom: 0;
@@ -86,2520 +260,175 @@ margin:0 auto;
     width: 100%;
     height: 100%;
     display: block;
-  } {% endcomment %}
-
- .grid-row{
-{% comment %} padding:30px; {% endcomment %}
-gap:12px;
-}
-
-  .grid-item {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .product-card {
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-    height: 100%;
-    display: block;
-    text-decoration: none;
-    color: inherit;
-  }
-
-
-  .product-card-link {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-  }
-
-  .product-image-wrapper {
-    position: relative;
-    padding-top: 100%;
-    overflow: hidden;
-    background: #f5f5f5;
-  }
-
-  .product-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: opacity 0.3s ease, transform 0.5s ease;
-  }
-
-  .product-image.secondary {
-    opacity: 0;
-  }
-
-  /* Show secondary image on hover only if it exists */
-  .product-card:hover .product-image.secondary {
-    opacity: 1;
-  }
-
-  /* Hide primary image on hover only if secondary image exists */
-  .product-card:hover .product-image-wrapper:not(.no-second-image) .product-image.primary {
-    opacity: 0;
-  }
-
-  /* Zoom effect when no second image exists - keep primary visible and zoom */
-  .product-image-wrapper.no-second-image .product-image.primary {
-    transition: transform 0.5s ease;
-    opacity: 1 !important;
-  }
-
-  .product-image-wrapper.no-second-image:hover .product-image.primary {
-    transform: scale(1.1);
-    opacity: 1 !important;
-  }
-
-  .new-badge {
-    position: absolute;
-    top: 15px;
-    left: -4px;
-    z-index: 2;
-    display: block;
-    transition: opacity 0.3s ease;
-  }
-
-  /* Hide badge when hovering and secondary image is shown */
-  .product-card:hover .product-image-wrapper:not(.no-second-image) .new-badge {
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  .new-badge img {
-    display: block;
-    max-width: 75%;
-    width:100%;
-    height: auto;
-  }
-
-  .new-badge-text {
-    background: #f58220;
-    color: white;
-    padding: 8px 20px;
-    border-radius: 0 20px 20px 0;
-    font-weight: bold;
-    font-size: 14px;
-    text-transform: lowercase;
-  }
-
-  .new-badge-text::before {
-    content: '';
-    position: absolute;
-    top: -10px;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-left: 20px solid #f58220;
-    border-top: 10px solid transparent;
-  }
-
-  .product-info {
-    text-align: center;
-  }
-
-  .product-title {
-    font-size: 24px;
-    font-family: var(--font-family);
-    font-weight: 400;
-    margin-bottom: 8px;
-    color: #39302D;
-  }
-
-  .product-description {
-    font-size: 21px;
-    font-family: var(--font-family);
-    font-weight: 400;
-    margin:0px;
-    color: #5D3328;
-    line-height: 1.4;
-  }
-
-  .search-icon {
-    position: absolute;
-    bottom: 15px;
-    right: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 2;
-    text-decoration: none;
-  }
-
-  .search-icon:hover {
-    transform: scale(1.1);
-  }
-
-  .search-icon-wrapper {
-    position: relative;
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-  }
-
-  .search-icon-img {
-    object-fit: contain;
-    display: block;
-  }
-
-  .search-icon-img.default-img {
-    position: relative;
-    opacity: 1;
-    transform: scale(1);
-  }
-
-  .search-icon-img.hover-img {
-    position: absolute;
-    width:65px;
-    height:61px;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    object-fit: contain;
-  }
-
-  .search-icon:hover .search-icon-img.default-img {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-
-  .search-icon:hover .search-icon-img.hover-img {
-    opacity: 1;
-    transform: scale(1);
-  }
-
-  .search-icon svg {
-    transition: stroke 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
-                transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .search-icon:hover svg {
-    stroke: #97d700;
-    transform: scale(1.1);
-  }
-
-  .promo-block {
-    position: relative;
-    border-radius: 12px;
-    overflow: visible;
-    padding: 20px 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    min-height: 400px;
-    transition: all 0.3s ease;
-    height: 100%;
-  }
-
-  .promo-block-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    {% comment %} border-radius: 12px; {% endcomment %}
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .promo-content {
-    position: relative;
-    z-index: 3;
-  }
-
-  .promo-heading {
-    font-size: 84px;
-    font-weight: 900;
-    font-family: var(--font-family);
-    color: #2c5f2d;
-    margin-bottom: 15px;
-    margin-top: 10px;
-    line-height: 1.2;
-    text-transform: lowercase;
-    padding: 0px 40px;
-  }
-.promo-heading p{
-margin:0px;}
-  .promo-button {
-    display: inline-block;
-    background: #97d700;
-    color: #2c5f2d;
-    padding:7px 50px;
-    border-radius: 50px;
-    font-weight: 700;
-    font-size: 30px;
-    text-decoration: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .promo-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(151, 215, 0, 0.4);
-  }
-
-  .promo-element {
-    position: absolute;
-    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-    z-index: 2;
-    pointer-events: none;
-  }
-
-  .promo-element img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
-  }
-
- /* Position elements - 6 vegetable positions */
-  .promo-element.top-left {
-    top: -73%;
-    left: 30%;
-    width: 480px;
-    height: 480px;
-  }
-  .promo-element.top-right {
-    top: -10%;
-    right: 21%;
-    width: 100px;
-    height: 100px;
-  }
-  .promo-element.middle-left {
-    top: 64%;
-    left: -17%;
-    transform: translateY(-50%);
-    width: 1000px;
-    height: 1000px;
-    rotate: -30deg;
-  }
-  .promo-element.middle-right {
-    top: 73%;
-    right: -14%;
-    transform: translateY(-50%);
-    width: 700px;
-    height: 700px;
-    rotate: 30deg;
-  }
-  .promo-element.bottom-left {
-    bottom: -13%;
-    left: 38%;
-    width: 100px;
-    height: 100px;
-  }
-  .promo-element.bottom-right {
-    bottom: -60%;
-    right: 23%;
-    width: 400px;
-    height: 400px;
-  }
-
-  .promo-heading-questions{
-    font-size: 66px;
-  }
-  .promo-element-questions.veg-top-left {
-    top: 0%;
-    left: -14%;
-    width: 150px;
-    height: 150px;
-    rotate: -58deg;
-  }
-
-  .promo-element-questions.veg-top-center {
-    top: -7%;
-    left: 47%;
-    transform: translateX(-50%);
-    width: 150px;
-    height: 150px;
-    rotate: 24deg;
-  }
-
-  .promo-element-questions.veg-top-right {
-    top: -7%;
-    right: -16%;
-    width: 150px;
-    height: 150px;
-  }
-
-  .promo-element-questions.veg-bottom-left {
-    bottom: -41%;
-    left: -41%;
-    width: 400PX;
-    height: 400PX;
-    rotate: -36deg;
-  }
-
-  .promo-element-questions.veg-bottom-center {
-    bottom: -23%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 150px;
-    height: 150px;
-  }
-
-  .promo-element-questions.veg-bottom-right {
-    bottom: -5%;
-    right: -5%;
-    width: 150px;
-    height: 150px;
-  }
-
-  .veggie-buttons .button--primary{
-  background: transparent!important;
-  color: #0F4735;
-  font-family: var(--font-family);
-  font-size: 30px;
-  font-weight: 600;
-  line-height: 44px;
-  text-decoration: none;
-  box-shadow: none;
-  cursor: pointer;
-  transition: transform .2s ease, box-shadow .2s ease;
-  text-align: center;
-  border-radius: 35px;
-  padding: 8px 34px;
-  border: none;
-  text-transform: lowercase;
-    transform: none !important;
-}
-
-.veggie-buttons .button--primary:before {
-   background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_23_2.png?v=1764592651);
-  background-size: 100% 100%;
-  z-index: 2;
-}
-
-.veggie-buttons .button--primary span{
-  position: relative;
-  z-index: 3!important;
-}
-
-.veggie-buttons .button--primary:after {
-  content: '';
-   background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_25.png?v=1764592665);
-  background-size: 100% 100%;
-  padding: 8px 34px;
-  bottom: -5px;
-  z-index: 1;
-  box-shadow: none;
-}
-
-
-.veggie-buttons .button--primary:hover:before {
-  background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_23_3.png?v=1764592664) !important;
-  background-size: 100% 100% !important;
-}
-
-.veggie-buttons .button--primary:hover:after{
-  bottom: -5px;
-  box-shadow: none;
-}
-
-.veggie-buttons .button--secondary {
-  background: transparent!important;
-  color: #63441D;
-  font-family: var(--font-family);
-  font-size: 30px;
-  line-height: 44px;
-  font-weight: 700;
-  text-decoration: none;
-  box-shadow: none;
-  cursor: pointer;
-  transition: transform .2s ease, box-shadow .2s ease;
-  text-align: center;
-  border-radius: 35px;
-  padding: 8px 34px;
-  border: none;
-  text-transform: lowercase;
-    transform: none !important;
-}
-
-.veggie-buttons .button--secondary:before {
-  background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_23_4.png?v=1764654764);
-  background-size: 100% 100%;
-  z-index: 2;
-}
-
-.veggie-buttons .button--secondary span {
-  position: relative;
-  z-index: 3;
-}
-
-.veggie-buttons .button--secondary:after {
-  content: '';
-   background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_25_1.png?v=1764654764);
-  background-size: 100% 100%;
-  padding: 8px 34px;
-  bottom: -6px;
-  z-index: 1;
-  box-shadow: none;
-}
-
-.veggie-buttons .button--secondary:hover:before {
-  background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_23_5.png?v=1764654764) !important;
-  background-size: 100% 100% !important;
-}
-.veggie-buttons .button--secondary:hover:after{
-  bottom: -5px;
-  box-shadow: none;
-}
-  /* Hover animations - left/right movement */
-  .promo-block:hover .promo-element.top-left {
-    transform: translateX(-20px) scale(1.1);
-  }
-  .promo-block:hover .promo-element.top-right {
-    transform: translateX(20px) scale(1.1);
-  }
-  .promo-block:hover .promo-element.middle-left {
-    transform: translateY(-50%) translateX(-25px) scale(1.1);
-  }
-  .promo-block:hover .promo-element.middle-right {
-    transform: translateY(-50%) translateX(25px) scale(1.1);
-  }
-  .promo-block:hover .promo-element.bottom-left {
-    transform: translateX(-20px) scale(1.1);
-  }
-  .promo-block:hover .promo-element.bottom-right {
-    transform: translateX(20px) scale(1.1);
-  }
-
-  @media (min-width: 1620px) and (max-width: 1900px){
-    .promo-element.top-left {
-    top: -98%;
-    left: 30%;
-    width: 480px;
-    height: 480px;
-  }
-  .promo-element.top-right {
-    top: -10%;
-    right: 21%;
-    width: 100px;
-    height: 100px;
-  }
-  .promo-element.middle-left {
-    top: 63%;
-    left: -24%;
-    transform: translateY(-50%);
-    width: 1000px;
-    height: 1000px;
-    rotate: -30deg;
-  }
-  .promo-element.middle-right {
-    top: 73%;
-    right: -28%;
-    transform: translateY(-50%);
-    width: 700px;
-    height: 700px;
-    rotate: 20deg;
-  }
-  .promo-element.bottom-left {
-    bottom: -13%;
-    left: 30%;
-    width: 100px;
-    height: 100px;
-  }
-  .promo-element.bottom-right {
-    bottom: -75%;
-    right: 23%;
-    width: 400px;
-    height: 400px;
-  }
-  .promo-heading-questions{
-    font-size: 66px;
-  }
-  .promo-element-questions.veg-top-left {
-    top: 0%;
-    left: -14%;
-    width: 150px;
-    height: 150px;
-    rotate: -58deg;
-  }
-  .promo-element-questions.veg-top-center {
-    top: -10%!important;
-    left: 47%;
-    transform: translateX(-50%);
-    width: 150px;
-    height: 150px;
-    rotate: 24deg;
-  }
-  .promo-element-questions.veg-top-right {
-    top: -7%;
-    right: -16%;
-    width: 150px;
-    height: 150px;
-  }
-  .promo-element-questions.veg-bottom-left {
-    bottom: -52%!important;
-    left: -48%!important;
-    width: 400PX;
-    height: 400PX;
-    rotate: -36deg;
-  }
-  .promo-element-questions.veg-bottom-center {
-    bottom: -23%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 150px;
-    height: 150px;
-  }
-  .promo-element-questions.veg-bottom-right {
-    bottom: 6%!important;
-    right: -22%!important;
-    width: 150px;
-    height: 150px;
-  }
-  }
-
-  @media (min-width: 1520px) and (max-width: 1620px){
-    .promo-element.top-left {
-    top: -86%;
-    left: 30%;
-    width: 480px;
-    height: 480px;
-  }
-  .promo-element.top-right {
-    top: -10%;
-    right: 21%;
-    width: 100px;
-    height: 100px;
-  }
-  .promo-element.middle-left {
-    top: 64%;
-    left: -17%;
-    transform: translateY(-50%);
-    width: 1000px;
-    height: 1000px;
-    rotate: -30deg;
-  }
-  .promo-element.middle-right {
-    top: 73%;
-    right: -14%;
-    transform: translateY(-50%);
-    width: 700px;
-    height: 700px;
-    rotate: 30deg;
-  }
-  .promo-element.bottom-left {
-    bottom: -13%;
-    left: 38%;
-    width: 100px;
-    height: 100px;
-  }
-  .promo-element.bottom-right {
-    bottom: -65%;
-    right: 23%;
-    width: 400px;
-    height: 400px;
-  }
-
-  .promo-heading-questions{
-    font-size: 59px;
-  }
-  .promo-button-questions{
-    padding: 5px 35px!important;
-  }
-  .promo-element-questions.veg-top-left {
-    top: 0%;
-    left: -14%;
-    width: 150px;
-    height: 150px;
-    rotate: -58deg;
-  }
-
-  .promo-element-questions.veg-top-center {
-    top: -7%;
-    left: 47%;
-    transform: translateX(-50%);
-    width: 150px;
-    height: 150px;
-    rotate: 24deg;
-  }
-
-  .promo-element-questions.veg-top-right {
-    top: -7%;
-    right: -16%;
-    width: 150px;
-    height: 150px;
-  }
-
-  .promo-element-questions.veg-bottom-left {
-    bottom: -59%!important;
-    left: -52%!important;
-    width: 400PX;
-    height: 400PX;
-    rotate: -36deg;
-  }
-
-  .promo-element-questions.veg-bottom-center {
-    bottom: -23%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 150px;
-    height: 150px;
-  }
-
-  .promo-element-questions.veg-bottom-right {
-    bottom: 6%!important;
-    right: -22%!important;
-    width: 150px;
-    height: 150px;
-  }
-  }
-
-  @media (min-width: 1420px) and (max-width: 1520px){
-    .promo-heading{
-      font-size: 64px;
-    }
-    .promo-element.top-left {
-    top: -98%;
-    left: 30%;
-    width: 480px;
-    height: 480px;
-  }
-  .promo-element.top-right {
-    top: -10%;
-    right: 21%;
-    width: 100px;
-    height: 100px;
-  }
-  .promo-element.middle-left {
-    top: 78%;
-    left: -39%;
-    transform: translateY(-50%);
-    width: 1000px;
-    height: 1000px;
-    rotate: -22deg;
-  }
-  .promo-element.middle-right {
-    top: 73%;
-    right: -28%;
-    transform: translateY(-50%);
-    width: 700px;
-    height: 700px;
-    rotate: 20deg;
-  }
-  .promo-element.bottom-left {
-    bottom: -13%;
-    left: 30%;
-    width: 100px;
-    height: 100px;
-  }
-  .promo-element.bottom-right {
-    bottom: -70%;
-    right: 27%;
-    width: 400px;
-    height: 400px;
-    rotate: 14deg;
-  }
-  .promo-heading-questions{
-    font-size: 51px;
-  }
-  .promo-button-questions{
-    padding: 5px 35px!important;
-  }
-  .promo-element-questions.veg-top-left {
-    top: -4%;
-    left: -19%;
-    width: 150px;
-    height: 150px;
-    rotate: -58deg;
-  }
-  .promo-element-questions.veg-top-center {
-    top: -13%!important;
-    left: 47%;
-    transform: translateX(-50%);
-    width: 150px;
-    height: 150px;
-    rotate: 24deg;
-  }
-  .promo-element-questions.veg-top-right {
-    top: -7%;
-    right: -23%!important;
-    width: 150px;
-    height: 150px;
-  }
-  .promo-element-questions.veg-bottom-left {
-    bottom: -56%!important;
-    left: -64%!important;
-    width: 400PX;
-    height: 400PX;
-    rotate: -26deg!important;
-  }
-  .promo-element-questions.veg-bottom-center {
-    bottom: -31%!important;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 150px;
-    height: 150px;
-  }
-  .promo-element-questions.veg-bottom-right {
-    bottom: -10%!important;
-    right: -24%!important;
-    width: 150px;
-    height: 150px;
-  }
-  }
-  @media (min-width: 1320px) and (max-width: 1420px){
-    .promo-heading{
-      font-size: 64px;
-    }
-    .promo-button{
-      font-size: 26px;
-      padding: 1px 30px;
-    }
-    .promo-element.top-left {
-      top: -84%;
-      left: 30%;
-      width: 380px;
-      height: 380px;
-  }
-  .promo-element.top-right {
-    top: -10%;
-    right: 21%;
-    width: 80px;
-    height: 80px;
-  }
-  .promo-element.middle-left {
-    top: 71%;
-    left: -34%;
-    width: 700px;
-    height: 700px;
-    rotate: -19deg;
-  }
-  .promo-element.middle-right {
-    top: 73%;
-    right: -19%;
-    width: 500px;
-    height: 700px;
-    rotate: 20deg;
-  }
-  .promo-element.bottom-left {
-    bottom: -13%;
-    left: 30%;
-    width: 100px;
-    height: 100px;
-  }
-  .promo-element.bottom-right {
-    bottom: -64%;
-    right: 23%;
-    width: 300px;
-    height: 300px;
-    rotate: 5deg;
-  }
-  .promo-heading-questions{
-    font-size: 42px;
-  }
-  .promo-button-questions{
-    padding: 5px 35px!important;
-  }
-  .promo-element-questions.veg-top-left {
-    top: -4%;
-    left: -23%;
-    width: 150px;
-    height: 150px;
-    rotate: -58deg;
-  }
-
-  .promo-element-questions.veg-top-center {
-    top: -15% !important;
-    left: 55%;
-    transform: translateX(-50%);
-    width: 150px;
-    height: 150px;
-    rotate: 24deg;
-  }
-
-  .promo-element-questions.veg-top-right {
-    top: -11%;
-    right: -26% !important;
-    width: 150px;
-    height: 150px;
-  }
-
-  .promo-element-questions.veg-bottom-left {
-    bottom: -69% !important;
-    left: -69% !important;
-    width: 400PX;
-    height: 400PX;
-    rotate: -26deg!important;
-  }
-
-  .promo-element-questions.veg-bottom-center {
-    bottom: -36%!important;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 150px;
-    height: 150px;
-  }
-
-  .promo-element-questions.veg-bottom-right {
-    bottom: -7%!important;
-    right: -30%!important;
-    width: 150px;
-    height: 150px;
-  }
-  }
-  @media (min-width: 1220px) and (max-width: 1320px){
-    .grid-row {
-      padding: 29px 120px;
-    }
-
-    .promo-heading{
-      font-size: 64px;
-    }
-    .promo-button{
-      font-size: 26px;
-      padding: 1px 30px;
-    }
-    .promo-element.top-left {
-      top: -84%;
-      left: 30%;
-      width: 380px;
-      height: 380px;
-  }
-  .promo-element.top-right {
-    top: -10%;
-    right: 21%;
-    width: 80px;
-    height: 80px;
-  }
-  .promo-element.middle-left {
-    top: 71%;
-    left: -34%;
-    width: 700px;
-    height: 700px;
-    rotate: -19deg;
-  }
-  .promo-element.middle-right {
-    top: 73%;
-    right: -19%;
-    width: 500px;
-    height: 700px;
-    rotate: 20deg;
-  }
-  .promo-element.bottom-left {
-    bottom: -13%;
-    left: 30%;
-    width: 100px;
-    height: 100px;
-  }
-  .promo-element.bottom-right {
-    bottom: -64%;
-    right: 23%;
-    width: 300px;
-    height: 300px;
-    rotate: 5deg;
-  }
-  .promo-heading-questions{
-    font-size: 42px;
-  }
-  .promo-button-questions{
-    padding: 5px 35px!important;
-  }
-  .promo-element-questions.veg-top-left {
-    top: -4%;
-    left: -23%;
-    width: 150px;
-    height: 150px;
-    rotate: -58deg;
-  }
-
-  .promo-element-questions.veg-top-center {
-    top: -15% !important;
-    left: 55%;
-    transform: translateX(-50%);
-    width: 150px;
-    height: 150px;
-    rotate: 24deg;
-  }
-
-  .promo-element-questions.veg-top-right {
-    top: -11%;
-    right: -26% !important;
-    width: 150px;
-    height: 150px;
-  }
-
-  .promo-element-questions.veg-bottom-left {
-    bottom: -69% !important;
-    left: -69% !important;
-    width: 400PX;
-    height: 400PX;
-    rotate: -26deg!important;
-  }
-
-  .promo-element-questions.veg-bottom-center {
-    bottom: -36%!important;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 150px;
-    height: 150px;
-  }
-
-  .promo-element-questions.veg-bottom-right {
-    bottom: -7%!important;
-    right: -30%!important;
-    width: 150px;
-    height: 150px;
-  }
-  }
-  @media (min-width: 1120px) and (max-width: 1220px){
-    .new-badge img{
-      width: 50%!important;
-    }
-    .new-badge{
-      top: -20px!important;
-      left: -22px!important;
-    }
-    .grid-row {
-      padding: 29px 120px;
-    }
-
-    .promo-heading{
-      font-size: 64px;
-    }
-    .promo-button{
-      font-size: 26px;
-      padding: 1px 30px;
-    }
-    .promo-element.top-left {
-      top: -64%;
-        left: 30%;
-        width: 280px;
-        height: 280px;
-  }
-  .promo-element.top-right {
-    top: -10%;
-    right: 21%;
-    width: 80px;
-    height: 80px;
-  }
-  .promo-element.middle-left {
-    top: 71%;
-        left: -31%;
-        width: 500px;
-        height: 500px;
-        rotate: -19deg;
-  }
-  .promo-element.middle-right {
-    top: 73%;
-    right: -26%;
-    width: 500px;
-    height: 500px;
-    rotate: 20deg;
-  }
-  .promo-element.bottom-left {
-    bottom: -13%;
-        left: 30%;
-        width: 80px;
-        height: 80px;
-  }
-  .promo-element.bottom-right {
-    bottom: -64%;
-    right: 23%;
-    width: 300px;
-    height: 300px;
-    rotate: 5deg;
-  }
-  .promo-heading-questions{
-    font-size: 38px;
-    padding: 0px!important;
-  }
-  .promo-button-questions{
-    padding: 5px 35px!important;
-  }
-  .promo-element-questions.veg-top-left {
-    top: -6%;
-    left: -25%;
-    width: 150px;
-    height: 150px;
-    rotate: -58deg;
-  }
-
-  .promo-element-questions.veg-top-center {
-    top: -19% !important;
-    left: 55%;
-    transform: translateX(-50%);
-    width: 150px;
-    height: 150px;
-    rotate: 22deg;
-  }
-
-  .promo-element-questions.veg-top-right {
-    top: -11%;
-    right: -28% !important;
-    width: 150px;
-    height: 150px;
-  }
-
-  .promo-element-questions.veg-bottom-left {
-    bottom: -90% !important;
-    left: -78% !important;
-    width: 400PX;
-    height: 400PX;
-    rotate: -26deg!important;
-  }
-
-  .promo-element-questions.veg-bottom-center {
-    bottom: -42%!important;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 150px;
-    height: 150px;
-  }
-
-  .promo-element-questions.veg-bottom-right {
-    bottom: 0%!important;
-    right: -38%!important;
-    width: 150px;
-    height: 150px;
-  }
-  }
-  @media (min-width: 1020px) and (max-width: 1120px){
-    .new-badge img{
-      width: 50%!important;
-    }
-    .new-badge{
-      top: -20px!important;
-      left: -22px!important;
-    }
-    .grid-row {
-      padding: 29px 100px;
-    }
-    .promo-heading{
-      font-size: 54px;
-    }
-    .promo-button{
-      font-size: 26px;
-      padding: 1px 30px;
-    }
-    .promo-element.top-left {
-      top: -64%;
-      left: 30%;
-      width: 280px;
-      height: 280px;
-  }
-  .promo-element.top-right {
-    top: -10%;
-    right: 21%;
-    width: 80px;
-    height: 80px;
-  }
-  .promo-element.middle-left {
-    top: 71%;
-    left: -31%;
-    width: 500px;
-    height: 500px;
-    rotate: -19deg;
-  }
-  .promo-element.middle-right {
-    top: 73%;
-    right: -16%;
-    width: 300px;
-    height: 400px;
-    rotate: 20deg;
-  }
-  .promo-element.bottom-left {
-    bottom: -13%;
-    left: 30%;
-    width: 80px;
-    height: 80px;
-  }
-  .promo-element.bottom-right {
-    bottom: -42%;
-    right: 23%;
-    width: 200px;
-    height: 200px;
-    rotate: 5deg;
-  }
-  .promo-heading-questions{
-    font-size: 36px;
-    padding: 0px!important;
-  }
-  .promo-button-questions{
-    padding: 5px 35px!important;
-  }
-  .promo-element-questions.veg-top-left {
-    top: 0%!important;
-    left: -17%!important;
-    width: 100px!important;
-    height: 100px!important;
-    rotate: -58deg!important;
-  }
-  .promo-element-questions.veg-top-center {
-    top: -26% !important;
-    left: 55%;
-    transform: translateX(-50%);
-    width: 150px;
-    height: 150px;
-    rotate: 17deg!important;
-  }
-  .promo-element-questions.veg-top-right {
-    top: -6%!important;
-    right: -15% !important;
-    width: 100px!important;
-    height: 100px!important;
-  }
-  .promo-element-questions.veg-bottom-left {
-    bottom: -51% !important;
-    left: -49% !important;
-    width: 250px!important;
-    height: 250px!important;
-    rotate: -26deg !important;
-  }
-  .promo-element-questions.veg-bottom-center {
-    bottom: -29%!important;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 100px;
-  }
-  .promo-element-questions.veg-bottom-right {
-    bottom: 0%!important;
-    right: -38%!important;
-    width: 150px!important;
-    height: 150px!important;
-  }
-  }
-  @media (min-width: 968px) and (max-width: 1020px){
-    .new-badge img{
-      width: 50%!important;
-    }
-    .new-badge{
-      top: -20px!important;
-      left: -22px!important;
-    }
-    .grid-row {
-      padding: 29px 80px;
-    }
-
-    .promo-heading{
-      font-size: 54px;
-    }
-    .promo-button{
-      font-size: 26px;
-      padding: 1px 30px;
-    }
-    .promo-element.top-left {
-      top: -64%;
-      left: 30%;
-      width: 280px;
-      height: 280px;
-  }
-  .promo-element.top-right {
-    top: -10%;
-    right: 21%;
-    width: 80px;
-    height: 80px;
-  }
-  .promo-element.middle-left {
-    top: 71%;
-    left: -31%;
-    width: 500px;
-    height: 500px;
-    rotate: -19deg;
-  }
-  .promo-element.middle-right {
-    top: 73%;
-    right: -16%;
-    width: 300px;
-    height: 400px;
-    rotate: 20deg;
-  }
-  .promo-element.bottom-left {
-    bottom: -13%;
-    left: 30%;
-    width: 80px;
-    height: 80px;
-  }
-  .promo-element.bottom-right {
-    bottom: -42%;
-    right: 23%;
-    width: 200px;
-    height: 200px;
-    rotate: 5deg;
-  }
-  .promo-heading-questions{
-    font-size: 34px;
-    padding: 0px!important;
-  }
-  .promo-button-questions{
-    padding: 5px 35px!important;
-  }
-  .promo-element-questions.veg-top-left {
-    top: 0%!important;
-    left: -17%!important;
-    width: 100px!important;
-    height: 100px!important;
-    rotate: -58deg!important;
-  }
-  .promo-element-questions.veg-top-center {
-    top: -26% !important;
-    left: 55%;
-    transform: translateX(-50%);
-    width: 150px;
-    height: 150px;
-    rotate: 17deg!important;
-  }
-  .promo-element-questions.veg-top-right {
-    top: -6%!important;
-    right: -15% !important;
-    width: 100px!important;
-    height: 100px!important;
-  }
-  .promo-element-questions.veg-bottom-left {
-    bottom: -51% !important;
-    left: -49% !important;
-    width: 250px!important;
-    height: 250px!important;
-    rotate: -26deg !important;
-  }
-  .promo-element-questions.veg-bottom-center {
-    bottom: -29%!important;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 100px;
-  }
-  .promo-element-questions.veg-bottom-right {
-    bottom: 0%!important;
-    right: -38%!important;
-    width: 150px!important;
-    height: 150px!important;
-  }
-  }
-  @media (min-width: 868px) and (max-width: 968px){
-    .grid-row {
-      padding: 29px 80px;
-    }
-
-    .promo-heading{
-      font-size: 54px;
-      padding: 0px 90px;
-    }
-    .promo-button{
-      font-size: 26px;
-      padding: 1px 30px;
-    }
-    .promo-element.top-left {
-      top: -60%;
-      left: 30%;
-      width: 280px;
-      height: 280px;
-  }
-  .promo-element.top-right {
-    top: -10%;
-    right: 21%;
-    width: 80px;
-    height: 80px;
-  }
-  .promo-element.middle-left {
-    top: 71%;
-    left: -16%;
-    width: 500px;
-    height: 500px;
-    rotate: -19deg;
-  }
-  .promo-element.middle-right {
-    top: 73%;
-    right: -4%;
-    width: 300px;
-    height: 400px;
-    rotate: 20deg;
-  }
-  .promo-element.bottom-left {
-    bottom: -13%;
-    left: 30%;
-    width: 80px;
-    height: 80px;
-  }
-  .promo-element.bottom-right {
-    bottom: -42%;
-    right: 23%;
-    width: 200px;
-    height: 200px;
-    rotate: 5deg;
-  }
-  .promo-heading-questions{
-    font-size: 66px;
-  }
-  .promo-element-questions.veg-top-left {
-    top: 0%;
-    left: -8%!important;
-    width: 150px;
-    height: 150px;
-    rotate: -58deg;
-  }
-  .promo-element-questions.veg-top-center {
-    top: -10%!important;
-    left: 47%;
-    transform: translateX(-50%);
-    width: 150px;
-    height: 150px;
-    rotate: 24deg;
-  }
-  .promo-element-questions.veg-top-right {
-    top: -7%;
-    right: -8%;
-    width: 150px;
-    height: 150px;
-  }
-  .promo-element-questions.veg-bottom-left {
-    bottom: -52%!important;
-    left: -22%!important;
-    width: 400PX;
-    height: 400PX;
-    rotate: -36deg;
-  }
-  .promo-element-questions.veg-bottom-center {
-    bottom: -25%;
-    left: 40%;
-    transform: translateX(-50%);
-    width: 150px;
-    height: 150px;
-  }
-  .promo-element-questions.veg-bottom-right {
-    bottom: 12%!important;
-    right: -8%!important;
-    width: 150px;
-    height: 150px;
-    rotate: -10deg;
-  }
-  }
-  @media (min-width: 768px) and (max-width: 868px){
-    .grid-row {
-      padding: 29px 60px;
-    }
-
-    .promo-heading{
-      font-size: 54px;
-      padding: 0px 90px;
-    }
-    .promo-button{
-      font-size: 26px;
-      padding: 1px 30px;
-    }
-    .promo-element.top-left {
-      top: -60%;
-      left: 30%;
-      width: 280px;
-      height: 280px;
-  }
-  .promo-element.top-right {
-    top: -10%;
-    right: 21%;
-    width: 80px;
-    height: 80px;
-  }
-  .promo-element.middle-left {
-    top: 71%;
-    left: -16%;
-    width: 500px;
-    height: 500px;
-    rotate: -19deg;
-  }
-  .promo-element.middle-right {
-    top: 73%;
-    right: -4%;
-    width: 300px;
-    height: 400px;
-    rotate: 20deg;
-  }
-  .promo-element.bottom-left {
-    bottom: -13%;
-    left: 30%;
-    width: 80px;
-    height: 80px;
-  }
-  .promo-element.bottom-right {
-    bottom: -42%;
-    right: 23%;
-    width: 200px;
-    height: 200px;
-    rotate: 5deg;
-  }
-  .promo-heading-questions{
-    font-size: 66px;
-  }
-  .promo-element-questions.veg-top-left {
-    top: 0%;
-    left: -8%!important;
-    width: 150px;
-    height: 150px;
-    rotate: -58deg;
-  }
-  .promo-element-questions.veg-top-center {
-    top: -10%!important;
-    left: 47%;
-    transform: translateX(-50%);
-    width: 150px;
-    height: 150px;
-    rotate: 24deg;
-  }
-  .promo-element-questions.veg-top-right {
-    top: -7%;
-    right: -8%;
-    width: 150px;
-    height: 150px;
-  }
-  .promo-element-questions.veg-bottom-left {
-    bottom: -52%!important;
-    left: -22%!important;
-    width: 400PX;
-    height: 400PX;
-    rotate: -36deg;
-  }
-  .promo-element-questions.veg-bottom-center {
-    bottom: -25%;
-    left: 40%;
-    transform: translateX(-50%);
-    width: 150px;
-    height: 150px;
-  }
-  .promo-element-questions.veg-bottom-right {
-    bottom: 12%!important;
-    right: -8%!important;
-    width: 150px;
-    height: 150px;
-    rotate: -10deg;
-  }
-  }
-  @media (min-width: 668px) and (max-width: 768px){
-    .grid-row {
-      padding: 29px 60px;
-    }
-
-    .promo-heading{
-      font-size: 46px;
-      padding: 0px 110px;
-    }
-    .promo-button{
-      font-size: 26px;
-      padding: 1px 30px;
-    }
-    .promo-element.top-left {
-      top: -70%;
-      left: 30%;
-      width: 280px;
-      height: 280px;
-  }
-  .promo-element.top-right {
-    top: -10%;
-    right: 21%;
-    width: 80px;
-    height: 80px;
-  }
-  .promo-element.middle-left {
-    top: 71%;
-    left: -16%;
-    width: 500px;
-    height: 500px;
-    rotate: -19deg;
-  }
-  .promo-element.middle-right {
-    top: 73%;
-    right: -4%;
-    width: 300px;
-    height: 400px;
-    rotate: 20deg;
-  }
-  .promo-element.bottom-left {
-    bottom: -13%;
-    left: 30%;
-    width: 80px;
-    height: 80px;
-  }
-  .promo-element.bottom-right {
-    bottom: -42%;
-    right: 23%;
-    width: 200px;
-    height: 200px;
-    rotate: 5deg;
-  }
-  .promo-heading-questions{
-    font-size: 34px;
-    padding: 0px!important;
-  }
-  .promo-button-questions{
-    padding: 5px 35px!important;
-  }
-  .promo-element-questions.veg-top-left {
-    top: 0%!important;
-    left: -6%!important;
-    width: 100px!important;
-    height: 100px!important;
-    rotate: -63deg!important;
-  }
-  .promo-element-questions.veg-top-center {
-    top: -26% !important;
-    left: 55%;
-    transform: translateX(-50%);
-    width: 150px;
-    height: 150px;
-    rotate: 17deg!important;
-  }
-  .promo-element-questions.veg-top-right {
-    top: -6%!important;
-    right: -6% !important;
-    width: 100px!important;
-    height: 100px!important;
-  }
-  .promo-element-questions.veg-bottom-left {
-    bottom: -77% !important;
-    left: -16% !important;
-    width: 250px!important;
-    height: 250px!important;
-    rotate: -26deg !important;
-  }
-  .promo-element-questions.veg-bottom-center {
-    bottom: -29%!important;
-    left: 40%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 100px;
-  }
-  .promo-element-questions.veg-bottom-right {
-    bottom: -2%!important;
-    right: -12%!important;
-    width: 150px!important;
-    height: 150px!important;
-  }
-  }
-  @media (min-width: 568px) and (max-width: 668px){
-    .grid-row {
-      padding: 29px 60px;
-    }
-
-    .promo-heading{
-      font-size: 40px;
-      padding: 0px 110px;
-    }
-    .promo-button{
-      font-size: 26px;
-      padding: 1px 30px;
-    }
-    .promo-element.top-left {
-      top: -110%;
-      left: 30%;
-      width: 280px;
-      height: 280px;
-  }
-  .promo-element.top-right {
-    top: -22%;
-    right: 21%;
-    width: 80px;
-    height: 80px;
-  }
-  .promo-element.middle-left {
-    top: 71%;
-    left: -30%;
-    width: 500px;
-    height: 500px;
-    rotate: -19deg;
-  }
-  .promo-element.middle-right {
-    top: 73%;
-    right: -12%;
-    width: 300px;
-    height: 400px;
-    rotate: 20deg;
-  }
-  .promo-element.bottom-left {
-    bottom: -19%;
-    left: 24%;
-    width: 80px;
-    height: 80px;
-  }
-  .promo-element.bottom-right {
-    bottom: -75%;
-    right: 21%;
-    width: 200px;
-    height: 200px;
-    rotate: 5deg;
-  }
-  .promo-heading-questions{
-    font-size: 38px!important;
-    padding: 0px!important;
-  }
-  .promo-button-questions{
-    padding: 5px 35px!important;
-  }
-  .promo-element-questions.veg-top-left {
-    top: 0%!important;
-    left: -6%!important;
-    width: 100px!important;
-    height: 100px!important;
-    rotate: -63deg!important;
-  }
-  .promo-element-questions.veg-top-center {
-    top: -26% !important;
-    left: 55%;
-    transform: translateX(-50%);
-    width: 150px;
-    height: 150px;
-    rotate: 17deg!important;
-  }
-  .promo-element-questions.veg-top-right {
-    top: -6%!important;
-    right: -6% !important;
-    width: 100px!important;
-    height: 100px!important;
-  }
-  .promo-element-questions.veg-bottom-left {
-    bottom: -77% !important;
-    left: -16% !important;
-    width: 250px!important;
-    height: 250px!important;
-    rotate: -26deg !important;
-  }
-  .promo-element-questions.veg-bottom-center {
-    bottom: -29%!important;
-    left: 40%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 100px;
-  }
-  .promo-element-questions.veg-bottom-right {
-    bottom: -2%!important;
-    right: -12%!important;
-    width: 150px!important;
-    height: 150px!important;
-  }
-  }
-  @media (min-width: 468px) and (max-width: 568px){
-    .grid-row {
-      padding: 29px 60px;
-    }
-
-    .promo-heading{
-      font-size: 36px;
-      padding: 0px 90px;
-    }
-    .promo-button{
-      font-size: 20px;
-      padding: 1px 25px;
-    }
-    .promo-element.top-left {
-      top: -110%;
-      left: 30%;
-      width: 280px;
-      height: 280px;
-  }
-  .promo-element.top-right {
-    top: -22%;
-    right: 21%;
-    width: 80px;
-    height: 80px;
-  }
-  .promo-element.middle-left {
-    top: 71%;
-    left: -30%;
-    width: 500px;
-    height: 500px;
-    rotate: -19deg;
-  }
-  .promo-element.middle-right {
-    top: 73%;
-    right: -12%;
-    width: 300px;
-    height: 400px;
-    rotate: 20deg;
-  }
-  .promo-element.bottom-left {
-    bottom: -19%;
-    left: 24%;
-    width: 80px;
-    height: 80px;
-  }
-  .promo-element.bottom-right {
-    bottom: -75%;
-    right: 21%;
-    width: 200px;
-    height: 200px;
-    rotate: 5deg;
-  }
-  .promo-heading-questions{
-    font-size: 36px!important;
-    padding: 0px!important;
-  }
-  .promo-button-questions{
-    padding: 5px 35px!important;
-  }
-  .promo-element-questions.veg-top-left {
-    top: 0%!important;
-    left: -6%!important;
-    width: 100px!important;
-    height: 100px!important;
-    rotate: -63deg!important;
-  }
-  .promo-element-questions.veg-top-center {
-    top: -26% !important;
-    left: 55%;
-    transform: translateX(-50%);
-    width: 150px;
-    height: 150px;
-    rotate: 17deg!important;
-  }
-  .promo-element-questions.veg-top-right {
-    top: -6%!important;
-    right: -6% !important;
-    width: 100px!important;
-    height: 100px!important;
-  }
-  .promo-element-questions.veg-bottom-left {
-    bottom: -77% !important;
-    left: -16% !important;
-    width: 250px!important;
-    height: 250px!important;
-    rotate: -26deg !important;
-  }
-  .promo-element-questions.veg-bottom-center {
-    bottom: -29%!important;
-    left: 40%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 100px;
-  }
-  .promo-element-questions.veg-bottom-right {
-    bottom: -2%!important;
-    right: -12%!important;
-    width: 150px!important;
-    height: 150px!important;
-  }
-  }
-  @media (min-width: 368px) and (max-width: 468px){
-    .grid-row {
-      padding: 29px 60px;
-    }
-
-    .promo-heading{
-      font-size: 32px;
-      padding: 0px 50px;
-    }
-    .promo-button{
-      font-size: 15px;
-      padding: 1px 25px;
-    }
-    .promo-element.top-left {
-      top: -33%;
-      left: 30%;
-      width: 100px;
-      height: 100px;
-  }
-  .promo-element.top-right {
-    top: -5%;
-    right: 27%;
-    width: 44px;
-    height: 44px;
-  }
-  .promo-element.middle-left {
-    top: 90%;
-    left: -9%;
-    width: 281px;
-    height: 481px;
-    rotate: -19deg;
-  }
-  .promo-element.middle-right {
-    top: 73%;
-    right: 7%;
-    width: 117px;
-    height: 317px;
-    rotate: 20deg;
-  }
-  .promo-element.bottom-left {
-    bottom: -9%;
-    left: 25%;
-    width: 44px;
-    height: 44px;
-  }
-  .promo-element.bottom-right {
-    bottom: -35%;
-    right: 18%;
-    width: 185px;
-    height: 100px;
-    rotate: 5deg;
-  }
-  .promo-heading-questions{
-    font-size: 34px!important;
-    padding: 0px!important;
-  }
-  .promo-button-questions{
-    padding: 5px 35px!important;
-  }
-  .promo-element-questions.veg-top-left {
-    top: -23% !important;
-    left: 8% !important;
-    width: 100px !important;
-    height: 100px !important;
-    rotate: -26deg !important;
-  }
-  .promo-element-questions.veg-top-center {
-    top: -31% !important;
-    left: 63%;
-    width: 150px;
-    height: 150px;
-    rotate: 17deg !important;
-  }
-  .promo-element-questions.veg-top-right {
-    top: -30%!important;
-    right: -6% !important;
-    width: 100px!important;
-    height: 100px!important;
-  }
-  .promo-element-questions.veg-bottom-left {
-    bottom: -54% !important;
-    left: -26% !important;
-    width: 250px!important;
-    height: 250px!important;
-    rotate: -26deg !important;
-  }
-  .promo-element-questions.veg-bottom-center {
-    bottom: -36%!important;
-    left: 46%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 100px;
-  }
-  .promo-element-questions.veg-bottom-right {
-    bottom: -37% !important;
-    right: 3% !important;
-    width: 150px !important;
-    height: 150px !important;
-    rotate: -19deg!important;
-  }
-  }
-  @media (min-width: 268px) and (max-width: 368px){
-    .grid-row {
-      padding: 29px 60px;
-    }
-
-    .promo-heading{
-      font-size: 28px;
-      padding: 0px 40px;
-    }
-    .promo-button{
-      font-size: 15px;
-      padding: 1px 25px;
-    }
-    .promo-element.top-left {
-      top: -33%;
-      left: 30%;
-      width: 100px;
-      height: 100px;
-  }
-  .promo-element.top-right {
-    top: -5%;
-    right: 27%;
-    width: 44px;
-    height: 44px;
-  }
-  .promo-element.middle-left {
-    top: 77%;
-    left: -16%;
-    width: 281px;
-    height: 481px;
-    rotate: -19deg;
-  }
-  .promo-element.middle-right {
-    top: 74%;
-    right: 4%;
-    width: 117px;
-    height: 317px;
-    rotate: 20deg;
-  }
-  .promo-element.bottom-left {
-    bottom: -9%;
-    left: 29%;
-    width: 44px;
-    height: 44px;
-  }
-  .promo-element.bottom-right {
-    bottom: -35%;
-    right: 12%;
-    width: 185px;
-    height: 100px;
-    rotate: 5deg;
-  }
-  .promo-heading-questions{
-    font-size: 30px!important;
-    padding: 0px!important;
-  }
-  .promo-button-questions{
-    padding: 5px 35px!important;
-  }
-  .promo-element-questions.veg-top-left {
-    top: -25% !important;
-    left: 7% !important;
-    width: 100px !important;
-    height: 100px !important;
-    rotate: -26deg !important;
-  }
-  .promo-element-questions.veg-top-center {
-    top: -43% !important;
-    left: 75%;
-    width: 150px;
-    height: 150px;
-    rotate: 17deg !important;
-  }
-  .promo-element-questions.veg-top-right {
-    top: -30%!important;
-    right: -11% !important;
-    width: 100px!important;
-    height: 100px!important;
-  }
-  .promo-element-questions.veg-bottom-left {
-    bottom: -62% !important;
-    left: -37% !important;
-    width: 250px!important;
-    height: 250px!important;
-    rotate: -26deg !important;
-  }
-  .promo-element-questions.veg-bottom-center {
-    bottom: -36%!important;
-    left: 46%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 100px;
-  }
-  .promo-element-questions.veg-bottom-right {
-    bottom: -37% !important;
-    right: -3% !important;
-    width: 150px !important;
-    height: 150px !important;
-    rotate: -19deg!important;
-  }
-  }
-  @media (max-width: 268px){
-    .grid-row {
-      padding: 29px 60px;
-    }
-
-    .promo-heading{
-      font-size: 28px;
-      padding: 0px 40px;
-    }
-    .promo-button{
-      font-size: 15px;
-      padding: 1px 25px;
-    }
-    .promo-element.top-left {
-      top: -33%;
-      left: 30%;
-      width: 100px;
-      height: 100px;
-  }
-  .promo-element.top-right {
-    top: -5%;
-    right: 27%;
-    width: 44px;
-    height: 44px;
-  }
-  .promo-element.middle-left {
-    top: 77%;
-    left: -16%;
-    width: 281px;
-    height: 481px;
-    rotate: -19deg;
-  }
-  .promo-element.middle-right {
-    top: 74%;
-    right: 4%;
-    width: 117px;
-    height: 317px;
-    rotate: 20deg;
-  }
-  .promo-element.bottom-left {
-    bottom: -9%;
-    left: 29%;
-    width: 44px;
-    height: 44px;
-  }
-  .promo-element.bottom-right {
-    bottom: -35%;
-    right: 12%;
-    width: 185px;
-    height: 100px;
-    rotate: 5deg;
-  }
-  .promo-heading-questions{
-    font-size: 28px!important;
-    padding: 0px!important;
-  }
-  .promo-button-questions{
-    padding: 5px 35px!important;
-  }
-  .promo-element-questions.veg-top-left {
-    top: -11% !important;
-    left: 10% !important;
-    width: 50px !important;
-    height: 50px !important;
-    rotate: -18deg !important;
-  }
-  .promo-element-questions.veg-top-center {
-    top: -21% !important;
-    left: 72%;
-    width: 100px;
-    height: 100px;
-    rotate: 17deg !important;
-  }
-  .promo-element-questions.veg-top-right {
-    top: -2%!important;
-    right: -10% !important;
-    width: 50px!important;
-    height: 50px!important;
-  }
-  .promo-element-questions.veg-bottom-left {
-    bottom: -28% !important;
-    left: -37% !important;
-    width: 150px!important;
-    height: 150px!important;
-    rotate: -26deg !important;
-  }
-  .promo-element-questions.veg-bottom-center {
-    bottom: -14%!important;
-    left: 46%;
-    transform: translateX(-50%);
-    width: 50px;
-    height: 50px;
-  }
-  .promo-element-questions.veg-bottom-right {
-    bottom: -25% !important;
-    right: -11% !important;
-    width: 100px !important;
-    height: 100px !important;
-    rotate: -19deg!important;
-  }
-  }
-  /* Questions promo block styles - lime green with orange button */
-  /* Match product-image-wrapper structure exactly */
-  .promo-block-questions {
-    position: relative;
-    padding-top: 100%;
-    overflow: hidden;
-    border-radius: 12px;
-    background: #95C940;
-    transition: all 0.3s ease;
-  }
-
-  .promo-block-questions-inner {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    {% comment %} border-radius: 12px; {% endcomment %}
-    overflow: visible;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 40px;
-  }
-
-  .promo-content-questions {
-    position: relative;
-    z-index: 3;
-    text-align: center;
-    width: 100%;
-  }
-
-  .promo-heading-questions {
-    font-weight: 900;
-    color: ##F1EAD9;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    line-height: 1.2;
-    text-transform: lowercase;
-    padding: 0px 7px;
-    text-align: center;
-  }
-
-  .promo-button-questions {
-    display: inline-block;
-    background: #F58220;
-    color: #5D3328;
-    padding: 15px 50px;
-    border-radius: 12px;
-    font-weight: 600;
-    font-size: 18px;
-    text-decoration: none;
-    text-transform: lowercase;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    border: none;
-    cursor: pointer;
-    margin: 0 auto;
-  }
-
-  .promo-button-questions:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  }
-
-  .promo-element-questions {
-    position: absolute;
-    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-    z-index: 2;
-    pointer-events: none;
-  }
-
-  .promo-element-questions img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
-  }
-
-  /* Vegetable positions for questions block */
-  
-  
-  /* Hover animations for questions block */
-  .promo-block-questions:hover .promo-element-questions.veg-top-left {
-    transform: translateX(-10px) translateY(-10px) scale(1.05);
-  }
-
-  .promo-block-questions:hover .promo-element-questions.veg-top-center {
-    transform: translateX(-50%) translateY(-10px) scale(1.05);
-  }
-
-  .promo-block-questions:hover .promo-element-questions.veg-top-right {
-    transform: translateX(10px) translateY(-10px) scale(1.05);
-  }
-
-  .promo-block-questions:hover .promo-element-questions.veg-bottom-left {
-    transform: translateX(-10px) translateY(10px) scale(1.05);
-  }
-
-  .promo-block-questions:hover .promo-element-questions.veg-bottom-center {
-    transform: translateX(-50%) translateY(10px) scale(1.05);
-  }
-
-  .promo-block-questions:hover .promo-element-questions.veg-bottom-right {
-    transform: translateX(10px) translateY(10px) scale(1.05);
   }
-  
 
-  /* Responsive styles for questions block */
+  /* Responsive Styles */
   @media (max-width: 968px) {
-    .grid-row {
-      padding: 29px 60px;
+    .find-us-section {
+      padding: 40px 20px 0;
     }
-    .grid-item {
-      width: calc(50% - 15px) !important;
-      min-width: calc(50% - 15px) !important;
+
+    .find-us-header h1 {
+      font-size: 36px;
     }
-    .grid-item.promo-item {
-    width: 100% !important;
-    min-width: 100% !important;
-  }
-  .promo-block-questions {
-    padding-top: 0 !important;
-    min-height: 400px !important;
-    height: 100% !important;
-  }
-  .new-badge img{
-    max-width: 50%!important;
-  }
-  }
-  @media (max-width: 768px) {
+
+    .product-selection-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+    }
+
+    .location-controls {
+      width: 100%;
+    }
+
+    .location-input {
+      flex: 1;
+      min-width: auto;
+    }
+
+    .action-buttons {
+      width: 100%;
+    }
+
+    .btn-find,
+    .btn-buy-online {
+      flex: 1;
+    }
+
+    .products-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
     .wave-divider {
       height: 100px;
     }
-    .promo-block-questions {
-      padding-top: 0;
-      min-height: 200px!important;
-      height: 100%!important;
-    }
-    .custom-collection-grid{
-      padding:0px 0px;
-    }
-    .promo-heading-questions {
-      font-size: 48px;
-      padding: 0px 20px;
-    }
-    .promo-button-questions {
-      font-size: 16px;
-      padding: 12px 40px;
-    }
-    .promo-block-questions-inner {
-      padding: 20px;
-    }
-    .grid-row{
-   column-gap: 12px !important;
-    row-gap:43px !important;
-  }
-     .new-badge{
-      {% comment %} display:none; {% endcomment %}
-      top: 20px;
-      left: -2px;
-    }
-    .grid-row{
-    padding:30px !important;
-    gap:12px;
-    }
-
-  /* Product blocks stay 50% */
-  .grid-item.product-item {
-    width: calc(50% - 12px) !important;
-    min-width: calc(50% - 12px) !important;
   }
 
-  /* Promo block FULL width */
-  .grid-item.promo-item {
-    width: 100% !important;
-    min-width: 100% !important;
-  }
-  
-  /* Promo block FULL width */
-  .grid-item.promo-item {
-    width: 100% !important;
-    min-width: 100% !important;
-  }
-    
-    .promo-block {
-      padding: 40px 0px;
-      min-height: 200px;
+  @media (max-width: 640px) {
+    .find-us-header h1 {
+      font-size: 28px;
     }
-      
-    .product-title {
-    font-size: 18px !important;
-  }
 
-  .product-description {
-  font-size: 16px !important;
-  }
+    .product-selection-header h2 {
+      font-size: 20px;
+    }
 
-.default-img{
-    width:32px;
-    height:30px;
-  }
+    .products-grid {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 15px;
+    }
 
-  .hover-img{
-    width:32px !important;
-    height:30px !important;
-  }
-
-  .new-badge img {
-    max-width:35% !important;
-  }
-
-.promo-block{
-  padding:0 !important;
-}
+    .wave-divider {
+      height: 80px;
+    }
   }
 </style>
 
-<div class="page-width-container">
-  <div class="custom-collection-grid">
-    <div class="grid-row">
-    {% for block in section.blocks %}
-      <div class="grid-item {% if block.type == 'promo_block' %}promo-item{% elsif block.type == 'promo_block_questions' %}promo-item{% else %}product-item{% endif %}"
-           style="width: calc({{ block.settings.block_width }}% - 20px); min-width: calc({{ block.settings.block_width }}% - 20px);"
-           {{ block.shopify_attributes }}>
-        
-        {% if block.type == 'product' %}
-          {% assign product = block.settings.product %}
-          {% assign product_url = product.url | default: '#' %}
-          
-          <a href="{{ product_url }}" class="product-card-link">
-            <div class="product-card">
-              <div class="product-image-wrapper {% unless block.settings.show_second_image and product.images[1] %}no-second-image{% endunless %}">
-                {% if product.featured_image %}
-                  <img class="product-image primary" 
-                       src="{{ product.featured_image | img_url: '600x' }}" 
-                       alt="{{ product.title }}"
-                       loading="lazy">
-                  
-                  {% if block.settings.show_second_image and product.images[1] %}
-                    <img class="product-image secondary" 
-                         src="{{ product.images[1] | img_url: '600x' }}" 
-                         alt="{{ product.title }}"
-                         loading="lazy">
-                  {% endif %}
-                {% else %}
-                  <div class="product-image primary" style="background: #e0e0e0;"></div>
-                {% endif %}
-                
-                {% if block.settings.show_new_badge %}
-                  <div class="new-badge">
-                    {% if block.settings.new_badge_image %}
-                      <img src="{{ block.settings.new_badge_image | img_url: '300x' }}" alt="New!" loading="lazy">
-                    {% elsif block.settings.new_badge_default_image %}
-                      <img src="{{ block.settings.new_badge_default_image | img_url: '300x' }}" alt="New!" loading="lazy">
-                    {% else %}
-                      <div class="new-badge-text">new!</div>
-                    {% endif %}
-                  </div>
-                {% endif %}
-                
-                {% if block.settings.icon_link != blank %}
-                  <a href="{{ block.settings.icon_link }}" 
-                     class="search-icon"
-                     {% if block.settings.icon_open_new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}
-                     onclick="event.stopPropagation();">
-                    {% if block.settings.search_icon %}
-                      <div class="search-icon-wrapper">
-                        <img class="search-icon-img default-img" 
-                             src="{{ block.settings.search_icon | img_url: '100x' }}" 
-                             alt="Quick view">
-                        {% if block.settings.search_icon_hover %}
-                          <img class="search-icon-img hover-img" 
-                               src="{{ block.settings.search_icon_hover | img_url: '100x' }}" 
-                               alt="Quick view">
-                        {% else %}
-                          <img class="search-icon-img hover-img" 
-                               src="https://cdn.shopify.com/s/files/1/0577/3957/5488/files/ChatGPT_Image_Dec_2_2025_06_51_07_PM.png?v=1764681680" 
-                               alt="Quick view">
-                        {% endif %}
-                      </div>
-                    {% else %}
-                      <img class="product-image secondary" 
-                         src="https://cdn.shopify.com/s/files/1/0577/3957/5488/files/store_locator_QB.png?v=1764680849" 
-                         alt="{{ product.title }}"
-                         loading="lazy">
-                    {% endif %}
-                  </a>
-                {% else %}
-                  <div class="search-icon">
-                    {% if block.settings.search_icon %}
-                      <div class="search-icon-wrapper">
-                        <img class="search-icon-img default-img" 
-                             src="{{ block.settings.search_icon | img_url: '100x' }}" 
-                             alt="Search">
-                        {% if block.settings.search_icon_hover %}
-                          <img class="search-icon-img hover-img" 
-                               src="{{ block.settings.search_icon_hover | img_url: '100x' }}" 
-                               alt="Search">
-                        {% else %}
-                          <img class="search-icon-img hover-img" 
-                               src="https://cdn.shopify.com/s/files/1/0577/3957/5488/files/ChatGPT_Image_Dec_2_2025_06_51_07_PM.png?v=1764681680" 
-                               alt="Search">
-                        {% endif %}
-                      </div>
-                    {% else %}
-                    <img class="search-icon-img hover-img" 
-                               src="https://cdn.shopify.com/s/files/1/0577/3957/5488/files/ChatGPT_Image_Dec_2_2025_06_51_07_PM.png?v=1764681680" 
-                               alt="Search">
-                    {% endif %}
-                  </div>
-                {% endif %}
-              </div>
-              
-              <div class="product-info">
-                <h3 class="product-title">{{ product.title }}</h3>
-                <p class="product-description">{{ block.settings.custom_description }}</p>
-              </div>
-            </div>
-          </a>
-        {% endif %}
-        
-        {% if block.type == 'promo_block' %}
-          <div class="promo-block">
-            <div class="promo-block-inner" style="background: {{ block.settings.background_color }};">
-              {% if block.settings.vegetable_top_left %}
-                <div class="promo-element top-left">
-                  <img src="{{ block.settings.vegetable_top_left | img_url: 'master' }}" alt="">
-                </div>
-              {% endif %}
-              {% if block.settings.vegetable_top_right %}
-                <div class="promo-element top-right">
-                  <img src="{{ block.settings.vegetable_top_right | img_url: 'master' }}" alt="">
-                </div>
-              {% endif %}
-              {% if block.settings.vegetable_middle_left %}
-                <div class="promo-element middle-left">
-                  <img src="{{ block.settings.vegetable_middle_left | img_url: 'master' }}" alt="">
-                </div>
-              {% endif %}
-              {% if block.settings.vegetable_middle_right %}
-                <div class="promo-element middle-right">
-                  <img src="{{ block.settings.vegetable_middle_right | img_url: 'master' }}" alt="">
-                </div>
-              {% endif %}
-              {% if block.settings.vegetable_bottom_left %}
-                <div class="promo-element bottom-left">
-                  <img src="{{ block.settings.vegetable_bottom_left | img_url: 'master' }}" alt="">
-                </div>
-              {% endif %}
-              {% if block.settings.vegetable_bottom_right %}
-                <div class="promo-element bottom-right">
-                  <img src="{{ block.settings.vegetable_bottom_right | img_url: 'master' }}" alt="">
-                </div>
-              {% endif %}
-              <div class="promo-content veggie-buttons">
-                {% if block.settings.heading != blank %}
-                  <h2 class="promo-heading" style="color: {{ block.settings.heading_color | default: '#2C5F2D' }};">{{ block.settings.heading }}</h2>
-                {% endif %}
-                {% if block.settings.button_text != blank and block.settings.button_link != blank %}
-                  <a href="{{ block.settings.button_link }}" class="promo-button button button--primary">
-                    <span>{{ block.settings.button_text }}</span>
-                  </a>
-                {% endif %}
-              </div>
-            </div>
-          </div>
-        {% endif %}
-
-        {% if block.type == 'promo_block_questions' %}
-          <div class="promo-block-questions">
-            <div class="promo-block-questions-inner">
-              {% if block.settings.vegetable_top_left %}
-                <div class="promo-element-questions veg-top-left">
-                  <img src="{{ block.settings.vegetable_top_left | img_url: 'master' }}" alt="">
-                </div>
-              {% endif %}
-              {% if block.settings.vegetable_top_center %}
-                <div class="promo-element-questions veg-top-center">
-                  <img src="{{ block.settings.vegetable_top_center | img_url: 'master' }}" alt="">
-                </div>
-              {% endif %}
-              {% if block.settings.vegetable_top_right %}
-                <div class="promo-element-questions veg-top-right">
-                  <img src="{{ block.settings.vegetable_top_right | img_url: 'master' }}" alt="">
-                </div>
-              {% endif %}
-              {% if block.settings.vegetable_bottom_left %}
-                <div class="promo-element-questions veg-bottom-left">
-                  <img src="{{ block.settings.vegetable_bottom_left | img_url: 'master' }}" alt="">
-                </div>
-              {% endif %}
-              {% if block.settings.vegetable_bottom_center %}
-                <div class="promo-element-questions veg-bottom-center">
-                  <img src="{{ block.settings.vegetable_bottom_center | img_url: 'master' }}" alt="">
-                </div>
-              {% endif %}
-              {% if block.settings.vegetable_bottom_right %}
-                <div class="promo-element-questions veg-bottom-right">
-                  <img src="{{ block.settings.vegetable_bottom_right | img_url: 'master' }}" alt="">
-                </div>
-              {% endif %}
-              <div class="promo-content-questions veggie-buttons">
-                {% if block.settings.heading != blank %}
-                  <h2 class="promo-heading-questions">{{ block.settings.heading }}</h2>
-                {% endif %}
-                {% if block.settings.button_text != blank and block.settings.button_link != blank %}
-                  <a href="{{ block.settings.button_link }}" class="promo-button-questions button button--secondary">
-                    <span>{{ block.settings.button_text }}</span>
-                  </a>
-                {% endif %}
-              </div>
-            </div>
-          </div>
-        {% endif %}
-        
-      </div>
-    {% endfor %}
+<section class="find-us-section" id="find-us-{{ section.id }}">
+  <div class="find-us-header">
+    <h1>{{ section.settings.heading | default: "find us near you:" }}</h1>
+    
+    <div class="main-search-bar">
+      <form action="{{ routes.search_url }}" method="get" role="search">
+        <input
+          type="search"
+          name="q"
+          placeholder="{{ section.settings.search_placeholder | default: 'Search' }}"
+          value="{{ search.terms | escape }}"
+        >
+        <input type="hidden" name="options[prefix]" value="last">
+        <svg class="search-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 17A8 8 0 1 0 9 1a8 8 0 0 0 0 16z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="m19 19-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </form>
+    </div>
   </div>
+
+  <div class="products-wrapper">
+    <div class="product-selection-section">
+      <div class="product-selection-header">
+        <h2>{{ section.settings.selection_heading | default: "Select Specific Products" }}</h2>
+        <div class="location-controls">
+          <input
+            type="text"
+            class="location-input"
+            placeholder="{{ section.settings.location_placeholder | default: 'Denver, CO 80202' }}"
+            id="location-input-{{ section.id }}"
+          >
+          <div class="action-buttons">
+            <button type="button" class="btn-find" id="find-btn-{{ section.id }}">
+              {{ section.settings.find_button_label | default: "Find" }}
+            </button>
+            {%- if section.settings.buy_online_link != blank -%}
+              <a href="{{ section.settings.buy_online_link }}" class="btn-buy-online">
+                {{ section.settings.buy_online_label | default: "Buy Online" }}
+              </a>
+            {%- else -%}
+              <button type="button" class="btn-buy-online">
+                {{ section.settings.buy_online_label | default: "Buy Online" }}
+              </button>
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="products-grid-container">
+    {%- if section.settings.collection != blank -%}
+      <ul class="products-grid">
+        {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
+          <li class="product-card">
+            <a href="{{ product.url }}" style="text-decoration: none; color: inherit;">
+              <div class="product-image-wrapper">
+                {%- if product.featured_media -%}
+                  <img
+                    src="{{ product.featured_media | img_url: '500x500' }}"
+                    alt="{{ product.title | escape }}"
+                    loading="lazy"
+                  >
+                {%- else -%}
+                  {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                {%- endif -%}
+              </div>
+              <div class="product-info">
+                <h3 class="product-name">{{ product.title }}</h3>
+                <div class="product-badges">
+                  <span class="product-badge">1 Easy Meal</span>
+                  <span class="product-badge">Keep Frozen</span>
+                  {%- if product.metafields.custom.protein -%}
+                    <span class="product-badge">{{ product.metafields.custom.protein }}g Protein</span>
+                  {%- endif -%}
+                  <span class="product-badge">No Artificial Flavors</span>
+                </div>
+              </div>
+            </a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    {%- else -%}
+      <ul class="products-grid">
+        {%- for i in (1..8) -%}
+          <li class="product-card">
+            <div class="product-image-wrapper">
+              {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Product {{ i }}</h3>
+              <div class="product-badges">
+                <span class="product-badge">1 Easy Meal</span>
+                <span class="product-badge">Keep Frozen</span>
+                <span class="product-badge">10g Protein</span>
+                <span class="product-badge">No Artificial Flavors</span>
+              </div>
+            </div>
+          </li>
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
+    </div>
   </div>
 
   <!-- Customizable Wave Divider -->
@@ -2614,22 +443,128 @@ margin:0px;}
   {%- else -%}
     <!-- Fallback SVG wave if no image is uploaded -->
     <div class="wave-divider">
-      <svg viewBox="0 0 1200 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%; fill: {{ section.settings.section_background | default: '#f5f5dc' }};">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%; fill: #F8F4EB;">
         <path d="M0,60 C200,100 400,20 600,60 C800,100 1000,20 1200,60 L1200,120 L0,120 Z"></path>
       </svg>
     </div>
   {%- endif -%}
-</div>
+</section>
+
+<script>
+  (function() {
+    const sectionId = '{{ section.id }}';
+    const filterInput = document.getElementById('filter-input-' + sectionId);
+    const productCards = document.querySelectorAll('#find-us-' + sectionId + ' .product-card');
+
+    if (filterInput && productCards.length > 0) {
+      filterInput.addEventListener('input', function(e) {
+        const searchTerm = e.target.value.toLowerCase();
+        
+        productCards.forEach(function(card) {
+          const productName = card.querySelector('.product-name').textContent.toLowerCase();
+          if (productName.includes(searchTerm)) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    }
+
+    const findBtn = document.getElementById('find-btn-' + sectionId);
+    const locationInput = document.getElementById('location-input-' + sectionId);
+
+    if (findBtn && locationInput) {
+      findBtn.addEventListener('click', function() {
+        const location = locationInput.value;
+        if (location) {
+          // Add your location search logic here
+          console.log('Finding stores near:', location);
+        }
+      });
+    }
+  })();
+</script>
 
 {% schema %}
 {
-  "name": "Custom Collection Grid",
+  "name": "Find Us Near You",
+  "tag": "section",
+  "class": "section",
   "settings": [
     {
-      "type": "color",
-      "id": "section_background",
-      "label": "Section Background Color",
-      "default": "#f5f5dc"
+      "type": "header",
+      "content": "Header Settings"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "find us near you:"
+    },
+    {
+      "type": "text",
+      "id": "search_placeholder",
+      "label": "Search Placeholder",
+      "default": "Search"
+    },
+    {
+      "type": "header",
+      "content": "Product Selection Settings"
+    },
+    {
+      "type": "text",
+      "id": "selection_heading",
+      "label": "Selection Heading",
+      "default": "Select Specific Products"
+    },
+    {
+      "type": "text",
+      "id": "location_placeholder",
+      "label": "Location Placeholder",
+      "default": "Denver, CO 80202"
+    },
+    {
+      "type": "text",
+      "id": "find_button_label",
+      "label": "Find Button Label",
+      "default": "Find"
+    },
+    {
+      "type": "text",
+      "id": "buy_online_label",
+      "label": "Buy Online Button Label",
+      "default": "Buy Online"
+    },
+    {
+      "type": "url",
+      "id": "buy_online_link",
+      "label": "Buy Online Link"
+    },
+    {
+      "type": "text",
+      "id": "filter_placeholder",
+      "label": "Filter Products Placeholder",
+      "default": "Filter Products"
+    },
+    {
+      "type": "header",
+      "content": "Products Settings"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection",
+      "info": "Select a collection to display products"
+    },
+    {
+      "type": "range",
+      "id": "products_to_show",
+      "min": 4,
+      "max": 24,
+      "step": 4,
+      "default": 8,
+      "label": "Products to Show"
     },
     {
       "type": "header",
@@ -2642,270 +577,11 @@ margin:0px;}
       "info": "Upload a custom wave image for the bottom divider. If not provided, a default SVG wave will be used."
     }
   ],
-  "blocks": [
-    {
-      "type": "product",
-      "name": "Product",
-      "settings": [
-        {
-          "type": "range",
-          "id": "block_width",
-          "min": 10,
-          "max": 100,
-          "step": 1,
-          "unit": "%",
-          "label": "Block Width",
-          "default": 33
-        },
-        {
-          "type": "product",
-          "id": "product",
-          "label": "Select Product"
-        },
-        {
-          "type": "checkbox",
-          "id": "show_new_badge",
-          "label": "Show 'new!' Badge",
-          "default": false
-        },
-        {
-          "type": "image_picker",
-          "id": "new_badge_image",
-          "label": "Badge Image",
-          "info": "Upload a custom image for the 'new!' badge. If not provided, default image or text will be used."
-        },
-        {
-          "type": "image_picker",
-          "id": "new_badge_default_image",
-          "label": "Default Badge Image",
-          "info": "Upload a default image to use when no custom badge image is provided. If neither is provided, text badge will be shown."
-        },
-        {
-          "type": "checkbox",
-          "id": "show_second_image",
-          "label": "Show Second Image on Hover",
-          "default": true,
-          "info": "Display the second product image when hovering over the card"
-        },
-        {
-          "type": "text",
-          "id": "custom_description",
-          "label": "Custom Description",
-          "default": "Product description"
-        },
-        {
-          "type": "header",
-          "content": "Search Icon Settings"
-        },
-        {
-          "type": "image_picker",
-          "id": "search_icon",
-          "label": "Custom Search Icon (Optional)",
-          "info": "Upload a custom search icon. If not provided, default SVG icon will be used."
-        },
-        {
-          "type": "image_picker",
-          "id": "search_icon_hover",
-          "label": "Search Icon Hover Image (Optional)",
-          "info": "Upload an image to show when hovering over the search icon. If not provided, default hover effect will be used."
-        },
-        {
-          "type": "url",
-          "id": "icon_link",
-          "label": "Icon Button Link (Optional)",
-          "info": "Add a link to the search icon button. Leave empty to disable clicking."
-        },
-        {
-          "type": "checkbox",
-          "id": "icon_open_new_tab",
-          "label": "Open Icon Link in New Tab",
-          "default": false
-        }
-      ]
-    },
-   {
-      "type": "promo_block",
-      "name": "Promotional Block",
-      "settings": [
-        {
-          "type": "range",
-          "id": "block_width",
-          "min": 10,
-          "max": 100,
-          "step": 5,
-          "unit": "%",
-          "label": "Block Width",
-          "default": 65
-        },
-        {
-          "type": "color",
-          "id": "background_color",
-          "label": "Background Color",
-          "default": "#F58220"
-        },
-        {
-          "type": "richtext",
-          "id": "heading",
-          "label": "Heading",
-          
-        },
-        {
-          "type": "color",
-          "id": "heading_color",
-          "label": "Heading Color",
-          "default": "#2C5F2D"
-        },
-        {
-          "type": "text",
-          "id": "button_text",
-          "label": "Button Label",
-          "default": "learn more"
-        },
-        {
-          "type": "url",
-          "id": "button_link",
-          "label": "Button Link"
-        },
-        {
-          "type": "header",
-          "content": "Vegetable Images (6 positions)"
-        },
-        {
-          "type": "image_picker",
-          "id": "vegetable_top_left",
-          "label": "Vegetable - Top Left"
-        },
-        {
-          "type": "image_picker",
-          "id": "vegetable_top_right",
-          "label": "Vegetable - Top Right"
-        },
-        {
-          "type": "image_picker",
-          "id": "vegetable_middle_left",
-          "label": "Vegetable - Middle Left"
-        },
-        {
-          "type": "image_picker",
-          "id": "vegetable_middle_right",
-          "label": "Vegetable - Middle Right"
-        },
-        {
-          "type": "image_picker",
-          "id": "vegetable_bottom_left",
-          "label": "Vegetable - Bottom Left"
-        },
-        {
-          "type": "image_picker",
-          "id": "vegetable_bottom_right",
-          "label": "Vegetable - Bottom Right"
-        }
-      ]
-    },
-    {
-      "type": "promo_block_questions",
-      "name": "Promo Q&A Block",
-      "settings": [
-        {
-          "type": "range",
-          "id": "block_width",
-          "min": 10,
-          "max": 100,
-          "step": 1,
-          "unit": "%",
-          "label": "Block Width",
-          "default": 33
-        },
-        {
-          "type": "text",
-          "id": "heading",
-          "label": "Heading",
-          "default": "got questions?"
-        },
-        {
-          "type": "text",
-          "id": "button_text",
-          "label": "Button Label",
-          "default": "learn more"
-        },
-        {
-          "type": "url",
-          "id": "button_link",
-          "label": "Button Link"
-        },
-        {
-          "type": "header",
-          "content": "Vegetable Images (6 positions)"
-        },
-        {
-          "type": "image_picker",
-          "id": "vegetable_top_left",
-          "label": "Vegetable - Top Left Corner"
-        },
-        {
-          "type": "image_picker",
-          "id": "vegetable_top_center",
-          "label": "Vegetable - Top Center"
-        },
-        {
-          "type": "image_picker",
-          "id": "vegetable_top_right",
-          "label": "Vegetable - Top Right Corner"
-        },
-        {
-          "type": "image_picker",
-          "id": "vegetable_bottom_left",
-          "label": "Vegetable - Bottom Left Corner"
-        },
-        {
-          "type": "image_picker",
-          "id": "vegetable_bottom_center",
-          "label": "Vegetable - Bottom Center"
-        },
-        {
-          "type": "image_picker",
-          "id": "vegetable_bottom_right",
-          "label": "Vegetable - Bottom Right Corner"
-        }
-      ]
-    }
-  ],
   "presets": [
     {
-      "name": "Custom Collection Grid",
-      "blocks": [
-        {
-          "type": "product",
-          "settings": {
-            "block_width": 33
-          }
-        },
-        {
-          "type": "product",
-          "settings": {
-            "block_width": 33
-          }
-        },
-        {
-          "type": "product",
-          "settings": {
-            "block_width": 33
-          }
-        },
-        {
-          "type": "product",
-          "settings": {
-            "block_width": 33
-          }
-        },
-        {
-          "type": "promo_block",
-          "settings": {
-            "block_width": 65
-          }
-        }
-      ]
+      "name": "Find Us Near You"
     }
   ]
 }
 {% endschema %}
+
