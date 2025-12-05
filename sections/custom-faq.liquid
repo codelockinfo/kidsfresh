@@ -162,11 +162,24 @@
   font-weight: 400;
 }
 
-.faq-tab:hover,
+{% comment %} .faq-tab:hover,
 .faq-tab.active {
   opacity: 1;
   text-decoration: underline;
+} {% endcomment %}
+
+
+.faq-tab:hover,
+.faq-tab.active {
+  color: #F89821 !important;
+  opacity: 1;
+  background-image: url('{{ "underline-green.png" | asset_url }}');
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: 80% 5px; /* Adjust underline thickness/width */
+  padding-bottom: 10px;
 }
+
 
 /* FAQ SECTION */
 .faq-section { display: none; }
