@@ -159,6 +159,22 @@
             "faq_answer": ""
           }
         },
+        "faq_qiAiTm": {
+          "type": "faq",
+          "settings": {
+            "parent_tab": "products",
+            "faq_question": "What is the recommended age for kids eating Kidfresh meals?",
+            "faq_answer": ""
+          }
+        },
+        "faq_V9MgWA": {
+          "type": "faq",
+          "settings": {
+            "parent_tab": "products",
+            "faq_question": "Is it safe to microwave Kidfresh meals in the plastic container (tray/bowl)?",
+            "faq_answer": ""
+          }
+        },
         "faq_paHq3B": {
           "type": "faq",
           "settings": {
@@ -201,6 +217,8 @@
         "faq_AByit3",
         "faq_8tTgdy",
         "faq_dB9pkw",
+        "faq_qiAiTm",
+        "faq_V9MgWA",
         "faq_paHq3B",
         "tab_YM6AV7",
         "tab_jHneDj",
