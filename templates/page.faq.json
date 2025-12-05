@@ -223,6 +223,38 @@
             "faq_answer": ""
           }
         },
+        "faq_njHET3": {
+          "type": "faq",
+          "settings": {
+            "parent_tab": "directions",
+            "faq_question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "faq_answer": ""
+          }
+        },
+        "faq_3mdxbg": {
+          "type": "faq",
+          "settings": {
+            "parent_tab": "directions",
+            "faq_question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "faq_answer": ""
+          }
+        },
+        "faq_itAwMW": {
+          "type": "faq",
+          "settings": {
+            "parent_tab": "shipping",
+            "faq_question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "faq_answer": ""
+          }
+        },
+        "faq_pmpLWK": {
+          "type": "faq",
+          "settings": {
+            "parent_tab": "shipping",
+            "faq_question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "faq_answer": ""
+          }
+        },
         "tab_YM6AV7": {
           "type": "tab",
           "settings": {
@@ -265,6 +297,10 @@
         "faq_mUr7mQ",
         "faq_zNHgF7",
         "faq_ka6EDp",
+        "faq_njHET3",
+        "faq_3mdxbg",
+        "faq_itAwMW",
+        "faq_pmpLWK",
         "tab_YM6AV7",
         "tab_jHneDj",
         "tab_47Tzxy",
