@@ -172,6 +172,31 @@
     fill: #ffffff;
   }
 
+  /* Wave Divider */
+  .wave-divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .wave-divider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+    display: block;
+  }
+
+  .wave-divider svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
   @media screen and (max-width: 767px) {
     .contact-location-section {
       padding: 30px 15px 50px;
@@ -197,7 +222,10 @@
     .contact-location-left-image,
     .contact-location-right-image {
       max-width: 150px;
-      
+    }
+
+    .wave-divider {
+      height: 100px;
     }
 
   }
@@ -331,6 +359,24 @@
 
     
   </div>
+
+  <!-- Customizable Wave Divider -->
+  {%- if st.wave_image != blank -%}
+    <div class="wave-divider">
+      <img
+        src="{{ st.wave_image | img_url: '1920x' }}"
+        alt="Wave divider"
+        loading="lazy"
+      >
+    </div>
+  {%- else -%}
+    <!-- Fallback SVG wave if no image is uploaded -->
+    <div class="wave-divider">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%; fill: #0f4735;">
+        <path d="M0,60 C200,100 400,20 600,60 C800,100 1000,20 1200,60 L1200,120 L0,120 Z"></path>
+      </svg>
+    </div>
+  {%- endif -%}
 </section>
 
 {% schema %}
@@ -358,6 +404,16 @@
       "type": "image_picker",
       "id": "right_image",
       "label": "Right Background Image (Celery/Vegetables)"
+    },
+    {
+      "type": "header",
+      "content": "Wave Divider"
+    },
+    {
+      "type": "image_picker",
+      "id": "wave_image",
+      "label": "Wave Image",
+      "info": "Upload a custom wave image for the bottom divider. If not provided, a default SVG wave will be used."
     },
     {
       "type": "header",
