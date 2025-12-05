@@ -29,6 +29,93 @@
         "rich_text_3": "<p>follow us to win<br/>more meals</p>"
       }
     },
+    "instra_reel_kbEmwq": {
+      "type": "instra-reel",
+      "blocks": {
+        "reel_4daQfA": {
+          "type": "reel",
+          "settings": {
+            "image": "shopify://shop_images/0_1.avif",
+            "link": "",
+            "caption": "View reel"
+          }
+        },
+        "reel_RTAMtf": {
+          "type": "reel",
+          "settings": {
+            "image": "shopify://shop_images/Mask_group.avif",
+            "link": "",
+            "caption": "View reel"
+          }
+        },
+        "reel_VWBiXm": {
+          "type": "reel",
+          "settings": {
+            "image": "shopify://shop_images/2.avif",
+            "link": "",
+            "caption": "View reel"
+          }
+        },
+        "reel_iw6a7b": {
+          "type": "reel",
+          "settings": {
+            "image": "shopify://shop_images/6.avif",
+            "link": "",
+            "caption": "View reel"
+          }
+        },
+        "reel_P8Aq7p": {
+          "type": "reel",
+          "settings": {
+            "image": "shopify://shop_images/5.avif",
+            "link": "",
+            "caption": "View reel"
+          }
+        },
+        "reel_pMDRCG": {
+          "type": "reel",
+          "settings": {
+            "image": "shopify://shop_images/Mask_group.png",
+            "link": "",
+            "caption": "View reel"
+          }
+        },
+        "reel_wfjirR": {
+          "type": "reel",
+          "settings": {
+            "image": "shopify://shop_images/3.avif",
+            "link": "",
+            "caption": "View reel"
+          }
+        }
+      },
+      "block_order": [
+        "reel_4daQfA",
+        "reel_RTAMtf",
+        "reel_VWBiXm",
+        "reel_iw6a7b",
+        "reel_P8Aq7p",
+        "reel_pMDRCG",
+        "reel_wfjirR"
+      ],
+      "name": "Insta Reels Feed",
+      "settings": {
+        "heading": "Wins of the Week",
+        "heading_size": 84,
+        "heading_size_mobile": 42,
+        "heading_color": "#0f4735",
+        "image_border_radius": 0,
+        "enable_links": false,
+        "enable_lightbox": true,
+        "enable_autoplay": true,
+        "autoplay_speed": 4,
+        "padding_top": 0,
+        "padding_bottom": 4,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 4,
+        "color_scheme": "accent-1"
+      }
+    },
     "custom_liquid_zBNK7h": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
@@ -83,6 +170,7 @@
     }
   },
   "order": [
+    "instra_reel_kbEmwq",
     "custom_newsletter_LpVVG4",
     "custom_liquid_zBNK7h",
     "footer"
