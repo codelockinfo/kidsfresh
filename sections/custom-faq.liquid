@@ -1,199 +1,7 @@
-{% comment %} <style>
-.faq-container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-
-.faq-tabs {
-  display: flex;
-  gap: 20px;
-  margin-bottom: 30px;
-  cursor: pointer;
-  font-weight: 600;
-  text-transform: capitalize;
-}
-
-.faq-tab {
-  padding-bottom: 5px;
-}
-
-.faq-tab.active {
-  border-bottom: 2px solid #000;
-}
-
-.faq-section {
-  display: none;
-}
-
-.faq-section.active {
-  display: block;
-}
-
-.faq-item {
-  background: #fff;
-  border: 1px solid #dcdcdc;
-  border-radius: 4px;
-  margin-bottom: 10px;
-  padding: 14px 20px;
-  cursor: pointer;
-}
-
-.faq-item-title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.faq-arrow {
-  font-size: 18px;
-  transition: transform .3s ease;
-}
-
-.faq-item.open .faq-arrow {
-  transform: rotate(180deg);
-}
-
-.faq-item-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height .4s ease;
-  padding-top: 0;
-}
-
-.faq-item.open .faq-item-content {
-  max-height: 600px;
-  padding-top: 10px;
-}
-</style>
-
-
-<div class="faq-container">
-
-  <!-- Tabs -->
-  <div class="faq-tabs">
-    {% for block in section.blocks %}
-      {% if block.type == 'tab' %}
-        <div class="faq-tab" data-tab="{{ block.settings.tab_id }}">
-          {{ block.settings.tab_title }}
-        </div>
-      {% endif %}
-    {% endfor %}
-  </div>
-
-
-  <!-- Sections for each Tab -->
-  {% for tab in section.blocks %}
-    {% if tab.type == 'tab' %}
-
-      <div class="faq-section" id="section-{{ tab.settings.tab_id }}">
-
-        {% for faq in section.blocks %}
-          {% if faq.type == 'faq' and faq.settings.parent_tab == tab.settings.tab_id %}
-            <div class="faq-item">
-
-              <div class="faq-item-title">
-                <span>{{ faq.settings.faq_question }}</span>
-                <span class="faq-arrow">⌄</span>
-              </div>
-
-              <div class="faq-item-content">
-                <p>{{ faq.settings.faq_answer }}</p>
-              </div>
-
-            </div>
-          {% endif %}
-        {% endfor %}
-
-      </div>
-
-    {% endif %}
-  {% endfor %}
-
-</div>
-
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-
-  // Tabs switching
-  const tabs = document.querySelectorAll(".faq-tab");
-  const sections = document.querySelectorAll(".faq-section");
-
-  if (tabs.length > 0) {
-    tabs[0].classList.add("active");
-    sections[0].classList.add("active");
-  }
-
-  tabs.forEach(tab => {
-    tab.addEventListener("click", () => {
-      const id = tab.dataset.tab;
-
-      tabs.forEach(t => t.classList.remove("active"));
-      sections.forEach(s => s.classList.remove("active"));
-
-      tab.classList.add("active");
-      document.getElementById(`section-${id}`).classList.add("active");
-    });
-  });
-
-
-  // Accordion
-  document.querySelectorAll(".faq-item").forEach((item) => {
-    item.addEventListener("click", () => {
-      item.classList.toggle("open");
-    });
-  });
-
-});
-</script>
-
-
-
-{% schema %}
-{
-  "name": "Dynamic FAQ Tabs Section",
-  "settings": [],
-  "blocks": [
-    {
-      "type": "tab",
-      "name": "Tab",
-      "settings": [
-        { "type": "text", "id": "tab_title", "label": "Tab Title" },
-        { "type": "text", "id": "tab_id", "label": "Tab Unique ID", "default": "products" }
-      ]
-    },
-    {
-      "type": "faq",
-      "name": "FAQ Item",
-      "settings": [
-        {
-          "type": "text",
-          "id": "parent_tab",
-          "label": "Enter Parent Tab ID",
-          "info": "Must match the Tab Unique ID"
-        },
-        { "type": "text", "id": "faq_question", "label": "FAQ Question" },
-        { "type": "textarea", "id": "faq_answer", "label": "FAQ Answer" }
-      ]
-    }
-  ],
-
-  "presets": [
-    { "name": "Dynamic FAQ Tabs" }
-  ]
-}
-{% endschema %} {% endcomment %}
-
-
 <style>
-
-/* MAIN OUTER WRAPPER */
 .main-faq-wrapper {
   width: 100%;
 }
-
-/* Only TABS Background Wrapper */
 .faq-tabs-wrapper {
   background-image: url({{ section.settings.tabs_bg_desktop | image_url }});
   background-size: 100% 100%;
@@ -207,15 +15,11 @@ document.addEventListener("DOMContentLoaded", () => {
     background-image: url({{ section.settings.tabs_bg_mobile | image_url }});
   }
 }
-
-/* CUSTOM 1990PX CONTAINER */
 .faq-custom-container {
   max-width: 1990px;
   margin: 0 auto;
   padding: 0 20px;
 }
-
-/* FILTER BY TEXT */
 .filter-title {
     color: #fff;
     font-weight: 700;
@@ -224,7 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
     text-transform: lowercase;
 }
 
-/* TABS WRAPPER → filter left + tabs right */
 .faq-tabs {
     display: flex;
     align-items: center;
