@@ -13,6 +13,7 @@
   "sections": {
     "custom_liquid_kApEGk": {
       "type": "custom-liquid",
+      "disabled": true,
       "custom_css": [
         ".section-sections--19565218791616__custom_liquid_kApEGk-padding {margin-top: -89px; z-index: 1; position: relative;}"
       ],
@@ -93,6 +94,7 @@
         "reel_pMDRCG",
         "reel_wfjirR"
       ],
+      "disabled": true,
       "custom_css": [],
       "name": "Insta Reels Feed",
       "settings": {
