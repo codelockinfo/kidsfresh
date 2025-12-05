@@ -139,7 +139,7 @@
           "type": "faq",
           "settings": {
             "parent_tab": "nutrition",
-            "faq_question": "Do all of your products and meals contain vegetables?",
+            "faq_question": "Do any Kidfresh products contain nuts/soy/dairy/eggs/wheat?",
             "faq_answer": ""
           }
         },
