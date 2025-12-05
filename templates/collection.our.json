@@ -124,6 +124,17 @@
             "icon_open_new_tab": false
           }
         },
+        "promo_block_n3tQnB": {
+          "type": "promo_block",
+          "settings": {
+            "block_width": 65,
+            "background_color": "#f58220",
+            "heading": "<p>ingredients + nutrition<br/><br/></p>",
+            "heading_color": "#0f4735",
+            "button_text": "learn more",
+            "button_link": "#"
+          }
+        },
         "product_BPNnpB": {
           "type": "product",
           "settings": {
@@ -250,6 +261,7 @@
         "product_6rmexQ",
         "product_tXaUzY",
         "product_Arfnw4",
+        "promo_block_n3tQnB",
         "product_BPNnpB",
         "product_8LKprm",
         "product_narn9f",
