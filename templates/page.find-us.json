@@ -55,11 +55,22 @@
         "products_to_show": 8,
         "wave_image": "shopify://shop_images/Group_2_2.png"
       }
+    },
+    "contact_form_buid_TCNkny": {
+      "type": "contact-form-buid",
+      "name": "Contact Location Request",
+      "settings": {
+        "title": "don't see us near you?",
+        "subtitle": "We'd love to be your neighbor. please let us know where you'd like to see our meals move in.",
+        "padding_top": 40,
+        "padding_bottom": 60
+      }
     }
   },
   "order": [
     "main",
     "slideshow_cAi8Jj",
-    "find_us_near_you_9HyHEj"
+    "find_us_near_you_9HyHEj",
+    "contact_form_buid_TCNkny"
   ]
 }
