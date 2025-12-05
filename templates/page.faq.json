@@ -215,6 +215,14 @@
             "faq_answer": ""
           }
         },
+        "faq_ka6EDp": {
+          "type": "faq",
+          "settings": {
+            "parent_tab": "directions",
+            "faq_question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "faq_answer": ""
+          }
+        },
         "tab_YM6AV7": {
           "type": "tab",
           "settings": {
@@ -256,6 +264,7 @@
         "faq_A4UQxe",
         "faq_mUr7mQ",
         "faq_zNHgF7",
+        "faq_ka6EDp",
         "tab_YM6AV7",
         "tab_jHneDj",
         "tab_47Tzxy",
