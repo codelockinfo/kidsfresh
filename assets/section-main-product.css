@@ -321,7 +321,7 @@ product-info {
 }
 @media screen and (max-width: 1440px) {
   product-info {
-  padding : 34px 120px !important;
+  padding : 34px 120px ;
 }
 }
 
