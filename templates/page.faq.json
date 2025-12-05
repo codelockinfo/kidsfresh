@@ -135,6 +135,14 @@
             "faq_answer": ""
           }
         },
+        "faq_paHq3B": {
+          "type": "faq",
+          "settings": {
+            "parent_tab": "nutrition",
+            "faq_question": "Do all of your products and meals contain vegetables?",
+            "faq_answer": ""
+          }
+        },
         "tab_YM6AV7": {
           "type": "tab",
           "settings": {
@@ -146,7 +154,7 @@
           "type": "tab",
           "settings": {
             "tab_title": "nutrition",
-            "tab_id": "products"
+            "tab_id": "nutrition"
           }
         },
         "tab_47Tzxy": {
@@ -166,6 +174,7 @@
       },
       "block_order": [
         "faq_AByit3",
+        "faq_paHq3B",
         "tab_YM6AV7",
         "tab_jHneDj",
         "tab_47Tzxy",
