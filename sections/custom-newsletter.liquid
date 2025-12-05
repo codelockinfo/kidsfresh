@@ -123,7 +123,7 @@
 
         <div class="rich-text">
           <div>{{ section.settings.rich_text_2 }}</div>
-            <button type="submit" class="newsletter-btn button btn-1">
+            <button type="submit" class="newsletter-btn button btn-1 mobile_btn">
               <span>{{ section.settings.newsletter_btn_text | default: 'Subscribe' }}</span>
             </button>
         </div>
@@ -451,6 +451,7 @@ section#shopify-section-sections--20805898010849__custom_liquid_pz8bzw {
 
   .custom-newsletter .column-2 .rich-text {
     padding-top: 10px;
+    display: flex;
   }
   .footer .grid {
     display: flex !important;
