@@ -7,6 +7,9 @@
 .announcement-bar{
     padding : 11px 0px !important;
 }
+image-height-wrapper{
+    background-color: #0F4735;
+}
 .announcement-bar p {
     font-family: var(--font-family);
     text-align: center;
