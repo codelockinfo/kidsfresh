@@ -91,6 +91,7 @@
         "reel_pMDRCG",
         "reel_wfjirR"
       ],
+      "disabled": true,
       "name": "Insta Reels Feed",
       "settings": {
         "heading": "Wins of the Week",
