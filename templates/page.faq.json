@@ -123,11 +123,29 @@
       "settings": {
         "section_background": "#f5f5dc"
       }
+    },
+    "custom_faq_KAk3Af": {
+      "type": "custom-faq",
+      "blocks": {
+        "tab_YM6AV7": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "products",
+            "tab_id": "products"
+          }
+        }
+      },
+      "block_order": [
+        "tab_YM6AV7"
+      ],
+      "name": "Dynamic FAQ Tabs",
+      "settings": {}
     }
   },
   "order": [
     "main",
     "slideshow_tnRXKg",
-    "collection_product_block_Tbp4xd"
+    "collection_product_block_Tbp4xd",
+    "custom_faq_KAk3Af"
   ]
 }
