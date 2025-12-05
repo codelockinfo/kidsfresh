@@ -109,17 +109,19 @@
 
     <div class="buttons-row">
 
-      {% if section.settings.btn1_label != blank %}
-      <a href="{{ section.settings.btn1_link }}" class="help-btn help-btn-green">
-        {{ section.settings.btn1_label }}
-      </a>
-      {% endif %}
+      
 
-      {% if section.settings.btn2_label != blank %}
-      <a href="{{ section.settings.btn2_link }}" class="help-btn help-btn-orange">
-        {{ section.settings.btn2_label }}
-      </a>
-      {% endif %}
+
+ {% if section.settings.btn1_label or section.settings.btn2_label %}
+      <div class="veggie-buttons">
+        {% if section.settings.btn1_label %}
+          <a href="{{ section.settings.btn1_label }}" class="button button--primary"><span>{{ section.settings.button_label_1 }}</span></a>
+        {% endif %}
+        {% if section.settings.btn2_label %}
+          <a href="{{ section.settings.btn2_label }}" class="button button--secondary"><span>{{ section.settings.button_label_2 }}</span></a>
+        {% endif %}
+      </div>
+    {% endif %}
 
     </div>
 
