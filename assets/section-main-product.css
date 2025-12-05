@@ -268,7 +268,7 @@ product-info .pdp-buttons {
 
 @media screen and (max-width: 1440px) {
   product-info {
-  padding : 34px 120px ;
+  padding : 34px 120px !important;
 }
 }
     @media screen and (max-width: 1024px) {
