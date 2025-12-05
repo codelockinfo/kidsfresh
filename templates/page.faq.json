@@ -143,6 +143,14 @@
             "faq_answer": ""
           }
         },
+        "faq_8tTgdy": {
+          "type": "faq",
+          "settings": {
+            "parent_tab": "products",
+            "faq_question": "Are Kidfresh Products Gluten Free?",
+            "faq_answer": ""
+          }
+        },
         "faq_paHq3B": {
           "type": "faq",
           "settings": {
@@ -183,6 +191,7 @@
       "block_order": [
         "faq_xNAQXE",
         "faq_AByit3",
+        "faq_8tTgdy",
         "faq_paHq3B",
         "tab_YM6AV7",
         "tab_jHneDj",
