@@ -36,6 +36,7 @@
       "block_order": [
         "text_image_block_gNe4Ur"
       ],
+      "disabled": true,
       "name": "slideshow",
       "settings": {}
     },
