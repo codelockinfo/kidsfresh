@@ -264,6 +264,18 @@ product-info .pdp-buttons {
       bottom: -5px;
       box-shadow: none !important;
     }
+
+
+@media screen and (max-width: 1440px) {
+  product-info {
+  padding : 34px 120px ;
+}
+}
+    @media screen and (max-width: 1024px) {
+  product-info {
+  padding : 34px 80px !important;
+}
+}
 @media screen and (max-width: 768px) {
   
 
@@ -313,16 +325,6 @@ product-info {
  }
 
 
-}
-@media screen and (max-width: 1024px) {
-  product-info {
-  padding : 34px 80px !important;
-}
-}
-@media screen and (max-width: 1440px) {
-  product-info {
-  padding : 34px 120px ;
-}
 }
 
 /* my css end */
