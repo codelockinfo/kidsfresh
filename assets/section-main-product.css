@@ -213,7 +213,7 @@ product-info .pdp-buttons {
 
     product-info .button--primary:hover:after {
       bottom: -5px;
-      box-shadow: none;
+      box-shadow: none !important;
     }
 
     product-info .button--secondary {
@@ -262,7 +262,7 @@ product-info .pdp-buttons {
 
     product-info .button--secondary:hover:after {
       bottom: -5px;
-      box-shadow: none;
+      box-shadow: none !important;
     }
 @media screen and (max-width: 768px) {
   
