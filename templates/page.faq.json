@@ -127,6 +127,13 @@
     "custom_faq_KAk3Af": {
       "type": "custom-faq",
       "blocks": {
+        "tab_YM6AV7": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "products",
+            "tab_id": "products"
+          }
+        },
         "tab_jHneDj": {
           "type": "tab",
           "settings": {
@@ -134,17 +141,26 @@
             "tab_id": "products"
           }
         },
-        "tab_YM6AV7": {
+        "tab_47Tzxy": {
           "type": "tab",
           "settings": {
-            "tab_title": "products",
+            "tab_title": "directions",
+            "tab_id": "products"
+          }
+        },
+        "tab_wGrC46": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "shipping",
             "tab_id": "products"
           }
         }
       },
       "block_order": [
+        "tab_YM6AV7",
         "tab_jHneDj",
-        "tab_YM6AV7"
+        "tab_47Tzxy",
+        "tab_wGrC46"
       ],
       "name": "Dynamic FAQ Tabs",
       "settings": {}
