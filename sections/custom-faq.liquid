@@ -396,8 +396,15 @@ document.addEventListener("DOMContentLoaded", () => {
 }
 
 .faq-arrow {
-  font-size: 22px;
   transition: .3s ease;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 40px;
+    border: 3px solid #0F4735;
+    height: 40px;
+    background: #F89821;
 }
 .faq-item.open .faq-arrow {
   transform: rotate(180deg);
