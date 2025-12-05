@@ -69,6 +69,171 @@
           "settings": {
             "block_width": 33,
             "product": "chicken-sticks-potato-tots",
+            "show_new_badge": true,
+            "new_badge_image": "shopify://shop_images/Group_243.png",
+            "show_second_image": true,
+            "custom_description": "Product description",
+            "search_icon": "shopify://shop_images/store_locator_QB.png",
+            "search_icon_hover": "shopify://shop_images/ChatGPT_Image_Dec_2_2025_06_51_07_PM_dc3c5109-df73-409a-bdd7-72fd465d2d1b.png",
+            "icon_link": "",
+            "icon_open_new_tab": false
+          }
+        },
+        "product_6rmexQ": {
+          "type": "product",
+          "settings": {
+            "block_width": 33,
+            "product": "buttered-pasta",
+            "show_new_badge": true,
+            "new_badge_image": "shopify://shop_images/Group_243.png",
+            "show_second_image": true,
+            "custom_description": "Product description",
+            "search_icon": "shopify://shop_images/store_locator_QB.png",
+            "search_icon_hover": "shopify://shop_images/ChatGPT_Image_Dec_2_2025_06_51_07_PM_dc3c5109-df73-409a-bdd7-72fd465d2d1b.png",
+            "icon_link": "",
+            "icon_open_new_tab": false
+          }
+        },
+        "product_tXaUzY": {
+          "type": "product",
+          "settings": {
+            "block_width": 33,
+            "product": "chicken-nuggets-buttered-pasta",
+            "show_new_badge": false,
+            "new_badge_image": "shopify://shop_images/Group_243.png",
+            "show_second_image": true,
+            "custom_description": "Product description",
+            "search_icon": "shopify://shop_images/store_locator_QB.png",
+            "search_icon_hover": "shopify://shop_images/ChatGPT_Image_Dec_2_2025_06_51_07_PM_dc3c5109-df73-409a-bdd7-72fd465d2d1b.png",
+            "icon_link": "",
+            "icon_open_new_tab": false
+          }
+        },
+        "product_Arfnw4": {
+          "type": "product",
+          "settings": {
+            "block_width": 33,
+            "product": "chicken-meatballs-pasta-marinara",
+            "show_new_badge": false,
+            "new_badge_image": "shopify://shop_images/Group_243.png",
+            "show_second_image": true,
+            "custom_description": "Product description",
+            "search_icon": "shopify://shop_images/store_locator_QB.png",
+            "search_icon_hover": "shopify://shop_images/ChatGPT_Image_Dec_2_2025_06_51_07_PM_dc3c5109-df73-409a-bdd7-72fd465d2d1b.png",
+            "icon_link": "",
+            "icon_open_new_tab": false
+          }
+        },
+        "product_BPNnpB": {
+          "type": "product",
+          "settings": {
+            "block_width": 33,
+            "product": "wagon-wheels-mac-cheese",
+            "show_new_badge": false,
+            "new_badge_image": "shopify://shop_images/Group_243.png",
+            "show_second_image": true,
+            "custom_description": "Product description",
+            "search_icon": "shopify://shop_images/store_locator_QB.png",
+            "search_icon_hover": "shopify://shop_images/ChatGPT_Image_Dec_2_2025_06_51_07_PM_dc3c5109-df73-409a-bdd7-72fd465d2d1b.png",
+            "icon_link": "",
+            "icon_open_new_tab": false
+          }
+        },
+        "product_8LKprm": {
+          "type": "product",
+          "settings": {
+            "block_width": 33,
+            "product": "chicken-meatballs",
+            "show_new_badge": false,
+            "new_badge_image": "shopify://shop_images/Group_243.png",
+            "show_second_image": true,
+            "custom_description": "Product description",
+            "search_icon": "shopify://shop_images/store_locator_QB.png",
+            "search_icon_hover": "shopify://shop_images/ChatGPT_Image_Dec_2_2025_06_51_07_PM_dc3c5109-df73-409a-bdd7-72fd465d2d1b.png",
+            "icon_link": "",
+            "icon_open_new_tab": false
+          }
+        },
+        "product_narn9f": {
+          "type": "product",
+          "settings": {
+            "block_width": 33,
+            "product": "chicken-nuggets",
+            "show_new_badge": false,
+            "new_badge_image": "shopify://shop_images/Group_243.png",
+            "show_second_image": true,
+            "custom_description": "Product description",
+            "search_icon": "shopify://shop_images/store_locator_QB.png",
+            "search_icon_hover": "shopify://shop_images/ChatGPT_Image_Dec_2_2025_06_51_07_PM_dc3c5109-df73-409a-bdd7-72fd465d2d1b.png",
+            "icon_link": "",
+            "icon_open_new_tab": false
+          }
+        },
+        "product_xTAGUi": {
+          "type": "product",
+          "settings": {
+            "block_width": 33,
+            "product": "chicken-sticks",
+            "show_new_badge": false,
+            "new_badge_image": "shopify://shop_images/Group_243.png",
+            "show_second_image": true,
+            "custom_description": "Product description",
+            "search_icon": "shopify://shop_images/store_locator_QB.png",
+            "search_icon_hover": "shopify://shop_images/ChatGPT_Image_Dec_2_2025_06_51_07_PM_dc3c5109-df73-409a-bdd7-72fd465d2d1b.png",
+            "icon_link": "",
+            "icon_open_new_tab": false
+          }
+        },
+        "product_qkhFW6": {
+          "type": "product",
+          "settings": {
+            "block_width": 33,
+            "product": "cheese-pizza-wagon-wheels",
+            "show_new_badge": false,
+            "new_badge_image": "shopify://shop_images/Group_243.png",
+            "show_second_image": true,
+            "custom_description": "Product description",
+            "search_icon": "shopify://shop_images/store_locator_QB.png",
+            "search_icon_hover": "shopify://shop_images/ChatGPT_Image_Dec_2_2025_06_51_07_PM_dc3c5109-df73-409a-bdd7-72fd465d2d1b.png",
+            "icon_link": "",
+            "icon_open_new_tab": false
+          }
+        },
+        "product_TpUcNC": {
+          "type": "product",
+          "settings": {
+            "block_width": 33,
+            "product": "cheeseburger-macs-cheese",
+            "show_new_badge": false,
+            "new_badge_image": "shopify://shop_images/Group_243.png",
+            "show_second_image": true,
+            "custom_description": "Product description",
+            "search_icon": "shopify://shop_images/store_locator_QB.png",
+            "search_icon_hover": "shopify://shop_images/ChatGPT_Image_Dec_2_2025_06_51_07_PM_dc3c5109-df73-409a-bdd7-72fd465d2d1b.png",
+            "icon_link": "",
+            "icon_open_new_tab": false
+          }
+        },
+        "product_C8CF9d": {
+          "type": "product",
+          "settings": {
+            "block_width": 33,
+            "product": "chicken-sticks-potato-tots",
+            "show_new_badge": false,
+            "new_badge_image": "shopify://shop_images/Group_243.png",
+            "show_second_image": true,
+            "custom_description": "Product description",
+            "search_icon": "shopify://shop_images/store_locator_QB.png",
+            "search_icon_hover": "shopify://shop_images/ChatGPT_Image_Dec_2_2025_06_51_07_PM_dc3c5109-df73-409a-bdd7-72fd465d2d1b.png",
+            "icon_link": "",
+            "icon_open_new_tab": false
+          }
+        },
+        "product_w7H8yx": {
+          "type": "product",
+          "settings": {
+            "block_width": 33,
+            "product": "chicken-sticks-potato-tots",
             "show_new_badge": false,
             "new_badge_image": "shopify://shop_images/Group_243.png",
             "show_second_image": true,
@@ -81,7 +246,18 @@
         }
       },
       "block_order": [
-        "product_JFxCc9"
+        "product_JFxCc9",
+        "product_6rmexQ",
+        "product_tXaUzY",
+        "product_Arfnw4",
+        "product_BPNnpB",
+        "product_8LKprm",
+        "product_narn9f",
+        "product_xTAGUi",
+        "product_qkhFW6",
+        "product_TpUcNC",
+        "product_C8CF9d",
+        "product_w7H8yx"
       ],
       "name": "Custom Collection Grid",
       "settings": {
