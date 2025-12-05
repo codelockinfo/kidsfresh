@@ -1,0 +1,189 @@
+<style>
+
+.help-section-wrapper {
+  width: 100%;
+  background-image: url({{ section.settings.bg_desktop | image_url }});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+@media(max-width:768px){
+  .help-section-wrapper {
+    background-image: url({{ section.settings.bg_mobile | image_url }});
+    padding: 60px 20px;
+  }
+}
+
+.help-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.help-heading {
+  font-family: GT Walsheim Trial, sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: #0F4735;
+  margin-bottom: 15px;
+}
+
+@media(max-width:768px){
+  .help-heading {
+    font-size: 32px;
+  }
+}
+
+.help-subtext {
+  font-family: GT Walsheim Trial, sans-serif;
+  font-size: 18px;
+  color: #0F4735;
+  margin-bottom: 30px;
+}
+
+.buttons-row {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+/* Buttons */
+.help-btn {
+  padding: 12px 35px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-family: GT Walsheim Trial;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s ease;
+  display: inline-block;
+}
+
+/* Green Button */
+.help-btn-green {
+  background: #95C940;
+  color: #0F4735;
+  border: 3px solid #0F4735;
+}
+
+/* Orange Button */
+.help-btn-orange {
+  background: #F89821;
+  color: #0F4735;
+  border: 3px solid #0F4735;
+}
+
+/* Hover */
+.help-btn:hover {
+  opacity: 0.85;
+}
+
+@media(max-width:768px){
+  .buttons-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+</style>
+
+
+<div class="help-section-wrapper">
+
+  <div class="help-inner">
+
+    <h2 class="help-heading">
+      {{ section.settings.heading }}
+    </h2>
+
+    <p class="help-subtext">
+      {{ section.settings.subheading }}
+    </p>
+
+    <div class="buttons-row">
+
+      {% if section.settings.btn1_label != blank %}
+      <a href="{{ section.settings.btn1_link }}" class="help-btn help-btn-green">
+        {{ section.settings.btn1_label }}
+      </a>
+      {% endif %}
+
+      {% if section.settings.btn2_label != blank %}
+      <a href="{{ section.settings.btn2_link }}" class="help-btn help-btn-orange">
+        {{ section.settings.btn2_label }}
+      </a>
+      {% endif %}
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+{% schema %}
+{
+  "name": "Help Support Section",
+
+  "settings": [
+
+    {
+      "type": "image_picker",
+      "id": "bg_desktop",
+      "label": "Background Image (Desktop)"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_mobile",
+      "label": "Background Image (Mobile)"
+    },
+
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading Text",
+      "default": "we’re here to help you win more meals."
+    },
+
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Sub-heading Text",
+      "default": "have a question, comment or concern? check out our FAQs or just send us a message."
+    },
+
+    { 
+      "type": "text",
+      "id": "btn1_label",
+      "label": "Button 1 Label",
+      "default": "FAQs"
+    },
+    { 
+      "type": "url",
+      "id": "btn1_link",
+      "label": "Button 1 Link"
+    },
+
+    { 
+      "type": "text",
+      "id": "btn2_label",
+      "label": "Button 2 Label",
+      "default": "message us"
+    },
+    { 
+      "type": "url",
+      "id": "btn2_link",
+      "label": "Button 2 Link"
+    }
+
+  ],
+
+  "presets": [
+    { "name": "Help Support Section" }
+  ]
+}
+{% endschema %}
