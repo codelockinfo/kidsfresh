@@ -300,6 +300,9 @@ document.addEventListener("DOMContentLoaded", () => {
   .faq-tabs-wrapper {
     background-image: url({{ section.settings.tabs_bg_mobile | image_url }});
   }
+   .faq-items-wrapper {
+    background-image: url({{ section.settings.faq_bg_mobile | image_url }});
+  }
 }
 
 .faq-custom-container {
@@ -315,11 +318,6 @@ document.addEventListener("DOMContentLoaded", () => {
   background-repeat: no-repeat;
   background-position: center;
   padding: 40px 0;
-}
-@media(max-width:768px){
-  .faq-items-wrapper {
-    background-image: url({{ section.settings.faq_bg_mobile | image_url }});
-  }
 }
 
 /* FILTER BY TEXT */
@@ -367,6 +365,11 @@ document.addEventListener("DOMContentLoaded", () => {
     font-size: 16px !important;
     line-height: 22px !important;
 }
+}
+@media(min-width:769px) and (max-width:991px){
+    .faq-tab {
+    font-size: 31px !important;
+    }
 }
 
 .faq-tab {
