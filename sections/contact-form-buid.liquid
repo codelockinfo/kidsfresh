@@ -311,7 +311,7 @@
   {% endif %}
   <div class="contact-location-wrapper">
 
-    <div class="contact-location-form">
+    <div class="contact-location-form veggie-buttons">
       {%- form 'contact', class: 'contact-form' -%}
         {%- if form.posted_successfully? -%}
           <div class="form-success" style="color: #90ee90; margin-bottom: 20px; text-align: center;">
@@ -405,7 +405,7 @@
           ></textarea>
         </div>
 
-        <button type="submit" class="form-submit-btn veggie-buttons button button--primary">send message</button>
+        <button type="submit" class="form-submit-btn button button--primary">send message</button>
       {%- endform -%}
     </div>
 
