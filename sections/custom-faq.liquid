@@ -387,13 +387,13 @@ document.addEventListener("DOMContentLoaded", () => {
 }
 
 @media(min-width:992px) and (max-width:1024px){
-    .faq-tab {
+    {% comment %} .faq-tab {
         font-size: 31px !important;
-    }
+    } {% endcomment %}
     .faq-custom-container {
         padding: 0 100px;
     }
-    .filter-title { 
+    {% comment %} .filter-title { 
         font-size: 43px;
     }
     .faq-item-title {
@@ -403,7 +403,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .faq-item.open .faq-item-content {
         font-size: 18px !important;
         line-height: 26px !important;
-    }
+    } {% endcomment %}
 }
 
 .faq-tab {
