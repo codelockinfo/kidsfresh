@@ -55,7 +55,7 @@
       "type": "custom-liquid",
       "custom_css": [
         "@media (max-width: 768px) {svg {display: none; }}",
-        "@media (min-width: 769) {}"
+        "@media (min-width: 769) {.color-scheme-8fca23bf-c055-4afc-bb4c-d7702601df39.gradient{margin-top: -88px; }}"
       ],
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
