@@ -315,6 +315,12 @@ product-info {
 
 }
 
+@media screen and (max-width: 1440px) {
+  product-info {
+  padding : 34px 120px !important;
+}
+}
+
 /* my css end */
 
 
