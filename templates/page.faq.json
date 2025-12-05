@@ -42,6 +42,14 @@
     "custom_faq_pEW3cN": {
       "type": "custom-faq",
       "blocks": {
+        "faq_CxrmtV": {
+          "type": "faq",
+          "settings": {
+            "parent_tab": "shipping",
+            "faq_question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "faq_answer": ""
+          }
+        },
         "tab_WDDhKy": {
           "type": "tab",
           "settings": {
@@ -72,6 +80,7 @@
         }
       },
       "block_order": [
+        "faq_CxrmtV",
         "tab_WDDhKy",
         "tab_9xD8gJ",
         "tab_jCwgXe",
