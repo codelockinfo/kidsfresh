@@ -207,6 +207,14 @@
             "faq_answer": ""
           }
         },
+        "faq_zNHgF7": {
+          "type": "faq",
+          "settings": {
+            "parent_tab": "nutrition",
+            "faq_question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "faq_answer": ""
+          }
+        },
         "tab_YM6AV7": {
           "type": "tab",
           "settings": {
@@ -247,6 +255,7 @@
         "faq_paHq3B",
         "faq_A4UQxe",
         "faq_mUr7mQ",
+        "faq_zNHgF7",
         "tab_YM6AV7",
         "tab_jHneDj",
         "tab_47Tzxy",
