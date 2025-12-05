@@ -308,8 +308,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         {% for block in section.blocks %}
           {% if block.type == 'tab' %}
-            <div class="faq-tab" data-tab="{{ block.settings.tab_id }}">
-              {{ block.settings.tab_title }}
+            <div>
+                <div class="faq-tab" data-tab="{{ block.settings.tab_id }}">
+                    {{ block.settings.tab_title }}
+                </div>
             </div>
           {% endif %}
         {% endfor %}
