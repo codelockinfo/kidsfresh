@@ -41,6 +41,42 @@
     },
     "custom_faq_pEW3cN": {
       "type": "custom-faq",
+      "blocks": {
+        "tab_WDDhKy": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "products",
+            "tab_id": "products"
+          }
+        },
+        "tab_9xD8gJ": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "nutrition",
+            "tab_id": "nutrition"
+          }
+        },
+        "tab_jCwgXe": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "directions",
+            "tab_id": "directions"
+          }
+        },
+        "tab_d3nV3G": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "shipping",
+            "tab_id": "shipping"
+          }
+        }
+      },
+      "block_order": [
+        "tab_WDDhKy",
+        "tab_9xD8gJ",
+        "tab_jCwgXe",
+        "tab_d3nV3G"
+      ],
       "name": "Dynamic FAQ Tabs",
       "settings": {
         "tabs_bg_desktop": "shopify://shop_images/Group_312_1.png",
