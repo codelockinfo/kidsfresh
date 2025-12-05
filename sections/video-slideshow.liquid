@@ -408,7 +408,7 @@
         {% assign subheadings = section.settings.subheading_1 | append: '|' | append: section.settings.subheading_2 | append: '|' | append: section.settings.subheading_3 | append: '|' | append: section.settings.subheading_4 | append: '|' | append: section.settings.subheading_5 | split: '|' %}
         {% for sub in subheadings %}
           {% if sub != blank %}
-            <p class="rotating-subheading {% if forloop.first %}visible{% else %}hidden{% endif %}">{{ sub }}</p>
+            <p class="rotating-subheading </p>
           {% endif %}
         {% endfor %}
       </div>
