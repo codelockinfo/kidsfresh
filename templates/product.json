@@ -12,65 +12,89 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "vendor": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
         "title": {
           "type": "title",
           "settings": {}
         },
-        "price": {
-          "type": "price",
-          "disabled": true,
-          "settings": {}
-        },
         "variant_picker": {
           "type": "variant_picker",
-          "disabled": true,
           "settings": {
             "picker_type": "button",
             "swatch_shape": "circle"
           }
         },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "disabled": true,
-          "settings": {}
-        },
-        "buy_buttons": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
-          }
-        },
         "description": {
           "type": "description",
-          "disabled": true,
           "settings": {}
         },
-        "share": {
-          "type": "share",
-          "disabled": true,
+        "collapsible_tab_kHYXYj": {
+          "type": "collapsible_tab",
           "settings": {
-            "share_label": "Share"
+            "heading": "Ingredients",
+            "icon": "none",
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue.<br/></p>",
+            "page": "",
+            "default_open": false,
+            "enable_highlighted_design": false,
+            "use_metafields": false,
+            "metafield_1": "",
+            "metafield_1_label": "Label 1",
+            "metafield_1_sublabel": "",
+            "metafield_2": "",
+            "metafield_2_label": "Label 2",
+            "metafield_2_sublabel": "",
+            "metafield_3": "",
+            "metafield_3_label": "Label 3",
+            "metafield_3_sublabel": ""
+          }
+        },
+        "collapsible_tab_bJUBwU": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Allergens",
+            "icon": "none",
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue.<br/></p>",
+            "page": "",
+            "default_open": false,
+            "enable_highlighted_design": false,
+            "use_metafields": false,
+            "metafield_1": "",
+            "metafield_1_label": "Label 1",
+            "metafield_1_sublabel": "",
+            "metafield_2": "",
+            "metafield_2_label": "Label 2",
+            "metafield_2_sublabel": "",
+            "metafield_3": "",
+            "metafield_3_label": "Label 3",
+            "metafield_3_sublabel": ""
+          }
+        },
+        "nutritionally_notable_UV8CDc": {
+          "type": "nutritionally_notable",
+          "settings": {
+            "heading": "Nutritionally Notable",
+            "icon": "check_mark",
+            "default_open": true,
+            "content": "",
+            "metafield_1": "custom.protein",
+            "metafield_1_label": "Protein",
+            "metafield_1_sublabel": "Per serving",
+            "metafield_2": "custom.artificial_flavors_or_ingredients",
+            "metafield_2_label": "NO Artificial Flavors or Ingredients",
+            "metafield_2_sublabel": "",
+            "metafield_3": "custom.specific_to_prod",
+            "metafield_3_label": "Specific to Prod",
+            "metafield_3_sublabel": ""
           }
         }
       },
       "block_order": [
-        "vendor",
         "title",
-        "price",
         "variant_picker",
-        "quantity_selector",
-        "buy_buttons",
         "description",
-        "share"
+        "collapsible_tab_kHYXYj",
+        "collapsible_tab_bJUBwU",
+        "nutritionally_notable_UV8CDc"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -85,7 +109,11 @@
         "hide_variants": true,
         "enable_video_looping": false,
         "padding_top": 36,
-        "padding_bottom": 12
+        "padding_bottom": 12,
+        "button_label_1": "markets near me",
+        "button_url_1": "shopify://pages/find-us",
+        "button_label_2": "order online",
+        "button_url_2": ""
       }
     },
     "related-products": {
@@ -188,7 +216,7 @@
           "type": "product",
           "settings": {
             "image": "shopify://shop_images/FINAL_CMPM_1_2342e1ec-ecc1-4d38-aaba-36c14d438ab7.png",
-            "title": "Chicken Meatballs & Pasta Marinara",
+            "title": "<p>Chicken Meatballs & Pasta Marinara</p>",
             "description": "a dinnertime classic, upgraded",
             "veggie_group_image": "shopify://shop_images/vegitable_1.png"
           }
@@ -197,7 +225,7 @@
           "type": "product",
           "settings": {
             "image": "shopify://shop_images/FINAL_WWMC_1.png",
-            "title": "Wagon WheelMac & Cheese",
+            "title": "<p>Wagon WheelMac & Cheese</p>",
             "description": "their favorite, now with undercover veggies",
             "veggie_group_image": "shopify://shop_images/Group_299_4.png"
           }
@@ -206,7 +234,7 @@
           "type": "product",
           "settings": {
             "image": "shopify://shop_images/FINAL_CNBP_1.png",
-            "title": "Chicken Nuggets & Buttered Pasta",
+            "title": "<p>Chicken Nuggets & Buttered Pasta</p>",
             "description": "even buttered pasta can be better",
             "veggie_group_image": "shopify://shop_images/Group_298_10.png"
           }
