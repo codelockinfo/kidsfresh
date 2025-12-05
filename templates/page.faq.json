@@ -43,13 +43,22 @@
       "type": "custom-faq-background",
       "name": "Help Support Section",
       "settings": {
-        "bg_desktop": "shopify://shop_images/Group_313.png",
         "heading": "we’re here to help you win more meals.",
         "subheading": "have a question, comment or concern? check out our FAQs or just send us a message.",
         "btn1_label": "FAQs",
         "btn1_link": "",
         "btn2_label": "message us",
         "btn2_link": ""
+      }
+    },
+    "custom_liquid_NHMX7w": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"100%\" height=\"auto\" viewBox=\"0 0 1920 102\" fill=\"none\">\n<path d=\"M-3.14724e-06 102.747L1922.98 102.747L1958 102.747L1950.5 86.6568C1837.5 92.8189 1506 61.2933 1289 78.0924C979 102.091 784.215 89.7738 553 78.0924C370.5 68.8721 185.094 58.0039 -9.91903e-07 78.0925L-3.14724e-06 102.747Z\" fill=\"#0F4735\"/>\n<path d=\"M326.224 12.7265C308.928 27.8353 307.154 54.099 322.263 71.3956L329.318 79.4723L337.395 72.4172C354.692 57.3084 356.465 31.0447 341.356 13.7481L334.301 5.67132L326.224 12.7265Z\" fill=\"#0F4735\"/>\n<path d=\"M280.131 57.8866C284.788 75.0403 302.465 85.1684 319.619 80.5112L327.629 78.3365L325.454 70.3264C320.797 53.1727 303.12 43.0446 285.966 47.7018L277.956 49.8765L280.131 57.8866Z\" fill=\"#0F4735\"/>\n<path d=\"M368.336 44.8558C351.008 40.8956 333.754 51.7298 329.794 69.0577L327.945 77.1491L336.036 78.9983C353.364 82.9585 370.618 72.1242 374.578 54.7964L376.427 46.705L368.336 44.8558Z\" fill=\"#0F4735\"/>\n</svg>",
+        "color_scheme": "scheme-8fca23bf-c055-4afc-bb4c-d7702601df39",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "custom_faq_pEW3cN": {
@@ -246,6 +255,7 @@
     "main",
     "slideshow_cAi8Jj",
     "custom_faq_background_HNEFmG",
+    "custom_liquid_NHMX7w",
     "custom_faq_pEW3cN"
   ]
 }
