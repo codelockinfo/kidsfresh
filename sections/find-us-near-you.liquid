@@ -179,12 +179,23 @@
   }
 
   .product-card {
-    background-color: #ffffff!important;
+    background-color: #ffffff !important;
     border-radius: 12px;
-    overflow: hidden;
+    overflow: visible;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    padding: 10px;
+    display: block;
+  }
+
+  .product-card > a {
+    background-color: #ffffff !important;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 8px;
+    overflow: hidden;
   }
 
   .product-card:hover {
@@ -210,6 +221,7 @@
 
   .product-info {
     padding: 20px 15px;
+    background-color: #ffffff !important;
   }
 
   .product-name {
