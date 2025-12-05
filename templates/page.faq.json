@@ -175,6 +175,14 @@
             "faq_answer": ""
           }
         },
+        "faq_G3PqEc": {
+          "type": "faq",
+          "settings": {
+            "parent_tab": "products",
+            "faq_question": "Is Kidfresh packaging made out of recycled materials?",
+            "faq_answer": ""
+          }
+        },
         "faq_paHq3B": {
           "type": "faq",
           "settings": {
@@ -219,6 +227,7 @@
         "faq_dB9pkw",
         "faq_qiAiTm",
         "faq_V9MgWA",
+        "faq_G3PqEc",
         "faq_paHq3B",
         "tab_YM6AV7",
         "tab_jHneDj",
