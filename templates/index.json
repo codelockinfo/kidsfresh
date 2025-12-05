@@ -299,7 +299,7 @@
     "custom_liquid_R9NxxV": {
       "type": "custom-liquid",
       "custom_css": [
-        ".section-sections--19565218791616__custom_liquid_zBNK7h-padding {margin-top: -89px; z-index: 1; position: relative;}"
+        ".color-scheme-8fca23bf-c055-4afc-bb4c-d7702601df39.gradient {margin-top: -89px; z-index: 1; position: relative;}"
       ],
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
