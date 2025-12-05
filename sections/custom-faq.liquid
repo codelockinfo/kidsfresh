@@ -348,9 +348,9 @@ document.addEventListener("DOMContentLoaded", () => {
 }
 
 @media(max-width:768px){
-  .tabs-grid {
-    grid-template-columns: repeat(2, auto);
-  }
+    .tabs-grid {
+        grid-template-columns: repeat(2, auto);
+    }
   .faq-tabs {
     display: block;
     text-align: center;
@@ -363,6 +363,10 @@ document.addEventListener("DOMContentLoaded", () => {
   .faq-item-title {
     font-size: 18px !important;
   }
+  .faq-item.open .faq-item-content {
+    font-size: 16px;
+    line-height: 22px;
+}
 }
 
 .faq-tab {
