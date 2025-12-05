@@ -283,7 +283,8 @@
       ],
       "name": "Custom Collection Grid",
       "settings": {
-        "section_background": "#f1ead9"
+        "section_background": "#f1ead9",
+        "wave_image": "shopify://shop_images/Group_5_3.png"
       }
     }
   },
