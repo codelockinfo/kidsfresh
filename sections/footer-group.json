@@ -90,6 +90,9 @@
         "reel_pMDRCG",
         "reel_wfjirR"
       ],
+      "custom_css": [
+        ".section-sections--19565218791616__custom_liquid_kApEGk-padding {margin-top: -89px; z-index: 1; position: relative;}"
+      ],
       "name": "Insta Reels Feed",
       "settings": {
         "heading": "Wins of the Week",
