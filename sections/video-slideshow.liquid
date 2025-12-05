@@ -223,6 +223,17 @@
   width: 100%;
   height: auto;
 }
+@media (min-width: 1600px) {
+  .large-screen-video {
+    display: block;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1599px) {
+  .desktop-video {
+    display: block;
+  }
+}
 
 @media (max-width: 768px) {
   .mobile-video {
@@ -234,17 +245,15 @@
   }
 }
 
-@media (min-width: 769px) and (max-width: 1599px) {
-  .desktop-video {
-    display: block;
+@media (max-width: 360px) {
+  .auto-video-sub-section h2.banner__heading.inline-richtext.h0,
+  .banner__text.rte.body p {
+    font-size: 38px;
+    line-height: 36px;
   }
 }
 
-@media (min-width: 1600px) {
-  .large-screen-video {
-    display: block;
-  }
-}
+
 </style>
 
 <div class="auto-video-section">
