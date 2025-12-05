@@ -273,14 +273,14 @@
           "type": "tab",
           "settings": {
             "tab_title": "directions",
-            "tab_id": "products"
+            "tab_id": "directions"
           }
         },
         "tab_wGrC46": {
           "type": "tab",
           "settings": {
             "tab_title": "shipping",
-            "tab_id": "products"
+            "tab_id": "shipping"
           }
         }
       },
