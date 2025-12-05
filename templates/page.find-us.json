@@ -56,102 +56,16 @@
         "wave_image": "shopify://shop_images/Group_2_2.png"
       }
     },
-    "contact_form_buid_TCNkny": {
+    "contact_form_buid_JVWRJh": {
       "type": "contact-form-buid",
       "name": "Contact Location Request",
       "settings": {
         "title": "don't see us near you?",
         "subtitle": "We'd love to be your neighbor. please let us know where you'd like to see our meals move in.",
-        "wave_image": "shopify://shop_images/Group_5_2.png",
+        "left_image": "shopify://shop_images/Group_310.png",
+        "right_image": "shopify://shop_images/image_71.png",
         "padding_top": 40,
         "padding_bottom": 60
-      }
-    },
-    "instra_reel_HbcntP": {
-      "type": "instra-reel",
-      "blocks": {
-        "reel_nYxcw4": {
-          "type": "reel",
-          "settings": {
-            "image": "shopify://shop_images/0_1.avif",
-            "link": "",
-            "caption": "View reel"
-          }
-        },
-        "reel_qYQeV3": {
-          "type": "reel",
-          "settings": {
-            "image": "shopify://shop_images/Mask_group.avif",
-            "link": "",
-            "caption": "View reel"
-          }
-        },
-        "reel_mNT4UQ": {
-          "type": "reel",
-          "settings": {
-            "image": "shopify://shop_images/2.avif",
-            "link": "",
-            "caption": "View reel"
-          }
-        },
-        "reel_fghPzA": {
-          "type": "reel",
-          "settings": {
-            "image": "shopify://shop_images/6.avif",
-            "link": "",
-            "caption": "View reel"
-          }
-        },
-        "reel_7rnUhg": {
-          "type": "reel",
-          "settings": {
-            "image": "shopify://shop_images/5.avif",
-            "link": "",
-            "caption": "View reel"
-          }
-        },
-        "reel_KAyc7U": {
-          "type": "reel",
-          "settings": {
-            "image": "shopify://shop_images/Mask_group.png",
-            "link": "",
-            "caption": "View reel"
-          }
-        },
-        "reel_9AD4CW": {
-          "type": "reel",
-          "settings": {
-            "image": "shopify://shop_images/3.avif",
-            "link": "",
-            "caption": "View reel"
-          }
-        }
-      },
-      "block_order": [
-        "reel_nYxcw4",
-        "reel_qYQeV3",
-        "reel_mNT4UQ",
-        "reel_fghPzA",
-        "reel_7rnUhg",
-        "reel_KAyc7U",
-        "reel_9AD4CW"
-      ],
-      "name": "Insta Reels Feed",
-      "settings": {
-        "heading": "Wins of the Week",
-        "heading_size": 84,
-        "heading_size_mobile": 36,
-        "heading_color": "#0f4735",
-        "image_border_radius": 0,
-        "enable_links": false,
-        "enable_lightbox": true,
-        "enable_autoplay": true,
-        "autoplay_speed": 4,
-        "padding_top": 0,
-        "padding_bottom": 4,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 4,
-        "color_scheme": "accent-1"
       }
     }
   },
@@ -159,7 +73,11 @@
     "main",
     "slideshow_cAi8Jj",
     "find_us_near_you_9HyHEj",
+<<<<<<< HEAD
     "contact_form_buid_TCNkny",
     "instra_reel_HbcntP"
+=======
+    "contact_form_buid_JVWRJh"
+>>>>>>> 3fab56395711e8a88b4cb5c8f9d776d4ab6467b8
   ]
 }
