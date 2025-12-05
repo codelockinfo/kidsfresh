@@ -1,6 +1,9 @@
 .header__menu-item{
     font-size:23px;
 }
+ #cb-widget-currency{
+  display :none !important;
+}
 .announcement-bar{
     padding : 11px 0px !important;
 }
