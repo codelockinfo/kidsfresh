@@ -48,8 +48,16 @@
     pointer-events: none;
   }
 
-  .product-selection-section {
+  .products-wrapper {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
     margin: 0 auto 70px;
+    max-width: 1200px;
+  }
+
+  .product-selection-section {
+    margin-bottom: 20px;
   }
 
   .product-selection-header {
@@ -159,8 +167,6 @@
   }
 
   .products-grid-container {
-    max-width: 1200px;
-    margin: 0 auto 100px;
     padding: 0 20px;
   }
 
@@ -174,7 +180,7 @@
   }
 
   .product-card {
-    background-color: #fff;
+    background-color: transparent;
     border-radius: 12px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -335,35 +341,36 @@
     </div>
   </div>
 
-  <div class="product-selection-section">
-    <div class="product-selection-header">
-      <h2>{{ section.settings.selection_heading | default: "Select Specific Products" }}</h2>
-      <div class="location-controls">
-        <input
-          type="text"
-          class="location-input"
-          placeholder="{{ section.settings.location_placeholder | default: 'Denver, CO 80202' }}"
-          id="location-input-{{ section.id }}"
-        >
-        <div class="action-buttons">
-          <button type="button" class="btn-find" id="find-btn-{{ section.id }}">
-            {{ section.settings.find_button_label | default: "Find" }}
-          </button>
-          {%- if section.settings.buy_online_link != blank -%}
-            <a href="{{ section.settings.buy_online_link }}" class="btn-buy-online">
-              {{ section.settings.buy_online_label | default: "Buy Online" }}
-            </a>
-          {%- else -%}
-            <button type="button" class="btn-buy-online">
-              {{ section.settings.buy_online_label | default: "Buy Online" }}
+  <div class="products-wrapper">
+    <div class="product-selection-section">
+      <div class="product-selection-header">
+        <h2>{{ section.settings.selection_heading | default: "Select Specific Products" }}</h2>
+        <div class="location-controls">
+          <input
+            type="text"
+            class="location-input"
+            placeholder="{{ section.settings.location_placeholder | default: 'Denver, CO 80202' }}"
+            id="location-input-{{ section.id }}"
+          >
+          <div class="action-buttons">
+            <button type="button" class="btn-find" id="find-btn-{{ section.id }}">
+              {{ section.settings.find_button_label | default: "Find" }}
             </button>
-          {%- endif -%}
+            {%- if section.settings.buy_online_link != blank -%}
+              <a href="{{ section.settings.buy_online_link }}" class="btn-buy-online">
+                {{ section.settings.buy_online_label | default: "Buy Online" }}
+              </a>
+            {%- else -%}
+              <button type="button" class="btn-buy-online">
+                {{ section.settings.buy_online_label | default: "Buy Online" }}
+              </button>
+            {%- endif -%}
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="products-grid-container">
+    <div class="products-grid-container">
     {%- if section.settings.collection != blank -%}
       <ul class="products-grid">
         {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
@@ -415,6 +422,7 @@
         {%- endfor -%}
       </ul>
     {%- endif -%}
+    </div>
   </div>
 
   <!-- Customizable Wave Divider -->
