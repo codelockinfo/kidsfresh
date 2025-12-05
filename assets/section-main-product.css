@@ -1,5 +1,326 @@
+
+/* my css */
+
+.product__title h1{
+    font-family: var(--font-family) !important;
+  font-weight: 700 !important;
+  font-size: 60px !important;
+}
+
+ .product-form__input--pill .form__label {
+  display:none;
+}
+.product__description p{
+color:#39302D;
+font-family: var(--font-family);
+font-weight: 400;
+font-size: 20px;
+line-height: 28px;
+letter-spacing: -2%;
+text-align:justify;
+}
+/* --- Variant Pill Wrapper --- */
+.product-form__input--pill {
+  display: inline-flex !important;
+  border: 2px solid #1E4E3D  !important;  /* Green border */
+  border-radius: 8px  !important;
+  overflow: hidden  !important;
+}
+
+/* --- Hide default radio button --- */
+.product-form__input--pill input[type="radio"] {
+  display: none  !important;
+}
+
+/* --- Pill Buttons labels --- */
+.product-form__input--pill label {
+  padding: 6px 18px  !important;
+  font-size: 14px  !important;
+  cursor: pointer;
+  border-right: 1px solid #1E4E3D  !important;
+  color: #1E4E3D  !important;
+  background: transparent  !important;
+  transition: all 0.3s ease  !important;
+}
+
+/* Remove right border for last item */
+.product-form__input--pill label:last-of-type {
+  border-right: none  !important;
+}
+
+/* --- ACTIVE (Selected) state --- */
+.product-form__input--pill input[type="radio"]:checked + label {
+  background: #1E4E3D  !important;       /* Green */
+  color: #fff  !important;               /* White text */
+  font-weight: 600  !important;
+}
+
+/* --- Hover effect --- */
+.product-form__input--pill label:hover {
+  background: #E7EFEA  !important;
+}
+
+.product-form__input--pill input[type=radio]+label{
+  margin:0  !important;
+  border-radius:0  !important;
+  padding:10px  !important;
+}
+
+.product__accordion , .accordion--highlighted{
+      border: 2px solid #E7DEC7 !important;
+    background-color: #E7DEC7;
+    border-radius:10px !important;
+    
+    margin-bottom:20px !important;
+
+}
+
+.product__accordion .accordion__content{
+  background: #F1EAD9;
+  padding:0 33px;
+}
+.accordion__content{
+  margin-bottom:0 !important;
+}
+
+.accordion__content  p{
+       font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 15px;
+    color: #5D3328;
+    padding:10px 0;
+
+}
+.accordion{
+  margin:0 0 20px 0!important;
+}
+
+.summary__title h2{
+     font-family: var(--font-family);
+font-weight: 500;
+font-size: 25px;
+line-height: 100%;
+letter-spacing: -2%;
+color: #39302D;
+}
+.accordion summary{
+  padding: 18px 33px !important;
+}
+
+.accordion__content--highlighted {
+  padding: 1.5rem 0 0 0;
+}
+
+.highlighted-accordion__items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.highlighted-accordion__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0px 0px 20px 0px;
+  background-color: rgba(var(--color-background), 0.5);
+  /* border-radius: 4px; */
+  border-right: 2px solid #E7DEC7;
+}
+.highlighted-accordion__item:last-child {
+  border-right: none;
+}
+
+.highlighted-accordion__value {
+   font-family: var(--font-family);
+font-weight: 700;
+color:#ED7723;
+font-size: 46px;
+text-align: center;
+
+}
+
+.highlighted-accordion__label {
+   font-family: var(--font-family);
+font-weight: 600;
+font-size: 20px;
+text-align: center;
+color:#39302D;
+line-height:32px;
+letter-spacing:-2px;
+}
+
+.highlighted-accordion__sublabel {
+     font-family: var(--font-family);
+font-weight: 400;
+font-size: 16px;
+line-height: 100%;
+letter-spacing: -2px;
+text-align: center;
+color:#39302D;
+
+}
+product-info .pdp-buttons {
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+ product-info .button--primary {
+      background: transparent !important;
+      color: #0F4735;
+      font-family: var(--font-family);
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 44px;
+      text-decoration: none;
+      box-shadow: none;
+      cursor: pointer;
+      transition: transform .2s ease, box-shadow .2s ease;
+      text-align: center;
+      border-radius: 35px;
+      padding: 8px 34px;
+      border: none;
+      text-transform: lowercase;
+      transform: none !important;
+    }
+
+    product-info .button--primary:before {
+      background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_23_2.png?v=1764592651);
+      background-size: 100% 100%;
+      z-index: 2;
+    }
+
+    product-info .button--primary span {
+      z-index: 3;
+    }
+
+    product-info .button--primary:after {
+      content: '';
+      background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_25.png?v=1764592665);
+      background-size: 100% 100%;
+      padding: 8px 34px;
+      bottom: -5px;
+      z-index: 1;
+      box-shadow: none;
+    }
+
+    product-info .button--primary:hover:before {
+      background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_23_3.png?v=1764592664) !important;
+      background-size: 100% 100% !important;
+    }
+
+    product-info .button--primary:hover:after {
+      bottom: -5px;
+      box-shadow: none;
+    }
+
+    product-info .button--secondary {
+      background: transparent !important;
+      color: #63441D;
+      font-family: var(--font-family);
+      font-size: 30px;
+      line-height: 44px;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: none;
+      cursor: pointer;
+      transition: transform .2s ease, box-shadow .2s ease;
+      text-align: center;
+      border-radius: 35px;
+      padding: 8px 34px;
+      border: none;
+      text-transform: lowercase;
+      transform: none !important;
+    }
+
+    product-info .button--secondary:before {
+      background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_23_4.png?v=1764654764);
+      background-size: 100% 100%;
+      z-index: 2;
+    }
+
+    product-info .button--secondary span {
+      z-index: 3;
+    }
+
+    product-info .button--secondary:after {
+      content: '';
+      background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_25_1.png?v=1764654764);
+      background-size: 100% 100%;
+      padding: 8px 34px;
+      bottom: -6px;
+      z-index: 1;
+      box-shadow: none;
+    }
+
+    product-info .button--secondary:hover:before {
+      background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_23_5.png?v=1764654764) !important;
+      background-size: 100% 100% !important;
+    }
+
+    product-info .button--secondary:hover:after {
+      bottom: -5px;
+      box-shadow: none;
+    }
+@media screen and (max-width: 768px) {
+  
+
+product-info {
+  padding : 34px 30px !important;
+}
+  .product__title h1{
+    font-size:36px !important;
+  }
+
+  .product__description p{
+    font-size:16px !important;
+  }
+  .summary__title h2{
+    font-size:20px;
+  }
+
+  .product__accordion svg{
+    width:20px;
+    height:20px;
+  }
+  .product__accordion .accordion__content {
+    padding:0 20px;
+  }
+
+
+  .accordion__content--highlighted {
+    padding :0 !important;
+  }
+
+  .highlighted-accordion__items{
+    gap:0px;
+    padding :0 0 5px 0px;
+  }
+ .highlighted-accordion__value{
+  font-size:34px;
+ }
+
+ .highlighted-accordion__sublabel{
+  font-size:14px;
+    letter-spacing: -1px;
+ }
+ .highlighted-accordion__label{
+  font-size:14px;
+      line-height: 19px;
+    letter-spacing: -1px;
+ }
+
+
+}
+
+/* my css end */
+
+
 product-info {
   display: block;
+  padding : 38px 180px;
 }
 
 .product {
@@ -20,6 +341,7 @@ product-info {
 }
 
 @media screen and (min-width: 750px) {
+
   .product__column-sticky {
     display: block;
     position: sticky;
@@ -240,11 +562,9 @@ a.product__text {
   text-decoration: none;
   color: rgba(var(--color-foreground), 0.75);
 }
-
 .product__text.caption-with-letter-spacing {
   text-transform: uppercase;
 }
-
 .product__title {
   word-break: break-word;
   margin-bottom: 1.5rem;
@@ -267,7 +587,7 @@ a.product__text {
 }
 
 .product__accordion .accordion__content {
-  padding: 0 1rem;
+  /* padding: 0 1rem; */
 }
 
 .product .price .badge {

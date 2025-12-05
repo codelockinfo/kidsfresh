@@ -90,7 +90,8 @@
       <div class="column column-1" style="background-color: {{ section.settings.col1_bg }};">
         <a href="{{ section.settings.btn_url }}" class="button btn-2"><span>{{ section.settings.btn_text }}</span></a>
         <div class="rich-text">
-          {{ section.settings.rich_text_1 }}
+         <div>{{ section.settings.rich_text_1 }}</div> 
+         
         </div>
       </div>
 
@@ -113,7 +114,7 @@
               spellcheck="false"
               class="newsletter-input"
             >
-            <button type="submit" class="newsletter-btn button btn-1">
+            <button type="submit" class="newsletter-btn button btn-1 hide_btn">
               <span>{{ section.settings.newsletter_btn_text | default: 'Subscribe' }}</span>
             </button>
           </div>
@@ -121,7 +122,12 @@
         </form>
 
         <div class="rich-text">
-          {{ section.settings.rich_text_2 }}
+          <div>{{ section.settings.rich_text_2 }}</div>
+           <div>
+             <button type="submit" class="newsletter-btn button btn-1 mobile_btn">
+              <span>{{ section.settings.newsletter_btn_text | default: 'Subscribe' }}</span>
+            </button>
+           </div>
         </div>
       </div>
 
@@ -169,6 +175,9 @@
   margin: 0;
   padding: 0;
   max-width: 100%;
+}
+ .column-2 .rich-text .newsletter-btn{
+  display: none;
 }
 .custom-newsletter {
   font-size: 21px;
@@ -447,6 +456,20 @@ section#shopify-section-sections--20805898010849__custom_liquid_pz8bzw {
 
   .custom-newsletter .column-2 .rich-text {
     padding-top: 10px;
+    display: flex;
+  }
+  .column-2 .rich-text .newsletter-btn{
+    display: block;
+  }
+  .custom-newsletter .column-2 .rich-text .button:before {
+    z-index: 3;
+}
+.custom-newsletter .column-2 .rich-text .button span {
+    z-index: 3;
+    position: relative;
+}
+  .newsletter-group .hide_btn{
+    display: none !important;
   }
   .footer .grid {
     display: flex !important;
