@@ -1,1 +1,4 @@
-<svg class="icon icon-caret" viewBox="0 0 10 6"><path fill="currentColor" fill-rule="evenodd" d="M9.354.646a.5.5 0 0 0-.708 0L5 4.293 1.354.646a.5.5 0 0 0-.708.708l4 4a.5.5 0 0 0 .708 0l4-4a.5.5 0 0 0 0-.708" clip-rule="evenodd"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+<path d="M13.1367 0V27" stroke="#0F4735" stroke-width="3"/>
+<path d="M27 13.8633H-4.76837e-07" stroke="#0F4735" stroke-width="3"/>
+</svg>
