@@ -122,7 +122,10 @@
         </form>
 
         <div class="rich-text">
-          {{ section.settings.rich_text_2 }}
+          <div>{{ section.settings.rich_text_2 }}</div>
+            <button type="submit" class="newsletter-btn button btn-1">
+              <span>{{ section.settings.newsletter_btn_text | default: 'Subscribe' }}</span>
+            </button>
         </div>
       </div>
 
