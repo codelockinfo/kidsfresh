@@ -308,6 +308,7 @@
       ],
       "name": "Dynamic FAQ Tabs",
       "settings": {
+        "tabs_bg_desktop": "shopify://shop_images/Group_309.png",
         "faq_bg_desktop": "shopify://shop_images/Group_311.png"
       }
     }
