@@ -42,43 +42,11 @@
     "custom_faq_pEW3cN": {
       "type": "custom-faq",
       "blocks": {
-        "faq_Pa7Yka": {
+        "faq_W6ERfd": {
           "type": "faq",
           "settings": {
             "parent_tab": "products",
-            "faq_question": "Is Kidfresh packaging made out of recycled materials?",
-            "faq_answer": "Absolutely. Kidfresh takes the greatest care to source our foods and packaging to offer the very best possible products to your family and community. We use sustainable, 100% recyclable packaging to reduce our carbon footprint and our boxes are made from 100% recycled cardboard."
-          }
-        },
-        "faq_3gpeNH": {
-          "type": "faq",
-          "settings": {
-            "parent_tab": "products",
-            "faq_question": "Is it safe to microwave Kidfresh meals in the plastic container (tray/bowl)?",
-            "faq_answer": ""
-          }
-        },
-        "faq_crcEE6": {
-          "type": "faq",
-          "settings": {
-            "parent_tab": "products",
-            "faq_question": "What is the recommended age for kids eating Kidfresh meals?",
-            "faq_answer": ""
-          }
-        },
-        "faq_Ncz6GK": {
-          "type": "faq",
-          "settings": {
-            "parent_tab": "products",
-            "faq_question": "What makes Kidfresh products special?",
-            "faq_answer": ""
-          }
-        },
-        "faq_4f9eMd": {
-          "type": "faq",
-          "settings": {
-            "parent_tab": "products",
-            "faq_question": "Are Kidfresh Products Gluten Free?",
+            "faq_question": "Do all of your products and meals contain vegetables?",
             "faq_answer": ""
           }
         },
@@ -90,12 +58,44 @@
             "faq_answer": ""
           }
         },
-        "faq_W6ERfd": {
+        "faq_4f9eMd": {
           "type": "faq",
           "settings": {
             "parent_tab": "products",
-            "faq_question": "Do all of your products and meals contain vegetables?",
+            "faq_question": "Are Kidfresh Products Gluten Free?",
             "faq_answer": ""
+          }
+        },
+        "faq_Ncz6GK": {
+          "type": "faq",
+          "settings": {
+            "parent_tab": "products",
+            "faq_question": "What makes Kidfresh products special?",
+            "faq_answer": ""
+          }
+        },
+        "faq_crcEE6": {
+          "type": "faq",
+          "settings": {
+            "parent_tab": "products",
+            "faq_question": "What is the recommended age for kids eating Kidfresh meals?",
+            "faq_answer": ""
+          }
+        },
+        "faq_3gpeNH": {
+          "type": "faq",
+          "settings": {
+            "parent_tab": "products",
+            "faq_question": "Is it safe to microwave Kidfresh meals in the plastic container (tray/bowl)?",
+            "faq_answer": ""
+          }
+        },
+        "faq_Pa7Yka": {
+          "type": "faq",
+          "settings": {
+            "parent_tab": "products",
+            "faq_question": "Is Kidfresh packaging made out of recycled materials?",
+            "faq_answer": "Absolutely. Kidfresh takes the greatest care to source our foods and packaging to offer the very best possible products to your family and community. We use sustainable, 100% recyclable packaging to reduce our carbon footprint and our boxes are made from 100% recycled cardboard."
           }
         },
         "faq_CxrmtV": {
@@ -200,13 +200,13 @@
         }
       },
       "block_order": [
-        "faq_Pa7Yka",
-        "faq_3gpeNH",
-        "faq_crcEE6",
-        "faq_Ncz6GK",
-        "faq_4f9eMd",
-        "faq_hG9hHt",
         "faq_W6ERfd",
+        "faq_hG9hHt",
+        "faq_4f9eMd",
+        "faq_Ncz6GK",
+        "faq_crcEE6",
+        "faq_3gpeNH",
+        "faq_Pa7Yka",
         "faq_CxrmtV",
         "faq_Crkk7z",
         "faq_ENqfcR",
