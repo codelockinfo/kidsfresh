@@ -189,8 +189,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 <style>
 
-/* MAIN TOP GREEN BG WRAPPER */
-.faq-full-wrapper {
+/* Only TABS Background Wrapper */
+.faq-tabs-wrapper {
   background-image: url({{ section.settings.tabs_bg_desktop | image_url }});
   background-size: cover;
   background-repeat: no-repeat;
@@ -199,12 +199,12 @@ document.addEventListener("DOMContentLoaded", () => {
 }
 
 @media(max-width:768px){
-  .faq-full-wrapper {
+  .faq-tabs-wrapper {
     background-image: url({{ section.settings.tabs_bg_mobile | image_url }});
   }
 }
 
-/* INNER CONTAINER */
+/* inner container */
 .faq-container {
   max-width: 1100px;
   margin: 0 auto;
@@ -251,7 +251,7 @@ document.addEventListener("DOMContentLoaded", () => {
   display: block;
 }
 
-/* FAQ ITEM BOX */
+/* FAQ BOX (NO BACKGROUND IMAGE) */
 .faq-item {
   background: #fff;
   border-radius: 10px;
@@ -269,7 +269,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 .faq-arrow {
   font-size: 22px;
-  transition: 0.3s ease;
+  transition: .3s ease;
 }
 
 .faq-item.open .faq-arrow {
@@ -286,15 +286,16 @@ document.addEventListener("DOMContentLoaded", () => {
   max-height: 500px;
   padding-top: 10px;
 }
+
 </style>
 
 
-<!-- FULL BACKGROUND WRAPPER -->
-<div class="faq-full-wrapper">
+<!-- TABS BACKGROUND WRAPPER -->
+<div class="faq-tabs-wrapper">
 
   <div class="faq-container">
 
-    <!-- FILTER BY + TABS -->
+    <!-- FILTER + TABS -->
     <div class="faq-tabs">
       <span class="filter-title">filter by:</span>
 
@@ -307,38 +308,43 @@ document.addEventListener("DOMContentLoaded", () => {
       {% endfor %}
     </div>
 
+  </div>
 
-    <!-- FAQ SECTIONS -->
-    {% for tab in section.blocks %}
-      {% if tab.type == 'tab' %}
+</div>
 
-        <div class="faq-section" id="section-{{ tab.settings.tab_id }}">
 
-          {% for faq in section.blocks %}
-            {% if faq.type == 'faq' and faq.settings.parent_tab == tab.settings.tab_id %}
+<!-- FAQ CONTENT BELOW GREEN BG -->
+<div class="faq-container">
 
-              <div class="faq-item">
+  {% for tab in section.blocks %}
+    {% if tab.type == 'tab' %}
 
-                <div class="faq-item-title">
-                  <span>{{ faq.settings.faq_question }}</span>
-                  <span class="faq-arrow">⌄</span>
-                </div>
+      <div class="faq-section" id="section-{{ tab.settings.tab_id }}">
 
-                <div class="faq-item-content">
-                  <p>{{ faq.settings.faq_answer }}</p>
-                </div>
+        {% for faq in section.blocks %}
+          {% if faq.type == 'faq' and faq.settings.parent_tab == tab.settings.tab_id %}
 
+            <div class="faq-item">
+
+              <div class="faq-item-title">
+                <span>{{ faq.settings.faq_question }}</span>
+                <span class="faq-arrow">⌄</span>
               </div>
 
-            {% endif %}
-          {% endfor %}
+              <div class="faq-item-content">
+                <p>{{ faq.settings.faq_answer }}</p>
+              </div>
 
-        </div>
+            </div>
 
-      {% endif %}
-    {% endfor %}
+          {% endif %}
+        {% endfor %}
 
-  </div>
+      </div>
+
+    {% endif %}
+  {% endfor %}
+
 </div>
 
 
@@ -349,15 +355,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const tabs = document.querySelectorAll(".faq-tab");
   const sections = document.querySelectorAll(".faq-section");
 
-  /* DEFAULT FIRST TAB ACTIVE */
+  // Activate first tab by default
   if (tabs.length > 0) {
     tabs[0].classList.add("active");
     sections[0].classList.add("active");
   }
 
-  /* TAB SWITCHING */
+  // Tab switching
   tabs.forEach(tab => {
     tab.addEventListener("click", () => {
+
       const id = tab.dataset.tab;
 
       tabs.forEach(t => t.classList.remove("active"));
@@ -365,10 +372,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
       tab.classList.add("active");
       document.getElementById("section-" + id).classList.add("active");
+
     });
   });
 
-  /* ACCORDION */
+  // Accordion
   document.querySelectorAll(".faq-item").forEach(item => {
     item.addEventListener("click", () => {
       item.classList.toggle("open");
@@ -380,10 +388,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-
 {% schema %}
 {
   "name": "Dynamic FAQ Tabs Section",
+
   "settings": [
     {
       "type": "image_picker",
@@ -425,3 +433,4 @@ document.addEventListener("DOMContentLoaded", () => {
   ]
 }
 {% endschema %}
+
