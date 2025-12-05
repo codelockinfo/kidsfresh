@@ -217,7 +217,7 @@
     <div class="food-love-features">
       {% for block in section.blocks %}
         {% if block.type == 'feature' %}
-          <div class="food-love-feature" style="background: {{ section.settings.feature_bg_color | default: '#F8F4EB' }};" {{ block.shopify_attributes }}>
+          <div class="food-love-feature" style="background: {{ section.settings.feature_bg_color | default: '#F1EAD9' }};" {{ block.shopify_attributes }}>
             {% if block.settings.icon != blank %}
               <div class="food-love-feature-icon">
                 <img src="{{ block.settings.icon | image_url }}" 
@@ -274,7 +274,7 @@
       "type": "color",
       "id": "bg_color",
       "label": "Background Color",
-      "default": "#F8F4EB"
+      "default": "#F1EAD9"
     },
     {
       "type": "color",
@@ -292,7 +292,7 @@
       "type": "color",
       "id": "feature_bg_color",
       "label": "Feature Block Background",
-      "default": "#F8F4EB"
+      "default": "#F1EAD9"
     },
     {
       "type": "color",
