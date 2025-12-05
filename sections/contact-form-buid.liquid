@@ -250,14 +250,14 @@
     >
   {% endif %}
 
-  <div class="contact-location-wrapper">
-    {% if st.title != blank %}
-      <h2 class="contact-location-title">{{ st.title }}</h2>
-    {% endif %}
+  {% if st.title != blank %}
+    <h2 class="contact-location-title">{{ st.title }}</h2>
+  {% endif %}
 
-    {% if st.subtitle != blank %}
-      <p class="contact-location-subtitle">{{ st.subtitle }}</p>
-    {% endif %}
+  {% if st.subtitle != blank %}
+    <p class="contact-location-subtitle">{{ st.subtitle }}</p>
+  {% endif %}
+  <div class="contact-location-wrapper">
 
     <div class="contact-location-form">
       {%- form 'contact', class: 'contact-form' -%}
