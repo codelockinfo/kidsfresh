@@ -127,6 +127,13 @@
     "custom_faq_KAk3Af": {
       "type": "custom-faq",
       "blocks": {
+        "tab_jHneDj": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "nutrition",
+            "tab_id": "products"
+          }
+        },
         "tab_YM6AV7": {
           "type": "tab",
           "settings": {
@@ -136,6 +143,7 @@
         }
       },
       "block_order": [
+        "tab_jHneDj",
         "tab_YM6AV7"
       ],
       "name": "Dynamic FAQ Tabs",
