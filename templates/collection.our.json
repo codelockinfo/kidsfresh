@@ -63,18 +63,26 @@
     },
     "collection_product_block_nhVB7J": {
       "type": "collection-product-block",
+      "blocks": {
+        "product_qjgpda": {
+          "type": "product",
+          "settings": {
+            "block_width": 33,
+            "product": "",
+            "show_new_badge": false,
+            "show_second_image": true,
+            "custom_description": "Product description",
+            "icon_link": "",
+            "icon_open_new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "product_qjgpda"
+      ],
       "name": "Custom Collection Grid",
       "settings": {
-        "heading": "find us near you:",
-        "search_placeholder": "Search",
-        "selection_heading": "Select Specific Products",
-        "location_placeholder": "Denver, CO 80202",
-        "find_button_label": "Find",
-        "buy_online_label": "Buy Online",
-        "buy_online_link": "",
-        "filter_placeholder": "Filter Products",
-        "collection": "",
-        "products_to_show": 8,
+        "section_background": "#f5f5dc",
         "wave_image": "shopify://shop_images/Group_5_4.png"
       }
     }
