@@ -39,6 +39,19 @@
       "name": "Text with Image Section",
       "settings": {}
     },
+    "custom_faq_background_HNEFmG": {
+      "type": "custom-faq-background",
+      "name": "Help Support Section",
+      "settings": {
+        "bg_desktop": "shopify://shop_images/Group_313.png",
+        "heading": "we’re here to help you win more meals.",
+        "subheading": "have a question, comment or concern? check out our FAQs or just send us a message.",
+        "btn1_label": "FAQs",
+        "btn1_link": "",
+        "btn2_label": "message us",
+        "btn2_link": ""
+      }
+    },
     "custom_faq_pEW3cN": {
       "type": "custom-faq",
       "blocks": {
@@ -232,6 +245,7 @@
   "order": [
     "main",
     "slideshow_cAi8Jj",
+    "custom_faq_background_HNEFmG",
     "custom_faq_pEW3cN"
   ]
 }
