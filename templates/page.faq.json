@@ -118,6 +118,7 @@
         "product_TyCKJQ",
         "promo_block_bPMrgJ"
       ],
+      "disabled": true,
       "name": "Custom Collection Grid",
       "settings": {
         "section_background": "#f5f5dc"
