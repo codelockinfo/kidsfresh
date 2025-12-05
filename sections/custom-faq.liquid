@@ -613,6 +613,101 @@ document.addEventListener("DOMContentLoaded", () => {
 
 .faq-item-content p { margin: 0; }
 
+
+@media(max-width:768px){
+    .tabs-grid {
+        grid-template-columns: repeat(2, auto);
+    }
+  .faq-tabs {
+    display: block;
+    text-align: center;
+  }
+  .faq-tab { font-size: 33px !important; }
+  .filter-title { font-size: 33px; }
+  .faq-custom-container {
+    padding: 0 30px;
+  }
+  .faq-item-title {
+    font-size: 18px !important;
+    line-height: 34px !important;
+  }
+  .faq-item.open .faq-item-content {
+    font-size: 16px !important;
+    line-height: 22px !important;
+}
+}
+@media(min-width:769px) and (max-width:991px){
+    .faq-tab {
+        font-size: 29px !important;
+    }
+    .faq-custom-container {
+        padding: 0 73px;
+    }
+    .faq-tabs {  
+     gap: 19px !important;
+    }
+    .tabs-grid {
+      gap: 24px;
+    }
+    .filter-title { 
+      font-size: 36px;
+    }
+    .faq-item-title {
+        font-size: 26px !important;
+        line-height: 41px !important;
+    }
+    .faq-item.open .faq-item-content {
+        font-size: 18px !important;
+        line-height: 26px !important;
+    }
+}
+
+@media(min-width:992px) and (max-width:1024px){
+    .faq-tab {
+        font-size: 37px !important;
+    }
+    .faq-custom-container {
+        padding: 0 100px !important;
+    }
+    .faq-tabs {  
+     gap: 49px !important;
+    }
+    .tabs-grid {
+      gap: 30px !important;
+    }
+    .faq-item-title {
+      font-size: 30px !important;
+      line-height: 40px !important;
+    }
+    .faq-item.open .faq-item-content {
+        font-size: 22px !important;
+    } 
+}
+
+@media(min-width:1025px) and (max-width:1300px){
+    .faq-tab {
+        font-size: 32px !important;
+    }
+    .faq-custom-container {
+      padding: 0 130px !important;
+    }
+    .faq-tabs {  
+     gap: 30px !important;
+    }
+    .tabs-grid {
+      gap: 40px !important;
+    }
+    .faq-item-title {
+      font-size: 34px !important;
+      line-height: 40px !important;
+    }
+}
+@media(min-width:1301px) and (max-width:1483px){
+    .faq-custom-container {
+      padding: 0 120px !important;
+    }
+}
+
 </style>
 
 
