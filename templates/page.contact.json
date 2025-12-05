@@ -23,6 +23,7 @@
         "text_image_block_C9tmUb": {
           "type": "text_image_block",
           "settings": {
+            "desktop_image": "shopify://shop_images/Frame.png",
             "heading": "message center",
             "subheading": "",
             "button_label": "learn more",
