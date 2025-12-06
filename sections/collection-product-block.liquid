@@ -2535,7 +2535,7 @@ margin:0px;}
               {% endif %}
               <div class="promo-content veggie-buttons">
                 {% if block.settings.heading != blank %}
-                  <h2 class="promo-heading" style="color: {{ block.settings.heading_color | default: '#2C5F2D' }};">{{ block.settings.heading }}</h2>
+                  <div class="promo-heading" style="color: {{ block.settings.heading_color | default: '#2C5F2D' }};">{{ block.settings.heading }}</div>
                 {% endif %}
                 {% if block.settings.button_text != blank and block.settings.button_link != blank %}
                   <a href="{{ block.settings.button_link }}" class="promo-button button button--primary">
