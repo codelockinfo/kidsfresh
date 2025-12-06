@@ -133,6 +133,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (colInfo) {
       localStorage.setItem("last_collection_title", colInfo.title);
       localStorage.setItem("last_collection_url", colInfo.url);
+      console.log(colInfo.title, "colInfo.title");
     }
   }
 
@@ -140,7 +141,7 @@ document.addEventListener("DOMContentLoaded", function() {
   if (isProductUrl(path)) {
     // Try to read collection directly from URL first
     var activeCollection = getCollectionInfoFromUrl(path);
-
+console.log("sfsf");
     var titleToUse = null;
     var urlToUse = null;
 
