@@ -85,7 +85,7 @@
     color: {{ section.settings.text_color }};
     text-align: {{ section.settings.text_align }};
 ">
-  <div class="container">
+  <div class="policy_container">
   <div>
       <div class="center_part">
         {% for block in section.blocks %}
@@ -111,5 +111,8 @@
   </div>
 </section>
 <style>
-    
+    .policy_container{
+        max-width: 1900px;
+        padding: 0px 300px;
+    }
 </style>
