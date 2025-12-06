@@ -1,56 +1,27 @@
 {% comment %}
-  Breadcrumbs Section with Color Scheme Support
+  Breadcrumbs Section with LocalStorage Collection Tracking
 {% endcomment %}
 
-<section class="kf-breadcrumbs-wrapper color-{{ section.settings.color_scheme }}">
+<section id="kf-breadcrumbs" class="kf-breadcrumbs-wrapper color-{{ section.settings.color_scheme }}">
   <nav class="kf-breadcrumbs" aria-label="Breadcrumb">
-    <ul>
+    <ul id="breadcrumb-list">
 
-      <!-- Home -->
-      <li>
-        <a href="{{ routes.root_url }}">Home</a>
-      </li>
+      <li><a href="{{ routes.root_url }}">Home</a></li>
 
-      <!-- Collection Page -->
-      {% if collection and template contains 'collection' %}
-        <li>{{ collection.title }}</li>
+      {%- comment -%}
+        Default Liquid Breadcrumb (used only if localStorage has nothing)
+      {%- endcomment -%}
+
+      {% if template contains 'collection' %}
+        <li class="liquid-collection">{{ collection.title }}</li>
       {% endif %}
 
-      <!-- Blog Page -->
-      {% if blog and template contains 'blog' %}
-        <li>{{ blog.title }}</li>
-      {% endif %}
-
-      <!-- Article Page -->
-      {% if article %}
-        <li>
-          <a href="{{ blog.url }}">{{ blog.title }}</a>
-        </li>
-        <li>{{ article.title }}</li>
-      {% endif %}
-
-      <!-- Product Page -->
       {% if product %}
-
-        {%- assign product_collection = collection -%}
-
-        {%- if product_collection == nil and product.collections.size > 0 -%}
-            {%- assign product_collection = product.collections.first -%}
-        {%- endif -%}
-
-        {% if product_collection %}
-          <li>
-            <a href="{{ product_collection.url }}">{{ product_collection.title }}</a>
-          </li>
-        {% endif %}
-
-        <li>{{ product.title }}</li>
-
+        <li class="liquid-product">{{ product.title }}</li>
       {% endif %}
 
-      <!-- Regular Page -->
       {% if page %}
-        <li>{{ page.title }}</li>
+        <li class="liquid-page">{{ page.title }}</li>
       {% endif %}
 
     </ul>
@@ -74,40 +45,70 @@
   font-weight: 400;
   font-size: 22px;
   line-height: 100%;
-  letter-spacing: -2%;
   color: #39302D;
   flex-wrap: wrap;
-}
-
-.kf-breadcrumbs li {
-  color: rgba(var(--color-foreground), 1);
 }
 
 .kf-breadcrumbs li::after {
   content: ">";
   margin-left: 6px;
-  color: rgba(var(--color-foreground), 0.7);
+  color: #777;
 }
 
 .kf-breadcrumbs li:last-child::after {
   content: "";
 }
 
-.kf-breadcrumbs a {
-  text-decoration: none;
-  color: rgba(var(--color-foreground), 1);
-}
-
 .kf-breadcrumbs li:last-child {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 @media screen and (max-width: 768px) {
   .kf-breadcrumbs-wrapper {
-    padding: 38px 30px 0px 30px;
+    padding: 38px 30px 0;
   }
 }
 </style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  // -----------------------------
+  // 1️⃣ SAVE COLLECTION WHEN ON COLLECTION PAGE
+  // -----------------------------
+  {% if collection %}
+    localStorage.setItem("last_collection_title", "{{ collection.title | escape }}");
+    localStorage.setItem("last_collection_url", "{{ collection.url }}");
+  {% endif %}
+
+  // -----------------------------
+  // 2️⃣ USE SAVED COLLECTION ON PRODUCT PAGE
+  // -----------------------------
+  {% if product %}
+    const savedTitle = localStorage.getItem("last_collection_title");
+    const savedURL = localStorage.getItem("last_collection_url");
+
+    if (savedTitle && savedURL) {
+
+      // Remove default Liquid breadcrumb for collection
+      const liquidCollection = document.querySelector(".liquid-collection");
+      if (liquidCollection) liquidCollection.remove();
+
+      // Insert Saved Collection Before Product Name
+      const li = document.createElement("li");
+      li.innerHTML = `<a href="${savedURL}">${savedTitle}</a>`;
+
+      const breadcrumbList = document.getElementById("breadcrumb-list");
+      const productItem = document.querySelector(".liquid-product");
+
+      if (breadcrumbList && productItem) {
+        breadcrumbList.insertBefore(li, productItem);
+      }
+    }
+  {% endif %}
+
+});
+</script>
 
 {% schema %}
 {
