@@ -116,7 +116,7 @@
         "hide_variants": true,
         "enable_video_looping": false,
         "padding_top": 36,
-        "padding_bottom": 12,
+        "padding_bottom": 100,
         "button_label_1": "markets near me",
         "button_url_1": "shopify://pages/find-us",
         "button_label_2": "order online",
@@ -253,7 +253,7 @@
         "product_kgWdXT"
       ],
       "custom_css": [
-        ".veggie-hover-section .container {padding: 0 11px; padding-bottom: 100px!important; }"
+        ".veggie-hover-section .container {padding: 0 11px; padding-bottom: 100px !important;}"
       ],
       "name": "Veggie Hover Products",
       "settings": {
