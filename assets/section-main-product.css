@@ -54,6 +54,7 @@ text-align:justify;
 
 /* --- ACTIVE (Selected) state --- */
 .product-form__input--pill input[type="radio"]:checked + label {
+    font-family: var(--font-family);
   background: #1E4E3D  !important;      
   color: #fff  !important;
 font-weight: 700;
