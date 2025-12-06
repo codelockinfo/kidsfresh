@@ -291,7 +291,13 @@ product-info .pdp-buttons {
   
 @media screen and (max-width: 768px) {
   
+.product-form__input--pill input[type=radio]:checked+label{
+  font-size:18px;
+}
 
+.product-form__input--pill input[type=radio]+label{
+  font-size:18px;
+}
 product-info {
   padding : 34px 30px !important;
 }
