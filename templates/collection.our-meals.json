@@ -1,0 +1,78 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "scheme-1"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "disabled": true,
+      "settings": {
+        "products_per_page": 16,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "slideshow_FHmD67": {
+      "type": "slideshow",
+      "blocks": {
+        "text_image_block_krUw8J": {
+          "type": "text_image_block",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Group_278_74cb09bb-0408-46eb-a66f-afa0194eda93.png",
+            "mobile_image": "shopify://shop_images/Group_279_828ae318-0a7c-4989-ba0f-d891cd704934.png",
+            "heading": "a better kid's menu",
+            "subheading": "helping you win meals, one bite at a time.",
+            "button_label": "learn more",
+            "button_link": "",
+            "content_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "text_image_block_krUw8J"
+      ],
+      "name": "Text with Image Section",
+      "settings": {}
+    },
+    "collection_product_block_nhVB7J": {
+      "type": "collection-product-block",
+      "name": "Custom Collection Grid",
+      "settings": {
+        "wave_image": "shopify://shop_images/Group_5_4.png"
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid",
+    "slideshow_FHmD67",
+    "collection_product_block_nhVB7J"
+  ]
+}
