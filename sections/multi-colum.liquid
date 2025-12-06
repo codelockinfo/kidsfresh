@@ -1,0 +1,532 @@
+{% comment %}
+  Custom Contact Multi-Column Section for Shopify Dawn Theme
+  File: sections/contact-multicolumn.liquid
+{% endcomment %}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .contact-multicolumn-{{ section.id }} {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .contact-multicolumn-{{ section.id }} .background-image-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  .contact-multicolumn-{{ section.id }} .background-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .contact-multicolumn-{{ section.id }} .decorative-element {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .contact-multicolumn-{{ section.id }} .decorative-element img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .contact-multicolumn-{{ section.id }} .decorative-top-left {
+    top: 0;
+    left: 0;
+    max-width: 200px;
+  }
+
+  .contact-multicolumn-{{ section.id }} .decorative-bottom-right {
+    bottom: 0;
+    right: 0;
+    max-width: 200px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .contact-multicolumn-{{ section.id }} .decorative-top-left {
+      max-width: 300px;
+    }
+
+    .contact-multicolumn-{{ section.id }} .decorative-bottom-right {
+      max-width: 300px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="contact-multicolumn-{{ section.id }} color-{{ section.settings.color_scheme }} section-{{ section.id }}-padding">
+  {%- if section.settings.background_image_desktop != blank or section.settings.background_image_mobile != blank -%}
+    <div class="background-image-wrapper">
+      {%- if section.settings.background_image_mobile != blank -%}
+        <img 
+          src="{{ section.settings.background_image_mobile | image_url: width: 750 }}"
+          alt="Background"
+          class="small-hide medium-up-hide"
+          loading="lazy"
+        >
+      {%- endif -%}
+      {%- if section.settings.background_image_desktop != blank -%}
+        <img 
+          src="{{ section.settings.background_image_desktop | image_url: width: 1920 }}"
+          srcset="{{ section.settings.background_image_desktop | image_url: width: 750 }} 750w,
+                  {{ section.settings.background_image_desktop | image_url: width: 1100 }} 1100w,
+                  {{ section.settings.background_image_desktop | image_url: width: 1500 }} 1500w,
+                  {{ section.settings.background_image_desktop | image_url: width: 1920 }} 1920w"
+          alt="Background"
+          class="small-hide"
+          loading="lazy"
+        >
+      {%- endif -%}
+    </div>
+  {%- endif -%}
+
+  {%- if section.settings.decorative_top_left != blank -%}
+    <div class="decorative-element decorative-top-left">
+      <img 
+        src="{{ section.settings.decorative_top_left | image_url: width: 300 }}"
+        alt="Decorative element"
+        loading="lazy"
+      >
+    </div>
+  {%- endif -%}
+
+  {%- if section.settings.decorative_bottom_right != blank -%}
+    <div class="decorative-element decorative-bottom-right">
+      <img 
+        src="{{ section.settings.decorative_bottom_right | image_url: width: 300 }}"
+        alt="Decorative element"
+        loading="lazy"
+      >
+    </div>
+  {%- endif -%}
+
+  <div class="page-width" style="position: relative; z-index: 2;">
+    {%- if section.settings.title != blank or section.settings.description != blank -%}
+      <div class="contact-header" style="text-align: center; margin-bottom: 60px;">
+        {%- if section.settings.title != blank -%}
+          <h2 class="contact-main-title" style="font-size: {{ section.settings.title_size }}px; font-weight: {{ section.settings.title_weight }}; color: {{ section.settings.title_color }}; margin-bottom: 15px; line-height: 1.2;">
+            {{ section.settings.title }}
+          </h2>
+        {%- endif -%}
+        {%- if section.settings.description != blank -%}
+          <div class="contact-description" style="font-size: {{ section.settings.description_size }}px; color: {{ section.settings.description_color }}; max-width: 800px; margin: 0 auto;">
+            {{ section.settings.description }}
+          </div>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    <div class="contact-columns-wrapper" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto;">
+      {%- for block in section.blocks -%}
+        <div class="contact-column" {{ block.shopify_attributes }} style="background-color: {{ block.settings.background_color }}; padding: 20px 30px; border-radius: {{ block.settings.border_radius }}px; text-align: {{ block.settings.text_alignment }};">
+          {%- if block.settings.column_title != blank -%}
+            <h3 class="contact-column-title" style="font-size: {{ block.settings.column_title_size }}px; font-weight: {{ block.settings.column_title_weight }}; color: {{ block.settings.text_color }}; margin-bottom: 25px; text-transform: lowercase;">
+              {{ block.settings.column_title }}
+            </h3>
+          {%- endif -%}
+
+          <div class="contact-items" style="display: flex; flex-direction: column; gap: 20px;">
+            {%- if block.settings.icon_1 != blank or block.settings.text_1 != blank -%}
+              <div class="contact-item" style="display: flex; align-items: center; gap: 15px;">
+                {%- if block.settings.icon_1 != blank -%}
+                  <div class="contact-icon" style="flex-shrink: 0; width: {{ block.settings.icon_size }}px; height: {{ block.settings.icon_size }}px; background-color: {{ block.settings.icon_bg_color }}; border-radius: 50%; display: flex; align-items: center; justify-content: center; padding: 10px;">
+                    <img 
+                      src="{{ block.settings.icon_1 | image_url: width: 100 }}"
+                      alt="Icon"
+                      style="max-width: 100%; height: auto;"
+                      loading="lazy"
+                    >
+                  </div>
+                {%- endif -%}
+                {%- if block.settings.text_1 != blank -%}
+                  <div class="contact-text" style="font-size: {{ block.settings.text_size }}px; font-weight: {{ block.settings.text_weight }}; color: {{ block.settings.text_color }};">
+                    {{ block.settings.text_1 }}
+                  </div>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+
+            {%- if block.settings.icon_2 != blank or block.settings.text_2 != blank -%}
+              <div class="contact-item" style="display: flex; align-items: center; gap: 15px;">
+                {%- if block.settings.icon_2 != blank -%}
+                  <div class="contact-icon" style="flex-shrink: 0; width: {{ block.settings.icon_size }}px; height: {{ block.settings.icon_size }}px; background-color: {{ block.settings.icon_bg_color }}; border-radius: 50%; display: flex; align-items: center; justify-content: center; padding: 10px;">
+                    <img 
+                      src="{{ block.settings.icon_2 | image_url: width: 100 }}"
+                      alt="Icon"
+                      style="max-width: 100%; height: auto;"
+                      loading="lazy"
+                    >
+                  </div>
+                {%- endif -%}
+                {%- if block.settings.text_2 != blank -%}
+                  <div class="contact-text" style="font-size: {{ block.settings.text_size }}px; font-weight: {{ block.settings.text_weight }}; color: {{ block.settings.text_color }};">
+                    {{ block.settings.text_2 }}
+                  </div>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+<style>
+  @media screen and (max-width: 749px) {
+    .contact-header {
+      margin-bottom: 40px !important;
+    }
+
+    .contact-main-title {
+      font-size: {{ section.settings.title_size | times: 0.6 | round: 0 }}px !important;
+    }
+
+    .contact-description {
+      font-size: {{ section.settings.description_size | times: 0.8 | round: 0 }}px !important;
+    }
+
+    .contact-columns-wrapper {
+      grid-template-columns: 1fr !important;
+      gap: 20px !important;
+    }
+
+    .contact-column {
+      padding: 30px 20px !important;
+    }
+
+    .contact-column-title {
+      font-size: {{ section.blocks.first.settings.column_title_size | times: 0.8 | round: 0 }}px !important;
+    }
+
+    .contact-icon {
+      width: {{ section.blocks.first.settings.icon_size | times: 0.8 | round: 0 }}px !important;
+      height: {{ section.blocks.first.settings.icon_size | times: 0.8 | round: 0 }}px !important;
+    }
+
+    .contact-text {
+      font-size: {{ section.blocks.first.settings.text_size | times: 0.9 | round: 0 }}px !important;
+    }
+
+    .decorative-top-left,
+    .decorative-bottom-right {
+      max-width: 150px !important;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Contact Multi-Column",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Background Images"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image_desktop",
+      "label": "Background Image (Desktop)"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image_mobile",
+      "label": "Background Image (Mobile)"
+    },
+    {
+      "type": "header",
+      "content": "Decorative Elements"
+    },
+    {
+      "type": "image_picker",
+      "id": "decorative_top_left",
+      "label": "Top Left Decorative Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "decorative_bottom_right",
+      "label": "Bottom Right Decorative Image"
+    },
+    {
+      "type": "header",
+      "content": "Section Header"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Main Heading",
+      "default": "we're here for you"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "min": 20,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Heading Size",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "title_weight",
+      "min": 400,
+      "max": 900,
+      "step": 100,
+      "label": "Heading Weight",
+      "default": 700
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Heading Color",
+      "default": "#000000"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Got a picky eater or a purchase order? Either way, we've got you covered."
+    },
+    {
+      "type": "range",
+      "id": "description_size",
+      "min": 12,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "label": "Description Size",
+      "default": 18
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 60
+    }
+  ],
+  "blocks": [
+    {
+      "type": "column",
+      "name": "Contact Column",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Column Styling"
+        },
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Background Color",
+          "default": "#9bd241"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text Color",
+          "default": "#0f4735"
+        },
+        {
+          "type": "range",
+          "id": "border_radius",
+          "min": 0,
+          "max": 50,
+          "step": 5,
+          "unit": "px",
+          "label": "Border Radius",
+          "default": 15
+        },
+        {
+          "type": "select",
+          "id": "text_alignment",
+          "label": "Text Alignment",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            }
+          ],
+          "default": "left"
+        },
+        {
+          "type": "header",
+          "content": "Column Title"
+        },
+        {
+          "type": "text",
+          "id": "column_title",
+          "label": "Column Heading",
+          "default": "consumers:"
+        },
+        {
+          "type": "range",
+          "id": "column_title_size",
+          "min": 16,
+          "max": 60,
+          "step": 2,
+          "unit": "px",
+          "label": "Title Size",
+          "default": 36
+        },
+        {
+          "type": "range",
+          "id": "column_title_weight",
+          "min": 400,
+          "max": 900,
+          "step": 100,
+          "label": "Title Weight",
+          "default": 700
+        },
+        {
+          "type": "header",
+          "content": "Icon Settings"
+        },
+        {
+          "type": "range",
+          "id": "icon_size",
+          "min": 30,
+          "max": 80,
+          "step": 5,
+          "unit": "px",
+          "label": "Icon Circle Size",
+          "default": 50
+        },
+        {
+          "type": "color",
+          "id": "icon_bg_color",
+          "label": "Icon Background Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "header",
+          "content": "First Contact Item"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_1",
+          "label": "Icon 1"
+        },
+        {
+          "type": "text",
+          "id": "text_1",
+          "label": "Text 1",
+          "default": "123-456-7890"
+        },
+        {
+          "type": "header",
+          "content": "Second Contact Item"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_2",
+          "label": "Icon 2"
+        },
+        {
+          "type": "text",
+          "id": "text_2",
+          "label": "Text 2",
+          "default": "info@kidfresh.com"
+        },
+        {
+          "type": "header",
+          "content": "Text Styling"
+        },
+        {
+          "type": "range",
+          "id": "text_size",
+          "min": 12,
+          "max": 32,
+          "step": 1,
+          "unit": "px",
+          "label": "Text Size",
+          "default": 18
+        },
+        {
+          "type": "range",
+          "id": "text_weight",
+          "min": 400,
+          "max": 900,
+          "step": 100,
+          "label": "Text Weight",
+          "default": 600
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Contact Multi-Column",
+      "blocks": [
+        {
+          "type": "column",
+          "settings": {
+            "column_title": "consumers:",
+            "background_color": "#9bd241",
+            "text_color": "#0f4735"
+          }
+        },
+        {
+          "type": "column",
+          "settings": {
+            "column_title": "retailers:",
+            "background_color": "#f89821",
+            "text_color": "#63441d"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
