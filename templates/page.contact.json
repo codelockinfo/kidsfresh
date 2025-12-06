@@ -52,11 +52,74 @@
         "padding_top": 40,
         "padding_bottom": 60
       }
+    },
+    "multi_colum_zTrzGj": {
+      "type": "multi-colum",
+      "blocks": {
+        "column_PCyprm": {
+          "type": "column",
+          "settings": {
+            "background_color": "#9bd241",
+            "text_color": "#0f4735",
+            "border_radius": 15,
+            "text_alignment": "left",
+            "column_title": "consumers:",
+            "column_title_size": 36,
+            "column_title_weight": 700,
+            "icon_size": 50,
+            "icon_bg_color": "#ffffff",
+            "text_1": "123-456-7890",
+            "text_2": "info@kidfresh.com",
+            "text_size": 18,
+            "text_weight": 600
+          }
+        },
+        "column_anw8KY": {
+          "type": "column",
+          "settings": {
+            "background_color": "#f89821",
+            "text_color": "#63441d",
+            "border_radius": 15,
+            "text_alignment": "left",
+            "column_title": "retailers:",
+            "column_title_size": 36,
+            "column_title_weight": 700,
+            "icon_size": 50,
+            "icon_bg_color": "#ffffff",
+            "text_1": "123-456-7890",
+            "text_2": "info@kidfresh.com",
+            "text_size": 18,
+            "text_weight": 600
+          }
+        }
+      },
+      "block_order": [
+        "column_PCyprm",
+        "column_anw8KY"
+      ],
+      "name": "Contact Multi-Column",
+      "settings": {
+        "background_image_desktop": "shopify://shop_images/Rectangle_50.png",
+        "background_image_mobile": "shopify://shop_images/Rectangle_50.png",
+        "decorative_top_left": "shopify://shop_images/image_5.png",
+        "decorative_bottom_right": "shopify://shop_images/image_40_3573df78-fd71-4737-b139-34fc38e6c0ef.png",
+        "title": "we're here for you",
+        "title_size": 60,
+        "title_weight": 700,
+        "title_color": "#000000",
+        "description": "Got a picky eater or a purchase order? Either way, we've got you covered.",
+        "description_size": 18,
+        "description_color": "#000000",
+        "color_scheme": "",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
     }
   },
   "order": [
     "main",
     "slideshow_NApLtf",
-    "contact_form_buid_yEpXQ7"
+    "contact_form_buid_yEpXQ7",
+    "multi_colum_zTrzGj"
   ]
 }
