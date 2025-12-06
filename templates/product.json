@@ -9,6 +9,11 @@
  */
 {
   "sections": {
+    "breadcrumbs_section_ckJj9U": {
+      "type": "breadcrumbs-section",
+      "name": "Breadcrumbs Section",
+      "settings": {}
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -359,6 +364,7 @@
     }
   },
   "order": [
+    "breadcrumbs_section_ckJj9U",
     "main",
     "related-products",
     "custom_pdp_image_CH6Pci",
