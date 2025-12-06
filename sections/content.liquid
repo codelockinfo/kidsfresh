@@ -85,15 +85,15 @@
       <div class="text-block" style="margin-bottom: 40px;">
         
         {% if block.settings.heading != blank %}
-          <h2 style="font-size: {{ section.settings.heading_size }}px; margin-bottom: 10px;">
+          <divstyle="font-size: {{ section.settings.heading_size }}px; margin-bottom: 10px;">
             {{ block.settings.heading }}
-          </h2>
+          </div>
         {% endif %}
 
         {% if block.settings.paragraph != blank %}
-          <p style="font-size: {{ section.settings.paragraph_size }}px; line-height: 1.6;">
+          <div style="font-size: {{ section.settings.paragraph_size }}px; line-height: 1.6;">
             {{ block.settings.paragraph }}
-          </p>
+          </div>
         {% endif %}
 
       </div>
