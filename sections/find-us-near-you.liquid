@@ -398,14 +398,7 @@
               </div>
               <div class="product-info">
                 <h3 class="product-name">{{ product.title }}</h3>
-                <div class="product-badges">
-                  <span class="product-badge">1 Easy Meal</span>
-                  <span class="product-badge">Keep Frozen</span>
-                  {%- if product.metafields.custom.protein -%}
-                    <span class="product-badge">{{ product.metafields.custom.protein }}g Protein</span>
-                  {%- endif -%}
-                  <span class="product-badge">No Artificial Flavors</span>
-                </div>
+                
               </div>
             </a>
           </li>
@@ -420,12 +413,7 @@
             </div>
             <div class="product-info">
               <h3 class="product-name">Product {{ i }}</h3>
-              <div class="product-badges">
-                <span class="product-badge">1 Easy Meal</span>
-                <span class="product-badge">Keep Frozen</span>
-                <span class="product-badge">10g Protein</span>
-                <span class="product-badge">No Artificial Flavors</span>
-              </div>
+              
             </div>
           </li>
         {%- endfor -%}
