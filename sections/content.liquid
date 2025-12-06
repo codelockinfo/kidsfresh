@@ -85,7 +85,7 @@
       <div class="text-block" style="margin-bottom: 40px;">
         
         {% if block.settings.heading != blank %}
-          <divstyle="font-size: {{ section.settings.heading_size }}px; margin-bottom: 10px;">
+          <div class="policy-title" style="font-size: {{ section.settings.heading_size }}px; margin-bottom: 10px;">
             {{ block.settings.heading }}
           </div>
         {% endif %}
@@ -109,6 +109,9 @@
         padding: 0px 300px;
     }
     .custom-text-section {
-  padding: 40px 0px;
-}
+    padding: 40px 0px;
+    }
+    .policy-title{
+      font-size : #0F4735;  
+    }
 </style>
