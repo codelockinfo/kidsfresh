@@ -399,6 +399,7 @@
 
   .veggie-hover-section  .container {
     padding: 0 11px;
+    padding-bottom:{{ section.settings.padding_bottom }}!important;
   }
 
   .veggie-hover-section .section-heading {
@@ -2125,7 +2126,13 @@
     { "type":"text","id":"button_label_1","label":"Button 1 Label","default":"Shop Now" },
     { "type":"url","id":"button_url_1","label":"Button 1 Link" },
     { "type":"text","id":"button_label_2","label":"Button 2 Label" },
-    { "type":"url","id":"button_url_2","label":"Button 2 Link" }
+    { "type":"url","id":"button_url_2","label":"Button 2 Link" },
+
+    {
+      "type": "text",
+      "id": "padding_bottom",
+      "label": "Padding Bottom"
+    }
   ],
 
 
