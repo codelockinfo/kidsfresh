@@ -344,21 +344,22 @@
 <section class="find-us-section" id="find-us-{{ section.id }}">
   <div class="find-us-header">
     <h1>{{ section.settings.heading | default: "find us near you:" }}</h1>
-    
-    <div class="main-search-bar">
-      <form action="{{ routes.search_url }}" method="get" role="search">
-        <input
-          type="search"
-          name="q"
-          placeholder="{{ section.settings.search_placeholder | default: 'Search' }}"
-          value="{{ search.terms | escape }}"
-        >
-        <input type="hidden" name="options[prefix]" value="last">
-        <svg class="search-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M9 17A8 8 0 1 0 9 1a8 8 0 0 0 0 16z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="m19 19-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </form>
+    <div class="">
+      <div class="main-search-bar">
+        <form action="{{ routes.search_url }}" method="get" role="search">
+          <input
+            type="search"
+            name="q"
+            placeholder="{{ section.settings.search_placeholder | default: 'Search' }}"
+            value="{{ search.terms | escape }}"
+          >
+          <input type="hidden" name="options[prefix]" value="last">
+          <svg class="search-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 17A8 8 0 1 0 9 1a8 8 0 0 0 0 16z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="m19 19-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </form>
+      </div>
     </div>
   </div>
 
