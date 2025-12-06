@@ -86,7 +86,7 @@
     text-align: {{ section.settings.text_align }};
 ">
   <div class="container">
-    <div>
+    <div class="center_part">
         {% for block in section.blocks %}
       <div class="text-block" style="margin-bottom: 40px;">
         
@@ -108,3 +108,9 @@
     
   </div>
 </section>
+<style>
+    .center_part{
+        max-width: 300px;
+        margin: 0px auto;
+    }
+</style>
