@@ -36,7 +36,9 @@
         "text_image_block_C9tmUb"
       ],
       "name": "Text with Image Section",
-      "settings": {}
+      "settings": {
+        "bg_color": "#121212"
+      }
     },
     "contact_form_buid_yEpXQ7": {
       "type": "contact-form-buid",
