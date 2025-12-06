@@ -1,5 +1,12 @@
 
 /* my css */
+
+.custom-background-section{
+  position:relative;
+  background-size:cover;
+  background-repeat:no-repeat;
+  z-index;1;
+}
 .product__info-wrapper--extra-padding{
   padding: 0 0 0 72px !important;
 }
