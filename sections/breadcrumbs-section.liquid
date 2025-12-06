@@ -1,48 +1,65 @@
 {% comment %}
-  Breadcrumbs Section using URL + localStorage
-  - Home > Last Collection (from URL or localStorage) > Product
+  Breadcrumbs Section with Color Scheme Support
 {% endcomment %}
 
-<section id="kf-breadcrumbs" class="kf-breadcrumbs-wrapper color-{{ section.settings.color_scheme }}">
+<section class="kf-breadcrumbs-wrapper color-{{ section.settings.color_scheme }}">
   <nav class="kf-breadcrumbs" aria-label="Breadcrumb">
-    <ul id="breadcrumb-list">
-      <!-- Home is always first -->
-      <li class="bc-home">
+    <ul>
+
+      <!-- Home -->
+      <li>
         <a href="{{ routes.root_url }}">Home</a>
       </li>
 
-      {%- comment -%}
-        We will inject Collection via JS.
-        These Liquid items are fallback only.
-      {%- endcomment -%}
-
-      {% if template contains 'collection' %}
-        <li class="bc-collection-fallback">{{ collection.title }}</li>
+      <!-- Collection Page -->
+      {% if collection and template contains 'collection' %}
+        <li>{{ collection.title }}</li>
       {% endif %}
 
-      {% if product %}
-        <li class="bc-product">{{ product.title }}</li>
+      <!-- Blog Page -->
+      {% if blog and template contains 'blog' %}
+        <li>{{ blog.title }}</li>
       {% endif %}
 
-      {% if page %}
-        <li class="bc-page">{{ page.title }}</li>
-      {% endif %}
-
-      {% if blog and article == nil %}
-        <li class="bc-blog">{{ blog.title }}</li>
-      {% endif %}
-
+      <!-- Article Page -->
       {% if article %}
-        <li class="bc-blog-link"><a href="{{ blog.url }}">{{ blog.title }}</a></li>
-        <li class="bc-article">{{ article.title }}</li>
+        <li>
+          <a href="{{ blog.url }}">{{ blog.title }}</a>
+        </li>
+        <li>{{ article.title }}</li>
       {% endif %}
+
+      <!-- Product Page -->
+      {% if product %}
+
+        {%- assign product_collection = collection -%}
+
+        {%- if product_collection == nil and product.collections.size > 0 -%}
+            {%- assign product_collection = product.collections.first -%}
+        {%- endif -%}
+
+        {% if product_collection %}
+          <li>
+            <a href="{{ product_collection.url }}">{{ product_collection.title }}</a>
+          </li>
+        {% endif %}
+
+        <li>{{ product.title }}</li>
+
+      {% endif %}
+
+      <!-- Regular Page -->
+      {% if page %}
+        <li>{{ page.title }}</li>
+      {% endif %}
+
     </ul>
   </nav>
 </section>
 
 <style>
 .kf-breadcrumbs-wrapper {
-  padding: 38px 180px 0 180px;
+  padding: 38px 180px 0px 180px;
   max-width: 1990px;
   margin: 0 auto;
 }
@@ -57,14 +74,19 @@
   font-weight: 400;
   font-size: 22px;
   line-height: 100%;
+  letter-spacing: -2%;
   color: #39302D;
   flex-wrap: wrap;
+}
+
+.kf-breadcrumbs li {
+  color: rgba(var(--color-foreground), 1);
 }
 
 .kf-breadcrumbs li::after {
   content: ">";
   margin-left: 6px;
-  color: #777;
+  color: rgba(var(--color-foreground), 0.7);
 }
 
 .kf-breadcrumbs li:last-child::after {
@@ -73,113 +95,19 @@
 
 .kf-breadcrumbs a {
   text-decoration: none;
-  color: inherit;
+  color: rgba(var(--color-foreground), 1);
 }
 
 .kf-breadcrumbs li:last-child {
-  font-weight: 700;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 768px) {
   .kf-breadcrumbs-wrapper {
-    padding: 38px 30px 0 30px;
+    padding: 38px 30px 0px 30px;
   }
 }
 </style>
-
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  var path = window.location.pathname;
-  var breadcrumbList = document.getElementById("breadcrumb-list");
-  if (!breadcrumbList) return;
-
-  function isCollectionUrl(p) {
-    // /collections/handle   OR   /collections/handle/... (but NOT products)
-    return p.indexOf("/collections/") === 0 && p.indexOf("/products/") === -1;
-  }
-
-  function isProductUrl(p) {
-    // /products/handle  OR /collections/handle/products/handle
-    return p.indexOf("/products/") !== -1;
-  }
-
-  function getCollectionInfoFromUrl(p) {
-    // Handles:
-    // /collections/handle
-    // /collections/handle/products/product-handle
-    var parts = p.split("/").filter(Boolean); // remove empty segments
-
-    var index = parts.indexOf("collections");
-    if (index === -1 || !parts[index + 1]) return null;
-
-    var handle = parts[index + 1];
-    var url = "/collections/" + handle;
-
-    // Convert "men-shoes" → "Men Shoes"
-    var decoded = decodeURIComponent(handle);
-    var spaced = decoded.replace(/-/g, " ");
-    var titled = spaced.replace(/\b\w/g, function(c) { return c.toUpperCase(); });
-
-    return {
-      handle: handle,
-      url: url,
-      title: titled
-    };
-  }
-
-  // 1️⃣ If on a COLLECTION URL → store it in localStorage
-  if (isCollectionUrl(path)) {
-    var colInfo = getCollectionInfoFromUrl(path);
-    if (colInfo) {
-      localStorage.setItem("last_collection_title", colInfo.title);
-      localStorage.setItem("last_collection_url", colInfo.url);
-      console.log(colInfo.title, "colInfo.title");
-    }
-  }
-
-  // 2️⃣ If on a PRODUCT URL → show Home > Collection (from URL or storage) > Product
-  if (isProductUrl(path)) {
-    // Try to read collection directly from URL first
-    var activeCollection = getCollectionInfoFromUrl(path);
-console.log("sfsf");
-    var titleToUse = null;
-    var urlToUse = null;
-
-    if (activeCollection) {
-      // /collections/.../products/... pattern
-      titleToUse = activeCollection.title;
-      urlToUse = activeCollection.url;
-      // Also keep it as "last collection"
-      localStorage.setItem("last_collection_title", titleToUse);
-      localStorage.setItem("last_collection_url", urlToUse);
-    } else {
-      // Use last visited collection from localStorage
-      titleToUse = localStorage.getItem("last_collection_title");
-      urlToUse = localStorage.getItem("last_collection_url");
-    }
-
-    if (titleToUse && urlToUse) {
-      // Remove any existing Liquid collection breadcrumb to avoid duplicate
-      var fallbackCollection = breadcrumbList.querySelector(".bc-collection-fallback");
-      if (fallbackCollection) fallbackCollection.remove();
-
-      // Create new Collection <li>
-      var li = document.createElement("li");
-      li.className = "bc-collection-js";
-      li.innerHTML = '<a href="' + urlToUse + '">' + titleToUse + "</a>";
-
-      var productItem = breadcrumbList.querySelector(".bc-product");
-
-      // If product exists, insert before product; else just append
-      if (productItem) {
-        breadcrumbList.insertBefore(li, productItem);
-      } else {
-        breadcrumbList.appendChild(li);
-      }
-    }
-  }
-});
-</script>
 
 {% schema %}
 {
