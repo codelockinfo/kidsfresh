@@ -154,7 +154,8 @@ font-weight: 700;
 color:#ED7723;
 font-size: 46px;
 text-align: center;
-
+line-height: 100%;
+letter-spacing: -2%;
 }
 
 .highlighted-accordion__label {
