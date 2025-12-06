@@ -59,12 +59,12 @@
         "column_PCyprm": {
           "type": "column",
           "settings": {
-            "background_color": "#9bd241",
+            "background_color": "#95c940",
             "text_color": "#0f4735",
-            "border_radius": 15,
+            "border_radius": 10,
             "text_alignment": "left",
             "column_title": "consumers:",
-            "column_title_size": 36,
+            "column_title_size": 60,
             "column_title_weight": 700,
             "icon_size": 50,
             "icon_bg_color": "#ffffff",
@@ -72,7 +72,7 @@
             "text_1": "123-456-7890",
             "icon_2": "shopify://shop_images/Vector_3.png",
             "text_2": "info@kidfresh.com",
-            "text_size": 18,
+            "text_size": 29,
             "text_weight": 600
           }
         },
@@ -112,7 +112,7 @@
         "title_weight": 700,
         "title_color": "#39302d",
         "description": "Got a picky eater or a purchase order? Either way, we've got you covered.",
-        "description_size": 18,
+        "description_size": 29,
         "description_color": "#39302d",
         "color_scheme": "",
         "padding_top": 60,
