@@ -88,7 +88,9 @@
             "column_title_weight": 700,
             "icon_size": 50,
             "icon_bg_color": "#ffffff",
+            "icon_1": "shopify://shop_images/Group_1_03d1e690-3018-4b56-aee6-198c5d925b8b.png",
             "text_1": "123-456-7890",
+            "icon_2": "shopify://shop_images/Vector_4.png",
             "text_2": "info@kidfresh.com",
             "text_size": 18,
             "text_weight": 600
@@ -108,7 +110,7 @@
         "title": "we're here for you",
         "title_size": 60,
         "title_weight": 700,
-        "title_color": "#000000",
+        "title_color": "#39302d",
         "description": "Got a picky eater or a purchase order? Either way, we've got you covered.",
         "description_size": 18,
         "description_color": "#000000",
