@@ -116,7 +116,7 @@
         "hide_variants": true,
         "enable_video_looping": false,
         "padding_top": 36,
-        "padding_bottom": 12,
+        "padding_bottom": 100,
         "button_label_1": "markets near me",
         "button_url_1": "shopify://pages/find-us",
         "button_label_2": "order online",
@@ -213,8 +213,7 @@
         "button_label_1": "our meals",
         "button_url_1": "",
         "button_label_2": "markets near me",
-        "button_url_2": "",
-        "padding_bottom": 0
+        "button_url_2": ""
       }
     },
     "veggitable_animation_8qbHEt": {
@@ -262,8 +261,7 @@
         "button_label_1": "our meals",
         "button_url_1": "",
         "button_label_2": "markets near me",
-        "button_url_2": "",
-        "padding_bottom": 100
+        "button_url_2": ""
       }
     },
     "custom_liquid_HPB7Wb": {
