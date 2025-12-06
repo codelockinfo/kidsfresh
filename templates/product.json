@@ -73,7 +73,7 @@
           "type": "nutritionally_notable",
           "settings": {
             "heading": "Nutritionally Notable",
-            "icon": "check_mark",
+            "icon": "none",
             "default_open": true,
             "content": "",
             "metafield_1": "custom.protein",
