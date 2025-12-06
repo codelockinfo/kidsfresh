@@ -1,0 +1,103 @@
+{% comment %}
+  Breadcrumbs Section
+  Can be added anywhere through Customizer.
+{% endcomment %}
+
+<section class="kf-breadcrumbs-wrapper">
+  <nav class="kf-breadcrumbs" aria-label="Breadcrumb">
+    <ul>
+
+      <!-- Home -->
+      <li>
+        <a href="{{ routes.root_url }}">Home</a>
+      </li>
+
+      <!-- Collection Page -->
+      {% if collection and template contains 'collection' %}
+        <li>{{ collection.title }}</li>
+      {% endif %}
+
+      <!-- Blog Page -->
+      {% if blog and template contains 'blog' %}
+        <li>{{ blog.title }}</li>
+      {% endif %}
+
+      <!-- Article Page -->
+      {% if article %}
+        <li>
+          <a href="{{ blog.url }}">{{ blog.title }}</a>
+        </li>
+        <li>{{ article.title }}</li>
+      {% endif %}
+
+      <!-- Product Page -->
+      {% if product %}
+        {% if collection %}
+          <li>
+            <a href="{{ collection.url }}">{{ collection.title }}</a>
+          </li>
+        {% endif %}
+        <li>{{ product.title }}</li>
+      {% endif %}
+
+      <!-- Regular Page -->
+      {% if page %}
+        <li>{{ page.title }}</li>
+      {% endif %}
+
+    </ul>
+  </nav>
+</section>
+
+<style>
+.kf-breadcrumbs-wrapper {
+  padding: 20px 0;
+}
+
+.kf-breadcrumbs ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 6px;
+  font-size: 16px;
+  flex-wrap: wrap;
+}
+
+.kf-breadcrumbs li {
+  color: #333;
+}
+
+.kf-breadcrumbs li::after {
+  content: ">";
+  margin-left: 6px;
+  color: #555;
+}
+
+.kf-breadcrumbs li:last-child::after {
+  content: "";
+}
+
+.kf-breadcrumbs a {
+  text-decoration: none;
+  color: #333;
+}
+
+.kf-breadcrumbs li:last-child {
+  font-weight: bold;
+  color: #000;
+}
+</style>
+
+{% schema %}
+{
+  "name": "Breadcrumbs",
+  "tag": "section",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Breadcrumbs Section"
+    }
+  ]
+}
+{% endschema %}
