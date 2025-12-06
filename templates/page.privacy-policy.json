@@ -115,8 +115,8 @@
       "settings": {
         "bg_color": "#f1ead9",
         "text_color": "#333333",
-        "heading_size": 24,
-        "paragraph_size": 16,
+        "heading_size": 42,
+        "paragraph_size": 23,
         "text_align": "left"
       }
     }
