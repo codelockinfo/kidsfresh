@@ -12,7 +12,9 @@
     "breadcrumbs_section_ckJj9U": {
       "type": "breadcrumbs-section",
       "name": "Breadcrumbs Section",
-      "settings": {}
+      "settings": {
+        "color_scheme": "scheme-b4ff7ee0-6e3d-4182-801f-e84315f1beae"
+      }
     },
     "main": {
       "type": "main-product",
