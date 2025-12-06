@@ -51,6 +51,10 @@ text-align:justify;
   transition: 0.25s ease;
 }
 
+.product-form__input--pill input[type=radio]+label{
+  border:none !important;
+}
+
 /* Remove divider from last label */
 .product-form__input--pill label:last-of-type {
   border-right: none !important;
