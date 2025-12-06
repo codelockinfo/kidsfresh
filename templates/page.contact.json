@@ -24,6 +24,7 @@
           "type": "text_image_block",
           "settings": {
             "desktop_image": "shopify://shop_images/Frame.png",
+            "mobile_image": "shopify://shop_images/Group_7.png",
             "heading": "message center",
             "subheading": "",
             "button_label": "learn more",
