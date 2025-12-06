@@ -54,9 +54,13 @@ text-align:justify;
 
 /* --- ACTIVE (Selected) state --- */
 .product-form__input--pill input[type="radio"]:checked + label {
-  background: #1E4E3D  !important;       /* Green */
-  color: #fff  !important;               /* White text */
-  font-weight: 600  !important;
+  background: #1E4E3D  !important;      
+  color: #fff  !important;
+font-weight: 700;
+font-size: 27px;
+line-height: 100%;
+letter-spacing: -2%;
+
 }
 
 /* --- Hover effect --- */
