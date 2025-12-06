@@ -91,7 +91,7 @@
         {% endif %}
 
         {% if block.settings.paragraph != blank %}
-          <div style="font-size: {{ section.settings.paragraph_size }}px; line-height: 1.6;">
+          <div class="poclicy-description" style="font-size: {{ section.settings.paragraph_size }}px; line-height: 1.6;">
             {{ block.settings.paragraph }}
           </div>
         {% endif %}
@@ -114,6 +114,11 @@
     .policy-title{
       color : #0F4735; 
       font-weight: 500;
+     font-family: var(--font-family); 
+    }
+    .poclicy-description{
+        color: #5D3328;
+        font-weight : 400;
      font-family: var(--font-family); 
     }
 </style>
