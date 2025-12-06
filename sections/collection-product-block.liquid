@@ -2535,7 +2535,7 @@ margin:0px;}
               {% endif %}
               <div class="promo-content veggie-buttons">
                 {% if block.settings.heading != blank %}
-                  <div class="promo-heading" style="color: {{ block.settings.heading_color | default: '#2C5F2D' }};">{{ block.settings.heading }}</div>
+                  <h2 class="promo-heading" style="color: {{ block.settings.heading_color | default: '#2C5F2D' }};">{{ block.settings.heading }}</h2>
                 {% endif %}
                 {% if block.settings.button_text != blank and block.settings.button_link != blank %}
                   <a href="{{ block.settings.button_link }}" class="promo-button button button--primary">
@@ -2725,7 +2725,7 @@ margin:0px;}
           "default": "#F58220"
         },
         {
-          "type": "richtext",
+          "type": "text",
           "id": "heading",
           "label": "Heading",
           
