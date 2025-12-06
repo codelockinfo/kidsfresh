@@ -136,7 +136,7 @@
       {%- for block in section.blocks -%}
         <div class="contact-column" {{ block.shopify_attributes }} style="background-color: {{ block.settings.background_color }}; padding: 20px 30px; border-radius: {{ block.settings.border_radius }}px; text-align: {{ block.settings.text_alignment }};">
           {%- if block.settings.column_title != blank -%}
-            <h3 class="contact-column-title" style="font-size: {{ block.settings.column_title_size }}px; font-weight: {{ block.settings.column_title_weight }}; color: {{ block.settings.text_color }}; margin-bottom: 25px; text-transform: lowercase;">
+            <h3 class="contact-column-title" style="font-size: {{ block.settings.column_title_size }}px; font-weight: {{ block.settings.column_title_weight }}; color: {{ block.settings.text_color }}; margin-bottom: 20px; text-transform: lowercase;">
               {{ block.settings.column_title }}
             </h3>
           {%- endif -%}
