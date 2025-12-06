@@ -24,71 +24,48 @@ letter-spacing: -2%;
 text-align:justify;
 }
 /* --- Variant Pill Wrapper --- */
+/* Wrapper for pill selector */
 .product-form__input--pill {
   display: inline-flex !important;
-  border-radius: 8px  !important;
-  overflow: hidden  !important;
+  border: 1.5px solid #0F4735 !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
 }
 
-/* --- Hide default radio button --- */
+/* Hide radio inputs */
 .product-form__input--pill input[type="radio"] {
-  display: none  !important;
+  display: none !important;
 }
 
-/* --- Pill Buttons labels --- */
-.product-form__input--pill label {
-  padding: 6px 18px  !important;
-  font-size: 14px  !important;
+/* Base label style */
+.product-form__input--pill input[type="radio"] + label {
+  font-family: var(--font-family);
+  font-size: 16px !important;
+  font-weight: 600;
+  padding: 10px 20px !important;
+  margin: 0 !important;
   cursor: pointer;
-  border-right: 1px solid #1E4E3D  !important;
-  color: #1E4E3D  !important;
-  background: transparent  !important;
-  transition: all 0.3s ease  !important;
+  background: #F3F4EF !important; /* light background */
+  color: #0F4735 !important;
+  border-right: 1px solid #0F4735 !important;
+  transition: 0.25s ease;
 }
 
-/* Remove right border for last item */
+/* Remove divider from last label */
 .product-form__input--pill label:last-of-type {
-  border-right: none  !important;
+  border-right: none !important;
 }
 
-/* --- ACTIVE (Selected) state --- */
+/* SELECTED pill style */
 .product-form__input--pill input[type="radio"]:checked + label {
-    font-family: var(--font-family);
-  background: #1E4E3D  !important;      
-  color: #fff  !important;
-font-weight: 700;
-font-size: 27px !important;
-line-height: 100%;
-letter-spacing: -2%;
-
+  background: #0F4735 !important; /* green background */
+  color: white !important;
+  font-weight: 700 !important;
 }
 
-/* --- Hover effect --- */
+/* Hover effect */
 .product-form__input--pill label:hover {
-  background: #E7EFEA  !important;
-}
-
-.product-form__input--pill input[type=radio]+label{
-      font-family: var(--font-family);
-  margin:0  !important;
-  padding:10px  !important;
-font-weight: 500;
-font-size: 27px !important;
-line-height: 100%;
-letter-spacing: -2%;
-
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  padding: 6px 14px !important;
-  border: 2px solid #0F4735 !important; 
-
-
-  border-radius: 6px !important;
-  line-height: 1 !important;
-  height: auto !important;
-  box-sizing: border-box !important;
-
+  background: #E6EEE6 !important;
 }
 
 .product__accordion , .accordion--highlighted{
