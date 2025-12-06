@@ -1,589 +1,924 @@
-<style>
- .auto-video-section {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: -1;
-}
+  <style>
+  .auto-video-section {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: -1;
+  }
 
-.auto-video-sub-section {
-    position: absolute;
-    top: auto !important;
-    left: 50%;
-    transform: translate(-50%);
-    text-align: center;
-    z-index: 2;
-    padding: 20px;
-    width: 100%;
-    {% if section.settings.leaf_bg != blank %}
-      background-image: url('{{ section.settings.leaf_bg | img_url: '300x300' }}');
-      background-size: 100%;
-      background-position: center;
-      background-repeat: no-repeat;
-    {% endif %}
-}
+  .auto-video-sub-section {
+      position: absolute;
+      top: auto !important;
+      left: 50%;
+      transform: translate(-50%);
+      text-align: center;
+      z-index: 2;
+      padding: 20px;
+      width: 100%;
+      {% if section.settings.leaf_bg != blank %}
+        background-image: url('{{ section.settings.leaf_bg | img_url: '300x300' }}');
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+      {% endif %}
+  }
 
-.auto-video-sub-section h2.banner__heading.inline-richtext.h0 {
-       color: #F89821;
+  .auto-video-sub-section h2.banner__heading.inline-richtext.h0 {
+        color: #F89821;
+      font-family: var(--font-family);
+      font-size: 109px;
+      line-height: 107px;
+      font-weight: 700;
+      padding: 0;
+      padding-bottom:26px;
+      margin :0px;
+      margin-top: 20px;
+  }
+
+  .rotating-subheading-container {
+      position: relative;
+      overflow: hidden;
+      min-height: 120px;
+  }
+
+  .banner__text.rte.body p {
     font-family: var(--font-family);
-    font-size: 109px;
-    line-height: 107px;
-    font-weight: 700;
-    padding: 0;
-    padding-bottom:26px;
-    margin :0px;
-    margin-top: 20px;
+      color: white;
+      font-size: 109px;
+      line-height: 107px;
+      margin-bottom: 20px;
+      position: absolute;
+      margin-top: 0;
+      font-weight: 700;
+      width: 100%;
+      left: 0;
+      top: 0;
+      transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+  }
+
+  {% comment %} .banner__text.rte.body p::after {
+      content: '';
+      position: absolute;
+      bottom: 0px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+      height: 17px;
+      background-image: url(https://cdn.shopify.com/s/files/1/0790/5017/8785/files/title-shape.svg?v=1764176587);
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      transition: width 0.4s ease, opacity 0.8s ease-in-out;
+      z-index: -1;
+  } {% endcomment %}
+
+{% comment %} .rotating-subheading span.multi-line {
+  position: relative;
+  display: block;
+  text-align: center;
+  padding-bottom: 22px;
 }
 
-.rotating-subheading-container {
+.rotating-subheading span.multi-line::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 78%;
+  height: 16px;
+  background-image: url(https://cdn.shopify.com/s/files/1/0790/5017/8785/files/title-shape.svg?v=1764176587);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+} {% endcomment %}
+
+
+/* ---- UNDERLINE FIX (Tight Spacing + Full Width) ---- */
+.rotating-subheading span.multi-line {
     position: relative;
-    overflow: hidden;
-    min-height: 110px;
+    display: block;
+    text-align: center;
+    padding-bottom: 6px;
 }
 
-.banner__text.rte.body p {
-  font-family: var(--font-family);
-    color: white;
-    font-size: 109px;
-    line-height: 107px;
-    margin-bottom: 20px;
+.rotating-subheading span.multi-line::after {
+    content: "";
     position: absolute;
-    margin-top: 0;
-    font-weight: 700;
-    width: 100%;
-    left: 0;
-    top: 0;
-    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
-}
-
-.banner__text.rte.body p::after {
-    content: '';
-    position: absolute;
-    bottom: 0px;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 80%;
-    height: 17px;
+    width: 100%;
+    height: 12px;
     background-image: url(https://cdn.shopify.com/s/files/1/0790/5017/8785/files/title-shape.svg?v=1764176587);
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    transition: width 0.4s ease, opacity 0.8s ease-in-out;
     z-index: -1;
 }
 
-.rotating-subheading {
-    transition: opacity 0.8s ease-in-out;
-}
-
-.rotating-subheading.swipe-out-right {
-    transform: translateX(120%);
-    opacity: 0;
-}
-
-.rotating-subheading.swipe-in-left {
-    transform: translateX(-120%);
-    opacity: 0;
-}
-
-.rotating-subheading.visible {
-    transform: translateX(0);
-    opacity: 1;
-}
-
-.rotating-subheading.hidden {
-    opacity: 0;
-    transform: translateX(-120%);
-}
-
-.banner__buttons .button{
-  background: transparent!important;
-  color: #0F4735;
-  font-family: var(--font-family);
-  font-size: 30px;
-  font-weight: 600;
-  line-height: 44px;
-  text-decoration: none;
-  box-shadow: none;
-  cursor: pointer;
-  transition: transform .2s ease, box-shadow .2s ease;
-  text-align: center;
-  border-radius: 35px;
-  padding: 17px 58px;
-  border: none;
-  text-transform: lowercase;
-    transform: none !important;
-}
-
-.banner__buttons .button:before {
-   background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_23_2.png?v=1764592651);
-  background-size: 100% 100%;
-  z-index: 2;
-}
-
-.banner__buttons .button span{
-  z-index: 3;
-}
-
-.banner__buttons .button:after {
-  content: '';
-   background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_25.png?v=1764592665);
-  background-size: 100% 100%;
-  padding: 17px 58px;
-  bottom: -7px;
-  z-index: 1;
-  box-shadow: none;
-}
-
-
-.banner__buttons .button:hover:before {
-  background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_23_3.png?v=1764592664) !important;
-  background-size: 100% 100% !important;
-}
-
-.banner__buttons .button:hover:after{
-  bottom: -5px;
-  box-shadow: none;
-}
-
-@media (min-width: 1600px) {
-.auto-video-sub-section {
+.banner__text.rte.body p {
+    font-family: var(--font-family);
+    color: white;
+    font-size: 109px;
+    line-height: 107px;
+    font-weight: 700;
     position: absolute;
-    top: auto !important;
-    left: 48%;
-    transform: translate(-50%);
-    text-align: center;
-    z-index: 2;
-    padding: 20px;
-    width: 130rem;
-}
+    top: 0;
+    width: 100%;
+    margin: 0;
+    transition: transform .8s ease-in-out, opacity .8s ease-in-out;
 }
 
- .banner__buttons {
+
+  .rotating-subheading {
+      transition: opacity 0.8s ease-in-out;
+  }
+
+  .rotating-subheading.swipe-out-right {
+      transform: translateX(120%);
+      opacity: 0;
+  }
+
+  .rotating-subheading.swipe-in-left {
+      transform: translateX(-120%);
+      opacity: 0;
+  }
+
+  .rotating-subheading.visible {
+      transform: translateX(0);
+      opacity: 1;
+  }
+
+  .rotating-subheading.hidden {
+      opacity: 0;
+      transform: translateX(-120%);
+  }
+
+  .banner__buttons .button{
+    background: transparent!important;
+    color: #0F4735;
+    font-family: var(--font-family);
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 44px;
+    text-decoration: none;
+    box-shadow: none;
+    cursor: pointer;
+    transition: transform .2s ease, box-shadow .2s ease;
+    text-align: center;
+    border-radius: 35px;
+    padding: 17px 58px;
+    border: none;
+    text-transform: lowercase;
+      transform: none !important;
+  }
+
+  .banner__buttons .button:before {
+    background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_23_2.png?v=1764592651);
+    background-size: 100% 100%;
+    z-index: 2;
+  }
+
+  .banner__buttons .button span{
+    z-index: 3;
+  }
+
+  .banner__buttons .button:after {
+    content: '';
+    background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_25.png?v=1764592665);
+    background-size: 100% 100%;
+    padding: 17px 58px;
+    bottom: -7px;
+    z-index: 1;
+    box-shadow: none;
+  }
+
+
+  .banner__buttons .button:hover:before {
+    background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_23_3.png?v=1764592664) !important;
+    background-size: 100% 100% !important;
+  }
+
+  .banner__buttons .button:hover:after{
+    bottom: -5px;
+    box-shadow: none;
+  }
+
+  @media (min-width: 1600px) {
+  .auto-video-sub-section {
+      position: absolute;
+      top: auto !important;
+      left: 48%;
+      transform: translate(-50%);
+      text-align: center;
+      z-index: 2;
+      padding: 20px;
+      width: 130rem;
+  }
+  }
+
+  .banner__buttons {
+      margin-top: 20px;
+    }
+    
+
+  .desktop-video {
+    display: none;
+    width: 100%;
+    height: auto;
+  }
+
+  .mobile-video {
+    display: none;
+    width: 100%;
+    height: auto;
+  }
+
+  .large-screen-video {
+    display: none;
+    width: 100%;
+    height: auto;
+  }
+  @media (min-width: 1600px) {
+    .large-screen-video {
+      display: block;
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1599px) {
+    .desktop-video {
+      display: block;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .mobile-video {
+      display: block;
+    }
+    .banner__buttons .button {
+      font-size: 20px;
+      line-height: 33px;
+    }
+  }
+
+  @media (min-width: 1201px) and (max-width: 1440px) {
+          .auto-video-sub-section h2.banner__heading.inline-richtext.h0 {
+          font-size: 80px;
+          line-height: 35px;
+          margin-top: 74px;
+      }
+      .rotating-subheading-container {
+      height: 100px !important;
+      min-height: 80px !important;
+  }
+  .banner__text.rte.body p {
+      font-size: 80px;
+      line-height: 80px;
+  }
+  .banner__buttons {
     margin-top: 20px;
   }
-  
-
-.desktop-video {
-  display: none;
-  width: 100%;
-  height: auto;
-}
-
-.mobile-video {
-  display: none;
-  width: 100%;
-  height: auto;
-}
-
-.large-screen-video {
-  display: none;
-  width: 100%;
-  height: auto;
-}
-@media (min-width: 1600px) {
-  .large-screen-video {
-    display: block;
+  .banner__buttons .button {
+      font-size: 30px;
+      line-height: 44px;
   }
-}
-
-@media (min-width: 769px) and (max-width: 1599px) {
-  .desktop-video {
-    display: block;
   }
-}
 
-@media (max-width: 768px) {
-  .mobile-video {
-    display: block;
+  @media (min-width: 1025px) and (max-width: 1200px) {
+          .auto-video-sub-section h2.banner__heading.inline-richtext.h0 {
+          font-size: 70px;
+          line-height: 35px;
+          margin-top: 74px;
+      }
+      .rotating-subheading-container {
+      height: 90px !important;
+      min-height: 80px !important;
+  }
+  .banner__text.rte.body p {
+      font-size: 70px;
+      line-height: 58px;
+  }
+  .banner__buttons {
+    margin-top: 0;
   }
   .banner__buttons .button {
-    font-size: 20px;
-    line-height: 33px;
+      font-size: 30px;
+      line-height: 44px;
+      padding: 12px 56px;
   }
-}
+  }
 
-@media (min-width: 1201px) and (max-width: 1440px) {
+  @media (min-width: 769px) and (max-width: 1024px) {
         .auto-video-sub-section h2.banner__heading.inline-richtext.h0 {
-        font-size: 80px;
-        line-height: 35px;
-        margin-top: 74px;
-    }
-    .rotating-subheading-container {
-    height: 100px !important;
-    min-height: 80px !important;
-}
-.banner__text.rte.body p {
-    font-size: 80px;
-    line-height: 80px;
-}
-.banner__buttons {
-  margin-top: 20px;
-}
-.banner__buttons .button {
-    font-size: 30px;
-    line-height: 44px;
-}
-}
+          font-size: 62px;
+          line-height: 0px;
+          padding-bottom: 36px;
+          margin-top: 68px;
+      }
+      .rotating-subheading-container {
+        height: 60px !important;
+        min-height: 50px;
+      }
+      .banner__text.rte.body p {
+      font-size: 62px;
+      line-height: 50px;
+      }
+      .banner__buttons {
+      margin-top: 5px;
+  }
+      .banner__buttons .button {
+      font-size: 26px;
+      line-height: 34px;
+      padding: 14px 50px;
+  }
+  }
 
-@media (min-width: 1025px) and (max-width: 1200px) {
+  @media (min-width: 600px) and (max-width: 768px) {
+    .auto-video-sub-section {
+      margin: 0 !important;
+      max-width: 450px !important;
+      justify-self: center;
+    }
         .auto-video-sub-section h2.banner__heading.inline-richtext.h0 {
-        font-size: 70px;
-        line-height: 35px;
-        margin-top: 74px;
-    }
-    .rotating-subheading-container {
-    height: 90px !important;
-    min-height: 80px !important;
-}
-.banner__text.rte.body p {
-    font-size: 70px;
-    line-height: 58px;
-}
-.banner__buttons {
-  margin-top: 0;
-}
-.banner__buttons .button {
-    font-size: 30px;
-    line-height: 44px;
-    padding: 12px 56px;
-}
-}
+          font-size: 89px;
+          line-height: 80px;
+          margin: 0 0 30px 0;
+      }
+          .rotating-subheading-container {
+          height: 200px !important;
+      }
+          .banner__text.rte.body p {
+          font-size: 89px;
+          line-height: 80px;
+      }
+      .banner__buttons {
+      margin-top: 30px;
+  }
+      .banner__buttons .button {
+          font-size: 30px;
+          line-height: 44px;
+      }
+  }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+  @media (min-width: 461px) and (max-width: 599px) {
+    .auto-video-sub-section {
+      margin: 0;
+      max-width: 400px;
+      justify-self: center;
+    }
+        .auto-video-sub-section h2.banner__heading.inline-richtext.h0 {
+          font-size: 65px;
+          line-height: 64px;
+          margin: 0 0 30px 0 !important;
+          padding-bottom: 0;
+      }
+          .rotating-subheading-container {
+          height: 140px !important;
+      }
+          .banner__text.rte.body p {
+          font-size: 65px;
+          line-height: 64px;
+      }
+      .banner__buttons {
+      margin-top: 30px;
+  }
+      .banner__buttons .button {
+          font-size: 28px;
+          line-height: 38px;
+      }
+      .banner__buttons .button:after {
+        bottom: -6px;
+      }
+  }
+
+  @media (min-width: 381px) and (max-width: 460px) {
       .auto-video-sub-section h2.banner__heading.inline-richtext.h0 {
-        font-size: 62px;
-        line-height: 0px;
-        padding-bottom: 36px;
-        margin-top: 68px;
-    }
-    .rotating-subheading-container {
-      height: 60px !important;
-      min-height: 50px;
+      font-size: 64px;
+      line-height: 60px;
+      margin-top: 20px 0 15px;
+      padding-bottom: 0;
     }
     .banner__text.rte.body p {
-    font-size: 62px;
-    line-height: 50px;
+      font-size: 64px;
+      line-height: 60px;
+      margin-bottom: 0;
     }
     .banner__buttons {
-    margin-top: 5px;
-}
-    .banner__buttons .button {
-    font-size: 26px;
-    line-height: 34px;
-    padding: 14px 50px;
-}
-}
-
-@media (min-width: 600px) and (max-width: 768px) {
-  .auto-video-sub-section {
-    margin: 0 !important;
-    max-width: 450px !important;
-    justify-self: center;
-  }
-      .auto-video-sub-section h2.banner__heading.inline-richtext.h0 {
-        font-size: 90px;
-        line-height: 80px;
-        margin: 0 0 30px 0;
+      margin-top: 15px;
     }
         .rotating-subheading-container {
-        height: 200px !important;
-    }
-        .banner__text.rte.body p {
-        font-size: 90px;
-        line-height: 80px;
-    }
-    .banner__buttons {
-    margin-top: 30px;
-}
-    .banner__buttons .button {
-        font-size: 30px;
-        line-height: 44px;
-    }
-}
-
-@media (min-width: 461px) and (max-width: 599px) {
-  .auto-video-sub-section {
-    margin: 0;
-    max-width: 400px;
-    justify-self: center;
+          height: 130px;
+      }
+      .banner__buttons .button {
+          font-size: 26px;
+          line-height: 36px;
+          padding: 14px 54px;
+      }
+      .banner__buttons .button:after {
+        bottom: -5px;
+      }
+      .rotating-subheading span.multi-line::after {
+        width: 90%;
+      }
   }
-      .auto-video-sub-section h2.banner__heading.inline-richtext.h0 {
-        font-size: 68px;
-        line-height: 64px;
-        margin: 0 0 30px 0 !important;
-        padding-bottom: 0;
-    }
-        .rotating-subheading-container {
-        height: 140px !important;
-    }
-        .banner__text.rte.body p {
-        font-size: 68px;
-        line-height: 64px;
-    }
-    .banner__buttons {
-    margin-top: 30px;
-}
-    .banner__buttons .button {
-        font-size: 28px;
-        line-height: 38px;
-    }
-    .banner__buttons .button:after {
-      bottom: -6px;
-    }
-}
 
-@media (min-width: 381px) and (max-width: 460px) {
+  @media (max-width: 380px) {
     .auto-video-sub-section h2.banner__heading.inline-richtext.h0 {
-    font-size: 64px;
-    line-height: 60px;
-    margin-top: 20px 0 15px;
-    padding-bottom: 0;
-  }
-  .banner__text.rte.body p {
-    font-size: 64px;
-    line-height: 60px;
-    margin-bottom: 0;
-  }
-  .banner__buttons {
-    margin-top: 15px;
-  }
-      .rotating-subheading-container {
-        height: 130px;
+      font-size: 52px;
+      line-height: 46px;
+      margin-top: 20px !important;
+      padding-bottom: 5px;
     }
-    .banner__buttons .button {
-        font-size: 26px;
-        line-height: 36px;
-        padding: 14px 54px;
+    .banner__text.rte.body p {
+      font-size: 52px;
+      line-height: 46px;
+      margin-bottom: 0;
     }
-    .banner__buttons .button:after {
-      bottom: -5px;
+    .banner__buttons {
+      margin-top: 10px;
     }
-}
+        .rotating-subheading-container {
+          height: 105px !important;
+              min-height: 90px;
+      }
+      .banner__buttons .button {
+          font-size: 24px;
+          line-height: 33px;
+          padding: 12px 50px;
+      }
+      .banner__buttons .button:after {
+        bottom: -5px;
+      }
+      .rotating-subheading span.multi-line::after {
+        width: 70%;
+      }
+  }
 
-@media (max-width: 380px) {
-  .auto-video-sub-section h2.banner__heading.inline-richtext.h0 {
-    font-size: 52px;
-    line-height: 46px;
-    margin-top: 20px !important;
-    padding-bottom: 5px;
-  }
-  .banner__text.rte.body p {
-    font-size: 52px;
-    line-height: 46px;
-    margin-bottom: 0;
-  }
-  .banner__buttons {
-    margin-top: 10px;
-  }
-      .rotating-subheading-container {
-        height: 100px !important;
-            min-height: 90px;
+  @media(max-width:768px){
+    .auto-video-sub-section {
+      top: auto !important;
+      left: 0 !important;
+      padding: 15px;
+      max-width: 340px;
+      margin: 0 auto;
+      right: 0 !important;
+      transform: none !important;
+      margin-top: -50px;
     }
-    .banner__buttons .button {
-        font-size: 24px;
-        line-height: 33px;
-        padding: 12px 50px;
-    }
-    .banner__buttons .button:after {
-      bottom: -5px;
-    }
-}
-
-@media(max-width:768px){
-  .auto-video-sub-section {
-    top: auto !important;
-    left: 0 !important;
-    padding: 15px;
-    max-width: 340px;
-    margin: 0 auto;
-    right: 0 !important;
-    transform: none !important;
-    margin-top: -50px;
-  }
-  
-  .auto-video-sub-section h2.banner__heading.inline-richtext.h0 {
-    margin: 0 0 10px 0;
-  }
-  
-  .rotating-subheading-container {
-    height: 130px;
-  }
-}
-
-
-</style>
-
-<div class="auto-video-section">
-  <video class="mobile-video" width="100%" autoplay loop playsinline muted>
-    <source src="{{ section.settings.mobile_video_url }}">
-  </video>
-  <video class="desktop-video" width="100%" autoplay loop playsinline muted>
-    <source src="{{ section.settings.video_url }}">
-  </video>
-  <video class="large-screen-video" width="100%" autoplay loop playsinline muted>
-    <source src="{{ section.settings.large_screen_video_url }}">
-  </video>
-  
-  <div class="auto-video-sub-section">
-    <h2 class="banner__heading inline-richtext h0">{{ section.settings.heading }}</h2>
     
-    <div class="banner__text rte body">
-      <div id="rotating-subheadings" class="rotating-subheading-container">
-        {% assign subheadings = section.settings.subheading_1 | append: '|' | append: section.settings.subheading_2 | append: '|' | append: section.settings.subheading_3 | append: '|' | append: section.settings.subheading_4 | append: '|' | append: section.settings.subheading_5 | split: '|' %}
-        {% for sub in subheadings %}
-          {% if sub != blank %}
-            <p class="rotating-subheading {% if forloop.first %}visible{% else %}hidden{% endif %}">{{ sub }}</p>
-          {% endif %}
-        {% endfor %}
+    .auto-video-sub-section h2.banner__heading.inline-richtext.h0 {
+      margin: 0 0 10px 0;
+    }
+    
+    .rotating-subheading-container {
+      height: 130px;
+    }
+  }
+
+
+  </style>
+
+  <div class="auto-video-section">
+    <video class="mobile-video" width="100%" autoplay loop playsinline muted>
+      <source src="{{ section.settings.mobile_video_url }}">
+    </video>
+    <video class="desktop-video" width="100%" autoplay loop playsinline muted>
+      <source src="{{ section.settings.video_url }}">
+    </video>
+    <video class="large-screen-video" width="100%" autoplay loop playsinline muted>
+      <source src="{{ section.settings.large_screen_video_url }}">
+    </video>
+    
+    <div class="auto-video-sub-section">
+      <h2 class="banner__heading inline-richtext h0">{{ section.settings.heading }}</h2>
+      
+      <div class="banner__text rte body">
+        <div id="rotating-subheadings" class="rotating-subheading-container">
+          {% assign subheadings = section.settings.subheading_1 | append: '|' | append: section.settings.subheading_2 | append: '|' | append: section.settings.subheading_3 | append: '|' | append: section.settings.subheading_4 | append: '|' | append: section.settings.subheading_5 | split: '|' %}
+          {% for sub in subheadings %}
+            {% if sub != blank %}
+              <p class="rotating-subheading {% if forloop.first %}visible{% else %}hidden{% endif %}">{{ sub }}</p>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+      
+      <div class="banner__buttons">
+        <a href="{{ section.settings.button_link }}" class="button button--secondary">
+          <span>{{ section.settings.button_label }}</span>
+        </a>
       </div>
     </div>
-    
-    <div class="banner__buttons">
-      <a href="{{ section.settings.button_link }}" class="button button--secondary">
-        <span>{{ section.settings.button_label }}</span>
-      </a>
-    </div>
   </div>
-</div>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  const enableRotation = {{ section.settings.enable_rotation | json }};
-  const rotationSpeed = {{ section.settings.rotation_speed | times: 1000 | json }}; // Convert to ms
-  
-  if (!enableRotation) return;
-  
-  const subheadingsContainer = document.getElementById('rotating-subheadings');
-  if (!subheadingsContainer) return;
-  
-  const subheadings = subheadingsContainer.querySelectorAll('.rotating-subheading');
-  if (subheadings.length <= 1) return;
-  
-  let currentIndex = 0;
-  
-  function rotateSubheadings() {
-    const currentSubheading = subheadings[currentIndex];
-    const nextIndex = (currentIndex + 1) % subheadings.length;
-    const nextSubheading = subheadings[nextIndex];
-    
-    // Swipe out current text to the right
-    currentSubheading.classList.remove('visible');
-    currentSubheading.classList.add('swipe-out-right');
-    
-    // Prepare next text (position it to the left, ready to swipe in)
-    nextSubheading.classList.remove('hidden');
-    nextSubheading.classList.add('swipe-in-left');
-    
-    // Small delay before swiping in the new text
-    setTimeout(() => {
-      nextSubheading.classList.remove('swipe-in-left');
-      nextSubheading.classList.add('visible');
-      
-      // Reset the previous text after animation completes
-      setTimeout(() => {
-        currentSubheading.classList.remove('swipe-out-right');
-        currentSubheading.classList.add('hidden');
-      }, 600);
-    }, 50);
-    
-    currentIndex = nextIndex;
-  }
-  
-  // Set interval
-  setInterval(rotateSubheadings, rotationSpeed);
+    const enableRotation = {{ section.settings.enable_rotation | json }};
+    const rotationSpeed = {{ section.settings.rotation_speed | times: 1000 | json }};
+
+    if (!enableRotation) return;
+
+    const subheadings = document.querySelectorAll('.rotating-subheading');
+
+    // Save original text for each subheading
+    subheadings.forEach(el => {
+        if (!el.dataset.original) el.dataset.original = el.innerText.trim();
+        splitLines(el);
+    });
+
+    let currentIndex = 0;
+
+    function rotateSubheadings() {
+        const current = subheadings[currentIndex];
+        const nextIndex = (currentIndex + 1) % subheadings.length;
+        const next = subheadings[nextIndex];
+
+        current.classList.remove('visible');
+        current.classList.add('swipe-out-right');
+
+        next.classList.remove('hidden');
+        next.classList.add('swipe-in-left');
+
+        setTimeout(() => {
+            next.classList.remove('swipe-in-left');
+            next.classList.add('visible');
+
+            setTimeout(() => {
+                current.classList.remove('swipe-out-right');
+                current.classList.add('hidden');
+            }, 600);
+        }, 50);
+
+        currentIndex = nextIndex;
+    }
+
+    setInterval(rotateSubheadings, rotationSpeed);
+
+    // Resplit lines on resize
+    window.addEventListener('resize', () => {
+        subheadings.forEach(el => splitLines(el));
+    });
 });
+
+function splitLines(element) {
+    const originalText = element.dataset.original;
+    const largeScreenWidth = 769;
+
+    element.innerHTML = ""; // clear previous content
+
+    if (window.innerWidth >= largeScreenWidth) {
+        // Large screen: single span
+        const span = document.createElement('span');
+        span.className = 'multi-line';
+        span.textContent = originalText;
+        element.appendChild(span);
+        return;
+    }
+
+    // Small screens: auto-split
+    const temp = document.createElement('span');
+    temp.style.visibility = 'hidden';
+    temp.style.position = 'absolute';
+    temp.style.whiteSpace = 'pre-wrap';
+    temp.style.width = element.offsetWidth + 'px';
+    temp.innerText = originalText;
+    document.body.appendChild(temp);
+
+    const words = originalText.split(' ');
+    let line = '';
+    let lastHeight = 0;
+
+    words.forEach(word => {
+        const test = line + (line ? ' ' : '') + word;
+        temp.innerText = test;
+
+        if (temp.offsetHeight > lastHeight) {
+            if (line) element.appendChild(makeSpan(line));
+            line = word;
+            lastHeight = temp.offsetHeight;
+        } else {
+            line = test;
+        }
+    });
+
+    if (line) element.appendChild(makeSpan(line));
+    temp.remove();
+}
+
+function makeSpan(text) {
+    const span = document.createElement('span');
+    span.className = 'multi-line';
+    span.textContent = text;
+    return span;
+}
 </script>
 
-{% schema %}
-{
-  "name": "Auto Video",
-  "settings": [
-    {
-      "type": "url",
-      "id": "mobile_video_url",
-      "label": "Mobile Video URL (up to 768px)"
-    },
-    {
-      "type": "url",
-      "id": "video_url",
-      "label": "Desktop Video URL (769px - 1599px)"
-    },
-    {
-      "type": "url",
-      "id": "large_screen_video_url",
-      "label": "Large Screen Video URL (1600px+)"
-    },
-    {
-      "type": "image_picker",
-      "id": "leaf_bg",
-      "label": "Leaf Background Image"
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_rotation",
-      "label": "Enable Rotating Subheading",
-      "default": true
-    },
-    {
-      "type": "range",
-      "id": "rotation_speed",
-      "min": 3,
-      "max": 10,
-      "step": 1,
-      "unit": "s",
-      "label": "Rotation Speed",
-      "default": 5
-    },
-    {
-      "type": "richtext",
-      "id": "heading",
-      
-      "label": "Heading"
-    },
-    {
-      "type": "text",
-      "id": "subheading_1",
-      "label": "Subheading 1",
-      "default": "win more meals with protein + nutrients"
-    },
-    {
-      "type": "text",
-      "id": "subheading_2",
-      "label": "Subheading 2",
-      "default": "frozen kid meals"
-    },
-    {
-      "type": "text",
-      "id": "subheading_3",
-      "label": "Subheading 3"
-    },
-    {
-      "type": "text",
-      "id": "subheading_4",
-      "label": "Subheading 4"
-    },
-    {
-      "type": "text",
-      "id": "subheading_5",
-      "label": "Subheading 5"
-    },
-    {
-      "type": "text",
-      "id": "button_label",
-      "default": "our meals",
-      "label": "Button Label"
-    },
-    {
-      "type": "url",
-      "id": "button_link",
-      "label": "Button Link"
+
+
+  {% comment %} <script>
+/* ---------- MULTILINE SPLITTER FIX ---------- */
+function splitLines(element) {
+    const original = element.dataset.original;
+    element.innerHTML = "";
+
+    const temp = document.createElement("span");
+    temp.style.visibility = "hidden";
+    temp.style.position = "absolute";
+    temp.style.whiteSpace = "pre-wrap";
+    temp.style.width = element.offsetWidth + "px";
+    document.body.appendChild(temp);
+
+    const words = original.split(" ");
+    let line = "", lastHeight = 0;
+
+    words.forEach(word => {
+        const testLine = line ? line + " " + word : word;
+        temp.textContent = testLine;
+
+        if (temp.offsetHeight > lastHeight) {
+            if (line) {
+                const span = document.createElement("span");
+                span.className = "multi-line";
+                span.textContent = line;
+                element.appendChild(span);
+            }
+            line = word;
+            lastHeight = temp.offsetHeight;
+        } else {
+            line = testLine;
+        }
+    });
+
+    if (line) {
+        const span = document.createElement("span");
+        span.className = "multi-line";
+        span.textContent = line;
+        element.appendChild(span);
     }
-  ],
-  "presets": [
-    {
-      "name": "Auto Video"
-    }
-  ]
+
+    temp.remove();
 }
-{% endschema %}
+
+function observeChanges() {
+    const items = document.querySelectorAll(".rotating-subheading");
+
+    items.forEach(el => {
+        el.dataset.original = el.textContent.trim();
+        splitLines(el);
+
+        new MutationObserver(() => {
+            el.dataset.original = el.textContent.trim();
+            splitLines(el);
+        }).observe(el, { childList: true, subtree: true });
+    });
+}
+
+document.addEventListener("DOMContentLoaded", observeChanges);
+
+
+/* ---------- ROTATION SCRIPT ---------- */
+document.addEventListener('DOMContentLoaded', function() {
+    const enableRotation = {{ section.settings.enable_rotation | json }};
+    const rotateTime = {{ section.settings.rotation_speed | times: 1000 | json }};
+
+    if (!enableRotation) return;
+
+    const container = document.getElementById("rotating-subheadings");
+    const items = container.querySelectorAll(".rotating-subheading");
+    if (items.length <= 1) return;
+
+    let current = 0;
+
+    setInterval(() => {
+        let currentEl = items[current];
+        let next = (current + 1) % items.length;
+        let nextEl = items[next];
+
+        currentEl.classList.remove("visible");
+        currentEl.classList.add("swipe-out-right");
+
+        nextEl.classList.remove("hidden");
+        nextEl.classList.add("swipe-in-left");
+
+        setTimeout(() => {
+            nextEl.classList.remove("swipe-in-left");
+            nextEl.classList.add("visible");
+
+            setTimeout(() => {
+                currentEl.classList.remove("swipe-out-right");
+                currentEl.classList.add("hidden");
+            }, 500);
+        }, 80);
+
+        current = next;
+    }, rotateTime);
+});
+</script> {% endcomment %}
+
+
+  {% comment %} <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const enableRotation = {{ section.settings.enable_rotation | json }};
+    const rotationSpeed = {{ section.settings.rotation_speed | times: 1000 | json }}; // Convert to ms
+    
+    if (!enableRotation) return;
+    
+    const subheadingsContainer = document.getElementById('rotating-subheadings');
+    if (!subheadingsContainer) return;
+    
+    const subheadings = subheadingsContainer.querySelectorAll('.rotating-subheading');
+    if (subheadings.length <= 1) return;
+    
+    let currentIndex = 0;
+    
+    function rotateSubheadings() {
+      const currentSubheading = subheadings[currentIndex];
+      const nextIndex = (currentIndex + 1) % subheadings.length;
+      const nextSubheading = subheadings[nextIndex];
+      
+      // Swipe out current text to the right
+      currentSubheading.classList.remove('visible');
+      currentSubheading.classList.add('swipe-out-right');
+      
+      // Prepare next text (position it to the left, ready to swipe in)
+      nextSubheading.classList.remove('hidden');
+      nextSubheading.classList.add('swipe-in-left');
+      
+      // Small delay before swiping in the new text
+      setTimeout(() => {
+        nextSubheading.classList.remove('swipe-in-left');
+        nextSubheading.classList.add('visible');
+        
+        // Reset the previous text after animation completes
+        setTimeout(() => {
+          currentSubheading.classList.remove('swipe-out-right');
+          currentSubheading.classList.add('hidden');
+        }, 600);
+      }, 50);
+      
+      currentIndex = nextIndex;
+    }
+    
+    // Set interval
+    setInterval(rotateSubheadings, rotationSpeed);
+  });
+  </script>
+
+<script>
+function splitLines(element) {
+
+    // FIX: remove underline & reset clean text
+    element.textContent = element.dataset.original;
+
+    const originalText = element.dataset.original;
+
+    const temp = document.createElement("span");
+    temp.style.visibility = "hidden";
+    temp.style.position = "absolute";
+    temp.style.whiteSpace = "pre-wrap";
+    temp.style.width = element.offsetWidth + "px";
+    temp.innerText = originalText;
+    document.body.appendChild(temp);
+
+    const words = originalText.split(" ");
+    let line = "";
+    let lastHeight = 0;
+
+    element.innerHTML = "";
+
+    words.forEach((word) => {
+        const test = line + (line ? " " : "") + word;
+        temp.innerText = test;
+
+        if (temp.offsetHeight > lastHeight) {
+            if (line) {
+                element.appendChild(makeSpan(line));
+            }
+            line = word;
+            lastHeight = temp.offsetHeight;
+        } else {
+            line = test;
+        }
+    });
+
+    if (line) element.appendChild(makeSpan(line));
+
+    temp.remove();
+}
+
+function makeSpan(text) {
+    const span = document.createElement("span");
+    span.className = "multi-line";
+    span.textContent = text;
+    return span;
+}
+
+function observeChanges() {
+    const targets = document.querySelectorAll(".rotating-subheading");
+
+    targets.forEach(el => {
+        el.dataset.original = el.textContent.trim();
+        splitLines(el);
+
+        new MutationObserver(() => {
+            el.dataset.original = el.textContent.trim();
+            splitLines(el);
+        }).observe(el, { childList: true, characterData: true, subtree: true });
+    });
+}
+
+document.addEventListener("DOMContentLoaded", observeChanges);
+</script> {% endcomment %}
+
+
+  {% schema %}
+  {
+    "name": "Auto Video",
+    "settings": [
+      {
+        "type": "url",
+        "id": "mobile_video_url",
+        "label": "Mobile Video URL (up to 768px)"
+      },
+      {
+        "type": "url",
+        "id": "video_url",
+        "label": "Desktop Video URL (769px - 1599px)"
+      },
+      {
+        "type": "url",
+        "id": "large_screen_video_url",
+        "label": "Large Screen Video URL (1600px+)"
+      },
+      {
+        "type": "image_picker",
+        "id": "leaf_bg",
+        "label": "Leaf Background Image"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_rotation",
+        "label": "Enable Rotating Subheading",
+        "default": true
+      },
+      {
+        "type": "range",
+        "id": "rotation_speed",
+        "min": 3,
+        "max": 10,
+        "step": 1,
+        "unit": "s",
+        "label": "Rotation Speed",
+        "default": 5
+      },
+      {
+        "type": "richtext",
+        "id": "heading",
+        
+        "label": "Heading"
+      },
+      {
+        "type": "text",
+        "id": "subheading_1",
+        "label": "Subheading 1",
+        "default": "win more meals with protein + nutrients"
+      },
+      {
+        "type": "text",
+        "id": "subheading_2",
+        "label": "Subheading 2",
+        "default": "frozen kid meals"
+      },
+      {
+        "type": "text",
+        "id": "subheading_3",
+        "label": "Subheading 3"
+      },
+      {
+        "type": "text",
+        "id": "subheading_4",
+        "label": "Subheading 4"
+      },
+      {
+        "type": "text",
+        "id": "subheading_5",
+        "label": "Subheading 5"
+      },
+      {
+        "type": "text",
+        "id": "button_label",
+        "default": "our meals",
+        "label": "Button Label"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button Link"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Auto Video"
+      }
+    ]
+  }
+  {% endschema %}
