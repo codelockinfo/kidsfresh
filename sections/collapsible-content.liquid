@@ -83,7 +83,11 @@
                   <summary id="Summary-{{ block.id }}-{{ section.id }}">
                     {% render 'icon-accordion', icon: block.settings.icon %}
                     <h3 class="accordion__title inline-richtext h4">
-                      {{ block.settings.heading | default: block.settings.page.title | escape }}
+                      {%- if block.settings.heading != blank -%}
+                        {{ block.settings.heading }}
+                      {%- else -%}
+                        {{ block.settings.page.title | escape }}
+                      {%- endif -%}
                     </h3>
                     {{- 'icon-caret.svg' | inline_asset_content -}}
                   </summary>
@@ -292,7 +296,7 @@
       "name": "t:sections.collapsible_content.blocks.collapsible_row.name",
       "settings": [
         {
-          "type": "text",
+          "type": "inline_richtext",
           "id": "heading",
           "default": "t:sections.collapsible_content.blocks.collapsible_row.settings.heading.default",
           "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.heading.label"
