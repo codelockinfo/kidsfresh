@@ -1,9 +1,8 @@
 {% comment %}
-  Breadcrumbs Section
-  Can be added anywhere through Customizer.
+  Breadcrumbs Section with Color Scheme Support
 {% endcomment %}
 
-<section class="kf-breadcrumbs-wrapper">
+<section class="kf-breadcrumbs-wrapper color-{{ section.settings.color_scheme }}">
   <nav class="kf-breadcrumbs" aria-label="Breadcrumb">
     <ul>
 
@@ -65,13 +64,13 @@
 }
 
 .kf-breadcrumbs li {
-  color: #333;
+  color: rgba(var(--color-foreground), 1);
 }
 
 .kf-breadcrumbs li::after {
   content: ">";
   margin-left: 6px;
-  color: #555;
+  color: rgba(var(--color-foreground), 0.7);
 }
 
 .kf-breadcrumbs li:last-child::after {
@@ -80,12 +79,11 @@
 
 .kf-breadcrumbs a {
   text-decoration: none;
-  color: #333;
+  color: rgba(var(--color-foreground), 1);
 }
 
 .kf-breadcrumbs li:last-child {
   font-weight: bold;
-  color: #000;
 }
 </style>
 
@@ -93,7 +91,14 @@
 {
   "name": "Breadcrumbs",
   "tag": "section",
-  "settings": [],
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Scheme",
+      "default": "background-1"
+    }
+  ],
   "presets": [
     {
       "name": "Breadcrumbs Section"
