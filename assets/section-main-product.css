@@ -90,6 +90,41 @@ letter-spacing: -2%;
   box-sizing: border-box !important;
 
 }
+/* HIDE DEFAULT RADIO */
+.product-form__input--pill input[type="radio"] {
+  display: none !important;
+}
+
+/* BASE STYLE FOR LABELS */
+.product-form__input--pill label {
+  border: 1px solid #1a4d3d; /* green outline */
+  padding: 8px 18px;
+  border-radius: 6px;
+  background: transparent;
+  color: #1a4d3d;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+/* REMOVE INNER BORDER BETWEEN PILLS */
+.product-form__input--pill label + label {
+  margin-left: -1px; /* merges border so middle line disappears */
+}
+
+/* SELECTED STATE */
+.product-form__input--pill input[type="radio"]:checked + label {
+  background: #114C36 !important;  /* dark green */
+  color: #fff !important;
+  border-color: #114C36 !important;
+}
+
+/* UNSELECTED STATE (LIGHT BORDER) */
+.product-form__input--pill input[type="radio"]:not(:checked) + label {
+  background: transparent !important;
+  color: #114C36 !important;
+  border-color: #114C36 !important;
+}
 
 .product__accordion , .accordion--highlighted{
       border: 2px solid #E7DEC7 !important;
