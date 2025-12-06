@@ -349,7 +349,7 @@ product-info {
   product-info .button--secondary, product-info .button--primary
 {
     font-size:16px;
-    padding:8px 16px;
+    padding:8px 16px !important;
   }
 }
 /* my css end */
