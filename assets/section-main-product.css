@@ -26,7 +26,6 @@ text-align:justify;
 /* --- Variant Pill Wrapper --- */
 .product-form__input--pill {
   display: inline-flex !important;
-  border: 2px solid #1E4E3D  !important;  /* Green border */
   border-radius: 8px  !important;
   overflow: hidden  !important;
 }
