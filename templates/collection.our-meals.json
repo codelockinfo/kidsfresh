@@ -39,10 +39,10 @@
         "padding_bottom": 36
       }
     },
-    "slideshow_FHmD67": {
+    "slideshow_rrmh8J": {
       "type": "slideshow",
       "blocks": {
-        "text_image_block_krUw8J": {
+        "text_image_block_Uwx4QT": {
           "type": "text_image_block",
           "settings": {
             "desktop_image": "shopify://shop_images/Group_278_74cb09bb-0408-46eb-a66f-afa0194eda93.png",
@@ -56,23 +56,355 @@
         }
       },
       "block_order": [
-        "text_image_block_krUw8J"
+        "text_image_block_Uwx4QT"
       ],
       "name": "Text with Image Section",
-      "settings": {}
+      "settings": {
+        "bg_color": "#f1ead9"
+      }
     },
-    "collection_product_block_nhVB7J": {
+    "collection_product_block_8egXne": {
       "type": "collection-product-block",
+      "blocks": {
+        "product_BJkPfJ": {
+          "type": "product",
+          "settings": {
+            "block_width": 33,
+            "product": "chicken-sticks-potato-tots",
+            "show_new_badge": true,
+            "new_badge_image": "shopify://shop_images/Group_243.png",
+            "show_second_image": true,
+            "custom_description": "Product description",
+            "search_icon": "shopify://shop_images/store_locator_QB.png",
+            "search_icon_hover": "shopify://shop_images/ChatGPT_Image_Dec_2_2025_06_51_07_PM_dc3c5109-df73-409a-bdd7-72fd465d2d1b.png",
+            "icon_link": "",
+            "icon_open_new_tab": false
+          }
+        },
+        "product_DEd9Fq": {
+          "type": "product",
+          "settings": {
+            "block_width": 33,
+            "product": "buttered-pasta",
+            "show_new_badge": true,
+            "new_badge_image": "shopify://shop_images/Group_243.png",
+            "show_second_image": true,
+            "custom_description": "Product description",
+            "search_icon": "shopify://shop_images/store_locator_QB.png",
+            "search_icon_hover": "shopify://shop_images/ChatGPT_Image_Dec_2_2025_06_51_07_PM_dc3c5109-df73-409a-bdd7-72fd465d2d1b.png",
+            "icon_link": "",
+            "icon_open_new_tab": false
+          }
+        },
+        "product_fKxFBG": {
+          "type": "product",
+          "settings": {
+            "block_width": 33,
+            "product": "chicken-nuggets-buttered-pasta",
+            "show_new_badge": false,
+            "new_badge_image": "shopify://shop_images/Group_243.png",
+            "show_second_image": true,
+            "custom_description": "Product description",
+            "search_icon": "shopify://shop_images/store_locator_QB.png",
+            "search_icon_hover": "shopify://shop_images/ChatGPT_Image_Dec_2_2025_06_51_07_PM_dc3c5109-df73-409a-bdd7-72fd465d2d1b.png",
+            "icon_link": "",
+            "icon_open_new_tab": false
+          }
+        },
+        "product_ynVxhq": {
+          "type": "product",
+          "settings": {
+            "block_width": 33,
+            "product": "chicken-meatballs-pasta-marinara",
+            "show_new_badge": false,
+            "new_badge_image": "shopify://shop_images/Group_243.png",
+            "show_second_image": true,
+            "custom_description": "Product description",
+            "search_icon": "shopify://shop_images/store_locator_QB.png",
+            "search_icon_hover": "shopify://shop_images/ChatGPT_Image_Dec_2_2025_06_51_07_PM_dc3c5109-df73-409a-bdd7-72fd465d2d1b.png",
+            "icon_link": "",
+            "icon_open_new_tab": false
+          }
+        },
+        "promo_block_XYjTJP": {
+          "type": "promo_block",
+          "settings": {
+            "block_width": 65,
+            "background_color": "#f58220",
+            "heading": "<p>ingredients +<br/> nutrition</p>",
+            "heading_color": "#0f4735",
+            "button_text": "learn more",
+            "button_link": "#",
+            "vegetable_top_left": "shopify://shop_images/74ab46f0615cade291a70bd67ab2d406c8d6ad75_7a73b820-99c0-4770-98f1-eadb9f1bff4d.png",
+            "vegetable_top_right": "shopify://shop_images/76dcaefd1b7715bffab9954fc7a6971637cb7b60_5e43aedd-e180-44d6-aa46-0d84fa617435.png",
+            "vegetable_middle_left": "shopify://shop_images/fe83b4bd0e9e73f66d02e7ecb706081578ffb478.png",
+            "vegetable_middle_right": "shopify://shop_images/365cf49517568e51bc8c3824884ba8892c326417.png",
+            "vegetable_bottom_left": "shopify://shop_images/76dcaefd1b7715bffab9954fc7a6971637cb7b60_5e43aedd-e180-44d6-aa46-0d84fa617435.png",
+            "vegetable_bottom_right": "shopify://shop_images/74ab46f0615cade291a70bd67ab2d406c8d6ad75_7a73b820-99c0-4770-98f1-eadb9f1bff4d.png"
+          }
+        },
+        "product_UhEaH6": {
+          "type": "product",
+          "settings": {
+            "block_width": 33,
+            "product": "wagon-wheels-mac-cheese",
+            "show_new_badge": false,
+            "new_badge_image": "shopify://shop_images/Group_243.png",
+            "show_second_image": true,
+            "custom_description": "Product description",
+            "search_icon": "shopify://shop_images/store_locator_QB.png",
+            "search_icon_hover": "shopify://shop_images/ChatGPT_Image_Dec_2_2025_06_51_07_PM_dc3c5109-df73-409a-bdd7-72fd465d2d1b.png",
+            "icon_link": "",
+            "icon_open_new_tab": false
+          }
+        },
+        "product_e9G4WG": {
+          "type": "product",
+          "settings": {
+            "block_width": 33,
+            "product": "chicken-meatballs",
+            "show_new_badge": false,
+            "new_badge_image": "shopify://shop_images/Group_243.png",
+            "show_second_image": true,
+            "custom_description": "Product description",
+            "search_icon": "shopify://shop_images/store_locator_QB.png",
+            "search_icon_hover": "shopify://shop_images/ChatGPT_Image_Dec_2_2025_06_51_07_PM_dc3c5109-df73-409a-bdd7-72fd465d2d1b.png",
+            "icon_link": "",
+            "icon_open_new_tab": false
+          }
+        },
+        "product_MLifqG": {
+          "type": "product",
+          "settings": {
+            "block_width": 33,
+            "product": "chicken-nuggets",
+            "show_new_badge": false,
+            "new_badge_image": "shopify://shop_images/Group_243.png",
+            "show_second_image": true,
+            "custom_description": "Product description",
+            "search_icon": "shopify://shop_images/store_locator_QB.png",
+            "search_icon_hover": "shopify://shop_images/ChatGPT_Image_Dec_2_2025_06_51_07_PM_dc3c5109-df73-409a-bdd7-72fd465d2d1b.png",
+            "icon_link": "",
+            "icon_open_new_tab": false
+          }
+        },
+        "promo_block_questions_qKYPbp": {
+          "type": "promo_block_questions",
+          "settings": {
+            "block_width": 33,
+            "heading": "got questions?",
+            "button_text": "learn more",
+            "button_link": "#",
+            "vegetable_top_left": "shopify://shop_images/ad5b140dc9a581f79141d54dc11b82bec5f7d92b_d91ce9ba-bf68-4db4-95a8-abdb2b048355.png",
+            "vegetable_top_center": "shopify://shop_images/d36cf7d0155ef85ad388587375f7c3134b95c1e4_dd45a9d4-6c4d-4671-bd33-69ce08d77114.png",
+            "vegetable_top_right": "shopify://shop_images/7ed33e8ae3c3ef1a188d03e3e0bafb5d78798903.png",
+            "vegetable_bottom_left": "shopify://shop_images/78f17cd2bc8428036666e245f7ba23b09203d626_f3e43255-f079-4233-8621-6c8d3d724e5b.png",
+            "vegetable_bottom_center": "shopify://shop_images/7ed33e8ae3c3ef1a188d03e3e0bafb5d78798903.png",
+            "vegetable_bottom_right": "shopify://shop_images/d36cf7d0155ef85ad388587375f7c3134b95c1e4_dd45a9d4-6c4d-4671-bd33-69ce08d77114.png"
+          }
+        },
+        "product_LmDPMf": {
+          "type": "product",
+          "settings": {
+            "block_width": 33,
+            "product": "chicken-sticks",
+            "show_new_badge": false,
+            "new_badge_image": "shopify://shop_images/Group_243.png",
+            "show_second_image": true,
+            "custom_description": "Product description",
+            "search_icon": "shopify://shop_images/store_locator_QB.png",
+            "search_icon_hover": "shopify://shop_images/ChatGPT_Image_Dec_2_2025_06_51_07_PM_dc3c5109-df73-409a-bdd7-72fd465d2d1b.png",
+            "icon_link": "",
+            "icon_open_new_tab": false
+          }
+        },
+        "product_irdhF6": {
+          "type": "product",
+          "settings": {
+            "block_width": 33,
+            "product": "cheese-pizza-wagon-wheels",
+            "show_new_badge": false,
+            "new_badge_image": "shopify://shop_images/Group_243.png",
+            "show_second_image": true,
+            "custom_description": "Product description",
+            "search_icon": "shopify://shop_images/store_locator_QB.png",
+            "search_icon_hover": "shopify://shop_images/ChatGPT_Image_Dec_2_2025_06_51_07_PM_dc3c5109-df73-409a-bdd7-72fd465d2d1b.png",
+            "icon_link": "",
+            "icon_open_new_tab": false
+          }
+        },
+        "product_JAhmYB": {
+          "type": "product",
+          "settings": {
+            "block_width": 33,
+            "product": "cheeseburger-macs-cheese",
+            "show_new_badge": false,
+            "new_badge_image": "shopify://shop_images/Group_243.png",
+            "show_second_image": true,
+            "custom_description": "Product description",
+            "search_icon": "shopify://shop_images/store_locator_QB.png",
+            "search_icon_hover": "shopify://shop_images/ChatGPT_Image_Dec_2_2025_06_51_07_PM_dc3c5109-df73-409a-bdd7-72fd465d2d1b.png",
+            "icon_link": "",
+            "icon_open_new_tab": false
+          }
+        },
+        "product_RmhmYR": {
+          "type": "product",
+          "settings": {
+            "block_width": 33,
+            "product": "chicken-sticks-potato-tots",
+            "show_new_badge": false,
+            "new_badge_image": "shopify://shop_images/Group_243.png",
+            "show_second_image": true,
+            "custom_description": "Product description",
+            "search_icon": "shopify://shop_images/store_locator_QB.png",
+            "search_icon_hover": "shopify://shop_images/ChatGPT_Image_Dec_2_2025_06_51_07_PM_dc3c5109-df73-409a-bdd7-72fd465d2d1b.png",
+            "icon_link": "",
+            "icon_open_new_tab": false
+          }
+        },
+        "product_B3DRQ7": {
+          "type": "product",
+          "settings": {
+            "block_width": 33,
+            "product": "chicken-sticks-potato-tots",
+            "show_new_badge": false,
+            "new_badge_image": "shopify://shop_images/Group_243.png",
+            "show_second_image": true,
+            "custom_description": "Product description",
+            "search_icon": "shopify://shop_images/store_locator_QB.png",
+            "search_icon_hover": "shopify://shop_images/ChatGPT_Image_Dec_2_2025_06_51_07_PM_dc3c5109-df73-409a-bdd7-72fd465d2d1b.png",
+            "icon_link": "",
+            "icon_open_new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "product_BJkPfJ",
+        "product_DEd9Fq",
+        "product_fKxFBG",
+        "product_ynVxhq",
+        "promo_block_XYjTJP",
+        "product_UhEaH6",
+        "product_e9G4WG",
+        "product_MLifqG",
+        "promo_block_questions_qKYPbp",
+        "product_LmDPMf",
+        "product_irdhF6",
+        "product_JAhmYB",
+        "product_RmhmYR",
+        "product_B3DRQ7"
+      ],
       "name": "Custom Collection Grid",
       "settings": {
+        "section_background": "#f1ead9",
         "wave_image": "shopify://shop_images/Group_5_4.png"
+      }
+    },
+    "instra_reel_tNfdYz": {
+      "type": "instra-reel",
+      "blocks": {
+        "reel_69WxVA": {
+          "type": "reel",
+          "settings": {
+            "image": "shopify://shop_images/0_1.avif",
+            "link": "",
+            "caption": "View reel"
+          }
+        },
+        "reel_jD86jy": {
+          "type": "reel",
+          "settings": {
+            "image": "shopify://shop_images/Mask_group.avif",
+            "link": "",
+            "caption": "View reel"
+          }
+        },
+        "reel_PH686t": {
+          "type": "reel",
+          "settings": {
+            "image": "shopify://shop_images/2.avif",
+            "link": "",
+            "caption": "View reel"
+          }
+        },
+        "reel_xGD9x8": {
+          "type": "reel",
+          "settings": {
+            "image": "shopify://shop_images/6.avif",
+            "link": "",
+            "caption": "View reel"
+          }
+        },
+        "reel_kjTB9R": {
+          "type": "reel",
+          "settings": {
+            "image": "shopify://shop_images/5.avif",
+            "link": "",
+            "caption": "View reel"
+          }
+        },
+        "reel_hDqWkh": {
+          "type": "reel",
+          "settings": {
+            "image": "shopify://shop_images/Mask_group.png",
+            "link": "",
+            "caption": "View reel"
+          }
+        },
+        "reel_D9Tq9P": {
+          "type": "reel",
+          "settings": {
+            "image": "shopify://shop_images/3.avif",
+            "link": "",
+            "caption": "View reel"
+          }
+        }
+      },
+      "block_order": [
+        "reel_69WxVA",
+        "reel_jD86jy",
+        "reel_PH686t",
+        "reel_xGD9x8",
+        "reel_kjTB9R",
+        "reel_hDqWkh",
+        "reel_D9Tq9P"
+      ],
+      "name": "Insta Reels Feed",
+      "settings": {
+        "heading": "Wins of the Week",
+        "heading_size": 84,
+        "heading_size_mobile": 36,
+        "heading_color": "#0f4735",
+        "image_border_radius": 0,
+        "enable_links": false,
+        "enable_lightbox": true,
+        "enable_autoplay": true,
+        "autoplay_speed": 4,
+        "padding_top": 0,
+        "padding_bottom": 4,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 4,
+        "color_scheme": "accent-1"
+      }
+    },
+    "custom_liquid_aJkeBT": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"100%\" height=\"auto\" viewBox=\"0 0 1907 130\" fill=\"none\">\n<path d=\"M1937 119.999L19.9106 119.999L-15 119.999L-7.523 39.4189C105.131 47.3005 435.615 66.9783 651.95 88.4649C961 119.16 1153.99 81.2192 1384.5 66.2784C1566.44 54.4854 1752.47 30.8172 1937 56.5112L1937 119.999Z\" fill=\"#F8F4EB\"/>\n<path d=\"M-16.0001 130.001H1906.98H1942V18.001C1768.91 77.0981 1469 130.001 981.009 84.7992C618.294 51.2014 169.094 47.9681 -16.0001 84.7992V130.001Z\" fill=\"#F8F4EB\"/>\n<path d=\"M891.229 17.2837C872.395 30.4268 867.783 56.3431 880.926 75.1767L887.063 83.9713L895.858 77.834C914.691 64.691 919.304 38.7747 906.161 19.941L900.023 11.1465L891.229 17.2837Z\" fill=\"#F8F4EB\"/>\n<path d=\"M840.508 57.1766C843.276 74.7343 859.75 86.7205 877.308 83.9518L885.506 82.659L884.214 74.4603C881.445 56.9026 864.971 44.9164 847.413 47.685L839.215 48.9779L840.508 57.1766Z\" fill=\"#F8F4EB\"/>\n<path d=\"M929.606 53.792C912.81 47.9753 894.483 56.8737 888.666 73.6696L885.95 81.5126L893.793 84.2288C910.589 90.0455 928.916 81.1471 934.733 64.3512L937.449 56.5082L929.606 53.792Z\" fill=\"#F8F4EB\"/>\n</svg>",
+        "color_scheme": "scheme-8fca23bf-c055-4afc-bb4c-d7702601df39",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     }
   },
   "order": [
     "banner",
     "product-grid",
-    "slideshow_FHmD67",
-    "collection_product_block_nhVB7J"
+    "slideshow_rrmh8J",
+    "collection_product_block_8egXne",
+    "instra_reel_tNfdYz",
+    "custom_liquid_aJkeBT"
   ]
 }
