@@ -53,6 +53,7 @@ text-align:justify;
 
 .product-form__input--pill input[type=radio]+label{
   border:none !important;
+  border-radius:0 !important;
 }
 
 /* Remove divider from last label */
