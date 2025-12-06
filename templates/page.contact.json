@@ -68,7 +68,9 @@
             "column_title_weight": 700,
             "icon_size": 50,
             "icon_bg_color": "#ffffff",
+            "icon_1": "shopify://shop_images/Group_2.png",
             "text_1": "123-456-7890",
+            "icon_2": "shopify://shop_images/Vector_3.png",
             "text_2": "info@kidfresh.com",
             "text_size": 18,
             "text_weight": 600
