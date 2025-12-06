@@ -58,7 +58,7 @@ text-align:justify;
   background: #1E4E3D  !important;      
   color: #fff  !important;
 font-weight: 700;
-font-size: 27px;
+font-size: 27px !important;
 line-height: 100%;
 letter-spacing: -2%;
 
@@ -75,7 +75,7 @@ letter-spacing: -2%;
   border-radius:0  !important;
   padding:10px  !important;
 font-weight: 500;
-font-size: 27px;
+font-size: 27px !important;
 line-height: 100%;
 letter-spacing: -2%;
 
