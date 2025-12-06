@@ -6,7 +6,7 @@
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    padding-bottom: 70px;
   }
 
   @media screen and (min-width: 750px) {
@@ -209,9 +209,7 @@
     .contact-header {
       margin-bottom: 40px !important;
     }
-    .section-{{ section.id }}-padding {
-      padding-bottom :80px !important;
-    }
+    
 .contact-multicolumn-{{ section.id }} .decorative-top-left {
     top: 78px !important;
     left: 0;
