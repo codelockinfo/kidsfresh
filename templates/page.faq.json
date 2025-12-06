@@ -37,7 +37,9 @@
         "text_image_block_i6WA36"
       ],
       "name": "Text with Image Section",
-      "settings": {}
+      "settings": {
+        "bg_color": "#f1ead9"
+      }
     },
     "custom_faq_background_HNEFmG": {
       "type": "custom-faq-background",
@@ -46,9 +48,9 @@
         "heading": "we’re here to help you win more meals.",
         "subheading": "have a question, comment or concern? check out our FAQs or just send us a message.",
         "btn1_label": "FAQs",
-        "btn1_link": "",
+        "btn1_link": "shopify://pages/faq",
         "btn2_label": "message us",
-        "btn2_link": ""
+        "btn2_link": "shopify://pages/contact"
       }
     },
     "custom_liquid_NHMX7w": {
