@@ -9,13 +9,6 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "main-page",
-      "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
-      }
-    },
     "slideshow_cAi8Jj": {
       "type": "slideshow",
       "blocks": {
@@ -38,6 +31,14 @@
       "name": "Text with Image Section",
       "settings": {
         "bg_color": "#f1ead9"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
       }
     }
   },
