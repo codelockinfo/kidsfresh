@@ -101,10 +101,11 @@ letter-spacing: -2%;
 .accordion__content  p{
        font-family: var(--font-family);
     font-weight: 400;
-    font-size: 15px;
+    font-size: 21px;
     color: #5D3328;
     padding:10px 0;
-
+    line-height: 33px;
+    letter-spacing: 1.5%;
 }
 .accordion{
   margin:0 0 20px 0!important;
