@@ -86,7 +86,8 @@
     text-align: {{ section.settings.text_align }};
 ">
   <div class="container">
-    {% for block in section.blocks %}
+    <div>
+        {% for block in section.blocks %}
       <div class="text-block" style="margin-bottom: 40px;">
         
         {% if block.settings.heading != blank %}
@@ -103,5 +104,7 @@
 
       </div>
     {% endfor %}
+    </div>
+    
   </div>
 </section>
