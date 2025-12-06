@@ -113,7 +113,7 @@
       ],
       "name": "Custom Text Blocks",
       "settings": {
-        "bg_color": "#f4f0de",
+        "bg_color": "#f1ead9",
         "text_color": "#333333",
         "heading_size": 24,
         "paragraph_size": 16,
