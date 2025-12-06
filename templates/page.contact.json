@@ -81,10 +81,10 @@
           "settings": {
             "background_color": "#f89821",
             "text_color": "#63441d",
-            "border_radius": 15,
+            "border_radius": 10,
             "text_alignment": "left",
             "column_title": "retailers:",
-            "column_title_size": 36,
+            "column_title_size": 60,
             "column_title_weight": 700,
             "icon_size": 50,
             "icon_bg_color": "#ffffff",
