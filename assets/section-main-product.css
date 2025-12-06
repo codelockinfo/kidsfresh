@@ -25,7 +25,9 @@ line-height: 32px;
 letter-spacing: -2%;
 text-align:justify;
 }
-
+.product__info-container .product__description{
+  margin:0  0 40px 0px !important;
+}
 
 /* Wrapper for pill selector */
 .product-form__input--pill {
