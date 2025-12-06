@@ -214,7 +214,7 @@
         "button_url_1": "",
         "button_label_2": "markets near me",
         "button_url_2": "",
-        "padding_bottom": ""
+        "padding_bottom": 0
       }
     },
     "veggitable_animation_8qbHEt": {
@@ -263,7 +263,7 @@
         "button_url_1": "",
         "button_label_2": "markets near me",
         "button_url_2": "",
-        "padding_bottom": "100px"
+        "padding_bottom": 100
       }
     },
     "custom_liquid_HPB7Wb": {
