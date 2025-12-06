@@ -75,8 +75,7 @@
   {%- if section.settings.background_image_desktop != blank or section.settings.background_image_mobile != blank -%}
     <div class="background-image-wrapper">
       {%- if section.settings.background_image_mobile != blank -%}
-        <img 
-          src="{{ section.settings.background_image_mobile | image_url: width: 750 }}"
+        <img   src="{{ section.settings.background_image_mobile | image_url: width: 750 }}"
           alt="Background"
           class="small-hide medium-up-hide"
           loading="lazy"
@@ -95,6 +94,7 @@
         >
       {%- endif -%}
     </div>
+    <div>ds</div>
   {%- endif -%}
 
   {%- if section.settings.decorative_top_left != blank -%}
