@@ -24,7 +24,7 @@
           "type": "text_image_block",
           "settings": {
             "desktop_image": "shopify://shop_images/Group_309.png",
-            "mobile_image": "shopify://shop_images/Group_279_828ae318-0a7c-4989-ba0f-d891cd704934.png",
+            "mobile_image": "shopify://shop_images/Group_4.png",
             "heading": "victory is right around the corner",
             "subheading": "",
             "button_label": "learn more",
@@ -37,7 +37,9 @@
         "text_image_block_i6WA36"
       ],
       "name": "Text with Image Section",
-      "settings": {}
+      "settings": {
+        "bg_color": "#f1ead9"
+      }
     },
     "find_us_near_you_9HyHEj": {
       "type": "find-us-near-you",
