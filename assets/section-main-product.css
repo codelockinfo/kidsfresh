@@ -342,7 +342,13 @@ product-info {
 
 
 }
-
+@media screen and (max-width: 410px) {
+  product-info .button--secondary, product-info .button--primary
+{
+    font-size:20px;
+    padding:8px 16px;
+  }
+}
 /* my css end */
 
 
