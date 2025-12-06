@@ -161,11 +161,11 @@ letter-spacing: -2%;
 .highlighted-accordion__label {
    font-family: var(--font-family);
 font-weight: 600;
-font-size: 20px;
+font-size: 29px;
 text-align: center;
 color:#39302D;
 line-height:32px;
-letter-spacing:-2px;
+letter-spacing:0px;
 }
 
 .highlighted-accordion__sublabel {
