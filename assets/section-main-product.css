@@ -286,7 +286,9 @@ product-info .pdp-buttons {
 }
   
 @media screen and (max-width: 768px) {
-
+.product__info-container .product__description{
+  margin:0  0 30px 0px !important;
+}
   .product__info-wrapper--extra-padding{
     padding:0 !important;
   }
