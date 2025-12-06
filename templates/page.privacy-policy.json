@@ -40,10 +40,34 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "content_qPpfwV": {
+      "type": "content",
+      "blocks": {
+        "text_block_VPxdWN": {
+          "type": "text_block",
+          "settings": {
+            "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.",
+            "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus orci facilisis id."
+          }
+        }
+      },
+      "block_order": [
+        "text_block_VPxdWN"
+      ],
+      "name": "Custom Text Blocks",
+      "settings": {
+        "bg_color": "#f4f0de",
+        "text_color": "#333333",
+        "heading_size": 24,
+        "paragraph_size": 16,
+        "text_align": "left"
+      }
     }
   },
   "order": [
     "slideshow_cAi8Jj",
-    "main"
+    "main",
+    "content_qPpfwV"
   ]
 }
