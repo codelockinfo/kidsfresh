@@ -372,9 +372,7 @@
             id="location-input-{{ section.id }}"
           >
           <div class="action-buttons">
-            <button type="button" class="btn-find" id="find-btn-{{ section.id }}">
-              {{ section.settings.find_button_label | default: "Find" }}
-            </button>
+           
             {%- if section.settings.buy_online_link != blank -%}
               <a href="{{ section.settings.buy_online_link }}" class="btn-buy-online">
                 {{ section.settings.buy_online_label | default: "Buy Online" }}
