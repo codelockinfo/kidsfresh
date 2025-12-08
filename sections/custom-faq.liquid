@@ -1096,17 +1096,13 @@ document.addEventListener("DOMContentLoaded", () => {
     .faq-tab {
         font-size: 33px;
         line-height: 36px;
-        padding-bottom: 0;
     }
 
     .faq-tab::after {
-        height: 30px;        /* Smaller underline */
-        bottom: -25px;       /* Bring it closer to text */
+        height: 30px;
+        bottom: -25px;
         background-size: auto;
-    }
-
-    .faq-tab.active::after {
-        width: 100%;         /* Keep underline full width */
+        background-position: center;
     }
 }
 
