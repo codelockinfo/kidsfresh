@@ -415,7 +415,8 @@
     </div>
 
     <div class="products-grid-container">
-     <div class="search-box">
+     <div>
+      <div class="search-box">
     <input type="search" placeholder="Filter Products">
     <span class="icon">
         <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 24 24" fill="#555">
@@ -423,6 +424,7 @@
         </svg>
     </span>
 </div>
+     </div>
     {%- if section.settings.collection != blank -%}
       <ul class="products-grid">
         {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
