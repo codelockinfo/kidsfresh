@@ -976,8 +976,8 @@ document.addEventListener("DOMContentLoaded", () => {
     cursor: pointer;
 }
 
-.faq-tab:hover::after,
-.faq-tab.active::after{
+.faq-tab::after,
+.faq-tab::after{
     content: '';
     position: absolute;
     left: 0;
@@ -990,8 +990,8 @@ document.addEventListener("DOMContentLoaded", () => {
     transition: width 0.4s ease;
 }
 
-.faq-tab:hover,
-.faq-tab.active {
+.faq-tab:hover::after,
+.faq-tab.active::after {
     width: 100%;
 }
 
