@@ -91,7 +91,6 @@
     text-align: center;
     border: 2px solid #E7DEC7;
     /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); */
-    border-right: none;
   }
 
   .food-love-feature-icon {
@@ -227,7 +226,7 @@
     <div class="food-love-features">
       {% for block in section.blocks %}
         {% if block.type == 'feature' %}
-          <div class="food-love-feature" style="background: {{ section.settings.feature_bg_color | default: '#F1EAD9' }}; border:2px solid #E7DEC7;" {{ block.shopify_attributes }}>
+          <div class="food-love-feature" style="background: {{ section.settings.feature_bg_color | default: '#F1EAD9' }};" {{ block.shopify_attributes }}>
             {% if block.settings.icon != blank %}
               <div class="food-love-feature-icon">
                 <img src="{{ block.settings.icon | image_url }}" 
