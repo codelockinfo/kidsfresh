@@ -94,7 +94,7 @@
     display: flex;
     gap:10px;
     align-items: center;
-    flex-wrap: wrap;
+
   }
 
   .location-input {
@@ -105,20 +105,18 @@
     border-bottom-right-radius: 0;
     font-size: 20px;
     line-height: 30px;
-    min-width: 250px;
+    width: 70%;
     background-color: #fff;
     font-family: var(--font-family);
     letter-spacing: 1px;
   }
-
+ .input_boxs{
+  display:flex;
+}
   .location-input::placeholder {
     color: #999;
   }
 
-  .action-buttons {
-    display: flex;
-    gap: 10px;
-  }
 
   .btn-find,
   .btn-buy-online {
@@ -275,6 +273,9 @@
     .find-us-section {
       padding: 20px 20px 0;
     }
+    .location-controls{
+      display:block;
+    }
 .container_search{
   padding:0px  0px;
 }
@@ -296,10 +297,11 @@
     .location-controls {
       width: 100%;
     }
-
-    
-
     .action-buttons {
+    
+      margin-top: 20px;
+    }
+    .btn-buy-online{
       width: 100%;
     }
 
@@ -366,7 +368,8 @@
       <div class="product-selection-header">
         <h2>{{ section.settings.selection_heading | default: "Select Specific Products" }}</h2>
         <div class="location-controls">
-          <input
+         <div class="input_boxs">
+           <input
             type="text"
             class="location-input"
             placeholder="{{ section.settings.location_placeholder | default: 'Denver, CO 80202' }}"
@@ -375,6 +378,7 @@
              <button type="button" class="btn-find" id="find-btn-{{ section.id }}">
               {{ section.settings.find_button_label | default: "Find" }}
             </button>
+         </div>
           <div class="action-buttons">
            
             {%- if section.settings.buy_online_link != blank -%}
@@ -392,6 +396,23 @@
     </div>
 
     <div class="products-grid-container">
+      <div>
+         <div class="main-search-bar">
+        <form action="{{ routes.search_url }}" method="get" role="search">
+          <input
+            type="search"
+            name="q"
+            placeholder="{{ section.settings.search_placeholder | default: 'Search' }}"
+            value="{{ search.terms | escape }}"
+          >
+          <input type="hidden" name="options[prefix]" value="last">
+          <svg class="search-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 17A8 8 0 1 0 9 1a8 8 0 0 0 0 16z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="m19 19-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </form>
+      </div>
+      </div>
     {%- if section.settings.collection != blank -%}
       <ul class="products-grid">
         {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
