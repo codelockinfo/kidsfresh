@@ -41,6 +41,9 @@ image-height-wrapper{
     .contact-column{
         padding: 10px 29px 12px !important;
     }
+    .contact-column-title{
+        font-size:50px;
+    }
 }
 
 @media (max-width: 768px) {
