@@ -42,7 +42,7 @@ image-height-wrapper{
         padding: 10px 29px 12px !important;
     }
     .contact-column-title{
-        font-size:50px;
+        font-size:50px !important;
     }
 }
 
