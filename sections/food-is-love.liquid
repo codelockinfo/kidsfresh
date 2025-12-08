@@ -91,28 +91,10 @@
     border: 2px solid #E7DEC7;
   } */
 
-  /* .food-love-features {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  border: 2px solid #E7DEC7; 
-  border-radius: 12px;
-  overflow: hidden;            
-  margin-top: 60px;
-}
-
-.food-love-feature {
-  padding: 40px 30px;
-  text-align: center;
-}
-
-.food-love-feature:not(:last-child) {
-  border-right: 2px solid #E7DEC7;
-} */
-
 .food-love-features {
   display: flex;
   justify-content: center;
-  flex-wrap: nowrap;               /* keep them in one row */
+  flex-wrap: wrap;               /* keep them in one row */
   border: 1px solid #E7DEC7;       /* outer border */
   border-radius: 12px;
   overflow: hidden;                /* keeps rounded corners clean */
@@ -198,9 +180,6 @@
       width: 40px;
       opacity: 0.5;
     }
-      .food-love-features {
-    flex-wrap: wrap;
-  }
 
   .food-love-feature {
     width: 100%;
@@ -211,22 +190,6 @@
   .food-love-feature:last-child {
     border-bottom: none;
   }
-
-      /* .food-love-features {
-    grid-template-columns: 1fr;
-  }
-
-  .food-love-feature {
-    border-right: none;
-    border-bottom: 2px solid #E7DEC7;
-  }
-
-  .food-love-feature:last-child {
-    border-bottom: none;
-  }
-  .food-love-feature:not(:last-child) {
-  border-right: none;
-} */
   }
 
   @media (max-width: 640px) {
