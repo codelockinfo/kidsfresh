@@ -58,6 +58,9 @@ image-height-wrapper{
     .contact-text {
       font-size:24px !important;
     }
+    .contact-column {
+      padding: 30px 20px !important;
+    }
 .footer__content-top.page-width{
     padding:0px 50px;
 }
