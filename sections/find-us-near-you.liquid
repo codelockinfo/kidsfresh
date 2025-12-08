@@ -298,12 +298,11 @@
       width: 100%;
     }
     .action-buttons {
-      width: 100%;
+    
       margin-top: 20px;
     }
     .btn-buy-online{
       width: 100%;
-
     }
 
     {% comment %} .btn-find,
@@ -397,6 +396,23 @@
     </div>
 
     <div class="products-grid-container">
+      <div>
+         <div class="main-search-bar">
+        <form action="{{ routes.search_url }}" method="get" role="search">
+          <input
+            type="search"
+            name="q"
+            placeholder="{{ section.settings.search_placeholder | default: 'Search' }}"
+            value="{{ search.terms | escape }}"
+          >
+          <input type="hidden" name="options[prefix]" value="last">
+          <svg class="search-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 17A8 8 0 1 0 9 1a8 8 0 0 0 0 16z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="m19 19-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </form>
+      </div>
+      </div>
     {%- if section.settings.collection != blank -%}
       <ul class="products-grid">
         {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
