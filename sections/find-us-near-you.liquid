@@ -371,6 +371,9 @@
             placeholder="{{ section.settings.location_placeholder | default: 'Denver, CO 80202' }}"
             id="location-input-{{ section.id }}"
           >
+             <button type="button" class="btn-find" id="find-btn-{{ section.id }}">
+              {{ section.settings.find_button_label | default: "Find" }}
+            </button>
           <div class="action-buttons">
            
             {%- if section.settings.buy_online_link != blank -%}
