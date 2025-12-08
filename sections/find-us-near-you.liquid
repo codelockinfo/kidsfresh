@@ -110,7 +110,9 @@
     font-family: var(--font-family);
     letter-spacing: 1px;
   }
-
+ .input_boxs{
+  display: flex;
+}
   .location-input::placeholder {
     color: #999;
   }
@@ -366,7 +368,7 @@
       <div class="product-selection-header">
         <h2>{{ section.settings.selection_heading | default: "Select Specific Products" }}</h2>
         <div class="location-controls">
-         <div>
+         <div class="input_boxs">
            <input
             type="text"
             class="location-input"
