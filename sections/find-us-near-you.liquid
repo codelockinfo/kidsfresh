@@ -365,7 +365,8 @@
       <div class="product-selection-header">
         <h2>{{ section.settings.selection_heading | default: "Select Specific Products" }}</h2>
         <div class="location-controls">
-          <input
+         <div>
+           <input
             type="text"
             class="location-input"
             placeholder="{{ section.settings.location_placeholder | default: 'Denver, CO 80202' }}"
@@ -374,6 +375,7 @@
              <button type="button" class="btn-find" id="find-btn-{{ section.id }}">
               {{ section.settings.find_button_label | default: "Find" }}
             </button>
+         </div>
           <div class="action-buttons">
            
             {%- if section.settings.buy_online_link != blank -%}
