@@ -1092,7 +1092,7 @@ document.addEventListener("DOMContentLoaded", () => {
    color: #5D3328;
   }
 
- @media (max-width: 768px) and (min-width: 460px) {
+ {% comment %} @media (max-width: 768px) and (min-width: 460px) {
     .faq-tab {
         font-size: 33px;
         line-height: 36px;
@@ -1105,7 +1105,7 @@ document.addEventListener("DOMContentLoaded", () => {
         background-size: auto;
         background-position: center;
     }
-}
+} {% endcomment %}
 
 
 
@@ -1130,6 +1130,18 @@ document.addEventListener("DOMContentLoaded", () => {
     font-size: 16px !important;
     line-height: 22px !important;
 }
+    .faq-tab {
+        font-size: 33px;
+        line-height: 36px;
+        padding-bottom: 0;
+    }
+
+    .faq-tab::after {
+        height: 30px;
+        bottom: -25px;
+        background-size: auto;
+        background-position: center;
+    }
 }
 @media(min-width:769px) and (max-width:991px){
     .faq-tab {
