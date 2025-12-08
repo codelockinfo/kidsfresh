@@ -138,7 +138,7 @@
 
     <div class="contact-columns-wrapper">
       {%- for block in section.blocks -%}
-        <div class="contact-column" {{ block.shopify_attributes }} style="background-color: {{ block.settings.background_color }}; padding: 17px; border-radius: {{ block.settings.border_radius }}px; text-align: {{ block.settings.text_alignment }};">
+        <div class="contact-column" {{ block.shopify_attributes }} style="background-color: {{ block.settings.background_color }}; padding: 17px 46px 46px; border-radius: {{ block.settings.border_radius }}px; text-align: {{ block.settings.text_alignment }};">
           {%- if block.settings.column_title != blank -%}
             <h3 class="contact-column-title" style="font-size: {{ block.settings.column_title_size }}px; font-weight: {{ block.settings.column_title_weight }}; color: {{ block.settings.text_color }}; margin-bottom: 20px;    font-family: var(--font-family);
  text-transform: lowercase;">
