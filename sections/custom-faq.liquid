@@ -947,7 +947,7 @@ document.addEventListener("DOMContentLoaded", () => {
 }
 
 /* TAB style */
-.faq-tab {
+{% comment %} .faq-tab {
   opacity: 0.7;
   transition: 0.3s ease;
   cursor: pointer;
@@ -961,7 +961,69 @@ document.addEventListener("DOMContentLoaded", () => {
   opacity: 1;
   color: #F89821 !important;
   text-decoration: underline;
+} {% endcomment %}
+
+.faq-tab {
+    font-family: var(--font-family);
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+    font-size: 45px; 
+    line-height: 100%;
+    color: #fff; 
+    text-decoration: none;
+    font-weight: 400;
+    cursor: pointer;
 }
+
+.faq-tab::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1.5pc;
+    width: 0;
+    height: 50px;
+    background-image: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_19_2.png?v=1765171177);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    transition: width 0.4s ease;
+}
+.faq-tab.active {
+color: #F89821 !important;
+}
+
+.faq-tab.active::after {
+    width: 100%;
+}
+
+  {% comment %} ul.list-menu.list-menu--inline span {
+    font-family: var(--font-family);
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+    font-size: 24px; 
+    line-height: 100%;
+    color: #fff; 
+    text-decoration: none;
+    font-weight: 400;
+}
+
+ul.list-menu.list-menu--inline span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1.5pc;
+    width: 0;
+    height: 50px;
+    background-image: url(https://cdn.shopify.com/s/files/1/0790/5017/8785/files/Untitled_design_-_2025-11-21T010727.765.png?v=1763667456);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    transition: width 0.4s ease;
+}
+
+ul.list-menu.list-menu--inline span:hover::after {
+    width: 100%;
+} {% endcomment %}
 
 /* -------------------------
    DYNAMIC TITLE ABOVE FAQ
@@ -989,6 +1051,7 @@ document.addEventListener("DOMContentLoaded", () => {
   border-radius: 10px;
   margin-bottom: 24px;
   padding: 17px 22px;
+  cursor: pointer;
   border: 4px solid #0F4735;
   position: relative;
   z-index: 1;
@@ -1016,8 +1079,6 @@ document.addEventListener("DOMContentLoaded", () => {
   border: 3px solid #0F4735;
   background: #F89821;
   transition: 0.3s ease;
-  cursor: pointer;
-  flex-shrink: 0;
 }
 
 .faq-item.open .faq-arrow {
@@ -1034,16 +1095,12 @@ document.addEventListener("DOMContentLoaded", () => {
 .faq-item-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease, padding 0.4s ease;
-  opacity: 0;
-  padding-top: 0;
+  transition: max-height .4s ease;
 }
 
 .faq-item.open .faq-item-content {
-  max-height: 1000px;
+  max-height: 400px;
   width: 92%;
-  opacity: 1;
-  padding-top: 15px;
 }
 
 .faq-item-content p {
@@ -1255,14 +1312,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  /* FAQ ACCORDION - Only arrow button is clickable */
-  document.querySelectorAll(".faq-arrow").forEach(arrow => {
-    arrow.addEventListener("click", (e) => {
-      e.stopPropagation(); // Prevent event bubbling
-      const item = arrow.closest(".faq-item");
-      if (item) {
-        item.classList.toggle("open");
-      }
+  /* FAQ ACCORDION */
+  document.querySelectorAll(".faq-item").forEach(item => {
+    item.addEventListener("click", () => {
+      item.classList.toggle("open");
     });
   });
 
