@@ -121,15 +121,15 @@
   </div>
   <div class="page-width" style="position: relative; z-index: 2;">
     {%- if section.settings.title != blank or section.settings.description != blank -%}
-      <div class="contact-header">
+      <div class="contact-header" style="text-align: center; margin-bottom: 60px;">
         {%- if section.settings.title != blank -%}
-          <h2 class="contact-main-title" style="font-size: {{ section.settings.title_size }}px; font-weight: {{ section.settings.title_weight }}; color: {{ section.settings.title_color }};  line-height: 1.2;     font-family: var(--font-family);
+          <h2 class="contact-main-title" style="font-size: {{ section.settings.title_size }}px; font-weight: {{ section.settings.title_weight }}; color: {{ section.settings.title_color }};  line-height: 86px; font-family: var(--font-family);
 ">
             {{ section.settings.title }}
           </h2>
         {%- endif -%}
         {%- if section.settings.description != blank -%}
-          <div class="contact-description">
+          <div class="contact-description" style="font-size: {{ section.settings.description_size }}px; color: {{ section.settings.description_color }};  margin: 0 auto;">
             {{ section.settings.description }}
           </div>
         {%- endif -%}
@@ -199,10 +199,6 @@
     .contact-header h2{
         margin: 0px;
     }
-    .contact-header {
-      text-align: center; 
-      margin-bottom: 60px;
-    }
     .flowers{
       position: absolute;
     bottom: -36px;
@@ -213,11 +209,6 @@
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
       gap: 30px; 
       max-width: 1200px; 
-      margin: 0 auto;
-    }
-    .contact-description {
-      font-size: {{ section.settings.description_size }}px; 
-      color: {{ section.settings.description_color }};  
       margin: 0 auto;
     }
   @media screen and (max-width: 749px) {
