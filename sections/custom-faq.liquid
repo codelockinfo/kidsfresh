@@ -978,7 +978,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 .faq-tab::after{
     content: '';
-    color: #F89821 !important;
     position: absolute;
     left: 0;
     bottom: -1.5pc;
@@ -989,9 +988,11 @@ document.addEventListener("DOMContentLoaded", () => {
     background-repeat: no-repeat;
     transition: width 0.4s ease;
 }
+.faq-tab.active {
+color: #F89821 !important;
+}
 
 .faq-tab.active::after {
-  color: #F89821 !important;
     width: 100%;
 }
 
