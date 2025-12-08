@@ -79,7 +79,14 @@
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 60px;
+    box-sizing: border-box;
   }
+  .food-love-feature:not(:nth-child(1)) {
+  border-left: none;
+}
+.food-love-feature:nth-child(n+4) {
+  border-top: none;
+}
 
   .food-love-feature {
     flex: 1;
