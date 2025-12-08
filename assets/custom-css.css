@@ -38,6 +38,9 @@ image-height-wrapper{
         font-size: 18px;
         line-height: 24px;
     }
+    .contact-column{
+        padding: 10px 29px 12px !important;
+    }
 }
 
 @media (max-width: 768px) {
