@@ -1092,9 +1092,24 @@ document.addEventListener("DOMContentLoaded", () => {
    color: #5D3328;
   }
 
-  @media(min-width:460px) and (max-width:768px) {
+ @media (max-width: 768px) and (min-width: 460px) {
+    .faq-tab {
+        font-size: 32px;
+        line-height: 38px;
+        padding-bottom: 0;
+    }
 
-  }
+    .faq-tab::after {
+        height: 30px;        /* Smaller underline */
+        bottom: -25px;       /* Bring it closer to text */
+        background-size: 100% 100%;
+    }
+
+    .faq-tab.active::after {
+        width: 100%;         /* Keep underline full width */
+    }
+}
+
 
 
 @media(max-width:768px){
