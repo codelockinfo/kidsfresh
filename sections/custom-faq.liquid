@@ -947,7 +947,7 @@ document.addEventListener("DOMContentLoaded", () => {
 }
 
 /* TAB style */
-.faq-tab {
+{% comment %} .faq-tab {
   opacity: 0.7;
   transition: 0.3s ease;
   cursor: pointer;
@@ -961,6 +961,39 @@ document.addEventListener("DOMContentLoaded", () => {
   opacity: 1;
   color: #F89821 !important;
   text-decoration: underline;
+} {% endcomment %}
+
+  .faq-tab {
+    font-family: var(--font-family);
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+    font-size: 24px; 
+    line-height: 100%;
+    color: #fff; 
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.faq-tab::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1.5pc;
+    width: 0;
+    height: 50px;
+    background-image: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_19_2.png?v=1765171177);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    transition: width 0.4s ease;
+}
+
+.faq-tab.active {
+  color: #F89821 !important;
+}
+
+.faq-tab.active::after {
+    width: 100%;
 }
 
 /* -------------------------
@@ -968,11 +1001,11 @@ document.addEventListener("DOMContentLoaded", () => {
 -------------------------- */
 .faq-dynamic-title {
   font-family: var(--font-family);
-  font-size: 55px;
+  font-size: 60px;
+  line-height: 50px;
   font-weight: 700;
   color: #0F4735;
-  margin-top: 20px;
-  margin-bottom: 25px;
+  margin-bottom: 40px;
   text-transform: lowercase;
 }
 
@@ -1061,7 +1094,6 @@ document.addEventListener("DOMContentLoaded", () => {
 @media(max-width:768px){
     .tabs-grid {
         grid-template-columns: repeat(2, auto);
-        gap: 24px 57px;
     }
   .faq-tabs {
     display: block;
