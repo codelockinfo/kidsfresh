@@ -48,7 +48,7 @@ image-height-wrapper{
         font-size: 26px !important;
     }
     .contact-items{
-            gap: 20px
+            gap: 18px !important;
     }
 }
 
