@@ -37,7 +37,9 @@
         "text_image_block_i6WA36"
       ],
       "name": "Text with Image Section",
-      "settings": {}
+      "settings": {
+        "bg_color": "#f1ead9"
+      }
     },
     "hero_text_image_JgGcCx": {
       "type": "hero-text-image",
@@ -260,7 +262,7 @@
       ],
       "name": "Ungredients",
       "settings": {
-        "background_image": "shopify://shop_images/Group_292.png",
+        "background_image": "shopify://shop_images/Group_292_1.png",
         "mobile_background_image": "shopify://shop_images/iPhone_14_15_Pro_Max_-_1_3.png",
         "background_color": "#0f4735",
         "title": "ungredients",
