@@ -2475,7 +2475,7 @@ gap:12px;
 }
   }
 
-  @media (max-width: 560px) {
+  @media (min-width: 461px) (max-width: 560px) {
     .search-icon {
       bottom: 10px !important;
       right: 10px !important;
@@ -2486,6 +2486,18 @@ gap:12px;
       width: 35px !important;
       height: 35px !important;
     }
+  }
+  @media (max-width: 460px) {
+        .search-icon {
+        bottom: 4px;
+        right: 6px;
+      }
+
+      .search-icon-img.default-img,
+      .search-icon-img.hover-img {
+        width: 30px;
+        height: 30px;
+      }
   }
 </style>
 
