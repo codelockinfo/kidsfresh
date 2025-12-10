@@ -200,7 +200,7 @@ product-info .pdp-buttons {
       transition: transform .2s ease, box-shadow .2s ease;
       text-align: center;
       border-radius: 35px;
-      padding: 8px 34px;
+      padding: 14px 34px;
       border: none;
       text-transform: lowercase;
       transform: none !important;
@@ -220,7 +220,7 @@ product-info .pdp-buttons {
       content: '';
       background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_25.png?v=1764592665);
       background-size: 100% 100%;
-      padding: 8px 34px;
+      padding: 14px 34px;
       bottom: -5px;
       z-index: 1;
       box-shadow: none;
@@ -249,7 +249,7 @@ product-info .pdp-buttons {
       transition: transform .2s ease, box-shadow .2s ease;
       text-align: center;
       border-radius: 35px;
-      padding: 8px 34px;
+      padding: 14px 34px;
       border: none;
       text-transform: lowercase;
       transform: none !important;
@@ -269,7 +269,7 @@ product-info .pdp-buttons {
       content: '';
       background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_25_1.png?v=1764654764);
       background-size: 100% 100%;
-      padding: 8px 34px;
+      padding: 14px 34px;
       bottom: -6px;
       z-index: 1;
       box-shadow: none;
