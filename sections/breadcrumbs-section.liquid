@@ -2,7 +2,7 @@
   Breadcrumbs Section with Color Scheme Support
 {% endcomment %}
 
-<section class="kf-breadcrumbs-wrapper page-width ">
+<section class="kf-breadcrumbs-wrapper page-width color-{{ section.settings.color_scheme }}">
   <nav class="kf-breadcrumbs" aria-label="Breadcrumb">
     <ul>
 
@@ -58,11 +58,11 @@
 </section>
 
 <style>
-{% comment %} .kf-breadcrumbs-wrapper {
+.kf-breadcrumbs-wrapper {
   padding: 38px 180px 0px 180px;
   max-width: 1990px;
   margin: 0 auto;
-} {% endcomment %}
+}
 
 .kf-breadcrumbs ul {
   list-style: none;
@@ -97,9 +97,9 @@
 
 
 @media screen and (max-width: 768px) {
-  {% comment %} .kf-breadcrumbs-wrapper {
+  .kf-breadcrumbs-wrapper {
     padding: 38px 30px 0px 30px;
-  } {% endcomment %}
+  }
 
   .kf-breadcrumbs ul{
 font-size:20px;}
