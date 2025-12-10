@@ -304,6 +304,11 @@ product-info .pdp-buttons {
     font-size:17px;
     padding:8px 20px;
   }
+.custom-background-wrapper {
+    
+    margin-top: -64px;
+}
+
 
 .product-form__input--pill input[type=radio]:checked+label{
   font-size:18px !important;
