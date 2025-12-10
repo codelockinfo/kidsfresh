@@ -174,11 +174,12 @@
   }
 }
 
-/* Large Desktop Styles */
-@media screen and (min-width: 990px) {
-  .insta-reels-feed-{{ section.id }} .page-width {
-
-
+@media screen and (max-width: 340px) {
+  .insta-reels-feed-{{ section.id }} .insta-reels-heading {
+    font-size: 36px;
+        margin-bottom: 0;
+        line-height: 86px;
+        padding: 0;
   }
 }
 
@@ -189,9 +190,6 @@
     --card-h: 281px;
     --gap: 14px;
   }
-
-  
-  
 }
 
 /* Lightbox */
