@@ -47,14 +47,14 @@
         "large_screen_video_url": "https://cdn.shopify.com/videos/c/o/v/5ad507ac70524ac787e3d7cbd2fd5f92.mp4",
         "enable_rotation": true,
         "rotation_speed": 5,
-        "heading": "win more meals with",
+        "heading": "<p>win more meals with</p>",
         "subheading_1": "wholesome ingredients",
         "subheading_2": "time to spare",
         "subheading_3": "hidden veggies",
         "subheading_4": "protein + nutrients",
         "subheading_5": "frozen kid favorites",
         "button_label": "our meals",
-        "button_link": ""
+        "button_link": "#"
       }
     },
     "custom_liquid_iG9dad": {
