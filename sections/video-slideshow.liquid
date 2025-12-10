@@ -1,4 +1,7 @@
   <style>
+    .auto-video-sub-section .banner__heading  p{
+      margin: 0 !important;
+    }
   .auto-video-section {
       position: relative;
       display: flex;
@@ -153,7 +156,7 @@
       transform: translateX(-120%);
   }
 
-  .banner__buttons .button{
+  {% comment %} .banner__buttons .button{
     background: transparent!important;
     color: #0F4735;
     font-family: var(--font-family);
@@ -201,7 +204,58 @@
   .banner__buttons .button:hover:after{
     bottom: -5px;
     box-shadow: none;
-  }
+  } {% endcomment %}
+
+
+    .banner__buttons .button{
+  background: transparent!important;
+  color: #0F4735;
+  font-family: var(--font-family);
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 44px;
+  text-decoration: none;
+  box-shadow: none;
+  cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease;
+  text-align: center;
+  border-radius: 35px;
+  padding: 16px 46px;
+  border: none;
+  text-transform: lowercase;
+  transform: none !important;
+}
+
+.banner__buttons .button:before {
+   background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_23_2.png?v=1764592651);
+  background-size: 100% 100%;
+  z-index: 2;
+}
+
+.banner__buttons .button span{
+  z-index: 3;
+}
+
+.banner__buttons .button:after {
+  content: '';
+   background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_25.png?v=1764592665);
+  background-size: 100% 100%;
+  padding: 8px 34px;
+  bottom: -5px;
+  z-index: 1;
+  box-shadow: none;
+}
+
+
+.banner__buttons .button:hover:before {
+  background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_23_3.png?v=1764592664) !important;
+  background-size: 100% 100% !important;
+}
+
+.banner__buttons .button:hover:after{
+  bottom: -5px;
+  box-shadow: none;
+}
 
   @media (min-width: 1600px) {
   .auto-video-sub-section {
@@ -477,176 +531,448 @@
 
   </style>
 
-<div class="auto-video-section">
-  <video class="mobile-video" width="100%" autoplay loop playsinline muted>
-    <source src="{{ section.settings.mobile_video_url }}">
-  </video>
-  <video class="desktop-video" width="100%" autoplay loop playsinline muted>
-    <source src="{{ section.settings.video_url }}">
-  </video>
-  <video class="large-screen-video" width="100%" autoplay loop playsinline muted>
-    <source src="{{ section.settings.large_screen_video_url }}">
-  </video>
-  
-  <div class="auto-video-sub-section">
-    <h2 class="banner__heading inline-richtext h0">{{ section.settings.heading }}</h2>
+  <div class="auto-video-section">
+    <video class="mobile-video" width="100%" autoplay loop playsinline muted>
+      <source src="{{ section.settings.mobile_video_url }}">
+    </video>
+    <video class="desktop-video" width="100%" autoplay loop playsinline muted>
+      <source src="{{ section.settings.video_url }}">
+    </video>
+    <video class="large-screen-video" width="100%" autoplay loop playsinline muted>
+      <source src="{{ section.settings.large_screen_video_url }}">
+    </video>
     
-    <div class="banner__text rte body">
-      <div id="rotating-subheadings" class="rotating-subheading-container">
-        {% assign subheadings = section.settings.subheading_1 | append: '|' | append: section.settings.subheading_2 | append: '|' | append: section.settings.subheading_3 | append: '|' | append: section.settings.subheading_4 | append: '|' | append: section.settings.subheading_5 | split: '|' %}
-        {% for sub in subheadings %}
-          {% if sub != blank %}
-            <p class="rotating-subheading {% if forloop.first %}visible{% else %}hidden{% endif %}">{{ sub }}</p>
-          {% endif %}
-        {% endfor %}
+    <div class="auto-video-sub-section">
+      <h2 class="banner__heading inline-richtext h0">{{ section.settings.heading }}</h2>
+      
+      <div class="banner__text rte body">
+        <div id="rotating-subheadings" class="rotating-subheading-container">
+          {% assign subheadings = section.settings.subheading_1 | append: '|' | append: section.settings.subheading_2 | append: '|' | append: section.settings.subheading_3 | append: '|' | append: section.settings.subheading_4 | append: '|' | append: section.settings.subheading_5 | split: '|' %}
+          {% for sub in subheadings %}
+            {% if sub != blank %}
+              <p class="rotating-subheading {% if forloop.first %}visible{% else %}hidden{% endif %}">{{ sub }}</p>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+      
+      <div class="banner__buttons">
+        <a href="{{ section.settings.button_link }}" class="button button--secondary">
+          <span>{{ section.settings.button_label }}</span>
+        </a>
       </div>
     </div>
-    
-    <div class="banner__buttons">
-      <a href="{{ section.settings.button_link }}" class="button button--secondary">
-        <span>{{ section.settings.button_label }}</span>
-      </a>
-    </div>
   </div>
-</div>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  const enableRotation = {{ section.settings.enable_rotation | json }};
-  const rotationSpeed = {{ section.settings.rotation_speed | times: 1000 | json }}; // Convert to ms
-  
-  if (!enableRotation) return;
-  
-  const subheadingsContainer = document.getElementById('rotating-subheadings');
-  if (!subheadingsContainer) return;
-  
-  const subheadings = subheadingsContainer.querySelectorAll('.rotating-subheading');
-  if (subheadings.length <= 1) return;
-  
-  let currentIndex = 0;
-  
-  function rotateSubheadings() {
-    const currentSubheading = subheadings[currentIndex];
-    const nextIndex = (currentIndex + 1) % subheadings.length;
-    const nextSubheading = subheadings[nextIndex];
-    
-    // Swipe out current text to the right
-    currentSubheading.classList.remove('visible');
-    currentSubheading.classList.add('swipe-out-right');
-    
-    // Prepare next text (position it to the left, ready to swipe in)
-    nextSubheading.classList.remove('hidden');
-    nextSubheading.classList.add('swipe-in-left');
-    
-    // Small delay before swiping in the new text
-    setTimeout(() => {
-      nextSubheading.classList.remove('swipe-in-left');
-      nextSubheading.classList.add('visible');
-      
-      // Reset the previous text after animation completes
-      setTimeout(() => {
-        currentSubheading.classList.remove('swipe-out-right');
-        currentSubheading.classList.add('hidden');
-      }, 600);
-    }, 50);
-    
-    currentIndex = nextIndex;
-  }
-  
-  // Set interval
-  setInterval(rotateSubheadings, rotationSpeed);
+    const enableRotation = {{ section.settings.enable_rotation | json }};
+    const rotationSpeed = {{ section.settings.rotation_speed | times: 1000 | json }};
+
+    if (!enableRotation) return;
+
+    const subheadings = document.querySelectorAll('.rotating-subheading');
+
+    // Save original text for each subheading
+    subheadings.forEach(el => {
+        if (!el.dataset.original) el.dataset.original = el.innerText.trim();
+        splitLines(el);
+    });
+
+    let currentIndex = 0;
+
+    function rotateSubheadings() {
+        const current = subheadings[currentIndex];
+        const nextIndex = (currentIndex + 1) % subheadings.length;
+        const next = subheadings[nextIndex];
+
+        current.classList.remove('visible');
+        current.classList.add('swipe-out-right');
+
+        next.classList.remove('hidden');
+        next.classList.add('swipe-in-left');
+
+        setTimeout(() => {
+            next.classList.remove('swipe-in-left');
+            next.classList.add('visible');
+
+            setTimeout(() => {
+                current.classList.remove('swipe-out-right');
+                current.classList.add('hidden');
+            }, 600);
+        }, 50);
+
+        currentIndex = nextIndex;
+    }
+
+    setInterval(rotateSubheadings, rotationSpeed);
+
+    // Resplit lines on resize
+    window.addEventListener('resize', () => {
+        subheadings.forEach(el => splitLines(el));
+    });
 });
+
+function splitLines(element) {
+    const originalText = element.dataset.original;
+    const largeScreenWidth = 769;
+
+    element.innerHTML = ""; // clear previous content
+
+    if (window.innerWidth >= largeScreenWidth) {
+        // Large screen: single span
+        const span = document.createElement('span');
+        span.className = 'multi-line';
+        span.textContent = originalText;
+        element.appendChild(span);
+        return;
+    }
+
+    // Small screens: auto-split
+    const temp = document.createElement('span');
+    temp.style.visibility = 'hidden';
+    temp.style.position = 'absolute';
+    temp.style.whiteSpace = 'pre-wrap';
+    temp.style.width = element.offsetWidth + 'px';
+    temp.innerText = originalText;
+    document.body.appendChild(temp);
+
+    const words = originalText.split(' ');
+    let line = '';
+    let lastHeight = 0;
+
+    words.forEach(word => {
+        const test = line + (line ? ' ' : '') + word;
+        temp.innerText = test;
+
+        if (temp.offsetHeight > lastHeight) {
+            if (line) element.appendChild(makeSpan(line));
+            line = word;
+            lastHeight = temp.offsetHeight;
+        } else {
+            line = test;
+        }
+    });
+
+    if (line) element.appendChild(makeSpan(line));
+    temp.remove();
+}
+
+function makeSpan(text) {
+    const span = document.createElement('span');
+    span.className = 'multi-line';
+    span.textContent = text;
+    return span;
+}
 </script>
 
-{% schema %}
-{
-  "name": "Auto Video",
-  "settings": [
-    {
-      "type": "url",
-      "id": "mobile_video_url",
-      "label": "Mobile Video URL (up to 749px)"
-    },
-    {
-      "type": "url",
-      "id": "video_url",
-      "label": "Desktop Video URL (750px - 1599px)"
-    },
-    {
-      "type": "url",
-      "id": "large_screen_video_url",
-      "label": "Large Screen Video URL (1600px+)"
-    },
-    {
-      "type": "image_picker",
-      "id": "leaf_bg",
-      "label": "Leaf Background Image"
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_rotation",
-      "label": "Enable Rotating Subheading",
-      "default": true
-    },
-    {
-      "type": "range",
-      "id": "rotation_speed",
-      "min": 3,
-      "max": 10,
-      "step": 1,
-      "unit": "s",
-      "label": "Rotation Speed",
-      "default": 5
-    },
-    {
-      "type": "inline_richtext",
-      "id": "heading",
-      "default": "Image with text",
-      "label": "Heading"
-    },
-    {
-      "type": "text",
-      "id": "subheading_1",
-      "label": "Subheading 1",
-      "default": "win more meals with protein + nutrients"
-    },
-    {
-      "type": "text",
-      "id": "subheading_2",
-      "label": "Subheading 2",
-      "default": "frozen kid meals"
-    },
-    {
-      "type": "text",
-      "id": "subheading_3",
-      "label": "Subheading 3"
-    },
-    {
-      "type": "text",
-      "id": "subheading_4",
-      "label": "Subheading 4"
-    },
-    {
-      "type": "text",
-      "id": "subheading_5",
-      "label": "Subheading 5"
-    },
-    {
-      "type": "text",
-      "id": "button_label",
-      "default": "our meals",
-      "label": "Button Label"
-    },
-    {
-      "type": "url",
-      "id": "button_link",
-      "label": "Button Link"
+
+
+  {% comment %} <script>
+/* ---------- MULTILINE SPLITTER FIX ---------- */
+function splitLines(element) {
+    const original = element.dataset.original;
+    element.innerHTML = "";
+
+    const temp = document.createElement("span");
+    temp.style.visibility = "hidden";
+    temp.style.position = "absolute";
+    temp.style.whiteSpace = "pre-wrap";
+    temp.style.width = element.offsetWidth + "px";
+    document.body.appendChild(temp);
+
+    const words = original.split(" ");
+    let line = "", lastHeight = 0;
+
+    words.forEach(word => {
+        const testLine = line ? line + " " + word : word;
+        temp.textContent = testLine;
+
+        if (temp.offsetHeight > lastHeight) {
+            if (line) {
+                const span = document.createElement("span");
+                span.className = "multi-line";
+                span.textContent = line;
+                element.appendChild(span);
+            }
+            line = word;
+            lastHeight = temp.offsetHeight;
+        } else {
+            line = testLine;
+        }
+    });
+
+    if (line) {
+        const span = document.createElement("span");
+        span.className = "multi-line";
+        span.textContent = line;
+        element.appendChild(span);
     }
-  ],
-  "presets": [
-    {
-      "name": "Auto Video"
-    }
-  ]
+
+    temp.remove();
 }
-{% endschema %}
+
+function observeChanges() {
+    const items = document.querySelectorAll(".rotating-subheading");
+
+    items.forEach(el => {
+        el.dataset.original = el.textContent.trim();
+        splitLines(el);
+
+        new MutationObserver(() => {
+            el.dataset.original = el.textContent.trim();
+            splitLines(el);
+        }).observe(el, { childList: true, subtree: true });
+    });
+}
+
+document.addEventListener("DOMContentLoaded", observeChanges);
+
+
+/* ---------- ROTATION SCRIPT ---------- */
+document.addEventListener('DOMContentLoaded', function() {
+    const enableRotation = {{ section.settings.enable_rotation | json }};
+    const rotateTime = {{ section.settings.rotation_speed | times: 1000 | json }};
+
+    if (!enableRotation) return;
+
+    const container = document.getElementById("rotating-subheadings");
+    const items = container.querySelectorAll(".rotating-subheading");
+    if (items.length <= 1) return;
+
+    let current = 0;
+
+    setInterval(() => {
+        let currentEl = items[current];
+        let next = (current + 1) % items.length;
+        let nextEl = items[next];
+
+        currentEl.classList.remove("visible");
+        currentEl.classList.add("swipe-out-right");
+
+        nextEl.classList.remove("hidden");
+        nextEl.classList.add("swipe-in-left");
+
+        setTimeout(() => {
+            nextEl.classList.remove("swipe-in-left");
+            nextEl.classList.add("visible");
+
+            setTimeout(() => {
+                currentEl.classList.remove("swipe-out-right");
+                currentEl.classList.add("hidden");
+            }, 500);
+        }, 80);
+
+        current = next;
+    }, rotateTime);
+});
+</script> {% endcomment %}
+
+
+  {% comment %} <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const enableRotation = {{ section.settings.enable_rotation | json }};
+    const rotationSpeed = {{ section.settings.rotation_speed | times: 1000 | json }}; // Convert to ms
+    
+    if (!enableRotation) return;
+    
+    const subheadingsContainer = document.getElementById('rotating-subheadings');
+    if (!subheadingsContainer) return;
+    
+    const subheadings = subheadingsContainer.querySelectorAll('.rotating-subheading');
+    if (subheadings.length <= 1) return;
+    
+    let currentIndex = 0;
+    
+    function rotateSubheadings() {
+      const currentSubheading = subheadings[currentIndex];
+      const nextIndex = (currentIndex + 1) % subheadings.length;
+      const nextSubheading = subheadings[nextIndex];
+      
+      // Swipe out current text to the right
+      currentSubheading.classList.remove('visible');
+      currentSubheading.classList.add('swipe-out-right');
+      
+      // Prepare next text (position it to the left, ready to swipe in)
+      nextSubheading.classList.remove('hidden');
+      nextSubheading.classList.add('swipe-in-left');
+      
+      // Small delay before swiping in the new text
+      setTimeout(() => {
+        nextSubheading.classList.remove('swipe-in-left');
+        nextSubheading.classList.add('visible');
+        
+        // Reset the previous text after animation completes
+        setTimeout(() => {
+          currentSubheading.classList.remove('swipe-out-right');
+          currentSubheading.classList.add('hidden');
+        }, 600);
+      }, 50);
+      
+      currentIndex = nextIndex;
+    }
+    
+    // Set interval
+    setInterval(rotateSubheadings, rotationSpeed);
+  });
+  </script>
+
+<script>
+function splitLines(element) {
+
+    // FIX: remove underline & reset clean text
+    element.textContent = element.dataset.original;
+
+    const originalText = element.dataset.original;
+
+    const temp = document.createElement("span");
+    temp.style.visibility = "hidden";
+    temp.style.position = "absolute";
+    temp.style.whiteSpace = "pre-wrap";
+    temp.style.width = element.offsetWidth + "px";
+    temp.innerText = originalText;
+    document.body.appendChild(temp);
+
+    const words = originalText.split(" ");
+    let line = "";
+    let lastHeight = 0;
+
+    element.innerHTML = "";
+
+    words.forEach((word) => {
+        const test = line + (line ? " " : "") + word;
+        temp.innerText = test;
+
+        if (temp.offsetHeight > lastHeight) {
+            if (line) {
+                element.appendChild(makeSpan(line));
+            }
+            line = word;
+            lastHeight = temp.offsetHeight;
+        } else {
+            line = test;
+        }
+    });
+
+    if (line) element.appendChild(makeSpan(line));
+
+    temp.remove();
+}
+
+function makeSpan(text) {
+    const span = document.createElement("span");
+    span.className = "multi-line";
+    span.textContent = text;
+    return span;
+}
+
+function observeChanges() {
+    const targets = document.querySelectorAll(".rotating-subheading");
+
+    targets.forEach(el => {
+        el.dataset.original = el.textContent.trim();
+        splitLines(el);
+
+        new MutationObserver(() => {
+            el.dataset.original = el.textContent.trim();
+            splitLines(el);
+        }).observe(el, { childList: true, characterData: true, subtree: true });
+    });
+}
+
+document.addEventListener("DOMContentLoaded", observeChanges);
+</script> {% endcomment %}
+
+
+  {% schema %}
+  {
+    "name": "Auto Video",
+    "settings": [
+      {
+        "type": "url",
+        "id": "mobile_video_url",
+        "label": "Mobile Video URL (up to 768px)"
+      },
+      {
+        "type": "url",
+        "id": "video_url",
+        "label": "Desktop Video URL (769px - 1599px)"
+      },
+      {
+        "type": "url",
+        "id": "large_screen_video_url",
+        "label": "Large Screen Video URL (1600px+)"
+      },
+      {
+        "type": "image_picker",
+        "id": "leaf_bg",
+        "label": "Leaf Background Image"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_rotation",
+        "label": "Enable Rotating Subheading",
+        "default": true
+      },
+      {
+        "type": "range",
+        "id": "rotation_speed",
+        "min": 3,
+        "max": 10,
+        "step": 1,
+        "unit": "s",
+        "label": "Rotation Speed",
+        "default": 5
+      },
+      {
+        "type": "richtext",
+        "id": "heading",
+        
+        "label": "Heading"
+      },
+      {
+        "type": "text",
+        "id": "subheading_1",
+        "label": "Subheading 1",
+        "default": "win more meals with protein + nutrients"
+      },
+      {
+        "type": "text",
+        "id": "subheading_2",
+        "label": "Subheading 2",
+        "default": "frozen kid meals"
+      },
+      {
+        "type": "text",
+        "id": "subheading_3",
+        "label": "Subheading 3"
+      },
+      {
+        "type": "text",
+        "id": "subheading_4",
+        "label": "Subheading 4"
+      },
+      {
+        "type": "text",
+        "id": "subheading_5",
+        "label": "Subheading 5"
+      },
+      {
+        "type": "text",
+        "id": "button_label",
+        "default": "our meals",
+        "label": "Button Label"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button Link"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Auto Video"
+      }
+    ]
+  }
+  {% endschema %}
