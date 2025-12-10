@@ -452,7 +452,6 @@
 
 
   </style>
-  {% comment %} <div class="container"> {% endcomment %}
   <div class="auto-video-section">
     <video class="mobile-video" width="100%" autoplay loop playsinline muted>
       <source src="{{ section.settings.mobile_video_url }}">
@@ -484,15 +483,12 @@
         </a>
       </div>
     </div>
-{% if section.settings.bottom_decor != blank %}
+    <!-- BOTTOM DECOR -->
+  {% if section.settings.bottom_decor != blank %}
     <img class="bottom-decor" src="{{ section.settings.bottom_decor | img_url: 'master' }}">
   {% endif %}
+
   </div>
-  <!-- BOTTOM DECOR -->
-  {% comment %} {% if section.settings.bottom_decor != blank %}
-    <img class="bottom-decor" src="{{ section.settings.bottom_decor | img_url: 'master' }}">
-  {% endif %} {% endcomment %}
-{% comment %} </div> {% endcomment %}
   
 
 <script>
