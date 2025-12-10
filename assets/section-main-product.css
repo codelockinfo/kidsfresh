@@ -305,8 +305,7 @@ product-info .pdp-buttons {
     padding:8px 20px;
   }
 .custom-background-wrapper {
-    
-    margin-top: -64px;
+    margin-top: -64px !important;
 }
 
 
