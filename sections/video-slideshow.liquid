@@ -156,7 +156,7 @@
       transform: translateX(-120%);
   }
 
-  {% comment %} .banner__buttons .button{
+  .banner__buttons .button{
     background: transparent!important;
     color: #0F4735;
     font-family: var(--font-family);
@@ -205,9 +205,9 @@
   .banner__buttons .button:hover:after{
     bottom: -5px;
     box-shadow: none;
-  } {% endcomment %}
+  }
 
-    .banner__buttons .button{
+    .veggie-buttons .button--primary{
   background: transparent!important;
   color: #0F4735;
   font-family: var(--font-family);
@@ -228,17 +228,17 @@
   margin: 20px auto 0;
 }
 
-.banner__buttons .button:before {
+.veggie-buttons .button--primary:before {
    background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_23_2.png?v=1764592651);
   background-size: 100% 100%;
   z-index: 2;
 }
 
-.banner__buttons .button span{
+.veggie-buttons .button--primary span{
   z-index: 3;
 }
 
-.banner__buttons .button:after {
+.veggie-buttons .button--primary:after {
   content: '';
    background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_25.png?v=1764592665);
   background-size: 100% 100%;
@@ -249,12 +249,12 @@
 }
 
 
-.banner__buttons .button:hover:before {
+.veggie-buttons .button--primary:hover:before {
   background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_23_3.png?v=1764592664) !important;
   background-size: 100% 100% !important;
 }
 
-.banner__buttons .button:hover:after{
+.veggie-buttons .button--primary:hover:after{
   bottom: -5px;
   box-shadow: none;
 }
