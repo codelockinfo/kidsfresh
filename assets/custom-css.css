@@ -32,11 +32,10 @@ image-height-wrapper{
 .header__icon .icon{
     color : #F8971D !important;
 }
-@media screen  (min-width: 769px) and  (max-width:1449px){
+@media screen and (min-width: 769px) and (max-width: 1449px) {
   .kf-breadcrumbs-wrapper {
-  padding: 38px 80px !important ;
-
-}
+    padding: 38px 80px !important;
+  }
 }
 @media (min-width:769px) and (max-width: 1024px){
     .announcement-bar p {
