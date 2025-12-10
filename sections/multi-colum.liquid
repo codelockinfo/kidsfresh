@@ -201,9 +201,9 @@
     }
     .flowers{
       position: absolute;
-    bottom: -36px;
-    left: 0;
-}
+      bottom: -36px;
+      left: 0;
+    }
     .contact-columns-wrapper {
       display: grid; 
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
@@ -211,15 +211,18 @@
       max-width: 1200px; 
       margin: 0 auto;
     }
+    .contact-column-title {
+      line-height: 86px;
+    }
   @media screen and (max-width: 749px) {
     .contact-header {
       margin-bottom: 30px !important;
     }
- .contact-multicolumn-{{ section.id }} .decorative-top-left {
-    top: 78px !important;
-    left: 0;
-    max-width: 200px;
-  }
+    .contact-multicolumn-{{ section.id }} .decorative-top-left {
+      top: 78px !important;
+      left: 0;
+      max-width: 200px;
+    }
     .contact-description {
       font-size: 24px !important;
       line-height : 32px !important;
