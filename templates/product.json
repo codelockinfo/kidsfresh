@@ -147,6 +147,7 @@
       "name": "Custom Background Section",
       "settings": {
         "background_image": "shopify://shop_images/Group_172_1.png",
+        "background_image_mobile": "shopify://shop_images/Group_320.png",
         "background_color": "#2c5f2d",
         "bottom_wave_image": "shopify://shop_images/Group_319.png",
         "heading": "the best ingredients only matter if they eat them.",
