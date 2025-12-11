@@ -1886,6 +1886,10 @@ a.product__text {
   display: flex;
   flex-direction: column;
 }
+.grid__item.product__media-wrapper {
+  width: 100%;
+  max-width: 100%;
+}
 }
 
 @media (min-width: 1023px) and (max-width: 1331px) {
