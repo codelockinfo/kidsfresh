@@ -1934,6 +1934,12 @@ a.product__text {
   .custom-background-wrapper {
     padding: 67px 0 !important;
   }
+
+    product-info .button--secondary, product-info .button--primary {
+    font-size: 22px;
+    line-height: 33px;
+    padding: 12px 18px;
+  }
 }
 
 @media (min-width: 1025px) and (max-width: 1331px) {
