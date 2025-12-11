@@ -1932,7 +1932,7 @@ a.product__text {
   }
 
   .custom-background-wrapper {
-    padding: 67px 0;
+    padding: 67px 0 !important;
   }
 }
 
