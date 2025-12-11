@@ -130,8 +130,8 @@
           "type": "promo_block",
           "settings": {
             "block_width": 65,
-            "background_color": "#f58220",
-            "heading": "<p>ingredients +<br/> nutrition</p>",
+            "background_color": "#f59620",
+            "heading": "ingredients + nutrition",
             "heading_color": "#0f4735",
             "button_text": "learn more",
             "button_link": "#",
