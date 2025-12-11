@@ -1900,6 +1900,9 @@ a.product__text {
   max-width: 100% !important;
   padding: 0 !important;
 }
+    .product__info-container {
+        max-width: 100%;
+    }
 }
 
 @media (min-width: 1023px) and (max-width: 1331px) {
