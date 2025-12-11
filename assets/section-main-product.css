@@ -306,6 +306,7 @@ product-info .pdp-buttons {
   product-info .button--secondary, product-info .button--primary
 {
     font-size:20px;
+    line-height: 33px;
     padding:8px 20px;
   }
 .custom-background-wrapper {
@@ -1878,5 +1879,5 @@ a.product__text {
 
 
 @media (max-width: 450px) {
-  
+
 }
