@@ -1936,7 +1936,7 @@ a.product__text {
   }
 }
 
-@media (min-width: 1023px) and (max-width: 1331px) {
+@media (min-width: 1025px) and (max-width: 1331px) {
   product-info .button--secondary, product-info .button--primary {
     font-size: 22px;
     line-height: 33px;
