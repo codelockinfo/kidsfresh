@@ -1883,9 +1883,9 @@ a.product__text {
 
 @media (min-width: 1441px) and (max-width: 1531px) {
   product-info .button--secondary, product-info .button--primary {
-    font-size: 28px;
+    font-size: 27px;
     line-height: 40px;
-    padding: 14px 32px;
+    padding: 12px 30px;
   }
 }
 
