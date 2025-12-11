@@ -148,6 +148,7 @@
       "settings": {
         "background_image": "shopify://shop_images/Group_172_1.png",
         "background_color": "#2c5f2d",
+        "bottom_wave_image": "shopify://shop_images/Group_319.png",
         "heading": "the best ingredients only matter if they eat them.",
         "heading_color": "#f58220",
         "text_paragraph_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.",
