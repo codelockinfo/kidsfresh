@@ -79,8 +79,9 @@ image-height-wrapper{
       padding: 30px 20px !important;
     }
     .find-us-header h1 {
-      font-size: 42px !important;
-      margin-bottom:0px !important;
+      font-size: 42px;
+      line-height: 46px;
+      margin-bottom:0px;
     }
 .footer__content-top.page-width{
     padding:0px 50px;
