@@ -1881,7 +1881,7 @@ a.product__text {
   }
 }
 
-@media (min-width:769px) and (max-width: 1024px) {
+@media (max-width: 1024px) {
   product-info {
     padding: 34px 50px !important;
   }
