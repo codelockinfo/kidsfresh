@@ -1890,6 +1890,11 @@ a.product__text {
   width: 100%;
   max-width: 100%;
 }
+
+.product__info-wrapper.grid__item {
+  width: 100%;
+  max-width: 100%;
+}
 }
 
 @media (min-width: 1023px) and (max-width: 1331px) {
