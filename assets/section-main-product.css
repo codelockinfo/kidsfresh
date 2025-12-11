@@ -1882,7 +1882,10 @@ a.product__text {
 }
 
 @media (max-width: 1024px) {
-
+.product.grid {
+  display: flex;
+  flex-direction: column;
+}
 }
 
 @media (min-width: 1023px) and (max-width: 1331px) {
