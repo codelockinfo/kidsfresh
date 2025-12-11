@@ -1887,13 +1887,13 @@ a.product__text {
   flex-direction: column;
 }
 .grid__item.product__media-wrapper {
-  width: 100%;
-  max-width: 100%;
+  width: 100% !important;
+  max-width: 100% !important;
 }
 
 .product__info-wrapper.grid__item {
-  width: 100%;
-  max-width: 100%;
+  width: 100% !important;
+  max-width: 100% !important;
 }
 }
 
