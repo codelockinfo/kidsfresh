@@ -1936,9 +1936,9 @@ a.product__text {
   }
 
     product-info .button--secondary, product-info .button--primary {
-    font-size: 22px;
+    font-size: 26px;
     line-height: 33px;
-    padding: 12px 18px;
+    padding: 14px 24px;
   }
 }
 
