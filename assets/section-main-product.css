@@ -324,7 +324,7 @@ product-info .pdp-buttons {
   font-size:18px !important;
 }
 product-info {
-  padding : 34px 30px !important;
+  padding : 0 30px !important;
 }
   .product__title h1{
     font-size:36px !important;
@@ -386,7 +386,7 @@ product-info {
 
 product-info {
   display: block;
-  padding : 38px 180px;
+  padding : 0 180px;
 }
 
 .product {
@@ -1885,7 +1885,7 @@ a.product__text {
 
 @media (min-width: 769px) and (max-width: 1024px) {
   product-info {
-    padding: 34px 50px !important;
+    padding: 0 50px !important;
   }
 .product.grid {
   display: flex;
