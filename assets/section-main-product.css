@@ -1879,9 +1879,9 @@ a.product__text {
 
 
 @media (max-width: 450px) {
-  product-info .button--secondary, 
-  product-info .button--primary {
+  product-info .button--secondary, product-info .button--primary {
     font-size: 18px;
     line-height: 30px;
+    padding: 8px 16px;
   }
 }
