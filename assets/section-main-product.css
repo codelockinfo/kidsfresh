@@ -1715,6 +1715,10 @@ a.product__text {
   }
 }
 
+@media (min-width: 1441px) and (max-width: 1531px) {
+  
+}
+
 @media screen and (min-width: 750px) {
   .product-media-container {
     max-width: 100%;
