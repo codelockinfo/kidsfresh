@@ -1930,6 +1930,10 @@ a.product__text {
  .custom-background-image-container {
     overflow: hidden;
   }
+
+  .custom-background-wrapper {
+    padding: 67px 0;
+  }
 }
 
 @media (min-width: 1023px) and (max-width: 1331px) {
