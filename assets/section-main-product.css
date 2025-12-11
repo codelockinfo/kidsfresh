@@ -1882,6 +1882,9 @@ a.product__text {
 }
 
 @media (max-width: 1024px) {
+  product-info {
+    padding: 34px 50px !important;
+  }
 .product.grid {
   display: flex;
   flex-direction: column;
