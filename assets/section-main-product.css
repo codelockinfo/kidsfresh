@@ -1881,6 +1881,14 @@ a.product__text {
   }
 }
 
+@media (min-width: 1024px) and (max-width: 1331px) {
+  product-info .button--secondary, product-info .button--primary {
+    font-size: 27px;
+    line-height: 40px;
+    padding: 12px 30px;
+  }
+}
+
 @media (min-width: 1441px) and (max-width: 1531px) {
   product-info .button--secondary, product-info .button--primary {
     font-size: 27px;
