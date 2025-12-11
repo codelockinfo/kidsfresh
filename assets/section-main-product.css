@@ -1885,6 +1885,7 @@ a.product__text {
 .product.grid {
   display: flex;
   flex-direction: column;
+  gap: 30px;
 }
 .grid__item.product__media-wrapper {
   width: 100% !important;
