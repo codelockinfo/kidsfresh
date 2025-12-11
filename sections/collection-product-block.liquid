@@ -550,15 +550,14 @@ gap:12px;
     transform: translateY(-11px) scale(1);
   }
   .promo-block:hover .promo-element.top-right {
-    transform: translate(10px,-11px) scale(1);
-    
+    transform: translate(10px,-11px) scale(1); 
   }
   .promo-block:hover .promo-element.middle-left {
-    transform: translateY(-50%) translateX(-25px) scale(1);
+    {% comment %} transform: translateY(-50%) translateX(-25px) scale(1); {% endcomment %}
+     rotate: -22deg;
   }
   .promo-block:hover .promo-element.middle-right {
-    {% comment %} transform: translateY(-50%) translateX(25px) scale(1); {% endcomment %}
-     rotate: -22deg;
+    transform: translateY(-50%) translateX(25px) scale(1);
   }
   .promo-block:hover .promo-element.bottom-left {
     transform: translateX(-20px) scale(1);
