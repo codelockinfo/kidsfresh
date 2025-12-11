@@ -7,6 +7,10 @@
     z-index: 11;
   }
 
+  .product__info-container {
+    margin-bottom: 60px;
+  }
+
 .product__info-wrapper--extra-padding{
   padding: 0 0 0 72px !important;
 }
