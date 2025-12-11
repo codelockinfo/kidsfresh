@@ -548,7 +548,8 @@ gap:12px;
 }
   /* Hover animations - left/right movement */
   .promo-block:hover .promo-element.top-left {
-    transform: translateY(-11px) scale(1);
+    {% comment %} transform: translateY(-11px) scale(1); {% endcomment %}
+     rotate: 7deg;
   }
   .promo-block:hover .promo-element.top-right {
     transform: translate(10px,-11px) scale(1); 
