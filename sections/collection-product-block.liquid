@@ -547,6 +547,11 @@ gap:12px;
   bottom: -5px;
   box-shadow: none;
 }
+.promo-element {
+  transition: all 0.35s ease;   /* smooth movement */
+  will-change: transform;       /* improves performance */
+}
+
   /* Hover animations - left/right movement */
   .promo-block:hover .promo-element.top-left {
      rotate: 7deg;
