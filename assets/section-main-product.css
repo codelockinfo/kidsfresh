@@ -1906,6 +1906,30 @@ a.product__text {
 .product__info-container {
   max-width: 100%;
 }
+
+.custom-background-container {
+    flex-direction: column;
+    padding: 0 0px;
+  }
+
+  /* MOVE IMAGE TO TOP */
+  .custom-background-image-wrapper {
+    order: -1;                
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;  
+    margin-top: -27%;
+  }
+
+  /* IMAGE RIGHT SIDE OFFSET */
+  .custom-background-image-container img {
+    width: 100%;
+    transform: translateX(23%);  
+  }
+
+ .custom-background-image-container {
+    overflow: hidden;
+  }
 }
 
 @media (min-width: 1023px) and (max-width: 1331px) {
