@@ -1881,18 +1881,11 @@ a.product__text {
   }
 }
 
-@media (min-width: 769px) and (max-width: 1023px) {
-  product-info .button--secondary, product-info .button--primary {
-    font-size: 20px;
-    line-height: 33px;
-    padding: 10px 10px;
-  }
-  product-info .pdp-buttons {
-    gap: 10px;
-  }
+@media (max-width: 1024px) {
+
 }
 
-@media (min-width: 1024px) and (max-width: 1331px) {
+@media (min-width: 1023px) and (max-width: 1331px) {
   product-info .button--secondary, product-info .button--primary {
     font-size: 22px;
     line-height: 33px;
