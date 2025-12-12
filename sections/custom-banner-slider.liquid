@@ -48,6 +48,30 @@
   {% endif %}
 
 </section>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const broccoli = document.querySelector("#celebrate-plate-{{ section.id }} .broccoli-image");
+
+  function updateState() {
+    const anim = broccoli.getAnimations()[0];
+    if (!anim) return;
+
+    const time = anim.currentTime % anim.effect.getTiming().duration;
+    const progress = time / anim.effect.getTiming().duration;
+
+    // OUTSIDE between 25%–50%
+    if (progress >= 0.25 && progress <= 0.50) {
+      broccoli.classList.add("outside");
+    } else {
+      broccoli.classList.remove("outside");
+    }
+
+    requestAnimationFrame(updateState);
+  }
+
+  updateState();
+});
+</script>
 
 
 <style>
