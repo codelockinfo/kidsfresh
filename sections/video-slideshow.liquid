@@ -89,20 +89,21 @@
     padding-bottom: 8px;
 }
 
-.rotating-subheading span.multi-line::after {
-    content: "";
+/* This replaces ::after — real element controlled by JS */
+.rotating-subheading span.multi-line .underline-img {
     position: absolute;
+    left: 50%;
     bottom: 0;
-    left: 0;
     height: 14px;
+    transform: translateX(-50%);
     background-image: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_20.png?v=1765521638);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
     pointer-events: none;
-    z-index: -1;
-    width: 0; /* JS will update this */
+    display: block;
 }
+
 
 
 
@@ -619,57 +620,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function updateUnderline() {
         const items = document.querySelectorAll('.rotating-subheading span.multi-line');
-        if (!items.length) return;
 
-        // Preload underline image to detect natural padding
-        const img = new Image();
-        img.src = "https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_20.png?v=1765521638";
+        items.forEach(el => {
+            const underline = el.querySelector('.underline-img');
+            if (!underline) return;
 
-        img.onload = function () {
-            const naturalWidth = img.width;
+            const textWidth = el.offsetWidth;
 
-            items.forEach(el => {
-                const textWidth = el.offsetWidth;
+            // PNG has approx 22% padding, we remove it
+            const correctedWidth = textWidth * 0.78;
 
-                // The green stroke inside your PNG is narrower because of side-padding
-                // Calculate the padding ratio:
-                // crop = (naturalWidth - innerStrokeWidth)
-                // But because we don't know innerStrokeWidth, we use ratio correction:
-                const paddingRatio = 0.22; 
-                const correctedWidth = textWidth * (1 - paddingRatio);
-
-                const underline = el.querySelector("::after");
-
-                // Since we cannot access ::after directly, apply width via inline style
-                el.style.setProperty('--underline-width', correctedWidth + 'px');
-
-                // Update the pseudo element using style injection
-                el.querySelector('.js-underline')?.remove();
-
-                const styleTag = document.createElement("style");
-                styleTag.classList.add("js-underline");
-                styleTag.innerHTML = `
-                    .rotating-subheading span.multi-line::after {
-                        width: ${correctedWidth}px !important;
-                    }
-                `;
-                document.head.appendChild(styleTag);
-            });
-        };
+            underline.style.width = correctedWidth + "px";
+        });
     }
 
-    // Run initially
     updateUnderline();
-
-    // Update on resize
     window.addEventListener("resize", updateUnderline);
 
-    // If your text rotates, observer updates underline each change
+    // Update underline when rotating text changes
     const observer = new MutationObserver(updateUnderline);
     observer.observe(document.body, { childList: true, subtree: true });
 
 });
 </script>
+
 
 
 
