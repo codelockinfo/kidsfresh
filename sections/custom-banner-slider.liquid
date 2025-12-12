@@ -628,20 +628,35 @@ document.addEventListener('DOMContentLoaded', function() {
     let wasOutWhenHovered = false;
     
     function checkBroccoliPosition() {
+        const elapsed = (Date.now() - animationStartTime) % animationDuration;
+        const progress = (elapsed / animationDuration) * 100;
+        const isCurrentlyOut = progress >= 25 && progress <= 50;
+        
+        // If hovering and broccoli becomes out, pause animation
+        if (isHovered && isCurrentlyOut && !broccoliImage.classList.contains('hover-paused')) {
+            broccoliImage.style.animation = 'none';
+            broccoliImage.style.animationPlayState = 'paused';
+            broccoliImage.style.left = '-5%';
+            broccoliImage.classList.add('hover-paused');
+            broccoliImage.dataset.pausedAt = elapsed;
+        }
+        
         // Don't update class if hovering and broccoli was out
         if (isHovered && wasOutWhenHovered) {
+            // Keep the broccoli-out class when hovering
+            broccoliImage.classList.add('broccoli-out');
             requestAnimationFrame(checkBroccoliPosition);
             return;
         }
         
-        const elapsed = (Date.now() - animationStartTime) % animationDuration;
-        const progress = (elapsed / animationDuration) * 100;
-        
         // Broccoli is "out" between 25% and 50% of animation
-        if (progress >= 25 && progress <= 50) {
+        if (isCurrentlyOut) {
             broccoliImage.classList.add('broccoli-out');
         } else {
-            broccoliImage.classList.remove('broccoli-out');
+            // Only remove if not hovering
+            if (!isHovered) {
+                broccoliImage.classList.remove('broccoli-out');
+            }
         }
         
         requestAnimationFrame(checkBroccoliPosition);
@@ -652,7 +667,10 @@ document.addEventListener('DOMContentLoaded', function() {
         isHovered = true;
         wasOutWhenHovered = broccoliImage.classList.contains('broccoli-out');
         if (wasOutWhenHovered) {
-            // Add class to completely stop animation
+            // Force stop animation with inline styles
+            broccoliImage.style.animation = 'none';
+            broccoliImage.style.animationPlayState = 'paused';
+            broccoliImage.style.left = '-5%';
             broccoliImage.classList.add('hover-paused');
             // Store current animation progress
             const elapsed = (Date.now() - animationStartTime) % animationDuration;
@@ -664,7 +682,10 @@ document.addEventListener('DOMContentLoaded', function() {
     broccoliImage.addEventListener('mouseleave', function() {
         isHovered = false;
         wasOutWhenHovered = false;
-        // Remove hover-paused class to restore animation
+        // Remove inline styles and class to restore animation
+        broccoliImage.style.animation = '';
+        broccoliImage.style.animationPlayState = '';
+        broccoliImage.style.left = '';
         broccoliImage.classList.remove('hover-paused');
         // Continue from where it paused
         if (broccoliImage.dataset.pausedAt) {
