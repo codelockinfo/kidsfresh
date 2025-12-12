@@ -210,6 +210,13 @@
   left: -5% !important;
 }
 
+/* Slow transition back in after hover ends */
+#celebrate-plate-{{ section.id }} .broccoli-image.moving-back-in {
+  animation: none !important;
+  transition: left 2s ease-in-out;
+  left: -10% !important;
+}
+
 /* ANIMATION */
 @keyframes broccoliMove {
   0% {
@@ -626,6 +633,12 @@ document.addEventListener('DOMContentLoaded', function() {
     let wasOutWhenHovered = false;
     
     function checkBroccoliPosition() {
+        // Don't update if broccoli is moving back in
+        if (broccoliImage.classList.contains('moving-back-in')) {
+            requestAnimationFrame(checkBroccoliPosition);
+            return;
+        }
+        
         const elapsed = (Date.now() - animationStartTime) % animationDuration;
         const progress = (elapsed / animationDuration) * 100;
         const isCurrentlyOut = progress >= 25 && progress <= 50;
@@ -682,23 +695,31 @@ document.addEventListener('DOMContentLoaded', function() {
         wasOutWhenHovered = false;
         broccoliImage.classList.remove('hover-paused');
         
-        // Continue from where it paused
+        // If broccoli was out when hovered, move it back in slowly first
         if (broccoliImage.dataset.pausedAt && broccoliImage.dataset.pauseTime) {
-            const pausedAt = parseFloat(broccoliImage.dataset.pausedAt);
-            const pauseTime = parseFloat(broccoliImage.dataset.pauseTime);
-            const pauseDuration = Date.now() - pauseTime;
-            
-            // Remove inline styles to restore CSS animation
+            // Remove pause state and broccoli-out class
             broccoliImage.style.animationPlayState = '';
-            broccoliImage.style.left = '';
+            broccoliImage.classList.remove('broccoli-out');
             
-            // Update animation start time to account for pause duration
-            // This ensures our tracking continues from where it paused
-            animationStartTime = Date.now() - pausedAt - pauseDuration;
+            // Add class to trigger slow transition back in
+            broccoliImage.classList.add('moving-back-in');
             
-            // Clean up
-            delete broccoliImage.dataset.pausedAt;
-            delete broccoliImage.dataset.pauseTime;
+            // Wait for transition to complete (2 seconds), then resume normal animation
+            setTimeout(function() {
+                // Remove the moving-back-in class
+                broccoliImage.classList.remove('moving-back-in');
+                
+                // Remove inline left style to let animation take over
+                broccoliImage.style.left = '';
+                
+                // Reset animation to start from the beginning (in position)
+                // This will make it go through the full cycle: in -> out -> in
+                animationStartTime = Date.now();
+                
+                // Clean up
+                delete broccoliImage.dataset.pausedAt;
+                delete broccoliImage.dataset.pauseTime;
+            }, 2000); // 2 seconds for the transition
         } else {
             // If no pause data, just restore normally
             broccoliImage.style.animationPlayState = '';
