@@ -614,6 +614,62 @@ function makeSpan(text) {
     return span;
 }
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    function updateUnderline() {
+        const items = document.querySelectorAll('.rotating-subheading span.multi-line');
+        if (!items.length) return;
+
+        // Preload underline image to detect natural padding
+        const img = new Image();
+        img.src = "https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_20.png?v=1765521638";
+
+        img.onload = function () {
+            const naturalWidth = img.width;
+
+            items.forEach(el => {
+                const textWidth = el.offsetWidth;
+
+                // The green stroke inside your PNG is narrower because of side-padding
+                // Calculate the padding ratio:
+                // crop = (naturalWidth - innerStrokeWidth)
+                // But because we don't know innerStrokeWidth, we use ratio correction:
+                const paddingRatio = 0.22; 
+                const correctedWidth = textWidth * (1 - paddingRatio);
+
+                const underline = el.querySelector("::after");
+
+                // Since we cannot access ::after directly, apply width via inline style
+                el.style.setProperty('--underline-width', correctedWidth + 'px');
+
+                // Update the pseudo element using style injection
+                el.querySelector('.js-underline')?.remove();
+
+                const styleTag = document.createElement("style");
+                styleTag.classList.add("js-underline");
+                styleTag.innerHTML = `
+                    .rotating-subheading span.multi-line::after {
+                        width: ${correctedWidth}px !important;
+                    }
+                `;
+                document.head.appendChild(styleTag);
+            });
+        };
+    }
+
+    // Run initially
+    updateUnderline();
+
+    // Update on resize
+    window.addEventListener("resize", updateUnderline);
+
+    // If your text rotates, observer updates underline each change
+    const observer = new MutationObserver(updateUnderline);
+    observer.observe(document.body, { childList: true, subtree: true });
+
+});
+</script>
 
 
 
