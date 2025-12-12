@@ -264,41 +264,19 @@
     white-space: wrap;
     opacity: 0;
     visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
     z-index: 21;
     font-family: var(--font-family);
     font-size: 26px;
     line-height: 27px;
     font-weight: 400;
     color: #39302D;
-    animation: hoverTextShow 4s ease-in-out infinite;
 }
 
-/* Animation for hover text - only show when broccoli is out (25%-50%) */
-@keyframes hoverTextShow {
-  0% {
-    opacity: 0;
-    visibility: hidden;
-  }
-  24% {
-    opacity: 0;
-    visibility: hidden;
-  }
-  25% {
+/* Only show hover text on hover when broccoli is out */
+#celebrate-plate-{{ section.id }} .broccoli-image.broccoli-out:hover .broccoli-hover-text {
     opacity: 1;
     visibility: visible;
-  }
-  50% {
-    opacity: 1;
-    visibility: visible;
-  }
-  51% {
-    opacity: 0;
-    visibility: hidden;
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
 }
 
 @media (min-width: 1400px) and (max-width: 1650px) {
@@ -628,6 +606,42 @@
 }
 </style>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const broccoliImage = document.querySelector('#celebrate-plate-{{ section.id }} .broccoli-image');
+    if (!broccoliImage) return;
+
+    // Track animation progress
+    let animationStartTime = null;
+    const animationDuration = 4000; // 4 seconds
+    
+    function checkBroccoliPosition() {
+        if (!animationStartTime) {
+            animationStartTime = Date.now();
+        }
+        
+        const elapsed = (Date.now() - animationStartTime) % animationDuration;
+        const progress = (elapsed / animationDuration) * 100;
+        
+        // Broccoli is "out" between 25% and 50% of animation
+        if (progress >= 25 && progress <= 50) {
+            broccoliImage.classList.add('broccoli-out');
+        } else {
+            broccoliImage.classList.remove('broccoli-out');
+        }
+        
+        requestAnimationFrame(checkBroccoliPosition);
+    }
+    
+    // Start checking position
+    checkBroccoliPosition();
+    
+    // Reset animation start time when animation restarts
+    broccoliImage.addEventListener('animationiteration', function() {
+        animationStartTime = Date.now();
+    });
+});
+</script>
 
 {% schema %}
 {
