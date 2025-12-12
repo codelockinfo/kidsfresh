@@ -620,8 +620,16 @@ document.addEventListener('DOMContentLoaded', function() {
     // Track animation progress
     let animationStartTime = Date.now();
     const animationDuration = 4000; // 4 seconds
+    let isHovered = false;
+    let wasOutWhenHovered = false;
     
     function checkBroccoliPosition() {
+        // Don't update class if hovering and broccoli was out
+        if (isHovered && wasOutWhenHovered) {
+            requestAnimationFrame(checkBroccoliPosition);
+            return;
+        }
+        
         const elapsed = (Date.now() - animationStartTime) % animationDuration;
         const progress = (elapsed / animationDuration) * 100;
         
@@ -635,17 +643,40 @@ document.addEventListener('DOMContentLoaded', function() {
         requestAnimationFrame(checkBroccoliPosition);
     }
     
+    // Handle hover start
+    broccoliImage.addEventListener('mouseenter', function() {
+        isHovered = true;
+        wasOutWhenHovered = broccoliImage.classList.contains('broccoli-out');
+        if (wasOutWhenHovered) {
+            broccoliImage.style.animationPlayState = 'paused';
+        }
+    });
+    
+    // Handle hover end
+    broccoliImage.addEventListener('mouseleave', function() {
+        isHovered = false;
+        wasOutWhenHovered = false;
+        broccoliImage.style.animationPlayState = 'running';
+        // Reset animation start time to continue from where it paused
+        const elapsed = (Date.now() - animationStartTime) % animationDuration;
+        animationStartTime = Date.now() - elapsed;
+    });
+    
     // Start checking position immediately
     checkBroccoliPosition();
     
     // Reset animation start time when animation restarts
     broccoliImage.addEventListener('animationiteration', function() {
-        animationStartTime = Date.now();
+        if (!isHovered) {
+            animationStartTime = Date.now();
+        }
     });
     
     // Also handle animation start event for better synchronization
     broccoliImage.addEventListener('animationstart', function() {
-        animationStartTime = Date.now();
+        if (!isHovered) {
+            animationStartTime = Date.now();
+        }
     });
 });
 </script>
