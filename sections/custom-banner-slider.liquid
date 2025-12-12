@@ -252,7 +252,7 @@
 
   /* Hover effect only when broccoli is out */
   #celebrate-plate-{{ section.id }} .broccoli-image.broccoli-out:hover {
-    transform: translateX(20px) scale(1);
+    transform: translateX(20px) scale(1.1);
   }
 
 #celebrate-plate-{{ section.id }} .broccoli-hover-text {
@@ -634,11 +634,11 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // If hovering and broccoli becomes out, pause animation
         if (isHovered && isCurrentlyOut && !broccoliImage.classList.contains('hover-paused')) {
-            broccoliImage.style.animation = 'none';
             broccoliImage.style.animationPlayState = 'paused';
             broccoliImage.style.left = '-5%';
             broccoliImage.classList.add('hover-paused');
             broccoliImage.dataset.pausedAt = elapsed;
+            broccoliImage.dataset.pauseTime = Date.now();
         }
         
         // Don't update class if hovering and broccoli was out
@@ -667,14 +667,14 @@ document.addEventListener('DOMContentLoaded', function() {
         isHovered = true;
         wasOutWhenHovered = broccoliImage.classList.contains('broccoli-out');
         if (wasOutWhenHovered) {
-            // Force stop animation with inline styles
-            broccoliImage.style.animation = 'none';
+            // Pause animation but keep it running (preserves state)
             broccoliImage.style.animationPlayState = 'paused';
             broccoliImage.style.left = '-5%';
             broccoliImage.classList.add('hover-paused');
             // Store current animation progress
             const elapsed = (Date.now() - animationStartTime) % animationDuration;
             broccoliImage.dataset.pausedAt = elapsed;
+            broccoliImage.dataset.pauseTime = Date.now();
         }
     });
     
@@ -682,16 +682,29 @@ document.addEventListener('DOMContentLoaded', function() {
     broccoliImage.addEventListener('mouseleave', function() {
         isHovered = false;
         wasOutWhenHovered = false;
-        // Remove inline styles and class to restore animation
-        broccoliImage.style.animation = '';
-        broccoliImage.style.animationPlayState = '';
-        broccoliImage.style.left = '';
         broccoliImage.classList.remove('hover-paused');
+        
         // Continue from where it paused
-        if (broccoliImage.dataset.pausedAt) {
+        if (broccoliImage.dataset.pausedAt && broccoliImage.dataset.pauseTime) {
             const pausedAt = parseFloat(broccoliImage.dataset.pausedAt);
-            animationStartTime = Date.now() - pausedAt;
+            const pauseTime = parseFloat(broccoliImage.dataset.pauseTime);
+            const pauseDuration = Date.now() - pauseTime;
+            
+            // Remove inline styles to restore CSS animation
+            broccoliImage.style.animationPlayState = '';
+            broccoliImage.style.left = '';
+            
+            // Update animation start time to account for pause duration
+            // This ensures our tracking continues from where it paused
+            animationStartTime = Date.now() - pausedAt - pauseDuration;
+            
+            // Clean up
             delete broccoliImage.dataset.pausedAt;
+            delete broccoliImage.dataset.pauseTime;
+        } else {
+            // If no pause data, just restore normally
+            broccoliImage.style.animationPlayState = '';
+            broccoliImage.style.left = '';
         }
     });
     
