@@ -50,7 +50,7 @@
         "button_label": "shop now",
         "button_link": "#",
         "image": "shopify://shop_images/9ef93cae1d7df2023c44ebac7931cbc6d8dbfee3.png",
-        "mobile_image": "shopify://shop_images/d377d72b2701d219dba5622a7b03f97595969669.png",
+        "mobile_image": "shopify://shop_images/image_292_149e13a5-ac46-44d6-afd8-50c47b6835b7.png",
         "layout": "image_right"
       }
     },
@@ -265,7 +265,7 @@
         "background_image": "shopify://shop_images/Group_292.png",
         "mobile_background_image": "shopify://shop_images/iPhone_14_15_Pro_Max_-_1_3.png",
         "background_color": "rgba(0,0,0,0)",
-        "title": "ungredients",
+        "title": "<p>ungredients</p>",
         "icon_svg": "shopify://shop_images/Group_97_9706f09d-9e6f-444b-ad57-08c399617048.png",
         "subtitle": "<p>What <strong>doesn't </strong>go into our meals is just as important as what does.</p>",
         "footer_text": "Built with what matters most: real ingredients, balanced nutrition, and vegetables in disguise. Every meal is designed to support strong bodies, growing minds, and stress-free mealtimes.",
