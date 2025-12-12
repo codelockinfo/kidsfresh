@@ -264,19 +264,42 @@
     white-space: wrap;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
     z-index: 21;
     font-family: var(--font-family);
     font-size: 26px;
     line-height: 27px;
     font-weight: 400;
     color: #39302D;
+    animation: hoverTextShow 4s ease-in-out infinite;
 }
 
-  #celebrate-plate-{{ section.id }} .broccoli-image:hover .broccoli-hover-text {
+/* Animation for hover text - only show when broccoli is out (25%-50%) */
+@keyframes hoverTextShow {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  24% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  25% {
     opacity: 1;
     visibility: visible;
   }
+  50% {
+    opacity: 1;
+    visibility: visible;
+  }
+  51% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 
 @media (min-width: 1400px) and (max-width: 1650px) {
     #celebrate-plate-{{ section.id }} .broccoli-image {
