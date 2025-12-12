@@ -495,7 +495,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Save original text for each subheading
     subheadings.forEach(el => {
-        if (!el.dataset.original) el.dataset.original = el.innerText.trim();
+        if (!el.dataset.original) {
+            el.dataset.original = el.innerText.trim();
+        }
         splitLines(el);
     });
 
@@ -534,8 +536,13 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function splitLines(element) {
-    const originalText = element.dataset.original;
+    let originalText = element.dataset.original;
     const largeScreenWidth = 769;
+
+    // Remove space between "time" and "to" on mobile
+    if (window.innerWidth < largeScreenWidth) {
+        originalText = originalText.replace(/time\s+to/gi, 'timeto');
+    }
 
     element.innerHTML = ""; // clear previous content
 
