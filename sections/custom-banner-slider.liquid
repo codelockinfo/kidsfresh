@@ -213,7 +213,7 @@
     cursor: pointer;
     z-index: 20;
     
-    animation: broccoliMove 2s ease-in-out infinite alternate;
+    animation: broccoliMove 1s ease-in-out infinite alternate;
     /* infinite alternate = moves A→B then B→A smoothly */
 }
 
@@ -221,15 +221,15 @@
 @keyframes broccoliMove {
   0% {
     left: -4%;
-    {% comment %} transform: translateX(0); {% endcomment %}
+    transform: translateX(0);
     rotate: 2deg;
     opacity: 1;
   }
 
   100% {
-    left: -4%;
-    {% comment %} transform: translateX(-100px); {% endcomment %}
-    rotate: 8deg;
+    left: 0%;
+    transform: translateX(-50px);
+    rotate: 6deg;
     opacity: 1;
   }
 }
