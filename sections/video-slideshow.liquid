@@ -64,26 +64,25 @@
 /* ---- UNDERLINE FIX (Tight Spacing + Full Width) ---- */
 .rotating-subheading span.multi-line {
     position: relative;
-    display: block;
-    text-align: center;
+    display: inline-block;
     padding-bottom: 5px;
 }
 
 .rotating-subheading span.multi-line::after {
     content: "";
     position: absolute;
-    bottom: 0;
     left: 50%;
+    bottom: 0;
     transform: translateX(-50%);
     width: 100%;
-    height: 15px;
+    height: 14px; /* slightly larger for nicer visibility */
     background-image: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_20.png?v=1765521638);
-    background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: contain; /* The important fix */
     pointer-events: none;
-    z-index: -1;
 }
+
 
 .banner__text.rte.body p {
     font-family: var(--font-family);
