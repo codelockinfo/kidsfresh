@@ -679,9 +679,9 @@
         
         {% comment %} Title with Icon {% endcomment %}
         <div class="ungredients-new-title-wrapper">
-          <h2 class="ungredients-new-title">
-            {{ section.settings.title | default: 'ungredients' | escape }}
-          </h2>
+          <div class="ungredients-new-title">
+            {{ section.settings.title | default: 'ungredients' }}
+          </div>
           {% if section.settings.icon_svg %}
             <div class="ungredients-new-icon">
               <img src="{{ section.settings.icon_svg | img_url: 'master' }}" 
@@ -814,10 +814,10 @@
       "content": "Content Settings"
     },
     {
-      "type": "text",
+      "type": "richtext",
       "id": "title",
       "label": "Title",
-      "default": "ungredients"
+      "default": "<p>ungredients</p>"
     },
     {
       "type": "image_picker",
