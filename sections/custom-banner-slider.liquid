@@ -204,6 +204,12 @@
   animation: broccoliMove 4s ease-in-out infinite;
 }
 
+/* Stop animation when hovering while out */
+#celebrate-plate-{{ section.id }} .broccoli-image.broccoli-out.hover-paused {
+  animation: none !important;
+  left: -5% !important;
+}
+
 /* ANIMATION */
 @keyframes broccoliMove {
   0% {
@@ -247,8 +253,6 @@
   /* Hover effect only when broccoli is out */
   #celebrate-plate-{{ section.id }} .broccoli-image.broccoli-out:hover {
     transform: translateX(20px) scale(1.1);
-    left: -5% !important;
-    animation-play-state: paused;
   }
 
 #celebrate-plate-{{ section.id }} .broccoli-hover-text {
@@ -648,7 +652,11 @@ document.addEventListener('DOMContentLoaded', function() {
         isHovered = true;
         wasOutWhenHovered = broccoliImage.classList.contains('broccoli-out');
         if (wasOutWhenHovered) {
-            broccoliImage.style.animationPlayState = 'paused';
+            // Add class to completely stop animation
+            broccoliImage.classList.add('hover-paused');
+            // Store current animation progress
+            const elapsed = (Date.now() - animationStartTime) % animationDuration;
+            broccoliImage.dataset.pausedAt = elapsed;
         }
     });
     
@@ -656,10 +664,14 @@ document.addEventListener('DOMContentLoaded', function() {
     broccoliImage.addEventListener('mouseleave', function() {
         isHovered = false;
         wasOutWhenHovered = false;
-        broccoliImage.style.animationPlayState = 'running';
-        // Reset animation start time to continue from where it paused
-        const elapsed = (Date.now() - animationStartTime) % animationDuration;
-        animationStartTime = Date.now() - elapsed;
+        // Remove hover-paused class to restore animation
+        broccoliImage.classList.remove('hover-paused');
+        // Continue from where it paused
+        if (broccoliImage.dataset.pausedAt) {
+            const pausedAt = parseFloat(broccoliImage.dataset.pausedAt);
+            animationStartTime = Date.now() - pausedAt;
+            delete broccoliImage.dataset.pausedAt;
+        }
     });
     
     // Start checking position immediately
