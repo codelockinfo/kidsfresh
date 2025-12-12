@@ -192,43 +192,43 @@
 #celebrate-plate-{{ section.id }} .broccoli-image {
   position: absolute;
   bottom: 52%;
-  left: -10%; /* hidden inside */
+  left: -10%; /* starting inside */
   width: 17pc;
   height: auto;
   cursor: pointer;
   z-index: 20;
   opacity: 1;
-  animation: broccoliMove 6s infinite;
+  animation: broccoliMove 6s infinite ease-out;
 }
 
-/* Animation */
+/* KEYFRAMES */
 @keyframes broccoliMove {
 
-  /* Start – inside */
+  /* Inside (start) */
   0% {
     left: -10%;
     rotate: 2deg;
   }
 
-  /* Move OUT slowly */
-  30% {
+  /* FAST OUT */
+  20% {
     left: -5%;
     rotate: 6deg;
   }
 
-  /* Pause outside */
-  45% {
+  /* STOP OUTSIDE */
+  40% {
     left: -5%;
     rotate: 6deg;
   }
 
-  /* FAST go back in */
-  55% {
+  /* FAST IN */
+  60% {
     left: -10%;
     rotate: 2deg;
   }
 
-  /* Pause inside */
+  /* STOP INSIDE */
   100% {
     left: -10%;
     rotate: 2deg;
