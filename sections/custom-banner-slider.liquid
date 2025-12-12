@@ -218,21 +218,51 @@
 }
 
 /* Animation */
+#celebrate-plate-{{ section.id }} .broccoli-image {
+  position: absolute;
+  bottom: 52%;
+  left: -10%;          /* starting hidden */
+  width: 17pc;
+  height: auto;
+  cursor: pointer;
+  z-index: 20;
+  opacity: 1;
+  animation: broccoliMove 4s ease-in-out infinite;
+}
+
+/* ANIMATION */
 @keyframes broccoliMove {
   0% {
     left: -10%;
     transform: translateX(0);
     rotate: 2deg;
-    opacity: 1;
   }
 
-  100% {
+  25% {                /* comes out and stops */
     left: -5%;
     transform: translateX(0);
     rotate: 6deg;
-    opacity: 1;
+  }
+
+  50% {                /* stay outside */
+    left: -5%;
+    transform: translateX(0);
+    rotate: 6deg;
+  }
+
+  75% {                /* goes back in and stops */
+    left: -10%;
+    transform: translateX(0);
+    rotate: 2deg;
+  }
+
+  100% {               /* stay inside */
+    left: -10%;
+    transform: translateX(0);
+    rotate: 2deg;
   }
 }
+
 
 
   #celebrate-plate-{{ section.id }} .broccoli-image {
