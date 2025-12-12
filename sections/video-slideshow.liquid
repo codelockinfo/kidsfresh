@@ -62,7 +62,7 @@
 
 
 /* ---- UNDERLINE FIX (Tight Spacing + Full Width) ---- */
-.rotating-subheading span.multi-line {
+{% comment %} .rotating-subheading span.multi-line {
     position: relative;
     display: inline-block;
     padding-bottom: 5px;
@@ -81,7 +81,29 @@
     background-position: center;
     background-size: contain; /* The important fix */
     pointer-events: none;
+} {% endcomment %}
+
+.rotating-subheading span.multi-line {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 8px;
 }
+
+.rotating-subheading span.multi-line::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 14px;
+    background-image: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_20.png?v=1765521638);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    pointer-events: none;
+    z-index: -1;
+    width: 0; /* JS will update this */
+}
+
 
 
 .banner__text.rte.body p {
