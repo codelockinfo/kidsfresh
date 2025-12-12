@@ -539,10 +539,6 @@ function splitLines(element) {
     let originalText = element.dataset.original;
     const largeScreenWidth = 769;
 
-    // Remove space between "time" and "to" on mobile
-    if (window.innerWidth < largeScreenWidth) {
-        originalText = originalText.replace(/time\s+to/gi, 'timeto');
-    }
 
     element.innerHTML = ""; // clear previous content
 
