@@ -195,88 +195,76 @@
 #celebrate-plate-{{ section.id }} .broccoli-image {
   position: absolute;
   bottom: 52%;
-  left: -10%;          /* starting hidden */
+  left: -10%; /* starting hidden */
   width: 19pc;
   height: auto;
   cursor: pointer;
   z-index: 20;
   opacity: 1;
   animation: broccoliMove 4s ease-in-out infinite;
+  transition: transform .3s ease, left .3s ease;
 }
 
 /* ANIMATION */
 @keyframes broccoliMove {
   0% {
     left: -10%;
-    transform: translateX(0);
     rotate: 2deg;
   }
-
-  25% {                /* comes out and stops */
+  25% {
     left: -5%;
-    transform: translateX(0);
     rotate: 6deg;
   }
-
-  50% {                /* stay outside */
+  50% {
     left: -5%;
-    transform: translateX(0);
     rotate: 6deg;
   }
-
-  75% {                /* goes back in and stops */
+  75% {
     left: -10%;
-    transform: translateX(0);
     rotate: 2deg;
   }
-
-  100% {               /* stay inside */
+  100% {
     left: -10%;
-    transform: translateX(0);
     rotate: 2deg;
   }
 }
 
+/* Hover (works only when broccoli is OUT) */
+#celebrate-plate-{{ section.id }} .broccoli-image.outside:hover {
+  transform: translateX(20px) scale(1.1);
+  left: -7%;
+}
 
-
-  #celebrate-plate-{{ section.id }} .broccoli-image {
-    opacity: 1;
-    {% comment %} transform: translateX(0); {% endcomment %}
-  }
-
-  #celebrate-plate-{{ section.id }} .broccoli-image:hover {
-    transform: translateX(20px) scale(1.1);
-    left: -7%;
-  }
-
+/* Tooltip Base Style */
 #celebrate-plate-{{ section.id }} .broccoli-hover-text {
-    position: absolute;
-    bottom: 7pc;
-    left: 26pc;
-    transform: translateX(-50%);
-    background: url(https://cdn.shopify.com/s/files/1/0790/5017/8785/files/Untitled_700_x_500_px_1.png?v=1763753734);
-    background-size: cover;
-    height: 22pc;
-    background-repeat: no-repeat;
-    width: 31pc;
-    background-position: center;
-    padding: 90px 100px;
-    white-space: wrap;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-    z-index: 21;
-    font-family: var(--font-family);
-    font-size: 26px;
-    line-height: 27px;
-    font-weight: 400;
-    color: #39302D;
+  position: absolute;
+  bottom: 7pc;
+  left: 26pc;
+  transform: translateX(-50%);
+  background: url(https://cdn.shopify.com/s/files/1/0790/5017/8785/files/Untitled_700_x_500_px_1.png?v=1763753734);
+  background-size: cover;
+  height: 22pc;
+  width: 31pc;
+  padding: 90px 100px;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s ease, visibility .3s ease;
+  z-index: 21;
+  font-family: var(--font-family);
+  font-size: 26px;
+  line-height: 27px;
+  font-weight: 400;
+  color: #39302D;
 }
 
-  #celebrate-plate-{{ section.id }} .broccoli-image:hover .broccoli-hover-text {
-    opacity: 1;
-    visibility: visible;
-  }
+/* Tooltip shows when broccoli is OUT and hovered */
+#celebrate-plate-{{ section.id }} .broccoli-image.outside:hover ~ .broccoli-hover-text {
+  opacity: 1;
+  visibility: visible;
+}
+
 
 @media (min-width: 1400px) and (max-width: 1650px) {
     #celebrate-plate-{{ section.id }} .broccoli-image {
