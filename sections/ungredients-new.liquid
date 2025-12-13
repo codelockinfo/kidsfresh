@@ -339,9 +339,9 @@
 
   @media screen and (max-width: 990px) {
 
-    {% comment %} #shopify-section-template--19565219020992__ungredients_new_xNg3Kg {
+    #shopify-section-template--19565219020992__ungredients_new_xNg3Kg {
   margin-top: -75px;
-} {% endcomment %}
+}
 
       .ungredients-new-section {
         background-size: 100% 100%;
@@ -865,7 +865,7 @@
            style="background-color: {{ section.settings.background_color | default: '#f58220' }};"
          {% endif %}
          {% if section.settings.mobile_background_image %}
-           data-mobile-bg="{{ section.settings.mobile_background_image | img_url: '768x' }}"
+           data-mobile-bg="{{ section.settings.mobile_background_image | img_url: '990x' }}"
          {% endif %}>
 
   {% comment %} Main Content {% endcomment %}
@@ -948,7 +948,7 @@
       const mobileBg = section.getAttribute('data-mobile-bg');
       if (!mobileBg) return;
       
-      if (window.innerWidth <= 768) {
+      if (window.innerWidth <= 990) {
         section.style.backgroundImage = `url('${mobileBg}')`;
       } else {
         const desktopBg = section.getAttribute('data-desktop-bg');
@@ -997,7 +997,7 @@
       "type": "image_picker",
       "id": "mobile_background_image",
       "label": "Background Image (Mobile)",
-      "info": "Background image for mobile devices (768px and below). Recommended size: 768x1000px. If not set, desktop image will be used."
+      "info": "Background image for mobile devices (990px and below). Recommended size: 990x1000px. If not set, desktop image will be used."
     },
     {
       "type": "color",
