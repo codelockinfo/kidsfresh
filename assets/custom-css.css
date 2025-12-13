@@ -43,6 +43,9 @@ image-height-wrapper{
     }
         .faq-custom-container {
         padding: 0 90px !important;
+    }    
+    .faq-tabs {
+        gap: 20px !important;
     }
 
 }
