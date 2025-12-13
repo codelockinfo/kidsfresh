@@ -39,7 +39,7 @@ image-height-wrapper{
 }
 @media (min-width:10125px) and (max-width: 1119px){
     .filter-title{
-        font-size:44px;
+        font-size:44px !important;
     }
 }
 @media (min-width:769px) and (max-width: 1024px){
