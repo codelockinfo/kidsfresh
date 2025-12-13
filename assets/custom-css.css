@@ -36,6 +36,9 @@ image-height-wrapper{
   .kf-breadcrumbs-wrapper {
     padding: 38px 80px !important;
   }
+  .faq-tabs {
+        gap: 25px !important;
+    }
 }
 @media (min-width:1025px) and (max-width: 1119px){
     .filter-title{
