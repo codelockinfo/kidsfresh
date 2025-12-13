@@ -37,6 +37,11 @@ image-height-wrapper{
     padding: 38px 80px !important;
   }
 }
+@media (min-width:10125px) and (max-width: 1119px){
+    .filter-title{
+        font-size:44px;
+    }
+}
 @media (min-width:769px) and (max-width: 1024px){
     .announcement-bar p {
         font-size: 18px;
