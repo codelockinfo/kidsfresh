@@ -42,18 +42,6 @@ image-height-wrapper{
         font-size: 18px;
         line-height: 24px;
     }
-    .contact-column{
-        padding: 10px 29px 24px!important;
-    }
-    .contact-column-title{
-        font-size:50px !important;
-    }
-    .contact-text{
-        font-size: 26px !important;
-    }
-    .contact-items{
-            gap: 18px !important;
-    }
 }
 
 @media (max-width: 768px) {
@@ -61,23 +49,6 @@ image-height-wrapper{
    font-size: 14px; 
    line-height: 21px;
 }
-.contact-header .contact-main-title {
-      font-size: 42px !important;
-      margin-bottom: 0 !important;
-    }
-    .contact-header .contact-description{
-          font-size: 24px !important;
-          line-height:32px !important;
-    }
-    .contact-column .contact-column-title {
-      font-size: 40px !important;
-    }
-    .contact-text {
-      font-size:24px !important;
-    }
-    .contact-column {
-      padding: 30px 20px !important;
-    }
 .footer__content-top.page-width{
     padding:0px 50px;
 }
