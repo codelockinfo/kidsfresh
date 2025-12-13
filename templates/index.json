@@ -300,6 +300,9 @@
     },
     "image_banner_PgRkAX": {
       "type": "image-banner",
+      "custom_css": [
+        "@media (min-width: 769px) {}"
+      ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "image": "shopify://shop_images/Group_323.png",
