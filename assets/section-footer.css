@@ -35,10 +35,10 @@ ul.footer-block__details-content.list-unstyled li a::after {
     content: '';
     position: absolute;
     left: 0;
-    bottom: -1.5pc;
+    bottom: -15px;
     width: 0;
-    height: 50px;
-    background-image: url(https://cdn.shopify.com/s/files/1/0790/5017/8785/files/Untitled_design_-_2025-11-21T010727.765.png?v=1763667456);
+    height: 20px;
+    background-image: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_19_2fe67bb1-c39a-4236-9a7a-565e281e8c76.png?v=1765601551);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     transition: width 0.4s ease;
