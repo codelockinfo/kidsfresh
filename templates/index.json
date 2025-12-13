@@ -298,6 +298,23 @@
         "button_border_color": "#0f4735"
       }
     },
+    "image_banner_PgRkAX": {
+      "type": "image-banner",
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Group_323.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
     "custom_liquid_R9NxxV": {
       "type": "custom-liquid",
       "custom_css": [
@@ -407,6 +424,7 @@
     "custom_banner_slider_tB6fwN",
     "custom_slider_wDxc4w",
     "ungredients_new_xNg3Kg",
+    "image_banner_PgRkAX",
     "custom_liquid_R9NxxV",
     "instra_reel_J97KgH"
   ]
