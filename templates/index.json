@@ -301,7 +301,7 @@
     "image_banner_PgRkAX": {
       "type": "image-banner",
       "custom_css": [
-        "@media (min-width: 769px) {}"
+        "@media (min-width: 769px) {.banner {display: none; }}"
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
