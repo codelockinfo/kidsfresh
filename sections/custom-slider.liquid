@@ -67,12 +67,29 @@
     justify-content: center;
     scrollbar-width: none;
     padding: 10px 0;
-    overflow: visible;
+    overflow-x: auto;
+    overflow-y: visible;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    cursor: grab;
+  }
+
+  .winning-ingredients-{{ section.id }} .columns-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+
+  .winning-ingredients-{{ section.id }} .columns-wrapper.dragging {
+    cursor: grabbing;
+    scroll-behavior: auto;
+    scroll-snap-type: none;
   }
 
     .winning-ingredients-{{ section.id }} .column-item-wrapper {
         width: 319px;
         height: 480px;
+        scroll-snap-align: center;
+        flex-shrink: 0;
     }
  
   .winning-ingredients-{{ section.id }} .column-item {
@@ -506,6 +523,65 @@
     {%- endif -%}
   </div>
 </div>
+
+<script>
+(function() {
+  const sectionId = '{{ section.id }}';
+  const slider = document.querySelector('.winning-ingredients-' + sectionId + ' .columns-wrapper');
+  
+  if (!slider) return;
+
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  // Mouse events
+  slider.addEventListener('mousedown', (e) => {
+    isDown = true;
+    slider.classList.add('dragging');
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+  });
+
+  slider.addEventListener('mouseleave', () => {
+    isDown = false;
+    slider.classList.remove('dragging');
+  });
+
+  slider.addEventListener('mouseup', () => {
+    isDown = false;
+    slider.classList.remove('dragging');
+  });
+
+  slider.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 1.5; // Scroll speed multiplier
+    slider.scrollLeft = scrollLeft - walk;
+  });
+
+  // Touch events for mobile
+  let touchStartX = 0;
+  let touchScrollLeft = 0;
+
+  slider.addEventListener('touchstart', (e) => {
+    touchStartX = e.touches[0].pageX - slider.offsetLeft;
+    touchScrollLeft = slider.scrollLeft;
+  }, { passive: true });
+
+  slider.addEventListener('touchmove', (e) => {
+    if (!touchStartX) return;
+    const x = e.touches[0].pageX - slider.offsetLeft;
+    const walk = (x - touchStartX) * 1.5;
+    slider.scrollLeft = touchScrollLeft - walk;
+  }, { passive: true });
+
+  slider.addEventListener('touchend', () => {
+    touchStartX = 0;
+  });
+})();
+</script>
 
 {% schema %}
 {
