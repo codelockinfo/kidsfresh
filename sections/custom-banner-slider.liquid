@@ -697,7 +697,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Calculate negative animation-delay to resume from exact paused point
             // This allows animation to continue at the same speed
             const pausedProgress = pausedAt / animationDuration; // 0 to 1
-            const negativeDelay = -(pausedProgress * animationDuration) / 1000; // Convert to seconds
+            const negativeDelay = -(pausedProgress * animationDuration) / 500; // Convert to seconds
             
             // Resume animation with negative delay to continue from paused point
             broccoliImage.style.animation = `broccoliMove ${animationDuration}ms ease-in-out infinite`;
