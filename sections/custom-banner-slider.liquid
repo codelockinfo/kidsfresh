@@ -219,19 +219,19 @@
     rotate: 2deg;
   }
 
-  25% {                /* comes out and stops */
+  10% {                /* comes out quickly */
     left: -5%;
     transform: translateX(0);
     rotate: 6deg;
   }
 
-  50% {                /* stay outside */
+  54.44% {             /* stay outside for 2 seconds (2000ms out of 4500ms = 44.44%) */
     left: -5%;
     transform: translateX(0);
     rotate: 6deg;
   }
 
-  75% {                /* goes back in and stops */
+  60% {                /* goes back in quickly */
     left: -10%;
     transform: translateX(0);
     rotate: 2deg;
@@ -629,7 +629,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function checkBroccoliPosition() {
         const elapsed = (Date.now() - animationStartTime) % animationDuration;
         const progress = (elapsed / animationDuration) * 100;
-        const isCurrentlyOut = progress >= 25 && progress <= 50;
+        const isCurrentlyOut = progress >= 10 && progress <= 54.44;
         
         // If hovering and broccoli becomes out, pause animation
         if (isHovered && isCurrentlyOut && !broccoliImage.classList.contains('hover-paused')) {
@@ -648,7 +648,7 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
         
-        // Broccoli is "out" between 25% and 50% of animation
+        // Broccoli is "out" between 10% and 54.44% of animation (2 seconds pause)
         if (isCurrentlyOut) {
             broccoliImage.classList.add('broccoli-out');
         } else {
