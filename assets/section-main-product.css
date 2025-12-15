@@ -57,7 +57,7 @@ text-align:justify;
 .product-form__input--pill input[type="radio"] + label {
   font-family: var(--font-family);
   font-size: 27px !important;
-  font-weight: 600;
+  font-weight: 500;
   padding: 10px 20px !important;
   margin: 0 !important;
   cursor: pointer;
