@@ -72,7 +72,7 @@
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-    cursor: grab;
+    /* cursor: grab; */
   }
 
   .winning-ingredients-{{ section.id }} .columns-wrapper::-webkit-scrollbar {
@@ -80,7 +80,7 @@
   }
 
   .winning-ingredients-{{ section.id }} .columns-wrapper.dragging {
-    /* cursor: grabbing; */
+    cursor: grabbing;
     scroll-behavior: auto;
     scroll-snap-type: none;
   }
