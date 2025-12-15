@@ -244,7 +244,7 @@
           "type": "product",
           "settings": {
             "image": "shopify://shop_images/FINAL_CNBP_1.png",
-            "title": "<p>Chicken Nuggets & Buttered Pasta</p>",
+            "title": "<p>Chicken Nuggets &<br/> Buttered Pasta</p>",
             "description": "even buttered pasta can be better",
             "veggie_group_image": "shopify://shop_images/Group_298_10.png"
           }
