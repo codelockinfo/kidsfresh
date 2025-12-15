@@ -257,7 +257,7 @@
       ],
       "custom_css": [
         ".veggie-hover-section .container {padding: 0 11px; padding-bottom: 100px !important;}",
-        ".veggie-products-grid {margin-top: 0px;}"
+        ".veggie-hover-section .veggie-products-grid {margin-top: 80px;}"
       ],
       "name": "Veggie Hover Products",
       "settings": {
