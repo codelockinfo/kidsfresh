@@ -254,16 +254,6 @@
     display: block;
   }
 
-  /* Desktop wave image */
-  .wave-divider-desktop {
-    display: block;
-  }
-
-  /* Mobile wave image */
-  .wave-divider-mobile {
-    display: none;
-  }
-
   @media screen and (max-width: 768px) {
     .contact-location-section {
       padding: 33px 30px 90px;
@@ -315,14 +305,6 @@
     padding: 15px 10px;
   }
 
-    /* Show mobile wave, hide desktop wave on mobile */
-    .wave-divider-desktop {
-      display: none;
-    }
-
-    .wave-divider-mobile {
-      display: block;
-    }
   }
 
   @media screen and (max-width: 375px) {
@@ -473,9 +455,9 @@
     
   </div>
 
-  <!-- Customizable Wave Divider - Desktop -->
+  <!-- Customizable Wave Divider -->
   {%- if st.wave_image != blank -%}
-    <div class="wave-divider wave-divider-desktop">
+    <div class="wave-divider">
       <img
         src="{{ st.wave_image | img_url: '1920x' }}"
         alt="Wave divider"
@@ -484,34 +466,7 @@
     </div>
   {%- else -%}
     <!-- Fallback SVG wave if no image is uploaded -->
-    <div class="wave-divider wave-divider-desktop">
-      <svg viewBox="0 0 1200 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%; fill: #0f4735;">
-        <path d="M0,60 C200,100 400,20 600,60 C800,100 1000,20 1200,60 L1200,120 L0,120 Z"></path>
-      </svg>
-    </div>
-  {%- endif -%}
-
-  <!-- Customizable Wave Divider - Mobile -->
-  {%- if st.wave_image_mobile != blank -%}
-    <div class="wave-divider wave-divider-mobile">
-      <img
-        src="{{ st.wave_image_mobile | img_url: '768x' }}"
-        alt="Wave divider mobile"
-        loading="lazy"
-      >
-    </div>
-  {%- elsif st.wave_image != blank -%}
-    <!-- Fallback to desktop wave if mobile wave not provided -->
-    <div class="wave-divider wave-divider-mobile">
-      <img
-        src="{{ st.wave_image | img_url: '768x' }}"
-        alt="Wave divider"
-        loading="lazy"
-      >
-    </div>
-  {%- else -%}
-    <!-- Fallback SVG wave if no image is uploaded -->
-    <div class="wave-divider wave-divider-mobile">
+    <div class="wave-divider">
       <svg viewBox="0 0 1200 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%; fill: #0f4735;">
         <path d="M0,60 C200,100 400,20 600,60 C800,100 1000,20 1200,60 L1200,120 L0,120 Z"></path>
       </svg>
@@ -558,14 +513,8 @@
     {
       "type": "image_picker",
       "id": "wave_image",
-      "label": "Wave Image (Desktop)",
-      "info": "Upload a custom wave image for the bottom divider on desktop. If not provided, a default SVG wave will be used."
-    },
-    {
-      "type": "image_picker",
-      "id": "wave_image_mobile",
-      "label": "Wave Image (Mobile)",
-      "info": "Upload a custom wave image for mobile devices. If not provided, the desktop wave image will be used as fallback."
+      "label": "Wave Image",
+      "info": "Upload a custom wave image for the bottom divider. If not provided, a default SVG wave will be used."
     },
     {
       "type": "header",
