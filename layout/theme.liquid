@@ -242,7 +242,9 @@
         font-size: calc(var(--font-body-scale) * 62.5%);
         height: 100%;
       }
-
+      h2{
+        font-family: var(--font-family-bold) !important;
+      }
       body {
         display: grid;
         grid-template-rows: auto auto 1fr auto;
@@ -259,6 +261,12 @@
         @font-face {
           font-family: "GT-Walsheim-Regular";
           src: url("https://cdn.shopify.com/s/files/1/0577/3957/5488/files/GT-Walsheim-Regular-Trial-BF651b7fc71a47d.otf?v=1765257305") format("woff2");
+          font-weight: normal;
+          font-style: normal;
+        }
+        @font-face {
+          font-family: "GT-Walsheim-bold";
+          src: url("https://cdn.shopify.com/s/files/1/0577/3957/5488/files/GT-Walsheim-Bold-Trial-BF651b7fc737c57.otf?v=1765878476") format("woff2");
           font-weight: normal;
           font-style: normal;
         }
