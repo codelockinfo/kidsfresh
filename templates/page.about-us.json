@@ -119,87 +119,6 @@
         "bottom_decor": "shopify://shop_images/Group_318.png"
       }
     },
-    "custom_slider_hJY8jr": {
-      "type": "custom-slider",
-      "blocks": {
-        "column_AxkfXf": {
-          "type": "column",
-          "settings": {
-            "icon": "shopify://shop_images/wh.svg",
-            "heading": "Wh",
-            "preheading": "Wholesome ingredients",
-            "description": "We use the kind of real ingredients you'd use in your own kitchen."
-          }
-        },
-        "column_KBk7jL": {
-          "type": "column",
-          "settings": {
-            "icon": "shopify://shop_images/pro.svg",
-            "heading": "Pro",
-            "preheading": "Protein power",
-            "description": "Protein helps growing bodies and brains stay strong and energized."
-          }
-        },
-        "column_eT4RK4": {
-          "type": "column",
-          "settings": {
-            "icon": "shopify://shop_images/Vector_5.png",
-            "heading": "Vi",
-            "preheading": "Vitamin boost",
-            "description": "Our ingredients naturally provide the vitamins kids need in every bite."
-          }
-        },
-        "column_A3riHw": {
-          "type": "column",
-          "settings": {
-            "icon": "shopify://shop_images/cr.svg",
-            "heading": "Cr",
-            "preheading": "Calcium rich",
-            "description": "Calcium supports strong bones and teeth—and happy smiling kids."
-          }
-        },
-        "column_CeK7h7": {
-          "type": "column",
-          "settings": {
-            "icon": "shopify://shop_images/Vector.png",
-            "heading": "In",
-            "preheading": "Ingredient info",
-            "description": "Learn more about our ingredients and how they make our meals winners."
-          }
-        }
-      },
-      "block_order": [
-        "column_AxkfXf",
-        "column_KBk7jL",
-        "column_eT4RK4",
-        "column_A3riHw",
-        "column_CeK7h7"
-      ],
-      "name": "Winning Ingredients",
-      "settings": {
-        "title": "winning ingredients",
-        "heading_alignment": "center",
-        "title_color": "#ffffff",
-        "background_color": "#0f4735",
-        "background_image_left": "shopify://shop_images/image_124.png",
-        "background_image_right": "shopify://shop_images/image_66.png",
-        "enable_mobile_slider": true,
-        "button_label": "ingredients",
-        "button_link": "",
-        "button_style": "primary",
-        "border_thickness": 2,
-        "border_radius": 15,
-        "border_color": "#7ab55c",
-        "heading_size": 80,
-        "heading_color": "#ffffff",
-        "preheading_size": 18,
-        "preheading_color": "#f8971d",
-        "description_size": 15,
-        "description_color": "#ffffff",
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
     "ungredients_new_aLpGiV": {
       "type": "ungredients-new",
       "blocks": {
@@ -278,6 +197,87 @@
         "button_bg_color": "#f1ead9",
         "button_text_color": "#0f4735",
         "button_border_color": "#0f4735"
+      }
+    },
+    "custom_slider_Tmwwfw": {
+      "type": "custom-slider",
+      "blocks": {
+        "column_cQFpBK": {
+          "type": "column",
+          "settings": {
+            "icon": "shopify://shop_images/wh.svg",
+            "heading": "Wh",
+            "preheading": "Wholesome ingredients",
+            "description": "We use the kind of real ingredients you’d use in your own kitchen."
+          }
+        },
+        "column_g8rXbK": {
+          "type": "column",
+          "settings": {
+            "icon": "shopify://shop_images/pro.svg",
+            "heading": "Pro",
+            "preheading": "Protein power",
+            "description": "Helps support growing bodies and brains."
+          }
+        },
+        "column_cp4AGd": {
+          "type": "column",
+          "settings": {
+            "icon": "shopify://shop_images/Vector_5.png",
+            "heading": "Vit",
+            "preheading": "Vitamins",
+            "description": "Our ingredients help provide the vitamins kids need with every bite."
+          }
+        },
+        "column_DGetmz": {
+          "type": "column",
+          "settings": {
+            "icon": "shopify://shop_images/cr.svg",
+            "heading": "Ca",
+            "preheading": "Calcium for kids",
+            "description": "Calcium supports strong bones and teeth—and happy smiling faces."
+          }
+        },
+        "column_BmtzBn": {
+          "type": "column",
+          "settings": {
+            "icon": "shopify://shop_images/Vector.png",
+            "heading": "In",
+            "preheading": "Ingredient info",
+            "description": "Learn more about the whole ingredients that make our meals winners."
+          }
+        }
+      },
+      "block_order": [
+        "column_cQFpBK",
+        "column_g8rXbK",
+        "column_cp4AGd",
+        "column_DGetmz",
+        "column_BmtzBn"
+      ],
+      "name": "Winning Ingredients",
+      "settings": {
+        "title": "INGREDIENTS",
+        "heading_alignment": "center",
+        "title_color": "#ffffff",
+        "background_color": "#0f4735",
+        "background_image_left": "shopify://shop_images/image_124.png",
+        "background_image_right": "shopify://shop_images/image_66.png",
+        "enable_mobile_slider": true,
+        "button_label": "ingredients",
+        "button_link": "",
+        "button_style": "primary",
+        "border_thickness": 2,
+        "border_radius": 15,
+        "border_color": "#7ab55c",
+        "heading_size": 80,
+        "heading_color": "#ffffff",
+        "preheading_size": 18,
+        "preheading_color": "#f8971d",
+        "description_size": 15,
+        "description_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     },
     "custom_liquid_inHWDb": {
@@ -387,7 +387,7 @@
     "hero_text_image_JgGcCx",
     "est_section_yyfjFw",
     "food_is_love_C4zpJe",
-    "custom_slider_hJY8jr",
+    "custom_slider_Tmwwfw",
     "ungredients_new_aLpGiV",
     "custom_liquid_inHWDb",
     "instra_reel_FGmhr6"
