@@ -146,8 +146,8 @@
           "type": "faq",
           "settings": {
             "parent_tab": "directions",
-            "faq_question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            "faq_answer": ""
+            "faq_question": "How much vegetables are in a serving of Kidfresh meals?",
+            "faq_answer": "We know that kids (and adults) find it challenging to get the recommended number of\nveggies each day. Kidfresh meals help make it possible by putting veggies in every bite—\nwith some of our meals providing as much as a half a cup of veggies per serving.\nVeggies in every bite can mean different things for each meal. Some bites lead to ½ cup\nof veggies per meal whereas others are a bit of veggies with other ingredients."
           }
         },
         "faq_tkEAHY": {
