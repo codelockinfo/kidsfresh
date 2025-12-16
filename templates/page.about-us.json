@@ -200,26 +200,34 @@
         "padding_bottom": 60
       }
     },
-    "ungredients_new_aLpGiV": {
+    "ungredients_new_8HeG8T": {
       "type": "ungredients-new",
       "blocks": {
-        "ungredient_yera6J": {
+        "ungredient_4qqe8Y": {
           "type": "ungredient",
           "settings": {
-            "title": "Nothing artificial",
+            "title": "No artificial ingredients",
             "description": "No fake outs, just the real deal",
             "percentage": "0%"
           }
         },
-        "ungredient_cEQeLX": {
+        "ungredient_AG7VMz": {
           "type": "ungredient",
           "settings": {
-            "title": "No antibiotics",
-            "description": "We're pro real healthy ingredients",
+            "title": "No artificial flavors",
+            "description": "We already taste delicious",
             "percentage": "0%"
           }
         },
-        "ungredient_FNCpAq": {
+        "ungredient_DpBDrd": {
+          "type": "ungredient",
+          "settings": {
+            "title": "No antibiotics",
+            "description": "We're pro antibiotic-free chicken and beef",
+            "percentage": "0%"
+          }
+        },
+        "ungredient_p4FGW9": {
           "type": "ungredient",
           "settings": {
             "title": "No preservatives",
@@ -227,47 +235,48 @@
             "percentage": "0%"
           }
         },
-        "ungredient_8hkbDw": {
+        "ungredient_jVhVRa": {
           "type": "ungredient",
           "settings": {
-            "title": "No GMOs",
-            "description": "We're sticking with Mother Nature",
+            "title": "No Bioengineered Ingredients",
+            "description": "We’re sticking with Mother Nature",
             "percentage": "0%"
           }
         },
-        "ungredient_yY74TH": {
+        "ungredient_fTdqYH": {
           "type": "ungredient",
           "settings": {
-            "title": "No synthetic food dyes",
+            "title": "No synthetic food colors",
             "description": "Keeping it real and colorful",
             "percentage": "0%"
           }
         },
-        "ungredient_BFQnP9": {
+        "ungredient_cVERCq": {
           "type": "ungredient",
           "settings": {
             "title": "No BPA in packaging",
-            "description": "We're helping grow big brains",
+            "description": "Better for the planet means better for kids",
             "percentage": "0%"
           }
         }
       },
       "block_order": [
-        "ungredient_yera6J",
-        "ungredient_cEQeLX",
-        "ungredient_FNCpAq",
-        "ungredient_8hkbDw",
-        "ungredient_yY74TH",
-        "ungredient_BFQnP9"
+        "ungredient_4qqe8Y",
+        "ungredient_AG7VMz",
+        "ungredient_DpBDrd",
+        "ungredient_p4FGW9",
+        "ungredient_jVhVRa",
+        "ungredient_fTdqYH",
+        "ungredient_cVERCq"
       ],
       "name": "Ungredients",
       "settings": {
         "background_image": "shopify://shop_images/Group_292_1.png",
         "mobile_background_image": "shopify://shop_images/Group_306_1_b0ad8e85-02c8-4342-898e-38ca43868d69.png",
         "background_color": "rgba(0,0,0,0)",
-        "title": "<p>UNGREDIENTS</p>",
+        "title": "<p><em>un</em>gredients</p>",
         "icon_svg": "shopify://shop_images/Group_97_9706f09d-9e6f-444b-ad57-08c399617048.png",
-        "subtitle": "<p>Whatdoesn’tgo into our meals is just as important as what does.</p>",
+        "subtitle": "<p>What <em><strong>doesn't</strong></em><strong> </strong>go into our meals is just as important as what does.</p>",
         "footer_text": "Built with what matters most: real ingredients, balanced nutrition, and vegetables in disguise. Every meal is designed to support strong bodies, growing minds, and stress-free mealtimes.",
         "button_text": "our mission",
         "button_url": "",
@@ -388,7 +397,7 @@
     "est_section_yyfjFw",
     "food_is_love_C4zpJe",
     "custom_slider_Tmwwfw",
-    "ungredients_new_aLpGiV",
+    "ungredients_new_8HeG8T",
     "custom_liquid_inHWDb",
     "instra_reel_FGmhr6"
   ]
