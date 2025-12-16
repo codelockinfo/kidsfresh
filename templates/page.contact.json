@@ -48,8 +48,8 @@
         "title": "how may we help you win more meals?",
         "show_supermarket": false,
         "subtitle": "Please drop us a note, and we’ll get back to you with an answer.",
-        "left_image": "shopify://shop_images/image_144.png",
-        "right_image": "shopify://shop_images/image_142.png",
+        "background_image_desktop": "shopify://shop_images/WhereToBuy-and-Contact-FORMS-Deskkop-2x.png",
+        "background_image_mobile": "shopify://shop_images/WhereToBuy-and-Contact-FORMS-Mobile-2x.png",
         "wave_image": "shopify://shop_images/Group_8.png",
         "padding_top": 40,
         "padding_bottom": 60
