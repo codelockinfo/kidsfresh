@@ -181,8 +181,6 @@
         "heading_alignment": "center",
         "title_color": "#ffffff",
         "background_color": "#f3f3f3",
-        "background_image_left": "shopify://shop_images/image_124.png",
-        "background_image_right": "shopify://shop_images/image_66.png",
         "background_image_left_mobile": "shopify://shop_images/About-BottomWinningIngredients-Desktop-2x.png",
         "background_image_right_mobile": "shopify://shop_images/About-BottomWinningIngredients-Mobile-2x_png.png",
         "enable_mobile_slider": true,
