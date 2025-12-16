@@ -232,12 +232,20 @@
         "ungredient_dWdUim": {
           "type": "ungredient",
           "settings": {
-            "title": "No antibiotics",
-            "description": "We're pro real healthy ingredients",
+            "title": "No artificial flavors",
+            "description": "We already taste delicious",
             "percentage": "0%"
           }
         },
         "ungredient_n8ABMX": {
+          "type": "ungredient",
+          "settings": {
+            "title": "No antibiotics",
+            "description": "We're pro antibiotic-free chicken and beef",
+            "percentage": "0%"
+          }
+        },
+        "ungredient_PG9UKX": {
           "type": "ungredient",
           "settings": {
             "title": "No preservatives",
@@ -245,23 +253,23 @@
             "percentage": "0%"
           }
         },
-        "ungredient_PG9UKX": {
-          "type": "ungredient",
-          "settings": {
-            "title": "No GMOs",
-            "description": "We're sticking with Mother Nature",
-            "percentage": "0%"
-          }
-        },
         "ungredient_MaDGLP": {
           "type": "ungredient",
           "settings": {
-            "title": "No synthetic food dyes",
-            "description": "Keeping it real and colorful",
+            "title": "No Bioengineered Ingredients",
+            "description": "We’re sticking with Mother Nature",
             "percentage": "0%"
           }
         },
         "ungredient_UqBxrQ": {
+          "type": "ungredient",
+          "settings": {
+            "title": "No synthetic food colors",
+            "description": "Keeping it real and colorful",
+            "percentage": "0%"
+          }
+        },
+        "ungredient_LgJ9JD": {
           "type": "ungredient",
           "settings": {
             "title": "No BPA in packaging",
@@ -276,16 +284,17 @@
         "ungredient_n8ABMX",
         "ungredient_PG9UKX",
         "ungredient_MaDGLP",
-        "ungredient_UqBxrQ"
+        "ungredient_UqBxrQ",
+        "ungredient_LgJ9JD"
       ],
       "name": "Ungredients",
       "settings": {
         "background_image": "shopify://shop_images/Group_292_1.png",
         "mobile_background_image": "shopify://shop_images/Group_306_1_b0ad8e85-02c8-4342-898e-38ca43868d69.png",
         "background_color": "rgba(0,0,0,0)",
-        "title": "<p>UNGREDIENTS</p>",
+        "title": "<p><em>un</em>gredients</p>",
         "icon_svg": "shopify://shop_images/Group_97_9706f09d-9e6f-444b-ad57-08c399617048.png",
-        "subtitle": "<p>What <strong>doesn’t </strong>go into our meals is just as important as what does.</p>",
+        "subtitle": "<p>What <em><strong>doesn't</strong></em><strong> </strong>go into our meals is just as important as what does.</p>",
         "footer_text": "Built with what matters most: real ingredients, balanced nutrition, and vegetables in disguise. Every meal is designed to support strong bodies, growing minds, and stress-free mealtimes.",
         "button_text": "our mission",
         "button_url": "",
