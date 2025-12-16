@@ -5,10 +5,30 @@
 <style>
   .contact-location-section {
     position: relative;
-    background-color: #0f4735;
+    {% comment %} background-color: #0f4735; {% endcomment %}
     padding: 92px 20px 150px;
     overflow: hidden;
   }
+
+  {%- if st.background_image_desktop != blank -%}
+  .contact-location-section {
+    background-image: url('{{ st.background_image_desktop | image_url: width: 1920 }}');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  {%- endif -%}
+
+  {%- if st.background_image_mobile != blank -%}
+  @media screen and (max-width: 768px) {
+    .contact-location-section {
+      background-image: url('{{ st.background_image_mobile | image_url: width: 768 }}');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+  {%- endif -%}
 
   .contact-location-left-image,
   .contact-location-right-image {
@@ -63,7 +83,7 @@
   }
 
   .contact-location-form {
-    background: #0f4735;
+    {% comment %} background: #0f4735; {% endcomment %}
     border: 4px solid #8DC13F;
     border-radius: 8px;
     padding: 42px 53px 53px;
@@ -495,6 +515,22 @@
       "id": "subtitle",
       "label": "Subtitle",
       "default": "We'd love to be your neighbor. please let us know where you'd like to see our meals move in."
+    },
+    {
+      "type": "header",
+      "content": "Background Images"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image_desktop",
+      "label": "Desktop Background Image",
+      "info": "Background image for desktop screens (768px and above)"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image_mobile",
+      "label": "Mobile Background Image",
+      "info": "Background image for mobile screens (below 768px)"
     },
     {
       "type": "image_picker",
