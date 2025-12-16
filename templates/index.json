@@ -204,7 +204,7 @@
         "button_label": "ingredients",
         "button_link": "",
         "button_style": "primary",
-        "border_thickness": 2,
+        "border_thickness": 4,
         "border_radius": 15,
         "border_color": "#7ab55c",
         "heading_size": 80,
