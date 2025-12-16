@@ -258,6 +258,7 @@
     width: 100%;
     overflow: hidden;
     z-index: 1;
+    display: block;
   }
 
   .wave-divider img {
@@ -274,32 +275,50 @@
     display: block;
   }
 
+  .contact-location-bottom-image {
+    display: none;
+  }
+
   @media screen and (max-width: 768px) {
     .contact-location-section {
-      padding: 33px 30px 90px;
+      padding: 33px 30px 0;
+      padding-bottom: 0;
+    }
+
+    .contact-location-left-image,
+    .contact-location-right-image {
+      display: none;
     }
 
     .contact-location-title {
       font-size: 42px;
       line-height: 46px;
+      margin-bottom: 15px;
     }
+    
     .contact_btn .button--primary{
       font-size: 20px;
       line-height: 33px;
       margin-top: 35px;
       padding: 14px 36px;
     }
+    
     .contact-location-subtitle {
       font-size: 24px;
       line-height: 32px;
+      margin-top: 15px;
+      margin-bottom: 30px;
     }
 
     .form-label {
-    font-size: 20px;
+      font-size: 20px;
     }
+    
     .contact-location-form {
       padding: 17px 25px 37px;
+      margin-bottom: 0;
     }
+    
     .form-field-wrapper {
       margin-bottom: 25px;
     }
@@ -309,27 +328,62 @@
       gap: 0;
       margin-bottom: 0;
     }
-      .form-field-wrapper.half .form-field-group {
-        margin-bottom: 25px;
-        }
+    
+    .form-field-wrapper.half .form-field-group {
+      margin-bottom: 25px;
+    }
 
-    .contact-location-left-image{
-      max-width: 241px;
-    }
-    .contact-location-right-image {
-      max-width: 165px;
-    }
     .form-input,
-  .form-select,
-  .form-textarea {
-    padding: 15px 10px;
-  }
+    .form-select,
+    .form-textarea {
+      padding: 15px 10px;
+      font-size: 18px;
+    }
 
+    .contact-location-bottom-image {
+      display: block;
+      width: 100%;
+      margin-top: 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-location-bottom-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    .contact-location-bottom-image-wrapper {
+      position: relative;
+      width: 100%;
+    }
+
+    .leaf-icon-mobile {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      text-align: center;
+    }
+
+    .leaf-icon-mobile svg {
+      width: 30px;
+      height: 30px;
+      fill: #ffffff;
+    }
+
+    .wave-divider {
+      display: none;
+    }
   }
 
   @media screen and (max-width: 375px) {
     .contact-location-section {
-      padding: 33px 15px 90px;
+      padding: 33px 15px 0;
+      padding-bottom: 0;
     }
     .contact-location-form {
       padding: 17px 20px 37px;
@@ -339,6 +393,9 @@
       line-height: 33px;
       margin-top: 26px;
       padding: 14px 36px;
+    }
+    .wave-divider {
+      display: none;
     }
   }
 </style>
@@ -475,6 +532,24 @@
     
   </div>
 
+  <!-- Mobile Bottom Image -->
+  {%- if st.bottom_image_mobile != blank -%}
+    <div class="contact-location-bottom-image">
+      <div class="contact-location-bottom-image-wrapper">
+        <img
+          src="{{ st.bottom_image_mobile | image_url: width: 768 }}"
+          alt="{{ st.bottom_image_mobile.alt | escape }}"
+          loading="lazy"
+        >
+        <div class="leaf-icon-mobile">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  {%- endif -%}
+
   <!-- Customizable Wave Divider -->
   {%- if st.wave_image != blank -%}
     <div class="wave-divider">
@@ -541,6 +616,12 @@
       "type": "image_picker",
       "id": "right_image",
       "label": "Right Background Image (Celery/Vegetables)"
+    },
+    {
+      "type": "image_picker",
+      "id": "bottom_image_mobile",
+      "label": "Mobile Bottom Image",
+      "info": "Image displayed below the form on mobile devices (woman and child photo)"
     },
     {
       "type": "header",
