@@ -7,6 +7,15 @@
     overflow: hidden;
   }
 
+  {%- if section.settings.background_image_desktop != blank -%}
+    .winning-ingredients-{{ section.id }} {
+      background-image: url('{{ section.settings.background_image_desktop | img_url: 'master' }}');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  {%- endif -%}
+
   .winning-ingredients-{{ section.id }} .container {
     padding: 0 80px;
   }
@@ -217,6 +226,14 @@
 }
 
     @media screen and (max-width: 768px) {
+    {%- if section.settings.background_image_mobile != blank -%}
+      .winning-ingredients-{{ section.id }} {
+        background-image: url('{{ section.settings.background_image_mobile | img_url: 'master' }}');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    {%- endif -%}
     .winning-ingredients-{{ section.id }} .section-heading {
       font-size: 44px;
       line-height: 46px;
@@ -686,6 +703,22 @@
       "id": "background_color",
       "label": "Background Color",
       "default": "#1a4d3a"
+    },
+    {
+      "type": "header",
+      "content": "Section Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image_desktop",
+      "label": "Background Image (Desktop)",
+      "info": "If set, this will override the background color on desktop"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image_mobile",
+      "label": "Background Image (Mobile)",
+      "info": "If set, this will override the background color on mobile. If not set, desktop image will be used"
     },
     {
       "type": "header",
