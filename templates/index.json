@@ -146,7 +146,7 @@
             "icon": "shopify://shop_images/wh.svg",
             "heading": "Wh",
             "preheading": "Wholesome ingredients",
-            "description": "We use the kind of real ingredients you'd use in your own kitchen."
+            "description": "We use the kind of real ingredients you’d use in your own kitchen."
           }
         },
         "column_qnEB66": {
@@ -195,7 +195,7 @@
       ],
       "name": "Winning Ingredients",
       "settings": {
-        "title": "winning ingredients",
+        "title": "INGREDIENTS",
         "heading_alignment": "center",
         "title_color": "#ffffff",
         "background_color": "#0f4735",
