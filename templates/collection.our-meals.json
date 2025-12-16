@@ -267,7 +267,7 @@
           "type": "product",
           "settings": {
             "block_width": 33,
-            "product": "chicken-sticks-potato-tots",
+            "product": "fish-sticks",
             "show_new_badge": false,
             "new_badge_image": "shopify://shop_images/Group_243.png",
             "show_second_image": true,
