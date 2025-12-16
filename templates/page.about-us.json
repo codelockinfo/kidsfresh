@@ -119,86 +119,6 @@
         "bottom_decor": "shopify://shop_images/Group_318.png"
       }
     },
-    "ungredients_new_aLpGiV": {
-      "type": "ungredients-new",
-      "blocks": {
-        "ungredient_yera6J": {
-          "type": "ungredient",
-          "settings": {
-            "title": "Nothing artificial",
-            "description": "No fake outs, just the real deal",
-            "percentage": "0%"
-          }
-        },
-        "ungredient_cEQeLX": {
-          "type": "ungredient",
-          "settings": {
-            "title": "No antibiotics",
-            "description": "We're pro real healthy ingredients",
-            "percentage": "0%"
-          }
-        },
-        "ungredient_FNCpAq": {
-          "type": "ungredient",
-          "settings": {
-            "title": "No preservatives",
-            "description": "Our meals are frozen fresh",
-            "percentage": "0%"
-          }
-        },
-        "ungredient_8hkbDw": {
-          "type": "ungredient",
-          "settings": {
-            "title": "No GMOs",
-            "description": "We're sticking with Mother Nature",
-            "percentage": "0%"
-          }
-        },
-        "ungredient_yY74TH": {
-          "type": "ungredient",
-          "settings": {
-            "title": "No synthetic food dyes",
-            "description": "Keeping it real and colorful",
-            "percentage": "0%"
-          }
-        },
-        "ungredient_BFQnP9": {
-          "type": "ungredient",
-          "settings": {
-            "title": "No BPA in packaging",
-            "description": "We're helping grow big brains",
-            "percentage": "0%"
-          }
-        }
-      },
-      "block_order": [
-        "ungredient_yera6J",
-        "ungredient_cEQeLX",
-        "ungredient_FNCpAq",
-        "ungredient_8hkbDw",
-        "ungredient_yY74TH",
-        "ungredient_BFQnP9"
-      ],
-      "name": "Ungredients",
-      "settings": {
-        "background_image": "shopify://shop_images/Group_292_1.png",
-        "mobile_background_image": "shopify://shop_images/Group_306_1_b0ad8e85-02c8-4342-898e-38ca43868d69.png",
-        "background_color": "rgba(0,0,0,0)",
-        "title": "<p>ungredients</p>",
-        "icon_svg": "shopify://shop_images/Group_97_9706f09d-9e6f-444b-ad57-08c399617048.png",
-        "subtitle": "<p>What <strong>doesn't </strong>go into our meals is just as important as what does.</p>",
-        "footer_text": "Built with what matters most: real ingredients, balanced nutrition, and vegetables in disguise. Every meal is designed to support strong bodies, growing minds, and stress-free mealtimes.",
-        "button_text": "our mission",
-        "button_url": "",
-        "accent_color": "#0f4735",
-        "title_color": "#0f4735",
-        "subtitle_color": "#0f4735",
-        "card_bg_color": "#f1ead9",
-        "button_bg_color": "#f1ead9",
-        "button_text_color": "#0f4735",
-        "button_border_color": "#0f4735"
-      }
-    },
     "custom_slider_Tmwwfw": {
       "type": "custom-slider",
       "blocks": {
@@ -278,6 +198,86 @@
         "description_color": "#ffffff",
         "padding_top": 60,
         "padding_bottom": 60
+      }
+    },
+    "ungredients_new_aLpGiV": {
+      "type": "ungredients-new",
+      "blocks": {
+        "ungredient_yera6J": {
+          "type": "ungredient",
+          "settings": {
+            "title": "Nothing artificial",
+            "description": "No fake outs, just the real deal",
+            "percentage": "0%"
+          }
+        },
+        "ungredient_cEQeLX": {
+          "type": "ungredient",
+          "settings": {
+            "title": "No antibiotics",
+            "description": "We're pro real healthy ingredients",
+            "percentage": "0%"
+          }
+        },
+        "ungredient_FNCpAq": {
+          "type": "ungredient",
+          "settings": {
+            "title": "No preservatives",
+            "description": "Our meals are frozen fresh",
+            "percentage": "0%"
+          }
+        },
+        "ungredient_8hkbDw": {
+          "type": "ungredient",
+          "settings": {
+            "title": "No GMOs",
+            "description": "We're sticking with Mother Nature",
+            "percentage": "0%"
+          }
+        },
+        "ungredient_yY74TH": {
+          "type": "ungredient",
+          "settings": {
+            "title": "No synthetic food dyes",
+            "description": "Keeping it real and colorful",
+            "percentage": "0%"
+          }
+        },
+        "ungredient_BFQnP9": {
+          "type": "ungredient",
+          "settings": {
+            "title": "No BPA in packaging",
+            "description": "We're helping grow big brains",
+            "percentage": "0%"
+          }
+        }
+      },
+      "block_order": [
+        "ungredient_yera6J",
+        "ungredient_cEQeLX",
+        "ungredient_FNCpAq",
+        "ungredient_8hkbDw",
+        "ungredient_yY74TH",
+        "ungredient_BFQnP9"
+      ],
+      "name": "Ungredients",
+      "settings": {
+        "background_image": "shopify://shop_images/Group_292_1.png",
+        "mobile_background_image": "shopify://shop_images/Group_306_1_b0ad8e85-02c8-4342-898e-38ca43868d69.png",
+        "background_color": "rgba(0,0,0,0)",
+        "title": "<p>UNGREDIENTS</p>",
+        "icon_svg": "shopify://shop_images/Group_97_9706f09d-9e6f-444b-ad57-08c399617048.png",
+        "subtitle": "<p>What <strong>doesn't </strong>go into our meals is just as important as what does.</p>",
+        "footer_text": "Built with what matters most: real ingredients, balanced nutrition, and vegetables in disguise. Every meal is designed to support strong bodies, growing minds, and stress-free mealtimes.",
+        "button_text": "our mission",
+        "button_url": "",
+        "accent_color": "#0f4735",
+        "title_color": "#0f4735",
+        "subtitle_color": "#0f4735",
+        "card_bg_color": "#f1ead9",
+        "button_bg_color": "#f1ead9",
+        "button_text_color": "#0f4735",
+        "button_border_color": "#0f4735"
       }
     },
     "custom_liquid_inHWDb": {
