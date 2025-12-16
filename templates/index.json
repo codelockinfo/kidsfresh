@@ -131,7 +131,7 @@
         "hover_text": "we hide veggies in every bite!",
         "bottom_decor": "shopify://shop_images/Group_280_4.png",
         "heading": "celebrate the little victories",
-        "desc": "At Kidfresh, we’re on a mission to help you win more meals. To us, winning is about more than kid-friendly cuisine. It’s about cooking with the wholesome ingredients you’d use. It’s about hiding veggies in every bite. It’s about making family mealtimes easier, faster, healthier—and more joyful. It’s about helping you win parenthood... one clean plate at a time.",
+        "desc": "At Kidfresh, we’re on a mission to help you win more meals. To us, winning is about\nmore than kid-friendly cuisine. It’s about cooking with the wholesome ingredients you’d\nuse. It’s about hiding veggies in every bite. It’s about making family mealtimes easier,\nfaster, nutritious—and more joyful. It’s about helping you win parenthood, one meal at a\ntime.",
         "btn_text": "meet Kidfresh",
         "btn_link": ""
       }
@@ -145,7 +145,7 @@
             "icon": "shopify://shop_images/wh.svg",
             "heading": "Wh",
             "preheading": "Wholesome ingredients",
-            "description": "We use the kind of real ingredients you'd use in your own kitchen."
+            "description": "We use the kind of real ingredients you’d use in your own kitchen."
           }
         },
         "column_qnEB66": {
@@ -154,25 +154,25 @@
             "icon": "shopify://shop_images/pro.svg",
             "heading": "Pro",
             "preheading": "Protein power",
-            "description": "Protein helps growing bodies and brains stay strong and energized."
+            "description": "Helps support growing bodies and brains."
           }
         },
         "column_qwcrPF": {
           "type": "column",
           "settings": {
             "icon": "shopify://shop_images/Vector_5.png",
-            "heading": "Vi",
-            "preheading": "Vitamin boost",
-            "description": "Our ingredients naturally provide the vitamins kids need in every bite."
+            "heading": "Vit",
+            "preheading": "Vitamins",
+            "description": "Our ingredients help provide the vitamins kids need with every bite."
           }
         },
         "column_rNkdn8": {
           "type": "column",
           "settings": {
             "icon": "shopify://shop_images/cr.svg",
-            "heading": "Cr",
-            "preheading": "Calcium rich",
-            "description": "Calcium supports strong bones and teeth—and happy smiling kids."
+            "heading": "Ca",
+            "preheading": "Calcium for kids",
+            "description": "Calcium supports strong bones and teeth—and happy smiling faces."
           }
         },
         "column_73b7Ex": {
@@ -181,7 +181,7 @@
             "icon": "shopify://shop_images/Vector.png",
             "heading": "In",
             "preheading": "Ingredient info",
-            "description": "Learn more about our ingredients and how they make our meals winners."
+            "description": "Learn more about the whole ingredients that make our meals winners."
           }
         }
       },
@@ -194,7 +194,7 @@
       ],
       "name": "Winning Ingredients",
       "settings": {
-        "title": "winning ingredients",
+        "title": "INGREDIENTS",
         "heading_alignment": "center",
         "title_color": "#ffffff",
         "background_color": "#0f4735",
@@ -223,7 +223,7 @@
         "ungredient_LEkHGP": {
           "type": "ungredient",
           "settings": {
-            "title": "Nothing artificial",
+            "title": "No artificial ingredients",
             "description": "No fake outs, just the real deal",
             "percentage": "0%"
           }
@@ -231,12 +231,20 @@
         "ungredient_dWdUim": {
           "type": "ungredient",
           "settings": {
-            "title": "No antibiotics",
-            "description": "We're pro real healthy ingredients",
+            "title": "No artificial flavors",
+            "description": "We already taste delicious",
             "percentage": "0%"
           }
         },
         "ungredient_n8ABMX": {
+          "type": "ungredient",
+          "settings": {
+            "title": "No antibiotics",
+            "description": "We're pro antibiotic-free chicken and beef",
+            "percentage": "0%"
+          }
+        },
+        "ungredient_PG9UKX": {
           "type": "ungredient",
           "settings": {
             "title": "No preservatives",
@@ -244,27 +252,27 @@
             "percentage": "0%"
           }
         },
-        "ungredient_PG9UKX": {
-          "type": "ungredient",
-          "settings": {
-            "title": "No GMOs",
-            "description": "We're sticking with Mother Nature",
-            "percentage": "0%"
-          }
-        },
         "ungredient_MaDGLP": {
           "type": "ungredient",
           "settings": {
-            "title": "No synthetic food dyes",
-            "description": "Keeping it real and colorful",
+            "title": "No Bioengineered Ingredients",
+            "description": "We’re sticking with Mother Nature",
             "percentage": "0%"
           }
         },
         "ungredient_UqBxrQ": {
           "type": "ungredient",
           "settings": {
+            "title": "No synthetic food colors",
+            "description": "Keeping it real and colorful",
+            "percentage": "0%"
+          }
+        },
+        "ungredient_LgJ9JD": {
+          "type": "ungredient",
+          "settings": {
             "title": "No BPA in packaging",
-            "description": "We're helping grow big brains",
+            "description": "Better for the planet means better for kids",
             "percentage": "0%"
           }
         }
@@ -275,7 +283,8 @@
         "ungredient_n8ABMX",
         "ungredient_PG9UKX",
         "ungredient_MaDGLP",
-        "ungredient_UqBxrQ"
+        "ungredient_UqBxrQ",
+        "ungredient_LgJ9JD"
       ],
       "name": "Ungredients",
       "settings": {

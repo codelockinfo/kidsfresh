@@ -45,8 +45,8 @@
       "type": "hero-text-image",
       "name": "Hero Text with Image",
       "settings": {
-        "heading": "it's time to win more meals",
-        "description": "<p>Healthier shouldn’t be a hassle. At Kidfresh we make the kind of meals that kids cheer for, and make them with the kinds of ingredients that parents love giving them. Think kid’s menu favorites, like mac & cheese, chicken nuggets and even buttered pasta, but made better with hidden veggies in every bite. And made delicious, because a meal can only be better for them if they actually eat it. Easy preparation, empty plates, happy kids, and stress-free mealtimes…that’s what we mean when we say win more meals. We’re here to help you win parenthood, one bite at a time.</p>",
+        "heading": "it’s time to win more meals",
+        "description": "<p>At Kidfresh we make the kind of meals that kids cheer for—and we make them with the kinds of ingredients that parents love giving them. Think kids menu favorites, like mac & cheese, chicken nuggets and even buttered pasta—but made better with hidden veggies and wholesome ingredients in every bite. And made delicious, because a meal can only be better for them if they actually eat it. Easy preparation, empty plates, happy kids, and stress-free mealtimes...that’s what we mean when we say win more meals. We’re here to help you win parenthood, one bite at a time.</p>",
         "button_label": "shop now",
         "button_link": "#",
         "image": "shopify://shop_images/About-Top-Desktop-2x.png",
@@ -58,8 +58,8 @@
       "type": "est-section",
       "name": "ESTD Section",
       "settings": {
-        "heading": "est'd 2007",
-        "text": "We began as a couple parents in New York City who wanted healthier meals for their own kids, but quickly ended up on dinner tables and in lunch boxes all over town. Before long, our better-for-them frozen kid favorites found their way into grocery aisles all over the country. Maybe it was the hidden veggies, maybe it was the meatballs—either way, we’ve been helping parents win more meals ever since.",
+        "heading": "est’d 2007",
+        "text": "We began as a couple parents in New York City who wanted healthier meals for our own\nkids, but quickly ended up on dinner tables and in lunch boxes all over town. Before\nlong, our better-for-them frozen kid favorites found their way into grocery aisles all over the country. Maybe it was the hidden veggies, maybe it was the meatballs—either way, we’ve been helping parents win more meals ever since.",
         "heading_color": "#ffffff",
         "text_color": "#ffffff",
         "bg_color": "#0f4735",
@@ -80,15 +80,15 @@
           "type": "feature",
           "settings": {
             "icon": "shopify://shop_images/Group_305.png",
-            "title": "No Artificial Anything",
-            "description": "Zero preservatives, dyes, or fillers — just the good stuff."
+            "title": "no artificial ingredients",
+            "description": "No preservatives, synthetic colors or artificial flavors—just the good stuff."
           }
         },
         "feature_RyRtKd": {
           "type": "feature",
           "settings": {
             "icon": "shopify://shop_images/Vector_f40813d9-1bda-4fde-92a3-be0387011c2b.png",
-            "title": "Frozen Fresh",
+            "title": "frozen fresh",
             "description": "Flash-frozen to lock in nutrition and flavor. Just heat and eat."
           }
         },
@@ -96,7 +96,7 @@
           "type": "feature",
           "settings": {
             "icon": "shopify://shop_images/Group_95_8955ae52-aa79-43bb-92ff-0355eeefe8f9.png",
-            "title": "Kid Approved",
+            "title": "kid approved",
             "description": "Crafted by chefs, tested by kids, and devoured without a fight."
           }
         }
@@ -109,7 +109,7 @@
       "name": "Food is Love Section",
       "settings": {
         "heading": "food is love",
-        "description": "<p>Everything we do—from how we prepare our meals, to the ingredients we use, to our hidden veggies—is about giving kids what they need to be healthy and happy, and giving parents one more way to show their love.</p>",
+        "description": "<p>Everything we do—from how we prepare our meals, to the ingredients we use, to our<br/>hidden veggies—is about giving kids what they need to feel happy and hearty, and giving parents one more way to show their love.</p>",
         "bg_color": "#f1ead9",
         "heading_color": "#39302d",
         "text_color": "#5d3328",
@@ -119,65 +119,65 @@
         "bottom_decor": "shopify://shop_images/Group_318.png"
       }
     },
-    "custom_slider_hJY8jr": {
+    "custom_slider_Tmwwfw": {
       "type": "custom-slider",
       "blocks": {
-        "column_AxkfXf": {
+        "column_cQFpBK": {
           "type": "column",
           "settings": {
             "icon": "shopify://shop_images/wh.svg",
             "heading": "Wh",
             "preheading": "Wholesome ingredients",
-            "description": "We use the kind of real ingredients you'd use in your own kitchen."
+            "description": "We use the kind of real ingredients you’d use in your own kitchen."
           }
         },
-        "column_KBk7jL": {
+        "column_g8rXbK": {
           "type": "column",
           "settings": {
             "icon": "shopify://shop_images/pro.svg",
             "heading": "Pro",
             "preheading": "Protein power",
-            "description": "Protein helps growing bodies and brains stay strong and energized."
+            "description": "Helps support growing bodies and brains."
           }
         },
-        "column_eT4RK4": {
+        "column_cp4AGd": {
           "type": "column",
           "settings": {
             "icon": "shopify://shop_images/Vector_5.png",
-            "heading": "Vi",
-            "preheading": "Vitamin boost",
-            "description": "Our ingredients naturally provide the vitamins kids need in every bite."
+            "heading": "Vit",
+            "preheading": "Vitamins",
+            "description": "Our ingredients help provide the vitamins kids need with every bite."
           }
         },
-        "column_A3riHw": {
+        "column_DGetmz": {
           "type": "column",
           "settings": {
             "icon": "shopify://shop_images/cr.svg",
-            "heading": "Cr",
-            "preheading": "Calcium rich",
-            "description": "Calcium supports strong bones and teeth—and happy smiling kids."
+            "heading": "Ca",
+            "preheading": "Calcium for kids",
+            "description": "Calcium supports strong bones and teeth—and happy smiling faces."
           }
         },
-        "column_CeK7h7": {
+        "column_BmtzBn": {
           "type": "column",
           "settings": {
             "icon": "shopify://shop_images/Vector.png",
             "heading": "In",
             "preheading": "Ingredient info",
-            "description": "Learn more about our ingredients and how they make our meals winners."
+            "description": "Learn more about the whole ingredients that make our meals winners."
           }
         }
       },
       "block_order": [
-        "column_AxkfXf",
-        "column_KBk7jL",
-        "column_eT4RK4",
-        "column_A3riHw",
-        "column_CeK7h7"
+        "column_cQFpBK",
+        "column_g8rXbK",
+        "column_cp4AGd",
+        "column_DGetmz",
+        "column_BmtzBn"
       ],
       "name": "Winning Ingredients",
       "settings": {
-        "title": "winning ingredients",
+        "title": "INGREDIENTS",
         "heading_alignment": "center",
         "title_color": "#ffffff",
         "background_color": "#0f4735",
@@ -200,26 +200,34 @@
         "padding_bottom": 60
       }
     },
-    "ungredients_new_aLpGiV": {
+    "ungredients_new_8HeG8T": {
       "type": "ungredients-new",
       "blocks": {
-        "ungredient_yera6J": {
+        "ungredient_4qqe8Y": {
           "type": "ungredient",
           "settings": {
-            "title": "Nothing artificial",
+            "title": "No artificial ingredients",
             "description": "No fake outs, just the real deal",
             "percentage": "0%"
           }
         },
-        "ungredient_cEQeLX": {
+        "ungredient_AG7VMz": {
           "type": "ungredient",
           "settings": {
-            "title": "No antibiotics",
-            "description": "We're pro real healthy ingredients",
+            "title": "No artificial flavors",
+            "description": "We already taste delicious",
             "percentage": "0%"
           }
         },
-        "ungredient_FNCpAq": {
+        "ungredient_DpBDrd": {
+          "type": "ungredient",
+          "settings": {
+            "title": "No antibiotics",
+            "description": "We're pro antibiotic-free chicken and beef",
+            "percentage": "0%"
+          }
+        },
+        "ungredient_p4FGW9": {
           "type": "ungredient",
           "settings": {
             "title": "No preservatives",
@@ -227,47 +235,48 @@
             "percentage": "0%"
           }
         },
-        "ungredient_8hkbDw": {
+        "ungredient_jVhVRa": {
           "type": "ungredient",
           "settings": {
-            "title": "No GMOs",
-            "description": "We're sticking with Mother Nature",
+            "title": "No Bioengineered Ingredients",
+            "description": "We’re sticking with Mother Nature",
             "percentage": "0%"
           }
         },
-        "ungredient_yY74TH": {
+        "ungredient_fTdqYH": {
           "type": "ungredient",
           "settings": {
-            "title": "No synthetic food dyes",
+            "title": "No synthetic food colors",
             "description": "Keeping it real and colorful",
             "percentage": "0%"
           }
         },
-        "ungredient_BFQnP9": {
+        "ungredient_cVERCq": {
           "type": "ungredient",
           "settings": {
             "title": "No BPA in packaging",
-            "description": "We're helping grow big brains",
+            "description": "Better for the planet means better for kids",
             "percentage": "0%"
           }
         }
       },
       "block_order": [
-        "ungredient_yera6J",
-        "ungredient_cEQeLX",
-        "ungredient_FNCpAq",
-        "ungredient_8hkbDw",
-        "ungredient_yY74TH",
-        "ungredient_BFQnP9"
+        "ungredient_4qqe8Y",
+        "ungredient_AG7VMz",
+        "ungredient_DpBDrd",
+        "ungredient_p4FGW9",
+        "ungredient_jVhVRa",
+        "ungredient_fTdqYH",
+        "ungredient_cVERCq"
       ],
       "name": "Ungredients",
       "settings": {
         "background_image": "shopify://shop_images/Group_292_1.png",
         "mobile_background_image": "shopify://shop_images/Group_306_1_b0ad8e85-02c8-4342-898e-38ca43868d69.png",
         "background_color": "rgba(0,0,0,0)",
-        "title": "<p>ungredients</p>",
+        "title": "<p><em>un</em>gredients</p>",
         "icon_svg": "shopify://shop_images/Group_97_9706f09d-9e6f-444b-ad57-08c399617048.png",
-        "subtitle": "<p>What <strong>doesn't </strong>go into our meals is just as important as what does.</p>",
+        "subtitle": "<p>What <em><strong>doesn't</strong></em><strong> </strong>go into our meals is just as important as what does.</p>",
         "footer_text": "Built with what matters most: real ingredients, balanced nutrition, and vegetables in disguise. Every meal is designed to support strong bodies, growing minds, and stress-free mealtimes.",
         "button_text": "our mission",
         "button_url": "",
@@ -387,8 +396,8 @@
     "hero_text_image_JgGcCx",
     "est_section_yyfjFw",
     "food_is_love_C4zpJe",
-    "custom_slider_hJY8jr",
-    "ungredients_new_aLpGiV",
+    "custom_slider_Tmwwfw",
+    "ungredients_new_8HeG8T",
     "custom_liquid_inHWDb",
     "instra_reel_FGmhr6"
   ]
