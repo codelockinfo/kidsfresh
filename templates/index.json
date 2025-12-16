@@ -125,11 +125,10 @@
       "custom_css": [],
       "name": "Celebrate Plate Section ",
       "settings": {
-        "bg_desktop": "shopify://shop_images/Untitled_1920_x_1415_px_4_Custom_e655c0e4-be81-48c9-9a18-abb45847f0a1.webp",
-        "bg_mobile": "shopify://shop_images/Group_322_4.png",
+        "bg_desktop": "shopify://shop_images/Orange-plus-plate-hands.png",
+        "bg_mobile": "shopify://shop_images/orange-plus-hands-plate-mobile.png",
         "broccoli_image": "shopify://shop_images/image_40.png",
         "hover_text": "we hide veggies in every bite!",
-        "top_decor": "shopify://shop_images/Group_289.png",
         "bottom_decor": "shopify://shop_images/Group_280_4.png",
         "heading": "celebrate the little victories",
         "desc": "At Kidfresh, we’re on a mission to help you win more meals. To us, winning is about more than kid-friendly cuisine. It’s about cooking with the wholesome ingredients you’d use. It’s about hiding veggies in every bite. It’s about making family mealtimes easier, faster, healthier—and more joyful. It’s about helping you win parenthood... one clean plate at a time.",
