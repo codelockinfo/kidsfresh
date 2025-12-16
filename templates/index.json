@@ -162,18 +162,18 @@
           "type": "column",
           "settings": {
             "icon": "shopify://shop_images/Vector_5.png",
-            "heading": "Vi",
-            "preheading": "Vitamin boost",
-            "description": "Our ingredients naturally provide the vitamins kids need in every bite."
+            "heading": "Vit",
+            "preheading": "Vitamins",
+            "description": "Our ingredients help provide the vitamins kids need with every bite."
           }
         },
         "column_rNkdn8": {
           "type": "column",
           "settings": {
             "icon": "shopify://shop_images/cr.svg",
-            "heading": "Cr",
-            "preheading": "Calcium rich",
-            "description": "Calcium supports strong bones and teeth—and happy smiling kids."
+            "heading": "Ca",
+            "preheading": "Calcium for kids",
+            "description": "Calcium supports strong bones and teeth—and happy smiling faces."
           }
         },
         "column_73b7Ex": {
@@ -182,7 +182,7 @@
             "icon": "shopify://shop_images/Vector.png",
             "heading": "In",
             "preheading": "Ingredient info",
-            "description": "Learn more about our ingredients and how they make our meals winners."
+            "description": "Learn more about the whole ingredients that make our meals winners."
           }
         }
       },
