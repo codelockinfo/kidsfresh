@@ -102,14 +102,6 @@
             "faq_answer": "<p>We know the best ingredients only matter if they get eaten. While a handful of our dishes are clearly made with vegetables, like the tomatoes in our Spaghetti Loops, most of our meals cleverly disguise veggies among other wholesome ingredients. The only thing your kids will taste is deliciousness.</p>"
           }
         },
-        "faq_Pa7Yka": {
-          "type": "faq",
-          "settings": {
-            "parent_tab": "products",
-            "faq_question": "Why should using chicken raised without antibiotics matter to me?",
-            "faq_answer": "<p>We care just as much about what goes into our foods as what we choose to leave out. That’s why all our poultry and meat come from animals raised without antibiotics, as recommended by the American Academy of Pediatrics.<br/><br/>To learn more about the use of antibiotics in the raising of farm animals and steps being taken to limit this use, read here.   https://www.healthychildren.org/English/healthy-living/nutrition/Pages/antibiotics-used-in-food-should-parents-be-concerned.aspx</p>"
-          }
-        },
         "faq_ENqfcR": {
           "type": "faq",
           "settings": {
@@ -124,6 +116,14 @@
             "parent_tab": "products",
             "faq_question": "Does Kidfresh allow animal-based ingredients raised with the use of growth hormones, rBST or antibiotics?",
             "faq_answer": "<p>All our dairy and meat ingredients are free of growth hormone, rBST*, and antibiotics—because we care just as much about what goes into our foods as what we choose to leave out.<br/><br/>*No significant difference has been shown between milk derived from rBST and non-rBST-treated cows.</p>"
+          }
+        },
+        "faq_Pa7Yka": {
+          "type": "faq",
+          "settings": {
+            "parent_tab": "products",
+            "faq_question": "Why should using chicken raised without antibiotics matter to me?",
+            "faq_answer": "<p>We care just as much about what goes into our foods as what we choose to leave out. That’s why all our poultry and meat come from animals raised without antibiotics, as recommended by the American Academy of Pediatrics.<br/><br/>To learn more about the use of antibiotics in the raising of farm animals and steps being taken to limit this use, read here.   https://www.healthychildren.org/English/healthy-living/nutrition/Pages/antibiotics-used-in-food-should-parents-be-concerned.aspx</p>"
           }
         },
         "faq_YLjRgi": {
@@ -216,9 +216,9 @@
         "faq_4f9eMd",
         "faq_Ncz6GK",
         "faq_crcEE6",
-        "faq_Pa7Yka",
         "faq_ENqfcR",
         "faq_JeT9Vm",
+        "faq_Pa7Yka",
         "faq_YLjRgi",
         "faq_zixmwq",
         "faq_RQUUfB",
