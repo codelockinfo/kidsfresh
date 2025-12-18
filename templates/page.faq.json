@@ -78,6 +78,15 @@
             "faq_answer": "<p>We craft our meals with the needs of kids in mind*. And we do so with the recommendations of our registered dietitian to help meet the MyPlate Food Group guidelines for those age groups. Of course, tweens, teens, and adults looking for help getting a little extra veggie boost are also welcome to enjoy our meals, too.<br/><br/>*Every child has individual needs, so it’s best to consult with a pediatrician or dietitian.<br/>For a customized MyPlate Plan, based on age, gender and weight, visit  www.myplate.gov/myplate-plan.</p>"
           }
         },
+        "faq_hG9hHt": {
+          "type": "faq",
+          "disabled": true,
+          "settings": {
+            "parent_tab": "products",
+            "faq_question": "Why is frozen better?",
+            "faq_answer": "<p>Freezing is actually one of the best ways to preserve nutrients and flavor while<br/>extending shelf life. And that’s why we freeze our meals immediately after being cooked—so all that good stuff stays good until you’re ready to serve it up.The American Frozen Food Institute provides great information on the benefits of<br/>freezing foods to lock in nutrition. Find more information, visit this link -<br/>https://frozenadvantage.org/about/path-to-frozen/</p>"
+          }
+        },
         "faq_4f9eMd": {
           "type": "faq",
           "settings": {
@@ -104,6 +113,7 @@
         },
         "faq_3gpeNH": {
           "type": "faq",
+          "disabled": true,
           "settings": {
             "parent_tab": "products",
             "faq_question": "Do Kidfresh foods contain whole grains?",
@@ -221,6 +231,7 @@
       },
       "block_order": [
         "faq_W6ERfd",
+        "faq_hG9hHt",
         "faq_4f9eMd",
         "faq_Ncz6GK",
         "faq_crcEE6",
