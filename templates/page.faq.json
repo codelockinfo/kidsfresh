@@ -122,10 +122,19 @@
         },
         "faq_Pa7Yka": {
           "type": "faq",
+          "disabled": true,
           "settings": {
             "parent_tab": "products",
             "faq_question": "How does Kidfresh support growing bodies?",
             "faq_answer": "<p>Kids need essential nutrition to support their growing bodies and brains. Essential<br/>nutrition refers to nutrients that cannot be made in the body and therefore must be<br/>consumed in what we eat and drink. Our meals provide some of that essential nutrition<br/>through a variety of whole and wholesome ingredients, like fiber, protein, vitamins, and<br/>minerals. Each Kidfresh meal is as unique as the nutrition it provides. Check out<br/>the Nutritionally Notable section for each of our meals to see where to find a good source<br/>of fiber, calcium, vitamin A and C, iron, and potassium, in addition to providing 9-14g<br/>protein per serving.<br/> “Nutrition for Kids: Guidelines for a Healthy Diet.” Mayo Clinic. Published September<br/>30, 2022. As viewed con 11/10/25 at<br/>https://www.mayoclinic.org/healthy-lifestyle/childrens-health/in-depth/nutrition-for-<br/>kids/art-20049335.<br/> “Nutrition for Growing Bodies.” Academy of Nutrition and Dietetics. Published<br/>February 23, 2023. As viewed on 11/10/25 at<br/>https://www.eatright.org/food/planning/meals-and-snacks/nutrition-for-growing-<br/>bodies<br/> “Making Healthy Food Choices.” HealthyChildren.org. Published 2019. As viewed on<br/>11/10/25 at:<br/>https://www.healthychildren.org/English/ages-stages/gradeschool/nutrition/Pages/<br/>Making-Healthy-Food-Choices.aspx<br/> Schwarzenberg SJ, Georgieff MK. Advocacy for Improving Nutrition in the First 1000<br/>Days to Support Childhood Development and Adult Health. Pediatrics.<br/>2018;141(2):e20173716. doi:https://doi.org/10.1542/peds.2017-3716</p>"
+          }
+        },
+        "faq_ENqfcR": {
+          "type": "faq",
+          "settings": {
+            "parent_tab": "products",
+            "faq_question": "How much vegetables are in a serving of Kidfresh meals?",
+            "faq_answer": "<p>We know that kids (and adults) find it challenging to get the recommended number of veggies each day. Kidfresh meals help make it possible by putting veggies in every bite—with some of our meals providing as much as a half a cup of veggies per serving.<br/><br/>Veggies in every bite can mean different things for each meal. Some bites lead to ½ cup of veggies per meal whereas others are a bit of veggies with other ingredients.</p>"
           }
         },
         "faq_CxrmtV": {
@@ -144,20 +153,12 @@
             "faq_answer": "<p>We created our recipes to help meet kids’ nutrition needs. Whole ingredients, like<br/>vegetables, fish, meat, dairy, and whole grains, help to provide essential nutrition,<br/>including protein, fiber, vitamin A & C, potassium, iron, and calcium. These are all<br/>nutrients which kids need to support growing bodies and brains—and which can be<br/>found in our meals. Check out the Nutritionally Notable section for each of our meals to<br/>see where to find a good source for these nutrients. We make kids mealtime favorites<br/>better with the goodness of nature.<br/> Schwarzenberg SJ, Georgieff MK. Advocacy for Improving Nutrition in the First 1000<br/>Days to Support Childhood Development and Adult Health. Pediatrics.<br/>2018;141(2):e20173716. doi:https://doi.org/10.1542/peds.2017-3716.<br/> “Nutrition for Growing Bodies.” Academy of Nutrition and Dietetics. Published<br/>February 23, 2023. As viewed on 11/10/25 at<br/>https://www.eatright.org/food/planning/meals-and-snacks/nutrition-for-growing-<br/>bodies<br/> “Making Healthy Food Choices.” HealthyChildren.org. Published 2019. As viewed on<br/>11/10/25 at:<br/>https://www.healthychildren.org/English/ages-stages/gradeschool/nutrition/Pages/<br/>Making-Healthy-Food-Choices.aspx<br/> Building Healthy Bones.” Academy of Nutrition and Dietetics. Published July 04, 2022,<br/>Reviewed October 14, 2024. As viewed on 11/10/25 at<br/>https://www.eatright.org/health/health-conditions/bone-health-and-osteoporosis/<br/>building-healthy-bones<br/> American Academy of Pediatrics. Calcium: The Bone Builder Kids & Teens Need.<br/>HealthyChildren.org. Published September 27, 2022. As viewed on 11/10/25 at<br/>https://www.healthychildren.org/English/healthy-living/nutrition/Pages/calcium-the-<br/>bone-builder-kids-and-teens-need.aspx.</p>"
           }
         },
-        "faq_ENqfcR": {
-          "type": "faq",
-          "settings": {
-            "parent_tab": "directions",
-            "faq_question": "How much vegetables are in a serving of Kidfresh meals?",
-            "faq_answer": "<p>We know that kids (and adults) find it challenging to get the recommended number of veggies each day. Kidfresh meals help make it possible by putting veggies in every bite—with some of our meals providing as much as a half a cup of veggies per serving.<br/><br/>Veggies in every bite can mean different things for each meal. Some bites lead to ½ cup of veggies per meal whereas others are a bit of veggies with other ingredients.</p>"
-          }
-        },
         "faq_tkEAHY": {
           "type": "faq",
           "settings": {
             "parent_tab": "directions",
             "faq_question": "Are Kidfresh meals nutritious?",
-            "faq_answer": "<p>We have a few foods that some may consider high in sodium or high in saturated fats…\nAll foods and beverages our kids consume throughout the day will help them meet\ndietary recommendations and nutrition needs. We are one tool in the toolkit to help with\nyour journey to get kids to eat the foods you want. We are by no means perfect, because\nwho is? But that is what is great about health. It is dependent on the overall day and not\nany one food. We have a few foods that are considered “high” in sodium and saturated\nfat, (but not added sugar). So we would call to your attention these foods, because while\nthey have veggies, they also have ingredients contributing to nutrition levels that you\nneed to balance in with other meals throughout the day.</p>"
+            "faq_answer": "<p>We have a few foods that some may consider high in sodium or high in saturated fats…<br/>All foods and beverages our kids consume throughout the day will help them meet<br/>dietary recommendations and nutrition needs. We are one tool in the toolkit to help with<br/>your journey to get kids to eat the foods you want. We are by no means perfect, because<br/>who is? But that is what is great about health. It is dependent on the overall day and not<br/>any one food. We have a few foods that are considered “high” in sodium and saturated<br/>fat, (but not added sugar). So we would call to your attention these foods, because while<br/>they have veggies, they also have ingredients contributing to nutrition levels that you<br/>need to balance in with other meals throughout the day.</p>"
           }
         },
         "faq_Te6dbC": {
@@ -237,9 +238,9 @@
         "faq_crcEE6",
         "faq_3gpeNH",
         "faq_Pa7Yka",
+        "faq_ENqfcR",
         "faq_CxrmtV",
         "faq_Crkk7z",
-        "faq_ENqfcR",
         "faq_tkEAHY",
         "faq_Te6dbC",
         "faq_YLjRgi",
