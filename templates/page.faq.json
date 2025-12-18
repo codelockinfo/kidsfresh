@@ -111,15 +111,6 @@
             "faq_answer": "<p>We know the best ingredients only matter if they get eaten. While a handful of our dishes are clearly made with vegetables, like the tomatoes in our Spaghetti Loops, most of our meals cleverly disguise veggies among other wholesome ingredients. The only thing your kids will taste is deliciousness.</p>"
           }
         },
-        "faq_3gpeNH": {
-          "type": "faq",
-          "disabled": true,
-          "settings": {
-            "parent_tab": "products",
-            "faq_question": "Do Kidfresh foods contain whole grains?",
-            "faq_answer": "<p>We use whole grains in the breading for our nuggets and sticks meals, which add 8-14g whole grains per serving. Luckily, your kids will only notice how crispy and delicious they taste.<br/><br/>To learn more about the benefits of whole grains, visit the Whole Grains Council website. https://wholegrainscouncil.org/whole-grains-101<br/><br/>• Schwarzenberg SJ, Georgieff MK. Advocacy for Improving Nutrition in the First 1000 Days to Support Childhood Development and Adult Health. Pediatrics. 2018;141(2):e20173716. doi:https://doi.org/10.1542/peds.2017-3716 </p>"
-          }
-        },
         "faq_Pa7Yka": {
           "type": "faq",
           "disabled": true,
@@ -209,6 +200,14 @@
             "faq_answer": "<p>Docosahexaenoic Acid (DHA) helps support the developing brain, nervous system, and vision, especially in infants and children. DHA is essential in diets because it cannot be made in the body and must be obtained through the foods we eat. DHA supports normal brain development through the consumption of 250mg DHA omega-3 per day. Our fuss-free-finger-food Fish Sticks provide 90mg DHA omega-3 per serving.<br/><br/>• “Healthy Fish Choices for Kids.” HealthyChildren.org. As viewed on 11/10/25 at https://www.healthychildren.org/English/safety-prevention/all-around/Pages/Protecting-Your-Children-From-Contaminated-Fish.aspx.<br/><br/>• “DHA and Contribution to Normal Brain Development.” European Food Safety Authority. Published October 8, 2014. As viewed on 11/10/25 at https://www.efsa.europa.eu/en/efsajournal/pub/3840 (NOTE: 250mg recommended as a significant level for 2+ years vs. the 90mg in this dish).</p>"
           }
         },
+        "faq_3gpeNH": {
+          "type": "faq",
+          "settings": {
+            "parent_tab": "nutrition",
+            "faq_question": "Do Kidfresh foods contain whole grains?",
+            "faq_answer": "<p>We use whole grains in the breading for our nuggets and sticks meals, which add 8-14g whole grains per serving. Luckily, your kids will only notice how crispy and delicious they taste.<br/><br/>To learn more about the benefits of whole grains, visit the Whole Grains Council website. https://wholegrainscouncil.org/whole-grains-101<br/><br/>• Schwarzenberg SJ, Georgieff MK. Advocacy for Improving Nutrition in the First 1000 Days to Support Childhood Development and Adult Health. Pediatrics. 2018;141(2):e20173716. doi:https://doi.org/10.1542/peds.2017-3716 </p>"
+          }
+        },
         "tab_WDDhKy": {
           "type": "tab",
           "settings": {
@@ -244,7 +243,6 @@
         "faq_4f9eMd",
         "faq_Ncz6GK",
         "faq_crcEE6",
-        "faq_3gpeNH",
         "faq_Pa7Yka",
         "faq_ENqfcR",
         "faq_JeT9Vm",
@@ -256,6 +254,7 @@
         "faq_zixmwq",
         "faq_RQUUfB",
         "faq_UEheC7",
+        "faq_3gpeNH",
         "tab_WDDhKy",
         "tab_9xD8gJ",
         "tab_jCwgXe",
