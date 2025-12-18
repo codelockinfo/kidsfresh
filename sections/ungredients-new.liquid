@@ -71,7 +71,6 @@
     font-weight: 500;
     color: #0F4735;
     text-transform: capitalize;
-    margin: 0;
     font-family: var(--font-family);
   }
 
@@ -878,8 +877,9 @@
         <div class="ungredients-new-title-wrapper">
           <h2 class="ungredients-new-title">
             {{ section.settings.title | default: 'ungredients' }}
+            <sup class="ungredients-supar-text">{{ section.settings.text }}</sup>
           </h2>
-          <sup class="ungredients-supar-text">{{ section.settings.text }}</sup>
+          
           {% if section.settings.icon_svg %}
             <div class="ungredients-new-icon">
               <img src="{{ section.settings.icon_svg | img_url: 'master' }}" 
