@@ -386,6 +386,7 @@
       "name": "Insta Reels Feed",
       "settings": {
         "heading": "Wins of the Week",
+        "subheading": "<p><span style=\"text-decoration:underline\">share how you won the week</span> for a chance for a free freezer fill up!</p>",
         "heading_size": 84,
         "heading_size_mobile": 36,
         "heading_color": "#0f4735",
