@@ -147,29 +147,12 @@
       "settings": {
         "section_background": "#f5f5dc"
       }
-    },
-    "custom_banner_slider_rwwzV6": {
-      "type": "custom-banner-slider",
-      "disabled": true,
-      "name": "Celebrate Plate Section",
-      "settings": {
-        "bg_desktop": "shopify://shop_images/Untitled_1920_x_1415_px_4_Custom_e655c0e4-be81-48c9-9a18-abb45847f0a1.webp",
-        "bg_mobile": "shopify://shop_images/Untitled_design_-_2025-11-19T022403.761.webp",
-        "hover_text": "Vegetables in disguise",
-        "top_decor": "shopify://shop_images/Group_277.png",
-        "bottom_decor": "shopify://shop_images/Group_346.svg",
-        "heading": "celebrate the little victories",
-        "desc": "At Kidfresh, we’re on a mission to help you win more meals. To us, winning is about more than kid-friendly cuisine. It’s about cooking with the wholesome ingredients you’d use. It’s about hiding veggies in every bite. It’s about making family mealtimes easier, faster, healthier—and more joyful. It’s about helping you win parenthood... one clean plate at a time.",
-        "btn_text": "meet Kidfresh",
-        "btn_link": ""
-      }
     }
   },
   "order": [
     "announcement-bar",
     "header",
     "custom_liquid_JAKDcj",
-    "collection_product_block_k3AwhG",
-    "custom_banner_slider_rwwzV6"
+    "collection_product_block_k3AwhG"
   ]
 }
