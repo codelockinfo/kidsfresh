@@ -116,6 +116,12 @@
         scroll-snap-align: center;
         flex-shrink: 0;
     }
+
+    .winning-ingredients-{{ section.id }} .scroll-spacer {
+        flex-shrink: 0;
+        width: 80px;
+        height: 1px;
+    }
  
   .winning-ingredients-{{ section.id }} .column-item {
     border: {{ section.settings.border_thickness }}px solid {{ section.settings.border_color }};
@@ -336,7 +342,13 @@
       
       .winning-ingredients-{{ section.id }} .column-item-wrapper:last-child {
         margin-right: 0;
-        padding-right: 20px;
+      }
+      
+      .winning-ingredients-{{ section.id }} .scroll-spacer {
+        display: inline-block;
+        width: 20px;
+        height: 1px;
+        vertical-align: top;
       }
       
     {% else %}
@@ -378,8 +390,10 @@
         padding-left: 0;
       }
       
-      .winning-ingredients-{{ section.id }} .column-item-wrapper:last-child {
-        padding-right: 20px;
+      .winning-ingredients-{{ section.id }} .scroll-spacer {
+        flex-shrink: 0;
+        width: 20px;
+        height: 1px;
       }
     {% endif %}
    
@@ -421,8 +435,10 @@
     padding-left: 0;
   }
   
-  .winning-ingredients-{{ section.id }} .column-item-wrapper:last-child {
-    padding-right: 20px;
+  .winning-ingredients-{{ section.id }} .scroll-spacer {
+    flex-shrink: 0;
+    width: 20px;
+    height: 1px;
   }
 
   .winning-ingredients-{{ section.id }} .column-heading {
@@ -463,8 +479,10 @@
     padding-left: 0;
   }
   
-  .winning-ingredients-{{ section.id }} .column-item-wrapper:last-child {
-    padding-right: 20px;
+  .winning-ingredients-{{ section.id }} .scroll-spacer {
+    flex-shrink: 0;
+    width: 20px;
+    height: 1px;
   }
   
   .winning-ingredients-{{ section.id }} .column-heading {
@@ -504,8 +522,10 @@
     padding-left: 0;
   }
   
-  .winning-ingredients-{{ section.id }} .column-item-wrapper:last-child {
-    padding-right: 20px;
+  .winning-ingredients-{{ section.id }} .scroll-spacer {
+    flex-shrink: 0;
+    width: 20px;
+    height: 1px;
   }
 }
 
@@ -534,8 +554,10 @@
     padding-left: 0;
   }
   
-  .winning-ingredients-{{ section.id }} .column-item-wrapper:last-child {
-    padding-right: 20px;
+  .winning-ingredients-{{ section.id }} .scroll-spacer {
+    flex-shrink: 0;
+    width: 20px;
+    height: 1px;
   }
 }
 
@@ -559,8 +581,10 @@
     padding-left: 0;
   }
   
-  .winning-ingredients-{{ section.id }} .column-item-wrapper:last-child {
-    padding-right: 80px;
+  .winning-ingredients-{{ section.id }} .scroll-spacer {
+    flex-shrink: 0;
+    width: 80px;
+    height: 1px;
   }
 }
 
@@ -647,6 +671,7 @@
           </div>
         </div>
       {%- endfor -%}
+      <div class="scroll-spacer"></div>
     </div>
    
     {%- if section.settings.button_label != blank -%}
