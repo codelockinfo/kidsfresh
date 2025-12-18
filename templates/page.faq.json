@@ -137,20 +137,12 @@
             "faq_answer": "<p>We know that kids (and adults) find it challenging to get the recommended number of veggies each day. Kidfresh meals help make it possible by putting veggies in every bite—with some of our meals providing as much as a half a cup of veggies per serving.<br/><br/>Veggies in every bite can mean different things for each meal. Some bites lead to ½ cup of veggies per meal whereas others are a bit of veggies with other ingredients.</p>"
           }
         },
-        "faq_VdQ69R": {
+        "faq_JeT9Vm": {
           "type": "faq",
           "settings": {
             "parent_tab": "products",
             "faq_question": "Does Kidfresh allow animal-based ingredients raised with the use of growth hormones, rBST or antibiotics?",
             "faq_answer": "<p>All our dairy and meat ingredients are free of growth hormone, rBST*, and antibiotics—because we care just as much about what goes into our foods as what we choose to leave out.<br/><br/>*No significant difference has been shown between milk derived from rBST and non-rBST-treated cows.</p>"
-          }
-        },
-        "faq_cRyNeX": {
-          "type": "faq",
-          "settings": {
-            "parent_tab": "products",
-            "faq_question": "Why should using chicken raised without antibiotics matter to me?",
-            "faq_answer": "<p>We care just as much about what goes into our foods as what we choose to leave out. That’s why all our poultry and meat come from animals raised without antibiotics, as recommended by the American Academy of Pediatrics.<br/><br/>To learn more about the use of antibiotics in the raising of farm animals and steps being taken to limit this use, read here.   https://www.healthychildren.org/English/healthy-living/nutrition/Pages/antibiotics-used-in-food-should-parents-be-concerned.aspx</p>"
           }
         },
         "faq_CxrmtV": {
@@ -197,7 +189,7 @@
           "type": "faq",
           "settings": {
             "parent_tab": "nutrition",
-            "faq_question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "faq_question": "What kind of nutrition is found in Kidfresh meals?",
             "faq_answer": ""
           }
         },
@@ -255,8 +247,7 @@
         "faq_3gpeNH",
         "faq_Pa7Yka",
         "faq_ENqfcR",
-        "faq_VdQ69R",
-        "faq_cRyNeX",
+        "faq_JeT9Vm",
         "faq_CxrmtV",
         "faq_Crkk7z",
         "faq_tkEAHY",
