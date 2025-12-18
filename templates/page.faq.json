@@ -78,15 +78,6 @@
             "faq_answer": "<p>We craft our meals with the needs of kids in mind*. And we do so with the recommendations of our registered dietitian to help meet the MyPlate Food Group guidelines for those age groups. Of course, tweens, teens, and adults looking for help getting a little extra veggie boost are also welcome to enjoy our meals, too.<br/><br/>*Every child has individual needs, so it’s best to consult with a pediatrician or dietitian.<br/>For a customized MyPlate Plan, based on age, gender and weight, visit  www.myplate.gov/myplate-plan.</p>"
           }
         },
-        "faq_hG9hHt": {
-          "type": "faq",
-          "disabled": true,
-          "settings": {
-            "parent_tab": "products",
-            "faq_question": "Why is frozen better?",
-            "faq_answer": "<p>Freezing is actually one of the best ways to preserve nutrients and flavor while<br/>extending shelf life. And that’s why we freeze our meals immediately after being cooked—so all that good stuff stays good until you’re ready to serve it up.The American Frozen Food Institute provides great information on the benefits of<br/>freezing foods to lock in nutrition. Find more information, visit this link -<br/>https://frozenadvantage.org/about/path-to-frozen/</p>"
-          }
-        },
         "faq_4f9eMd": {
           "type": "faq",
           "settings": {
@@ -208,6 +199,14 @@
             "faq_answer": "<p>We use whole grains in the breading for our nuggets and sticks meals, which add 8-14g whole grains per serving. Luckily, your kids will only notice how crispy and delicious they taste.<br/><br/>To learn more about the benefits of whole grains, visit the Whole Grains Council website. https://wholegrainscouncil.org/whole-grains-101<br/><br/>• Schwarzenberg SJ, Georgieff MK. Advocacy for Improving Nutrition in the First 1000 Days to Support Childhood Development and Adult Health. Pediatrics. 2018;141(2):e20173716. doi:https://doi.org/10.1542/peds.2017-3716 </p>"
           }
         },
+        "faq_hG9hHt": {
+          "type": "faq",
+          "settings": {
+            "parent_tab": "products",
+            "faq_question": "Why is frozen better?",
+            "faq_answer": "<p>Freezing is actually one of the best ways to preserve nutrients and flavor while extending shelf life. And that’s why we freeze our meals immediately after being cooked—so all that good stuff stays good until you’re ready to serve it up.<br/> <br/>The American Frozen Food Institute provides great information on the benefits of freezing foods to lock in nutrition. Find more information, visit this link - https://frozenadvantage.org/about/path-to-frozen/</p>"
+          }
+        },
         "tab_WDDhKy": {
           "type": "tab",
           "settings": {
@@ -239,7 +238,6 @@
       },
       "block_order": [
         "faq_W6ERfd",
-        "faq_hG9hHt",
         "faq_4f9eMd",
         "faq_Ncz6GK",
         "faq_crcEE6",
@@ -255,6 +253,7 @@
         "faq_RQUUfB",
         "faq_UEheC7",
         "faq_3gpeNH",
+        "faq_hG9hHt",
         "tab_WDDhKy",
         "tab_9xD8gJ",
         "tab_jCwgXe",
