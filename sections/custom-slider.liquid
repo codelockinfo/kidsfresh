@@ -116,12 +116,6 @@
         scroll-snap-align: center;
         flex-shrink: 0;
     }
-
-    .winning-ingredients-{{ section.id }} .scroll-spacer {
-        flex-shrink: 0;
-        width: 80px;
-        height: 1px;
-    }
  
   .winning-ingredients-{{ section.id }} .column-item {
     border: {{ section.settings.border_thickness }}px solid {{ section.settings.border_color }};
@@ -336,13 +330,6 @@
         padding: 10px 0;
       }
       
-      .winning-ingredients-{{ section.id }} .scroll-spacer {
-        display: inline-block;
-        width: 40px;
-        height: 1px;
-        vertical-align: top;
-      }
-      
     {% else %}
       .winning-ingredients-{{ section.id }} .columns-wrapper {
         display: flex;
@@ -376,12 +363,6 @@
         flex: 0 0 85%;
         scroll-snap-align: start;
         padding: 10px 0;
-      }
-      
-      .winning-ingredients-{{ section.id }} .scroll-spacer {
-        flex-shrink: 0;
-        width: 40px;
-        height: 1px;
       }
     {% endif %}
    
@@ -419,12 +400,6 @@
     padding: 10px 0;
   }
 
-  .winning-ingredients-{{ section.id }} .scroll-spacer {
-    flex-shrink: 0;
-    width: 50px;
-    height: 1px;
-  }
-
   .winning-ingredients-{{ section.id }} .column-heading {
     font-size: 110px;
     line-height: 74px;
@@ -458,13 +433,6 @@
     scroll-snap-align: center;
     padding: 10px 0;
   }
-  
-  .winning-ingredients-{{ section.id }} .scroll-spacer {
-    flex-shrink: 0;
-    width: 80px;
-    height: 1px;
-  }
-  
   .winning-ingredients-{{ section.id }} .column-heading {
     font-size: 110px;
     line-height: 74px;
@@ -497,12 +465,6 @@
     scroll-snap-align: center;
     padding: 10px 0;
   }
-  
-  .winning-ingredients-{{ section.id }} .scroll-spacer {
-    flex-shrink: 0;
-    width: 80px;
-    height: 1px;
-  }
 }
 
 @media (min-width: 1401px) and (max-width: 1650px) {
@@ -525,12 +487,6 @@
     scroll-snap-align: center;
     padding: 10px 0;
   }
-  
-  .winning-ingredients-{{ section.id }} .scroll-spacer {
-    flex-shrink: 0;
-    width: 80px;
-    height: 1px;
-  }
 }
 
 
@@ -542,17 +498,10 @@
     scroll-snap-type: x mandatory;
     gap: 26px;
     justify-content: flex-start;
-    padding: 10px 0;
   }
   .winning-ingredients-{{ section.id }} .column-item-wrapper {
     flex: 0 0 calc(100% / 5.5);
     scroll-snap-align: center;
-  }
-  
-  .winning-ingredients-{{ section.id }} .scroll-spacer {
-    flex-shrink: 0;
-    width: 80px;
-    height: 1px;
   }
 }
 
@@ -639,7 +588,6 @@
           </div>
         </div>
       {%- endfor -%}
-      <div class="scroll-spacer"></div>
     </div>
    
     {%- if section.settings.button_label != blank -%}
