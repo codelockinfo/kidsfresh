@@ -867,8 +867,9 @@
         {% comment %} Title with Icon {% endcomment %}
         <div class="ungredients-new-title-wrapper">
           <h2 class="ungredients-new-title">
-            {{ section.settings.title | default: 'ungredients' }} <sup>{{ section.settings.text }}</sup>
+            {{ section.settings.title | default: 'ungredients' }}
           </h2>
+          <sup>{{ section.settings.text }}</sup>
           {% if section.settings.icon_svg %}
             <div class="ungredients-new-icon">
               <img src="{{ section.settings.icon_svg | img_url: 'master' }}" 
