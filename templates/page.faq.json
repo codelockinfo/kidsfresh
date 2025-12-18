@@ -137,6 +137,14 @@
             "faq_answer": "<p>We know that kids (and adults) find it challenging to get the recommended number of veggies each day. Kidfresh meals help make it possible by putting veggies in every bite—with some of our meals providing as much as a half a cup of veggies per serving.<br/><br/>Veggies in every bite can mean different things for each meal. Some bites lead to ½ cup of veggies per meal whereas others are a bit of veggies with other ingredients.</p>"
           }
         },
+        "faq_VdQ69R": {
+          "type": "faq",
+          "settings": {
+            "parent_tab": "products",
+            "faq_question": "Does Kidfresh allow animal-based ingredients raised with the use of growth hormones, rBST or antibiotics?",
+            "faq_answer": "<p>All our dairy and meat ingredients are free of growth hormone, rBST*, and antibiotics—because we care just as much about what goes into our foods as what we choose to leave out.<br/><br/>*No significant difference has been shown between milk derived from rBST and non-rBST-treated cows.</p>"
+          }
+        },
         "faq_CxrmtV": {
           "type": "faq",
           "settings": {
@@ -239,6 +247,7 @@
         "faq_3gpeNH",
         "faq_Pa7Yka",
         "faq_ENqfcR",
+        "faq_VdQ69R",
         "faq_CxrmtV",
         "faq_Crkk7z",
         "faq_tkEAHY",
