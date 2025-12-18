@@ -178,14 +178,6 @@
             "preheading": "Ingredient info",
             "description": "Learn more about the whole ingredients that make our meals winners."
           }
-        },
-        "column_jCLE9p": {
-          "type": "column",
-          "settings": {
-            "heading": "In",
-            "preheading": "Ingredient info",
-            "description": "Learn more about the whole ingredients that make our meals winners."
-          }
         }
       },
       "block_order": [
@@ -193,8 +185,7 @@
         "column_qnEB66",
         "column_qwcrPF",
         "column_rNkdn8",
-        "column_73b7Ex",
-        "column_jCLE9p"
+        "column_73b7Ex"
       ],
       "name": "Winning Ingredients",
       "settings": {
