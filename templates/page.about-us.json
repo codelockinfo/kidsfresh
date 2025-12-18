@@ -149,7 +149,7 @@
         "column_DGetmz": {
           "type": "column",
           "settings": {
-            "heading": "Ca",
+            "heading": "C",
             "preheading": "Calcium for kids",
             "description": "Calcium supports strong bones and teeth—and happy smiling faces."
           }
@@ -270,6 +270,7 @@
         "mobile_background_image": "shopify://shop_images/Group_306_1_b0ad8e85-02c8-4342-898e-38ca43868d69.png",
         "background_color": "rgba(0,0,0,0)",
         "title": "<p><em>un</em>gredients</p>",
+        "text": "TM",
         "icon_svg": "shopify://shop_images/Group_97_9706f09d-9e6f-444b-ad57-08c399617048.png",
         "subtitle": "<p>What <em><strong>doesn't</strong></em><strong> </strong>go into our meals is just as important as what does.</p>",
         "footer_text": "Built with what matters most: real ingredients, balanced nutrition, and vegetables in disguise. Every meal is designed to support strong bodies, growing minds, and stress-free mealtimes.",
