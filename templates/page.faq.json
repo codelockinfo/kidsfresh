@@ -104,11 +104,10 @@
         },
         "faq_Pa7Yka": {
           "type": "faq",
-          "disabled": true,
           "settings": {
             "parent_tab": "products",
-            "faq_question": "How does Kidfresh support growing bodies?",
-            "faq_answer": "<p>Kids need essential nutrition to support their growing bodies and brains. Essential<br/>nutrition refers to nutrients that cannot be made in the body and therefore must be<br/>consumed in what we eat and drink. Our meals provide some of that essential nutrition<br/>through a variety of whole and wholesome ingredients, like fiber, protein, vitamins, and<br/>minerals. Each Kidfresh meal is as unique as the nutrition it provides. Check out<br/>the Nutritionally Notable section for each of our meals to see where to find a good source<br/>of fiber, calcium, vitamin A and C, iron, and potassium, in addition to providing 9-14g<br/>protein per serving.<br/> “Nutrition for Kids: Guidelines for a Healthy Diet.” Mayo Clinic. Published September<br/>30, 2022. As viewed con 11/10/25 at<br/>https://www.mayoclinic.org/healthy-lifestyle/childrens-health/in-depth/nutrition-for-<br/>kids/art-20049335.<br/> “Nutrition for Growing Bodies.” Academy of Nutrition and Dietetics. Published<br/>February 23, 2023. As viewed on 11/10/25 at<br/>https://www.eatright.org/food/planning/meals-and-snacks/nutrition-for-growing-<br/>bodies<br/> “Making Healthy Food Choices.” HealthyChildren.org. Published 2019. As viewed on<br/>11/10/25 at:<br/>https://www.healthychildren.org/English/ages-stages/gradeschool/nutrition/Pages/<br/>Making-Healthy-Food-Choices.aspx<br/> Schwarzenberg SJ, Georgieff MK. Advocacy for Improving Nutrition in the First 1000<br/>Days to Support Childhood Development and Adult Health. Pediatrics.<br/>2018;141(2):e20173716. doi:https://doi.org/10.1542/peds.2017-3716</p>"
+            "faq_question": "Why should using chicken raised without antibiotics matter to me?",
+            "faq_answer": "<p>We care just as much about what goes into our foods as what we choose to leave out. That’s why all our poultry and meat come from animals raised without antibiotics, as recommended by the American Academy of Pediatrics.<br/><br/>To learn more about the use of antibiotics in the raising of farm animals and steps being taken to limit this use, read here.   https://www.healthychildren.org/English/healthy-living/nutrition/Pages/antibiotics-used-in-food-should-parents-be-concerned.aspx</p>"
           }
         },
         "faq_ENqfcR": {
