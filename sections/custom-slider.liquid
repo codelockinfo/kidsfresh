@@ -84,6 +84,11 @@
     margin-bottom: 56px;
     text-transform: lowercase;
   }
+  .winning-ingredients-{{ section.id }} .columns-wrapper::before,
+.winning-ingredients-{{ section.id }} .columns-wrapper::after {
+  content: '';
+  flex: 0 0 80px;
+}
  
   .winning-ingredients-{{ section.id }} .columns-wrapper {
     display: flex;
