@@ -300,6 +300,7 @@
 
     {%- if section.settings.heading != blank -%}
       <h2 class="insta-reels-heading">{{ section.settings.heading }}</h2>
+      <div></div>
     {%- endif -%}
 
     <div class="reels-wrapper">
@@ -474,6 +475,8 @@
   "tag": "section",
   "settings": [
     { "type": "text", "id": "heading", "label": "Section Heading", "default": "Wins of the Week" },
+    
+    { "type": "richtext", "id": "subheading", "label": "Sub Heading", "default": "<p>share how you won the week for a chance for a free freezer fill up!</p>" },
 
     { "type": "range", "id": "heading_size", "min": 30, "max": 100, "step": 2, "unit": "px", "label": "Heading Size (Desktop)", "default": 70 },
 
