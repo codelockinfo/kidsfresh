@@ -192,7 +192,7 @@
         "title": "winning ingredients",
         "heading_alignment": "center",
         "title_color": "#ffffff",
-        "background_color": "#0f4735",
+        "background_color": "rgba(0,0,0,0)",
         "background_image_desktop": "shopify://shop_images/Group_344_1.png",
         "background_image_mobile": "shopify://shop_images/Group_346.png",
         "background_image_left": "shopify://shop_images/image_124.png",
