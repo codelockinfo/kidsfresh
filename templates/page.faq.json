@@ -202,7 +202,7 @@
         "faq_hG9hHt": {
           "type": "faq",
           "settings": {
-            "parent_tab": "products",
+            "parent_tab": "nutrition",
             "faq_question": "Why is frozen better?",
             "faq_answer": "<p>Freezing is actually one of the best ways to preserve nutrients and flavor while extending shelf life. And that’s why we freeze our meals immediately after being cooked—so all that good stuff stays good until you’re ready to serve it up.<br/> <br/>The American Frozen Food Institute provides great information on the benefits of freezing foods to lock in nutrition. Find more information, visit this link - https://frozenadvantage.org/about/path-to-frozen/</p>"
           }
