@@ -27,6 +27,32 @@ image-height-wrapper{
     }
 }
 
+@media (max-width: 1200px) {
+    .announcement-bar p {
+        font-size: 15px;
+        line-height: 21px;
+    }
+}
+
+@media (max-width: 992px) {
+    .announcement-bar p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+@media (max-width: 768px) {
+    .announcement-bar p {
+        font-size: 13px;
+        line-height: 19px;
+    }
+}
+@media (max-width: 576px) {
+    .announcement-bar p {
+        font-size: 12px;
+        line-height: 17px;
+    }
+}
+
 .announcement-bar, .announcement-bar__announcement{
     flex-wrap: nowrap !important; 
 }
