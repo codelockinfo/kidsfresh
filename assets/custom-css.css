@@ -85,18 +85,8 @@ image-height-wrapper{
     }
 
 }
-@media (min-width:769px) and (max-width: 1024px){
-    .announcement-bar p {
-        font-size: 18px;
-        line-height: 24px;
-    }
-}
 
 @media (max-width: 768px) {
-    .announcement-bar p {
-   font-size: 14px; 
-   line-height: 21px;
-}
 .footer__content-top.page-width{
     padding:0px 50px;
 }
