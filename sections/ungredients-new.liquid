@@ -475,7 +475,7 @@
 
   @media screen and (min-width: 641px) and (max-width: 768px) {
 
-    #shopify-section-template--19565219020992__ungredients_new_xNg3Kg {
+    {% comment %} #shopify-section-template--19565219020992__ungredients_new_xNg3Kg {
   margin-top: -75px;
 }
 
@@ -483,7 +483,7 @@
         background-size: 100% 100%;
         background-color: #0F4735;
         
-      }
+      } {% endcomment %}
     .ungredients-new-section {
       padding: 30px 20px 20px;
       justify-content: flex-start;
@@ -857,7 +857,7 @@
            style="background-color: {{ section.settings.background_color | default: '#f58220' }};"
          {% endif %}
          {% if section.settings.mobile_background_image %}
-           data-mobile-bg="{{ section.settings.mobile_background_image | img_url: '992x' }}"
+           data-mobile-bg="{{ section.settings.mobile_background_image | img_url: '768x' }}"
          {% endif %}>
 
   {% comment %} Main Content {% endcomment %}
@@ -942,7 +942,7 @@
       const mobileBg = section.getAttribute('data-mobile-bg');
       if (!mobileBg) return;
       
-      if (window.innerWidth <= 992) {
+      if (window.innerWidth <= 768) {
         section.style.backgroundImage = `url('${mobileBg}')`;
       } else {
         const desktopBg = section.getAttribute('data-desktop-bg');
