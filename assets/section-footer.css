@@ -141,7 +141,7 @@ ul.footer-block__details-content.list-unstyled li a:hover::after {
     line-height: 25px !important;
   }
   .copyright__content {
-  font-size: 14px;
+  font-size: 13px;
   line-height: 21px;
 }
 }
@@ -149,10 +149,6 @@ ul.footer-block__details-content.list-unstyled li a:hover::after {
 @media (max-width: 768px) {
   .footer-block__details-content {
     margin-top: 0;
-  }
-  .copyright__content {
-    font-size: 14px !important;
-    line-height: 21px !important;
   }
 }
 
