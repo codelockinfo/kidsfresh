@@ -47,6 +47,12 @@ ul.footer-block__details-content.list-unstyled li a::after {
 ul.footer-block__details-content.list-unstyled li a:hover::after {
     width: 100%;
 }
+.copyright__content {
+  font-family: var(--font-family);
+  font-size: 21px;
+    line-height: 33px;
+    font-weight: 400;
+}
 
 @media (min-width: 1440px) {
 .footer-block.grid__item.scroll-trigger.animate--slide-in {
@@ -597,12 +603,7 @@ ul.footer-block__details-content.list-unstyled li a:hover::after {
   max-width: 20rem;
 }
 
-.copyright__content {
-  font-family: var(--font-family);
-  font-size: 21px;
-    line-height: 33px;
-    font-weight: 400;
-}
+
 
 .policies .copyright__content {
   text-decoration: underline;
