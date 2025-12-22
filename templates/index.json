@@ -144,7 +144,7 @@
           "settings": {
             "heading": "Wh",
             "preheading": "Wholesome ingredients",
-            "description": "We use the kind of real ingredients you’d use in your own kitchen."
+            "description": "<p>We use the kind of real ingredients you’d use in your own kitchen.</p>"
           }
         },
         "column_qnEB66": {
@@ -152,7 +152,7 @@
           "settings": {
             "heading": "Pro",
             "preheading": "Protein power",
-            "description": "Helps support growing bodies and brains."
+            "description": "<p>Helps support growing bodies and brains. FAQs →</p>"
           }
         },
         "column_qwcrPF": {
@@ -160,15 +160,15 @@
           "settings": {
             "heading": "Vit",
             "preheading": "Vitamin boost",
-            "description": "Our ingredients help provide the vitamins kids need with every bite."
+            "description": "<p>Our ingredients help provide the vitamins kids need with every bite.</p>"
           }
         },
         "column_rNkdn8": {
           "type": "column",
           "settings": {
-            "heading": "Cr",
+            "heading": "Ca",
             "preheading": "Calcium for kids",
-            "description": "Calcium supports strong bones and teeth—and happy smiling faces."
+            "description": "<p>Calcium supports strong bones and teeth—and happy smiling faces. FAQs →</p>"
           }
         },
         "column_73b7Ex": {
@@ -176,7 +176,7 @@
           "settings": {
             "heading": "In",
             "preheading": "Ingredient info",
-            "description": "Learn more about the whole ingredients that make our meals winners."
+            "description": "<p>Learn more about the whole ingredients that make our meals winners.</p>"
           }
         }
       },
