@@ -127,7 +127,7 @@
           "settings": {
             "heading": "Wh",
             "preheading": "Wholesome ingredients",
-            "description": "We use the kind of real ingredients you’d use in your own kitchen."
+            "description": "<p>We use the kind of real ingredients you’d use in your own kitchen.</p>"
           }
         },
         "column_g8rXbK": {
@@ -135,7 +135,7 @@
           "settings": {
             "heading": "Pro",
             "preheading": "Protein power",
-            "description": "Helps support growing bodies and brains."
+            "description": "<p>Helps support growing bodies and brains.</p>"
           }
         },
         "column_cp4AGd": {
@@ -143,7 +143,7 @@
           "settings": {
             "heading": "Vit",
             "preheading": "Vitamins",
-            "description": "Our ingredients help provide the vitamins kids need with every bite."
+            "description": "<p>Our ingredients help provide the vitamins kids need with every bite.</p>"
           }
         },
         "column_DGetmz": {
@@ -151,7 +151,7 @@
           "settings": {
             "heading": "Cr",
             "preheading": "Calcium for kids",
-            "description": "Calcium supports strong bones and teeth—and happy smiling faces."
+            "description": "<p>Calcium supports strong bones and teeth—and happy smiling faces.</p>"
           }
         },
         "column_BmtzBn": {
@@ -159,7 +159,7 @@
           "settings": {
             "heading": "In",
             "preheading": "Ingredient info",
-            "description": "Learn more about the whole ingredients that make our meals winners."
+            "description": "<p>Learn more about the whole ingredients that make our meals winners.</p>"
           }
         }
       },
@@ -370,7 +370,7 @@
       "name": "Insta Reels Feed",
       "settings": {
         "heading": "Wins of the Week",
-        "subheading": "<p><span style=\"text-decoration:underline\">share how you won the week</span> for a chance for a free freezer fill up!</p>",
+        "subheading": "<p><a href=\"/pages/contact\" title=\"contact\">share how you won the week</a> for a chance for a free freezer fill up!</p>",
         "heading_size": 84,
         "heading_size_mobile": 36,
         "heading_color": "#0f4735",
