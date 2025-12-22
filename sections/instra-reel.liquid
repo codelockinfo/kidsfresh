@@ -176,11 +176,6 @@
     --gap: 10px;
   }
 
-  .insta-reels-feed-{{ section.id }} .insta-reels-heading {
-    font-size: 60px;
-        line-height: 64px;
-        margin-bottom: 20px;
-  }
 }
 
 /* Mobile Styles */
@@ -195,12 +190,6 @@
     background-image: url({{ section.settings.bg_mobile | image_url: width: 1000 }});
   }
 
-  .insta-reels-feed-{{ section.id }} .insta-reels-heading {
-    font-size: {{ section.settings.heading_size_mobile }}px;
-    margin-bottom: 0px;
-    padding: 0;
-    line-height: 86px;
-  }
 
   .insta-reels-feed-{{ section.id }} .reels-slider {
     gap: 8px;
