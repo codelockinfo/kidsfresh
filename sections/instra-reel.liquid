@@ -176,6 +176,9 @@
     --gap: 10px;
   }
 
+  .insta-reels-feed-{{ section.id }} .insta-reels-heading {
+        margin-bottom: 20px;
+  }
 }
 
 /* Mobile Styles */
@@ -190,6 +193,10 @@
     background-image: url({{ section.settings.bg_mobile | image_url: width: 1000 }});
   }
 
+  .insta-reels-feed-{{ section.id }} .insta-reels-heading {
+    margin-bottom: 0px;
+    padding: 0;
+  }
 
   .insta-reels-feed-{{ section.id }} .reels-slider {
     gap: 8px;
