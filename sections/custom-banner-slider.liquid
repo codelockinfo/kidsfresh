@@ -532,6 +532,26 @@
   }
 }
 
+@media (max-width: 576px) {
+  #celebrate-plate-{{ section.id }} .content {
+    max-width: 100%;
+    width: 80%;
+  }
+  #celebrate-plate-{{ section.id }} h2 {
+    font-size: 56px !important;
+    line-height: 58px !important;
+  }
+  #celebrate-plate-{{ section.id }} p {
+    font-size: 22px !important;
+    line-height: 30px !important;
+  }
+  #celebrate-plate-{{ section.id }} .button {
+    font-size: 24px;
+    line-height: 30px;
+    padding: 18px 38px;
+  }
+}
+
 @media  (max-width: 380px) {
   #celebrate-plate-{{ section.id }} {
     padding: 35px 0 0;
@@ -561,7 +581,7 @@
 }
 }
 
-@media (min-width: 381px) and (max-width: 551px) {
+{% comment %} @media (min-width: 381px) and (max-width: 551px) {
     #celebrate-plate-{{ section.id }} .content {
       max-width: 93%;
       width: 93%;
@@ -576,7 +596,7 @@
     font-size: 18px !important;
     line-height: 28px !important;
   }
-}
+} {% endcomment %}
 
 {% comment %} @media (min-width: 552px) and (max-width: 768px) {
 
