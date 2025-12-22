@@ -106,8 +106,8 @@ ul.footer-block__details-content.list-unstyled li a:hover::after {
 
 @media (max-width: 576px) {
   ul.footer-block__details-content.list-unstyled li a {
-    font-size: 18px;
-    line-height: 100%;
+    font-size: 18px !important;
+    line-height: 100% !important;
   }
 }
 
