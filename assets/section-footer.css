@@ -87,8 +87,8 @@ ul.footer-block__details-content.list-unstyled li a:hover::after {
   max-width: 80%;
 }
 .copyright__content {
-  font-size: 16px;
-  line-height: 25px;
+  font-size: 16px !important;
+  line-height: 25px !important;
 }
 }
 
@@ -118,15 +118,15 @@ ul.footer-block__details-content.list-unstyled li a:hover::after {
 
 @media (max-width: 992px) {
   .copyright__content {
-  font-size: 16px;
-  line-height: 25px;
+  font-size: 16px !important;
+  line-height: 25px !important;
 }
 }
 
 @media (max-width: 768px) {
   .copyright__content {
-  font-size: 15px;
-  line-height: 23px;
+  font-size: 15px !important;
+  line-height: 23px !important;
 }
 }
 
@@ -139,8 +139,8 @@ ul.footer-block__details-content.list-unstyled li a:hover::after {
     line-height: 25px !important;
   }
   .copyright__content {
-  font-size: 14px;
-  line-height: 21px;
+  font-size: 14px !important;
+  line-height: 21px !important;
 }
 }
 
