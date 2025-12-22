@@ -69,6 +69,12 @@ ul.footer-block__details-content.list-unstyled li a:hover::after {
     font-size: 20px;
     line-height: 100%;
   }
+  .footer-block__details-content.list-unstyled {
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+  margin-bottom: 30px;
+}
   .footer-block.grid__item.scroll-trigger.animate--slide-in {
   max-width: 20%;
 }
@@ -92,12 +98,7 @@ ul.footer-block__details-content.list-unstyled li a:hover::after {
 }
 
 
-.footer-block__details-content.list-unstyled {
-  display: flex;
-  justify-content: end;
-  gap: 10px;
-  margin-bottom: 30px;
-}
+
 }
 
 @media (min-width: 1080px) and (max-width: 1219px){
