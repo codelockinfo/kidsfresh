@@ -71,7 +71,15 @@ ul.footer-block__details-content.list-unstyled li a:hover::after {
   }
 }
 
-@media (min-width: 1220px) and (max-width: 1439px){
+@media (max-width: 1200px) {
+  ul.footer-block__details-content.list-unstyled li a {
+    font-size: 18px;
+    line-height: 100%;
+  }
+}
+
+
+/* @media (min-width: 1220px) and (max-width: 1439px){
   .footer__content-top {
     padding: 0 8rem;
 }
@@ -109,7 +117,7 @@ ul.footer-block__details-content.list-unstyled li a:hover::after {
   gap: 5px;
   margin-bottom: 30px;
 }
-}
+} */
 
 @media (max-width: 768px) {
   .footer-block__details-content {
