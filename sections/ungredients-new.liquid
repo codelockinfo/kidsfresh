@@ -942,7 +942,7 @@
       const mobileBg = section.getAttribute('data-mobile-bg');
       if (!mobileBg) return;
       
-      if (window.innerWidth <= 990) {
+      if (window.innerWidth <= 992) {
         section.style.backgroundImage = `url('${mobileBg}')`;
       } else {
         const desktopBg = section.getAttribute('data-desktop-bg');
