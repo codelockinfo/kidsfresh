@@ -232,6 +232,14 @@
   background-size: 100% 100% !important;
 }
 
+@media (max-width: 1440px) {
+  .winning-ingredients-{{ section.id }} .section-heading {
+    font-size: 63px;
+    line-height: 65px;
+    margin-bottom: 30px;
+  }
+}
+
     @media screen and (max-width: 768px) {
     {%- if section.settings.background_image_mobile != blank -%}
       .winning-ingredients-{{ section.id }} {
