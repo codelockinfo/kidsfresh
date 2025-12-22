@@ -63,8 +63,8 @@ ul.footer-block__details-content.list-unstyled li a:hover::after {
   margin-bottom: 30px;
 }
 .copyright__content {
-  font-size: 16px;
-  line-height: 25px;
+  font-size: 16px !important;
+  line-height: 25px !important;
 }
 }
 
