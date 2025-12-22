@@ -152,7 +152,7 @@
           "settings": {
             "heading": "Pro",
             "preheading": "Protein power",
-            "description": "<p>Helps support growing bodies and brains. FAQs →</p>"
+            "description": "<p>Helps support growing bodies and brains. <a href=\"/pages/faq\" title=\"FAQ\">FAQs →</a></p>"
           }
         },
         "column_qwcrPF": {
@@ -168,7 +168,7 @@
           "settings": {
             "heading": "Ca",
             "preheading": "Calcium for kids",
-            "description": "<p>Calcium supports strong bones and teeth—and happy smiling faces. FAQs →</p>"
+            "description": "<p>Calcium supports strong bones and teeth—and happy smiling faces. <a href=\"/pages/faq\" title=\"FAQ\">FAQs →</a></p>"
           }
         },
         "column_73b7Ex": {
