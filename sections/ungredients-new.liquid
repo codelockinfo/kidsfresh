@@ -134,7 +134,7 @@
     font-weight: 500;
     color: rgba(237, 119, 35, 1);
     font-size: 29px;
-    line-height: 36px;
+    line-height: 50px;
     padding-left: 16px;
   }
 
@@ -144,7 +144,7 @@
     color: {{ section.settings.accent_color | default: 'rgba(15, 71, 53, 1)' }};
     font-size: 26px;
     font-weight: 500;
-    line-height: 40px;
+    line-height: 50px;
     padding-left: 16px;
   }
 
@@ -237,6 +237,20 @@
   /* Mobile Food Images - Hidden on Desktop */
   .ungredients-new-mobile-images {
     display: none;
+  }
+  @media (max-width: 1440px) {
+    .ungredients-new-title {
+      font-size: 63px;
+      line-height: 65px;
+    }
+    .ungredients-supar-text {
+      font-size: 18px;
+      line-height: 19px;
+    }
+    .ungredients-new-subtitle {
+      font-size: 17px;
+      line-height: 22px;
+    }
   }
 
   {% comment %} @media screen and (max-width: 1650px) and (min-width: 1440px) {
