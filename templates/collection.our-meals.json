@@ -235,6 +235,7 @@
         },
         "product_JAhmYB": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "block_width": 33,
             "product": "cheeseburger-macs-cheese",
