@@ -40,10 +40,34 @@
       "settings": {
         "bg_color": "#f1ead9"
       }
+    },
+    "content_Nz8UFQ": {
+      "type": "content",
+      "blocks": {
+        "text_block_GtkLdB": {
+          "type": "text_block",
+          "settings": {
+            "heading": "Terms & Conditions",
+            "paragraph": "<p>Welcome to the KIDFRESH Website, www.kidfresh.com (the “Site”). By accessing this Site, you agree to be bound by the terms and conditions below (the “Terms”). If you do not agree to all of the Terms, please do not use the Site. KIDFRESH may from time to time modify or revise the Terms by updating this Web page. Your use of our Site following any such change constitutes your agreement to follow and be bound by the Terms as changed. If any change is unacceptable to you, your only recourse is to terminate your use of the Site.<br/><br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_GtkLdB"
+      ],
+      "name": "Custom Text Blocks",
+      "settings": {
+        "bg_color": "#f1ead9",
+        "text_color": "#333333",
+        "heading_size": 30,
+        "paragraph_size": 18,
+        "text_align": "left"
+      }
     }
   },
   "order": [
     "main",
-    "slideshow_YPEgTN"
+    "slideshow_YPEgTN",
+    "content_Nz8UFQ"
   ]
 }
