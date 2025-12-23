@@ -99,6 +99,34 @@
             "heading": "We reserve the right, in our sole discretion, to:",
             "paragraph": "<ul><li>Review, edit, or delete any User Content, without undertaking any responsibility to do so;</li><li>Adopt rules in any community area or condition access to any areas or features by any individual or group on certain criteria, deny or restrict access by any individual or group who fails to meet that criteria or by anyone who fails to comply with our criteria or rules at any time, and change or modify the criteria or rules at any time; and</li><li>Deny any user access to this website.<br/><br/><br/></li></ul>"
           }
+        },
+        "text_block_XePRGN": {
+          "type": "text_block",
+          "settings": {
+            "heading": "Modifications to the site",
+            "paragraph": "<p>KIDFRESH reserves the right, for any reason, in its sole discretion, to terminate, change or suspend any aspect of the Site including but not limited to content, features or hours of availability. KIDFRESH Company may impose limits on certain features of the Site or restrict your access to part or all of the Site without notice or penalty.</p>"
+          }
+        },
+        "text_block_yY3hTe": {
+          "type": "text_block",
+          "settings": {
+            "heading": "Third Party Content",
+            "paragraph": "<p>This website may contain Content owned by third parties and/or reference a third party’s name, trademarks, products, or services. We do not endorse, warrant the accuracy or reliability of, or assume any liability in connection with, any third parties or their products and services or any Content provided to this website by third parties.<br/><br/></p>"
+          }
+        },
+        "text_block_k8Rjnb": {
+          "type": "text_block",
+          "settings": {
+            "heading": "Links to Third Party Websites",
+            "paragraph": "<p>This website may contain links to or from third party websites. Links to other websites are provided solely as a convenience, and we are not responsible for the content or operation of any third party sites linked to this website. All activities you engage in connection with a linked site are subject to the terms and conditions and policies imposed by the site operator, and we disclaim all liability in connection with such activities.<br/><br/></p>"
+          }
+        },
+        "text_block_UD6gwj": {
+          "type": "text_block",
+          "settings": {
+            "heading": "Privacy",
+            "paragraph": "<p>For an explanation of our online information practices with regards to information collected or submitted to the Site, please see our <span style=\"text-decoration:underline\">Privacy Policy.</span><br/><br/></p>"
+          }
         }
       },
       "block_order": [
@@ -109,7 +137,11 @@
         "text_block_mqyzbk",
         "text_block_wizdPi",
         "text_block_WQaxCa",
-        "text_block_xzTWck"
+        "text_block_xzTWck",
+        "text_block_XePRGN",
+        "text_block_yY3hTe",
+        "text_block_k8Rjnb",
+        "text_block_UD6gwj"
       ],
       "name": "Custom Text Blocks",
       "settings": {
