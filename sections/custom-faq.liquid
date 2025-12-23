@@ -286,6 +286,29 @@
     }
   }
 
+  @media (max-width: 992px) {
+    .faq-custom-container {
+      padding: 0 130px;
+    }
+    .filter-title, .faq-tab {
+      font-size: 32px;
+      line-height: 36px;
+    }
+    .faq-dynamic-title {
+      font-size: 42px;
+      line-height: 38px;
+      margin: 35px 0;
+    }
+    .faq-item-title {
+      font-size: 28px;
+      line-height: 34px;
+    }
+    .faq-item-content p {
+      font-size: 18px;
+      line-height: 25px;
+    }
+  }
+
 {% comment %} @media(min-width:1025px) and (max-width:1300px){
     .faq-tab {
         font-size: 32px !important;
@@ -305,7 +328,7 @@
     }
 } {% endcomment %}
 
-@media(min-width:992px) and (max-width:1024px){
+{% comment %} @media(min-width:992px) and (max-width:1024px){
     .faq-tab {
         font-size: 37px !important;
     }
@@ -328,9 +351,9 @@
     .faq-item.open .faq-item-content {
         font-size: 22px !important;
     } 
-}
+} {% endcomment %}
 
-@media(min-width:769px) and (max-width:991px){
+{% comment %} @media(min-width:769px) and (max-width:991px){
     .faq-tab {
         font-size: 29px !important;
     }
@@ -354,7 +377,7 @@
         font-size: 18px !important;
         line-height: 26px !important;
     }
-}
+} {% endcomment %}
 
  @media (max-width: 768px) and (min-width: 460px) {
   .faq-tab {
