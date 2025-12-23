@@ -85,6 +85,13 @@
             "heading": "With regard to any User Content that you provide, you represent and warrant that:",
             "paragraph": "<ul><li>You own the User Content and/or have a valid right to use, submit, or post it and grant the licenses and rights described herein;</li><li>Your User Content does not and will not violate the intellectual property, privacy, or other rights of any person; and</li><li>Your posting of any User Content does not and will not violate these Terms.</li></ul>"
           }
+        },
+        "text_block_WQaxCa": {
+          "type": "text_block",
+          "settings": {
+            "heading": "You further acknowledge and agree that:",
+            "paragraph": "<ul><li>You are responsible and liable for all such User Content that you submit, post, or display.</li><li>You are responsible and liable for any activity that occurs under your user.</li><li>You shall not abuse, harass, threaten, or intimidate other users of this website.</li><li>You shall not use this website for any illegal or unauthorized purpose.</li><li>You shall not post User Content that is harmful, offensive, threatening, libelous, defamatory, obscene, unlawful or objectionable.</li><li>Except as may be expressly permitted by us, you shall not use this website to promote any commercial activity, such as advertising any product or service.<br/><br/><br/></li></ul>"
+          }
         }
       },
       "block_order": [
@@ -93,7 +100,8 @@
         "text_block_HaKmBR",
         "text_block_H9GTBg",
         "text_block_mqyzbk",
-        "text_block_wizdPi"
+        "text_block_wizdPi",
+        "text_block_WQaxCa"
       ],
       "name": "Custom Text Blocks",
       "settings": {
