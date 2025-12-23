@@ -622,6 +622,9 @@ product-info .button--primary  {
 }
 
 @media (max-width: 470px) {
+  product-info .pdp-buttons {
+  gap: 10px;
+}
   product-info .button--secondary,
 product-info .button--primary  {
   font-size: 16px;
