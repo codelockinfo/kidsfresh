@@ -398,6 +398,59 @@ product-info .button--primary  {
   padding: 13px 32px;
 }
 }
+
+@media (max-width: 992px) {
+  product-info {
+    padding: 50px!important;
+  }
+.product.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.grid__item.product__media-wrapper {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.product__info-wrapper.grid__item {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+.product__info-container {
+  max-width: 100%;
+}
+
+.custom-background-container {
+    flex-direction: column;
+    padding: 0 0px;
+  }
+
+  /* MOVE IMAGE TO TOP */
+  .custom-background-image-wrapper {
+    order: -1;                
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;  
+    margin-top: -25%;
+  }
+
+  /* IMAGE RIGHT SIDE OFFSET */
+  .custom-background-image-container img {
+    width: 100%;
+    transform: translateX(23%);  
+  }
+
+ .custom-background-image-container {
+    overflow: hidden;
+  }
+
+  .custom-background-wrapper {
+    padding: 67px 0 !important;
+  }
+}
   
 @media screen and (max-width: 768px) {
 .product__info-container .product__description{
@@ -1971,58 +2024,4 @@ a.product__text {
   .recipient-form > input[type='checkbox']:checked + label .icon-checkmark {
     border: none;
   }
-}
-
-@media (max-width: 992px) {
-  product-info {
-    padding: 50px!important;
-  }
-.product.grid {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-.grid__item.product__media-wrapper {
-  width: 100% !important;
-  max-width: 100% !important;
-}
-
-.product__info-wrapper.grid__item {
-  width: 100% !important;
-  max-width: 100% !important;
-  padding: 0 !important;
-}
-
-.product__info-container {
-  max-width: 100%;
-}
-
-.custom-background-container {
-    flex-direction: column;
-    padding: 0 0px;
-  }
-
-  /* MOVE IMAGE TO TOP */
-  .custom-background-image-wrapper {
-    order: -1;                
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;  
-    margin-top: -25%;
-  }
-
-  /* IMAGE RIGHT SIDE OFFSET */
-  .custom-background-image-container img {
-    width: 100%;
-    transform: translateX(23%);  
-  }
-
- .custom-background-image-container {
-    overflow: hidden;
-  }
-
-  .custom-background-wrapper {
-    padding: 67px 0 !important;
-  }
-
 }
