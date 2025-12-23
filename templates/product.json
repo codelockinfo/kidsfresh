@@ -255,9 +255,7 @@
         "product_wQp93E",
         "product_kgWdXT"
       ],
-      "custom_css": [
-        ".veggie-hover-section .veggie-products-grid {margin-top: 80px;}"
-      ],
+      "custom_css": [],
       "name": "Veggie Hover Products",
       "settings": {
         "title": "our most popular meals",
