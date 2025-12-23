@@ -194,8 +194,8 @@ ul.footer-block__details-content.list-unstyled li a:hover::after {
 
 .footer__content-bottom {
   border-top: solid 0.1rem rgba(var(--color-foreground), 0.08);
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 9px;
+  padding-bottom: 11px;
 }
 
 .footer__content-bottom:only-child {
