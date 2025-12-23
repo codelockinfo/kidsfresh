@@ -300,7 +300,7 @@ product-info .pdp-buttons {
   line-height: 100%;
 }
 .product-form__input--pill input[type=radio]:checked+label {
-  font-size: 23px;
+  font-size: 23px !important;
   line-height: 100%;
 }
 .product__description p {
