@@ -42,8 +42,16 @@
             "content": "<p>ds</p>",
             "page": "",
             "default_open": true,
-            "enable_highlighted_design": true,
-            "use_metafields": true
+            "use_metafields": true,
+            "metafield_1": "",
+            "metafield_1_label": "Label 1",
+            "metafield_1_sublabel": "",
+            "metafield_2": "",
+            "metafield_2_label": "Label 2",
+            "metafield_2_sublabel": "",
+            "metafield_3": "",
+            "metafield_3_label": "Label 3",
+            "metafield_3_sublabel": ""
           }
         },
         "collapsible_tab_bJUBwU": {
@@ -54,8 +62,16 @@
             "content": "<p>ssad</p>",
             "page": "",
             "default_open": false,
-            "enable_highlighted_design": false,
-            "use_metafields": false
+            "use_metafields": true,
+            "metafield_1": "custom.ingrediants",
+            "metafield_1_label": "Label 1",
+            "metafield_1_sublabel": "",
+            "metafield_2": "",
+            "metafield_2_label": "Label 2",
+            "metafield_2_sublabel": "",
+            "metafield_3": "",
+            "metafield_3_label": "Label 3",
+            "metafield_3_sublabel": ""
           }
         },
         "nutritionally_notable_UV8CDc": {
