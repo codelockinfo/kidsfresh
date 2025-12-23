@@ -1973,7 +1973,7 @@ a.product__text {
   }
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+/* @media (min-width: 769px) and (max-width: 1024px) {
   product-info {
     padding: 50px!important;
   }
@@ -2025,4 +2025,4 @@ a.product__text {
     padding: 67px 0 !important;
   }
 
-}
+} */
