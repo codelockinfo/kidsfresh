@@ -493,9 +493,9 @@ product-info .pdp-buttons {
 }
 product-info .button--secondary,
 product-info .button--primary  {
-  font-size: 18px;
-  line-height: 30px;
-  padding: 13px 32px;
+  font-size: 20px;
+  line-height: 33px;
+  padding: 13px 38px;
 }
 }
   
