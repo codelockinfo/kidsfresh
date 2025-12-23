@@ -109,7 +109,7 @@
       "name": "Food is Love Section",
       "settings": {
         "heading": "food is love",
-        "description": "<p>Everything we do—from how we prepare our meals, to the ingredients we use, to our<br/>hidden veggies—is about giving kids what they need to feel happy and hearty, and giving parents one more way to show their love.</p>",
+        "description": "<p>Everything we do—from how we prepare our meals, to the ingredients we use, to our<br/>Everything we do—from how we prepare our meals, to the ingredients we use, to our hidden veggies—is about giving kids what they need to feel happy and hearty, and giving parents one more way to show their love.</p>",
         "bg_color": "#f1ead9",
         "heading_color": "#39302d",
         "text_color": "#5d3328",
