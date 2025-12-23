@@ -545,7 +545,7 @@ product-info {
   line-height: 25px;
 }
 .product__info-container>*+* {
-  margin: 0;
+  margin: 0 !important;
 }
 .highlighted-accordion__value {
   font-size: 32px;
