@@ -387,7 +387,7 @@ product-info {
 
 product-info {
   display: block;
-  padding : 0 180px;
+  padding : 80px 180px;
 }
 
 .product {
@@ -1886,7 +1886,7 @@ a.product__text {
 
 @media (min-width: 769px) and (max-width: 1024px) {
   product-info {
-    padding: 0 50px !important;
+    padding: 80px 50px !important;
   }
 .product.grid {
   display: flex;
