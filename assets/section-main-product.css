@@ -1975,13 +1975,13 @@ a.product__text {
 
 @media (min-width: 769px) and (max-width: 1024px) {
   product-info {
-    padding: 50px !important;
+    padding: 50px!important;
   }
-/* .product.grid {
+.product.grid {
   display: flex;
   flex-direction: column;
   gap: 30px;
-} */
+}
 .grid__item.product__media-wrapper {
   width: 100% !important;
   max-width: 100% !important;
