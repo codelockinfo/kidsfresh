@@ -299,6 +299,10 @@ product-info .pdp-buttons {
   font-size: 45px;
   line-height: 100%;
 }
+.product-form__input--pill input[type=radio]:checked+label {
+  font-size: 23px;
+  line-height: 100%;
+}
 }
   
 @media screen and (max-width: 768px) {
