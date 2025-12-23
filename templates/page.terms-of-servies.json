@@ -125,7 +125,21 @@
           "type": "text_block",
           "settings": {
             "heading": "Privacy",
-            "paragraph": "<p>For an explanation of our online information practices with regards to information collected or submitted to the Site, please see our <span style=\"text-decoration:underline\">Privacy Policy.</span><br/><br/></p>"
+            "paragraph": "<p>For an explanation of our online information practices with regards to information collected or submitted to the Site, please see our<a href=\"/pages/privacy-policy\" title=\"privacy-policy\"> <span style=\"text-decoration:underline\">Privacy Policy</span></a><span style=\"text-decoration:underline\">.</span><br/><br/></p>"
+          }
+        },
+        "text_block_xcyzTa": {
+          "type": "text_block",
+          "settings": {
+            "heading": "Governing Law",
+            "paragraph": "<p>These Terms are governed by and shall be construed in accordance with the laws of the State of New York without giving effect to any principles of conflicts of law. Any controversy or dispute involving KIDFRESH arising from or in any way related to these Terms or your use of the Site shall be heard in the appropriate State or Federal court in New York, New York.<br/><br/></p>"
+          }
+        },
+        "text_block_EkaddD": {
+          "type": "text_block",
+          "settings": {
+            "heading": "",
+            "paragraph": ""
           }
         }
       },
@@ -141,7 +155,9 @@
         "text_block_XePRGN",
         "text_block_yY3hTe",
         "text_block_k8Rjnb",
-        "text_block_UD6gwj"
+        "text_block_UD6gwj",
+        "text_block_xcyzTa",
+        "text_block_EkaddD"
       ],
       "name": "Custom Text Blocks",
       "settings": {
