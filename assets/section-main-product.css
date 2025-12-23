@@ -437,16 +437,6 @@ product-info .button--primary  {
     margin-top: -25%;
   }
 
-  /* IMAGE RIGHT SIDE OFFSET */
-  .custom-background-image-container img {
-    width: 100%;
-    transform: translateX(23%);  
-  }
-
- .custom-background-image-container {
-    overflow: hidden;
-  }
-
   .custom-background-wrapper {
     padding: 67px 0 !important;
   }
