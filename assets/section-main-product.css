@@ -295,6 +295,10 @@ product-info .pdp-buttons {
   product-info {
   padding : 80px !important;
 }
+.product__title h1 {
+  font-size: 45px;
+  line-height: 100%;
+}
 }
   
 @media screen and (max-width: 768px) {
