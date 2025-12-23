@@ -45,7 +45,7 @@ text-align:justify;
   display: inline-flex !important;
   border: 1.5px solid #0F4735 !important;
   /* border-radius: 8px !important; */
-  overflow: hidden !important;
+  /* overflow: hidden !important; */
 }
 
 /* Hide radio inputs */
