@@ -17,7 +17,7 @@
 .product__title h1{
     font-family: var(--font-family) !important;
   font-weight: 700 !important;
-  font-size: 60px !important;
+  font-size: 60px;
   color: #39302D;
 line-height: 100%;
 letter-spacing: 0.5%;
@@ -32,7 +32,7 @@ color: #39302D;
 font-family: var(--font-family);
 font-weight: 400;
 font-size: 24px;
-line-height: 32px;
+line-height: 34px;
 letter-spacing: -2%;
 text-align:justify;
 }
@@ -57,6 +57,7 @@ text-align:justify;
 .product-form__input--pill input[type="radio"] + label {
   font-family: var(--font-family);
   font-size: 27px !important;
+  line-height: 100%;
   font-weight: 500;
   padding: 10px 20px !important;
   margin: 0 !important;
@@ -119,7 +120,7 @@ text-align:justify;
 }
 
 .summary__title h2{
-font-family: var(--font-family);
+font-family: var(--font-family) !important;
 font-weight: 500;
 font-size: 36px;
 line-height: 100%;
@@ -167,18 +168,19 @@ letter-spacing: -2%;
 
 .highlighted-accordion__label {
    font-family: var(--font-family);
-font-weight: 600;
-font-size: 20px;
+font-weight: 500;
+font-size: 22px;
 text-align: center;
 color:#39302D;
 line-height:32px;
 letter-spacing:0px;
+padding-top: 10px;
 }
 
 .highlighted-accordion__sublabel {
      font-family: var(--font-family);
 font-weight: 400;
-font-size: 18px;
+font-size: 19px;
 line-height: 100%;
 letter-spacing: -1px;
 text-align: center;
@@ -196,7 +198,7 @@ product-info .pdp-buttons {
       color: #0F4735;
       font-family: var(--font-family);
       font-size: 30px;
-      font-weight: 500;
+      font-weight: 600;
       line-height: 44px;
       text-decoration: none;
       box-shadow: none;
@@ -246,7 +248,7 @@ product-info .pdp-buttons {
       font-family: var(--font-family);
       font-size: 30px;
       line-height: 44px;
-      font-weight: 500;
+      font-weight: 600;
       text-decoration: none;
       box-shadow: none;
       cursor: pointer;
@@ -289,10 +291,201 @@ product-info .pdp-buttons {
       box-shadow: none !important;
     }
 
+  @media (min-width: 1441px) and (max-width: 1531px) {
+    product-info .button--secondary, product-info .button--primary {
+      font-size: 26px;
+    }
+  }
 
 @media screen and (max-width: 1440px) {
   product-info {
-  padding : 0 80px !important;
+  padding : 80px !important;
+}
+.product__title h1 {
+  font-size: 45px;
+  line-height: 100%;
+}
+.product-form__input--pill input[type=radio]:checked+label {
+  font-size: 23px !important;
+  line-height: 100%;
+}
+.product__description p {
+  font-size: 18px;
+  line-height: 26px;
+}
+.summary__title h2 {
+  font-size: 27px;
+  line-height: 100%;
+}
+.accordion__content p {
+  font-size: 16px;
+  line-height: 25px;
+}
+.highlighted-accordion__value {
+  font-size: 35px;
+  line-height: 100%;
+}
+
+.highlighted-accordion__label {
+  font-size: 19px;
+  line-height: 24px;
+}
+.highlighted-accordion__sublabel {
+  font-size: 16px;
+}
+.product__accordion svg {
+  height:20px;
+  width: 20px;
+}
+product-info .pdp-buttons {
+  gap: 20px;
+}
+product-info .button--secondary,
+product-info .button--primary  {
+  font-size: 23px;
+  line-height: 33px;
+  padding: 17px 40px;
+}
+}
+
+@media screen and (max-width: 1200px) {
+  product-info {
+    padding: 60px !important;
+  }
+.product__title h1 {
+  font-size: 38px;
+  line-height: 100%;
+}
+.product-form__input--pill input[type=radio]:checked+label {
+  font-size: 20px !important;
+  line-height: 100%;
+}
+.product__description p {
+  font-size: 18px;
+  line-height: 26px;
+}
+.summary__title h2 {
+  font-size: 25px;
+  line-height: 100%;
+}
+.accordion__content p {
+  font-size: 16px;
+  line-height: 25px;
+}
+.highlighted-accordion__value {
+  font-size: 32px;
+  line-height: 100%;
+}
+
+.highlighted-accordion__label {
+  font-size: 18px;
+  line-height: 22px;
+}
+.highlighted-accordion__sublabel {
+  font-size: 14px;
+}
+.product__accordion svg {
+  height:20px;
+  width: 20px;
+}
+product-info .pdp-buttons {
+  gap: 20px;
+}
+product-info .button--secondary,
+product-info .button--primary  {
+  font-size: 18px;
+  line-height: 30px;
+  padding: 13px 32px;
+}
+}
+
+@media (max-width: 992px) {
+  product-info {
+    padding: 50px!important;
+  }
+.product.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.grid__item.product__media-wrapper {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.product__info-wrapper.grid__item {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+.product__info-container {
+  max-width: 100%;
+}
+
+.custom-background-container {
+    flex-direction: column;
+    padding: 0 0px;
+  }
+
+  /* MOVE IMAGE TO TOP */
+  .custom-background-image-wrapper {
+    order: -1;                
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;  
+    margin-top: -25%;
+  }
+
+  .custom-background-wrapper {
+    padding: 67px 0 !important;
+  }
+
+  .product__title h1 {
+  font-size: 38px;
+  line-height: 100%;
+  margin-top: 25px;
+}
+.product-form__input--pill input[type=radio]:checked+label {
+  font-size: 20px !important;
+  line-height: 100%;
+}
+.product__description p {
+  font-size: 18px;
+  line-height: 26px;
+}
+.summary__title h2 {
+  font-size: 25px;
+  line-height: 100%;
+}
+.accordion__content p {
+  font-size: 16px;
+  line-height: 25px;
+}
+.highlighted-accordion__value {
+  font-size: 32px;
+  line-height: 100%;
+}
+
+.highlighted-accordion__label {
+  font-size: 18px;
+  line-height: 22px;
+}
+.highlighted-accordion__sublabel {
+  font-size: 14px;
+}
+.product__accordion svg {
+  height:20px;
+  width: 20px;
+}
+product-info .pdp-buttons {
+  gap: 20px;
+}
+product-info .button--secondary,
+product-info .button--primary  {
+  font-size: 20px;
+  line-height: 33px;
+  padding: 13px 38px;
 }
 }
   
@@ -316,77 +509,123 @@ product-info .pdp-buttons {
   max-width: 100%;
 }
 
-.product-form__input--pill input[type=radio]:checked+label{
-  font-size:18px !important;
-}
-
-.product-form__input--pill input[type=radio]+label{
-  font-size:18px !important;
-}
 product-info {
-  padding : 0 30px !important;
+  padding : 30px !important;
 }
-  .product__title h1{
-    font-size:36px !important;
-  }
-
-  .product__description p{
-    font-size: 20px !important;
-    line-height: 30px;
-  }
-  .summary__title h2{
-    font-size:20px;
-  }
-
-  .product__accordion svg{
-    width:20px;
-    height:20px;
-  }
-  .product__accordion .accordion__content {
-    padding:0 20px;
-  }
-
-
-  .accordion__content--highlighted {
-    padding :0 !important;
-  }
-
-  .highlighted-accordion__items{
-    gap:0px;
-    padding :0 0 5px 0px;
-  }
- .highlighted-accordion__value{
-  font-size:34px;
- }
-
- .highlighted-accordion__sublabel{
-  font-size:14px;
-    letter-spacing: -1px;
- }
- .highlighted-accordion__label{
-  font-size:14px;
-      line-height: 19px;
-    letter-spacing: -1px;
- }
-
-
+  .product__title h1 {
+  font-size: 34px;
+  line-height: 100%;
+  margin-top: 0;
 }
-@media screen and (max-width: 410px) {
-  product-info .pdp-buttons{
-    gap:12px;
-  }
-  /* product-info .button--secondary, product-info .button--primary
-{
-    font-size:16px;
-    padding:8px 16px !important;
-  } */
+.product-form__input--pill input[type=radio]:checked+label {
+  font-size: 18px !important;
+  line-height: 100%;
 }
-/* my css end */
+.product__description p {
+  font-size: 18px;
+  line-height: 26px;
+}
+.summary__title h2 {
+  font-size: 25px;
+  line-height: 100%;
+}
+.accordion__content p {
+  font-size: 16px;
+  line-height: 25px;
+}
+.product-form__input {
+  margin: 0 !important;
+}
+.highlighted-accordion__value {
+  font-size: 32px;
+  line-height: 100%;
+}
 
+.highlighted-accordion__label {
+  font-size: 18px;
+  line-height: 22px;
+}
+.highlighted-accordion__sublabel {
+  font-size: 14px;
+}
+.product__accordion svg {
+  height:20px;
+  width: 20px;
+}
+product-info .pdp-buttons {
+  gap: 20px;
+}
+product-info .button--secondary,
+product-info .button--primary  {
+  font-size: 18px;
+  line-height: 30px;
+  padding: 13px 32px;
+}
+}
+
+@media screen and (max-width: 576px) {
+.product__title h1 {
+  font-size: 32px;
+  line-height: 100%;
+}
+.product-form__input--pill input[type=radio]:checked+label {
+  font-size: 16px !important;
+  line-height: 100%;
+}
+.product__description p {
+  font-size: 16px;
+  line-height: 24px;
+}
+.summary__title h2 {
+  font-size: 22px;
+  line-height: 100%;
+}
+.accordion__content p {
+  font-size: 14px;
+  line-height: 25px;
+}
+.highlighted-accordion__value {
+  font-size: 30px;
+  line-height: 100%;
+}
+
+.highlighted-accordion__label {
+  font-size: 16px;
+  line-height: 20px;
+}
+.highlighted-accordion__sublabel {
+  font-size: 12px;
+}
+.product__accordion svg {
+  height:20px;
+  width: 20px;
+}
+product-info .pdp-buttons {
+  gap: 20px;
+}
+product-info .button--secondary,
+product-info .button--primary  {
+  font-size: 18px;
+  line-height: 30px;
+  padding: 13px 32px;
+}
+}
+
+@media (max-width: 470px) {
+  product-info .pdp-buttons {
+  gap: 10px;
+}
+  product-info .button--secondary,
+product-info .button--primary  {
+  font-size: 16px;
+  line-height: 24px;
+  padding: 13px 16px;
+}
+}
 
 product-info {
   display: block;
-  padding : 0 180px;
+  padding : 30px 180px;
 }
 
 .product {
@@ -1880,95 +2119,5 @@ a.product__text {
 
   .recipient-form > input[type='checkbox']:checked + label .icon-checkmark {
     border: none;
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  product-info {
-    padding: 0 50px !important;
-  }
-.product.grid {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-.grid__item.product__media-wrapper {
-  width: 100% !important;
-  max-width: 100% !important;
-}
-
-.product__info-wrapper.grid__item {
-  width: 100% !important;
-  max-width: 100% !important;
-  padding: 0 !important;
-}
-
-.product__info-container {
-  max-width: 100%;
-}
-
-.custom-background-container {
-    flex-direction: column;
-    padding: 0 0px;
-  }
-
-  /* MOVE IMAGE TO TOP */
-  .custom-background-image-wrapper {
-    order: -1;                
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;  
-    margin-top: -25%;
-  }
-
-  /* IMAGE RIGHT SIDE OFFSET */
-  .custom-background-image-container img {
-    width: 100%;
-    transform: translateX(23%);  
-  }
-
- .custom-background-image-container {
-    overflow: hidden;
-  }
-
-  .custom-background-wrapper {
-    padding: 67px 0 !important;
-  }
-
-    product-info .button--secondary, product-info .button--primary {
-    font-size: 26px;
-    line-height: 33px;
-    padding: 14px 24px;
-  }
-}
-
-@media (min-width: 1025px) and (max-width: 1331px) {
-  product-info .button--secondary, product-info .button--primary {
-    font-size: 22px;
-    line-height: 33px;
-    padding: 12px 18px;
-  }
-  product-info .pdp-buttons {
-    gap: 20px;
-  }
-}
-
-@media (min-width: 1441px) and (max-width: 1531px) {
-  product-info .button--secondary, product-info .button--primary {
-    font-size: 27px;
-    line-height: 40px;
-    padding: 12px 30px;
-  }
-}
-
-
-@media (max-width: 450px) {
-  product-info .button--secondary, product-info .button--primary {
-    font-size: 18px;
-    line-height: 30px;
-    padding: 8px 12px;
-  }
-  product-info .pdp-buttons {
-    gap: 10px;
   }
 }

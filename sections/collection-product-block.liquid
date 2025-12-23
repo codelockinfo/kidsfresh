@@ -25,15 +25,6 @@ margin:0 auto;
   }
   @media (max-width: 768px) {
     
-    .product-title {
-    font-size: 18px !important;
-  }
-  .product-description  {
-  font-size: 16px !important;
-  }
- .product-info span {
-  font-size: 16px !important;
-  }
 .default-img{
     width:45px;
     height:45px;
@@ -202,6 +193,7 @@ gap:12px;
 
   .product-title {
     font-size: 24px;
+    line-height: 100%;
     font-family: var(--font-family) !important;
     font-weight: 400;
     margin-bottom: 8px;
@@ -215,7 +207,7 @@ gap:12px;
     font-weight: 400;
     margin:0px;
     color: #5D3328;
-    line-height: 1.4;
+    line-height: 33px;
   }
 
   .search-icon {
@@ -402,7 +394,7 @@ gap:12px;
 
   .promo-heading-questions{
     font-family: var(--font-family);
-    font-size: 66px;
+    font-size: 75px;
     line-height: 86px;
   }
   .promo-element-questions.veg-top-left {
@@ -488,7 +480,7 @@ gap:12px;
    background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_25.png?v=1764592665);
   background-size: 100% 100%;
   padding: 8px 34px;
-  bottom: -5px;
+  bottom: -6px;
   z-index: 1;
   box-shadow: none;
 }
@@ -551,6 +543,111 @@ gap:12px;
 .veggie-buttons .button--secondary:hover:after{
   bottom: -5px; 
   box-shadow: none;
+}
+
+@media (max-width: 1440px) {
+  .product-title {
+    font-size: 18px;
+    line-height: 100%;
+  }
+  .product-info span, .product-info p {
+    font-size: 16px;
+    line-height: 25px;
+  }
+  .veggie-buttons .button--primary {
+    font-size: 23px;
+    line-height: 33px;
+    padding: 13px 48px;
+  }
+  .veggie-buttons .button--secondary {
+    font-size: 23px;
+    line-height: 33px;
+    padding: 13px 40px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .product-title {
+    font-size: 16px;
+    line-height: 100%;
+  }
+  .product-info span, .product-info p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .veggie-buttons .button--primary {
+    font-size: 20px;
+    line-height: 33px;
+    padding: 12px 48px;
+  }
+  .veggie-buttons .button--secondary {
+    font-size: 20px;
+    line-height: 33px;
+    padding: 12px 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .product-title {
+    font-size: 15px;
+    line-height: 100%;
+  }
+  .product-info span, .product-info p {
+    font-size: 13px;
+    line-height: 17px;
+  }
+  .veggie-buttons .button--primary {
+    font-size: 20px;
+    line-height: 33px;
+    padding: 12px 48px;
+  }
+  .veggie-buttons .button--secondary {
+    font-size: 20px;
+    line-height: 33px;
+    padding: 12px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-title {
+    font-size: 15px;
+    line-height: 100%;
+  }
+  .product-info span, .product-info p {
+    font-size: 13px;
+    line-height: 17px;
+  }
+  .veggie-buttons .button--primary {
+    font-size: 18px;
+    line-height: 30px;
+    padding: 12px 38px;
+  }
+  .veggie-buttons .button--secondary {
+    font-size: 18px;
+    line-height: 30px;
+    padding: 12px 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .product-title {
+    font-size: 15px;
+    line-height: 100%;
+  }
+  .product-info span, .product-info p {
+    font-size: 13px;
+    line-height: 17px;
+  }
+  .veggie-buttons .button--primary {
+    font-size: 18px;
+    line-height: 30px;
+    padding: 12px 38px;
+  }
+  .veggie-buttons .button--secondary {
+    font-size: 18px;
+    line-height: 30px;
+    padding: 12px 38px;
+  }
 }
 
 .promo-element {
@@ -781,8 +878,8 @@ gap:12px;
       left: -28px!important;
     }
     .promo-heading{
-      font-size: 64px;
-      line-height: 66px;
+      font-size: 63px;
+      line-height: 65px;
     }
     .promo-element.top-left {
     top: -79%;
@@ -829,9 +926,6 @@ gap:12px;
   .promo-heading-questions{
     font-size: 45px;
     line-height: 52px;
-  }
-  .promo-button-questions{
-    padding: 10px 35px!important;
   }
   .promo-element-questions.veg-top-left {
     top: -4%;
@@ -1740,12 +1834,12 @@ gap:12px;
     height: 200px;
     rotate: -12deg;
   }
-  .veggie-buttons .button--primary,
+  {% comment %} .veggie-buttons .button--primary,
   .veggie-buttons .button--secondary {
     font-size: 28px;
     line-height: 40px;
     margin-bottom: 20px;
-  }
+  } {% endcomment %}
   }
   @media (min-width: 568px) and (max-width: 668px){
     .grid-row {
@@ -1850,11 +1944,11 @@ gap:12px;
     height: 200px;
     rotate: -12deg;
   }
-  .veggie-buttons .button--primary,
+  {% comment %} .veggie-buttons .button--primary,
   .veggie-buttons .button--secondary {
     font-size: 24px;
     line-height: 38px;
-  }
+  } {% endcomment %}
   }
   @media (min-width: 468px) and (max-width: 568px){
     .grid-row {
@@ -1959,11 +2053,11 @@ gap:12px;
     height: 170px;
     rotate: -12deg;
   }
-  .veggie-buttons .button--primary,
+  {% comment %} .veggie-buttons .button--primary,
   .veggie-buttons .button--secondary {
     font-size: 20px;
     line-height: 33px;
-  }
+  } {% endcomment %}
   }
   @media (min-width: 368px) and (max-width: 468px){
     .grid-row {
@@ -2068,11 +2162,11 @@ gap:12px;
     height: 150px;
     rotate: -12deg;
   }
-  .veggie-buttons .button--primary,
+  {% comment %} .veggie-buttons .button--primary,
   .veggie-buttons .button--secondary {
     font-size: 20px;
     line-height: 33px;
-  }
+  } {% endcomment %}
   }
   @media (min-width: 268px) and (max-width: 368px){
     .grid-row {
@@ -2414,13 +2508,6 @@ gap:12px;
       }
     }
 
-  @media (min-width: 969px) and (max-width: 1340px) {
-    .veggie-buttons .button--secondary {
-      font-size: 22px;
-      padding: 5px 20px !important;
-    }
-  }
-
   /* Responsive styles for questions block */
   @media (max-width: 968px) {
     .grid-row {
@@ -2504,16 +2591,6 @@ gap:12px;
       min-height: 200px;
     }
       
-    .product-title {
-    font-size: 18px !important;
-  }
-
-  .product-description {
-  font-size: 16px !important;
-  }
-.product-info span {
-  font-size: 16px !important;
-  }
 .default-img{
     width:45px;
     height:45px;
@@ -2534,9 +2611,9 @@ gap:12px;
 .search-icon{
   z-index:0;
 }
-.veggie-buttons .button--primary {
+{% comment %} .veggie-buttons .button--primary {
   padding: 10px 34px;
-}
+} {% endcomment %}
   }
 
     @media (max-width: 680px) {

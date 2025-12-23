@@ -42,7 +42,7 @@
   }
 
   .find-us-header h1 {
-    font-size: 76px;
+    font-size: 84px;
     font-family: var(--font-family);
     margin:0px;
     font-weight: 700;
@@ -251,7 +251,7 @@
   }
   .product-name {
     font-size: 22px;
-    font-family: var(--font-family);
+    font-family: var(--font-family) !important;
     font-weight: 400;
     margin:0px;
     margin: 8px 0;
@@ -293,6 +293,21 @@
     object-fit: cover;
     object-position: bottom;
     display: block;
+  }
+
+  @media (max-width: 1440px) {
+    .find-us-header h1 {
+      font-size: 63px;
+      line-height: 65px;  
+    }
+    .main-search-bar input {
+      font-size: 22px;
+      line-height: 30px;
+    }
+    .product-selection-header h2 {
+      font-size: 22px;
+      line-height: 30px;
+    }
   }
 
   @media (max-width: 1024px) {
