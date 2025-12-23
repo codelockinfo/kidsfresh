@@ -197,7 +197,7 @@ product-info .pdp-buttons {
       color: #0F4735;
       font-family: var(--font-family);
       font-size: 30px;
-      font-weight: 500;
+      font-weight: 600;
       line-height: 44px;
       text-decoration: none;
       box-shadow: none;
@@ -247,7 +247,7 @@ product-info .pdp-buttons {
       font-family: var(--font-family);
       font-size: 30px;
       line-height: 44px;
-      font-weight: 500;
+      font-weight: 600;
       text-decoration: none;
       box-shadow: none;
       cursor: pointer;
