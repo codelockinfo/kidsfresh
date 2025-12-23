@@ -573,41 +573,38 @@ product-info .button--primary  {
 }
 }
 
-@media screen and (max-width: 1200px) {
-  product-info {
-    padding: 60px !important;
-  }
+@media screen and (max-width: 576px) {
 .product__title h1 {
-  font-size: 38px;
+  font-size: 32px;
   line-height: 100%;
 }
 .product-form__input--pill input[type=radio]:checked+label {
-  font-size: 20px !important;
+  font-size: 16px !important;
   line-height: 100%;
 }
 .product__description p {
-  font-size: 18px;
-  line-height: 26px;
+  font-size: 16px;
+  line-height: 24px;
 }
 .summary__title h2 {
-  font-size: 25px;
+  font-size: 22px;
   line-height: 100%;
 }
 .accordion__content p {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 25px;
 }
 .highlighted-accordion__value {
-  font-size: 32px;
+  font-size: 30px;
   line-height: 100%;
 }
 
 .highlighted-accordion__label {
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 16px;
+  line-height: 20px;
 }
 .highlighted-accordion__sublabel {
-  font-size: 14px;
+  font-size: 12px;
 }
 .product__accordion svg {
   height:20px;
