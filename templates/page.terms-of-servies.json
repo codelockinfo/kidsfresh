@@ -57,11 +57,19 @@
             "heading": "Disclaimer",
             "paragraph": "<p>This site, its contents, functions and all information, products and services contained in or offered through this site are provided on an “as is” and “as available” basis without representations or warranties of any kind. Kidfresh expressly disclaims all such representations and warranties, either express or implied, including without limitation, warranties of title, merchantability, fitness for a particular purpose or non- infringement and any implied warranties arising from course of dealing or course of performance. Kidfresh does not warrant that this site or its contents will be complete, accurate, timely, uninterrupted, secure or error free, or that defects will be corrected. All information on the site is subject to change without notice. Some jurisdictions do not allow the exclusion of certain warranties so some of the above exclusions may not apply to you.<br/><br/></p>"
           }
+        },
+        "text_block_HaKmBR": {
+          "type": "text_block",
+          "settings": {
+            "heading": "Limitation of Liability",
+            "paragraph": "<p>In no event shall Kidfresh be liable for any direct, indirect, consequential, special or incidental damages arising out of or related to your use of or inability to use this site. Some jurisdictions do not allow the exclusion of certain warranties so some of the above exclusions may not apply to you.</p>"
+          }
         }
       },
       "block_order": [
         "text_block_GtkLdB",
-        "text_block_mwBPJ3"
+        "text_block_mwBPJ3",
+        "text_block_HaKmBR"
       ],
       "name": "Custom Text Blocks",
       "settings": {
