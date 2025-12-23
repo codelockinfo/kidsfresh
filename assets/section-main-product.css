@@ -291,6 +291,11 @@ product-info .pdp-buttons {
       box-shadow: none !important;
     }
 
+  @media (min-width: 1441px) and (max-width: 1531px) {
+    product-info .button--secondary, product-info .button--primary {
+      font-size: 20px;
+    }
+  }
 
 @media screen and (max-width: 1440px) {
   product-info {
