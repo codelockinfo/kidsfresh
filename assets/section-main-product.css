@@ -332,15 +332,11 @@ product-info .pdp-buttons {
   height:20px;
   width: 20px;
 }
-product-info .button--secondary {
+product-info .button--secondary,
+product-info .button--primary  {
   font-size: 23px;
   line-height: 33px;
   padding: 17px 40px;
-}
-product-info .button--primary {
-  font-size: 23px;
-  line-height: 33px;
-  padding: 17px 38px;
 }
 }
   
