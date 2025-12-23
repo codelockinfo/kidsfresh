@@ -57,67 +57,11 @@
             "heading": "How does Kidfresh use personal information?",
             "paragraph": "<p>Kidfresh may use personal information provided verbally or in writing (including via electronic media) by customers and potential employees in order to:</p><p>Communicate about our products, events or other promotional purposes, including co-branded offers, if you have opted to receive such communications either through providing your email address on the home page of Kidfresh.com or by indicating as such in your communication preferences when requested;Respond to your customer service inquiries;</p><p>Communicate, to the extent required, with and manage our relationship with Kidfresh consultants, strategic partners, agents, distributors, suppliers, contractors and other companies affiliated with Kidfresh in order to improve Kidfresh offering of products and services; and Communicate with you about: specific jobs, job opportunities or general information about employment at Kidfresh; Meet any applicable legal and regulatory requirement.</p>"
           }
-        },
-        "text_block_yar7bx": {
-          "type": "text_block",
-          "settings": {
-            "heading": "",
-            "paragraph": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus orci facilisis id.</p>"
-          }
-        },
-        "text_block_hcqMxU": {
-          "type": "text_block",
-          "settings": {
-            "heading": "",
-            "paragraph": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales.</p>"
-          }
-        },
-        "text_block_R9C4hC": {
-          "type": "text_block",
-          "settings": {
-            "heading": "",
-            "paragraph": "<p>Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus orci facilisis id. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.</p>"
-          }
-        },
-        "text_block_dLrmwg": {
-          "type": "text_block",
-          "settings": {
-            "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.",
-            "paragraph": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus orci facilisis id.</p>"
-          }
-        },
-        "text_block_7ciMUG": {
-          "type": "text_block",
-          "settings": {
-            "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.",
-            "paragraph": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus orci facilisis id.</p>"
-          }
-        },
-        "text_block_KnwE9j": {
-          "type": "text_block",
-          "settings": {
-            "heading": "",
-            "paragraph": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales.</p>"
-          }
-        },
-        "text_block_PnQzyr": {
-          "type": "text_block",
-          "settings": {
-            "heading": "",
-            "paragraph": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus orci facilisis id.</p>"
-          }
         }
       },
       "block_order": [
         "text_block_K9KYDy",
-        "text_block_VPxdWN",
-        "text_block_yar7bx",
-        "text_block_hcqMxU",
-        "text_block_R9C4hC",
-        "text_block_dLrmwg",
-        "text_block_7ciMUG",
-        "text_block_KnwE9j",
-        "text_block_PnQzyr"
+        "text_block_VPxdWN"
       ],
       "name": "Custom Text Blocks",
       "settings": {
