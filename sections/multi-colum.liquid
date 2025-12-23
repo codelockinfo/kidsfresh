@@ -160,7 +160,7 @@
                   </div>
                 {%- endif -%}
                 {%- if block.settings.text_1 != blank -%}
-                  <div class="contact-text" style="font-size: {{ block.settings.text_size }}px; font-weight:500; color: {{ block.settings.text_color }};     font-family: var(--font-family);
+                  <div class="contact-text" style="font-weight:500; color: {{ block.settings.text_color }};     font-family: var(--font-family);
 ">
                     {{ block.settings.text_1 }}
                   </div>
@@ -223,6 +223,7 @@
       line-height: 86px;
     }
     .contact-text {
+      font-size: {{ block.settings.text_size }}px; 
       line-height: 40px;
     }
 
