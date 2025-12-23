@@ -92,6 +92,13 @@
             "heading": "What about links to other sites?",
             "paragraph": "<p>This website may contain links to or from third party websites. Links to other websites are provided solely as a convenience, and we are not responsible for the content or operation of any third party sites linked to this website. All activities you engage in connection with a linked site are subject to the terms and conditions and policies imposed by the site operator, and we disclaim all liability in connection with such activities.</p>"
           }
+        },
+        "text_block_PmLFA7": {
+          "type": "text_block",
+          "settings": {
+            "heading": "Questions and Feedback",
+            "paragraph": "<p>We welcome your questions, comments, and concerns about privacy. Please send us any and all feedback pertaining to privacy, or any other issue. In the event of questions about: (i) access to your personal information; (ii) our collection, use, management or disclosure of personal information; (iii) this privacy policy; or (iv) any other matter, please contact Kidfresh Customer Relations. You may also reach Customer Relations by calling (800) DO KIDFRESH or writing to Kidfresh Customer Relations, 315 Fifth Avenue, Suite 401, New York, NY 10016. Kidfresh will investigate all complaints and if a complaint is justified, we will take all reasonable steps to resolve the issue.</p>"
+          }
         }
       },
       "block_order": [
@@ -101,7 +108,8 @@
         "text_block_xtr8Ug",
         "text_block_3y6XJB",
         "text_block_LUGX4E",
-        "text_block_xkJqiN"
+        "text_block_xkJqiN",
+        "text_block_PmLFA7"
       ],
       "name": "Custom Text Blocks",
       "settings": {
