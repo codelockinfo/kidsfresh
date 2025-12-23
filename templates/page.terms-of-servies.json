@@ -17,16 +17,16 @@
         "padding_bottom": 28
       }
     },
-    "slideshow_cAi8Jj": {
+    "slideshow_YPEgTN": {
       "type": "slideshow",
       "blocks": {
-        "text_image_block_i6WA36": {
+        "text_image_block_hU3eFt": {
           "type": "text_image_block",
           "settings": {
-            "desktop_image": "shopify://shop_images/Group_278_74cb09bb-0408-46eb-a66f-afa0194eda93.png",
-            "mobile_image": "shopify://shop_images/Group_279_828ae318-0a7c-4989-ba0f-d891cd704934.png",
-            "heading": "a better kid's menu",
-            "subheading": "helping you win meals, one bite at a time.",
+            "desktop_image": "shopify://shop_images/Group_10.png",
+            "mobile_image": "shopify://shop_images/Vector_9_2.png",
+            "heading": "Terms & Conditions",
+            "subheading": "",
             "button_label": "learn more",
             "button_link": "",
             "content_alignment": "center"
@@ -34,102 +34,16 @@
         }
       },
       "block_order": [
-        "text_image_block_i6WA36"
+        "text_image_block_hU3eFt"
       ],
       "name": "Text with Image Section",
-      "settings": {}
-    },
-    "collection_product_block_ypR9fk": {
-      "type": "collection-product-block",
-      "blocks": {
-        "product_77ywnL": {
-          "type": "product",
-          "settings": {
-            "block_width": 30,
-            "product": "buttered-pasta",
-            "show_new_badge": true,
-            "new_badge_image": "shopify://shop_images/Group_243.png",
-            "show_second_image": true,
-            "custom_description": "Product description",
-            "search_icon": "shopify://shop_images/store_locator_QB.png",
-            "search_icon_hover": "shopify://shop_images/ChatGPT_Image_Dec_2_2025_06_51_07_PM_dc3c5109-df73-409a-bdd7-72fd465d2d1b.png",
-            "icon_link": "",
-            "icon_open_new_tab": false
-          }
-        },
-        "product_F3Gc3N": {
-          "type": "product",
-          "settings": {
-            "block_width": 30,
-            "product": "cheese-pizza-wagon-wheels",
-            "show_new_badge": false,
-            "new_badge_image": "shopify://shop_images/Group_243.png",
-            "show_second_image": true,
-            "custom_description": "Product description",
-            "search_icon": "shopify://shop_images/store_locator_QB.png",
-            "search_icon_hover": "shopify://shop_images/ChatGPT_Image_Dec_2_2025_06_51_07_PM_dc3c5109-df73-409a-bdd7-72fd465d2d1b.png",
-            "icon_link": "",
-            "icon_open_new_tab": false
-          }
-        },
-        "product_4gWHFR": {
-          "type": "product",
-          "settings": {
-            "block_width": 30,
-            "product": "cheeseburger-mac-cheese",
-            "show_new_badge": false,
-            "show_second_image": true,
-            "custom_description": "Product description",
-            "icon_link": "",
-            "icon_open_new_tab": false
-          }
-        },
-        "product_bDeQCt": {
-          "type": "product",
-          "settings": {
-            "block_width": 30,
-            "product": "chicken-meatballs-pasta-marinara",
-            "show_new_badge": false,
-            "show_second_image": true,
-            "custom_description": "Product description",
-            "icon_link": "",
-            "icon_open_new_tab": false
-          }
-        },
-        "promo_block_McYAhH": {
-          "type": "promo_block",
-          "settings": {
-            "block_width": 60,
-            "background_color": "#f58220",
-            "heading": "ingredients + nutrition",
-            "heading_color": "#2c5f2d",
-            "button_text": "learn more",
-            "button_link": "",
-            "vegetable_top_left": "shopify://shop_images/74ab46f0615cade291a70bd67ab2d406c8d6ad75_7a73b820-99c0-4770-98f1-eadb9f1bff4d.png",
-            "vegetable_top_right": "shopify://shop_images/76dcaefd1b7715bffab9954fc7a6971637cb7b60_5e43aedd-e180-44d6-aa46-0d84fa617435.png",
-            "vegetable_middle_left": "shopify://shop_images/fe83b4bd0e9e73f66d02e7ecb706081578ffb478.png",
-            "vegetable_middle_right": "shopify://shop_images/365cf49517568e51bc8c3824884ba8892c326417.png",
-            "vegetable_bottom_left": "shopify://shop_images/76dcaefd1b7715bffab9954fc7a6971637cb7b60_5e43aedd-e180-44d6-aa46-0d84fa617435.png",
-            "vegetable_bottom_right": "shopify://shop_images/74ab46f0615cade291a70bd67ab2d406c8d6ad75_7a73b820-99c0-4770-98f1-eadb9f1bff4d.png"
-          }
-        }
-      },
-      "block_order": [
-        "product_77ywnL",
-        "product_F3Gc3N",
-        "product_4gWHFR",
-        "product_bDeQCt",
-        "promo_block_McYAhH"
-      ],
-      "name": "Custom Collection Grid",
       "settings": {
-        "section_background": "#f5f5dc"
+        "bg_color": "#f1ead9"
       }
     }
   },
   "order": [
     "main",
-    "slideshow_cAi8Jj",
-    "collection_product_block_ypR9fk"
+    "slideshow_YPEgTN"
   ]
 }
