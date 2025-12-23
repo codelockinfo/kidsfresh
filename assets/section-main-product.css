@@ -303,6 +303,10 @@ product-info .pdp-buttons {
   font-size: 23px;
   line-height: 100%;
 }
+.product__description p {
+  font-size: 18px;
+  line-height: 26px;
+}
 }
   
 @media screen and (max-width: 768px) {
