@@ -39,7 +39,7 @@
           "settings": {
             "heading": "Ingredients",
             "icon": "none",
-            "content": "<p><strong>Potato Tots</strong> (Idaho Potato [Potatoes, Sea Salt, Acacia, Natural Flavor, Black Pepper], Cauliflower, Onions, Corn Starch, Canola Oil, Garlic Granulated, Onion Powder, Sea Salt, White Pepper),</p><p><strong>Chicken Sticks</strong> (Chicken Breast Meat, Whole Wheat Flour, Water, Pureed Cauliflower, Pureed Onions, Unbleached Wheat Flour, Contains 2% or less Corn Starch, Salt, Yellow Corn Flour, Rice Starch, Yeast, Onion Powder, Garlic Powder, Celery Seeds, Natural Flavors (Extract of Celery), Molasses, Leavening [Cream of Tartar, Baking Soda], Sea Salt, Whole Grain Millet Flour. Browned in expeller pressed Canola Oil.).</p>",
+            "content": "",
             "page": "",
             "default_open": false,
             "enable_highlighted_design": false,
@@ -65,7 +65,7 @@
             "default_open": false,
             "enable_highlighted_design": false,
             "use_metafields": false,
-            "metafield_1": "",
+            "metafield_1": "custom.ingrediants",
             "metafield_1_label": "Label 1",
             "metafield_1_sublabel": "",
             "metafield_2": "",
@@ -257,7 +257,7 @@
       ],
       "custom_css": [
         ".veggie-hover-section .veggie-products-grid {margin-top: 50px;}",
-        "@media (max-width: 992px) {.veggie-title{margin: 40px 0 0; } .veggie-hover-section .veggie-products-grid {margin-top: 30px; }}"
+        "@media (max-width: 992px) {.veggie-title {margin: 40px 0 0; } .veggie-hover-section .veggie-products-grid {margin-top: 30px; }}"
       ],
       "name": "Veggie Hover Products",
       "settings": {
