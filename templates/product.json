@@ -39,7 +39,7 @@
           "settings": {
             "heading": "Ingredients",
             "icon": "none",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue.<br/></p>",
+            "content": "<p><strong>Potato Tots</strong> (Idaho Potato [Potatoes, Sea Salt, Acacia, Natural Flavor, Black Pepper], Cauliflower, Onions, Corn Starch, Canola Oil, Garlic Granulated, Onion Powder, Sea Salt, White Pepper),</p><p><strong>Chicken Sticks</strong> (Chicken Breast Meat, Whole Wheat Flour, Water, Pureed Cauliflower, Pureed Onions, Unbleached Wheat Flour, Contains 2% or less Corn Starch, Salt, Yellow Corn Flour, Rice Starch, Yeast, Onion Powder, Garlic Powder, Celery Seeds, Natural Flavors (Extract of Celery), Molasses, Leavening [Cream of Tartar, Baking Soda], Sea Salt, Whole Grain Millet Flour. Browned in expeller pressed Canola Oil.).</p>",
             "page": "",
             "default_open": false,
             "enable_highlighted_design": false,
