@@ -44,7 +44,7 @@
             "default_open": false,
             "enable_highlighted_design": false,
             "use_metafields": false,
-            "metafield_1": "",
+            "metafield_1": "custom.ingrediants",
             "metafield_1_label": "Label 1",
             "metafield_1_sublabel": "",
             "metafield_2": "",
@@ -60,7 +60,7 @@
           "settings": {
             "heading": "Allergens",
             "icon": "none",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue.</p>",
+            "content": "",
             "page": "",
             "default_open": false,
             "enable_highlighted_design": false,
