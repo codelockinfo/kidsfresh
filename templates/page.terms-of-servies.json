@@ -71,13 +71,21 @@
             "heading": "Copyright and Trademark Notice",
             "paragraph": "<p>This Site and its contents, including but not limited to, text, photographs, graphics, illustrations, video, sound and other material (all such content collectively referred to as “Content”) are protected under United States and international copyright laws and are the property of KIDFRESH. All rights reserved. All logos, splash screens, page headers, custom graphics and button icons displayed on this Site are service marks, trademarks, and/or trade dress (collectively, “Marks”) of KIDFRESH. Except as specifically permitted herein, copying, distributing, transmitting, displaying, modifying, selling or participating in the sale of, or otherwise exploiting or using any Content or any Marks in any form or by any means without the express written permission of KIDFRESH is prohibited and may violate the copyright or trademark laws of the United States and/or other countries.<br/><br/>The Site and its Contents, are intended solely for personal, noncommercial use by the users of our Site. You may not download or copy the Contents displayed on the Site, for your own use. No right, title or interest in any downloaded materials is transferred to you as a result of any such downloading or copying. No reproduction of any part of this Site may be sold or distributed for commercial gain nor shall it be modified or incorporated in any other work, publication, or website. KIDFRESH shall have no liability or any responsibility whatsoever for any loss suffered caused by viruses that may infect your computer equipment or other property by reason of your use of, access to or downloading of any material from this Site. If you choose to download material from this Site you do so at your own risk.</p>"
           }
+        },
+        "text_block_mqyzbk": {
+          "type": "text_block",
+          "settings": {
+            "heading": "User Generated Content",
+            "paragraph": "<p>We appreciate your comments, remarks, feedback, suggestions, ideas, inventions, artwork, developments, concepts, and other types of communications and submissions you disclose or transmit to us (collectively, “Submissions”). So long as no personally identifiable information is disclosed, KIDFRESH is free to use the Submissions for any purpose whatsoever. By making a Submission, you grant KIDFRESH and its affiliates a perpetual, irrevocable, worldwide, royalty-free right and license to use, reproduce, modify, adapt, publish, translate, create derivative works of, distribute, publicly perform, publicly display, develop, manufacture, advertise, and market your Submissions and any related copyrights, moral rights or other intellectual property rights therein. Any such use is without compensation you. By making a Submission, you also warrant that you own the material/content submitted, that it is original, that it is not defamatory, and that KIDFRESH’s use of the Submission will not violate any third party’s rights. KIDFRESH is under no obligation to use the information submitted.</p>"
+          }
         }
       },
       "block_order": [
         "text_block_GtkLdB",
         "text_block_mwBPJ3",
         "text_block_HaKmBR",
-        "text_block_H9GTBg"
+        "text_block_H9GTBg",
+        "text_block_mqyzbk"
       ],
       "name": "Custom Text Blocks",
       "settings": {
