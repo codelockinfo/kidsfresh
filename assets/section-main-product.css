@@ -466,6 +466,7 @@ product-info .button--primary  {
 .summary__title h2 {
   font-size: 25px;
   line-height: 100%;
+  margin-top: 25px;
 }
 .accordion__content p {
   font-size: 16px;
