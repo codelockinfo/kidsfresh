@@ -293,7 +293,7 @@ product-info .pdp-buttons {
 
   @media (min-width: 1441px) and (max-width: 1531px) {
     product-info .button--secondary, product-info .button--primary {
-      font-size: 28px;
+      font-size: 26px;
     }
   }
 
