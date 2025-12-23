@@ -332,6 +332,9 @@ product-info .pdp-buttons {
   height:20px;
   width: 20px;
 }
+product-info .pdp-buttons {
+  gap: 20px;
+}
 product-info .button--secondary,
 product-info .button--primary  {
   font-size: 23px;
