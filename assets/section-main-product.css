@@ -63,7 +63,7 @@ text-align:justify;
   cursor: pointer;
   background: #F3F4EF !important; /* light background */
   color: #0F4735 !important;
-  border-right: 1px solid #0F4735 !important;
+  border-right: 1.5px solid #0F4735 !important;
   transition: 0.25s ease;
 }
 
