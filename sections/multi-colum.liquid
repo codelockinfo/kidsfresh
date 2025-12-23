@@ -129,7 +129,7 @@
           </h2>
         {%- endif -%}
         {%- if section.settings.description != blank -%}
-          <div class="contact-description" style="font-family: var(--font-family); font-size: {{ section.settings.description_size }}px; line-height: 40px; color: {{ section.settings.description_color }};  margin: 0 auto; font-weight:500;">
+          <div class="contact-description" style="font-family: var(--font-family); color: {{ section.settings.description_color }};  margin: 0 auto; font-weight:500;">
             {{ section.settings.description }}
           </div>
         {%- endif -%}
@@ -214,6 +214,10 @@
     .contact-main-title {
       font-size: {{ section.settings.title_size }}px; 
       font-weight: {{ section.settings.title_weight }};
+    }
+    .contact-description {
+      font-size: {{ section.settings.description_size }}px; 
+      line-height: 40px;
     }
     .contact-column-title {
       line-height: 86px;
