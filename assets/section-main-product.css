@@ -349,6 +349,9 @@ product-info .button--primary  {
 }
 
 @media screen and (max-width: 1200px) {
+  product-info {
+    padding: 60px !important;
+  }
 .product__title h1 {
   font-size: 38px;
   line-height: 100%;
