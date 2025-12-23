@@ -571,10 +571,58 @@ product-info .button--primary  {
   line-height: 30px;
   padding: 13px 32px;
 }
-
 }
-/* my css end */
 
+@media screen and (max-width: 1200px) {
+  product-info {
+    padding: 60px !important;
+  }
+.product__title h1 {
+  font-size: 38px;
+  line-height: 100%;
+}
+.product-form__input--pill input[type=radio]:checked+label {
+  font-size: 20px !important;
+  line-height: 100%;
+}
+.product__description p {
+  font-size: 18px;
+  line-height: 26px;
+}
+.summary__title h2 {
+  font-size: 25px;
+  line-height: 100%;
+}
+.accordion__content p {
+  font-size: 16px;
+  line-height: 25px;
+}
+.highlighted-accordion__value {
+  font-size: 32px;
+  line-height: 100%;
+}
+
+.highlighted-accordion__label {
+  font-size: 18px;
+  line-height: 22px;
+}
+.highlighted-accordion__sublabel {
+  font-size: 14px;
+}
+.product__accordion svg {
+  height:20px;
+  width: 20px;
+}
+product-info .pdp-buttons {
+  gap: 20px;
+}
+product-info .button--secondary,
+product-info .button--primary  {
+  font-size: 18px;
+  line-height: 30px;
+  padding: 13px 32px;
+}
+}
 
 product-info {
   display: block;
