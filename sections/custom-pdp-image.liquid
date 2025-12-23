@@ -140,16 +140,13 @@
 
 .custom-background-container {
     flex-direction: column;
-    padding: 0 0px;
+    padding: 0;
   }
     .custom-background-section {
     {% if section.settings.background_image_mobile %}
-      background-image: url('{{ section.settings.background_image_mobile | img_url: "900x" }}') !important;
+      background-image: url('{{ section.settings.background_image_mobile | img_url: "992x" }}') !important;
     {% endif %}
   }
-      .custom-background-wrapper {
-        margin-top: -30px !important;
-    }
 
   /* MOVE IMAGE TO TOP */
   .custom-background-image-wrapper {
@@ -171,7 +168,7 @@
   }
 
   .custom-background-wrapper {
-    padding: 67px 0 !important;
+    padding: 30px 0 !important;
   }
 
   .custom-background-text-content {
