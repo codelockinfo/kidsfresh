@@ -5,7 +5,6 @@
 
 {{ 'section-veggie-hover.css' | asset_url | stylesheet_tag }}
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 <div class="veggie-hover-section color-{{ section.settings.color_scheme }} gradient">
   <div class="container">
@@ -611,16 +610,8 @@
     top: -124px;
     left: -45px;
 }
-$grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1400px
-);
 
-@include media-breakpoint-down(xxl) {
+@media (max-width: 1440px) {
   .veggie-hover-section .container {
     padding: 0 100px;
   }
@@ -655,7 +646,7 @@ $grid-breakpoints: (
   }
 }
 
-@include media-breakpoint-down(xl) {
+@media (max-width: 1200px) {
   .veggie-hover-section .container {
     padding: 0 70px;
   }
@@ -690,7 +681,7 @@ $grid-breakpoints: (
   }
 }
 
-@include media-breakpoint-down(lg) {
+@media (max-width: 992px) {
   .veggie-hover-section .container {
     padding: 0 40px;
   }
@@ -726,7 +717,7 @@ $grid-breakpoints: (
   }
 }
 
-@include media-breakpoint-down(md) {
+@media (max-width: 768px) {
   .veggie-hover-section .container {
     padding: 0 20px;
   }
@@ -812,7 +803,7 @@ $grid-breakpoints: (
     }
   }
 
-@include media-breakpoint-down(sm) {
+  @media (max-width: 576px) {
   .veggie-hover-section .container {
     padding: 0 50px;
   }
