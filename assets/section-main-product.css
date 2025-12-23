@@ -395,6 +395,54 @@ product-info .button--primary  {
   padding: 17px 40px;
 }
 }
+
+@media screen and (max-width: 1200px) {
+.product__title h1 {
+  font-size: 38px;
+  line-height: 100%;
+}
+.product-form__input--pill input[type=radio]:checked+label {
+  font-size: 20px !important;
+  line-height: 100%;
+}
+.product__description p {
+  font-size: 18px;
+  line-height: 26px;
+}
+.summary__title h2 {
+  font-size: 25px;
+  line-height: 100%;
+}
+.accordion__content p {
+  font-size: 16px;
+  line-height: 25px;
+}
+.highlighted-accordion__value {
+  font-size: 32px;
+  line-height: 100%;
+}
+
+.highlighted-accordion__label {
+  font-size: 18px;
+  line-height: 22px;
+}
+.highlighted-accordion__sublabel {
+  font-size: 14px;
+}
+.product__accordion svg {
+  height:20px;
+  width: 20px;
+}
+product-info .pdp-buttons {
+  gap: 20px;
+}
+product-info .button--secondary,
+product-info .button--primary  {
+  font-size: 20px;
+  line-height: 33px;
+  padding: 17px 40px;
+}
+}
   
 @media screen and (max-width: 768px) {
 .product__info-container .product__description{
@@ -1970,7 +2018,7 @@ a.product__text {
   }
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+/* @media (min-width: 769px) and (max-width: 1024px) {
   product-info {
     padding: 50px!important;
   }
@@ -2022,4 +2070,4 @@ a.product__text {
     padding: 67px 0 !important;
   }
 
-}
+} */
