@@ -168,7 +168,7 @@ letter-spacing: -2%;
 
 .highlighted-accordion__label {
    font-family: var(--font-family);
-font-weight: 600;
+font-weight: 500;
 font-size: 22px;
 text-align: center;
 color:#39302D;
