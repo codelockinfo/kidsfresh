@@ -80,7 +80,7 @@ text-align:justify;
 /* SELECTED pill style */
 .product-form__input--pill input[type="radio"]:checked + label {
   background: #0F4735 !important; /* green background */
-  color: white !important;
+  color: #F8F4EB !important;
   font-weight: 700 !important;
 }
 
