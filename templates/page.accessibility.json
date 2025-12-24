@@ -90,7 +90,7 @@
           "type": "text_block",
           "settings": {
             "heading": "Contact Us",
-            "paragraph": "<p>If you wish to report an accessibility issue, have any questions or need assistance, please contact Kidfresh.com Customer Support as follows:<br/><br/>Email: Sasha@kidfresh.com</p>"
+            "paragraph": "<p>If you wish to report an accessibility issue, have any questions or need assistance, please contact Kidfresh.com Customer Support as follows:<br/><br/>Email: <span style=\"text-decoration:underline\">Sasha@kidfresh.com</span></p>"
           }
         }
       },
