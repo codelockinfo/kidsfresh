@@ -89,11 +89,11 @@
             "metafield_1": "custom.protein",
             "metafield_1_label": "Protein",
             "metafield_1_sublabel": "Per serving",
-            "metafield_2": "custom.sodium",
-            "metafield_2_label": "Sodium*",
+            "metafield_2": "custom.artificial_flavors_or_ingredients",
+            "metafield_2_label": "NO Artificial Flavors or Ingredients",
             "metafield_2_sublabel": "",
-            "metafield_3": "custom.preservatives",
-            "metafield_3_label": "Preservatives",
+            "metafield_3": "custom.specific_to_prod",
+            "metafield_3_label": "Specific to Prod",
             "metafield_3_sublabel": ""
           }
         }
