@@ -78,6 +78,13 @@
             "heading": "User Generated Content",
             "paragraph": "<p>We appreciate your comments, remarks, feedback, suggestions, ideas, inventions, artwork, developments, concepts, and other types of communications and submissions you disclose or transmit to us (collectively, “Submissions”). So long as no personally identifiable information is disclosed, KIDFRESH is free to use the Submissions for any purpose whatsoever. By making a Submission, you grant KIDFRESH and its affiliates a perpetual, irrevocable, worldwide, royalty-free right and license to use, reproduce, modify, adapt, publish, translate, create derivative works of, distribute, publicly perform, publicly display, develop, manufacture, advertise, and market your Submissions and any related copyrights, moral rights or other intellectual property rights therein. Any such use is without compensation you. By making a Submission, you also warrant that you own the material/content submitted, that it is original, that it is not defamatory, and that KIDFRESH’s use of the Submission will not violate any third party’s rights. KIDFRESH is under no obligation to use the information submitted.</p>"
           }
+        },
+        "text_block_QbYmAp": {
+          "type": "text_block",
+          "settings": {
+            "heading": "With regard to any User Content that you provide, you represent and warrant that:",
+            "paragraph": "<p>You own the User Content and/or have a valid right to use, submit, or post it and grant the licenses and rights described herein;<br/>Your User Content does not and will not violate the intellectual property, privacy, or other rights of any person; and<br/>Your posting of any User Content does not and will not violate these Terms.</p>"
+          }
         }
       },
       "block_order": [
@@ -85,7 +92,8 @@
         "text_block_QcHA4c",
         "text_block_MGzkzj",
         "text_block_XjCEjN",
-        "text_block_HXRpWq"
+        "text_block_HXRpWq",
+        "text_block_QbYmAp"
       ],
       "name": "Custom Text Blocks",
       "settings": {
