@@ -544,6 +544,11 @@ product-info {
   font-size: 18px;
   line-height: 26px;
 }
+
+.long_description p {
+  font-size: 18px;
+  line-height: 26px;
+}
 .summary__title h2 {
   font-size: 25px;
   line-height: 100%;
