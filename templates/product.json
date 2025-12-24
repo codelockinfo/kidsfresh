@@ -56,7 +56,7 @@
             "icon": "none",
             "content": "",
             "page": "",
-            "default_open": true,
+            "default_open": false,
             "enable_highlighted_design": false,
             "use_metafields": true,
             "ingredients_metafield": "custom.ingrediants",
