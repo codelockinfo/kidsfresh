@@ -39,10 +39,10 @@
           "settings": {
             "heading": "Ingredients",
             "icon": "none",
-            "content": "",
+            "content": "<p>saasaas</p>",
             "page": "",
             "default_open": true,
-            "use_metafields": true,
+            "use_metafields": false,
             "metafield_1": "custom.ingrediants"
           }
         },
