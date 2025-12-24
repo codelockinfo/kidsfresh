@@ -71,13 +71,21 @@
             "heading": "Disclaimer",
             "paragraph": "<p>Kidfresh.com continues its efforts to constantly improve the accessibility of its site and services in the belief that it is our collective moral obligation to allow seamless, accessible and unhindered use also for those of us with disabilities.<br/><br/>Despite our efforts to make all pages and content on Kidfresh.com fully accessible, some content may not have yet been fully adapted to the strictest accessibility standards. This may be a result of not having found or identified the most appropriate technological solution.</p>"
           }
+        },
+        "text_block_eR7fBX": {
+          "type": "text_block",
+          "settings": {
+            "heading": "Here For You",
+            "paragraph": "<p>If you are experiencing difficulty with any content on Kidfresh.com or require assistance with any part of our site, please contact us during normal business hours as detailed below and we will be happy to assist.</p>"
+          }
         }
       },
       "block_order": [
         "text_block_wf6KzA",
         "text_block_QcHA4c",
         "text_block_MGzkzj",
-        "text_block_XjCEjN"
+        "text_block_XjCEjN",
+        "text_block_eR7fBX"
       ],
       "name": "Custom Text Blocks",
       "settings": {
