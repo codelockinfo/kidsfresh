@@ -99,6 +99,13 @@
             "heading": "We reserve the right, in our sole discretion, to:",
             "paragraph": "<ul><li>Review, edit, or delete any User Content, without undertaking any responsibility to do so;</li><li>Adopt rules in any community area or condition access to any areas or features by any individual or group on certain criteria, deny or restrict access by any individual or group who fails to meet that criteria or by anyone who fails to comply with our criteria or rules at any time, and change or modify the criteria or rules at any time; and</li><li>Deny any user access to this website.<br/></li></ul>"
           }
+        },
+        "text_block_mwCUL4": {
+          "type": "text_block",
+          "settings": {
+            "heading": "Modifications to the site",
+            "paragraph": "<p>KIDFRESH reserves the right, for any reason, in its sole discretion, to terminate, change or suspend any aspect of the Site including but not limited to content, features or hours of availability. KIDFRESH Company may impose limits on certain features of the Site or restrict your access to part or all of the Site without notice or penalty.<br/></p>"
+          }
         }
       },
       "block_order": [
@@ -109,7 +116,8 @@
         "text_block_HXRpWq",
         "text_block_QbYmAp",
         "text_block_pcyVAA",
-        "text_block_QLFykH"
+        "text_block_QLFykH",
+        "text_block_mwCUL4"
       ],
       "name": "Custom Text Blocks",
       "settings": {
