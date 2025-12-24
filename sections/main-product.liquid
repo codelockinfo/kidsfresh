@@ -330,10 +330,10 @@
                           <div class="highlighted-accordion__items">
                             {%- if metafield_1 != blank -%}
                               <div class="highlighted-accordion__item">
-                                <div class="highlighted-accordion__value">{{ metafield_1 }}</div>
-                                <div class="highlighted-accordion__label">{{ block.settings.metafield_1_label  }}</div>
+                                <div class="highlighted-accordion__value">{{ metafield_1 | metafield_tag  }}</div>
+                                <div class="highlighted-accordion__label">{{ block.settings.metafield_1_label | default: 'Label 1' | metafield_tag  }}</div>
                                 {%- if block.settings.metafield_1_sublabel != blank -%}
-                                  <div class="highlighted-accordion__sublabel">{{ block.settings.metafield_1_sublabel }}</div>
+                                  <div class="highlighted-accordion__sublabel">{{ block.settings.metafield_1_sublabel | metafield_tag  }}</div>
                                 {%- endif -%}
                               </div>
                             {%- endif -%}
