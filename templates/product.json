@@ -34,8 +34,16 @@
           "type": "description",
           "settings": {}
         },
+        "text_z4LPq6": {
+          "type": "text",
+          "settings": {
+            "text": "sdsdsd",
+            "text_style": "body"
+          }
+        },
         "collapsible_tab_PfCWcm": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Long Description",
             "icon": "none",
@@ -102,6 +110,7 @@
         "title",
         "variant_picker",
         "description",
+        "text_z4LPq6",
         "collapsible_tab_PfCWcm",
         "collapsible_tab_kHYXYj",
         "collapsible_tab_bJUBwU",
