@@ -85,6 +85,13 @@
             "heading": "Children and Privacy",
             "paragraph": "<p>Kidfresh.com is a general audience site that is not designed nor intended to collect personal information from children under the age of 13. Kidfresh does not knowingly collect personal information from anyone under the age of 13, and does not use such information if it discovers that it is has been provided. To respect the privacy of children and to comply with the Children’s Online Privacy Protection Act, children under the age of 13 should not provide any personal information on this Site. We ask that parents supervise their children while online.</p>"
           }
+        },
+        "text_block_qV4ayr": {
+          "type": "text_block",
+          "settings": {
+            "heading": "What about links to other sites?",
+            "paragraph": "<p>This website may contain links to or from third party websites. Links to other websites are provided solely as a convenience, and we are not responsible for the content or operation of any third party sites linked to this website. All activities you engage in connection with a linked site are subject to the terms and conditions and policies imposed by the site operator, and we disclaim all liability in connection with such activities.</p>"
+          }
         }
       },
       "block_order": [
@@ -93,7 +100,8 @@
         "text_block_qHXhrt",
         "text_block_Uj6xqb",
         "text_block_UnKtiY",
-        "text_block_3Uqinf"
+        "text_block_3Uqinf",
+        "text_block_qV4ayr"
       ],
       "name": "Custom Text Blocks",
       "settings": {
