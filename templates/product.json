@@ -34,6 +34,21 @@
           "type": "description",
           "settings": {}
         },
+        "collapsible_tab_PfCWcm": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Long Description",
+            "icon": "none",
+            "content": "",
+            "page": "",
+            "default_open": false,
+            "enable_highlighted_design": false,
+            "use_metafields": false,
+            "ingredients_metafield": "custom.long_description",
+            "ingredients_metafield_label": "Label 1",
+            "ingredients_metafield_sublabel": ""
+          }
+        },
         "collapsible_tab_kHYXYj": {
           "type": "collapsible_tab",
           "settings": {
@@ -87,6 +102,7 @@
         "title",
         "variant_picker",
         "description",
+        "collapsible_tab_PfCWcm",
         "collapsible_tab_kHYXYj",
         "collapsible_tab_bJUBwU",
         "nutritionally_notable_UV8CDc"
