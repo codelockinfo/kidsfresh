@@ -600,6 +600,11 @@ product-info .button--primary  {
   font-size: 16px;
   line-height: 24px;
 }
+
+.long_description p {
+    font-size: 16px;
+  line-height: 24px;
+}
 .summary__title h2 {
   font-size: 22px;
   line-height: 100%;
