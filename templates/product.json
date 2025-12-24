@@ -38,7 +38,8 @@
         "text_z4LPq6": {
           "type": "text",
           "settings": {
-            "text": "sdsdsd",
+            "text": "",
+            "ingredients_metafield": "custom.long_description",
             "text_style": "body"
           }
         },
