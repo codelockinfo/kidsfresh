@@ -43,7 +43,7 @@
             "page": "",
             "default_open": false,
             "enable_highlighted_design": false,
-            "use_metafields": false,
+            "use_metafields": true,
             "ingredients_metafield": "custom.long_description",
             "ingredients_metafield_label": "Label 1",
             "ingredients_metafield_sublabel": ""
