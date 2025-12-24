@@ -1,0 +1,121 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "slideshow_cAi8Jj": {
+      "type": "slideshow",
+      "blocks": {
+        "text_image_block_i6WA36": {
+          "type": "text_image_block",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Group_10.png",
+            "mobile_image": "shopify://shop_images/Vector_9_2.png",
+            "heading": "Accessibility",
+            "subheading": "",
+            "button_label": "",
+            "button_link": "",
+            "content_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "text_image_block_i6WA36"
+      ],
+      "name": "Text with Image Section",
+      "settings": {
+        "bg_color": "#f1ead9"
+      }
+    },
+    "content_gU39tw": {
+      "type": "content",
+      "blocks": {
+        "text_block_wf6KzA": {
+          "type": "text_block",
+          "settings": {
+            "heading": "Kidfresh.com Accessibility Statement",
+            "paragraph": "<p>Updated: August 2019.</p>"
+          }
+        },
+        "text_block_QcHA4c": {
+          "type": "text_block",
+          "settings": {
+            "heading": "General",
+            "paragraph": "<p>Kidfresh.com strives to ensure that its services are accessible to people with disabilities. Kidfresh.com has invested a significant amount of resources to help ensure that its website is made easier to use and more accessible for people with disabilities, with the strong belief that every person has the right to live with dignity, equality, comfort and independence.</p>"
+          }
+        },
+        "text_block_QNFYN8": {
+          "type": "text_block",
+          "settings": {
+            "heading": "Accessibility on Kidfresh.com",
+            "paragraph": "<p>Kidfresh.com makes available the UserWay Website Accessibility Widget that is powered by a dedicated accessibility server. The software allows Kidfresh.com to improve its compliance with the Web Content Accessibility Guidelines (WCAG 2.1).</p>"
+          }
+        },
+        "text_block_MGzkzj": {
+          "type": "text_block",
+          "settings": {
+            "heading": "Enabling the Accessibility Menu",
+            "paragraph": "<p>The Kidfresh.com accessibility menu can be enabled by clicking the accessibility menu icon that appears on the corner of the page. After triggering the accessibility menu, please wait a moment for the accessibility menu to load in its entirety.</p>"
+          }
+        },
+        "text_block_XjCEjN": {
+          "type": "text_block",
+          "settings": {
+            "heading": "Disclaimer",
+            "paragraph": "<p>Kidfresh.com continues its efforts to constantly improve the accessibility of its site and services in the belief that it is our collective moral obligation to allow seamless, accessible and unhindered use also for those of us with disabilities.<br/><br/>Despite our efforts to make all pages and content on Kidfresh.com fully accessible, some content may not have yet been fully adapted to the strictest accessibility standards. This may be a result of not having found or identified the most appropriate technological solution.</p>"
+          }
+        },
+        "text_block_eR7fBX": {
+          "type": "text_block",
+          "settings": {
+            "heading": "Here For You",
+            "paragraph": "<p>If you are experiencing difficulty with any content on Kidfresh.com or require assistance with any part of our site, please contact us during normal business hours as detailed below and we will be happy to assist.</p>"
+          }
+        },
+        "text_block_8ikV38": {
+          "type": "text_block",
+          "settings": {
+            "heading": "Contact Us",
+            "paragraph": "<p>If you wish to report an accessibility issue, have any questions or need assistance, please contact Kidfresh.com Customer Support as follows:<br/><br/>Email: <span style=\"text-decoration:underline\">Sasha@kidfresh.com</span></p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_wf6KzA",
+        "text_block_QcHA4c",
+        "text_block_QNFYN8",
+        "text_block_MGzkzj",
+        "text_block_XjCEjN",
+        "text_block_eR7fBX",
+        "text_block_8ikV38"
+      ],
+      "name": "Custom Text Blocks",
+      "settings": {
+        "bg_color": "#f1ead9",
+        "text_color": "#333333",
+        "heading_size": 40,
+        "paragraph_size": 24,
+        "text_align": "left"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "slideshow_cAi8Jj",
+    "content_gU39tw"
+  ]
+}

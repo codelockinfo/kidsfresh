@@ -72,7 +72,7 @@
   }
 
   .contact-location-subtitle {
-    font-size: 29px;
+    font-size: 28px;
     color: #F89821;
     text-align: center;
     margin-top: 30px;
@@ -105,9 +105,9 @@
   .form-label {
     display: block;
     color: #F89821;
-    font-size: 28px;
+    font-size: 29px;
     line-height: 29px;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     font-family: var(--font-family);;
     text-transform: lowercase;
   }
@@ -116,13 +116,14 @@
   .form-select,
   .form-textarea {
     width: 100%;
-    padding: 16px 22px;
+    padding: 10px 16px;
     border: 4px solid #8DC13F;
     border-radius: 6px;
     background-color: #ffffff;
-    font-size: 20px;
+    font-size: 24px;
+    line-height: 29px;
     font-family: var(--font-family);;
-    color: #333;
+    color: #0F473580;
     box-sizing: border-box;
   }
 
@@ -274,6 +275,83 @@
     display: block;
   }
 
+  @media (max-width: 1440px) {
+    .contact-location-title {
+      font-size: 63px;
+      line-height: 65px;
+    }
+    .contact-location-subtitle {
+      font-size: 21px;
+      line-height: 30px;
+    }
+    .contact-location-form {
+      padding: 42px 40px 53px;
+    }
+    .form-label {
+      font-size: 22px;
+      line-height: 22px;
+    }
+    .form-input, .form-select, .form-textarea {
+      font-size: 18px;
+      line-height: 22px;
+    }
+    .contact_btn .button--primary {
+      font-size: 23px;
+      line-height: 33px;
+      padding: 17px 38px;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .contact-location-title {
+      font-size: 58px;
+      line-height: 60px;
+    }
+    .contact-location-subtitle {
+      font-size: 19px;
+      line-height: 20px;
+      margin: 28px 0 36px;
+    }
+    .form-label {
+      font-size: 20px;
+      line-height: 20px;
+    }
+    .form-input, .form-select, .form-textarea {
+      font-size: 16px;
+      line-height: 20px;
+    }
+    .contact_btn .button--primary {
+      font-size: 20px;
+      line-height: 33px;
+      padding: 17px 38px;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .contact-location-title {
+      font-size: 50px;
+      line-height: 55px;
+    }
+    .contact-location-subtitle {
+      font-size: 18px;
+      line-height: 20px;
+      margin: 28px 0 36px;
+    }
+    .form-label {
+      font-size: 20px;
+      line-height: 20px;
+    }
+    .form-input, .form-select, .form-textarea {
+      font-size: 16px;
+      line-height: 20px;
+    }
+    .contact_btn .button--primary {
+      font-size: 20px;
+      line-height: 33px;
+      padding: 15px 34px;
+    }
+  }
+
   @media screen and (max-width: 768px) {
     .contact-location-section {
       padding: 33px 30px 90px;
@@ -284,18 +362,19 @@
       line-height: 46px;
     }
     .contact_btn .button--primary{
-      font-size: 20px;
-      line-height: 33px;
+      font-size: 18px;
+      line-height: 30px;
       margin-top: 35px;
-      padding: 14px 36px;
+      padding: 14px 34px;
     }
     .contact-location-subtitle {
-      font-size: 24px;
-      line-height: 32px;
+      font-size: 18px;
+      line-height: 20px;
     }
 
     .form-label {
     font-size: 20px;
+    line-height: 20px;
     }
     .contact-location-form {
       padding: 17px 25px 37px;
@@ -324,8 +403,34 @@
     .form-input,
   .form-select,
   .form-textarea {
-    padding: 15px 10px;
+    padding: 10px;
+    font-size: 16px;
+      line-height: 20px;
   }
+  }
+
+  @media (max-width: 576px) {
+    .contact-location-title {
+      font-size: 38px;
+      line-height: 42px;
+    }
+    .contact-location-subtitle {
+      font-size: 16px;
+      line-height: 18px;
+    }
+    .form-label {
+      font-size: 18px;
+      line-height: 18px;
+    }
+    .form-input, .form-select, .form-textarea {
+      font-size: 15px;
+      line-height: 20px;
+    }
+    .contact_btn .button--primary {
+      font-size: 18px;
+      line-height: 30px;
+      padding: 14px 34px;
+    }
   }
 
   @media (max-width: 480px) {
@@ -340,12 +445,6 @@
     }
     .contact-location-form {
       padding: 17px 20px 37px;
-    }
-    .contact_btn .button--primary {
-      font-size: 20px !important;
-      line-height: 33px;
-      margin-top: 26px;
-      padding: 14px 36px;
     }
     .contact-location-form {
       margin-bottom: 130%;

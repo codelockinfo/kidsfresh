@@ -114,7 +114,7 @@
     font-weight: 700;
     margin: 0;
     text-transform: capitalize;
-    font-family: var(--font-family);
+    font-family: var(--font-family) !important;
     letter-spacing: 1.5px;
   }
 
@@ -251,6 +251,7 @@
   }
   .product-name {
     font-size: 22px;
+    line-height: 30px;
     font-family: var(--font-family) !important;
     font-weight: 400;
     margin:0px;
@@ -308,26 +309,55 @@
       font-size: 22px;
       line-height: 30px;
     }
+    .location-input {
+      font-size: 18px;
+      line-height: 26px;
+    }
+    .btn-find, .btn-buy-online {
+      font-size: 18px;
+      line-height: 26px;
+    }
+    .product-name {
+      font-size: 20px;
+      line-height: 28px;
+    }
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1200px) {
     .find-us-header h1 {
-      font-size: 60px;
-      line-height: 62px;
+      font-size: 58px;
+      line-height: 60px;  
     }
-    .container_search {
-      padding: 0px 130px;
+    .main-search-bar input {
+      font-size: 20px;
+      line-height: 30px;
+    }
+    .product-selection-header h2 {
+      font-size: 20px;
+      line-height: 28px;
+    }
+    .location-input {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    .btn-find, .btn-buy-online {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    .product-name {
+      font-size: 18px;
+      line-height: 24px;
     }
   }
 
   /* Responsive Styles */
-  @media (max-width: 968px) {
+  @media (max-width: 992px) {
     .find-us-section {
       padding: 20px 20px 70px;
     }
     .find-us-header h1 {
-      font-size: 42px;
-      line-height: 46px;
+      font-size: 48px;
+      line-height: 50px;
       margin-bottom: 29px;
     }
     .location-controls{
@@ -366,46 +396,108 @@
       width: 100%;
     }
     .action-buttons {
-    
       margin-top: 20px;
     }
     .btn-buy-online{
       width: 100%;
     }
 
-    {% comment %} .btn-find,
-    .btn-buy-online {
-      flex: 1;
-    } {% endcomment %}
-
     .products-grid {
       grid-template-columns: repeat(2, 1fr);
       gap: 20px;
     }
-
-    .wave-divider {
-      {% comment %} height: 100px; {% endcomment %}
-    }
-  }
-
-
-  @media (max-width: 640px) {
-    .product-selection-header h2 {
+    .main-search-bar input {
       font-size: 20px;
       line-height: 30px;
     }
+    .product-selection-header h2 {
+      font-size: 20px;
+      line-height: 28px;
+    }
+    .location-input {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    .btn-find, .btn-buy-online {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    .search-box input {
+      font-size: 16px;
+      line-height: 18px;
+    }
+    .product-name {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
 
+    @media (max-width: 768px) {
+    .find-us-header h1 {
+      font-size: 42px;
+      line-height: 45px;  
+    }
+    .main-search-bar input {
+      font-size: 18px;
+      line-height: 30px;
+    }
+    .product-selection-header h2 {
+      font-size: 18px;
+      line-height: 24px;
+    }
+    .location-input {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    .btn-find, .btn-buy-online {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    .search-box input {
+      font-size: 14px;
+      line-height: 18px;
+    }
+    .product-name {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  @media (max-width: 576px) {
     .products-grid {
       grid-template-columns: repeat(1, 1fr);
       gap: 15px;
     }
-
-    .wave-divider {
-      {% comment %} height: 80px; {% endcomment %}
-    }
-
     .products-wrapper{
       margin: 0px;
+    }
+    .find-us-header h1 {
+      font-size: 38px;
+      line-height: 40px;  
+    }
+    .main-search-bar input {
+      font-size: 18px;
+      line-height: 30px;
+    }
+    .product-selection-header h2 {
+      font-size: 18px;
+      line-height: 24px;
+    }
+    .location-input {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    .btn-find, .btn-buy-online {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    .search-box input {
+      font-size: 14px;
+      line-height: 18px;
+    }
+    .product-name {
+      font-size: 16px;
+      line-height: 24px;
     }
   }
 </style>

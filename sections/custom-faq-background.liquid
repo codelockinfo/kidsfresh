@@ -26,107 +26,23 @@
 
 .help-heading {
   font-family: var(--font-family);
-  font-size: 76px;
+  font-size: 84px;
   font-weight: 700;
   color: #0F4735;
   margin:0;
 }
 
-@media(max-width:768px){
-  .help-heading {
-    font-size: 42px !important;
-    line-height: 46px !important;
-  }
-  .help-subtext{
-    font-size: 24px !important;
-    line-height: 32px !important;
-  }
-  .veggie-buttons1{
-    margin-top: 20px !important;
-    gap: 27px !important;
-  }
-  .veggie-buttons1 .button--primary,
-  .veggie-buttons1 .button--secondary {
-    font-size: 20px !important;
-    line-height: 30px !important;
-    padding: 8px 34px !important;
-  }
-  .veggie-buttons1 .button--primary:after,
-  .veggie-buttons1 .button--secondary:after {
-    bottom: -5px !important;
-  }
-}
-@media (max-width: 480px) {
-    .veggie-buttons1 {
-        margin-top: 20px !important;
-        gap: 18px !important;
-    }
-}
-
-@media (max-width: 380px) {
-  .veggie-buttons1 .button--primary,
-  .veggie-buttons1 .button--secondary {
-    font-size: 18px !important;
-    line-height: 27px !important;
-    padding: 8px 18px !important;
-  }
-}
-
 .help-subtext {
   font-family: var(--font-family);
-    font-size: 26px;
+    font-size: 29px;
     line-height: 40px;
     font-weight: 500;
     color: #0F4735;
     margin:0px;
-    margin-top: 0px !important;
+    margin-top: 10px;
 }
 
-.buttons-row {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-}
-
-/* Buttons */
-.help-btn {
-  padding: 12px 35px;
-  border-radius: 30px;
-  font-size: 18px;
-  font-family: var(--font-family);
-  font-weight: 600;
-  cursor: pointer;
-  border: none;
-  transition: 0.3s ease;
-  display: inline-block;
-}
-
-/* Green Button */
-.help-btn-green {
-  background: #95C940;
-  color: #0F4735;
-  border: 3px solid #0F4735;
-}
-
-/* Orange Button */
-.help-btn-orange {
-  background: #F89821;
-  color: #0F4735;
-  border: 3px solid #0F4735;
-}
-
-/* Hover */
-.help-btn:hover {
-  opacity: 0.85;
-}
-
-@media(max-width:768px){
-  .buttons-row {
-    flex-direction: column;
-    gap: 15px;
-  }
-}
- .veggie-buttons1 {
+.veggie-buttons1 {
     display: flex;
     justify-content: center;
     gap: 27px;
@@ -231,6 +147,166 @@
   box-shadow: none;
 }
 
+@media (max-width: 1440px) {
+  .help-heading {
+    font-size: 63px;
+    line-height: 65px;
+  }
+  .help-subtext {
+    font-size: 22px;
+    line-height: 30px;
+  }
+  .veggie-buttons1 {
+    gap: 20px;
+  }
+  .veggie-buttons1 .button--primary {
+    font-size: 23px;
+    line-height: 33px;
+    padding: 17px 72px;
+  }
+  .veggie-buttons1 .button--secondary {
+    font-size: 23px;
+    line-height: 33px;
+    padding: 17px 58px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .help-heading {
+    font-size: 58px;
+    line-height: 60px;
+  }
+  .help-subtext {
+    font-size: 22px;
+    line-height: 30px;
+  }
+  .veggie-buttons1 .button--primary {
+    font-size: 23px;
+    line-height: 33px;
+    padding: 17px 72px;
+  }
+  .veggie-buttons1 .button--secondary {
+    font-size: 23px;
+    line-height: 33px;
+    padding: 17px 58px;
+  }
+}
+
+@media (max-width: 992px) {
+  .help-heading {
+    font-size: 50px;
+    line-height: 58px;
+  }
+  .help-subtext {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .veggie-buttons1 .button--primary {
+    font-size: 20px;
+    line-height: 33px;
+    padding: 15px 64px;
+  }
+  .veggie-buttons1 .button--secondary {
+    font-size: 20px;
+    line-height: 33px;
+    padding: 15px 48px;
+  }
+}
+
+@media(max-width:768px){
+  .help-heading {
+    font-size: 42px;
+    line-height: 46px;
+  }
+  .help-subtext{
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .veggie-buttons1{
+    margin-top: 20px;
+  }
+  .veggie-buttons1 .button--primary {
+    font-size: 18px;
+    line-height: 30px;
+    padding: 12px 54px;
+  }
+  .veggie-buttons1 .button--secondary {
+    font-size: 18px;
+    line-height: 30px;
+    padding: 12px 34px;
+  }
+  .veggie-buttons1 .button--primary:after,
+  .veggie-buttons1 .button--secondary:after {
+    bottom: -5px;
+  }
+}
+
+@media(max-width: 576px){
+  .help-heading {
+    font-size: 38px;
+    line-height: 42px;
+  }
+  .help-subtext{
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .veggie-buttons1 .button--primary {
+    font-size: 18px;
+    line-height: 30px;
+    padding: 12px 42px;
+  }
+  .veggie-buttons1 .button--secondary {
+    font-size: 18px;
+    line-height: 30px;
+    padding: 12px 34px;
+  }
+}
+
+
+.buttons-row {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+/* Buttons */
+.help-btn {
+  padding: 12px 35px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s ease;
+  display: inline-block;
+}
+
+/* Green Button */
+.help-btn-green {
+  background: #95C940;
+  color: #0F4735;
+  border: 3px solid #0F4735;
+}
+
+/* Orange Button */
+.help-btn-orange {
+  background: #F89821;
+  color: #0F4735;
+  border: 3px solid #0F4735;
+}
+
+/* Hover */
+.help-btn:hover {
+  opacity: 0.85;
+}
+
+@media(max-width:768px){
+  .buttons-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
 
 </style>
 

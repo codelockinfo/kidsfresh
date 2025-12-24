@@ -150,18 +150,9 @@
     border-radius: 0 12px 0 0;
   }
 
-  @media (max-width: 968px) {
-    .hero-image-wrapper .hero-image-desktop {
-      display: none;
-    }
-
-    .hero-image-wrapper .hero-image-mobile {
-      display: block;
-    }
-  }
 
   .hero-heading {
-    font-size: 76px;
+    font-size: 84px;
     font-weight: 700;
     color: #39302D;
     margin-bottom: 20px;
@@ -173,9 +164,9 @@
   }
 
   .hero-description {
-    font-size: 24px;
+    font-size: 28px;
     color: #5D3328;
-    line-height: 34px;
+    line-height: 43px;
     font-weight: 400;
     margin-bottom: 40px;
     font-family: var(--font-family);
@@ -202,6 +193,93 @@
     width: 100%;
     height: 100%;
     fill: #0F4735;
+  }
+
+  @media (max-width: 1440px) {
+    .hero-heading {
+      font-size: 63px;
+      line-height: 65px;
+    }
+    .hero-description {
+      font-size: 21px;
+      line-height: 32px;
+    }
+    .veggie-buttons .button--primary {
+      font-size: 23px;
+      line-height: 33px;
+      padding: 15px 48px;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .hero-heading {
+      font-size: 58px;
+      line-height: 60px;
+    }
+    .hero-description {
+      font-size: 19px;
+      line-height: 30px;
+    }
+    .veggie-buttons .button--primary {
+      font-size: 23px;
+      line-height: 33px;
+      padding: 15px 48px;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .hero-heading {
+      font-size: 50px;
+      line-height: 55px;
+    }
+    .hero-description {
+      font-size: 18px;
+      line-height: 28px;
+    }
+    .veggie-buttons .button--primary {
+      font-size: 20px;
+      line-height: 33px;
+      padding: 15px 38px;
+    }
+  }
+
+    @media (max-width: 768px) {
+    .hero-image-wrapper .hero-image-desktop {
+      display: none;
+    }
+
+    .hero-image-wrapper .hero-image-mobile {
+      display: block;
+    }
+    .hero-heading {
+      font-size: 42px;
+      line-height: 50px;
+    }
+    .hero-description {
+      font-size: 16px;
+      line-height: 26px;
+    }
+    .veggie-buttons .button--primary {
+      font-size: 18px;
+      line-height: 30px;
+      padding: 12px 38px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .hero-heading {
+      font-size: 38px;
+      line-height: 48px;
+    }
+    .hero-description {
+      font-size: 16px;
+      line-height: 26px;
+    }
+    .veggie-buttons .button--primary {
+      font-size: 18px;
+      line-height: 30px;
+      padding: 12px 38px;
+    }
   }
 
   /* Responsive Styles */
@@ -242,16 +320,6 @@
       width: calc(100% + 40px);
       border-radius: 0;
     }
-
-    .hero-heading {
-      font-size: 48px;
-      line-height: 46px;
-    }
-
-    .hero-description {
-      font-size: 22px;
-      line-height: 32px;
-    }
   }
 
   @media (max-width: 640px) {
@@ -269,27 +337,6 @@
     }
     .hero-description {
         padding: 0 10px !important;
-    }
-    .hero-heading {
-      font-size: 42px;
-      line-height: 46px;
-      margin-bottom: 20px;
-    }
-
-    .hero-description {
-      font-size: 22px;
-      line-height: 32px;
-      margin-bottom: 30px;
-    }
-
-    .hero-button {
-      font-size: 20px;
-      padding: 12px 30px;
-    }
-
-    .veggie-buttons .button--primary {
-      font-size: 20px;
-      line-height: 33px;
     }
 
   }
