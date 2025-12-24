@@ -1,0 +1,97 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "slideshow_cAi8Jj": {
+      "type": "slideshow",
+      "blocks": {
+        "text_image_block_i6WA36": {
+          "type": "text_image_block",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Group_10.png",
+            "mobile_image": "shopify://shop_images/Vector_9_2.png",
+            "heading": "Refund Policy",
+            "subheading": "",
+            "button_label": "",
+            "button_link": "",
+            "content_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "text_image_block_i6WA36"
+      ],
+      "name": "Text with Image Section",
+      "settings": {
+        "bg_color": "#f1ead9"
+      }
+    },
+    "content_gU39tw": {
+      "type": "content",
+      "blocks": {
+        "text_block_wf6KzA": {
+          "type": "text_block",
+          "settings": {
+            "heading": "Cancellation and Order Change policy",
+            "paragraph": "<p>**We consider all sales as final after the order has been placed.**</p>"
+          }
+        },
+        "text_block_QcHA4c": {
+          "type": "text_block",
+          "settings": {
+            "heading": "Refund Policy",
+            "paragraph": "<p>We will issue credit or a refund for products that are damaged during shipping. If your product arrived damaged, please email us at onlineform@kidfresh.com  with the following information: order number, damaged product item description, condition of damaged product upon arrival and photo, date and time package was received. We are unable to accept returns for our frozen food products or offer refunds based on personal taste.</p>"
+          }
+        },
+        "text_block_MGzkzj": {
+          "type": "text_block",
+          "settings": {
+            "heading": "Order Arrival",
+            "paragraph": "<p>Our products are shipped frozen and should be stored in your freezer upon delivery.</p>"
+          }
+        },
+        "text_block_XjCEjN": {
+          "type": "text_block",
+          "settings": {
+            "heading": "Risk of Loss",
+            "paragraph": "<p>Our goal is to make sure you receive our products safely. Unfortunately, once a shipment has been confirmed delivered by FedEx, we no longer have control over what happens to that shipment. If you need help locating your FedEx tracking number please reach out to onlineform@kidfresh.com with your order number. <br/>You can always contact us with any questions at onlineform@kidfresh.com.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_wf6KzA",
+        "text_block_QcHA4c",
+        "text_block_MGzkzj",
+        "text_block_XjCEjN"
+      ],
+      "name": "Custom Text Blocks",
+      "settings": {
+        "bg_color": "#f1ead9",
+        "text_color": "#333333",
+        "heading_size": 40,
+        "paragraph_size": 24,
+        "text_align": "left"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "slideshow_cAi8Jj",
+    "content_gU39tw"
+  ]
+}
