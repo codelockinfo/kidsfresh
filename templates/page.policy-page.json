@@ -47,37 +47,13 @@
         "text_block_wf6KzA": {
           "type": "text_block",
           "settings": {
-            "heading": "Cancellation and Order Change policy",
-            "paragraph": "<p>**We consider all sales as final after the order has been placed.**</p>"
-          }
-        },
-        "text_block_QcHA4c": {
-          "type": "text_block",
-          "settings": {
-            "heading": "Refund Policy",
-            "paragraph": "<p>We will issue credit or a refund for products that are damaged during shipping. If your product arrived damaged, please email us at onlineform@kidfresh.com  with the following information: order number, damaged product item description, condition of damaged product upon arrival and photo, date and time package was received. We are unable to accept returns for our frozen food products or offer refunds based on personal taste.</p>"
-          }
-        },
-        "text_block_MGzkzj": {
-          "type": "text_block",
-          "settings": {
-            "heading": "Order Arrival",
-            "paragraph": "<p>Our products are shipped frozen and should be stored in your freezer upon delivery.</p>"
-          }
-        },
-        "text_block_XjCEjN": {
-          "type": "text_block",
-          "settings": {
-            "heading": "Risk of Loss",
-            "paragraph": "<p>Our goal is to make sure you receive our products safely. Unfortunately, once a shipment has been confirmed delivered by FedEx, we no longer have control over what happens to that shipment. If you need help locating your FedEx tracking number please reach out to onlineform@kidfresh.com with your order number. <br/>You can always contact us with any questions at onlineform@kidfresh.com.</p>"
+            "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.",
+            "paragraph": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus orci facilisis id.<br/><br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus orci facilisis id.<br/><br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. <br/><br/>Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus orci facilisis id. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.<br/></p>"
           }
         }
       },
       "block_order": [
-        "text_block_wf6KzA",
-        "text_block_QcHA4c",
-        "text_block_MGzkzj",
-        "text_block_XjCEjN"
+        "text_block_wf6KzA"
       ],
       "name": "Custom Text Blocks",
       "settings": {
