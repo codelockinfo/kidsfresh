@@ -50,10 +50,18 @@
             "heading": "Terms & Conditions",
             "paragraph": "<p>Welcome to the KIDFRESH Website, www.kidfresh.com (the “Site”). By accessing this Site, you agree to be bound by the terms and conditions below (the “Terms”). If you do not agree to all of the Terms, please do not use the Site. KIDFRESH may from time to time modify or revise the Terms by updating this Web page. Your use of our Site following any such change constitutes your agreement to follow and be bound by the Terms as changed. If any change is unacceptable to you, your only recourse is to terminate your use of the Site.</p>"
           }
+        },
+        "text_block_QcHA4c": {
+          "type": "text_block",
+          "settings": {
+            "heading": "Disclaimer",
+            "paragraph": "<p>This site, its contents, functions and all information, products and services contained in or offered through this site are provided on an “as is” and “as available” basis without representations or warranties of any kind. Kidfresh expressly disclaims all such representations and warranties, either express or implied, including without limitation, warranties of title, merchantability, fitness for a particular purpose or non- infringement and any implied warranties arising from course of dealing or course of performance. Kidfresh does not warrant that this site or its contents will be complete, accurate, timely, uninterrupted, secure or error free, or that defects will be corrected. All information on the site is subject to change without notice. Some jurisdictions do not allow the exclusion of certain warranties so some of the above exclusions may not apply to you.</p>"
+          }
         }
       },
       "block_order": [
-        "text_block_wf6KzA"
+        "text_block_wf6KzA",
+        "text_block_QcHA4c"
       ],
       "name": "Custom Text Blocks",
       "settings": {
