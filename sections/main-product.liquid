@@ -147,6 +147,7 @@
                     class="product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
                     {{ block.shopify_attributes }}
                   >
+                    <div class="long_description">
                     {%- if block.settings.use_metafields and has_metafield_content -%}
                       {%- if block.settings.text_metafield != blank -%}
                         {%- assign mf_path = block.settings.text_metafield | split: '.' -%}
@@ -167,6 +168,7 @@
                     {%- else -%}
                       {{- block.settings.text -}}
                     {%- endif -%}
+                  </div>
                   </p>
                 {%- endif -%}
               {%- when 'title' -%}
