@@ -40,10 +40,34 @@
       "settings": {
         "bg_color": "#f1ead9"
       }
+    },
+    "content_gU39tw": {
+      "type": "content",
+      "blocks": {
+        "text_block_wf6KzA": {
+          "type": "text_block",
+          "settings": {
+            "heading": "",
+            "paragraph": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_wf6KzA"
+      ],
+      "name": "Custom Text Blocks",
+      "settings": {
+        "bg_color": "#f1ead9",
+        "text_color": "#333333",
+        "heading_size": 24,
+        "paragraph_size": 16,
+        "text_align": "left"
+      }
     }
   },
   "order": [
     "main",
-    "slideshow_cAi8Jj"
+    "slideshow_cAi8Jj",
+    "content_gU39tw"
   ]
 }
