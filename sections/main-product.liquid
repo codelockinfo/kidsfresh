@@ -325,122 +325,54 @@
                         </div>
                         {{- 'icon-caret.svg' | inline_asset_content -}}
                       </summary>
-                      <div
+                      {% assign metafield_1 = product.metafields[block.settings.metafield_1] %}
+{% assign metafield_2 = product.metafields[block.settings.metafield_2] %}
+{% assign metafield_3 = product.metafields[block.settings.metafield_3] %}
+
+<div
   class="accordion__content rte{% if is_highlighted %} accordion__content--highlighted{% endif %}"
   id="ProductAccordion-{{ block.id }}-{{ section.id }}"
 >
-  {%- if is_highlighted and use_metafields and has_metafield_content -%}
 
+  {% if is_highlighted and metafield_1 != blank %}
     <div class="highlighted-accordion__items">
 
-      {%- if metafield_1 != blank -%}
+      {% if metafield_1 != blank %}
         <div class="highlighted-accordion__item">
           <div class="highlighted-accordion__value">
-            {% if metafield_1.type == 'rich_text' %}
-              {{ metafield_1 | metafield_tag }}
-            {% else %}
-              {{ metafield_1.value | escape }}
-            {% endif %}
+            {{ metafield_1 | metafield_tag }}
           </div>
-
           <div class="highlighted-accordion__label">
-            {{ block.settings.metafield_1_label | default: 'Label 1' | escape }}
+            {{ block.settings.metafield_1_label | escape }}
           </div>
-
-          {%- if block.settings.metafield_1_sublabel != blank -%}
-            <div class="highlighted-accordion__sublabel">
-              {{ block.settings.metafield_1_sublabel | escape }}
-            </div>
-          {%- endif -%}
         </div>
-      {%- endif -%}
+      {% endif %}
 
-      {%- if metafield_2 != blank -%}
+      {% if metafield_2 != blank %}
         <div class="highlighted-accordion__item">
           <div class="highlighted-accordion__value">
-            {% if metafield_2.type == 'rich_text' %}
-              {{ metafield_2 | metafield_tag }}
-            {% else %}
-              {{ metafield_2.value | escape }}
-            {% endif %}
+            {{ metafield_2 | metafield_tag }}
           </div>
-
           <div class="highlighted-accordion__label">
-            {{ block.settings.metafield_2_label | default: 'Label 2' | escape }}
+            {{ block.settings.metafield_2_label | escape }}
           </div>
-
-          {%- if block.settings.metafield_2_sublabel != blank -%}
-            <div class="highlighted-accordion__sublabel">
-              {{ block.settings.metafield_2_sublabel | escape }}
-            </div>
-          {%- endif -%}
         </div>
-      {%- endif -%}
+      {% endif %}
 
-      {%- if metafield_3 != blank -%}
+      {% if metafield_3 != blank %}
         <div class="highlighted-accordion__item">
           <div class="highlighted-accordion__value">
-            {% if metafield_3.type == 'rich_text' %}
-              {{ metafield_3 | metafield_tag }}
-            {% else %}
-              {{ metafield_3.value | escape }}
-            {% endif %}
+            {{ metafield_3 | metafield_tag }}
           </div>
-
           <div class="highlighted-accordion__label">
-            {{ block.settings.metafield_3_label | default: 'Label 3' | escape }}
+            {{ block.settings.metafield_3_label | escape }}
           </div>
-
-          {%- if block.settings.metafield_3_sublabel != blank -%}
-            <div class="highlighted-accordion__sublabel">
-              {{ block.settings.metafield_3_sublabel | escape }}
-            </div>
-          {%- endif -%}
         </div>
-      {%- endif -%}
+      {% endif %}
 
     </div>
+  {% endif %}
 
-  {%- elsif use_metafields and has_metafield_content -%}
-
-    {%- comment -%} Regular accordion with metafields {%- endcomment -%}
-
-    {%- if metafield_1 != blank -%}
-      <div>
-        {% if metafield_1.type == 'rich_text' %}
-          {{ metafield_1 | metafield_tag }}
-        {% else %}
-          {{ metafield_1.value | escape }}
-        {% endif %}
-      </div>
-    {%- endif -%}
-
-    {%- if metafield_2 != blank -%}
-      <div>
-        {% if metafield_2.type == 'rich_text' %}
-          {{ metafield_2 | metafield_tag }}
-        {% else %}
-          {{ metafield_2.value | escape }}
-        {% endif %}
-      </div>
-    {%- endif -%}
-
-    {%- if metafield_3 != blank -%}
-      <div>
-        {% if metafield_3.type == 'rich_text' %}
-          {{ metafield_3 | metafield_tag }}
-        {% else %}
-          {{ metafield_3.value | escape }}
-        {% endif %}
-      </div>
-    {%- endif -%}
-
-  {%- else -%}
-
-    {{ block.settings.content }}
-    {{ block.settings.page.content }}
-
-  {%- endif -%}
 </div>
                     </details>
                   </div>
