@@ -83,7 +83,7 @@
           "type": "text_block",
           "settings": {
             "heading": "With regard to any User Content that you provide, you represent and warrant that:",
-            "paragraph": "<p>You own the User Content and/or have a valid right to use, submit, or post it and grant the licenses and rights described herein;<br/>Your User Content does not and will not violate the intellectual property, privacy, or other rights of any person; and<br/>Your posting of any User Content does not and will not violate these Terms.</p>"
+            "paragraph": "<ul><li>You own the User Content and/or have a valid right to use, submit, or post it and grant the licenses and rights described herein;</li><li>Your User Content does not and will not violate the intellectual property, privacy, or other rights of any person; and</li><li>Your posting of any User Content does not and will not violate these Terms.</li></ul>"
           }
         }
       },
