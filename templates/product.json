@@ -42,8 +42,11 @@
             "content": "",
             "page": "",
             "default_open": true,
+            "enable_highlighted_design": false,
             "use_metafields": true,
-            "metafield_1": "custom.ingrediants"
+            "ingredients_metafield": "custom.ingrediants",
+            "ingredients_metafield_label": "Label 1",
+            "ingredients_metafield_sublabel": ""
           }
         },
         "collapsible_tab_bJUBwU": {
@@ -54,8 +57,11 @@
             "content": "",
             "page": "",
             "default_open": false,
+            "enable_highlighted_design": false,
             "use_metafields": true,
-            "metafield_1": "custom.ingrediants"
+            "ingredients_metafield": "",
+            "ingredients_metafield_label": "Label 1",
+            "ingredients_metafield_sublabel": ""
           }
         },
         "nutritionally_notable_UV8CDc": {
