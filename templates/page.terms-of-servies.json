@@ -113,6 +113,13 @@
             "heading": "Third Party Content",
             "paragraph": "<p>This website may contain Content owned by third parties and/or reference a third party’s name, trademarks, products, or services. We do not endorse, warrant the accuracy or reliability of, or assume any liability in connection with, any third parties or their products and services or any Content provided to this website by third parties.</p>"
           }
+        },
+        "text_block_kxVn9V": {
+          "type": "text_block",
+          "settings": {
+            "heading": "Links to Third Party Websites",
+            "paragraph": "<p>This website may contain links to or from third party websites. Links to other websites are provided solely as a convenience, and we are not responsible for the content or operation of any third party sites linked to this website. All activities you engage in connection with a linked site are subject to the terms and conditions and policies imposed by the site operator, and we disclaim all liability in connection with such activities.</p>"
+          }
         }
       },
       "block_order": [
@@ -125,7 +132,8 @@
         "text_block_pcyVAA",
         "text_block_QLFykH",
         "text_block_mwCUL4",
-        "text_block_8gbzVe"
+        "text_block_8gbzVe",
+        "text_block_kxVn9V"
       ],
       "name": "Custom Text Blocks",
       "settings": {
