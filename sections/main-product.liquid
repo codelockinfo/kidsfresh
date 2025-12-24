@@ -325,55 +325,53 @@
                         </div>
                         {{- 'icon-caret.svg' | inline_asset_content -}}
                       </summary>
-                      {% assign metafield_1 = product.metafields[block.settings.metafield_1] %}
-{% assign metafield_2 = product.metafields[block.settings.metafield_2] %}
-{% assign metafield_3 = product.metafields[block.settings.metafield_3] %}
-
-<div
-  class="accordion__content rte{% if is_highlighted %} accordion__content--highlighted{% endif %}"
-  id="ProductAccordion-{{ block.id }}-{{ section.id }}"
->
-
-  {% if is_highlighted and metafield_1 != blank %}
-    <div class="highlighted-accordion__items">
-
-      {% if metafield_1 != blank %}
-        <div class="highlighted-accordion__item">
-          <div class="highlighted-accordion__value">
-            {{ metafield_1 | metafield_tag }}
-          </div>
-          <div class="highlighted-accordion__label">
-            {{ block.settings.metafield_1_label | escape }}
-          </div>
-        </div>
-      {% endif %}
-
-      {% if metafield_2 != blank %}
-        <div class="highlighted-accordion__item">
-          <div class="highlighted-accordion__value">
-            {{ metafield_2 | metafield_tag }}
-          </div>
-          <div class="highlighted-accordion__label">
-            {{ block.settings.metafield_2_label | escape }}
-          </div>
-        </div>
-      {% endif %}
-
-      {% if metafield_3 != blank %}
-        <div class="highlighted-accordion__item">
-          <div class="highlighted-accordion__value">
-            {{ metafield_3 | metafield_tag }}
-          </div>
-          <div class="highlighted-accordion__label">
-            {{ block.settings.metafield_3_label | escape }}
-          </div>
-        </div>
-      {% endif %}
-
-    </div>
-  {% endif %}
-
-</div>
+                      <div class="accordion__content rte{% if is_highlighted %} accordion__content--highlighted{% endif %}" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
+                        {%- if is_highlighted and use_metafields and has_metafield_content -%}
+                          <div class="highlighted-accordion__items">
+                            {%- if metafield_1 != blank -%}
+                              <div class="highlighted-accordion__item">
+                                <div class="highlighted-accordion__value">{{ metafield_1 | escape }}</div>
+                                <div class="highlighted-accordion__label">{{ block.settings.metafield_1_label | default: 'Label 1' | escape }}</div>
+                                {%- if block.settings.metafield_1_sublabel != blank -%}
+                                  <div class="highlighted-accordion__sublabel">{{ block.settings.metafield_1_sublabel | escape }}</div>
+                                {%- endif -%}
+                              </div>
+                            {%- endif -%}
+                            {%- if metafield_2 != blank -%}
+                              <div class="highlighted-accordion__item">
+                                <div class="highlighted-accordion__value">{{ metafield_2 | escape }}</div>
+                                <div class="highlighted-accordion__label">{{ block.settings.metafield_2_label | default: 'Label 2' | escape }}</div>
+                                {%- if block.settings.metafield_2_sublabel != blank -%}
+                                  <div class="highlighted-accordion__sublabel">{{ block.settings.metafield_2_sublabel | escape }}</div>
+                                {%- endif -%}
+                              </div>
+                            {%- endif -%}
+                            {%- if metafield_3 != blank -%}
+                              <div class="highlighted-accordion__item">
+                                <div class="highlighted-accordion__value">{{ metafield_3 | escape }}</div>
+                                <div class="highlighted-accordion__label">{{ block.settings.metafield_3_label | default: 'Label 3' | escape }}</div>
+                                {%- if block.settings.metafield_3_sublabel != blank -%}
+                                  <div class="highlighted-accordion__sublabel">{{ block.settings.metafield_3_sublabel | escape }}</div>
+                                {%- endif -%}
+                              </div>
+                            {%- endif -%}
+                          </div>
+                        {%- elsif use_metafields and has_metafield_content -%}
+                          {%- comment -%} Regular accordion with metafields {%- endcomment -%}
+                          {%- if metafield_1 != blank -%}
+                            <div>{{ metafield_1 | escape }}</div>
+                          {%- endif -%}
+                          {%- if metafield_2 != blank -%}
+                            <div>{{ metafield_2 | escape }}</div>
+                          {%- endif -%}
+                          {%- if metafield_3 != blank -%}
+                            <div>{{ metafield_3 | escape }}</div>
+                          {%- endif -%}
+                        {%- else -%}
+                          {{ block.settings.content }}
+                          {{ block.settings.page.content }}
+                        {%- endif -%}
+                      </div>
                     </details>
                   </div>
                 {%- endif -%}
