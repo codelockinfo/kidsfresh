@@ -329,14 +329,27 @@
                         {%- if is_highlighted and use_metafields and has_metafield_content -%}
                           <div class="highlighted-accordion__items">
                             {%- if metafield_1 != blank -%}
-                              <div class="highlighted-accordion__item">
-                                <div class="highlighted-accordion__value">{{ metafield_1 | escape }}</div>
-                                <div class="highlighted-accordion__label">{{ block.settings.metafield_1_label | default: 'Label 1' | escape }}</div>
-                                {%- if block.settings.metafield_1_sublabel != blank -%}
-                                  <div class="highlighted-accordion__sublabel">{{ block.settings.metafield_1_sublabel | escape }}</div>
-                                {%- endif -%}
-                              </div>
-                            {%- endif -%}
+  <div class="highlighted-accordion__item">
+    <div class="highlighted-accordion__value">
+      {% if metafield_1.type == 'rich_text' %}
+        {{ metafield_1 | metafield_tag }}
+      {% else %}
+        {{ metafield_1.value | escape }}
+      {% endif %}
+    </div>
+
+    <div class="highlighted-accordion__label">
+      {{ block.settings.metafield_1_label | default: 'Label 1' | escape }}
+    </div>
+
+    {%- if block.settings.metafield_1_sublabel != blank -%}
+      <div class="highlighted-accordion__sublabel">
+        {{ block.settings.metafield_1_sublabel | escape }}
+      </div>
+    {%- endif -%}
+  </div>
+{%- endif -%}
+
                             {%- if metafield_2 != blank -%}
                               <div class="highlighted-accordion__item">
                                 <div class="highlighted-accordion__value">{{ metafield_2 | escape }}</div>
