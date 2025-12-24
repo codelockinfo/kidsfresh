@@ -1,0 +1,185 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "slideshow_cAi8Jj": {
+      "type": "slideshow",
+      "blocks": {
+        "text_image_block_i6WA36": {
+          "type": "text_image_block",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Group_10.png",
+            "mobile_image": "shopify://shop_images/Vector_9_2.png",
+            "heading": "Terms & Conditions",
+            "subheading": "",
+            "button_label": "",
+            "button_link": "",
+            "content_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "text_image_block_i6WA36"
+      ],
+      "name": "Text with Image Section",
+      "settings": {
+        "bg_color": "#f1ead9"
+      }
+    },
+    "content_gU39tw": {
+      "type": "content",
+      "blocks": {
+        "text_block_wf6KzA": {
+          "type": "text_block",
+          "settings": {
+            "heading": "Terms & Conditions",
+            "paragraph": "<p>Welcome to the KIDFRESH Website, www.kidfresh.com (the “Site”). By accessing this Site, you agree to be bound by the terms and conditions below (the “Terms”). If you do not agree to all of the Terms, please do not use the Site. KIDFRESH may from time to time modify or revise the Terms by updating this Web page. Your use of our Site following any such change constitutes your agreement to follow and be bound by the Terms as changed. If any change is unacceptable to you, your only recourse is to terminate your use of the Site.</p>"
+          }
+        },
+        "text_block_QcHA4c": {
+          "type": "text_block",
+          "settings": {
+            "heading": "Disclaimer",
+            "paragraph": "<p>This site, its contents, functions and all information, products and services contained in or offered through this site are provided on an “as is” and “as available” basis without representations or warranties of any kind. Kidfresh expressly disclaims all such representations and warranties, either express or implied, including without limitation, warranties of title, merchantability, fitness for a particular purpose or non- infringement and any implied warranties arising from course of dealing or course of performance. Kidfresh does not warrant that this site or its contents will be complete, accurate, timely, uninterrupted, secure or error free, or that defects will be corrected. All information on the site is subject to change without notice. Some jurisdictions do not allow the exclusion of certain warranties so some of the above exclusions may not apply to you.</p>"
+          }
+        },
+        "text_block_MGzkzj": {
+          "type": "text_block",
+          "settings": {
+            "heading": "Limitation of Liability",
+            "paragraph": "<p>In no event shall Kidfresh be liable for any direct, indirect, consequential, special or incidental damages arising out of or related to your use of or inability to use this site. Some jurisdictions do not allow the exclusion of certain warranties so some of the above exclusions may not apply to you.</p>"
+          }
+        },
+        "text_block_XjCEjN": {
+          "type": "text_block",
+          "settings": {
+            "heading": "Copyright and Trademark Notice",
+            "paragraph": "<p>This Site and its contents, including but not limited to, text, photographs, graphics, illustrations, video, sound and other material (all such content collectively referred to as “Content”) are protected under United States and international copyright laws and are the property of KIDFRESH. All rights reserved. All logos, splash screens, page headers, custom graphics and button icons displayed on this Site are service marks, trademarks, and/or trade dress (collectively, “Marks”) of KIDFRESH. Except as specifically permitted herein, copying, distributing, transmitting, displaying, modifying, selling or participating in the sale of, or otherwise exploiting or using any Content or any Marks in any form or by any means without the express written permission of KIDFRESH is prohibited and may violate the copyright or trademark laws of the United States and/or other countries.<br/><br/>The Site and its Contents, are intended solely for personal, noncommercial use by the users of our Site. You may not download or copy the Contents displayed on the Site, for your own use. No right, title or interest in any downloaded materials is transferred to you as a result of any such downloading or copying. No reproduction of any part of this Site may be sold or distributed for commercial gain nor shall it be modified or incorporated in any other work, publication, or website. KIDFRESH shall have no liability or any responsibility whatsoever for any loss suffered caused by viruses that may infect your computer equipment or other property by reason of your use of, access to or downloading of any material from this Site. If you choose to download material from this Site you do so at your own risk.</p>"
+          }
+        },
+        "text_block_HXRpWq": {
+          "type": "text_block",
+          "settings": {
+            "heading": "User Generated Content",
+            "paragraph": "<p>We appreciate your comments, remarks, feedback, suggestions, ideas, inventions, artwork, developments, concepts, and other types of communications and submissions you disclose or transmit to us (collectively, “Submissions”). So long as no personally identifiable information is disclosed, KIDFRESH is free to use the Submissions for any purpose whatsoever. By making a Submission, you grant KIDFRESH and its affiliates a perpetual, irrevocable, worldwide, royalty-free right and license to use, reproduce, modify, adapt, publish, translate, create derivative works of, distribute, publicly perform, publicly display, develop, manufacture, advertise, and market your Submissions and any related copyrights, moral rights or other intellectual property rights therein. Any such use is without compensation you. By making a Submission, you also warrant that you own the material/content submitted, that it is original, that it is not defamatory, and that KIDFRESH’s use of the Submission will not violate any third party’s rights. KIDFRESH is under no obligation to use the information submitted.</p>"
+          }
+        },
+        "text_block_QbYmAp": {
+          "type": "text_block",
+          "settings": {
+            "heading": "With regard to any User Content that you provide, you represent and warrant that:",
+            "paragraph": "<ul><li>You own the User Content and/or have a valid right to use, submit, or post it and grant the licenses and rights described herein;</li><li>Your User Content does not and will not violate the intellectual property, privacy, or other rights of any person; and</li><li>Your posting of any User Content does not and will not violate these Terms.</li></ul>"
+          }
+        },
+        "text_block_pcyVAA": {
+          "type": "text_block",
+          "settings": {
+            "heading": "You further acknowledge and agree that:",
+            "paragraph": "<ul><li>You are responsible and liable for all such User Content that you submit, post, or display.</li><li>You are responsible and liable for any activity that occurs under your user.</li><li>You shall not abuse, harass, threaten, or intimidate other users of this website.</li><li>You shall not use this website for any illegal or unauthorized purpose.</li><li>You shall not post User Content that is harmful, offensive, threatening, libelous, defamatory, obscene, unlawful or objectionable.</li><li>Except as may be expressly permitted by us, you shall not use this website to promote any commercial activity, such as advertising any product or service.</li></ul>"
+          }
+        },
+        "text_block_QLFykH": {
+          "type": "text_block",
+          "settings": {
+            "heading": "We reserve the right, in our sole discretion, to:",
+            "paragraph": "<ul><li>Review, edit, or delete any User Content, without undertaking any responsibility to do so;</li><li>Adopt rules in any community area or condition access to any areas or features by any individual or group on certain criteria, deny or restrict access by any individual or group who fails to meet that criteria or by anyone who fails to comply with our criteria or rules at any time, and change or modify the criteria or rules at any time; and</li><li>Deny any user access to this website.<br/></li></ul>"
+          }
+        },
+        "text_block_mwCUL4": {
+          "type": "text_block",
+          "settings": {
+            "heading": "Modifications to the site",
+            "paragraph": "<p>KIDFRESH reserves the right, for any reason, in its sole discretion, to terminate, change or suspend any aspect of the Site including but not limited to content, features or hours of availability. KIDFRESH Company may impose limits on certain features of the Site or restrict your access to part or all of the Site without notice or penalty.<br/></p>"
+          }
+        },
+        "text_block_8gbzVe": {
+          "type": "text_block",
+          "settings": {
+            "heading": "Third Party Content",
+            "paragraph": "<p>This website may contain Content owned by third parties and/or reference a third party’s name, trademarks, products, or services. We do not endorse, warrant the accuracy or reliability of, or assume any liability in connection with, any third parties or their products and services or any Content provided to this website by third parties.</p>"
+          }
+        },
+        "text_block_kxVn9V": {
+          "type": "text_block",
+          "settings": {
+            "heading": "Links to Third Party Websites",
+            "paragraph": "<p>This website may contain links to or from third party websites. Links to other websites are provided solely as a convenience, and we are not responsible for the content or operation of any third party sites linked to this website. All activities you engage in connection with a linked site are subject to the terms and conditions and policies imposed by the site operator, and we disclaim all liability in connection with such activities.</p>"
+          }
+        },
+        "text_block_EqBf7V": {
+          "type": "text_block",
+          "settings": {
+            "heading": "Privacy",
+            "paragraph": "<p>For an explanation of our online information practices with regards to information collected or submitted to the Site, please see our <a href=\"/pages/privacy-policy\" title=\"privacy-policy\">Privacy Policy</a>.</p>"
+          }
+        },
+        "text_block_FPBQyp": {
+          "type": "text_block",
+          "settings": {
+            "heading": "Governing Law",
+            "paragraph": "<p>These Terms are governed by and shall be construed in accordance with the laws of the State of New York without giving effect to any principles of conflicts of law. Any controversy or dispute involving KIDFRESH arising from or in any way related to these Terms or your use of the Site shall be heard in the appropriate State or Federal court in New York, New York.</p>"
+          }
+        },
+        "text_block_wdwCwM": {
+          "type": "text_block",
+          "settings": {
+            "heading": "General Provisions",
+            "paragraph": "<p>These Terms constitute a binding agreement between you and KIDFRESH, and supercede all prior agreements between the parties regarding the subject matter herein. If any provision of the Terms shall be found by a court of competent jurisdiction to be unlawful, void, or for any reason unenforceable then that provision shall be deemed severable from the Terms and shall not affect the validity and enforceability of any remaining provisions. The Terms are effective until terminated by you or KIDFRESH, which KIDFRESH may do at any time, without notice, in its sole discretion. If you become dissatisfied with the Site, your only recourse is to immediately discontinue use of the Site. All provisions of the Terms regarding representations, warranties, indemnification, disclaimers, and limitations of liability shall survive the termination of the Terms.<br/><br/>If you have any questions or comments about these Terms of Use, please call us at 1-800-DO KIDFRESH or contact us via e-mail at <span style=\"text-decoration:underline\">info@kidfresh.com</span>.</p>"
+          }
+        },
+        "text_block_kN6ihG": {
+          "type": "text_block",
+          "settings": {
+            "heading": "Indemnification",
+            "paragraph": "<p>You agree to defend, indemnify and hold KIDFRESH and each of its subsidiaries, affiliates, franchisees, licensees, officers, directors employees and agents, harmless from and against any and all claims, losses, damages, liabilities, costs and expenses, including reasonable fees and expenses of counsel, incurred or suffered by them and arising from or related to your (i) use of the Site or (ii) violation of any of these Terms.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_wf6KzA",
+        "text_block_QcHA4c",
+        "text_block_MGzkzj",
+        "text_block_XjCEjN",
+        "text_block_HXRpWq",
+        "text_block_QbYmAp",
+        "text_block_pcyVAA",
+        "text_block_QLFykH",
+        "text_block_mwCUL4",
+        "text_block_8gbzVe",
+        "text_block_kxVn9V",
+        "text_block_EqBf7V",
+        "text_block_FPBQyp",
+        "text_block_wdwCwM",
+        "text_block_kN6ihG"
+      ],
+      "name": "Custom Text Blocks",
+      "settings": {
+        "bg_color": "#f1ead9",
+        "text_color": "#333333",
+        "heading_size": 40,
+        "paragraph_size": 24,
+        "text_align": "left"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "slideshow_cAi8Jj",
+    "content_gU39tw"
+  ]
+}
