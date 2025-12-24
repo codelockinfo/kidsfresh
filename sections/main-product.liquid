@@ -330,7 +330,7 @@
                           <div class="highlighted-accordion__items">
                             {%- if metafield_1 != blank -%}
                               <div class="highlighted-accordion__item">
-                                <div class="highlighted-accordion__value">{{ metafield_1 | escape }}</div>
+                                <div class="highlighted-accordion__value">{{ metafield_1 }}</div>
                                 <div class="highlighted-accordion__label">{{ block.settings.metafield_1_label | default: 'Label 1' | escape }}</div>
                                 {%- if block.settings.metafield_1_sublabel != blank -%}
                                   <div class="highlighted-accordion__sublabel">{{ block.settings.metafield_1_sublabel | escape }}</div>
@@ -339,7 +339,7 @@
                             {%- endif -%}
                             {%- if metafield_2 != blank -%}
                               <div class="highlighted-accordion__item">
-                                <div class="highlighted-accordion__value">{{ metafield_2 | escape }}</div>
+                                <div class="highlighted-accordion__value">{{ metafield_2 }}</div>
                                 <div class="highlighted-accordion__label">{{ block.settings.metafield_2_label | default: 'Label 2' | escape }}</div>
                                 {%- if block.settings.metafield_2_sublabel != blank -%}
                                   <div class="highlighted-accordion__sublabel">{{ block.settings.metafield_2_sublabel | escape }}</div>
@@ -348,7 +348,7 @@
                             {%- endif -%}
                             {%- if metafield_3 != blank -%}
                               <div class="highlighted-accordion__item">
-                                <div class="highlighted-accordion__value">{{ metafield_3 | escape }}</div>
+                                <div class="highlighted-accordion__value">{{ metafield_3 }}</div>
                                 <div class="highlighted-accordion__label">{{ block.settings.metafield_3_label | default: 'Label 3' | escape }}</div>
                                 {%- if block.settings.metafield_3_sublabel != blank -%}
                                   <div class="highlighted-accordion__sublabel">{{ block.settings.metafield_3_sublabel | escape }}</div>
@@ -359,13 +359,13 @@
                         {%- elsif use_metafields and has_metafield_content -%}
                           {%- comment -%} Regular accordion with metafields {%- endcomment -%}
                           {%- if metafield_1 != blank -%}
-                            <div>{{ metafield_1 | escape }}</div>
+                            <div>{{ metafield_1 }}</div>
                           {%- endif -%}
                           {%- if metafield_2 != blank -%}
-                            <div>{{ metafield_2 | escape }}</div>
+                            <div>{{ metafield_2 }}</div>
                           {%- endif -%}
                           {%- if metafield_3 != blank -%}
-                            <div>{{ metafield_3 | escape }}</div>
+                            <div>{{ metafield_3 }}</div>
                           {%- endif -%}
                         {%- else -%}
                           {{ block.settings.content }}
@@ -468,7 +468,7 @@
                         <div class="highlighted-accordion__items">
                           {%- if metafield_1 != blank -%}
                             <div class="highlighted-accordion__item">
-                              <div class="highlighted-accordion__value">{{ metafield_1 | escape }}</div>
+                              <div class="highlighted-accordion__value">{{ metafield_1 }}</div>
                               <div class="highlighted-accordion__label">{{ block.settings.metafield_1_label | default: 'Label 1' | escape }}</div>
                               {%- if block.settings.metafield_1_sublabel != blank -%}
                                 <div class="highlighted-accordion__sublabel">{{ block.settings.metafield_1_sublabel | escape }}</div>
@@ -477,7 +477,7 @@
                           {%- endif -%}
                           {%- if metafield_2 != blank -%}
                             <div class="highlighted-accordion__item">
-                              <div class="highlighted-accordion__value">{{ metafield_2 | escape }}</div>
+                              <div class="highlighted-accordion__value">{{ metafield_2 }}</div>
                               <div class="highlighted-accordion__label">{{ block.settings.metafield_2_label | default: 'Label 2' | escape }}</div>
                               {%- if block.settings.metafield_2_sublabel != blank -%}
                                 <div class="highlighted-accordion__sublabel">{{ block.settings.metafield_2_sublabel | escape }}</div>
@@ -486,7 +486,7 @@
                           {%- endif -%}
                           {%- if metafield_3 != blank -%}
                             <div class="highlighted-accordion__item">
-                              <div class="highlighted-accordion__value">{{ metafield_3 | escape }}</div>
+                              <div class="highlighted-accordion__value">{{ metafield_3 }}</div>
                               <div class="highlighted-accordion__label">{{ block.settings.metafield_3_label | default: 'Label 3' | escape }}</div>
                               {%- if block.settings.metafield_3_sublabel != blank -%}
                                 <div class="highlighted-accordion__sublabel">{{ block.settings.metafield_3_sublabel | escape }}</div>
