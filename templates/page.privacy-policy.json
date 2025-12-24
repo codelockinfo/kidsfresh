@@ -44,6 +44,13 @@
     "content_qPpfwV": {
       "type": "content",
       "blocks": {
+        "text_block_yeC3Yi": {
+          "type": "text_block",
+          "settings": {
+            "heading": "",
+            "paragraph": "As of Aug. 2017\n\nThe Kidfresh name and reputation are built on a foundation of trust and honesty. This online privacy policy describes the information Kidfresh collects through the services available on our website, Kidfresh.com (the “Site”) and how we use that information.\n\nOur policy also describes the choices you can make about how we collect and use your information."
+          }
+        },
         "text_block_VPxdWN": {
           "type": "text_block",
           "settings": {
@@ -102,6 +109,7 @@
         }
       },
       "block_order": [
+        "text_block_yeC3Yi",
         "text_block_VPxdWN",
         "text_block_yar7bx",
         "text_block_hcqMxU",
