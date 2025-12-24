@@ -236,78 +236,31 @@
                   assign is_highlighted = block.settings.enable_highlighted_design
                   assign use_metafields = block.settings.use_metafields
                   
-                  assign metafield_1 = blank
-                  assign metafield_2 = blank
-                  assign metafield_3 = blank
+                  assign ingredients_metafield = blank
                   
                   if use_metafields
-                    if block.settings.metafield_1 != blank
-                      assign metafield_path_1 = block.settings.metafield_1 | split: '.'
-                      if metafield_path_1.size == 2
-                        assign namespace_1 = metafield_path_1[0]
-                        assign key_1 = metafield_path_1[1]
-                        if namespace_1 == 'custom'
-                          case key_1
-                            when 'protein'
-                              assign metafield_1 = product.metafields.custom.protein
-                            when 'sodium'
-                              assign metafield_1 = product.metafields.custom.sodium
-                            when 'preservatives'
-                              assign metafield_1 = product.metafields.custom.preservatives
-                            else
-                              assign metafield_1 = product.metafields.custom[key_1]
-                          endcase
-                        elsif namespace_1 == 'shopify'
-                          assign metafield_1 = product.metafields.shopify[key_1]
-                        endif
-                      endif
-                    endif
-                    if block.settings.metafield_2 != blank
-                      assign metafield_path_2 = block.settings.metafield_2 | split: '.'
-                      if metafield_path_2.size == 2
-                        assign namespace_2 = metafield_path_2[0]
-                        assign key_2 = metafield_path_2[1]
-                        if namespace_2 == 'custom'
-                          case key_2
-                            when 'protein'
-                              assign metafield_2 = product.metafields.custom.protein
-                            when 'sodium'
-                              assign metafield_2 = product.metafields.custom.sodium
-                            when 'preservatives'
-                              assign metafield_2 = product.metafields.custom.preservatives
-                            else
-                              assign metafield_2 = product.metafields.custom[key_2]
-                          endcase
-                        elsif namespace_2 == 'shopify'
-                          assign metafield_2 = product.metafields.shopify[key_2]
-                        endif
-                      endif
-                    endif
-                    if block.settings.metafield_3 != blank
-                      assign metafield_path_3 = block.settings.metafield_3 | split: '.'
-                      if metafield_path_3.size == 2
-                        assign namespace_3 = metafield_path_3[0]
-                        assign key_3 = metafield_path_3[1]
-                        if namespace_3 == 'custom'
-                          case key_3
-                            when 'protein'
-                              assign metafield_3 = product.metafields.custom.protein
-                            when 'sodium'
-                              assign metafield_3 = product.metafields.custom.sodium
-                            when 'preservatives'
-                              assign metafield_3 = product.metafields.custom.preservatives
-                            else
-                              assign metafield_3 = product.metafields.custom[key_3]
-                          endcase
-                        elsif namespace_3 == 'shopify'
-                          assign metafield_3 = product.metafields.shopify[key_3]
+                    if block.settings.ingredients_metafield != blank
+                      assign metafield_path = block.settings.ingredients_metafield | split: '.'
+                      if metafield_path.size == 2
+                        assign namespace = metafield_path[0]
+                        assign key = metafield_path[1]
+                        if namespace == 'custom'
+                          assign ingredients_metafield_obj = product.metafields.custom[key]
+                          if ingredients_metafield_obj != blank
+                            assign ingredients_metafield = ingredients_metafield_obj.value | default: ingredients_metafield_obj
+                          endif
+                        elsif namespace == 'shopify'
+                          assign ingredients_metafield_obj = product.metafields.shopify[key]
+                          if ingredients_metafield_obj != blank
+                            assign ingredients_metafield = ingredients_metafield_obj.value | default: ingredients_metafield_obj
+                          endif
                         endif
                       endif
                     endif
                   endif
                   
                   assign has_metafield_content = false
-                  if metafield_1 != blank or metafield_2 != blank or metafield_3 != blank
+                  if ingredients_metafield != blank
                     assign has_metafield_content = true
                   endif
                 -%}
@@ -328,44 +281,54 @@
                       <div class="accordion__content rte{% if is_highlighted %} accordion__content--highlighted{% endif %}" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
                         {%- if is_highlighted and use_metafields and has_metafield_content -%}
                           <div class="highlighted-accordion__items">
-                            {%- if metafield_1 != blank -%}
+                            {%- if ingredients_metafield != blank -%}
                               <div class="highlighted-accordion__item">
-                                <div class="highlighted-accordion__value">{{ metafield_1 }}</div>
-                                <div class="highlighted-accordion__label">{{ block.settings.metafield_1_label | default: 'Label 1' | escape }}</div>
-                                {%- if block.settings.metafield_1_sublabel != blank -%}
-                                  <div class="highlighted-accordion__sublabel">{{ block.settings.metafield_1_sublabel | escape }}</div>
-                                {%- endif -%}
-                              </div>
-                            {%- endif -%}
-                            {%- if metafield_2 != blank -%}
-                              <div class="highlighted-accordion__item">
-                                <div class="highlighted-accordion__value">{{ metafield_2 }}</div>
-                                <div class="highlighted-accordion__label">{{ block.settings.metafield_2_label | default: 'Label 2' | escape }}</div>
-                                {%- if block.settings.metafield_2_sublabel != blank -%}
-                                  <div class="highlighted-accordion__sublabel">{{ block.settings.metafield_2_sublabel | escape }}</div>
-                                {%- endif -%}
-                              </div>
-                            {%- endif -%}
-                            {%- if metafield_3 != blank -%}
-                              <div class="highlighted-accordion__item">
-                                <div class="highlighted-accordion__value">{{ metafield_3 }}</div>
-                                <div class="highlighted-accordion__label">{{ block.settings.metafield_3_label | default: 'Label 3' | escape }}</div>
-                                {%- if block.settings.metafield_3_sublabel != blank -%}
-                                  <div class="highlighted-accordion__sublabel">{{ block.settings.metafield_3_sublabel | escape }}</div>
+                                <div class="highlighted-accordion__value">
+                                  {%- if block.settings.ingredients_metafield != blank -%}
+                                    {%- assign mf_path = block.settings.ingredients_metafield | split: '.' -%}
+                                    {%- if mf_path.size == 2 -%}
+                                      {%- if mf_path[0] == 'custom' -%}
+                                        {%- assign mf_obj = product.metafields.custom[mf_path[1]] -%}
+                                        {%- if mf_obj != blank -%}
+                                          {{ mf_obj | metafield_tag }}
+                                        {%- endif -%}
+                                      {%- elsif mf_path[0] == 'shopify' -%}
+                                        {%- assign mf_obj = product.metafields.shopify[mf_path[1]] -%}
+                                        {%- if mf_obj != blank -%}
+                                          {{ mf_obj | metafield_tag }}
+                                        {%- endif -%}
+                                      {%- endif -%}
+                                    {%- endif -%}
+                                  {%- endif -%}
+                                </div>
+                                <div class="highlighted-accordion__label">{{ block.settings.ingredients_metafield_label | default: 'Label 1' | escape }}</div>
+                                {%- if block.settings.ingredients_metafield_sublabel != blank -%}
+                                  <div class="highlighted-accordion__sublabel">{{ block.settings.ingredients_metafield_sublabel | escape }}</div>
                                 {%- endif -%}
                               </div>
                             {%- endif -%}
                           </div>
                         {%- elsif use_metafields and has_metafield_content -%}
                           {%- comment -%} Regular accordion with metafields {%- endcomment -%}
-                          {%- if metafield_1 != blank -%}
-                            <div>{{ metafield_1 }}</div>
-                          {%- endif -%}
-                          {%- if metafield_2 != blank -%}
-                            <div>{{ metafield_2 }}</div>
-                          {%- endif -%}
-                          {%- if metafield_3 != blank -%}
-                            <div>{{ metafield_3 }}</div>
+                          {%- if ingredients_metafield != blank -%}
+                            <div>
+                              {%- if block.settings.ingredients_metafield != blank -%}
+                                {%- assign mf_path = block.settings.ingredients_metafield | split: '.' -%}
+                                {%- if mf_path.size == 2 -%}
+                                  {%- if mf_path[0] == 'custom' -%}
+                                    {%- assign mf_obj = product.metafields.custom[mf_path[1]] -%}
+                                    {%- if mf_obj != blank -%}
+                                      {{ mf_obj | metafield_tag }}
+                                    {%- endif -%}
+                                  {%- elsif mf_path[0] == 'shopify' -%}
+                                    {%- assign mf_obj = product.metafields.shopify[mf_path[1]] -%}
+                                    {%- if mf_obj != blank -%}
+                                      {{ mf_obj | metafield_tag }}
+                                    {%- endif -%}
+                                  {%- endif -%}
+                                {%- endif -%}
+                              {%- endif -%}
+                            </div>
                           {%- endif -%}
                         {%- else -%}
                           {{ block.settings.content }}
@@ -1615,65 +1578,23 @@
         },
         {
           "type": "header",
-          "content": "Metafield 1"
+          "content": "Metafield"
         },
         {
           "type": "text",
-          "id": "metafield_1",
-          "label": "Metafield path (e.g., custom.protein)",
+          "id": "ingredients_metafield",
+          "label": "Metafield path (e.g., custom.ingrediants)",
           "info": "Enter the metafield namespace and key separated by a dot"
         },
         {
           "type": "text",
-          "id": "metafield_1_label",
+          "id": "ingredients_metafield_label",
           "label": "Label",
           "default": "Label 1"
         },
         {
           "type": "text",
-          "id": "metafield_1_sublabel",
-          "label": "Sublabel (optional)"
-        },
-        {
-          "type": "header",
-          "content": "Metafield 2"
-        },
-        {
-          "type": "text",
-          "id": "metafield_2",
-          "label": "Metafield path (e.g., custom.sodium)",
-          "info": "Enter the metafield namespace and key separated by a dot"
-        },
-        {
-          "type": "text",
-          "id": "metafield_2_label",
-          "label": "Label",
-          "default": "Label 2"
-        },
-        {
-          "type": "text",
-          "id": "metafield_2_sublabel",
-          "label": "Sublabel (optional)"
-        },
-        {
-          "type": "header",
-          "content": "Metafield 3"
-        },
-        {
-          "type": "text",
-          "id": "metafield_3",
-          "label": "Metafield path (e.g., custom.preservatives)",
-          "info": "Enter the metafield namespace and key separated by a dot"
-        },
-        {
-          "type": "text",
-          "id": "metafield_3_label",
-          "label": "Label",
-          "default": "Label 3"
-        },
-        {
-          "type": "text",
-          "id": "metafield_3_sublabel",
+          "id": "ingredients_metafield_sublabel",
           "label": "Sublabel (optional)"
         }
       ]
