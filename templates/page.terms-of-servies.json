@@ -92,6 +92,13 @@
             "heading": "You further acknowledge and agree that:",
             "paragraph": "<ul><li>You are responsible and liable for all such User Content that you submit, post, or display.</li><li>You are responsible and liable for any activity that occurs under your user.</li><li>You shall not abuse, harass, threaten, or intimidate other users of this website.</li><li>You shall not use this website for any illegal or unauthorized purpose.</li><li>You shall not post User Content that is harmful, offensive, threatening, libelous, defamatory, obscene, unlawful or objectionable.</li><li>Except as may be expressly permitted by us, you shall not use this website to promote any commercial activity, such as advertising any product or service.<br/><br/><br/><br/></li></ul>"
           }
+        },
+        "text_block_QLFykH": {
+          "type": "text_block",
+          "settings": {
+            "heading": "We reserve the right, in our sole discretion, to:",
+            "paragraph": "<ul><li>You are responsible and liable for all such User Content that you submit, post, or display.</li><li>You are responsible and liable for any activity that occurs under your user.</li><li>You shall not abuse, harass, threaten, or intimidate other users of this website.</li><li>You shall not use this website for any illegal or unauthorized purpose.</li><li>You shall not post User Content that is harmful, offensive, threatening, libelous, defamatory, obscene, unlawful or objectionable.</li><li>Except as may be expressly permitted by us, you shall not use this website to promote any commercial activity, such as advertising any product or service.<br/><br/><br/><br/></li></ul>"
+          }
         }
       },
       "block_order": [
@@ -101,7 +108,8 @@
         "text_block_XjCEjN",
         "text_block_HXRpWq",
         "text_block_QbYmAp",
-        "text_block_pcyVAA"
+        "text_block_pcyVAA",
+        "text_block_QLFykH"
       ],
       "name": "Custom Text Blocks",
       "settings": {
