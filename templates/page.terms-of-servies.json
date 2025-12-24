@@ -139,7 +139,14 @@
           "type": "text_block",
           "settings": {
             "heading": "General Provisions",
-            "paragraph": "<p>These Terms constitute a binding agreement between you and KIDFRESH, and supercede all prior agreements between the parties regarding the subject matter herein. If any provision of the Terms shall be found by a court of competent jurisdiction to be unlawful, void, or for any reason unenforceable then that provision shall be deemed severable from the Terms and shall not affect the validity and enforceability of any remaining provisions. The Terms are effective until terminated by you or KIDFRESH, which KIDFRESH may do at any time, without notice, in its sole discretion. If you become dissatisfied with the Site, your only recourse is to immediately discontinue use of the Site. All provisions of the Terms regarding representations, warranties, indemnification, disclaimers, and limitations of liability shall survive the termination of the Terms.<br/><br/>If you have any questions or comments about these Terms of Use, please call us at 1-800-DO KIDFRESH or contact us via e-mail at info@kidfresh.com.</p>"
+            "paragraph": "<p>These Terms constitute a binding agreement between you and KIDFRESH, and supercede all prior agreements between the parties regarding the subject matter herein. If any provision of the Terms shall be found by a court of competent jurisdiction to be unlawful, void, or for any reason unenforceable then that provision shall be deemed severable from the Terms and shall not affect the validity and enforceability of any remaining provisions. The Terms are effective until terminated by you or KIDFRESH, which KIDFRESH may do at any time, without notice, in its sole discretion. If you become dissatisfied with the Site, your only recourse is to immediately discontinue use of the Site. All provisions of the Terms regarding representations, warranties, indemnification, disclaimers, and limitations of liability shall survive the termination of the Terms.<br/><br/>If you have any questions or comments about these Terms of Use, please call us at 1-800-DO KIDFRESH or contact us via e-mail at <span style=\"text-decoration:underline\">info@kidfresh.com</span>.</p>"
+          }
+        },
+        "text_block_kN6ihG": {
+          "type": "text_block",
+          "settings": {
+            "heading": "Indemnification",
+            "paragraph": "<p>You agree to defend, indemnify and hold KIDFRESH and each of its subsidiaries, affiliates, franchisees, licensees, officers, directors employees and agents, harmless from and against any and all claims, losses, damages, liabilities, costs and expenses, including reasonable fees and expenses of counsel, incurred or suffered by them and arising from or related to your (i) use of the Site or (ii) violation of any of these Terms.</p>"
           }
         }
       },
@@ -157,7 +164,8 @@
         "text_block_kxVn9V",
         "text_block_EqBf7V",
         "text_block_FPBQyp",
-        "text_block_wdwCwM"
+        "text_block_wdwCwM",
+        "text_block_kN6ihG"
       ],
       "name": "Custom Text Blocks",
       "settings": {
