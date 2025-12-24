@@ -134,6 +134,13 @@
             "heading": "Governing Law",
             "paragraph": "<p>These Terms are governed by and shall be construed in accordance with the laws of the State of New York without giving effect to any principles of conflicts of law. Any controversy or dispute involving KIDFRESH arising from or in any way related to these Terms or your use of the Site shall be heard in the appropriate State or Federal court in New York, New York.</p>"
           }
+        },
+        "text_block_wdwCwM": {
+          "type": "text_block",
+          "settings": {
+            "heading": "General Provisions",
+            "paragraph": "<p>These Terms constitute a binding agreement between you and KIDFRESH, and supercede all prior agreements between the parties regarding the subject matter herein. If any provision of the Terms shall be found by a court of competent jurisdiction to be unlawful, void, or for any reason unenforceable then that provision shall be deemed severable from the Terms and shall not affect the validity and enforceability of any remaining provisions. The Terms are effective until terminated by you or KIDFRESH, which KIDFRESH may do at any time, without notice, in its sole discretion. If you become dissatisfied with the Site, your only recourse is to immediately discontinue use of the Site. All provisions of the Terms regarding representations, warranties, indemnification, disclaimers, and limitations of liability shall survive the termination of the Terms.<br/><br/>If you have any questions or comments about these Terms of Use, please call us at 1-800-DO KIDFRESH or contact us via e-mail at info@kidfresh.com.</p>"
+          }
         }
       },
       "block_order": [
@@ -149,7 +156,8 @@
         "text_block_8gbzVe",
         "text_block_kxVn9V",
         "text_block_EqBf7V",
-        "text_block_FPBQyp"
+        "text_block_FPBQyp",
+        "text_block_wdwCwM"
       ],
       "name": "Custom Text Blocks",
       "settings": {
