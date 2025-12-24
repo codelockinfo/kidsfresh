@@ -106,6 +106,13 @@
             "heading": "Modifications to the site",
             "paragraph": "<p>KIDFRESH reserves the right, for any reason, in its sole discretion, to terminate, change or suspend any aspect of the Site including but not limited to content, features or hours of availability. KIDFRESH Company may impose limits on certain features of the Site or restrict your access to part or all of the Site without notice or penalty.<br/></p>"
           }
+        },
+        "text_block_8gbzVe": {
+          "type": "text_block",
+          "settings": {
+            "heading": "Third Party Content",
+            "paragraph": "<p>This website may contain Content owned by third parties and/or reference a third party’s name, trademarks, products, or services. We do not endorse, warrant the accuracy or reliability of, or assume any liability in connection with, any third parties or their products and services or any Content provided to this website by third parties.</p>"
+          }
         }
       },
       "block_order": [
@@ -117,7 +124,8 @@
         "text_block_QbYmAp",
         "text_block_pcyVAA",
         "text_block_QLFykH",
-        "text_block_mwCUL4"
+        "text_block_mwCUL4",
+        "text_block_8gbzVe"
       ],
       "name": "Custom Text Blocks",
       "settings": {
