@@ -315,7 +315,8 @@
   @media (max-width: 768px) {
     .auto-video-sub-section {
       margin: 0 !important;
-      {% comment %} max-width: 450px !important; {% endcomment %}
+      max-width: 400px;
+      width: 100%;
       justify-self: center;
       {% if section.settings.leaf_mobile_bg != blank %}
       background-image: url('{{ section.settings.leaf_mobile_bg | img_url: '400x400' }}');
