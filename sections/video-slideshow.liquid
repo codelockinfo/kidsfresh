@@ -12,16 +12,16 @@
 
   .auto-video-sub-section {
       position: absolute;
-      top: auto !important;
+      {% comment %} top: auto !important;
       left: 50%;
-      transform: translate(-50%);
+      transform: translate(-50%); {% endcomment %}
       text-align: center;
       z-index: 2;
       padding: 20px;
       width: 100%;
       {% if section.settings.leaf_bg != blank %}
         background-image: url('{{ section.settings.leaf_bg | img_url: '300x300' }}');
-        background-size: 100%;
+        background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
       {% endif %}
