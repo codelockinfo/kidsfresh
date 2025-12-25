@@ -45,6 +45,7 @@
         "mobile_video_url": "https://cdn.shopify.com/s/files/1/0577/3957/5488/files/food_ingr_crop_-_no_flatlay_0c0f302e-9c76-43ee-a554-1ac910a53b8c.m4v?v=1766640819",
         "video_url": "https://cdn.shopify.com/s/files/1/0577/3957/5488/files/food_ingr_crop_-_no_flatlay_0c0f302e-9c76-43ee-a554-1ac910a53b8c.m4v?v=1766640819",
         "large_screen_video_url": "https://cdn.shopify.com/s/files/1/0577/3957/5488/files/food_ingr_crop_-_no_flatlay_0c0f302e-9c76-43ee-a554-1ac910a53b8c.m4v?v=1766640819",
+        "leaf_bg": "shopify://shop_images/KF-Green_Blob_7bc0f3cd-9ee7-455d-b29d-b11bd352dcd2.png",
         "enable_rotation": true,
         "rotation_speed": 5,
         "heading": "<p>win more meals with</p>",
