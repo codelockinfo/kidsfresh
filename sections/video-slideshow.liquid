@@ -317,12 +317,6 @@
       margin: 0 !important;
       max-width: 450px !important;
       justify-self: center;
-      {% if section.settings.leaf_mobile_bg != blank %}
-      background-image: url('{{ section.settings.leaf_mobile_bg | img_url: '300x300' }}');
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-    {% endif %}
     }
         .auto-video-sub-section h2.banner__heading.inline-richtext.h0 {
           font-size: 74px;
@@ -464,7 +458,7 @@
       }
   }
 
-  @media(max-width:768px){
+  {% comment %} @media(max-width:768px){
     .auto-video-sub-section {
       top: auto !important;
       left: 0 !important;
@@ -474,6 +468,7 @@
       right: 0 !important;
       transform: none !important;
       margin-top: -50px;
+
     }
     
     .auto-video-sub-section h2.banner__heading.inline-richtext.h0 {
@@ -483,7 +478,7 @@
     .rotating-subheading-container {
       height: 130px;
     }
-  }
+  } {% endcomment %}
 
 
   </style>
