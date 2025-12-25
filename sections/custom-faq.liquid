@@ -149,7 +149,7 @@
 .faq-section.active { display: block; }
 
 /* -------------------------
-   FAQ ITEM - UPDATED FOR OVERLAP
+   FAQ ITEM - CONTENT IN SAME CONTAINER, OVERLAPS BELOW
 -------------------------- */
 .faq-item {
   background: #F1EAD9;
@@ -159,10 +159,12 @@
   border: 4px solid #0F4735;
   position: relative;
   z-index: 1;
+  transition: z-index 0.3s ease;
 }
 
 .faq-item.open {
   z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .faq-item-title {
@@ -202,29 +204,19 @@
   height: auto !important;
 }
 
-/* FAQ CONTENT - OVERLAPS BELOW ITEMS */
+/* FAQ CONTENT - INSIDE SAME CONTAINER */
 .faq-item-content {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease, padding 0.4s ease;
   opacity: 0;
-  padding: 0 22px;
-  background: #F1EAD9;
-  border-radius: 0 0 10px 10px;
-  border: 4px solid #0F4735;
-  border-top: none;
-  z-index: 11;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding-top: 0;
 }
 
 .faq-item.open .faq-item-content {
   max-height: 1000px;
   opacity: 1;
-  padding: 15px 22px;
+  padding-top: 15px;
 }
 
 .faq-item-content p {
