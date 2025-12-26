@@ -1,0 +1,603 @@
+{%- style -%}
+  .product-promo-section {
+    display: flex;
+    padding: 51px 0px 51px 71px ;
+    gap:24px;
+    position: relative;
+    overflow: hidden;
+    {%- if section.settings.section_bg_image != blank -%}
+      background-image: url('{{ section.settings.section_bg_image | image_url: width: 2000 }}');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    {%- endif -%}
+  }
+
+  .product-promo-left {
+    flex: 0 0 60%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .product-promo-right {
+    flex: 0 0 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .product-promo-right-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .product-promo-product-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .product-promo-product-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .product-promo-badge-title {
+    margin-bottom: 30px;
+  }
+
+  .product-promo-badge {
+    color: {{ section.settings.badge_color | default: '#FF6B35' }};
+    font-size: {{ section.settings.font_size | default: 18 }}px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    line-height: 82.5px;
+    letter-spacing: 1px;
+    display: block;
+  }
+
+  .product-promo-title {
+    color: {{ section.settings.title_color | default: '#FFFFFF' }};
+    font-size: {{ section.settings.font_size | default: 18 }}px;
+    font-weight: 700;
+    font-family: var(--font-family);
+    line-height: 110px;
+    margin: 0;
+    display: block;
+  }
+
+  .product-promo-title p {
+    margin: 0 !important;
+  }
+
+  .product-promo-description {
+    color: {{ section.settings.text_color | default: '#FFFFFF' }};
+    font-size: {{ section.settings.description_size }}px;
+    line-height: 33px;
+    font-family: var(--font-family);
+    margin: 0 0 20px 0;
+  }
+
+  .product-promo-description p {
+    margin: 0 !important;
+  }
+
+  .product-promo-disclaimer {
+    color: {{ section.settings.text_color | default: '#FFFFFF' }};
+    font-size: {{ section.settings.disclaimer_size }}px;
+    line-height: 1.5;
+    margin: 0 0 40px 0;
+    opacity: 0.9;
+  }
+
+  .product-promo-disclaimer p {
+    margin: 0 !important;
+  }
+
+  .product-promo-section .veggie-buttons {
+    display: flex;
+    justify-content:start;
+    gap: 20px;
+    margin-top: 0px;
+  }
+
+  .product-promo-section .veggie-buttons .button--primary {
+    background: transparent !important;
+    color: #0F4735;
+    font-family: var(--font-family);
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 44px;
+    text-decoration: none;
+    box-shadow: none;
+    cursor: pointer;
+    transition: transform .2s ease, box-shadow .2s ease;
+    text-align: center;
+    border-radius: 35px;
+    padding: 12px 54px;
+    border: none;
+    text-transform: lowercase;
+    transform: none !important;
+    position: relative;
+  }
+
+  .product-promo-section .veggie-buttons .button--primary:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_23_2.png?v=1764592651);
+    background-size: 100% 100%;
+    z-index: 2;
+  }
+
+  .product-promo-section .veggie-buttons .button--primary span {
+    position: relative;
+    z-index: 3 !important;
+  }
+
+  .product-promo-section .veggie-buttons .button--primary:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_25.png?v=1764592665);
+    background-size: 100% 100%;
+    padding: 8px 34px;
+    bottom: -6px;
+    z-index: 1;
+    box-shadow: none;
+  }
+
+  .product-promo-section .veggie-buttons .button--primary:hover:before {
+    background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_23_3.png?v=1764592664) !important;
+    background-size: 100% 100% !important;
+  }
+
+  .product-promo-section .veggie-buttons .button--primary:hover:after {
+    bottom: -5px;
+    box-shadow: none;
+  }
+
+  .product-promo-section .veggie-buttons .button--secondary {
+    background: transparent !important;
+    color: #63441D;
+    font-family: var(--font-family);
+    font-size: 30px;
+    line-height: 44px;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: none;
+    cursor: pointer;
+    transition: transform .2s ease, box-shadow .2s ease;
+    text-align: center;
+    border-radius: 35px;
+    padding: 12px 40px;
+    border: none;
+    text-transform: lowercase;
+    transform: none !important;
+    position: relative;
+  }
+
+  .product-promo-section .veggie-buttons .button--secondary:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_23_4.png?v=1764654764);
+    background-size: 100% 100%;
+    z-index: 2;
+  }
+
+  .product-promo-section .veggie-buttons .button--secondary span {
+    position: relative;
+    z-index: 3;
+  }
+
+  .product-promo-section .veggie-buttons .button--secondary:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_25_1.png?v=1764654764);
+    background-size: 100% 100%;
+    padding: 8px 34px;
+    bottom: -6px;
+    z-index: 1;
+    box-shadow: none;
+  }
+
+  .product-promo-section .veggie-buttons .button--secondary:hover:before {
+    background: url(https://cdn.shopify.com/s/files/1/0577/3957/5488/files/Vector_23_5.png?v=1764654764) !important;
+    background-size: 100% 100% !important;
+  }
+
+  .product-promo-section .veggie-buttons .button--secondary:hover:after {
+    bottom: -5px;
+    box-shadow: none;
+  }
+  .product-promo-description p{
+    padding-bottom:30px !important;
+  }
+@media screen and (max-width: 1440px) {
+    .product-promo-badge,
+    .product-promo-title{
+        font-size : 82px;
+        line-height:83px;
+    }
+    .product-promo-description{
+      font-size: 21px;
+      line-height:33px;
+    }
+     .product-promo-section .veggie-buttons .button--primary,
+     .product-promo-section .veggie-buttons .button--secondary{
+        font-size:20px;
+        line-height:33px;
+     }
+  }
+  @media screen and (max-width: 1200px) {
+    .product-promo-badge,
+    .product-promo-title{
+        font-size : 60px;
+      line-height: 74px;
+
+    }
+    .product-promo-description{
+      font-size: 19px;
+      line-height:33px;
+    }
+     .product-promo-section .veggie-buttons .button--primary,
+     .product-promo-section .veggie-buttons .button--secondary{
+        font-size:20px;
+        line-height:33px;
+     }
+  }
+
+  @media screen and (max-width: 990px) {
+    .product-promo-section {
+      flex-direction: column;
+      padding:0px !important;
+      min-height: auto;
+    }
+
+     .product-promo-badge-title{
+        text-align:center;
+     }
+     .product-promo-section .veggie-buttons{
+        justify-content: center;
+     }
+     .product-promo-right-content{
+        max-width:400px;
+     }
+    .product-promo-left,
+    .product-promo-right {
+      flex: 0 0 100%;
+    }
+
+    .product-promo-left {
+      padding: 25px 50px;
+    }
+
+    .product-promo-right {
+      padding: 0px 0px 40px 20px;
+    }
+
+    .product-promo-badge,
+    .product-promo-title {
+      font-size: {{ section.settings.font_size_mobile | default: 16 }}px;
+      line-height: 55px;
+    }
+
+    .product-promo-description {
+      font-size: {{ section.settings.description_size_mobile }}px;
+    }
+
+    .product-promo-section .veggie-buttons .button--primary{
+   
+      font-size: 18px;
+      line-height:28px;
+      padding: 12px 40px;
+    }
+     .product-promo-section .veggie-buttons .button--secondary{
+      padding: 12px 30px;
+        
+      font-size: 18px;
+      line-height:28px;
+
+     }
+     .product-promo-title p br {
+    display: none !important;
+  }
+  }
+
+  @media screen and (max-width: 576px) {
+    .product-promo-left {
+      padding: 40px 20px;
+    }
+
+    .product-promo-badge,
+    .product-promo-title {
+      font-size: {{ section.settings.font_size_mobile | default: 16 | times: 0.9 | round }}px;
+              line-height: 63px;
+    }
+  }
+   @media screen and (max-width: 381px) {
+    .product-promo-section .veggie-buttons .button--primary {
+        font-size: 18px;
+        line-height: 28px;
+        padding: 12px 31px !important;
+    }
+   }
+{%- endstyle -%}
+
+<div class="product-promo-section">
+  <!-- Left Section: Text Content -->
+  <div class="product-promo-left">
+    <div class="product-promo-badge-title">
+      {%- if section.settings.badge_text != blank -%}
+        <span class="product-promo-badge">
+          {{ section.settings.badge_text }}
+        </span>
+      {%- endif -%}
+
+      {%- if section.settings.product_title != blank -%}
+        <span class="product-promo-title">
+          {{ section.settings.product_title }}
+        </span>
+      {%- endif -%}
+    </div>
+
+    {%- if section.settings.description != blank -%}
+      <div class="product-promo-description">
+        {{ section.settings.description }}
+      </div>
+    {%- endif -%}
+
+    {%- if section.settings.disclaimer != blank -%}
+      <div class="product-promo-disclaimer">
+        {{ section.settings.disclaimer }}
+      </div>
+    {%- endif -%}
+
+    <div class="veggie-buttons">
+      {%- if section.settings.shop_button_text != blank -%}
+        <a href="{{ section.settings.shop_button_link | default: '#' }}" 
+           class="button button--primary">
+          <span>{{ section.settings.shop_button_text }}</span>
+        </a>
+      {%- endif -%}
+
+      {%- if section.settings.watch_button_text != blank -%}
+        <a href="{{ section.settings.watch_button_link | default: '#' }}" 
+           class="button button--secondary">
+          <span>{{ section.settings.watch_button_text }}</span>
+        </a>
+      {%- endif -%}
+    </div>
+  </div>
+
+  <!-- Right Section: Product Image -->
+  <div class="product-promo-right">
+    <div class="product-promo-right-content">
+      {%- if section.settings.product_image != blank -%}
+        <div class="product-promo-product-image">
+          {{
+            section.settings.product_image
+            | image_url: width: 1000
+            | image_tag: loading: 'lazy', alt: 'Product Image'
+          }}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Product Promo Banner",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Background"
+    },
+    {
+      "type": "image_picker",
+      "id": "section_bg_image",
+      "label": "Section Background Image",
+      "info": "Full section background image"
+    },
+    {
+      "type": "header",
+      "content": "Left Section Settings"
+    },
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "Badge Text (e.g., 'Out now:')",
+      "default": "Out now:"
+    },
+    {
+      "type": "richtext",
+      "id": "product_title",
+      "label": "Product Title",
+    },
+    {
+      "type": "color",
+      "id": "badge_color",
+      "label": "Badge Text Color",
+      "default": "#FF6B35"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "min": 15,
+      "max": 109,
+      "step": 1,
+      "unit": "px",
+      "label": "Badge & Title Font Size (Desktop)",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "font_size_mobile",
+      "min": 12,
+      "max": 56,
+      "step": 1,
+      "unit": "px",
+      "label": "Badge & Title Font Size (Mobile)",
+      "default": 16
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Even nuggets and buttered pasta can be better. In addition to whole grains for fiber and a few hidden veggies, we reduced sodium by 50% compared to the leading nugget meal, and have 14g of protein in every serving of our crispy, golden bites.</p>"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "range",
+      "id": "description_size",
+      "min": 12,
+      "max": 29,
+      "step": 1,
+      "unit": "px",
+      "label": "Description Font Size (Desktop)",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "description_size_mobile",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Description Font Size (Mobile)",
+      "default": 14
+    },
+   
+    {
+      "type": "range",
+      "id": "disclaimer_size",
+      "min": 10,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "label": "Disclaimer Font Size",
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "Button Settings"
+    },
+    {
+      "type": "text",
+      "id": "shop_button_text",
+      "label": "Shop Button Text",
+      "default": "shop now"
+    },
+    {
+      "type": "url",
+      "id": "shop_button_link",
+      "label": "Shop Button Link"
+    },
+    {
+      "type": "color",
+      "id": "shop_button_bg",
+      "label": "Shop Button Background",
+      "default": "#97D700"
+    },
+    {
+      "type": "color",
+      "id": "shop_button_text_color",
+      "label": "Shop Button Text Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "text",
+      "id": "watch_button_text",
+      "label": "Watch Button Text",
+      "default": "watch now"
+    },
+    {
+      "type": "url",
+      "id": "watch_button_link",
+      "label": "Watch Button Link"
+    },
+    {
+      "type": "color",
+      "id": "watch_button_bg",
+      "label": "Watch Button Background",
+      "default": "#FF6B35"
+    },
+    {
+      "type": "color",
+      "id": "watch_button_text_color",
+      "label": "Watch Button Text Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "range",
+      "id": "button_text_size",
+      "min": 14,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Button Font Size",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Right Section Settings"
+    },
+    {
+      "type": "image_picker",
+      "id": "product_image",
+      "label": "Product Image",
+      "info": "Product image displayed on the right side"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Promo Banner"
+    }
+  ]
+}
+{% endschema %}
+
