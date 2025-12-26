@@ -84,13 +84,13 @@ text-align:justify;
 }
 
 /* Round left corners of first label */
-.product-form__input--pill input[type=radio]label:first-of-type {
+.product-form__input--pill input[type=radio]label:last-of-type {
   border-top-left-radius: 8px !important;
   border-bottom-left-radius: 8px !important;
 }
 
 /* Round right corners of last label */
-.product-form__input--pill input[type=radio]label:last-of-type {
+.product-form__input--pill input[type=radio]label:first-of-type {
   border-right: none !important;
   border-top-right-radius: 8px !important;
   border-bottom-right-radius: 8px !important;
