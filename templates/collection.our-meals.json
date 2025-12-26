@@ -177,7 +177,7 @@
           "type": "product",
           "settings": {
             "block_width": 33,
-            "product": "chicken-nuggets",
+            "product": "white-meat-chicken-sticks",
             "show_new_badge": false,
             "new_badge_image": "shopify://shop_images/Group_243_303d7097-16c5-404d-9c4d-a2d28ce0b75b.png",
             "show_second_image": true,
@@ -203,11 +203,11 @@
             "vegetable_bottom_right": "shopify://shop_images/d36cf7d0155ef85ad388587375f7c3134b95c1e4_dd45a9d4-6c4d-4671-bd33-69ce08d77114.png"
           }
         },
-        "product_LmDPMf": {
+        "product_irdhF6": {
           "type": "product",
           "settings": {
             "block_width": 33,
-            "product": "chicken-sticks",
+            "product": "cheese-pizza-wagon-wheels",
             "show_new_badge": false,
             "new_badge_image": "shopify://shop_images/Group_243_303d7097-16c5-404d-9c4d-a2d28ce0b75b.png",
             "show_second_image": true,
@@ -218,11 +218,11 @@
             "icon_open_new_tab": false
           }
         },
-        "product_irdhF6": {
+        "product_LmDPMf": {
           "type": "product",
           "settings": {
             "block_width": 33,
-            "product": "cheese-pizza-wagon-wheels",
+            "product": "chicken-nuggets",
             "show_new_badge": false,
             "new_badge_image": "shopify://shop_images/Group_243_303d7097-16c5-404d-9c4d-a2d28ce0b75b.png",
             "show_second_image": true,
@@ -305,8 +305,8 @@
         "product_e9G4WG",
         "product_MLifqG",
         "promo_block_questions_qKYPbp",
-        "product_LmDPMf",
         "product_irdhF6",
+        "product_LmDPMf",
         "product_JAhmYB",
         "product_B3DRQ7",
         "product_ajN7M8",
