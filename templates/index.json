@@ -42,7 +42,7 @@
       "type": "video-slideshow",
       "name": "Auto Video",
       "settings": {
-        "mobile_video_url": "https://cdn.shopify.com/s/files/1/0577/3957/5488/files/food_ingr_crop_-_no_flatlay_0c0f302e-9c76-43ee-a554-1ac910a53b8c.m4v?v=1766640819",
+        "mobile_video_url": "https://cdn.shopify.com/videos/c/o/v/23b5c3bd320c46babc7d9ef77a6f5485.mp4",
         "video_url": "https://cdn.shopify.com/s/files/1/0577/3957/5488/files/food_ingr_crop_-_no_flatlay_0c0f302e-9c76-43ee-a554-1ac910a53b8c.m4v?v=1766640819",
         "large_screen_video_url": "https://cdn.shopify.com/s/files/1/0577/3957/5488/files/food_ingr_crop_-_no_flatlay_0c0f302e-9c76-43ee-a554-1ac910a53b8c.m4v?v=1766640819",
         "leaf_bg": "shopify://shop_images/Group_369.png",
