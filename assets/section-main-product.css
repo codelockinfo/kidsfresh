@@ -50,7 +50,7 @@ text-align:justify;
 /* Wrapper for pill selector */
 .product-form__input--pill {
   display: inline-flex !important;
-  border: 1.5px solid #0F4735 !important;
+  /* border: 1.5px solid #0F4735 !important; */
   border-radius: 8px !important;
   overflow: hidden !important;
 }
@@ -78,22 +78,14 @@ text-align:justify;
 .product-form__input--pill input[type=radio]+label{
   border:none !important;
   border-radius:0 !important;
-  /* border: 1.5px solid #0F4735 !important; */
-  /* border-top-right-radius: 8px !important;
-  border-bottom-right-radius: 8px !important; */
-}
-
-/* Round left corners of first label */
-.product-form__input--pill label:first-of-type {
-  border-top-left-radius: 8px !important;
-  border-bottom-left-radius: 8px !important;
-}
-
-/* Round right corners of last label */
-.product-form__input--pill label:last-of-type {
-  border-right: none !important;
+  border: 1.5px solid #0F4735 !important;
   border-top-right-radius: 8px !important;
   border-bottom-right-radius: 8px !important;
+}
+
+/* Remove divider from last label */
+.product-form__input--pill label:last-of-type {
+  border-right: none !important;
 }
 
 /* SELECTED pill style */
@@ -101,8 +93,8 @@ text-align:justify;
   background: #0F4735 !important; /* green background */
   color: #F8F4EB !important;
   font-weight: 700 !important;
-  /* border-top-right-radius: 0 !important;
-    border-bottom-right-radius: 0 !important; */
+  border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
 }
 
 /* Hover effect */
