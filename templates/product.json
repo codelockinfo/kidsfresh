@@ -55,9 +55,7 @@
             "default_open": false,
             "enable_highlighted_design": false,
             "use_metafields": true,
-            "ingredients_metafield": "custom.long_description",
-            "ingredients_metafield_label": "Label 1",
-            "ingredients_metafield_sublabel": ""
+            "ingredients_metafield": "custom.long_description"
           }
         },
         "collapsible_tab_kHYXYj": {
@@ -70,9 +68,7 @@
             "default_open": false,
             "enable_highlighted_design": false,
             "use_metafields": true,
-            "ingredients_metafield": "custom.ingrediants",
-            "ingredients_metafield_label": "Label 1",
-            "ingredients_metafield_sublabel": ""
+            "ingredients_metafield": "custom.ingrediants"
           }
         },
         "collapsible_tab_bJUBwU": {
@@ -85,9 +81,7 @@
             "default_open": false,
             "enable_highlighted_design": false,
             "use_metafields": true,
-            "ingredients_metafield": "custom.allergens",
-            "ingredients_metafield_label": "Label 1",
-            "ingredients_metafield_sublabel": ""
+            "ingredients_metafield": "custom.allergens"
           }
         },
         "nutritionally_notable_UV8CDc": {
@@ -96,16 +90,11 @@
             "heading": "Nutritionally Notable",
             "icon": "none",
             "default_open": true,
+            "use_metafields": true,
             "content": "",
-            "metafield_1": "custom.protein",
-            "metafield_1_label": "Protein",
-            "metafield_1_sublabel": "Per serving",
-            "metafield_2": "custom.artificial_flavors_or_ingredients",
-            "metafield_2_label": "NO Artificial Flavors or Ingredients",
-            "metafield_2_sublabel": "",
-            "metafield_3": "custom.specific_to_prod",
-            "metafield_3_label": "Specific to Prod",
-            "metafield_3_sublabel": ""
+            "metafield_1": "custom.metafiled_1",
+            "metafield_2": "custom.metafiled_2",
+            "metafield_3": "custom.metafiled_3"
           }
         }
       },
