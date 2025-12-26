@@ -92,7 +92,7 @@ transition: 0.25s ease;
 
 /* Round right corners of last label - higher specificity */
 .product-form__input--pill input[type=radio]+label:last-of-type {
-  border-right: none !important;
+  /* border-right: none !important; */
   border-top-right-radius: 8px !important;
   border-bottom-right-radius: 8px !important;
 }
