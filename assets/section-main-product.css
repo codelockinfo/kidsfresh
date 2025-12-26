@@ -78,7 +78,7 @@ text-align:justify;
 .product-form__input--pill input[type=radio]+label{
   border:none !important;
   border-radius:0 !important;
-  border: 1.5px solid #0F4735 !important;
+  /* border: 1.5px solid #0F4735 !important; */
   /* border-top-right-radius: 8px !important;
   border-bottom-right-radius: 8px !important; */
 }
