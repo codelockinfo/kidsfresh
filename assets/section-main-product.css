@@ -123,7 +123,6 @@ text-align:justify;
     font-weight: 400;
     font-size: 21px;
     color: #5D3328;
-    padding:10px 0;
     line-height: 33px;
     letter-spacing: 1.5%;
 }
@@ -147,14 +146,14 @@ color: #39302D;
   padding: 1.5rem 0 0 0;
 }
 
-.highlighted-accordion__items {
+.accordion--highlighted .highlighted-accordion__items {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   margin-top: 1rem;
 }
 
-.highlighted-accordion__item {
+.accordion--highlighted .highlighted-accordion__item {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -164,11 +163,11 @@ color: #39302D;
   /* border-radius: 4px; */
   border-right: 2px solid #E7DEC7;
 }
-.highlighted-accordion__item:last-child {
+.accordion--highlighted .highlighted-accordion__item:last-child {
   border-right: none;
 }
 
-.highlighted-accordion__value {
+.accordion--highlighted .highlighted-accordion__value {
    font-family: var(--font-family);
 font-weight: 700;
 color:#ED7723;
@@ -178,7 +177,16 @@ line-height: 100%;
 letter-spacing: -2%;
 }
 
-.highlighted-accordion__label {
+.accordion--highlighted .highlighted-accordion__value strong {
+  font-family: var(--font-family);
+  font-weight: 700;
+  color: #ED7723;
+  font-size: 46px;
+  line-height: 100%;
+  letter-spacing: -2%;
+}
+
+.accordion--highlighted .highlighted-accordion__label {
    font-family: var(--font-family);
 font-weight: 500;
 font-size: 22px;
@@ -189,7 +197,7 @@ letter-spacing:0px;
 padding-top: 10px;
 }
 
-.highlighted-accordion__sublabel {
+.accordion--highlighted .highlighted-accordion__sublabel {
      font-family: var(--font-family);
 font-weight: 400;
 font-size: 19px;
@@ -253,7 +261,22 @@ product-info .pdp-buttons {
       bottom: -6px;
       box-shadow: none !important;
     }
-
+    .accordion--highlighted .highlighted-accordion__value p{
+      font-size: 29px;
+      line-height: 60px;
+      color: #39302D;
+      font-family: var(--font-family);
+      margin: 0px;
+      font-weight: 500;
+    }
+    .accordion--highlighted .highlighted-accordion__value p:last-child{
+      font-size: 21px;
+      line-height: 100%;
+      font-family: var(--font-family);
+      color: #39302D;
+      margin: 0px;
+      font-weight: 400;
+    }
     product-info .button--secondary {
       background: transparent !important;
       color: #63441D;
@@ -337,16 +360,25 @@ product-info .pdp-buttons {
   font-size: 16px;
   line-height: 25px;
 }
-.highlighted-accordion__value {
+.accordion--highlighted .highlighted-accordion__value {
   font-size: 35px;
   line-height: 100%;
 }
 
-.highlighted-accordion__label {
+.accordion--highlighted .highlighted-accordion__value strong {
+  font-family: var(--font-family);
+  font-weight: 700;
+  color: #ED7723;
+  font-size: 35px;
+  line-height: 100%;
+  letter-spacing: -2%;
+}
+
+.accordion--highlighted .highlighted-accordion__label {
   font-size: 19px;
   line-height: 24px;
 }
-.highlighted-accordion__sublabel {
+.accordion--highlighted .highlighted-accordion__sublabel {
   font-size: 16px;
 }
 .product__accordion svg {
@@ -392,16 +424,25 @@ product-info .button--primary  {
   font-size: 16px;
   line-height: 25px;
 }
-.highlighted-accordion__value {
+.accordion--highlighted .highlighted-accordion__value {
   font-size: 32px;
   line-height: 100%;
 }
 
-.highlighted-accordion__label {
+.accordion--highlighted .highlighted-accordion__value strong {
+  font-family: var(--font-family);
+  font-weight: 700;
+  color: #ED7723;
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: -2%;
+}
+
+.accordion--highlighted .highlighted-accordion__label {
   font-size: 18px;
   line-height: 22px;
 }
-.highlighted-accordion__sublabel {
+.accordion--highlighted .highlighted-accordion__sublabel {
   font-size: 14px;
 }
 .product__accordion svg {
@@ -486,16 +527,25 @@ product-info .button--primary  {
   font-size: 16px;
   line-height: 25px;
 }
-.highlighted-accordion__value {
+.accordion--highlighted .highlighted-accordion__value {
   font-size: 32px;
   line-height: 100%;
 }
 
-.highlighted-accordion__label {
+.accordion--highlighted .highlighted-accordion__value strong {
+  font-family: var(--font-family);
+  font-weight: 700;
+  color: #ED7723;
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: -2%;
+}
+
+.accordion--highlighted .highlighted-accordion__label {
   font-size: 18px;
   line-height: 22px;
 }
-.highlighted-accordion__sublabel {
+.accordion--highlighted .highlighted-accordion__sublabel {
   font-size: 14px;
 }
 .product__accordion svg {
@@ -565,16 +615,25 @@ product-info {
 .product-form__input {
   margin: 0 !important;
 }
-.highlighted-accordion__value {
+.accordion--highlighted .highlighted-accordion__value {
   font-size: 32px;
   line-height: 100%;
 }
 
-.highlighted-accordion__label {
+.accordion--highlighted .highlighted-accordion__value strong {
+  font-family: var(--font-family);
+  font-weight: 700;
+  color: #ED7723;
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: -2%;
+}
+
+.accordion--highlighted .highlighted-accordion__label {
   font-size: 18px;
   line-height: 22px;
 }
-.highlighted-accordion__sublabel {
+.accordion--highlighted .highlighted-accordion__sublabel {
   font-size: 14px;
 }
 .product__accordion svg {
@@ -618,16 +677,25 @@ product-info .button--primary  {
   font-size: 14px;
   line-height: 25px;
 }
-.highlighted-accordion__value {
+.accordion--highlighted .highlighted-accordion__value {
   font-size: 30px;
   line-height: 100%;
 }
 
-.highlighted-accordion__label {
+.accordion--highlighted .highlighted-accordion__value strong {
+  font-family: var(--font-family);
+  font-weight: 700;
+  color: #ED7723;
+  font-size: 30px;
+  line-height: 100%;
+  letter-spacing: -2%;
+}
+
+.accordion--highlighted .highlighted-accordion__label {
   font-size: 16px;
   line-height: 20px;
 }
-.highlighted-accordion__sublabel {
+.accordion--highlighted .highlighted-accordion__sublabel {
   font-size: 12px;
 }
 .product__accordion svg {
