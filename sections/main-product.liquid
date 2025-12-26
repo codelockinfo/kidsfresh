@@ -111,12 +111,66 @@
               {%- when '@app' -%}
                 {% render block %}
               {%- when 'text' -%}
-                <p
-                  class="product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
-                  {{ block.shopify_attributes }}
-                >
-                  {{- block.settings.text -}}
-                </p>
+                {%- liquid
+                  assign text_metafield = blank
+                  
+                  if block.settings.use_metafields
+                    if block.settings.text_metafield != blank
+                      assign metafield_path = block.settings.text_metafield | split: '.'
+                      if metafield_path.size == 2
+                        assign namespace = metafield_path[0]
+                        assign key = metafield_path[1]
+                        if namespace == 'custom'
+                          assign text_metafield_obj = product.metafields.custom[key]
+                          if text_metafield_obj != blank
+                            assign text_metafield = text_metafield_obj.value | default: text_metafield_obj
+                          endif
+                        elsif namespace == 'shopify'
+                          assign text_metafield_obj = product.metafields.shopify[key]
+                          if text_metafield_obj != blank
+                            assign text_metafield = text_metafield_obj.value | default: text_metafield_obj
+                          endif
+                        endif
+                      endif
+                    endif
+                  endif
+                  
+                  assign has_metafield_content = false
+                  if text_metafield != blank
+                    assign has_metafield_content = true
+                  endif
+                -%}
+                {%- if block.settings.use_metafields and has_metafield_content == false -%}
+                  {%- comment -%} Don't render if using metafields but none are available {%- endcomment -%}
+                {%- else -%}
+                  <p
+                    class="product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
+                    {{ block.shopify_attributes }}
+                  >
+                    <div class="long_description">
+                    {%- if block.settings.use_metafields and has_metafield_content -%}
+                      {%- if block.settings.text_metafield != blank -%}
+                        {%- assign mf_path = block.settings.text_metafield | split: '.' -%}
+                        {%- if mf_path.size == 2 -%}
+                          {%- if mf_path[0] == 'custom' -%}
+                            {%- assign mf_obj = product.metafields.custom[mf_path[1]] -%}
+                            {%- if mf_obj != blank -%}
+                              {{ mf_obj | metafield_tag }}
+                            {%- endif -%}
+                          {%- elsif mf_path[0] == 'shopify' -%}
+                            {%- assign mf_obj = product.metafields.shopify[mf_path[1]] -%}
+                            {%- if mf_obj != blank -%}
+                              {{ mf_obj | metafield_tag }}
+                            {%- endif -%}
+                          {%- endif -%}
+                        {%- endif -%}
+                      {%- endif -%}
+                    {%- else -%}
+                      {{- block.settings.text -}}
+                    {%- endif -%}
+                  </div>
+                  </p>
+                {%- endif -%}
               {%- when 'title' -%}
                 <div class="product__title" {{ block.shopify_attributes }}>
                   <h1>{{ product.title | escape }}</h1>
@@ -1172,6 +1226,22 @@
           ],
           "default": "body",
           "label": "t:sections.main-product.blocks.text.settings.text_style.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "use_metafields",
+          "default": false,
+          "label": "Use metafields for content"
+        },
+        {
+          "type": "header",
+          "content": "Metafield"
+        },
+        {
+          "type": "text",
+          "id": "text_metafield",
+          "label": "Metafield path (e.g., custom.description)",
+          "info": "Enter the metafield namespace and key separated by a dot"
         }
       ]
     },

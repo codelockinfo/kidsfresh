@@ -36,6 +36,13 @@ line-height: 34px;
 letter-spacing: -2%;
 text-align:justify;
 }
+.long_description p {
+  color: #39302D;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+}
 .product__info-container .product__description{
   margin:0  0 40px 0px !important;
 }
@@ -43,7 +50,7 @@ text-align:justify;
 /* Wrapper for pill selector */
 .product-form__input--pill {
   display: inline-flex !important;
-  border: 1.5px solid #0F4735 !important;
+  /* border: 1.5px solid #0F4735 !important; */
   border-radius: 8px !important;
   overflow: hidden !important;
 }
@@ -63,7 +70,7 @@ text-align:justify;
   margin: 0 !important;
   cursor: pointer;
   background: transparent !important;
-  color: #0F4735 !important;
+  color: #819987 !important;
   border-right: 1px solid #0F4735 !important;
   transition: 0.25s ease;
 }
@@ -71,6 +78,9 @@ text-align:justify;
 .product-form__input--pill input[type=radio]+label{
   border:none !important;
   border-radius:0 !important;
+  border: 1.5px solid #0F4735 !important;
+  border-top-right-radius: 8px !important;
+  border-bottom-right-radius: 8px !important;
 }
 
 /* Remove divider from last label */
@@ -83,6 +93,8 @@ text-align:justify;
   background: #0F4735 !important; /* green background */
   color: #F8F4EB !important;
   font-weight: 700 !important;
+  border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
 }
 
 /* Hover effect */
@@ -313,6 +325,10 @@ product-info .pdp-buttons {
   font-size: 18px;
   line-height: 26px;
 }
+.long_description p {
+  font-size: 18px;
+  line-height: 26px;
+}
 .summary__title h2 {
   font-size: 27px;
   line-height: 100%;
@@ -362,6 +378,10 @@ product-info .button--primary  {
 }
 .product__description p {
   font-size: 18px;
+  line-height: 26px;
+}
+.long_description p {
+    font-size: 18px;
   line-height: 26px;
 }
 .summary__title h2 {
@@ -454,6 +474,10 @@ product-info .button--primary  {
   font-size: 18px;
   line-height: 26px;
 }
+.long_description p {
+    font-size: 18px;
+  line-height: 26px;
+}
 .summary__title h2 {
   font-size: 25px;
   line-height: 100%;
@@ -525,6 +549,11 @@ product-info {
   font-size: 18px;
   line-height: 26px;
 }
+
+.long_description p {
+  font-size: 18px;
+  line-height: 26px;
+}
 .summary__title h2 {
   font-size: 25px;
   line-height: 100%;
@@ -574,6 +603,11 @@ product-info .button--primary  {
 }
 .product__description p {
   font-size: 16px;
+  line-height: 24px;
+}
+
+.long_description p {
+    font-size: 16px;
   line-height: 24px;
 }
 .summary__title h2 {

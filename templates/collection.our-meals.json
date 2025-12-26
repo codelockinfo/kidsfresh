@@ -263,6 +263,36 @@
             "icon_link": "",
             "icon_open_new_tab": false
           }
+        },
+        "product_ajN7M8": {
+          "type": "product",
+          "settings": {
+            "block_width": 33,
+            "product": "spaghetti-loops-meat-sauce",
+            "show_new_badge": false,
+            "new_badge_image": "shopify://shop_images/Group_243_303d7097-16c5-404d-9c4d-a2d28ce0b75b.png",
+            "show_second_image": true,
+            "custom_description": "Product description",
+            "search_icon": "shopify://shop_images/store_locator_QB.png",
+            "search_icon_hover": "shopify://shop_images/ChatGPT_Image_Dec_2_2025_06_51_07_PM_dc3c5109-df73-409a-bdd7-72fd465d2d1b.png",
+            "icon_link": "",
+            "icon_open_new_tab": false
+          }
+        },
+        "product_DpGttC": {
+          "type": "product",
+          "settings": {
+            "block_width": 33,
+            "product": "white-meat-chicken-nuggets",
+            "show_new_badge": false,
+            "new_badge_image": "shopify://shop_images/Group_243_303d7097-16c5-404d-9c4d-a2d28ce0b75b.png",
+            "show_second_image": true,
+            "custom_description": "Product description",
+            "search_icon": "shopify://shop_images/store_locator_QB.png",
+            "search_icon_hover": "shopify://shop_images/ChatGPT_Image_Dec_2_2025_06_51_07_PM_dc3c5109-df73-409a-bdd7-72fd465d2d1b.png",
+            "icon_link": "",
+            "icon_open_new_tab": false
+          }
         }
       },
       "block_order": [
@@ -278,7 +308,9 @@
         "product_LmDPMf",
         "product_irdhF6",
         "product_JAhmYB",
-        "product_B3DRQ7"
+        "product_B3DRQ7",
+        "product_ajN7M8",
+        "product_DpGttC"
       ],
       "name": "Custom Collection Grid",
       "settings": {
