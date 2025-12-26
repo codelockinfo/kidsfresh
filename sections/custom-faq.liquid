@@ -81,13 +81,18 @@
 }
 
 .tabs-grid {
-  display: grid;
-  grid-template-columns: repeat(4, auto);
+  display: flex;
+  flex-wrap: nowrap;
   gap: 71px;
+  align-items: center;
+  justify-content: center;
 }
 
 @media(max-width:768px){
-  .tabs-grid { grid-template-columns: repeat(2, auto); }
+  .tabs-grid { 
+    flex-wrap: wrap;
+    gap: 40px;
+  }
   .faq-tabs { display: block; text-align: center; }
   .faq-custom-container { padding: 0 30px; }
 }
@@ -129,6 +134,18 @@
     width: 100%;
 }
 
+/* DISABLED TAB STYLE - When no FAQs in section */
+.faq-tab.disabled {
+    color: #999 !important;
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.faq-tab.disabled::after {
+    display: none;
+}
+
 /* -------------------------
    DYNAMIC TITLE ABOVE FAQ
 -------------------------- */
@@ -145,8 +162,23 @@
 /* -------------------------
    FAQ SECTION
 -------------------------- */
-.faq-section { display: none; }
-.faq-section.active { display: block; }
+.faq-section { display: block; }
+.faq-section.hidden { display: none; }
+
+/* -------------------------
+   SECTION TITLE (BEFORE EACH SECTION'S FAQs)
+-------------------------- */
+.section-title {
+  font-family: var(--font-family);
+  font-size: 60px;
+  line-height: 50px;
+  font-weight: 700;
+  color: #0F4735;
+  margin: 50px 0 30px;
+  text-transform: lowercase;
+}
+
+.section-title.hidden { display: none; }
 
 /* -------------------------
    FAQ ITEM - CONTENT IN SAME CONTAINER, OVERLAPS BELOW
@@ -243,6 +275,11 @@
       line-height: 38px;
       margin: 35px 0;
     }
+    .section-title {
+      font-size: 45px;
+      line-height: 38px;
+      margin: 35px 0 25px;
+    }
     .faq-item-title {
       font-size: 30px;
       line-height: 38px;
@@ -269,6 +306,11 @@
       line-height: 38px;
       margin: 35px 0;
     }
+    .section-title {
+      font-size: 42px;
+      line-height: 38px;
+      margin: 35px 0 25px;
+    }
     .faq-item-title {
       font-size: 28px;
       line-height: 34px;
@@ -294,6 +336,11 @@
       font-size: 40px;
       line-height: 38px;
       margin: 36px 0;
+    }
+    .section-title {
+      font-size: 40px;
+      line-height: 38px;
+      margin: 36px 0 25px;
     }
     .faq-item-title {
       font-size: 26px;
@@ -352,6 +399,11 @@
       line-height: 50px;
       margin: 16px 0 20px;
     }
+    .section-title {
+      font-size: 38px;
+      line-height: 50px;
+      margin: 16px 0 20px;
+    }
 }
 
 @media(max-width: 576px){
@@ -360,6 +412,11 @@
     line-height: 30px 
   }
   .faq-dynamic-title {
+    font-size: 34px;
+    line-height: 40px;
+    margin: 16px 0 20px;
+  }
+  .section-title {
     font-size: 34px;
     line-height: 40px;
     margin: 16px 0 20px;
@@ -449,13 +506,15 @@
     <div class="faq-custom-container">
 
       <!-- ⭐ DYNAMIC TITLE -->
-      <h2 id="faq-dynamic-title" class="faq-dynamic-title">
-        {% assign first_tab = section.blocks | where: 'type', 'tab' | first %}
-        {{ first_tab.settings.tab_title }}
-      </h2>
 
       {% for tab in section.blocks %}
         {% if tab.type == 'tab' %}
+        <!-- Section Title -->
+        <h3 class="section-title" id="title-{{ tab.settings.tab_id }}" data-tab-id="{{ tab.settings.tab_id }}">
+          {{ tab.settings.tab_title }}
+        </h3>
+
+        <!-- Section FAQs -->
         <div class="faq-section" id="section-{{ tab.settings.tab_id }}">
 
           {% for faq in section.blocks %}
@@ -495,30 +554,93 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const tabs = document.querySelectorAll(".faq-tab");
   const sections = document.querySelectorAll(".faq-section");
-  const titleBox = document.getElementById("faq-dynamic-title");
 
-  /* DEFAULT FIRST TAB ACTIVE */
-  if (tabs.length > 0) {
-    tabs[0].classList.add("active");
-    sections[0].classList.add("active");
+  /* CHECK AND DISABLE TABS WITH NO FAQs */
+  function checkAndDisableEmptyTabs() {
+    tabs.forEach(tab => {
+      const tabId = tab.dataset.tab;
+      const section = document.getElementById("section-" + tabId);
+      
+      if (section) {
+        const faqItems = section.querySelectorAll(".faq-item");
+        
+        // If no FAQs found, disable the tab
+        if (faqItems.length === 0) {
+          tab.classList.add("disabled");
+        } else {
+          tab.classList.remove("disabled");
+        }
+      } else {
+        // If section doesn't exist, disable the tab
+        tab.classList.add("disabled");
+      }
+    });
   }
 
-  /* TAB SWITCHING + TITLE UPDATE */
+  /* FUNCTION TO UPDATE VISIBLE SECTIONS AND TITLE */
+  function updateVisibleSections() {
+    const activeTabs = Array.from(tabs).filter(tab => tab.classList.contains("active"));
+    const sectionTitles = document.querySelectorAll(".section-title");
+    
+    // Show/hide sections and their titles based on active tabs
+    sections.forEach(section => {
+      const sectionId = section.id.replace("section-", "");
+      const correspondingTab = Array.from(tabs).find(tab => tab.dataset.tab === sectionId);
+      const sectionTitle = document.getElementById("title-" + sectionId);
+      const faqItems = section.querySelectorAll(".faq-item");
+      const hasFAQs = faqItems.length > 0;
+      
+      if (activeTabs.length === 0) {
+        // If no tabs are active, show all sections and titles (only if they have FAQs)
+        if (hasFAQs) {
+          section.classList.remove("hidden");
+          if (sectionTitle) sectionTitle.classList.remove("hidden");
+        } else {
+          section.classList.add("hidden");
+          if (sectionTitle) sectionTitle.classList.add("hidden");
+        }
+      } else {
+        // Show section and title only if its corresponding tab is active AND has FAQs
+        if (correspondingTab && correspondingTab.classList.contains("active")) {
+          if (hasFAQs) {
+            section.classList.remove("hidden");
+            if (sectionTitle) sectionTitle.classList.remove("hidden");
+          } else {
+            // Even if tab is active, hide if no FAQs
+            section.classList.add("hidden");
+            if (sectionTitle) sectionTitle.classList.add("hidden");
+          }
+        } else {
+          section.classList.add("hidden");
+          if (sectionTitle) sectionTitle.classList.add("hidden");
+        }
+      }
+    });
+
+    // Note: Dynamic title removed, using section titles instead
+  }
+
+  /* TAB TOGGLE - Allow multiple tabs to be active */
   tabs.forEach(tab => {
     tab.addEventListener("click", () => {
-      const id = tab.dataset.tab;
-
-      /* CHANGE TITLE */
-      titleBox.textContent = tab.textContent.trim();
-
-      /* SWITCH TAB */
-      tabs.forEach(t => t.classList.remove("active"));
-      sections.forEach(s => s.classList.remove("active"));
-
-      tab.classList.add("active");
-      document.getElementById("section-" + id).classList.add("active");
+      // Don't allow clicking disabled tabs
+      if (tab.classList.contains("disabled")) {
+        return;
+      }
+      
+      // Toggle active state
+      tab.classList.toggle("active");
+      
+      // Update visible sections and title
+      updateVisibleSections();
     });
   });
+
+  // Check for empty tabs and disable them
+  checkAndDisableEmptyTabs();
+
+  // Initialize - show all sections by default
+  updateVisibleSections();
 
   /* FAQ ACCORDION - Only arrow button is clickable */
   document.querySelectorAll(".faq-arrow").forEach(arrow => {
