@@ -49,10 +49,11 @@ margin:0  0 40px 0px !important;
 
 /* Wrapper for pill selector */
 .product-form__input--pill {
-display: inline-flex !important;
-border: 1.5px solid #0F4735 !important;
-border-radius: 8px !important;
-overflow: hidden !important;
+
+  display: inline-flex !important;
+  /* border: 1.5px solid #0F4735 !important; */
+  border-radius: 8px !important;
+  overflow: hidden !important;
 }
 
 /* Hide radio inputs */
@@ -76,11 +77,11 @@ transition: 0.25s ease;
 }
 
 .product-form__input--pill input[type=radio]+label{
-border:none !important;
-border-radius:0 !important;
-/* border: 1.5px solid #0F4735 !important; */
-/* border-top-right-radius: 8px !important;
-border-bottom-right-radius: 8px !important; */
+  border:none !important;
+  border-radius:0 !important;
+  border: 1.5px solid #0F4735 !important;
+  /* border-top-right-radius: 8px !important;
+  border-bottom-right-radius: 8px !important; */
 }
 
 /* Remove divider from last label */
