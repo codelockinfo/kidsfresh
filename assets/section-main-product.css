@@ -85,8 +85,16 @@ transition: 0.25s ease;
 }
 
 /* Remove divider from last label */
-.product-form__input--pill label:last-of-type {
-border-right: none !important;
+.product-form__input--pill input[type=radio]+label:first-of-type {
+  border-top-left-radius: 8px !important;
+  border-bottom-left-radius: 8px !important;
+}
+
+/* Round right corners of last label - higher specificity */
+.product-form__input--pill input[type=radio]+label:last-of-type {
+  border-right: none !important;
+  border-top-right-radius: 8px !important;
+  border-bottom-right-radius: 8px !important;
 }
 
 /* SELECTED pill style */
