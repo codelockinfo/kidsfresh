@@ -355,10 +355,6 @@
                                     {%- endif -%}
                                   {%- endif -%}
                                 </div>
-                                <div class="highlighted-accordion__label">{{ block.settings.ingredients_metafield_label  | escape }}</div>
-                                {%- if block.settings.ingredients_metafield_sublabel != blank -%}
-                                  <div class="highlighted-accordion__sublabel">{{ block.settings.ingredients_metafield_sublabel | escape }}</div>
-                                {%- endif -%}
                               </div>
                             {%- endif -%}
                           </div>
@@ -489,10 +485,6 @@
                                     {%- endif -%}
                                   {%- endif -%}
                                 </div>
-                                <div class="highlighted-accordion__label">{{ block.settings.metafield_1_label | escape }}</div>
-                                {%- if block.settings.metafield_1_sublabel != blank -%}
-                                  <div class="highlighted-accordion__sublabel">{{ block.settings.metafield_1_sublabel | escape }}</div>
-                                {%- endif -%}
                               </div>
                             {%- endif -%}
                             {%- if metafield_2_obj != blank -%}
@@ -515,10 +507,6 @@
                                     {%- endif -%}
                                   {%- endif -%}
                                 </div>
-                                <div class="highlighted-accordion__label">{{ block.settings.metafield_2_label | escape }}</div>
-                                {%- if block.settings.metafield_2_sublabel != blank -%}
-                                  <div class="highlighted-accordion__sublabel">{{ block.settings.metafield_2_sublabel | escape }}</div>
-                                {%- endif -%}
                               </div>
                             {%- endif -%}
                             {%- if metafield_3_obj != blank -%}
@@ -541,10 +529,6 @@
                                     {%- endif -%}
                                   {%- endif -%}
                                 </div>
-                                <div class="highlighted-accordion__label">{{ block.settings.metafield_3_label | escape }}</div>
-                                {%- if block.settings.metafield_3_sublabel != blank -%}
-                                  <div class="highlighted-accordion__sublabel">{{ block.settings.metafield_3_sublabel | escape }}</div>
-                                {%- endif -%}
                               </div>
                             {%- endif -%}
                           </div>
@@ -1693,16 +1677,6 @@
           "id": "ingredients_metafield",
           "label": "Metafield path (e.g., custom.ingrediants)",
           "info": "Enter the metafield namespace and key separated by a dot"
-        },
-        {
-          "type": "text",
-          "id": "ingredients_metafield_label",
-          "label": "Label"
-        },
-        {
-          "type": "text",
-          "id": "ingredients_metafield_sublabel",
-          "label": "Sublabel (optional)"
         }
       ]
     },
@@ -1929,18 +1903,6 @@
           "default": "custom.protein"
         },
         {
-          "type": "text",
-          "id": "metafield_1_label",
-          "label": "Label",
-          "default": "Protein"
-        },
-        {
-          "type": "text",
-          "id": "metafield_1_sublabel",
-          "label": "Sublabel (optional)",
-          "default": "Per serving"
-        },
-        {
           "type": "header",
           "content": "Metafield 2"
         },
@@ -1952,17 +1914,6 @@
           "default": "custom.sodium"
         },
         {
-          "type": "text",
-          "id": "metafield_2_label",
-          "label": "Label",
-          "default": "NO Artificial Flavors or Ingredients"
-        },
-        {
-          "type": "text",
-          "id": "metafield_2_sublabel",
-          "label": "Sublabel (optional)"
-        },
-        {
           "type": "header",
           "content": "Metafield 3"
         },
@@ -1972,17 +1923,6 @@
           "label": "Metafield path (e.g., custom.preservatives)",
           "info": "Enter the metafield namespace and key separated by a dot",
           "default": "custom.preservatives"
-        },
-        {
-          "type": "text",
-          "id": "metafield_3_label",
-          "label": "Label",
-          "default": "Specific to Prod"
-        },
-        {
-          "type": "text",
-          "id": "metafield_3_sublabel",
-          "label": "Sublabel (optional)"
         }
       ]
     },
