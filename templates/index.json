@@ -80,6 +80,7 @@
           "type": "product",
           "settings": {
             "image": "shopify://shop_images/FINAL_CMPM_1_2342e1ec-ecc1-4d38-aaba-36c14d438ab7.png",
+            "product_url": "shopify://products/chicken-meatballs-pasta-marinara",
             "title": "<p>Chicken Meatballs & Pasta Marinara</p>",
             "description": "a dinnertime classic, upgraded",
             "veggie_group_image": "shopify://shop_images/vegitable_1.png"
@@ -89,6 +90,7 @@
           "type": "product",
           "settings": {
             "image": "shopify://shop_images/FINAL_WWMC_1.png",
+            "product_url": "",
             "title": "<p>Wagon Wheel <br/>Mac & Cheese</p>",
             "description": "their favorite, now with undercover veggies",
             "veggie_group_image": "shopify://shop_images/Group_299_4.png"
@@ -98,6 +100,7 @@
           "type": "product",
           "settings": {
             "image": "shopify://shop_images/FINAL_CNBP_1.png",
+            "product_url": "",
             "title": "<p>Chicken Nuggets & <br/>Buttered Pasta</p>",
             "description": "even buttered pasta can be better",
             "veggie_group_image": "shopify://shop_images/Group_298_10.png"
