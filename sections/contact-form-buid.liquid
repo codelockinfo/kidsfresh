@@ -519,6 +519,7 @@
         </div>
 
         <div class="form-field-wrapper half">
+           {% if st.show_city %}
           <div class="form-field-group">
             <label for="contact-city" class="form-label">your city:</label>
             <input 
@@ -529,6 +530,7 @@
               placeholder="city"
             >
           </div>
+          {% endif %}
           <div class="form-field-group">
             <label for="contact-state" class="form-label">your state:</label>
             <select 
