@@ -823,13 +823,9 @@
       {% if section.settings.button_text != blank %}
         <div class="ungredients-new-button-wrapper">
           {% if section.settings.button_url != blank %}
-            <a href="{{ section.settings.button_url }}" class="ungredients-new-button">
+            <a href="{{ section.settings.button_url }}" class="ungredients-new-button button">
               <span>{{ section.settings.button_text | escape }}</span>
             </a>
-          {% else %}
-            <p class="ungredients-new-button button">
-              <span>{{ section.settings.button_text | escape }}</span>
-            </p>
           {% endif %}
         </div>
       {% endif %}
