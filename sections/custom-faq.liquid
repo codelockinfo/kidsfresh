@@ -477,7 +477,7 @@
 
 
 <!-- MAIN WRAPPER -->
-<div class="main-faq-wrapper">
+<div class="main-faq-wrapper" id="{{ section.settings.section_id | default: 'faq-section' }}">
 
   <!-- TABS BACKGROUND -->
   <div class="faq-tabs-wrapper">
@@ -669,7 +669,14 @@ document.addEventListener("DOMContentLoaded", () => {
     { "type": "image_picker", "id": "tabs_bg_desktop", "label": "Tabs Background Desktop" },
     { "type": "image_picker", "id": "tabs_bg_mobile", "label": "Tabs Background Mobile" },
     { "type": "image_picker", "id": "faq_bg_desktop", "label": "FAQ Background Desktop" },
-    { "type": "image_picker", "id": "faq_bg_mobile", "label": "FAQ Background Mobile" }
+    { "type": "image_picker", "id": "faq_bg_mobile", "label": "FAQ Background Mobile" },
+    {
+      "type": "text",
+      "id": "section_id",
+      "label": "Section ID",
+      "default": "faq-section",
+      "info": "Add an ID to link to this section (e.g. #faq-section)"
+    }
   ],
 
   "blocks": [

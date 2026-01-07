@@ -331,7 +331,7 @@
  {% if section.settings.btn1_label or section.settings.btn2_label %}
       <div class="veggie-buttons1">
         {% if section.settings.btn1_label %}
-          <a href="{{ section.settings.btn1_link }}" class="button button--primary"><span>{{ section.settings.btn1_label }}</span></a>
+          <a href="{{ section.settings.btn1_link }}" class="button button--primary faq-scroll-button"><span>{{ section.settings.btn1_label }}</span></a>
         {% endif %}
         {% if section.settings.btn2_label %}
           <a href="{{ section.settings.btn2_link }}" class="button button--secondary"><span>{{ section.settings.btn2_label  }}</span></a>
@@ -409,3 +409,37 @@
   ]
 }
 {% endschema %}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var buttons = document.querySelectorAll('.faq-scroll-button');
+    
+    buttons.forEach(function(button) {
+      button.addEventListener('click', function(e) {
+        var linkHref = this.getAttribute('href');
+        var targetId = 'faq-section'; // Default ID
+        
+        // If the link is explicitly a hash, use that
+        if (linkHref.indexOf('#') > -1) {
+           var hash = linkHref.substring(linkHref.indexOf('#') + 1);
+           if(hash) targetId = hash;
+        }
+
+        var targetSection = document.getElementById(targetId);
+        
+        if (!targetSection) return;
+
+        var linkUrl = new URL(linkHref, window.location.href);
+        var currentUrl = new URL(window.location.href);
+
+        var isLocalLink = (linkUrl.pathname === currentUrl.pathname) || (linkHref.indexOf('#') === 0);
+
+        if (isLocalLink) {
+          e.preventDefault();
+          targetSection.scrollIntoView({ behavior: 'smooth' });
+          history.pushState(null, null, '#' + targetId);
+        }
+      });
+    });
+  });
+</script>

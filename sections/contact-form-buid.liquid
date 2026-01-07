@@ -267,6 +267,7 @@
     object-fit: cover;
     object-position: bottom;
     display: block;
+    display: block;
   }
 
   .wave-divider svg {
@@ -450,6 +451,64 @@
       margin-bottom: 130%;
     }
   }
+  
+  
+  /* Checkbox Styles */
+  .form-checkbox-group {
+    margin-bottom: 25px;
+    margin-top: -10px;
+  }
+  .checkbox-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 15px;
+  }
+  .checkbox-wrapper input[type="checkbox"] {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #8DC13F;
+    border-radius: 4px;
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: #ffffff;
+    cursor: pointer;
+    flex-shrink: 0;
+    position: relative;
+    margin-top: 3px;
+  }
+  .checkbox-wrapper input[type="checkbox"]:checked {
+    background-color: #8DC13F;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .checkbox-wrapper label {
+    font-size: 20px;
+    line-height: 26px;
+    color: #F89821;
+    font-family: var(--font-family);
+    cursor: pointer;
+    text-transform: lowercase;
+  }
+  .checkbox-wrapper label a {
+    color: #F89821;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+  
+  @media (max-width: 768px) {
+    .checkbox-wrapper label {
+      font-size: 12px;
+      line-height: 15px;
+    }
+    .checkbox-wrapper input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      margin-top: 1px;
+    }
+  }
 </style>
 
 <section class="contact-location-section" data-section-type="contact-location-request" data-section-id="{{ section.id }}">
@@ -579,10 +638,31 @@
             required
           ></textarea>
         </div>
+        
+        <div class="form-checkbox-group">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" id="contact-subscribe" autocomplete="off">
+            <label for="contact-subscribe">Click here to subscribe to our email list.</label>
+          </div>
+          <div class="checkbox-wrapper">
+            <input type="checkbox" id="contact-terms" required>
+            <label for="contact-terms">By clicking submit, you agree to our <a href="/policies/terms-of-service">Terms and Conditions</a> and <a href="/policies/privacy-policy">Privacy Policy</a></label>
+          </div>
+        </div>
+
         <div class="contact_btn">
         <button type="submit" class="form-submit-btn button button--primary"><span>send message</span></button>
         </div>
       {%- endform -%}
+      <!-- HIDDEN NEWSLETTER PROXY FORM (Generated via Liquid to ensure valid Auth Tokens) -->
+      <!-- We use opacity:0 instead of display:none so Shopify's Captcha script can find it and attach tokens -->
+      <div style="position: absolute; opacity: 0; pointer-events: none; height: 1px; width: 1px; overflow: hidden;">
+        {% form 'customer', id: 'hidden-newsletter-proxy', class: 'hidden-newsletter-proxy' %}
+          <input type="hidden" name="contact[tags]" value="newsletter">
+          <input type="email" name="contact[email]" id="hidden-newsletter-email" value="">
+          <input type="hidden" name="customer[accepts_marketing]" value="true">
+        {% endform %}
+      </div>
     </div>
 
     
@@ -710,3 +790,65 @@
 }
 {% endschema %}
 
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var contactForm = document.querySelector('.contact-location-form form');
+    if (!contactForm) return;
+
+    contactForm.addEventListener('submit', function(e) {
+      var subscribeCheckbox = document.getElementById('contact-subscribe');
+      
+      // DEBUG: Log the standard of the checkbox
+      // console.log('Checkbox state:', subscribeCheckbox ? subscribeCheckbox.checked : 'Missing');
+
+      // If checkbox is checked and we haven't already processed the subscription
+      if (subscribeCheckbox && subscribeCheckbox.checked === true && !contactForm.dataset.subscribed) {
+        // console.log('User CHECKED subscribe. Processing newsletter...');
+        e.preventDefault(); // Stop the contact form submission for a moment
+
+        var email = document.getElementById('contact-email').value;
+        
+        // --- Strategy: Hidden Iframe with "Visible" Form ---
+        // 1. Create a hidden iframe
+        var iframeName = 'newsletter-frame-' + new Date().getTime();
+        var iframe = document.createElement('iframe');
+        iframe.name = iframeName;
+        iframe.style.display = 'none';
+        document.body.appendChild(iframe);
+        
+        // 2. Set the email in the hidden form
+        var hiddenEmailInput = document.getElementById('hidden-newsletter-email');
+        if(hiddenEmailInput) hiddenEmailInput.value = email;
+
+        // 3. Target the hidden form to the iframe
+        var hiddenForm = document.getElementById('hidden-newsletter-proxy');
+        if(hiddenForm) {
+            hiddenForm.target = iframeName;
+            
+            // 4. Submit via the iframe
+            var hasSubmitted = false;
+            function completeSubmission() {
+                 if (hasSubmitted) return;
+                 hasSubmitted = true;
+                 contactForm.dataset.subscribed = 'true';
+                 contactForm.submit();
+                 // Clean up
+                 setTimeout(function() { if(iframe.parentNode) document.body.removeChild(iframe); }, 1000);
+            }
+    
+            iframe.onload = completeSubmission;
+    
+            document.body.style.cursor = 'wait';
+            hiddenForm.submit();
+            
+            // Safety timeout (2s)
+            setTimeout(completeSubmission, 2000);
+        } else {
+            // Fallback if hidden form missing
+            contactForm.dataset.subscribed = 'true';
+            contactForm.submit();
+        }
+      }
+    });
+  });
+</script>
