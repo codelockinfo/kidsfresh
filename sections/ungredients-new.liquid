@@ -822,7 +822,7 @@
       {% comment %} Button - Outside the box {% endcomment %}
       {% if section.settings.button_text != blank %}
         <div class="ungredients-new-button-wrapper">
-          {% if section.settings.button_url != blank %}
+          {% if section.settings.button_text != blank %}
             <a href="{{ section.settings.button_url }}" class="ungredients-new-button button">
               <span>{{ section.settings.button_text | escape }}</span>
             </a>
