@@ -20,7 +20,7 @@ image-height-wrapper{
    font-weight: 400;
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 1440px) {
     .announcement-bar p {
         font-size: 16px;
         line-height: 23px;
