@@ -217,9 +217,9 @@
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  min-width: 40px;
-  width: 40px;
-  height: 40px;
+  min-width: 52px;
+  width: 52px;
+  height: 52px;
   border: 3px solid #0F4735;
   background: #F89821;
   transition: 0.3s ease;
@@ -235,6 +235,8 @@
 .faq-item-title .faq-arrow svg {
   width: 26px !important;
   height: auto !important;
+  display: block;
+  margin-top: 5px;
 }
 
 /* FAQ CONTENT - INSIDE SAME CONTAINER */
@@ -647,25 +649,10 @@ document.addEventListener("DOMContentLoaded", () => {
     arrow.addEventListener("click", (e) => {
       e.stopPropagation(); // Prevent event bubbling
       const item = arrow.closest(".faq-item");
-      if (item) {
-        const isOpening = !item.classList.contains("open");
-        item.classList.toggle("open");
-        
-        // Calculate negative margin based on content height for overlap
-        if (isOpening) {
-          setTimeout(() => {
-            const content = item.querySelector(".faq-item-content");
-            if (content) {
-              const contentHeight = content.scrollHeight;
-              // Set negative margin to overlap items below (content height + some padding)
-              item.style.marginBottom = `-${contentHeight + 50}px`;
-            }
-          }, 100); // Wait for transition to start
-        } else {
-          // Reset margin when closing
-          item.style.marginBottom = "";
+        if (item) {
+          const isOpening = !item.classList.contains("open");
+          item.classList.toggle("open");
         }
-      }
     });
   });
 
