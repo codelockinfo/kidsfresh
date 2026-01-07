@@ -75,7 +75,7 @@
           "settings": {
             "parent_tab": "products",
             "faq_question": "What is the recommended age for kids eating Kidfresh meals?",
-            "faq_answer": "<p>We craft our meals with the needs of kids in mind*. And we do so with the recommendations of our registered dietitian to help meet the MyPlate Food Group guidelines for those age groups. Of course, tweens, teens, and adults looking for help getting a little extra veggie boost are also welcome to enjoy our meals, too.<br/><br/>*Every child has individual needs, so it’s best to consult with a pediatrician or dietitian.<br/>For a customized MyPlate Plan, based on age, gender and weight, visit  www.myplate.gov/myplate-plan.</p>"
+            "faq_answer": "<p>We craft our meals with the needs of kids in mind*. And we do so with the recommendations of our registered dietitian to help meet the MyPlate Food Group guidelines for those age groups. Of course, tweens, teens, and adults looking for help getting a little extra veggie boost are also welcome to enjoy our meals, too.<br/><br/><br/>*Every child has individual needs, so it’s best to consult with a pediatrician or dietitian.<br/>For a customized MyPlate Plan, based on age, gender and weight, visit  www.myplate.gov/myplate-plan.</p>"
           }
         },
         "faq_4f9eMd": {
@@ -323,7 +323,7 @@
       "name": "Insta Reels Feed",
       "settings": {
         "heading": "Wins of the Week",
-        "subheading": "<p>share how you won the week for a chance for a free freezer fill up!</p>",
+        "subheading": "<p><a href=\"/pages/contact\" title=\"contact\">share how you won the week</a> for a chance for a free freezer fill up!</p>",
         "heading_size": 84,
         "heading_size_mobile": 36,
         "heading_color": "#0f4735",
