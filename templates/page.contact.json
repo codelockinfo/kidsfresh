@@ -62,7 +62,6 @@
       "blocks": {
         "column_PCyprm": {
           "type": "column",
-          "disabled": true,
           "settings": {
             "background_color": "#95c940",
             "text_color": "#0f4735",
