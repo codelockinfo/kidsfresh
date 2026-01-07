@@ -531,7 +531,8 @@
             >
           </div>
           {% endif %}
-          <div class="form-field-group">
+           {% if st.show_state %}
+            <div class="form-field-group">
             <label for="contact-state" class="form-label">your state:</label>
             <select 
               id="contact-state" 
@@ -552,6 +553,7 @@
              
             </select>
           </div>
+            {% endif %}
         </div>
 
         {% if st.show_supermarket %}
