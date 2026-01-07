@@ -297,7 +297,7 @@
         "subtitle": "<p>What <em>doesn't</em><strong> </strong>go into our meals is just as important as what does.</p>",
         "footer_text": "Built with what matters most: real ingredients, balanced nutrition, and vegetables in disguise. Every meal is designed to support strong bodies, growing minds, and stress-free mealtimes.",
         "button_text": "our mission",
-        "button_url": "",
+        "button_url": "shopify://pages/about-us",
         "accent_color": "#0f4735",
         "title_color": "#0f4735",
         "subtitle_color": "#0f4735",
