@@ -46,6 +46,7 @@
       "name": "Contact Location Request",
       "settings": {
         "title": "how may we help you win more meals?",
+        "show_city": false,
         "show_supermarket": false,
         "subtitle": "Please drop us a note, and we’ll get back to you with an answer.",
         "background_image_desktop": "shopify://shop_images/WhereToBuy-and-Contact-FORMS-Deskkop-2x.png",
