@@ -202,7 +202,7 @@
         "background_image_left": "shopify://shop_images/image_124.png",
         "enable_mobile_slider": true,
         "button_label": "ingredients",
-        "button_link": "shopify://pages/about-us",
+        "button_link": "",
         "button_style": "primary",
         "border_thickness": 4,
         "border_radius": 15,
