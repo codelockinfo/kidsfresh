@@ -507,7 +507,7 @@
         </div>
 
         <div class="form-field-wrapper">
-          <label for="contact-email" class="form-label">your e-mail address:</label>
+          <label for="contact-email" class="form-label"> e-mail address:</label>
           <input 
             type="email" 
             id="contact-email" 
@@ -519,6 +519,7 @@
         </div>
 
         <div class="form-field-wrapper half">
+           {% if st.show_city %}
           <div class="form-field-group">
             <label for="contact-city" class="form-label">your city:</label>
             <input 
@@ -529,7 +530,9 @@
               placeholder="city"
             >
           </div>
-          <div class="form-field-group">
+          {% endif %}
+           {% if st.show_state %}
+            <div class="form-field-group">
             <label for="contact-state" class="form-label">your state:</label>
             <select 
               id="contact-state" 
@@ -550,6 +553,7 @@
              
             </select>
           </div>
+            {% endif %}
         </div>
 
         {% if st.show_supermarket %}
@@ -566,7 +570,7 @@
 {% endif %}
 
         <div class="form-field-wrapper">
-          <label for="contact-message" class="form-label">your message:</label>
+          <label for="contact-message" class="form-label">message:</label>
           <textarea 
             id="contact-message" 
             name="contact[body]" 
@@ -613,6 +617,18 @@
       "label": "Title",
       "default": "don't see us near you?"
     },
+     {
+  "type": "checkbox",
+  "id": "show_state",
+  "label": "Show state Field",
+  "default": true
+},
+    {
+  "type": "checkbox",
+  "id": "show_city",
+  "label": "Show city Field",
+  "default": true
+},
     {
   "type": "checkbox",
   "id": "show_supermarket",

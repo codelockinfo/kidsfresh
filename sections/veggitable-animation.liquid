@@ -26,7 +26,8 @@
       {% for block in section.blocks %}
         {% assign index = forloop.index %}
       <div class="veggie-product-card card-{{ index }}"  {{ block.shopify_attributes }}>
-        <div class="veggie-product-wrapper">
+       <a href="{{ block.settings.product_url }}" style="text-decoration:none">
+         <div class="veggie-product-wrapper">
 
 
           <!-- 🌿 GROUP VEGETABLE IMAGE -->
@@ -53,8 +54,6 @@
             {% endif %}
           </div>
         </div>
-
-
         <div class="veggie-product-info">
           {% if block.settings.title %}
             <h3 class="veggie-product-title">{{ block.settings.title }}</h3>
@@ -63,6 +62,7 @@
             <p class="veggie-product-description">{{ block.settings.description }}</p>
           {% endif %}
         </div>
+       </a>
       </div>
       {% endfor %}
 
@@ -85,10 +85,6 @@
   </div>
 </div>
 
-
-
-
-<!-- OPTIONAL BASIC CSS -->
 <style>
 .veggie-hover-section { padding: 60px 0; }
 .veggie-products-grid { display:grid; gap:40px; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); }
@@ -1228,6 +1224,7 @@
       "name": "Product Item",
       "settings": [
         { "type":"image_picker","id":"image","label":"Main Product Image" },
+         { "type":"url","id":"product_url","label":"product url" },
         { "type":"richtext","id":"title","label":"Product Title" },
         { "type":"textarea","id":"description","label":"Description" },
 

@@ -80,6 +80,7 @@
           "type": "product",
           "settings": {
             "image": "shopify://shop_images/FINAL_CMPM_1_2342e1ec-ecc1-4d38-aaba-36c14d438ab7.png",
+            "product_url": "shopify://products/chicken-meatballs-pasta-marinara",
             "title": "<p>Chicken Meatballs & Pasta Marinara</p>",
             "description": "a dinnertime classic, upgraded",
             "veggie_group_image": "shopify://shop_images/vegitable_1.png"
@@ -89,6 +90,7 @@
           "type": "product",
           "settings": {
             "image": "shopify://shop_images/FINAL_WWMC_1.png",
+            "product_url": "shopify://products/wagon-wheels-mac-cheese",
             "title": "<p>Wagon Wheel <br/>Mac & Cheese</p>",
             "description": "their favorite, now with undercover veggies",
             "veggie_group_image": "shopify://shop_images/Group_299_4.png"
@@ -98,6 +100,7 @@
           "type": "product",
           "settings": {
             "image": "shopify://shop_images/FINAL_CNBP_1.png",
+            "product_url": "shopify://products/chicken-nuggets-buttered-pasta",
             "title": "<p>Chicken Nuggets & <br/>Buttered Pasta</p>",
             "description": "even buttered pasta can be better",
             "veggie_group_image": "shopify://shop_images/Group_298_10.png"
@@ -116,9 +119,9 @@
         "animation_style": "grow",
         "color_scheme": "scheme-b4ff7ee0-6e3d-4182-801f-e84315f1beae",
         "button_label_1": "our meals",
-        "button_url_1": "",
+        "button_url_1": "shopify://pages/our-meals",
         "button_label_2": "markets near me",
-        "button_url_2": ""
+        "button_url_2": "shopify://pages/find-us"
       }
     },
     "custom_banner_slider_tB6fwN": {
@@ -134,7 +137,7 @@
         "heading": "celebrate the little victories",
         "desc": "At Kidfresh, we’re on a mission to help you win more meals. To us, winning is about\nmore than kid-friendly cuisine. It’s about cooking with the wholesome ingredients you’d\nuse. It’s about hiding veggies in every bite. It’s about making family mealtimes easier,\nfaster, nutritious—and more joyful. It’s about helping you win parenthood, one meal at a\ntime.",
         "btn_text": "meet Kidfresh",
-        "btn_link": ""
+        "btn_link": "shopify://pages/about-us"
       }
     },
     "custom_slider_wDxc4w": {
@@ -199,7 +202,7 @@
         "background_image_left": "shopify://shop_images/image_124.png",
         "enable_mobile_slider": true,
         "button_label": "ingredients",
-        "button_link": "",
+        "button_link": "shopify://pages/about-us",
         "button_style": "primary",
         "border_thickness": 4,
         "border_radius": 15,
@@ -252,7 +255,7 @@
         "ungredient_MaDGLP": {
           "type": "ungredient",
           "settings": {
-            "title": "No Bioengineered Ingredients",
+            "title": "No bioengineered Ingredients",
             "description": "We’re sticking with Mother Nature",
             "percentage": "0%"
           }
@@ -294,7 +297,7 @@
         "subtitle": "<p>What <em>doesn't</em><strong> </strong>go into our meals is just as important as what does.</p>",
         "footer_text": "Built with what matters most: real ingredients, balanced nutrition, and vegetables in disguise. Every meal is designed to support strong bodies, growing minds, and stress-free mealtimes.",
         "button_text": "our mission",
-        "button_url": "",
+        "button_url": "shopify://pages/about-us",
         "accent_color": "#0f4735",
         "title_color": "#0f4735",
         "subtitle_color": "#0f4735",

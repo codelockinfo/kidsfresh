@@ -48,7 +48,7 @@
         "heading": "it’s time to win more meals",
         "description": "<p>At Kidfresh we make the kind of meals that kids cheer for—and we make them with the kinds of ingredients that parents love giving them. Think kids menu favorites, like mac & cheese, chicken nuggets and even buttered pasta—but made better with hidden veggies and wholesome ingredients in every bite. And made delicious, because a meal can only be better for them if they actually eat it. Easy preparation, empty plates, happy kids, and stress-free mealtimes...that’s what we mean when we say win more meals. We’re here to help you win parenthood, one bite at a time.<br/><br/></p>",
         "button_label": "shop now",
-        "button_link": "#",
+        "button_link": "shopify://pages/our-meals",
         "image": "shopify://shop_images/About-Top-Desktop-2x.png",
         "mobile_image": "shopify://shop_images/About-Top-Mobile-2x.png",
         "layout": "image_right"
@@ -130,12 +130,12 @@
             "description": "<p>We use the kind of real ingredients you’d use in your own kitchen.</p>"
           }
         },
-        "column_g8rXbK": {
+        "column_bRcici": {
           "type": "column",
           "settings": {
             "heading": "Pro",
             "preheading": "Protein power",
-            "description": "<p>Helps support growing bodies and brains.</p>"
+            "description": "<p>Helps support growing bodies and brains. <a href=\"/pages/faq\" title=\"FAQ\">FAQs →</a></p>"
           }
         },
         "column_cp4AGd": {
@@ -146,12 +146,12 @@
             "description": "<p>Our ingredients help provide the vitamins kids need with every bite.</p>"
           }
         },
-        "column_DGetmz": {
+        "column_F3PgnN": {
           "type": "column",
           "settings": {
-            "heading": "Cr",
+            "heading": "Ca",
             "preheading": "Calcium for kids",
-            "description": "<p>Calcium supports strong bones and teeth—and happy smiling faces.</p>"
+            "description": "<p>Calcium supports strong bones and teeth—and happy smiling faces. <a href=\"/pages/faq\" title=\"FAQ\">FAQs →</a></p>"
           }
         },
         "column_BmtzBn": {
@@ -165,9 +165,9 @@
       },
       "block_order": [
         "column_cQFpBK",
-        "column_g8rXbK",
+        "column_bRcici",
         "column_cp4AGd",
-        "column_DGetmz",
+        "column_F3PgnN",
         "column_BmtzBn"
       ],
       "name": "Winning Ingredients",
@@ -233,7 +233,7 @@
         "ungredient_jVhVRa": {
           "type": "ungredient",
           "settings": {
-            "title": "No Bioengineered Ingredients",
+            "title": "No bioengineered Ingredients",
             "description": "We’re sticking with Mother Nature",
             "percentage": "0%"
           }

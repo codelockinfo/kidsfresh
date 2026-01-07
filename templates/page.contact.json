@@ -46,6 +46,8 @@
       "name": "Contact Location Request",
       "settings": {
         "title": "how may we help you win more meals?",
+        "show_state": false,
+        "show_city": false,
         "show_supermarket": false,
         "subtitle": "Please drop us a note, and we’ll get back to you with an answer.",
         "background_image_desktop": "shopify://shop_images/WhereToBuy-and-Contact-FORMS-Deskkop-2x.png",
@@ -60,6 +62,7 @@
       "blocks": {
         "column_PCyprm": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "background_color": "#95c940",
             "text_color": "#0f4735",
@@ -90,10 +93,9 @@
             "column_title_weight": 700,
             "icon_size": 60,
             "icon_bg_color": "#ffffff",
-            "icon_1": "shopify://shop_images/Group_1_03d1e690-3018-4b56-aee6-198c5d925b8b.png",
-            "text_1": "123-456-7890",
+            "text_1": "",
             "icon_2": "shopify://shop_images/Vector_4.png",
-            "text_2": "info@kidfresh.com",
+            "text_2": "sales@kidfresh.com",
             "text_size": 29,
             "text_weight": 600
           }
