@@ -137,7 +137,7 @@
         "heading": "celebrate the little victories",
         "desc": "At Kidfresh, we’re on a mission to help you win more meals. To us, winning is about\nmore than kid-friendly cuisine. It’s about cooking with the wholesome ingredients you’d\nuse. It’s about hiding veggies in every bite. It’s about making family mealtimes easier,\nfaster, nutritious—and more joyful. It’s about helping you win parenthood, one meal at a\ntime.",
         "btn_text": "meet Kidfresh",
-        "btn_link": "shopify://pages/about-us"
+        "btn_link": ""
       }
     },
     "custom_slider_wDxc4w": {
@@ -202,7 +202,7 @@
         "background_image_left": "shopify://shop_images/image_124.png",
         "enable_mobile_slider": true,
         "button_label": "ingredients",
-        "button_link": "shopify://pages/about-us",
+        "button_link": "",
         "button_style": "primary",
         "border_thickness": 4,
         "border_radius": 15,
@@ -297,7 +297,7 @@
         "subtitle": "<p>What <em>doesn't</em><strong> </strong>go into our meals is just as important as what does.</p>",
         "footer_text": "Built with what matters most: real ingredients, balanced nutrition, and vegetables in disguise. Every meal is designed to support strong bodies, growing minds, and stress-free mealtimes.",
         "button_text": "our mission",
-        "button_url": "shopify://pages/about-us",
+        "button_url": "",
         "accent_color": "#0f4735",
         "title_color": "#0f4735",
         "subtitle_color": "#0f4735",
