@@ -754,7 +754,7 @@
   }
 </style>
 
-<section class="ungredients-new-section" 
+<section id="{{ section.settings.section_id | default: 'ungredients' }}" class="ungredients-new-section" 
          {% if section.settings.background_image %}
            style="background-image: url('{{ section.settings.background_image | img_url: '1920x' }}'); background-color: {{ section.settings.background_color | default: '#f58220' }};"
            data-desktop-bg="{{ section.settings.background_image | img_url: '1920x' }}"
@@ -868,6 +868,37 @@
     });
   })();
 </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var buttons = document.querySelectorAll('.ungredients-new-button');
+    
+    buttons.forEach(function(button) {
+      button.addEventListener('click', function(e) {
+        var linkHref = this.getAttribute('href');
+        var targetId = 'hero-text-image'; // The ID of the Hero Section
+        var targetSection = document.getElementById(targetId);
+        
+        // If the target section doesn't exist on this page, let the link behave normally (navigate)
+        if (!targetSection) return;
+
+        // Parse URLs to compare pathnames
+        // Note: 'base' parameter for URL constructor is required for relative paths
+        var linkUrl = new URL(linkHref, window.location.href);
+        var currentUrl = new URL(window.location.href);
+
+        // Check if the link points to the current page (same pathname) OR is just a hash
+        var isLocalLink = (linkUrl.pathname === currentUrl.pathname) || (linkHref.indexOf('#') === 0);
+
+        if (isLocalLink) {
+          e.preventDefault();
+          targetSection.scrollIntoView({ behavior: 'smooth' });
+          history.pushState(null, null, '#' + targetId);
+        }
+      });
+    });
+  });
+</script>
   
 {% schema %}
 {
@@ -878,6 +909,13 @@
     "groups": ["header", "footer"]
   },
   "settings": [
+    {
+      "type": "text",
+      "id": "section_id",
+      "label": "Section ID",
+      "default": "ungredients",
+      "info": "Add an ID to link to this section (e.g. #ungredients)"
+    },
     {
       "type": "header",
       "content": "Background Settings"

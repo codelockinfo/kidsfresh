@@ -346,7 +346,7 @@
 
 {% endstylesheet %}
 
-<section class="hero-text-image-section" id="hero-text-image-{{ section.id }}">
+<section class="hero-text-image-section" id="{{ section.settings.section_id | default: 'hero-text-image' }}">
   <div class="hero-text-image-container {% if section.settings.layout == 'image_left' %}hero-layout-reverse{% endif %}">
     <!-- Text Content -->
     <div class="hero-text-content veggie-buttons">
@@ -407,6 +407,13 @@
     {
       "type": "header",
       "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "section_id",
+      "label": "Section ID",
+      "default": "hero-text-image",
+      "info": "Add an ID to link to this section (e.g. #hero-text-image)"
     },
     {
       "type": "text",
