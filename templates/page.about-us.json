@@ -130,12 +130,12 @@
             "description": "<p>We use the kind of real ingredients you’d use in your own kitchen.</p>"
           }
         },
-        "column_g8rXbK": {
+        "column_bRcici": {
           "type": "column",
           "settings": {
             "heading": "Pro",
             "preheading": "Protein power",
-            "description": "<p>Helps support growing bodies and brains.</p>"
+            "description": "<p>Helps support growing bodies and brains. <a href=\"/pages/faq\" title=\"FAQ\">FAQs →</a></p>"
           }
         },
         "column_cp4AGd": {
@@ -165,7 +165,7 @@
       },
       "block_order": [
         "column_cQFpBK",
-        "column_g8rXbK",
+        "column_bRcici",
         "column_cp4AGd",
         "column_DGetmz",
         "column_BmtzBn"
