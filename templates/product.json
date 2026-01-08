@@ -182,6 +182,7 @@
           "type": "product",
           "settings": {
             "image": "shopify://shop_images/222.png",
+            "product_url": "",
             "title": "",
             "description": "",
             "veggie_group_image": "shopify://shop_images/vegitable_1.png"
@@ -191,6 +192,7 @@
           "type": "product",
           "settings": {
             "image": "shopify://shop_images/image_193_1_1eba0cc1-1993-457a-a89a-36b2d14896ea.png",
+            "product_url": "",
             "title": "",
             "description": "",
             "veggie_group_image": "shopify://shop_images/vegitable-2.png"
@@ -200,6 +202,7 @@
           "type": "product",
           "settings": {
             "image": "shopify://shop_images/image_190_1_9de59543-9520-4866-915d-00b53f3af609.png",
+            "product_url": "",
             "title": "",
             "description": "",
             "veggie_group_image": "shopify://shop_images/vegitable_3.png"
@@ -224,56 +227,55 @@
         "button_url_2": ""
       }
     },
-    "veggitable_animation_8qbHEt": {
+    "veggitable_animation_jH7GgP": {
       "type": "veggitable-animation",
       "blocks": {
-        "product_jiPQMb": {
+        "product_xiDhL7": {
           "type": "product",
           "settings": {
             "image": "shopify://shop_images/FINAL_CMPM_1_2342e1ec-ecc1-4d38-aaba-36c14d438ab7.png",
+            "product_url": "shopify://products/chicken-meatballs-pasta-marinara",
             "title": "<p>Chicken Meatballs & Pasta Marinara</p>",
             "description": "a dinnertime classic, upgraded",
             "veggie_group_image": "shopify://shop_images/vegitable_1.png"
           }
         },
-        "product_wQp93E": {
+        "product_p7TzD7": {
           "type": "product",
           "settings": {
             "image": "shopify://shop_images/FINAL_WWMC_1.png",
-            "title": "<p>Wagon Wheel<br/>Mac & Cheese</p>",
+            "product_url": "shopify://products/wagon-wheels-mac-cheese",
+            "title": "<p>Wagon Wheel <br/>Mac & Cheese</p>",
             "description": "their favorite, now with undercover veggies",
             "veggie_group_image": "shopify://shop_images/Group_299_4.png"
           }
         },
-        "product_kgWdXT": {
+        "product_JUpCMV": {
           "type": "product",
           "settings": {
             "image": "shopify://shop_images/FINAL_CNBP_1.png",
-            "title": "<p>Chicken Nuggets &<br/> Buttered Pasta</p>",
+            "product_url": "shopify://products/chicken-nuggets-buttered-pasta",
+            "title": "<p>Chicken Nuggets & <br/>Buttered Pasta</p>",
             "description": "even buttered pasta can be better",
             "veggie_group_image": "shopify://shop_images/Group_298_10.png"
           }
         }
       },
       "block_order": [
-        "product_jiPQMb",
-        "product_wQp93E",
-        "product_kgWdXT"
-      ],
-      "custom_css": [
-        ".veggie-hover-section .veggie-products-grid {margin-top: 50px;}",
-        "@media (max-width: 992px) {.veggie-title {margin: 40px 0 0; } .veggie-hover-section .veggie-products-grid {margin-top: 30px; }}"
+        "product_xiDhL7",
+        "product_p7TzD7",
+        "product_JUpCMV"
       ],
       "name": "Veggie Hover Products",
       "settings": {
-        "title": "our most popular meals",
-        "subtitle": "",
+        "title": "we hide veggies in every bite",
+        "subtitle": "(so you don't have to)",
         "animation_style": "grow",
         "color_scheme": "scheme-b4ff7ee0-6e3d-4182-801f-e84315f1beae",
         "button_label_1": "our meals",
-        "button_url_1": "",
+        "button_url_1": "shopify://pages/our-meals",
         "button_label_2": "markets near me",
-        "button_url_2": ""
+        "button_url_2": "shopify://pages/find-us"
       }
     },
     "custom_liquid_HPB7Wb": {
@@ -385,7 +387,7 @@
     "custom_pdp_image_CH6Pci",
     "custom_liquid_8GBhLk",
     "veggitable_animation_PHUgVh",
-    "veggitable_animation_8qbHEt",
+    "veggitable_animation_jH7GgP",
     "custom_liquid_HPB7Wb",
     "instra_reel_HV3j6Y"
   ]
