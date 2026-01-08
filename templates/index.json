@@ -255,7 +255,7 @@
         "ungredient_MaDGLP": {
           "type": "ungredient",
           "settings": {
-            "title": "No bioengineered Ingredients",
+            "title": "No bioengineered ingredients",
             "description": "We’re sticking with Mother Nature",
             "percentage": "0%"
           }
@@ -288,6 +288,7 @@
       ],
       "name": "Ungredients",
       "settings": {
+        "section_id": "ungredients",
         "background_image": "shopify://shop_images/Group_292_1.png",
         "mobile_background_image": "shopify://shop_images/Group_306_1_b0ad8e85-02c8-4342-898e-38ca43868d69.png",
         "background_color": "rgba(0,0,0,0)",
