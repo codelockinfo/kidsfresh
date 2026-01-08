@@ -2232,3 +2232,9 @@ text-transform: capitalize;
   border: none;
 }
 }
+.accordion-content-highlighted{
+  padding: 0 !important;
+}
+.highlighted-accordion__items-highlighted{
+  gap: 0 !important;
+}
